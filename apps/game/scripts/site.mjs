@@ -1,6 +1,7 @@
 // Shared static-site assembly for the dev server and the release build.
 import { build } from 'esbuild';
 import { createHash } from 'node:crypto';
+import { Buffer } from 'node:buffer';
 import { cpSync, existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { dirname, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -85,6 +86,117 @@ export const bundleOptions = (out, extra = {}) => ({
   legalComments: 'none',
   ...extra,
 });
+
+const CONTENT_PACKS_DIR = join(repoRoot, 'packages', 'content', 'packs');
+
+export function offlinePackForContent(id) {
+  if (id === 'shared') return 'shell';
+  const match = /^(case\d\d)-l[123]$/.exec(id);
+  return match ? match[1] : id;
+}
+
+async function fixturePacks() {
+  const result = await build({
+    absWorkingDir: repoRoot,
+    entryPoints: [join(repoRoot, 'packages', 'game-core', 'test', 'fixtures', 'mini-pack.ts')],
+    bundle: true,
+    write: false,
+    format: 'esm',
+    platform: 'node',
+  });
+  const module = await import(
+    'data:text/javascript;base64,' + Buffer.from(result.outputFiles[0].text).toString('base64')
+  );
+  return [module.sharedPack, module.prologuePack];
+}
+
+/**
+ * Writes compiled content packs (from @fluffy/content) into their offline packs plus
+ * content/index.json. Without C's packs, llowFixture uses the rule-test fixture (dev only).
+ */
+export async function writeContent(out, { allowFixture }) {
+  let packs;
+  if (existsSync(CONTENT_PACKS_DIR)) {
+    // Only the production pack list (PACK_IDS); preview packs for later stages are excluded.
+    const list = readFileSync(join(repoRoot, 'packages', 'content', 'src', 'packs.ts'), 'utf8');
+    const ids = JSON.parse(/PACK_IDS = (\[[^\]]*\])/.exec(list)?.[1] ?? '[]');
+    packs = readdirSync(CONTENT_PACKS_DIR)
+      .filter((name) => ids.includes(name.replace(/\.json$/, '')))
+      .map((name) => JSON.parse(readFileSync(join(CONTENT_PACKS_DIR, name), 'utf8')))
+      .filter((pack) => pack.format === 'fluffy-content-pack');
+  }
+  if (!packs?.length) {
+    if (!allowFixture) throw new Error('No content packs in packages/content/packs');
+    packs = await fixturePacks();
+  }
+  const entries = [];
+  for (const pack of packs.sort((a, b) => a.id.localeCompare(b.id))) {
+    const offline = offlinePackForContent(pack.id);
+    const path =
+      offline === 'shell' ? `content/${pack.id}.json` : `packs/${offline}/content/${pack.id}.json`;
+    mkdirSync(dirname(join(out, path)), { recursive: true });
+    writeFileSync(join(out, path), JSON.stringify(pack));
+    entries.push({ id: pack.id, revision: pack.revision, url: path, offlinePack: offline });
+  }
+  mkdirSync(join(out, 'content'), { recursive: true });
+  writeFileSync(
+    join(out, 'content', 'index.json'),
+    JSON.stringify({ format: 'fluffy-content-index/1', packs: entries }, null, 1) + '\n',
+  );
+  return entries;
+}
+
+/** Copies A's runtime assets (assets/manifest.json) into their packs and writes assets/index.json. */
+export function writeAssets(out) {
+  const manifestPath = join(repoRoot, 'assets', 'manifest.json');
+  const index = {
+    format: 'fluffy-asset-index',
+    assets: {},
+    backgrounds: {},
+    voice: {},
+    characters: {},
+    avatar: {},
+  };
+  if (existsSync(manifestPath)) {
+    const manifest = JSON.parse(readFileSync(manifestPath, 'utf8'));
+    for (const asset of manifest.assets ?? []) {
+      if (!asset.provenance || !asset.provenance.licence)
+        throw new Error(`Asset ${asset.id} has no provenance/licence`);
+      const source = join(repoRoot, 'assets', asset.path);
+      if (!existsSync(source)) throw new Error(`Asset file missing: ${asset.path}`);
+      const target =
+        asset.pack === 'shell'
+          ? `assets/${asset.path}`
+          : `packs/${asset.pack}/assets/${asset.path}`;
+      mkdirSync(dirname(join(out, target)), { recursive: true });
+      cpSync(source, join(out, target));
+      index.assets[asset.id] = {
+        url: target,
+        kind: asset.kind,
+        width: asset.width,
+        height: asset.height,
+      };
+    }
+    index.backgrounds = manifest.backgrounds ?? {};
+    for (const [id, entry] of Object.entries(manifest.characters ?? {}))
+      index.characters[id] = { base: index.assets[entry.base]?.url, layers: {} };
+    for (const [id, entry] of Object.entries(manifest.avatar ?? {}))
+      index.avatar[id] = {
+        base: index.assets[entry.base]?.url,
+        scarfMask: entry.scarfMask ? (index.assets[entry.scarfMask]?.url ?? null) : null,
+      };
+    for (const [id, entry] of Object.entries(manifest.voice ?? {}))
+      if (index.assets[entry.asset])
+        index.voice[id] = {
+          url: index.assets[entry.asset].url,
+          cues: entry.cues ? (index.assets[entry.cues]?.url ?? null) : null,
+          durationMs: entry.durationMs ?? 0,
+        };
+  }
+  mkdirSync(join(out, 'assets'), { recursive: true });
+  writeFileSync(join(out, 'assets', 'index.json'), JSON.stringify(index) + '\n');
+  return index;
+}
 
 /** Offline pack membership: files under `packs/<id>/` form pack `<id>`, everything else `shell`. */
 export function packOf(path) {

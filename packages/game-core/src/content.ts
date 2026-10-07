@@ -2,16 +2,11 @@
 // The runtime content pack is a small *index* of pack IDs and content-addressed revisions; the
 // packs themselves live in a PackLibrary, resolved by revision, so that rules read immutable data
 // whose identity is covered by the runtime content hash.
-import type {
-  ContentPack as FluffyPack,
-  Line,
-  Minigame,
-  Scene,
-  Step,
-} from '../../content/src/schema.ts';
+import type { ContentPack as FluffyPack, Line, Minigame, Scene, Step } from '@fluffy/content';
 
 export type { FluffyPack };
 export type {
+  AwaitAction,
   Cond,
   Line,
   Minigame,
@@ -27,7 +22,7 @@ export type {
   Speaker,
   Fact,
   GlossaryEntry,
-} from '../../content/src/schema.ts';
+} from '@fluffy/content';
 
 export interface PackRef {
   id: string;

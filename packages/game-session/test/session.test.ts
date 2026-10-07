@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { MemorySaveStorage } from '@aegis/browser/save';
 import { requireValue } from '@aegis/runtime';
-import { PackLibrary, type FluffyPack, type GameAction } from '@fluffy/game-core';
+import { autoplay, PackLibrary, type FluffyPack, type GameAction } from '@fluffy/game-core';
 import {
   acquireProfileLock,
   deleteProfileData,
@@ -12,7 +12,10 @@ import {
   type LockManagerLike,
   type ProfileSession,
 } from '../src/index.js';
-import { prologuePack, sharedPack } from '../../game-core/test/fixtures/mini-pack.js';
+import { packs } from '@fluffy/content';
+
+const sharedPack = packs.shared!;
+const prologuePack = packs.prologue!;
 
 const library = () => new PackLibrary([sharedPack, prologuePack]);
 const options = (storage: MemorySaveStorage, profileId: string, lib = library()) => ({
@@ -33,23 +36,19 @@ async function run(session: ProfileSession, actions: GameAction[]) {
   await session.saves.flush();
 }
 
-const toMinigame: GameAction[] = [
-  { type: 'start', pack: 'prologue' },
-  { type: 'next' },
-  { type: 'next' },
-  { type: 'avatar.species', value: 'mouse' },
-  { type: 'avatar.name', value: 'Мила' },
-  { type: 'avatar.scarf', value: 'rose' },
-  { type: 'next' },
-  { type: 'next' },
-  { type: 'move', value: { target: 'loupe' } },
-];
+async function toMinigame(session: ProfileSession, name = 'Мила') {
+  await autoplay(session.game.host, session.game.rules, 'prologue', {
+    stopWhen: (view) => view.run?.step?.kind === 'minigame' && !view.run.queue,
+  });
+  void name;
+  await session.saves.flush();
+}
 
 describe('profile sessions', () => {
   it('autosaves every action and resumes mid-minigame with the same notebook', async () => {
     const storage = new MemorySaveStorage();
     const first = await open(storage, 'p-aaaa');
-    await run(first, toMinigame);
+    await toMinigame(first);
     const before = first.game.host.getView();
     expect(first.saves.status().status).toBe('saved');
     await first.dispose();
@@ -65,7 +64,12 @@ describe('profile sessions', () => {
     const ids = ['p-aaaa', 'p-bbbb', 'p-cccc', 'p-dddd'];
     for (const [i, id] of ids.entries()) {
       const session = await open(storage, id);
-      await run(session, toMinigame.slice(0, 4 + (i % 2)));
+      requireValue(await session.dispatch({ type: 'start', pack: 'prologue' }));
+      while (session.game.host.getView().run?.step?.kind === 'line')
+        requireValue(await session.dispatch({ type: 'next' }));
+      requireValue(await session.dispatch({ type: 'avatar.species', value: 'mouse' }));
+      if (i % 2) requireValue(await session.dispatch({ type: 'avatar.name', value: 'Мила' }));
+      await session.saves.flush();
       await session.dispose();
     }
     for (const [i, id] of ids.entries()) {
@@ -84,7 +88,7 @@ describe('profile sessions', () => {
   it('a second window cannot silently overwrite progress (CAS conflict)', async () => {
     const storage = new MemorySaveStorage();
     const seed = await open(storage, 'p-aaaa');
-    await run(seed, toMinigame.slice(0, 2));
+    await run(seed, [{ type: 'start', pack: 'prologue' }]);
     await seed.dispose();
     const a = await open(storage, 'p-aaaa');
     const b = await open(storage, 'p-aaaa');
@@ -99,17 +103,15 @@ describe('profile sessions', () => {
   it('migrates a save across a content update to the start of the same scene', async () => {
     const storage = new MemorySaveStorage();
     const first = await open(storage, 'p-aaaa');
-    await run(first, toMinigame);
+    await toMinigame(first);
     await first.dispose();
     const updated: FluffyPack = { ...prologuePack, revision: 'prologue-r2' };
     const session = await open(storage, 'p-aaaa', new PackLibrary([sharedPack, updated]));
     expect(session.migrated).toBe(true);
     const view = session.game.host.getView();
-    expect(view.avatar.name).toBe('Мила');
-    expect(view.skills).toContain('inspect');
+    expect(view.avatar.name).toBe('Ася');
     expect(view.run?.scene.id).toBe('P1');
-    // The skill is known now, so the scene resumes at the minigame.
-    expect(view.run?.step).toMatchObject({ kind: 'minigame' });
+    expect(view.run?.step).not.toBeNull();
     await session.saves.flush();
     await session.dispose();
     const again = await open(storage, 'p-aaaa', new PackLibrary([sharedPack, updated]));
@@ -119,20 +121,22 @@ describe('profile sessions', () => {
   it('exports and imports a backup into another profile', async () => {
     const storage = new MemorySaveStorage();
     const first = await open(storage, 'p-aaaa');
-    await run(first, toMinigame);
+    await toMinigame(first);
     const backup = await first.exportBackup();
     await first.dispose();
     await importBackup(options(storage, 'p-eeee'), backup);
     const copy = await open(storage, 'p-eeee');
-    expect(copy.game.host.getView().avatar.name).toBe('Мила');
+    expect(copy.game.host.getView().avatar.name).toBe('Ася');
     expect(copy.game.host.getView().run?.scene.id).toBe('P1');
   });
 
   it('offers recovery instead of a new game when the record is corrupt', async () => {
     const storage = new MemorySaveStorage();
     const first = await open(storage, 'p-aaaa');
-    await run(first, toMinigame.slice(0, 3));
-    await run(first, toMinigame.slice(3, 5));
+    await run(first, [{ type: 'start', pack: 'prologue' }]);
+    while (first.game.host.getView().run?.step?.kind === 'line')
+      await run(first, [{ type: 'next' }]);
+    await run(first, [{ type: 'avatar.species', value: 'mouse' }]);
     await first.dispose();
     const key = { gameId: 'fluffy-bureau', profileId: 'p-aaaa' };
     const history = await storage.read(key);

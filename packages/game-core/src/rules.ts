@@ -28,6 +28,7 @@ import {
   lineOf,
   minigameOf,
   sceneOf,
+  type Cond,
   type ContentIndex,
   type FluffyPack,
   type PackIndex,
@@ -35,6 +36,7 @@ import {
 } from './content.js';
 import {
   currentStep,
+  enter,
   evaluate,
   proceed,
   rebaseRun,
@@ -74,6 +76,7 @@ export type GameAction =
   | { type: 'start'; pack: string }
   | { type: 'next' }
   | { type: 'choose'; option: string }
+  | { type: 'back' }
   | { type: 'move'; value: JsonValue }
   | { type: 'mark'; axis: string; value: string; mark: Mark | 'none' }
   | { type: 'help' }
@@ -106,6 +109,7 @@ const actionSchema: Schema<GameAction> = schema.union(
   schema.object({ type: schema.literal('start'), pack: id }),
   schema.object({ type: schema.literal('next') }),
   schema.object({ type: schema.literal('choose'), option: id }),
+  schema.object({ type: schema.literal('back') }),
   schema.object({ type: schema.literal('move'), value: json }),
   schema.object({
     type: schema.literal('mark'),
@@ -137,6 +141,7 @@ const actionSchema: Schema<GameAction> = schema.union(
       schema.literal('replay'),
       schema.literal('notebook.open'),
       schema.literal('pause'),
+      schema.literal('office.place'),
     ),
   }),
   schema.object({ type: schema.literal('decor'), item: id, slot: id }),
@@ -383,7 +388,11 @@ export function createGameAdapter(
       if (!context.state.skills.includes(skill)) context.state.skills.push(skill);
     },
     grantReward(rewardId) {
-      const reward = index.pack.rewards.find((r) => r.id === rewardId);
+      const reward =
+        index.pack.rewards.find((r) => r.id === rewardId) ??
+        rules
+          .shared(context.content.data as ContentIndex)
+          ?.pack.rewards.find((r) => r.id === rewardId);
       if (!reward) throw new Error(`Unknown reward ${rewardId}`);
       const profile = context.state;
       if (profile.claimed.includes(reward.claimKey)) return;
@@ -440,6 +449,14 @@ export function createGameAdapter(
   const advance = (context: Ctx, run: RunState, index: PackIndex) => {
     proceed(index, run, context.state, effectsFor(context, index));
     syncMinigame(run, index, context.state.runs);
+  };
+
+  /** Hub scenes are re-evaluated whenever their inputs may have changed (SCHEMA.md). */
+  const reevaluateHub = (context: Ctx, run: RunState, index: PackIndex) => {
+    if (run.queue.length || currentStep(index, run)?.t !== 'menu') return;
+    if (sceneOf(index, run.scene).presentation !== 'hub') return;
+    run.cursor = [{ i: 0, b: null }];
+    settleRun(context, run, index);
   };
 
   const queue = (run: RunState, lines: readonly string[], source: QueueSource) => {
@@ -525,6 +542,14 @@ export function createGameAdapter(
       if (!run.visited.includes(option.to)) run.visited.push(option.to);
       settleRun(context, run, index);
     },
+    back: (context) => {
+      const { run, index } = requireRun(context);
+      requireIdle(run);
+      const menu = selectStep(currentStep(index, run), 'menu');
+      if (!menu.back) throw new Error('This menu has no way back');
+      enter(run, menu.back);
+      settleRun(context, run, index);
+    },
     move: (context, action: { value: JsonValue }) => {
       const { run, index } = requireRun(context);
       requireIdle(run);
@@ -540,6 +565,11 @@ export function createGameAdapter(
         rules.registry,
       );
       queue(run, lastFeedback(next.progress), 'feedback');
+      if (game.config.kind === 'magnifier' && game.config.afterFirstSkill) {
+        const found = (next.progress as { found?: unknown[] }).found ?? [];
+        if (found.length === 1 && !context.state.skills.includes(game.config.afterFirstSkill))
+          context.state.skills.push(game.config.afterFirstSkill);
+      }
       if (next.status === 'completed' && next.result) {
         if (!context.claim(next.result.id)) throw new Error('Minigame result already consumed');
         run.flags.push(`minigame:${game.id}`);
@@ -555,6 +585,7 @@ export function createGameAdapter(
       run.suggestions = run.suggestions.filter(
         (s) => s.axis !== action.axis || s.value !== action.value,
       );
+      reevaluateHub(context, run, index);
     },
     help: (context) => {
       const { run, index } = requireRun(context);
@@ -588,16 +619,29 @@ export function createGameAdapter(
         (s) => s.axis === action.axis && s.value === action.value,
       );
       if (!suggestion) throw new Error('No such suggestion');
-      const declared = new Set(index.pack.deduction?.clues.map((c) => c.id) ?? []);
-      const evidence = suggestion.clues.every((c) => declared.has(c)) ? suggestion.clues : null;
+      const clues = index.pack.deduction?.clues ?? [];
+      const declared = new Set(clues.map((c) => c.id));
+      let evidence: string[] | null = null;
+      if (suggestion.clues.every((c) => declared.has(c))) {
+        // Evidence citations must be closed under the deduction's reveal prerequisites.
+        const closed = new Set<string>();
+        const add = (id: string) => {
+          if (closed.has(id)) return;
+          closed.add(id);
+          for (const req of clues.find((c) => c.id === id)?.requires ?? []) add(req);
+        };
+        suggestion.clues.forEach(add);
+        evidence = clues.map((c) => c.id).filter((id) => closed.has(id));
+      }
       setMark(run, index, suggestion.axis, suggestion.value, suggestion.mark, evidence);
       run.suggestions = run.suggestions.filter((s) => s !== suggestion);
+      reevaluateHub(context, run, index);
     },
     hint: (context, action: { channel: 'klubok' | 'shell' }) => {
       const { run, index } = requireRun(context);
       requireIdle(run);
       const channel = index.pack.hints?.[action.channel];
-      if (!channel?.available) throw new Error('This hint channel is not available');
+      if (!channel) throw new Error('This hint channel is not available');
       const applicable = channel.rules.filter(
         (rule) =>
           evaluate(rule.when, run, context.state) && rule.cites.every((c) => run.clues.includes(c)),
@@ -622,10 +666,10 @@ export function createGameAdapter(
     version: (context, action: { selection: Record<string, string> }) => {
       const { run, index } = requireRun(context);
       requireIdle(run);
-      selectStep(currentStep(index, run), 'version');
       const logic = index.pack.logic;
       if (!logic) throw new Error('No case logic');
-      if (!evaluate(logic.versionAvailable, run, context.state))
+      if (currentStep(index, run)?.t !== 'menu') throw new Error('Versions are checked from a hub');
+      if (!evaluate(logic.version.available, run, context.state))
         throw new Error('Collect the clues first');
       for (const axis of logic.axes) {
         const value = action.selection[axis.id];
@@ -637,12 +681,13 @@ export function createGameAdapter(
         (axis) => action.selection[axis.id] !== logic.intended[axis.id],
       );
       if (!wrongAxis) {
-        run.flags.push('version:solved');
-        advance(context, run, index);
+        if (!run.flags.includes('version:solved')) run.flags.push('version:solved');
+        enter(run, logic.version.onSolved);
+        settleRun(context, run, index);
         return;
       }
-      const pick = (lines: { line: string; when: unknown }[]) =>
-        lines.filter((l) => evaluate(l.when as never, run, context.state)).map((l) => l.line);
+      const pick = (lines: readonly { line: string; when: Cond | null }[]) =>
+        lines.filter((l) => evaluate(l.when, run, context.state)).map((l) => l.line);
       const wrong = logic.wrongVersion.byValue.find(
         (w) => w.axis === wrongAxis.id && w.value === action.selection[wrongAxis.id],
       );
@@ -675,6 +720,12 @@ export function createGameAdapter(
       }
     },
     await: (context, action: { action: AwaitAction }) => {
+      if (
+        action.action.startsWith('avatar.') ||
+        action.action.startsWith('lamp.') ||
+        action.action === 'office.place'
+      )
+        throw new Error('This step is completed by its own command');
       resolveAwait(context, action.action, true);
     },
     decor: (context, action: { item: string; slot: string }) => {
@@ -683,6 +734,7 @@ export function createGameAdapter(
       if (!(OFFICE_SLOTS as readonly string[]).includes(action.slot)) throw new Error('No slot');
       profile.decor = profile.decor.filter((d) => d.item !== action.item && d.slot !== action.slot);
       profile.decor.push({ item: action.item, slot: action.slot });
+      resolveAwait(context, 'office.place');
     },
     leave: (context) => {
       const { run } = requireRun(context);

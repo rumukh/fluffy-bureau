@@ -2,7 +2,14 @@
 import { context } from 'esbuild';
 import { rmSync } from 'node:fs';
 import { join } from 'node:path';
-import { appRoot, bundleOptions, copyStatic, finalizeSite } from './site.mjs';
+import {
+  appRoot,
+  bundleOptions,
+  copyStatic,
+  finalizeSite,
+  writeAssets,
+  writeContent,
+} from './site.mjs';
 import { serveStatic } from './preview.mjs';
 
 const args = process.argv.slice(2);
@@ -21,6 +28,8 @@ const ctx = await context(
           build.onEnd(async (result) => {
             if (result.errors.length) return;
             copyStatic(out);
+            await writeContent(out, { allowFixture: true });
+            writeAssets(out);
             await finalizeSite(out, { base: '/', minify: false, channel: 'dev' });
             console.log('rebuilt');
           });

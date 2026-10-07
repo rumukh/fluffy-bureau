@@ -34,6 +34,7 @@ export type StepView =
       pageSize: number;
       hub: boolean;
       location: string;
+      back: boolean;
       options: { id: string; label: LineView; optional: boolean; to: string }[];
     }
   | {
@@ -45,7 +46,6 @@ export type StepView =
       revision: number;
       view: Json;
     }
-  | { kind: 'version'; button: LineView; available: boolean }
   | { kind: 'await'; action: AwaitAction }
   | { kind: 'end' };
 
@@ -70,6 +70,8 @@ export interface RunView {
     klubok: { available: boolean; remaining: number | null };
     shell: { available: boolean };
   };
+  /** «Приглашу на разговор» / «Сказать догадку»: offered at hubs once available. */
+  version: { button: LineView; available: boolean } | null;
   help: 'suggest' | 'point' | null;
   versionAttempts: number;
 }
@@ -195,6 +197,7 @@ function projectRun(state: ProfileState, rules: GameRules, contentIndex: Content
           prompt: step.prompt ? line(step.prompt) : null,
           pageSize: Math.min(3, step.pageSize),
           hub: scene.presentation === 'hub',
+          back: step.back !== null,
           location: scene.location,
           options: visibleOptions(step, run, state).map((o) => ({
             id: o.id,
@@ -225,15 +228,6 @@ function projectRun(state: ProfileState, rules: GameRules, contentIndex: Content
         }
         break;
       }
-      case 'version':
-        stepView = {
-          kind: 'version',
-          button: line(step.button),
-          available: index.pack.logic
-            ? evaluate(index.pack.logic.versionAvailable, run, state)
-            : false,
-        };
-        break;
       case 'await':
         stepView = { kind: 'await', action: step.action };
         break;
@@ -291,11 +285,20 @@ function projectRun(state: ProfileState, rules: GameRules, contentIndex: Content
     notebook,
     hints: {
       klubok: {
-        available: hints?.klubok.available ?? false,
+        available: Boolean(hints?.klubok),
         remaining: hints?.klubok.allowance == null ? null : hints.klubok.allowance - run.klubokUsed,
       },
-      shell: { available: hints?.shell.available ?? false },
+      shell: { available: Boolean(hints?.shell) },
     },
+    version: logic
+      ? {
+          button: line(logic.version.button),
+          available:
+            step?.t === 'menu' &&
+            !run.queue.length &&
+            evaluate(logic.version.available, run, state),
+        }
+      : null,
     help: index.pack.notebookHelp?.mode ?? null,
     versionAttempts: run.versionAttempts,
   };

@@ -65,7 +65,8 @@ const magnifier: MinigameAdapter<Config<'magnifier'>, MagnifierState, MagnifierA
     if ('miss' in action) return { ...state, misses: state.misses + 1, last: [] };
     if (state.found.includes(action.target)) return { ...state, last: [] };
     const target = config.targets.find((t) => t.id === action.target)!;
-    return { found: [...state.found, target.id], misses: 0, last: [...target.reply] };
+    const first = state.found.length === 0 ? config.afterFirst : [];
+    return { found: [...state.found, target.id], misses: 0, last: [...target.reply, ...first] };
   },
   project(config, state) {
     const remaining = config.targets.filter((t) => t.required && !state.found.includes(t.id));
@@ -138,7 +139,7 @@ const cocoa: MinigameAdapter<Config<'cocoa'>, CocoaState, { option: string }, Js
   completed: (config, state) => state.round >= config.rounds.length,
 };
 
-// ---------------------------------------------------------------- «Кто наследил?» and questions
+// ---------------------------------------------------------------- «Кто наследил?»
 interface ChoiceStepsState {
   step: number;
   off: string[];
@@ -147,61 +148,60 @@ interface ChoiceStepsState {
 interface ChoiceStep {
   id: string;
   prompt: string | null;
-  pageSize: number;
   options: { id: string; label: string; correct: boolean; reply: string[] }[];
 }
-function choiceSteps<K extends 'tracks' | 'question'>(
-  kind: K,
-  stepsOf: (config: Config<K>) => ChoiceStep[],
-): MinigameAdapter<Config<K>, ChoiceStepsState, { option: string }, Json> {
-  return {
-    kind,
-    schema: 1,
-    config: configOf(kind),
-    state(value, config) {
-      const s = record(value, `${kind} state`);
-      return {
-        step: int(s.step, 'step', 0, stepsOf(config).length),
-        off: strings(s.off, 'off'),
-        last: strings(s.last, 'last'),
-      };
-    },
-    action(value) {
-      const a = record(value, `${kind} move`);
-      if (typeof a.option !== 'string') throw new Error('Missing option');
-      return { option: a.option };
-    },
-    initial: () => ({ step: 0, off: [], last: [] }),
-    reduce(config, state, action) {
-      const step = stepsOf(config)[state.step];
-      const option = step?.options.find((o) => o.id === action.option);
-      if (!step || !option || state.off.includes(option.id))
-        throw new Error('Option is not available');
-      if (option.correct) return { step: state.step + 1, off: [], last: [...option.reply] };
-      return { step: state.step, off: [...state.off, option.id], last: [...option.reply] };
-    },
-    project(config, state) {
-      const steps = stepsOf(config);
-      const step = steps[state.step];
-      return {
-        kind,
-        step: state.step,
-        steps: steps.length,
-        prompt: step?.prompt ?? null,
-        options: (step?.options ?? []).map((o) => ({
-          id: o.id,
-          label: o.label,
-          off: state.off.includes(o.id),
-        })),
-      };
-    },
-    completed: (config, state) => state.step >= stepsOf(config).length,
-  };
+function tracksSteps(config: Config<'tracks'>): ChoiceStep[] {
+  return [
+    ...config.steps,
+    ...(config.question
+      ? [{ id: 'question', prompt: config.question.prompt, options: config.question.options }]
+      : []),
+  ];
 }
-const tracks = choiceSteps('tracks', (config) => config.steps);
-const question = choiceSteps('question', (config) => [
-  { id: 'question', prompt: config.prompt, pageSize: 3, options: config.options },
-]);
+const tracks: MinigameAdapter<Config<'tracks'>, ChoiceStepsState, { option: string }, Json> = {
+  kind: 'tracks',
+  schema: 1,
+  config: configOf('tracks'),
+  state(value, config) {
+    const s = record(value, 'tracks state');
+    return {
+      step: int(s.step, 'step', 0, tracksSteps(config).length),
+      off: strings(s.off, 'off'),
+      last: strings(s.last, 'last'),
+    };
+  },
+  action(value) {
+    const a = record(value, 'tracks move');
+    if (typeof a.option !== 'string') throw new Error('Missing option');
+    return { option: a.option };
+  },
+  initial: () => ({ step: 0, off: [], last: [] }),
+  reduce(config, state, action) {
+    const step = tracksSteps(config)[state.step];
+    const option = step?.options.find((o) => o.id === action.option);
+    if (!step || !option || state.off.includes(option.id))
+      throw new Error('Option is not available');
+    if (option.correct) return { step: state.step + 1, off: [], last: [...option.reply] };
+    return { step: state.step, off: [...state.off, option.id], last: [...option.reply] };
+  },
+  project(config, state) {
+    const steps = tracksSteps(config);
+    const step = steps[state.step];
+    return {
+      kind: 'tracks',
+      step: state.step,
+      steps: steps.length,
+      question: step?.id === 'question' && Boolean(config.question),
+      prompt: step?.prompt ?? null,
+      options: (step?.options ?? []).map((o) => ({
+        id: o.id,
+        label: o.label,
+        off: state.off.includes(o.id),
+      })),
+    };
+  },
+  completed: (config, state) => state.step >= tracksSteps(config).length,
+};
 
 // ---------------------------------------------------------------- «Лента времени»
 interface TimelineState {
@@ -279,9 +279,12 @@ interface ScentState {
   field: number;
   matched: string[];
   open: string[];
+  /** Wrong answers of the closing question. */
+  off: string[];
+  done: boolean;
   last: string[];
 }
-type ScentAction = { card: string } | { clear: true };
+type ScentAction = { card: string } | { clear: true } | { option: string };
 const scentPairs: MinigameAdapter<Config<'scent-pairs'>, ScentState, ScentAction, Json> = {
   kind: 'scent-pairs',
   schema: 1,
@@ -292,17 +295,29 @@ const scentPairs: MinigameAdapter<Config<'scent-pairs'>, ScentState, ScentAction
       field: int(s.field, 'field', 0, config.fields.length),
       matched: strings(s.matched, 'matched'),
       open: strings(s.open, 'open'),
+      off: strings(s.off, 'off'),
+      done: s.done === true,
       last: strings(s.last, 'last'),
     };
   },
   action(value) {
     const a = record(value, 'scent move');
     if (a.clear === true) return { clear: true };
+    if (typeof a.option === 'string') return { option: a.option };
     if (typeof a.card === 'string') return { card: a.card };
     throw new Error('Invalid scent move');
   },
-  initial: () => ({ field: 0, matched: [], open: [], last: [] }),
+  initial: () => ({ field: 0, matched: [], open: [], off: [], done: false, last: [] }),
   reduce(config, state, action) {
+    if ('option' in action) {
+      const question = config.question;
+      if (state.field < config.fields.length || !question || state.done)
+        throw new Error('No question now');
+      const option = question.options.find((o) => o.id === action.option);
+      if (!option || state.off.includes(option.id)) throw new Error('Option is not available');
+      if (option.correct) return { ...state, done: true, last: [...option.reply] };
+      return { ...state, off: [...state.off, option.id], last: [...option.reply] };
+    }
     const field = config.fields[state.field];
     if (!field) throw new Error('All fields are done');
     if ('clear' in action) return { ...state, open: [], last: [] };
@@ -317,13 +332,23 @@ const scentPairs: MinigameAdapter<Config<'scent-pairs'>, ScentState, ScentAction
     if (a!.pair !== b!.pair) return { ...state, open, last: [...config.mismatch] };
     const matched = [...state.matched, a!.id, b!.id];
     if (field.cards.every((c) => matched.includes(c.id)))
-      return { field: state.field + 1, matched: [], open: [], last: [] };
+      return { ...state, field: state.field + 1, matched: [], open: [], last: [] };
     return { ...state, matched, open: [], last: [] };
   },
   project(config, state) {
     const field = config.fields[state.field];
+    const asking = !field && Boolean(config.question) && !state.done;
     return {
       kind: 'scent-pairs',
+      question: asking,
+      prompt: asking ? config.question!.prompt : null,
+      options: asking
+        ? config.question!.options.map((o) => ({
+            id: o.id,
+            label: o.label,
+            off: state.off.includes(o.id),
+          }))
+        : [],
       field: state.field,
       fields: config.fields.length,
       fieldLabel: field?.label ?? null,
@@ -340,7 +365,8 @@ const scentPairs: MinigameAdapter<Config<'scent-pairs'>, ScentState, ScentAction
       }),
     };
   },
-  completed: (config, state) => state.field >= config.fields.length,
+  completed: (config, state) =>
+    state.field >= config.fields.length && (!config.question || state.done),
 };
 
 // ---------------------------------------------------------------- «Пекарь»
@@ -349,8 +375,7 @@ interface BakerState {
   poured: number;
   last: string[];
 }
-type BakerAction = { measure: string } | { done: true };
-const baker: MinigameAdapter<Config<'baker'>, BakerState, BakerAction, Json> = {
+const baker: MinigameAdapter<Config<'baker'>, BakerState, { measure: string }, Json> = {
   kind: 'baker',
   schema: 1,
   config: configOf('baker'),
@@ -358,13 +383,12 @@ const baker: MinigameAdapter<Config<'baker'>, BakerState, BakerAction, Json> = {
     const s = record(value, 'baker state');
     return {
       step: int(s.step, 'step', 0, config.steps.length),
-      poured: int(s.poured, 'poured', 0, 1000),
+      poured: int(s.poured, 'poured', 0, 10_000),
       last: strings(s.last, 'last'),
     };
   },
   action(value, config) {
     const a = record(value, 'baker move');
-    if (a.done === true) return { done: true };
     if (typeof a.measure === 'string' && config.measures.some((m) => m.id === a.measure))
       return { measure: a.measure };
     throw new Error('Invalid baker move');
@@ -373,14 +397,13 @@ const baker: MinigameAdapter<Config<'baker'>, BakerState, BakerAction, Json> = {
   reduce(config, state, action) {
     const step = config.steps[state.step];
     if (!step) throw new Error('Recipe is complete');
-    if ('done' in action) {
-      if (state.poured < step.targetQuarters) return { ...state, last: [...config.tooLittle] };
-      return { ...state, last: [] };
-    }
     const measure = config.measures.find((m) => m.id === action.measure)!;
-    const poured = state.poured + measure.quarters;
-    if (poured === step.targetQuarters) return { step: state.step + 1, poured: 0, last: [] };
-    if (poured > step.targetQuarters) return { ...state, poured: 0, last: [...config.tooMuch] };
+    const poured = state.poured + measure.units;
+    // Too much: the pick is undone. Wrong measure while still short: undone too («маловато»).
+    if (poured > step.target) return { ...state, last: [...config.tooMuch, ...step.afterWrong] };
+    if (poured < step.target && !step.ideal.includes(measure.id))
+      return { ...state, last: [...config.tooLittle, ...step.afterWrong] };
+    if (poured === step.target) return { step: state.step + 1, poured: 0, last: [] };
     return { ...state, poured, last: [] };
   },
   project(config, state) {
@@ -391,8 +414,8 @@ const baker: MinigameAdapter<Config<'baker'>, BakerState, BakerAction, Json> = {
       steps: config.steps.length,
       prompt: step?.prompt ?? null,
       poured: state.poured,
-      target: step?.targetQuarters ?? 0,
-      measures: config.measures.map((m) => ({ id: m.id, label: m.label, quarters: m.quarters })),
+      target: step?.target ?? 0,
+      measures: config.measures.map((m) => ({ id: m.id, label: m.label, units: m.units })),
     };
   },
   completed: (config, state) => state.step >= config.steps.length,
@@ -403,7 +426,6 @@ export function createFluffyMinigames(): MinigameRegistry {
     .register(magnifier)
     .register(cocoa)
     .register(tracks)
-    .register(question)
     .register(timeline)
     .register(scentPairs)
     .register(baker);

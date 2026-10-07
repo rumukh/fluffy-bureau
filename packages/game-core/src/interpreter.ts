@@ -1,19 +1,10 @@
 // Step interpreter: walks C's scene step language deterministically over a RunState.
 import type { ProfileState, RunState, CursorSegment } from './state.js';
-import type { Cond, PackIndex, Step, Scene, MenuOption } from './content.js';
+import type { AwaitAction, Cond, PackIndex, Step, Scene, MenuOption } from './content.js';
 import { sceneOf } from './content.js';
 
-/** Steps the runtime understands beyond schema v0 (agreed addendum). */
-export type AwaitAction =
-  | 'avatar.species'
-  | 'avatar.name'
-  | 'avatar.scarf'
-  | 'lamp.on'
-  | 'lamp.off'
-  | 'replay'
-  | 'notebook.open'
-  | 'pause';
-export type GameStep = Step | { t: 'await'; action: AwaitAction };
+export type { AwaitAction };
+export type GameStep = Step;
 
 export interface Effects {
   learnSkill(skill: string): void;
@@ -29,12 +20,13 @@ export function evaluate(cond: Cond | null, run: RunState, profile: ProfileState
   if ('visited' in cond) return run.visited.includes(cond.visited);
   if ('flag' in cond) return run.flags.includes(cond.flag);
   if ('skill' in cond) return profile.skills.includes(cond.skill);
+  if ('notebookConfirmed' in cond)
+    return (run.notebook?.marks ?? []).some(
+      (m) => m.axis === cond.notebookConfirmed && m.mark === 'confirmed',
+    );
   if ('all' in cond) return cond.all.every((c) => evaluate(c, run, profile));
   if ('any' in cond) return cond.any.some((c) => evaluate(c, run, profile));
   if ('not' in cond) return !evaluate(cond.not, run, profile);
-  const extra = cond as { minigameDone?: string };
-  if (typeof extra.minigameDone === 'string')
-    return run.flags.includes(`minigame:${extra.minigameDone}`);
   throw new Error('Unknown condition');
 }
 
@@ -75,9 +67,10 @@ function exitBlock(index: PackIndex, run: RunState, effects: Effects): void {
   parent.i++;
 }
 
-function enter(run: RunState, scene: string): void {
+export function enter(run: RunState, scene: string): void {
   run.scene = scene;
   run.cursor = [{ i: 0, b: null }];
+  run.stage = [];
   if (!run.visited.includes(scene)) run.visited.push(scene);
 }
 
@@ -114,12 +107,6 @@ export function settle(index: PackIndex, run: RunState, profile: ProfileState, e
         return;
       case 'minigame':
         if (run.flags.includes(`minigame:${step.minigame}`) && run.minigame === null) {
-          segment.i++;
-          continue;
-        }
-        return;
-      case 'version':
-        if (run.flags.includes('version:solved')) {
           segment.i++;
           continue;
         }

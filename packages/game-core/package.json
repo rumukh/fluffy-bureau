@@ -6,5 +6,8 @@
   "description": "Authoritative Fluffy Bureau rules on @aegis/runtime and @aegis/narrative (DOM-free).",
   "exports": {
     ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@fluffy/content": "*"
   }
 }

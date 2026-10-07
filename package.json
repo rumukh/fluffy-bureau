@@ -21,7 +21,8 @@
     "dev": "npm run dev -w @fluffy/game",
     "build": "npm run build -w @fluffy/game",
     "preview": "npm run preview -w @fluffy/game",
-    "verify": "npm run typecheck && npm run lint && npm run test && npm run build && npm run test:e2e"
+    "content:check": "node tools/content/build.ts --check",
+    "verify": "npm run content:check && npm run typecheck && npm run lint && npm run test && npm run build && npm run test:e2e"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

@@ -1,0 +1,186 @@
+// Asset resolution: A's manifest (copied by the build) with generated SVG placeholders as fallback.
+import type { Scarf, Species } from '@fluffy/game-core';
+
+export interface HotspotRect {
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+}
+
+export interface AssetManifest {
+  format: 'fluffy-asset-index';
+  assets: Record<string, { url: string; kind: string; width?: number; height?: number }>;
+  backgrounds: Record<string, { location: string; hotspots: Record<string, HotspotRect> }>;
+  voice: Record<string, { url: string; cues: string | null; durationMs: number }>;
+  characters: Record<string, { base: string; layers: Record<string, string> }>;
+  avatar: Record<string, { base: string; scarfMask: string | null }>;
+}
+
+export const EMPTY_MANIFEST: AssetManifest = {
+  format: 'fluffy-asset-index',
+  assets: {},
+  backgrounds: {},
+  voice: {},
+  characters: {},
+  avatar: {},
+};
+
+export const LOGICAL = { width: 2560, height: 1600 } as const;
+export const SAFE = { x: 230, y: 80, width: 2100, height: 1440 } as const;
+
+export const SCARF_COLORS: Record<Scarf, string> = {
+  honey: '#e8a93b',
+  sage: '#8fae7f',
+  rose: '#d98c97',
+  sky: '#7fb2d9',
+  berry: '#5a5fa8',
+  mint: '#6cc4ad',
+};
+
+const SPECIES_COLORS: Record<
+  Species,
+  { fur: string; ear: 'round' | 'pointy' | 'big' | 'tuft' | 'floppy' }
+> = {
+  kitten: { fur: '#f2b36b', ear: 'pointy' },
+  fox: { fur: '#e2793e', ear: 'pointy' },
+  mouse: { fur: '#b9b2ab', ear: 'big' },
+  squirrel: { fur: '#c06a3c', ear: 'tuft' },
+  puppy: { fur: '#d8b48a', ear: 'floppy' },
+};
+
+const CHARACTER_COLORS: Record<string, string> = {
+  khvosts: '#8d8a86',
+  watsony: '#9b6b45',
+  pudding: '#e8b45a',
+  tyopa: '#7d7f88',
+  kartofan: '#5b4636',
+  stella: '#3a4150',
+  fitilyok: '#f3d35c',
+  mouse: '#b8aea4',
+  damka: '#8a5a3a',
+  pukhlik: '#c9b8a0',
+  narrator: '#cccccc',
+};
+
+function svgUrl(svg: string): string {
+  return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+}
+
+function hue(text: string): number {
+  let value = 0;
+  for (const char of text) value = (value * 31 + char.charCodeAt(0)) % 360;
+  return value;
+}
+
+export function placeholderBackground(location: string, title: string): string {
+  const h = hue(location);
+  return svgUrl(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2560 1600">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="hsl(${h},55%,88%)"/><stop offset="1" stop-color="hsl(${(h + 40) % 360},45%,75%)"/></linearGradient></defs>
+<rect width="2560" height="1600" fill="url(#g)"/>
+<ellipse cx="1280" cy="1600" rx="1700" ry="420" fill="hsl(${(h + 80) % 360},35%,62%)"/>
+<circle cx="2200" cy="260" r="140" fill="#fff6d8" opacity=".8"/>
+<rect x="230" y="80" width="2100" height="1440" rx="40" fill="none" stroke="#ffffff" stroke-opacity=".25" stroke-width="6" stroke-dasharray="30 30"/>
+<text x="1280" y="230" text-anchor="middle" font-family="Nunito, sans-serif" font-size="96" font-weight="800" fill="#5a3f2a" opacity=".55">${escapeXml(title)}</text>
+</svg>`);
+}
+
+export function placeholderCharacter(speaker: string, name: string): string {
+  const fur = CHARACTER_COLORS[speaker] ?? `hsl(${hue(speaker)},35%,55%)`;
+  return svgUrl(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600">
+<ellipse cx="200" cy="430" rx="150" ry="160" fill="${fur}"/>
+<circle cx="200" cy="230" r="120" fill="${fur}"/>
+<circle cx="110" cy="130" r="40" fill="${fur}"/><circle cx="290" cy="130" r="40" fill="${fur}"/>
+<circle cx="160" cy="220" r="16" fill="#2b1d14"/><circle cx="240" cy="220" r="16" fill="#2b1d14"/>
+<circle cx="166" cy="214" r="5" fill="#fff"/><circle cx="246" cy="214" r="5" fill="#fff"/>
+<ellipse cx="200" cy="265" rx="20" ry="13" fill="#3a2a20"/>
+<path d="M175 290q25 20 50 0" stroke="#3a2a20" stroke-width="8" fill="none" stroke-linecap="round"/>
+<text x="200" y="590" text-anchor="middle" font-family="Nunito, sans-serif" font-size="40" font-weight="800" fill="#3b2a1e">${escapeXml(name)}</text>
+</svg>`);
+}
+
+export function placeholderAvatar(species: Species | null, scarf: Scarf | null): string {
+  const look = SPECIES_COLORS[species ?? 'kitten'];
+  const scarfColor = scarf ? SCARF_COLORS[scarf] : '#ffffff';
+  const ears = {
+    pointy: '<path d="M90 150L120 40L170 120Z"/><path d="M310 150L280 40L230 120Z"/>',
+    big: '<circle cx="95" cy="110" r="70"/><circle cx="305" cy="110" r="70"/>',
+    tuft: '<path d="M95 150L110 30L165 120Z"/><path d="M305 150L290 30L235 120Z"/>',
+    floppy:
+      '<ellipse cx="85" cy="200" rx="40" ry="90"/><ellipse cx="315" cy="200" rx="40" ry="90"/>',
+    round: '<circle cx="110" cy="120" r="40"/><circle cx="290" cy="120" r="40"/>',
+  }[look.ear];
+  return svgUrl(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600">
+<g fill="${look.fur}">${ears}<ellipse cx="200" cy="440" rx="140" ry="150"/><circle cx="200" cy="220" r="125"/></g>
+${species === 'fox' ? '<path d="M200 230l-90 40q90 70 180 0z" fill="#fff4e6"/>' : ''}
+<circle cx="155" cy="210" r="17" fill="#2b1d14"/><circle cx="245" cy="210" r="17" fill="#2b1d14"/>
+<circle cx="161" cy="204" r="6" fill="#fff"/><circle cx="251" cy="204" r="6" fill="#fff"/>
+<ellipse cx="200" cy="258" rx="16" ry="11" fill="#3a2a20"/>
+<path d="M178 282q22 18 44 0" stroke="#3a2a20" stroke-width="8" fill="none" stroke-linecap="round"/>
+<path d="M90 335q110 60 220 0l10 50q-120 60-240 0z" fill="${scarfColor}" stroke="#3b2a1e" stroke-opacity=".25" stroke-width="4"/>
+<path d="M260 360l40 120l-55 -10z" fill="${scarfColor}"/>
+</svg>`);
+}
+
+function escapeXml(text: string): string {
+  return text.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
+}
+
+export class Assets {
+  constructor(
+    readonly manifest: AssetManifest,
+    readonly baseUrl: string,
+  ) {}
+
+  url(path: string): string {
+    return new URL(path, this.baseUrl).href;
+  }
+
+  background(location: string, title: string): string {
+    const entry = Object.entries(this.manifest.backgrounds).find(
+      ([, bg]) => bg.location === location,
+    );
+    const asset = entry ? this.manifest.assets[entry[0]] : undefined;
+    return asset ? this.url(asset.url) : placeholderBackground(location, title);
+  }
+
+  hotspots(location: string): Record<string, HotspotRect> {
+    return (
+      Object.values(this.manifest.backgrounds).find((bg) => bg.location === location)?.hotspots ??
+      {}
+    );
+  }
+
+  character(speaker: string, name: string): string {
+    const entry = this.manifest.characters[speaker];
+    return entry ? this.url(entry.base) : placeholderCharacter(speaker, name);
+  }
+
+  avatar(species: Species | null, scarf: Scarf | null): { base: string; mask: string | null } {
+    const entry = species ? this.manifest.avatar[species] : undefined;
+    if (!entry) return { base: placeholderAvatar(species, scarf), mask: null };
+    return { base: this.url(entry.base), mask: entry.scarfMask ? this.url(entry.scarfMask) : null };
+  }
+
+  voice(lineId: string) {
+    return this.manifest.voice[lineId] ?? null;
+  }
+}
+
+/** Placeholder hotspot layout: spreads targets across the safe area when A has no rectangles. */
+export function fallbackHotspots(ids: readonly string[]): Record<string, HotspotRect> {
+  const result: Record<string, HotspotRect> = {};
+  const columns = Math.min(4, Math.max(1, ids.length));
+  ids.forEach((id, index) => {
+    const column = index % columns;
+    const row = Math.floor(index / columns);
+    const seed = hue(id);
+    result[id] = {
+      x: SAFE.x + 120 + column * (SAFE.width / columns) + (seed % 120),
+      y: SAFE.y + 380 + row * 420 + (seed % 90),
+      w: 300,
+      h: 260,
+    };
+  });
+  return result;
+}
