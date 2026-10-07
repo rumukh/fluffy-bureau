@@ -1,0 +1,14 @@
+{
+  "id": "khvosts",
+  "species": "badger",
+  "base": "puppets/khvosts/base-c1.png",
+  "creature": "elderly badger gentleman",
+  "editCrop": [256, 128, 512],
+  "neck": {"y": 528, "overlap": 18, "pivot": [512, 540]},
+  "features": {
+    "eyes":  {"ellipse": [506, 366, 120, 44], "variants": ["half", "closed"]},
+    "brows": {"ellipse": [506, 290, 130, 34], "variants": ["up", "worried"]},
+    "mouth": {"ellipse": [512, 478, 112, 44], "variants": ["A", "B", "C", "D", "E", "F"]}
+  },
+  "bodyVariants": {}
+}

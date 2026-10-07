@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "region": "swedencentral",
+  "notes": "Standard Azure neural voices only: they emit viseme events used for mouth cues. Multilingual voices are wrapped in <lang xml:lang=ru-RU>.",
+  "speakers": {
+    "narrator": {"voice": "ru-RU-SvetlanaNeural", "pitch": "-2%", "rate": "-6%", "alt": "en-GB-AdaMultilingualNeural"},
+    "khvosts":  {"voice": "ru-RU-DmitryNeural", "pitch": "-10%", "rate": "-8%", "alt": "en-US-DustinMultilingualNeural"},
+    "watsony":  {"voice": "ru-RU-DariyaNeural", "pitch": "+4%", "rate": "-2%", "alt": "en-US-LolaMultilingualNeural"},
+    "pudding":  {"voice": "en-US-DerekMultilingualNeural", "pitch": "+8%", "rate": "+6%", "alt": "en-US-BrandonMultilingualNeural"},
+    "tyopa":    {"voice": "en-US-AndrewMultilingualNeural", "pitch": "+2%", "rate": "-6%", "alt": "en-US-SteffanMultilingualNeural"},
+    "kartofan": {"voice": "en-US-OnyxTurboMultilingualNeural", "pitch": "-4%", "rate": "-12%", "alt": "en-US-BrianMultilingualNeural"},
+    "stella":   {"voice": "es-ES-XimenaMultilingualNeural", "pitch": "+8%", "rate": "+8%", "alt": "en-US-ShimmerTurboMultilingualNeural"},
+    "fitilyok": {"voice": "en-US-FableTurboMultilingualNeural", "pitch": "+16%", "rate": "+6%", "alt": "en-US-AlloyTurboMultilingualNeural"},
+    "mouse":    {"voice": "zh-CN-XiaoyouMultilingualNeural", "pitch": "+6%", "rate": "+4%", "alt": "en-US-LolaMultilingualNeural"},
+    "damka":    {"voice": "en-GB-AdaMultilingualNeural", "pitch": "+0%", "rate": "+0%", "alt": "es-MX-DaliaMultilingualNeural"},
+    "pukhlik":  {"voice": "en-US-CoraMultilingualNeural", "pitch": "+14%", "rate": "-4%", "alt": "zh-CN-XiaoyuMultilingualNeural"}
+  },
+  "delivery": {
+    "neutral":  {"pitch": 0, "rate": 0},
+    "cheerful": {"pitch": 4, "rate": 4},
+    "excited":  {"pitch": 6, "rate": 8},
+    "worried":  {"pitch": 3, "rate": -3},
+    "sad":      {"pitch": -4, "rate": -10},
+    "shy":      {"pitch": 2, "rate": -6, "volume": "-10%"},
+    "thinking": {"pitch": -2, "rate": -8},
+    "whisper":  {"pitch": 0, "rate": -6, "volume": "-30%"},
+    "warm":     {"pitch": -1, "rate": -4}
+  },
+  "postprocess": {"targetLufs": -18.0, "truePeakDb": -1.5, "mp3Bitrate": "96k", "sampleRate": 44100}
+}
