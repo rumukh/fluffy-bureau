@@ -71,6 +71,8 @@ export interface ProfileState {
   skills: string[];
   buttons: number;
   hearts: number;
+  /** Reward claim keys already granted (kept in state so content migrations never re-grant). */
+  claimed: string[];
   /** Granted reward IDs (badges, stickers, decor items, titles, activity cards). */
   rewards: string[];
   decor: { item: string; slot: string }[];
@@ -92,6 +94,7 @@ export function initialProfile(): ProfileState {
     skills: [],
     buttons: 0,
     hearts: 0,
+    claimed: [],
     rewards: [],
     decor: [],
     facts: [],

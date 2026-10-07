@@ -1,0 +1,13 @@
+{
+  "name": "@fluffy/game-session",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Profiles, saves, migration, recovery and backup for Fluffy Bureau on @aegis/browser/save (storage injected).",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@fluffy/game-core": "*"
+  }
+}

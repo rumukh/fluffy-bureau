@@ -244,6 +244,7 @@ export function parseProfile(value: unknown, rules: GameRules, index: ContentInd
     skills: stringList(value.skills),
     buttons: count(value.buttons),
     hearts: count(value.hearts),
+    claimed: stringList(value.claimed),
     rewards: stringList(value.rewards),
     decor,
     facts: stringList(value.facts),
@@ -384,8 +385,10 @@ export function createGameAdapter(
     grantReward(rewardId) {
       const reward = index.pack.rewards.find((r) => r.id === rewardId);
       if (!reward) throw new Error(`Unknown reward ${rewardId}`);
-      if (!context.claim(`reward:${reward.claimKey}`)) return;
       const profile = context.state;
+      if (profile.claimed.includes(reward.claimKey)) return;
+      profile.claimed.push(reward.claimKey);
+      context.claim(`reward:${reward.claimKey}`);
       if (reward.kind === 'buttons') profile.buttons += reward.amount;
       else if (reward.kind === 'hearts') profile.hearts += reward.amount;
       else if (!profile.rewards.includes(reward.id)) profile.rewards.push(reward.id);
@@ -690,6 +693,12 @@ export function createGameAdapter(
       const pristine = JSON.stringify(context.state) === JSON.stringify(initialProfile());
       if (!pristine) throw new Error('Import is only allowed into an empty profile');
       context.state = parseProfile(action.state, rules, context.content.data as ContentIndex);
+      const run = context.state.run;
+      if (run && !run.ended) {
+        const index = rules.pack(context.content.data as ContentIndex, run.pack);
+        ensureNotebook(run, index);
+        settleRun(context, run, index);
+      }
     },
   };
 
@@ -747,3 +756,45 @@ export function packCatalog(rules: GameRules, index: ContentIndex): FluffyPack[]
 }
 
 export { rankOf, rebaseRun };
+
+/**
+ * Prepares profile state saved under another content revision (Q43: saves stay compatible).
+ * A run whose pack revision is no longer installed restarts at the beginning of the same scene
+ * (scenes are re-entrant by contract with C); everything profile-level is kept.
+ */
+export function migrateProfileJson(
+  raw: unknown,
+  rules: GameRules,
+  contentIndex: ContentIndex,
+): ProfileState {
+  if (!isRecord(raw)) throw new Error('Invalid profile');
+  const value = structuredClone(raw) as Record<string, unknown>;
+  for (const key of ['claimed', 'rewards', 'collections'] as const)
+    if (!Array.isArray(value[key])) value[key] = [];
+  if (typeof value.runs !== 'number') value.runs = 0;
+  const run = value.run;
+  if (isRecord(run) && typeof run.pack === 'string' && typeof run.packRevision === 'string') {
+    const ref = contentIndex.packs.find((p) => p.id === run.pack);
+    if (!ref) value.run = null;
+    else if (ref.revision !== run.packRevision) {
+      const index = rules.library.get(ref);
+      const scene =
+        typeof run.scene === 'string' && index.scenes.has(run.scene) ? run.scene : index.pack.start;
+      const declared = new Set(index.pack.logic?.clues.map((c) => c.id) ?? []);
+      value.run = {
+        ...run,
+        packRevision: ref.revision,
+        scene,
+        cursor: [{ i: 0, b: null }],
+        queue: [],
+        minigame: null,
+        suggestions: [],
+        stage: [],
+        ended: false,
+        clues: Array.isArray(run.clues) ? run.clues.filter((c) => declared.has(c as string)) : [],
+        notebook: null,
+      };
+    }
+  }
+  return parseProfile(value, rules, contentIndex);
+}
