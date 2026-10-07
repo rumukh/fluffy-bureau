@@ -1,0 +1,3704 @@
+{
+ "format": "fluffy-content-pack",
+ "schema": 1,
+ "id": "case08-l1",
+ "kind": "case",
+ "title": "C8-TITLE",
+ "case": {
+  "number": 8,
+  "level": 1
+ },
+ "requires": [
+  "shared"
+ ],
+ "start": "C8-0",
+ "lines": [
+  {
+   "id": "C8-TITLE",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Дело о Большом Сюрпризе",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-0-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Ой! {имя}! Сюда пока нельзя!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C8-0-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Пушинка, сегодня у тебя своё дело.",
+   "voiced": true,
+   "delivery": "neutral",
+   "note": "из-за двери"
+  },
+  {
+   "id": "C8-0-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Я оставил тебе ракушку-записушку. Там подсказки.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-0-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "А мы тут… заняты. Очень. Я обещала молчать!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C8-0-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "text": "Письмо для стажёра! Без обратного адреса.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-detective-exam",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Экзамен сыщика",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-0-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Это экзамен, {имя}. Дело ведёшь ты!",
+   "voiced": true,
+   "delivery": "cheerful",
+   "note": "из ракушки"
+  },
+  {
+   "id": "C8-0-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Я рядом. Подсказки — в ракушке и в клубках.",
+   "voiced": true,
+   "delivery": "neutral",
+   "note": "из ракушки"
+  },
+  {
+   "id": "C8-0-08",
+   "rev": 2,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Три вопроса: кто Тень, где сюрприз, что готовят?",
+   "voiced": true,
+   "delivery": "neutral",
+   "note": "из ракушки"
+  },
+  {
+   "id": "SK-invitation",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Сложи приглашение",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-1-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Шесть окошек. Шесть карточек. Совпадение?",
+   "voiced": true,
+   "delivery": "neutral",
+   "note": "из ракушки"
+  },
+  {
+   "id": "C8-1-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Чердак Конторы. Сюрприз для стажёра. Записывай!",
+   "voiced": true,
+   "delivery": "cheerful",
+   "note": "из ракушки"
+  },
+  {
+   "id": "C8-1-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "А кто разложил карточки? Это и есть загадка.",
+   "voiced": true,
+   "delivery": "neutral",
+   "note": "из ракушки"
+  },
+  {
+   "id": "C8-1-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Открой Тайные заметки. Ромашка, пёрышко, „ух“.",
+   "voiced": true,
+   "delivery": "neutral",
+   "note": "из ракушки"
+  },
+  {
+   "id": "C8-1-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Чьи это приметы? Поищи. Начни с маяка.",
+   "voiced": true,
+   "delivery": "neutral",
+   "note": "из ракушки"
+  },
+  {
+   "id": "C8-2-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Пухлик спит. Он днём всегда спит.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-2-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Хочешь заглянуть? Только тихо-тихо.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-2-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "И ничего не трогай. Только смотри.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-2-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Заглянуть в комнату Пухлика",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-2-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Послушать, как он спит",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-2-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Спросить Стеллу и Фитилька",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-3-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Смотри лупой. Найди три приметы. Шёпотом!",
+   "voiced": true,
+   "delivery": "cheerful",
+   "note": "из ракушки"
+  },
+  {
+   "id": "C8-3-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Это приметы. Сравнишь их потом.",
+   "voiced": true,
+   "delivery": "neutral",
+   "note": "из ракушки"
+  },
+  {
+   "id": "C8-N03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Комната осмотрена тихо. Пухлик спит спокойно.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-sound-match",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Услышь разницу",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-4-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Помнишь „ух“ с ночной записи? Сравни.",
+   "voiced": true,
+   "delivery": "neutral",
+   "note": "из ракушки"
+  },
+  {
+   "id": "C8-4-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Похоже! Тихо, низко, коротко.",
+   "voiced": true,
+   "delivery": "neutral",
+   "note": "из ракушки"
+  },
+  {
+   "id": "C8-5-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "text": "Мои перья чёрно-белые. Вот, смотри!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C8-5-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "fitilyok",
+   "text": "А у меня перьев нет. Только крылышки и свет.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-5-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "text": "И я не ухаю. Я стрекочу!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "SK-compare-traits",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Сравни приметы",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-6-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Последний шаг. Сравни заметки с приметами.",
+   "voiced": true,
+   "delivery": "neutral",
+   "note": "из ракушки"
+  },
+  {
+   "id": "C8-6-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "У кого совпадут все три?",
+   "voiced": true,
+   "delivery": "neutral",
+   "note": "из ракушки"
+  },
+  {
+   "id": "C8-6-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Ромашка, серое пёрышко, „ух“. Всё у Пухлика!",
+   "voiced": true,
+   "delivery": "cheerful",
+   "note": "из ракушки"
+  },
+  {
+   "id": "C8-6-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Это и есть дедукция. Шаг за шагом.",
+   "voiced": true,
+   "delivery": "neutral",
+   "note": "из ракушки"
+  },
+  {
+   "id": "C8-7-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Улики собраны. Какая у тебя версия?",
+   "voiced": true,
+   "delivery": "neutral",
+   "note": "из ракушки"
+  },
+  {
+   "id": "C8-7-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Кто Тень, где сюрприз, что готовят?",
+   "voiced": true,
+   "delivery": "neutral",
+   "note": "из ракушки"
+  },
+  {
+   "id": "C8-8-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Ты у двери. Открывай.",
+   "voiced": true,
+   "delivery": "neutral",
+   "note": "из ракушки"
+  },
+  {
+   "id": "C8-8-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "all",
+   "text": "Сюрприз…",
+   "voiced": true,
+   "delivery": "whisper"
+  },
+  {
+   "id": "C8-8-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "С юбилеем, Пушистино! И с экзаменом, {имя}.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-8-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Ну, детектив? Кто же Серая Тень?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-8-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Это я. Я — Серая Тень.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-8-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Я ночной стажёр. Ночью я чинил город.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-8-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Весло Дамки. Полку в библиотеке. Брёвна у шлюза.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-8-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "И раскладывал карточки. Это был твой экзамен.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-8-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Ромашку я пью. Перья теряю. А ухаю, когда устаю.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-8-10",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Все мои приметы найдены. Ты настоящий сыщик!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C8-8-12",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Господин мэр, простите. Я взял жёлудь без спроса.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-8-13",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Ты же записку оставил. И вернул к юбилею!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C8-8-14",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "В следующий раз спрашивай. Я бы помог!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C8-8-15",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Мы с Ватсони знали. И честно молчали.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-8-16",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Я так хотела рассказать! Но обещала.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-8-17",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Сны Пухлика, мой „сюрприз“ — всё было для сегодня.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-8-18",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Фитилёк не спит ночью. Но перьев у него нет.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-8-19",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "У Стеллы перья. Но чёрно-белые, и она стрекочет.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-8-20",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "А мы с Ватсони скрывали только праздник.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-8-21",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Твоя версия подтвердилась. Элементарно, пушинка!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "SK-detective-oath",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Клятва сыщика",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-9-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Настоящий детектив даёт клятву. Повторяй за мной.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-9-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Уликам! Как в первом деле.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-9-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Гипотеза! Сначала проверь, потом верь.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-9-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "К правде! Даже взрослые ошибаются. Помнишь варенье?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-9-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Хм, почти. Подумай ещё. Какое слово сыщика?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-9-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Клятва дана. Ты теперь детектив Пушистого бюро!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C8-10-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Орден Золотой Лапы. Самый главный значок бюро.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-10-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "И звание — Магистр Лапы!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C8-11-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Спасибо за пирог, письма и варенье!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C8-11-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "text": "Спасибо, что не судили меня по виду!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C8-11-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "text": "Спасибо за Выставку писем! Она до сих пор висит.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-11-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "text": "Морковка спасена! И пирог тоже.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-11-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Ночная библиотека — лучшая на свете!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C8-11-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "fitilyok",
+   "text": "Твой огонёк всегда горит в моих фонарях.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-11-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Без тебя шлюз бы не успел. Салют — тебе!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C8-11-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "С тобой здорово дружить. Днём и ночью!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C8-11-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Записала тебя в Дневник Добрых Дел. Навсегда!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C8-11-10",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Элементарно, пушинка. Я тобой горжусь.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-12-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Сто лет Пушистино! Ура!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C8-12-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "И первый год нашего нового детектива.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-12-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Смотри на маяк! Это для тебя.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-N06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Твой световой сигнал сияет на маяке.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-13-01",
+   "rev": 1,
+   "kind": "fact",
+   "speaker": "narrator",
+   "text": "Совы не умеют вращать глазами. Поэтому поворачивают голову.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C8-13-02",
+   "rev": 1,
+   "kind": "fact",
+   "speaker": "narrator",
+   "text": "Сова может повернуть голову почти на три четверти круга.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C8-13-03",
+   "rev": 1,
+   "kind": "fact",
+   "speaker": "narrator",
+   "text": "Совята вылупляются в пуху. Настоящие перья вырастают позже.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C8-13-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Поэтому меня и зовут Пухлик!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C8-14-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Но сыщик не отдыхает долго. В газете новые загадки!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C8-14-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "„Свежие вести“! Я уже записала первую.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-AX-who",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Кто такая Серая Тень?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "NM-pukhlik",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Совёнок Пухлик",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-AX-where",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Где готовят сюрприз?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-AX-attic",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Чердак Конторы",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-AX-lighthouse",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Медовый маяк",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-AX-cellar",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Погреб мэрии",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-AX-what",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Что готовят?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-AX-party",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Праздник и посвящение стажёра",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-AX-treasure",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Поиск клада Пушистино",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-AX-walks",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Ночные прогулки по городу",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-CL-invitation",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Приглашение из карточек",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-CL-room",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Приметы в комнате Пухлика",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-CL-sound",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Тихое «ух»",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-CL-compare",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Сравнение трёх примет",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-7-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Версия не подтвердилась! Зато вспомним кое-что.",
+   "voiced": true,
+   "delivery": "neutral",
+   "note": "из ракушки"
+  },
+  {
+   "id": "C8-7-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "У Фитилька нет перьев. И он звенит, а не ухает.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-7-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Перья у Стеллы чёрно-белые. И она стрекочет.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-7-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "В приглашении сказано: чердак Конторы.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-7-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "В приглашении сказано: праздник и сюрприз для стажёра.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-7-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Отличная попытка! Запишем и подумаем.",
+   "voiced": true,
+   "delivery": "neutral",
+   "note": "из ракушки"
+  },
+  {
+   "id": "C8-NB-pukhlik-yes",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Все три приметы сходятся у Пухлика.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C8-NB-fitilyok-no",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "У Фитилька нет перьев и «уха».",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C8-NB-stella-no",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "У Стеллы другие перья и стрекот.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C8-NB-invite-place",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Приглашение прямо называет чердак Конторы.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C8-NB-invite-what",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Приглашение обещает праздник и сюрприз.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C8-H-01",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Сложи приглашение из шести карточек.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C8-H-02",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Заметки ведут к маяку. Загляни к Пухлику.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C8-H-03",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Сравни „ух“ с ночной записи. Чей похож?",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C8-H-06",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Послушай сон Пухлика и ночное «ух».",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C8-H-04",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Сравни заметки с приметами. У кого все три?",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C8-H-05",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Перечитай Блокнот. Где ещё стоит вопрос?",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C8-H-07",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Осталось сравнить три тайные заметки.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C8-R-03",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "watsony",
+   "text": "Ой, мне нельзя подсказывать! Ну… маяк.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C8-R-01",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "watsony",
+   "text": "Ромашкой пахло весло, помнишь? Ищи ромашку!",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C8-R-04",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "watsony",
+   "text": "Послушай «ух» у Пухлика. Оно тихое.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C8-R-02",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "watsony",
+   "text": "Серое пёрышко… У кого серые перья?",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C8-1-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Звёздочка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-N01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Письмо складывается только из всех карточек.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-1-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Лапка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-1-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Ключик",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-1-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Жёлудь",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-1-B05",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Колокольчик",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-1-B06",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Сердечко",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-N02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Выбери карточку с такой же формой.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-1-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Сравни форму окошка и карточки.",
+   "voiced": true,
+   "delivery": "neutral",
+   "note": "из ракушки"
+  },
+  {
+   "id": "C8-3-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Чашка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-3-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Чашка ромашкового чая. Пахнет ромашкой!",
+   "voiced": true,
+   "delivery": "cheerful",
+   "note": "из ракушки"
+  },
+  {
+   "id": "C8-3-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Пёрышко",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-3-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Серое пёрышко. Пухлик серый, правда?",
+   "voiced": true,
+   "delivery": "neutral",
+   "note": "из ракушки"
+  },
+  {
+   "id": "C8-3-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Корзинка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-3-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Верёвка, колышки, щётка для полок…",
+   "voiced": true,
+   "delivery": "thinking",
+   "note": "из ракушки"
+  },
+  {
+   "id": "C8-3-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Инструменты ночного мастера. Интересно!",
+   "voiced": true,
+   "delivery": "cheerful",
+   "note": "из ракушки"
+  },
+  {
+   "id": "C8-4-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Пухлик вздыхает",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-4-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Стелла стрекочет",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-4-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Сравни: звук низкий или высокий?",
+   "voiced": true,
+   "delivery": "neutral",
+   "note": "из ракушки"
+  },
+  {
+   "id": "C8-4-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Фитилёк звенит",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-AX-pukhlik",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Совёнок Пухлик",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-N04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Все три приметы совпали у Пухлика.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-AX-stella",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Сорока Стелла",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-6-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Проверь примету в Блокноте. Совпадает?",
+   "voiced": true,
+   "delivery": "neutral",
+   "note": "из ракушки"
+  },
+  {
+   "id": "C8-AX-fitilyok",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Светлячок Фитилёк",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-6-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Ромашка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-6-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Серое пёрышко",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-6-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Тихое «ух»",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-9-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Уликам",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-9-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Пирогам",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-9-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Зонтикам",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-9-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Гипотеза",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-9-B05",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Алиби",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-9-B06",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Мотив",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-9-B07",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Правде",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-9-B08",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Обидам",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-9-B09",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Спешке",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-N05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Клятва принимается без спешки.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c8-badge",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Орден Золотой Лапы",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c8-title",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Звание: Магистр Лапы",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c8-sticker-1",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Стикер «Большой Сюрприз», одна звёздочка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c8-decor-portrait",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Портрет команды бюро",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c8-decor-news",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Газета «Свежие вести»",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c8-activity",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Карточка «Домашний праздник-сюрприз»",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "COL-C8-symbols",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Приглашение из шести символов",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "COL-C8-heroes",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Приметы героев",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "NM-all",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Все вместе",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "COL-C8-pukhlik",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Пухлик: ромашка, серые перья, «ух».",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "COL-C8-stella",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Стелла: чёрно-белые перья, стрекот.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "COL-C8-fitilyok",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Фитилёк: свет, крылышки, звон.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C8-TITLE",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Домашний праздник-сюрприз",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C8-01",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Выбери близкого человека для доброго сюрприза.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C8-02",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Со взрослым придумай безопасное место.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C8-03",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Сделай открытку или маленький рисунок.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C8-04",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Спрячь подсказку там, где её найдут.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C8-05",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Пусть взрослый проверит свечи и гирлянды.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C8-06",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Скажи тёплые слова без громких хлопков.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C8-S01",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Свечи и розетки трогает только взрослый.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C8-S02",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Не пугай человека резким криком.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C8-L-01",
+   "rev": 1,
+   "kind": "comfort",
+   "speaker": "watsony",
+   "text": "Всё хорошо. Это сюрприз, а сюрпризы — добрые.",
+   "voiced": true,
+   "delivery": "warm",
+   "note": "из ракушки"
+  }
+ ],
+ "speakers": [],
+ "skills": [
+  {
+   "id": "invitation",
+   "title": "SK-invitation"
+  },
+  {
+   "id": "compare-traits",
+   "title": "SK-compare-traits"
+  },
+  {
+   "id": "sound-match",
+   "title": "SK-sound-match"
+  },
+  {
+   "id": "detective-oath",
+   "title": "SK-detective-oath"
+  },
+  {
+   "id": "detective-exam",
+   "title": "SK-detective-exam"
+  }
+ ],
+ "scenes": [
+  {
+   "id": "C8-0",
+   "title": "Утро юбилея: Контору закрыли",
+   "location": "office-door",
+   "cast": [
+    "watsony",
+    "khvosts",
+    "stella"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "dir",
+     "id": "C8-0-D01",
+     "text": "Украшенная дверь Конторы приоткрыта; Ватсони держит ленту и честно просит не входить."
+    },
+    {
+     "t": "line",
+     "line": "C8-0-01"
+    },
+    {
+     "t": "line",
+     "line": "C8-0-02"
+    },
+    {
+     "t": "line",
+     "line": "C8-0-03"
+    },
+    {
+     "t": "line",
+     "line": "C8-0-04"
+    },
+    {
+     "t": "line",
+     "line": "C8-0-05"
+    },
+    {
+     "t": "skill",
+     "skill": "detective-exam",
+     "first": [
+      {
+       "t": "line",
+       "line": "C8-0-06"
+      },
+      {
+       "t": "line",
+       "line": "C8-0-07"
+      },
+      {
+       "t": "line",
+       "line": "C8-0-08"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C8-0-06"
+      },
+      {
+       "t": "line",
+       "line": "C8-0-07"
+      },
+      {
+       "t": "line",
+       "line": "C8-0-08"
+      }
+     ]
+    },
+    {
+     "t": "goto",
+     "scene": "C8-1"
+    }
+   ]
+  },
+  {
+   "id": "C8-1",
+   "title": "Сложи приглашение",
+   "location": "office-door",
+   "cast": [
+    "khvosts"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "invitation",
+     "first": [
+      {
+       "t": "line",
+       "line": "C8-1-01"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C8-1-01"
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c8l1-invitation"
+    },
+    {
+     "t": "line",
+     "line": "C8-1-03"
+    },
+    {
+     "t": "line",
+     "line": "C8-1-04"
+    },
+    {
+     "t": "clue",
+     "clue": "c8-invitation"
+    },
+    {
+     "t": "line",
+     "line": "C8-1-05"
+    },
+    {
+     "t": "line",
+     "line": "C8-1-06"
+    },
+    {
+     "t": "goto",
+     "scene": "C8-2"
+    }
+   ]
+  },
+  {
+   "id": "C8-2",
+   "title": "Маяк: вход",
+   "location": "lighthouse-door",
+   "cast": [
+    "damka"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "dir",
+     "id": "C8-2-D01",
+     "text": "У двери маяка стоит Дамка и говорит тихо, чтобы не будить Пухлика."
+    },
+    {
+     "t": "line",
+     "line": "C8-2-01"
+    },
+    {
+     "t": "line",
+     "line": "C8-2-02"
+    },
+    {
+     "t": "line",
+     "line": "C8-2-03"
+    },
+    {
+     "t": "goto",
+     "scene": "C8-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C8-HUB",
+   "title": "Маяк: выбор",
+   "location": "lighthouse-door",
+   "cast": [
+    "damka"
+   ],
+   "presentation": "hub",
+   "steps": [
+    {
+     "t": "if",
+     "when": {
+      "all": [
+       {
+        "clue": "c8-room"
+       },
+       {
+        "clue": "c8-sound"
+       },
+       {
+        "not": {
+         "visited": "C8-6"
+        }
+       }
+      ]
+     },
+     "then": [
+      {
+       "t": "goto",
+       "scene": "C8-6"
+      }
+     ],
+     "else": []
+    },
+    {
+     "t": "menu",
+     "id": "C8-M",
+     "prompt": null,
+     "pageSize": 3,
+     "options": [
+      {
+       "id": "room",
+       "label": "C8-2-B01",
+       "to": "C8-3",
+       "when": null,
+       "hideWhen": {
+        "visited": "C8-3"
+       },
+       "optional": false
+      },
+      {
+       "id": "sound",
+       "label": "C8-2-B02",
+       "to": "C8-4",
+       "when": null,
+       "hideWhen": {
+        "visited": "C8-4"
+       },
+       "optional": false
+      },
+      {
+       "id": "residents",
+       "label": "C8-2-B03",
+       "to": "C8-5",
+       "when": null,
+       "hideWhen": {
+        "visited": "C8-5"
+       },
+       "optional": true
+      }
+     ],
+     "back": null
+    }
+   ]
+  },
+  {
+   "id": "C8-3",
+   "title": "Комната Пухлика: Лупа",
+   "location": "pukhlik-room",
+   "cast": [
+    "khvosts",
+    "pukhlik"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "dir",
+     "id": "C8-3-D01",
+     "text": "Пухлик спит в гнёздышке из пледа; ребёнок только смотрит подсвеченные места."
+    },
+    {
+     "t": "skill",
+     "skill": "magnifier",
+     "first": [
+      {
+       "t": "line",
+       "line": "C8-3-01"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C8-3-01"
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c8l1-room"
+    },
+    {
+     "t": "line",
+     "line": "C8-3-06"
+    },
+    {
+     "t": "line",
+     "line": "C8-N03"
+    },
+    {
+     "t": "clue",
+     "clue": "c8-room"
+    },
+    {
+     "t": "goto",
+     "scene": "C8-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C8-4",
+   "title": "Услышь разницу",
+   "location": "pukhlik-room",
+   "cast": [
+    "khvosts",
+    "pukhlik",
+    "stella",
+    "fitilyok"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "sound-match",
+     "first": [
+      {
+       "t": "line",
+       "line": "C8-4-01"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C8-4-01"
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c8l1-sound"
+    },
+    {
+     "t": "line",
+     "line": "C8-4-02"
+    },
+    {
+     "t": "clue",
+     "clue": "c8-sound"
+    },
+    {
+     "t": "goto",
+     "scene": "C8-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C8-5",
+   "title": "Стелла и Фитилёк",
+   "location": "lighthouse-rail",
+   "cast": [
+    "stella",
+    "fitilyok"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "dir",
+     "id": "C8-5-D01",
+     "text": "На перилах маяка сидит Стелла, рядом мягко светится Фитилёк."
+    },
+    {
+     "t": "line",
+     "line": "C8-5-01"
+    },
+    {
+     "t": "line",
+     "line": "C8-5-02"
+    },
+    {
+     "t": "line",
+     "line": "C8-5-03"
+    },
+    {
+     "t": "goto",
+     "scene": "C8-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C8-6",
+   "title": "Сравни приметы",
+   "location": "notebook",
+   "cast": [
+    "khvosts"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "compare-traits",
+     "first": [
+      {
+       "t": "line",
+       "line": "C8-6-01"
+      },
+      {
+       "t": "line",
+       "line": "C8-6-02"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C8-6-01"
+      },
+      {
+       "t": "line",
+       "line": "C8-6-02"
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c8l1-compare"
+    },
+    {
+     "t": "line",
+     "line": "C8-6-04"
+    },
+    {
+     "t": "line",
+     "line": "C8-6-05"
+    },
+    {
+     "t": "clue",
+     "clue": "c8-compare"
+    },
+    {
+     "t": "goto",
+     "scene": "C8-7"
+    }
+   ]
+  },
+  {
+   "id": "C8-7",
+   "title": "Версия",
+   "location": "lighthouse",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "version",
+     "first": [
+      {
+       "t": "line",
+       "line": "C8-7-01"
+      },
+      {
+       "t": "line",
+       "line": "C8-7-02"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C8-7-01"
+      },
+      {
+       "t": "line",
+       "line": "C8-7-02"
+      }
+     ]
+    },
+    {
+     "t": "goto",
+     "scene": "C8-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C8-8",
+   "title": "Сумерки: чердак Конторы",
+   "location": "office-attic",
+   "cast": [
+    "all",
+    "khvosts",
+    "watsony",
+    "pukhlik",
+    "pudding",
+    "damka",
+    "stella",
+    "fitilyok",
+    "mouse"
+   ],
+   "presentation": "cutscene",
+   "steps": [
+    {
+     "t": "dir",
+     "id": "C8-8-D01",
+     "text": "У двери горит один фонарь. Огоньки сюрприза включаются по одному: гирлянды, фонари, свечи-светлячки."
+    },
+    {
+     "t": "line",
+     "line": "C8-8-01"
+    },
+    {
+     "t": "line",
+     "line": "C8-8-02"
+    },
+    {
+     "t": "line",
+     "line": "C8-8-03"
+    },
+    {
+     "t": "line",
+     "line": "C8-8-04"
+    },
+    {
+     "t": "line",
+     "line": "C8-8-05"
+    },
+    {
+     "t": "line",
+     "line": "C8-8-06"
+    },
+    {
+     "t": "line",
+     "line": "C8-8-07"
+    },
+    {
+     "t": "line",
+     "line": "C8-8-08"
+    },
+    {
+     "t": "line",
+     "line": "C8-8-09"
+    },
+    {
+     "t": "line",
+     "line": "C8-8-10"
+    },
+    {
+     "t": "dir",
+     "id": "C8-8-D02",
+     "text": "Пухлик отдаёт Золотой Жёлудь мэру; мэр ставит его на подставку."
+    },
+    {
+     "t": "line",
+     "line": "C8-8-12"
+    },
+    {
+     "t": "line",
+     "line": "C8-8-13"
+    },
+    {
+     "t": "line",
+     "line": "C8-8-14"
+    },
+    {
+     "t": "line",
+     "line": "C8-8-15"
+    },
+    {
+     "t": "line",
+     "line": "C8-8-16"
+    },
+    {
+     "t": "line",
+     "line": "C8-8-17"
+    },
+    {
+     "t": "line",
+     "line": "C8-8-18"
+    },
+    {
+     "t": "line",
+     "line": "C8-8-19"
+    },
+    {
+     "t": "line",
+     "line": "C8-8-20"
+    },
+    {
+     "t": "line",
+     "line": "C8-8-21"
+    },
+    {
+     "t": "goto",
+     "scene": "C8-9"
+    }
+   ]
+  },
+  {
+   "id": "C8-9",
+   "title": "Клятва сыщика",
+   "location": "office-attic",
+   "cast": [
+    "khvosts"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "detective-oath",
+     "first": [
+      {
+       "t": "line",
+       "line": "C8-9-01"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C8-9-01"
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c8l1-oath"
+    },
+    {
+     "t": "line",
+     "line": "C8-9-02"
+    },
+    {
+     "t": "line",
+     "line": "C8-9-03"
+    },
+    {
+     "t": "line",
+     "line": "C8-9-04"
+    },
+    {
+     "t": "line",
+     "line": "C8-9-05"
+    },
+    {
+     "t": "line",
+     "line": "C8-9-06"
+    },
+    {
+     "t": "goto",
+     "scene": "C8-10"
+    }
+   ]
+  },
+  {
+   "id": "C8-10",
+   "title": "Орден Золотой Лапы",
+   "location": "office-attic",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "cutscene",
+   "steps": [
+    {
+     "t": "dir",
+     "id": "C8-10-D01",
+     "text": "Ватсони выносит Орден Золотой Лапы на подушечке."
+    },
+    {
+     "t": "line",
+     "line": "C8-10-01"
+    },
+    {
+     "t": "line",
+     "line": "C8-10-02"
+    },
+    {
+     "t": "goto",
+     "scene": "C8-11"
+    }
+   ]
+  },
+  {
+   "id": "C8-11",
+   "title": "Тёплые слова",
+   "location": "office-attic",
+   "cast": [
+    "pudding",
+    "tyopa",
+    "stella",
+    "kartofan",
+    "mouse",
+    "fitilyok",
+    "damka",
+    "pukhlik",
+    "watsony",
+    "khvosts"
+   ],
+   "presentation": "cutscene",
+   "steps": [
+    {
+     "t": "line",
+     "line": "C8-11-01"
+    },
+    {
+     "t": "line",
+     "line": "C8-11-02"
+    },
+    {
+     "t": "line",
+     "line": "C8-11-03"
+    },
+    {
+     "t": "line",
+     "line": "C8-11-04"
+    },
+    {
+     "t": "line",
+     "line": "C8-11-05"
+    },
+    {
+     "t": "line",
+     "line": "C8-11-06"
+    },
+    {
+     "t": "line",
+     "line": "C8-11-07"
+    },
+    {
+     "t": "line",
+     "line": "C8-11-08"
+    },
+    {
+     "t": "line",
+     "line": "C8-11-09"
+    },
+    {
+     "t": "line",
+     "line": "C8-11-10"
+    },
+    {
+     "t": "goto",
+     "scene": "C8-12"
+    }
+   ]
+  },
+  {
+   "id": "C8-12",
+   "title": "Юбилей на площади",
+   "location": "town-square",
+   "cast": [
+    "pudding",
+    "khvosts",
+    "pukhlik",
+    "all"
+   ],
+   "presentation": "cutscene",
+   "steps": [
+    {
+     "t": "dir",
+     "id": "C8-12-D01",
+     "text": "На площади: пирог, письма, маяк, варенье, Ночная библиотека, дубки и водяной салют."
+    },
+    {
+     "t": "line",
+     "line": "C8-12-01"
+    },
+    {
+     "t": "line",
+     "line": "C8-12-02"
+    },
+    {
+     "t": "line",
+     "line": "C8-12-03"
+    },
+    {
+     "t": "line",
+     "line": "C8-N06"
+    },
+    {
+     "t": "goto",
+     "scene": "C8-13"
+    }
+   ]
+  },
+  {
+   "id": "C8-13",
+   "title": "А ты знал?",
+   "location": "town-square",
+   "cast": [
+    "pukhlik"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "encyclopedia",
+     "first": [
+      {
+       "t": "dir",
+       "id": "C8-13-D01",
+       "text": "Три карточки про сов складываются в Энциклопедию."
+      }
+     ],
+     "known": [
+      {
+       "t": "dir",
+       "id": "C8-13-D01",
+       "text": "Три карточки про сов складываются в Энциклопедию."
+      }
+     ]
+    },
+    {
+     "t": "line",
+     "line": "C8-13-01"
+    },
+    {
+     "t": "line",
+     "line": "C8-13-02"
+    },
+    {
+     "t": "line",
+     "line": "C8-13-03"
+    },
+    {
+     "t": "line",
+     "line": "C8-13-04"
+    },
+    {
+     "t": "goto",
+     "scene": "C8-14"
+    }
+   ]
+  },
+  {
+   "id": "C8-14",
+   "title": "Награды и новые загадки",
+   "location": "office",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "cutscene",
+   "steps": [
+    {
+     "t": "reward",
+     "reward": "rw-c8-badge"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c8-title"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c8-buttons-l1"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c8-sticker-l1"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c8-decor-portrait"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c8-decor-news"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c8-activity"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c8-heart"
+    },
+    {
+     "t": "line",
+     "line": "C8-14-01"
+    },
+    {
+     "t": "line",
+     "line": "C8-14-02"
+    },
+    {
+     "t": "end"
+    }
+   ]
+  }
+ ],
+ "logic": {
+  "axes": [
+   {
+    "id": "who",
+    "title": "C8-AX-who",
+    "values": [
+     {
+      "id": "pukhlik",
+      "label": "NM-pukhlik"
+     },
+     {
+      "id": "fitilyok",
+      "label": "NM-fitilyok"
+     },
+     {
+      "id": "stella",
+      "label": "NM-stella"
+     }
+    ]
+   },
+   {
+    "id": "where",
+    "title": "C8-AX-where",
+    "values": [
+     {
+      "id": "attic",
+      "label": "C8-AX-attic"
+     },
+     {
+      "id": "lighthouse",
+      "label": "C8-AX-lighthouse"
+     },
+     {
+      "id": "cellar",
+      "label": "C8-AX-cellar"
+     }
+    ]
+   },
+   {
+    "id": "what",
+    "title": "C8-AX-what",
+    "values": [
+     {
+      "id": "party",
+      "label": "C8-AX-party"
+     },
+     {
+      "id": "treasure",
+      "label": "C8-AX-treasure"
+     },
+     {
+      "id": "walks",
+      "label": "C8-AX-walks"
+     }
+    ]
+   }
+  ],
+  "intended": {
+   "who": "pukhlik",
+   "where": "attic",
+   "what": "party"
+  },
+  "clues": [
+   {
+    "id": "c8-invitation",
+    "title": "C8-CL-invitation",
+    "required": true,
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "eq",
+       "axis": "where",
+       "value": "attic"
+      },
+      {
+       "op": "eq",
+       "axis": "what",
+       "value": "party"
+      }
+     ]
+    },
+    "requires": [],
+    "source": "C8-1",
+    "summary": "Шесть символов складывают приглашение на чердак Конторы и обещают сюрприз стажёру."
+   },
+   {
+    "id": "c8-room",
+    "title": "C8-CL-room",
+    "required": true,
+    "predicate": {
+     "op": "in",
+     "axis": "who",
+     "values": [
+      "pukhlik",
+      "fitilyok",
+      "stella"
+     ]
+    },
+    "requires": [],
+    "source": "C8-3",
+    "summary": "В комнате Пухлика есть ромашка, серое перо и инструменты ночного мастера."
+   },
+   {
+    "id": "c8-sound",
+    "title": "C8-CL-sound",
+    "required": true,
+    "predicate": {
+     "op": "in",
+     "axis": "who",
+     "values": [
+      "pukhlik",
+      "fitilyok",
+      "stella"
+     ]
+    },
+    "requires": [],
+    "source": "C8-4",
+    "summary": "Ночное «ух» совпадает со вздохом Пухлика."
+   },
+   {
+    "id": "c8-compare",
+    "title": "C8-CL-compare",
+    "required": true,
+    "predicate": {
+     "op": "eq",
+     "axis": "who",
+     "value": "pukhlik"
+    },
+    "requires": [
+     "c8-room",
+     "c8-sound"
+    ],
+    "source": "C8-6",
+    "summary": "Ромашка, серое перо и «ух» сходятся только у Пухлика."
+   }
+  ],
+  "version": {
+   "button": "UI-hud.version",
+   "available": {
+    "all": [
+     {
+      "visited": "C8-7"
+     },
+     {
+      "all": [
+       {
+        "clue": "c8-invitation"
+       },
+       {
+        "clue": "c8-room"
+       },
+       {
+        "clue": "c8-sound"
+       },
+       {
+        "clue": "c8-compare"
+       }
+      ]
+     }
+    ]
+   },
+   "onSolved": "C8-8"
+  },
+  "wrongVersion": {
+   "intro": [
+    {
+     "line": "C8-7-03",
+     "when": null
+    }
+   ],
+   "byValue": [
+    {
+     "axis": "who",
+     "value": "fitilyok",
+     "clues": [
+      "c8-compare"
+     ],
+     "lines": [
+      {
+       "line": "C8-7-05",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "who",
+     "value": "stella",
+     "clues": [
+      "c8-compare"
+     ],
+     "lines": [
+      {
+       "line": "C8-7-04",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "where",
+     "value": "lighthouse",
+     "clues": [
+      "c8-invitation"
+     ],
+     "lines": [
+      {
+       "line": "C8-7-06",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "where",
+     "value": "cellar",
+     "clues": [
+      "c8-invitation"
+     ],
+     "lines": [
+      {
+       "line": "C8-7-06",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "what",
+     "value": "treasure",
+     "clues": [
+      "c8-invitation"
+     ],
+     "lines": [
+      {
+       "line": "C8-7-07",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "what",
+     "value": "walks",
+     "clues": [
+      "c8-invitation"
+     ],
+     "lines": [
+      {
+       "line": "C8-7-07",
+       "when": null
+      }
+     ]
+    }
+   ],
+   "outro": [
+    {
+     "line": "C8-7-08",
+     "when": null
+    }
+   ]
+  },
+  "redHerrings": [
+   {
+    "id": "rh-c8-adults",
+    "summary": "Хвостс и Ватсони что-то скрывают, но это праздник.",
+    "presentedBy": [
+     "C8-0-04"
+    ],
+    "explainedBy": [
+     "C8-8-15",
+     "C8-8-16",
+     "C8-8-20"
+    ]
+   },
+   {
+    "id": "rh-c8-fitilyok",
+    "summary": "Фитилёк не спит ночью и светится, но без перьев и «уха».",
+    "presentedBy": [
+     "C8-5-02"
+    ],
+    "explainedBy": [
+     "C8-8-18"
+    ]
+   },
+   {
+    "id": "rh-c8-stella",
+    "summary": "У Стеллы есть перья и записки, но перья чёрно-белые и она стрекочет.",
+    "presentedBy": [
+     "C8-5-01",
+     "C8-5-03"
+    ],
+    "explainedBy": [
+     "C8-8-19"
+    ]
+   }
+  ]
+ },
+ "deduction": {
+  "schema": 1,
+  "id": "case08-l1",
+  "axes": [
+   {
+    "id": "who",
+    "values": [
+     "pukhlik",
+     "fitilyok",
+     "stella"
+    ]
+   },
+   {
+    "id": "where",
+    "values": [
+     "attic",
+     "lighthouse",
+     "cellar"
+    ]
+   },
+   {
+    "id": "what",
+    "values": [
+     "party",
+     "treasure",
+     "walks"
+    ]
+   }
+  ],
+  "compatibility": null,
+  "intended": {
+   "who": "pukhlik",
+   "where": "attic",
+   "what": "party"
+  },
+  "clues": [
+   {
+    "id": "c8-invitation",
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "eq",
+       "axis": "where",
+       "value": "attic"
+      },
+      {
+       "op": "eq",
+       "axis": "what",
+       "value": "party"
+      }
+     ]
+    },
+    "requires": [],
+    "requiresAnswer": false,
+    "explanationKey": "C8-CL-invitation"
+   },
+   {
+    "id": "c8-room",
+    "predicate": {
+     "op": "in",
+     "axis": "who",
+     "values": [
+      "pukhlik",
+      "fitilyok",
+      "stella"
+     ]
+    },
+    "requires": [],
+    "requiresAnswer": false,
+    "explanationKey": "C8-CL-room"
+   },
+   {
+    "id": "c8-sound",
+    "predicate": {
+     "op": "in",
+     "axis": "who",
+     "values": [
+      "pukhlik",
+      "fitilyok",
+      "stella"
+     ]
+    },
+    "requires": [],
+    "requiresAnswer": false,
+    "explanationKey": "C8-CL-sound"
+   },
+   {
+    "id": "c8-compare",
+    "predicate": {
+     "op": "eq",
+     "axis": "who",
+     "value": "pukhlik"
+    },
+    "requires": [
+     "c8-room",
+     "c8-sound"
+    ],
+    "requiresAnswer": false,
+    "explanationKey": "C8-CL-compare"
+   }
+  ],
+  "redHerrings": [
+   {
+    "id": "rh-c8-adults",
+    "explanationKey": "C8-8-15"
+   },
+   {
+    "id": "rh-c8-fitilyok",
+    "explanationKey": "C8-8-18"
+   },
+   {
+    "id": "rh-c8-stella",
+    "explanationKey": "C8-8-19"
+   }
+  ],
+  "maxCandidates": 27
+ },
+ "notebookHelp": {
+  "mode": "suggest",
+  "marks": [
+   {
+    "axis": "who",
+    "value": "pukhlik",
+    "mark": "confirmed",
+    "clues": [
+     "c8-compare"
+    ],
+    "line": "C8-NB-pukhlik-yes"
+   },
+   {
+    "axis": "who",
+    "value": "fitilyok",
+    "mark": "excluded",
+    "clues": [
+     "c8-compare"
+    ],
+    "line": "C8-NB-fitilyok-no"
+   },
+   {
+    "axis": "who",
+    "value": "stella",
+    "mark": "excluded",
+    "clues": [
+     "c8-compare"
+    ],
+    "line": "C8-NB-stella-no"
+   },
+   {
+    "axis": "where",
+    "value": "attic",
+    "mark": "confirmed",
+    "clues": [
+     "c8-invitation"
+    ],
+    "line": "C8-NB-invite-place"
+   },
+   {
+    "axis": "where",
+    "value": "lighthouse",
+    "mark": "excluded",
+    "clues": [
+     "c8-invitation"
+    ],
+    "line": "C8-NB-invite-place"
+   },
+   {
+    "axis": "where",
+    "value": "cellar",
+    "mark": "excluded",
+    "clues": [
+     "c8-invitation"
+    ],
+    "line": "C8-NB-invite-place"
+   },
+   {
+    "axis": "what",
+    "value": "party",
+    "mark": "confirmed",
+    "clues": [
+     "c8-invitation"
+    ],
+    "line": "C8-NB-invite-what"
+   },
+   {
+    "axis": "what",
+    "value": "treasure",
+    "mark": "excluded",
+    "clues": [
+     "c8-invitation"
+    ],
+    "line": "C8-NB-invite-what"
+   },
+   {
+    "axis": "what",
+    "value": "walks",
+    "mark": "excluded",
+    "clues": [
+     "c8-invitation"
+    ],
+    "line": "C8-NB-invite-what"
+   }
+  ],
+  "pointers": [],
+  "nothing": "UI-notebook.nothing"
+ },
+ "hints": {
+  "klubok": {
+   "speaker": "khvosts",
+   "precision": "exact",
+   "allowance": 3,
+   "rules": [
+    {
+     "id": "C8-H-01",
+     "when": {
+      "not": {
+       "clue": "c8-invitation"
+      }
+     },
+     "cites": []
+    },
+    {
+     "id": "C8-H-02",
+     "when": {
+      "not": {
+       "clue": "c8-room"
+      }
+     },
+     "cites": []
+    },
+    {
+     "id": "C8-H-03",
+     "when": {
+      "not": {
+       "clue": "c8-sound"
+      }
+     },
+     "cites": []
+    },
+    {
+     "id": "C8-H-06",
+     "when": {
+      "not": {
+       "clue": "c8-sound"
+      }
+     },
+     "cites": []
+    },
+    {
+     "id": "C8-H-04",
+     "when": {
+      "not": {
+       "clue": "c8-compare"
+      }
+     },
+     "cites": []
+    },
+    {
+     "id": "C8-H-05",
+     "when": {
+      "all": [
+       {
+        "visited": "C8-7"
+       },
+       {
+        "clue": "c8-invitation"
+       },
+       {
+        "clue": "c8-room"
+       },
+       {
+        "clue": "c8-sound"
+       },
+       {
+        "clue": "c8-compare"
+       }
+      ]
+     },
+     "cites": [
+      "c8-invitation",
+      "c8-room",
+      "c8-sound",
+      "c8-compare"
+     ]
+    }
+   ],
+   "review": "C8-H-07",
+   "exhausted": "UI-hint.klubokEmptyShell"
+  },
+  "shell": {
+   "speaker": "watsony",
+   "precision": "exact",
+   "allowance": null,
+   "rules": [
+    {
+     "id": "C8-R-03",
+     "when": {
+      "not": {
+       "clue": "c8-invitation"
+      }
+     },
+     "cites": []
+    },
+    {
+     "id": "C8-R-01",
+     "when": {
+      "not": {
+       "clue": "c8-room"
+      }
+     },
+     "cites": []
+    },
+    {
+     "id": "C8-R-04",
+     "when": {
+      "not": {
+       "clue": "c8-sound"
+      }
+     },
+     "cites": []
+    },
+    {
+     "id": "C8-R-02",
+     "when": {
+      "not": {
+       "clue": "c8-compare"
+      }
+     },
+     "cites": []
+    }
+   ],
+   "review": "C8-R-03",
+   "exhausted": null
+  }
+ },
+ "minigames": [
+  {
+   "id": "c8l1-invitation",
+   "skill": "invitation",
+   "config": {
+    "kind": "staged",
+    "mechanic": "Сложи приглашение",
+    "description": "Поставить шесть символов в окна письма.",
+    "lines": [
+     "C8-N01",
+     "C8-N02",
+     "C8-1-02"
+    ],
+    "steps": [
+     {
+      "id": "cards",
+      "prompt": null,
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "star",
+        "label": "C8-1-B01",
+        "correct": true,
+        "reply": [
+         "C8-N01"
+        ]
+       },
+       {
+        "id": "paw",
+        "label": "C8-1-B02",
+        "correct": true,
+        "reply": [
+         "C8-N01"
+        ]
+       },
+       {
+        "id": "key",
+        "label": "C8-1-B03",
+        "correct": true,
+        "reply": [
+         "C8-N01"
+        ]
+       },
+       {
+        "id": "acorn",
+        "label": "C8-1-B04",
+        "correct": true,
+        "reply": [
+         "C8-N01"
+        ]
+       },
+       {
+        "id": "bell",
+        "label": "C8-1-B05",
+        "correct": true,
+        "reply": [
+         "C8-N01"
+        ]
+       },
+       {
+        "id": "heart",
+        "label": "C8-1-B06",
+        "correct": true,
+        "reply": [
+         "C8-N01"
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "c8l1-room",
+   "skill": "magnifier",
+   "config": {
+    "kind": "magnifier",
+    "targets": [
+     {
+      "id": "cup",
+      "label": "C8-3-B01",
+      "required": true,
+      "reply": [
+       "C8-3-02"
+      ]
+     },
+     {
+      "id": "feather",
+      "label": "C8-3-B02",
+      "required": true,
+      "reply": [
+       "C8-3-03"
+      ]
+     },
+     {
+      "id": "basket",
+      "label": "C8-3-B03",
+      "required": true,
+      "reply": [
+       "C8-3-04",
+       "C8-3-05"
+      ]
+     }
+    ],
+    "afterFirst": [],
+    "afterFirstSkill": null,
+    "assistAfterMisses": 3
+   }
+  },
+  {
+   "id": "c8l1-sound",
+   "skill": "sound-match",
+   "config": {
+    "kind": "staged",
+    "mechanic": "Услышь разницу",
+    "description": "Выбрать звук, похожий на ночное «ух».",
+    "lines": [
+     "C8-4-03"
+    ],
+    "steps": [
+     {
+      "id": "sound",
+      "prompt": null,
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "pukhlik",
+        "label": "C8-4-B01",
+        "correct": true,
+        "reply": [
+         "C8-4-02"
+        ]
+       },
+       {
+        "id": "stella",
+        "label": "C8-4-B02",
+        "correct": false,
+        "reply": [
+         "C8-4-03"
+        ]
+       },
+       {
+        "id": "fitilyok",
+        "label": "C8-4-B03",
+        "correct": false,
+        "reply": [
+         "C8-4-03"
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "c8l1-compare",
+   "skill": "compare-traits",
+   "config": {
+    "kind": "staged",
+    "mechanic": "Сравни приметы",
+    "description": "Сопоставить три заметки с героями.",
+    "lines": [
+     "C8-N04",
+     "C8-6-03",
+     "C8-6-B01",
+     "C8-6-B02",
+     "C8-6-B03"
+    ],
+    "steps": [
+     {
+      "id": "who",
+      "prompt": null,
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "pukhlik",
+        "label": "C8-AX-pukhlik",
+        "correct": true,
+        "reply": [
+         "C8-N04"
+        ]
+       },
+       {
+        "id": "stella",
+        "label": "C8-AX-stella",
+        "correct": false,
+        "reply": [
+         "C8-6-03"
+        ]
+       },
+       {
+        "id": "fitilyok",
+        "label": "C8-AX-fitilyok",
+        "correct": false,
+        "reply": [
+         "C8-6-03"
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "c8l1-oath",
+   "skill": "detective-oath",
+   "config": {
+    "kind": "staged",
+    "mechanic": "Клятва сыщика",
+    "description": "Три обещания сыщика.",
+    "lines": [
+     "C8-N05"
+    ],
+    "steps": [
+     {
+      "id": "evidence",
+      "prompt": null,
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "evidence",
+        "label": "C8-9-B01",
+        "correct": true,
+        "reply": [
+         "C8-9-02"
+        ]
+       },
+       {
+        "id": "pies",
+        "label": "C8-9-B02",
+        "correct": false,
+        "reply": [
+         "C8-9-05"
+        ]
+       },
+       {
+        "id": "umbrellas",
+        "label": "C8-9-B03",
+        "correct": false,
+        "reply": [
+         "C8-9-05"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "hypothesis",
+      "prompt": null,
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "hypothesis",
+        "label": "C8-9-B04",
+        "correct": true,
+        "reply": [
+         "C8-9-03"
+        ]
+       },
+       {
+        "id": "alibi",
+        "label": "C8-9-B05",
+        "correct": false,
+        "reply": [
+         "C8-9-05"
+        ]
+       },
+       {
+        "id": "motive",
+        "label": "C8-9-B06",
+        "correct": false,
+        "reply": [
+         "C8-9-05"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "truth",
+      "prompt": null,
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "truth",
+        "label": "C8-9-B07",
+        "correct": true,
+        "reply": [
+         "C8-9-04"
+        ]
+       },
+       {
+        "id": "hurt",
+        "label": "C8-9-B08",
+        "correct": false,
+        "reply": [
+         "C8-9-05"
+        ]
+       },
+       {
+        "id": "hurry",
+        "label": "C8-9-B09",
+        "correct": false,
+        "reply": [
+         "C8-9-05"
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "facts": [
+  {
+   "id": "fact-c8-owl-eyes",
+   "line": "C8-13-01"
+  },
+  {
+   "id": "fact-c8-owl-head",
+   "line": "C8-13-02"
+  },
+  {
+   "id": "fact-c8-owlets",
+   "line": "C8-13-03"
+  }
+ ],
+ "glossary": [],
+ "rewards": [
+  {
+   "id": "rw-c8-badge",
+   "kind": "badge",
+   "label": "RW-c8-badge",
+   "amount": 1,
+   "claimKey": "case08:badge"
+  },
+  {
+   "id": "rw-c8-title",
+   "kind": "title",
+   "label": "RW-c8-title",
+   "amount": 1,
+   "claimKey": "case08:title"
+  },
+  {
+   "id": "rw-c8-buttons-l1",
+   "kind": "buttons",
+   "label": "RW-buttons-10",
+   "amount": 10,
+   "claimKey": "case08:l1:buttons"
+  },
+  {
+   "id": "rw-c8-sticker-l1",
+   "kind": "sticker",
+   "label": "RW-c8-sticker-1",
+   "amount": 1,
+   "claimKey": "case08:l1:sticker"
+  },
+  {
+   "id": "rw-c8-decor-portrait",
+   "kind": "decor",
+   "label": "RW-c8-decor-portrait",
+   "amount": 1,
+   "claimKey": "case08:decor:portrait"
+  },
+  {
+   "id": "rw-c8-decor-news",
+   "kind": "decor",
+   "label": "RW-c8-decor-news",
+   "amount": 1,
+   "claimKey": "case08:decor:news"
+  },
+  {
+   "id": "rw-c8-activity",
+   "kind": "activity",
+   "label": "RW-c8-activity",
+   "amount": 1,
+   "claimKey": "case08:activity:surprise"
+  },
+  {
+   "id": "rw-c8-heart",
+   "kind": "hearts",
+   "label": "RW-heart",
+   "amount": 1,
+   "claimKey": "case08:heart:team"
+  }
+ ],
+ "collections": [
+  {
+   "id": "c8-symbols",
+   "collection": "symbol-cards",
+   "label": "COL-C8-symbols",
+   "line": "COL-C8-symbols"
+  },
+  {
+   "id": "c8-heroes",
+   "collection": "hero-traits",
+   "label": "COL-C8-heroes",
+   "line": "COL-C8-heroes"
+  },
+  {
+   "id": "c8-hero-all",
+   "collection": "hero-traits",
+   "label": "NM-all",
+   "line": "NM-all"
+  },
+  {
+   "id": "c8-hero-pukhlik",
+   "collection": "hero-traits",
+   "label": "COL-C8-pukhlik",
+   "line": "COL-C8-pukhlik"
+  },
+  {
+   "id": "c8-hero-stella",
+   "collection": "hero-traits",
+   "label": "COL-C8-stella",
+   "line": "COL-C8-stella"
+  },
+  {
+   "id": "c8-hero-fitilyok",
+   "collection": "hero-traits",
+   "label": "COL-C8-fitilyok",
+   "line": "COL-C8-fitilyok"
+  }
+ ],
+ "activities": [
+  {
+   "id": "act-c8-surprise",
+   "title": "ACT-C8-TITLE",
+   "steps": [
+    {
+     "line": "ACT-C8-01",
+     "adultOnly": false
+    },
+    {
+     "line": "ACT-C8-02",
+     "adultOnly": true
+    },
+    {
+     "line": "ACT-C8-03",
+     "adultOnly": false
+    },
+    {
+     "line": "ACT-C8-04",
+     "adultOnly": false
+    },
+    {
+     "line": "ACT-C8-05",
+     "adultOnly": true
+    },
+    {
+     "line": "ACT-C8-06",
+     "adultOnly": false
+    }
+   ],
+   "safety": [
+    "ACT-C8-S01",
+    "ACT-C8-S02"
+   ],
+   "allergens": []
+  }
+ ],
+ "comfort": [
+  {
+   "scene": "C8-8",
+   "line": "C8-L-01"
+  }
+ ],
+ "cutscenes": [
+  {
+   "id": "cs-c8-office-closed",
+   "scene": "C8-0",
+   "summary": "Контора украшена, но Ватсони мягко закрывает дверь: сегодня экзамен."
+  },
+  {
+   "id": "cs-c8-attic-lights",
+   "scene": "C8-8",
+   "summary": "На чердаке огоньки включаются по одному, все шепчут «Сюрприз…»."
+  },
+  {
+   "id": "cs-c8-oath",
+   "scene": "C8-9",
+   "summary": "Хвостс принимает Клятву сыщика и повторяет слова кампании."
+  },
+  {
+   "id": "cs-c8-jubilee",
+   "scene": "C8-12",
+   "summary": "Площадь показывает результаты всех дел и световой сигнал игрока."
+  }
+ ],
+ "reserved": [],
+ "revision": "9b0721981dd000da52586b590bcd139785a1f9c533a8708097412e6978b23869"
+}

@@ -52,13 +52,13 @@ export interface BuildResult {
 export const sha256 = (s: string) => createHash('sha256').update(s).digest('hex');
 
 /** Every line ID referenced by a variant, in a stable order. */
-export function variantRefs(v: VariantSource, rewardLabel: (id: string) => string | undefined): string[] {
+export function variantRefs(v: VariantSource, rewardLabel: (id: string) => string | undefined, skillTitle: (id: string) => string | undefined = () => undefined): string[] {
   const out: string[] = [];
   const add = (id: string | null | undefined) => { if (id && !out.includes(id)) out.push(id); };
   const walk = (steps: Step[]) => {
     for (const s of steps) {
       if (s.t === 'line') add(s.line);
-      else if (s.t === 'skill') { walk(s.first); walk(s.known); }
+      else if (s.t === 'skill') { add(skillTitle(s.skill)); walk(s.first); walk(s.known); }
       else if (s.t === 'if') { walk(s.then); walk(s.else); }
       else if (s.t === 'menu') { add(s.prompt); s.options.forEach((o) => add(o.label)); }
     }
@@ -74,6 +74,7 @@ export function variantRefs(v: VariantSource, rewardLabel: (id: string) => strin
   if (v.notebookHelp) { v.notebookHelp.marks.forEach((m) => add(m.line)); v.notebookHelp.pointers.forEach((p) => add(p.line)); add(v.notebookHelp.nothing); }
   for (const ch of [v.hints?.klubok, v.hints?.shell]) if (ch) { ch.rules.forEach((r) => add(r.id)); add(ch.review); add(ch.exhausted); }
   for (const m of v.minigames) {
+    add(skillTitle(m.skill));
     const c = m.config;
     switch (c.kind) {
       case 'magnifier': c.targets.forEach((t) => { add(t.label); t.reply.forEach(add); }); c.afterFirst.forEach(add); break;
@@ -162,6 +163,11 @@ export function build(shared: SharedSource, cases: CaseSource[], genderReview: G
     for (const c of l.changes) if (!c.reason || !c.ref) err('CHANGELOG', l.id, 'change without reason or reference');
   }
 
+  // Every PM line of an included case must exist in content (removals are expressed per variant).
+  const included = new Set(cases.map((c) => c.id));
+  const fileCase = (file: string) => (file.startsWith('SCRIPT_PROLOGUE_CASE01') || file.startsWith('SCRIPT_CASE01') ? ['prologue', 'case01'] : [`case${file.slice(11, 13)}`]);
+  for (const [id, occ] of pm) if (fileCase(occ[0]!.file).some((c) => included.has(c)) && !lineIndex.has(id)) err('PM-MISSING', id, `PM line «${occ[0]!.text}» is missing from content`);
+
   // Text rules
   const reviewed = new Map([...genderReview, ...cases.flatMap((c) => c.genderReview ?? [])].map((g) => [`${g.id}@${g.rev}`, g]));
   const usedReviews = new Set<string>();
@@ -211,7 +217,8 @@ export function build(shared: SharedSource, cases: CaseSource[], genderReview: G
     const caseNewTerms = new Set<string>();
     for (const v of c.variants) {
       const where = v.pack;
-      const refs = variantRefs(v, rewardLabel);
+      const refs = variantRefs(v, rewardLabel, (id) => allSkills.find((k) => k.id === id)?.title);
+      const usedSkills = new Set([...v.minigames.map((m) => m.skill), ...JSON.stringify(v.scenes).matchAll(/"t":"skill","skill":"([^"]+)"/g)].map((x) => (typeof x === 'string' ? x : x[1]!)));
       for (const id of refs) {
         usedIds.add(id);
         if (!lineIndex.has(id)) err('REF-LINE', where, `missing line ${id}`);
@@ -345,7 +352,7 @@ export function build(shared: SharedSource, cases: CaseSource[], genderReview: G
 
       packs.push(withRevision<ContentPack>({
         format: PACK_FORMAT, schema: PACK_SCHEMA, id: v.pack, kind: v.kind, title: v.title, case: v.case, requires: ['shared'], start: v.start,
-        lines: own.map((id) => toLine(lineIndex.get(id)!)), speakers: [], skills: c.skills ?? [], scenes: v.scenes, logic: v.logic, deduction,
+        lines: own.map((id) => toLine(lineIndex.get(id)!)), speakers: [], skills: allSkills.filter((k, i) => usedSkills.has(k.id) && !shared.skills.some((x) => x.id === k.id) && allSkills.findIndex((y) => y.id === k.id) === i), scenes: v.scenes, logic: v.logic, deduction,
         notebookHelp: v.notebookHelp, hints: v.hints, minigames: v.minigames, facts: v.facts, glossary: v.glossary,
         rewards: allRewards.filter((r) => v.rewards.includes(r.id)),
         collections: v.collections, activities: v.activities, comfort: v.comfort, cutscenes: v.cutscenes,

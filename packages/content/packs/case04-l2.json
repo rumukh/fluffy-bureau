@@ -1,0 +1,4063 @@
+{
+ "format": "fluffy-content-pack",
+ "schema": 1,
+ "id": "case04-l2",
+ "kind": "case",
+ "title": "C4-TITLE",
+ "case": {
+  "number": 4,
+  "level": 2
+ },
+ "requires": [
+  "shared"
+ ],
+ "start": "C4-0",
+ "lines": [
+  {
+   "id": "C4-TITLE",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Варенье из глубокого погреба",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-0-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Беда! Из погреба пропало всё варенье!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C4-0-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Двенадцать банок. Я варил их к юбилею!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C4-0-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Варенье? Хм… Что-то знакомое…",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C4-0-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Нет, показалось. Идём в погреб мэрии!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C4-1-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Вот тут стояли банки. А теперь пусто!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C4-1-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Это мыши! Мыши так любят сладкое!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C4-1-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Ой, господин мэр, у вас лапки липкие.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-1-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Это… я ел мёд на завтрак. Честно!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C4-1-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Не будем спешить. Проверим всех.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-1-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Даже меня. Сыщик должен быть честным.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-1-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "А ещё на чердаке мэрии нашли пустую банку!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C4-L2-1-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Пустую? Ой… Я, кажется, туда поднималась.",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C4-L2-1-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Или нет. Не помню. Запишите и меня.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-1-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Запиши и меня, {имя}. Для порядка.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-1-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Варенье могли съесть, разбить или спрятать.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-1-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Или раздать гостям! Хотя я запрещал до юбилея.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-1-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "У нас четыре подозреваемых. И двое из них — мы!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C4-1-N01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "khvosts",
+   "text": "Вот три волшебных клубка.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-1-N02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "khvosts",
+   "text": "Потянешь нитку — подскажу, куда идти.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-1-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Осмотреть полки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-1-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Спросить мэра",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-2-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Сравнить следы",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-4-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Дневник Добрых Дел",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-1-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Позвать на помощь",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-2-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Возьми лупу. Найди четыре странные мелочи.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-2-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Значит, за бочкой искать нечего. Банки увезли.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-2-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Новая улика! Записала… кажется, без ошибок.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-3-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Господин мэр, когда вы были тут последний раз?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-3-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Три недели назад. Лестница крутая, я не люблю.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-3-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Тогда же я просил мышат пересчитать банки.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-3-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Записала: мышата были тут по делу.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-4-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Тут два следа. Один старый, другой свежий.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-4-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Старый присыпан пылью. Сравни оба с карточками.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-4-N01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "khvosts",
+   "text": "Сравни след с карточками. Чья это лапа?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-4-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Барсук в Пушистино один. Это… я.",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C4-4-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Но я не помню! Странно…",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-4-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Мышата — не подозреваемые. Их следы старые.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-4-10",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Есть улика! Записала… и сама удивилась.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-3-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Ежиных следов нет. Ватсони тут не было.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-3-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Уф! А я уж засомневалась. Сейчас проверю в дневнике!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C4-L2-4-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Ой, страницы рассыпались! Сложим по порядку?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-4-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "На каждой странице нарисован день недели.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-4-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Снова лента времени. Помогай, сыщик!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C4-L2-4-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Я точно записала, куда ушёл Хвостс!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C4-L2-4-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Ой… Куда ушёл — не записала. Простите!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C4-L2-4-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Зато видно: ты в тот вечер была дома.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-4-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "И гостям варенье раздавать запретили.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-4-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Ещё одна улика! Записала… теперь до конца.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-dream-keeper",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Хранитель снов",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-5-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Я кое-что видел ночью. Но это секрет!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C4-5-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Сказать прямо не могу. Зато покажу сон.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-5-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Смотри в фонарь. Угадай, о чём сон.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-5-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Не угадаешь сразу — покажу ещё один.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-5-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Сны не говорят прямо. Думай, что общего.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-5-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Кладовка в нашей Конторе? Там только старые зонты…",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C4-5-10",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Есть улика! Записала… сонную.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-6-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Улики собраны. Даже если версия про меня.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-6-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Выбери честно: кто, где и что случилось.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-7-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Двенадцать банок… С бантиками…",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C4-7-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Тут записка. Моим почерком!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C4-7-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Это я. Я перенёс варенье. И забыл.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-7-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Хотел сберечь его к празднику. Записку спрятал сюда же.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-7-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Господин мэр, простите. Это моя ошибка.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-7-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Мышата, простите. Вас подозревали из-за меня.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-7-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "И ты прости, {имя}. Взрослые тоже ошибаются.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-7-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Шерлок, главное — варенье цело!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C4-7-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Мы не обижаемся. Вы же сами признались.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-7-10",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Разберём наши ложные следы.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-7-11",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Мышиные следы — старые. Мышата считали банки.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-7-12",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Липкие лапки мэра — от мёда на завтрак.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-7-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Пустая банка на чердаке — с прошлого года.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-7-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "А Ватсони просто не записала. Я сам должен был.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-7-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Теперь пишу всё. Даже, что пишу всё.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-7-13",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "А сыщик тоже может стать подозреваемым.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-7-14",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Проверить даже меня — это честно и смело.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-7-15",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Твоя версия подтвердилась! Элементарно… эх, пушинка.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-7-16",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Простите, что не сказал прямо. Это был секрет!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C4-7-17",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Сны помогли. Ты хороший Хранитель, Пухлик.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-equal-share",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Раздели поровну",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-8-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Большое чаепитие! Варенья хватит всем.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-8-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Раздели банки поровну на столы.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-8-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Одной банки хватает на две розетки. Посчитаем?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-8-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "За честность! И за то, чтобы всё записывать.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-8-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Записываю: Хвостс извинился. Теперь не забуду!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C4-8-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Спасибо, {имя}! Самое вкусное дело года.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-9-01",
+   "rev": 1,
+   "kind": "fact",
+   "speaker": "narrator",
+   "text": "Сахар помогает ягодам храниться. В сладком варенье микробам трудно жить.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C4-9-02",
+   "rev": 1,
+   "kind": "fact",
+   "speaker": "narrator",
+   "text": "Барсуки проветривают подстилку. Они вытаскивают её из норы наружу.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C4-9-03",
+   "rev": 1,
+   "kind": "fact",
+   "speaker": "narrator",
+   "text": "Одна барсучья нора служила семье больше двухсот лет.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C4-9-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Двести лет в одной норе! Вот это запасливость.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-10-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Четвёртое дело раскрыто, {имя}!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C4-10-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Держи значок-лапку „Честное варенье“.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-10-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "И новое звание — младший детектив!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C4-10-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "А банку поставим на видное место. Чтобы не забыть!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C4-AX-who",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Кто?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-AX-where",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Где варенье сейчас?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-AX-office-pantry",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Кладовка Конторы",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-AX-mouse-hole",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Норка Шуршиков",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-AX-cellar-barrel",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "За бочкой в погребе",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-AX-mayor-attic",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Чердак мэрии",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-AX-what",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Что случилось?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-AX-secret-stock",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Отнесли в тайный запас",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-AX-eaten",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Съели",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-AX-broken",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Разбили",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-AX-shared-early",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Раздали гостям заранее",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-CL-cellar",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Банки увезли целыми",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-CL-tracks",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Старые и свежие следы",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-CL-diary",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Дневник Добрых Дел",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-CL-dreams",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Сны Пухлика",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-6-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Версия не подтвердилась! Зато вспомним кое-что.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-6-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Хомячьих следов в погребе нет. Только барсучьи.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-6-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Мышиные следы старые. Они в пыли.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-6-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "В тот вечер я вязала дома. Так в дневнике.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-6-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Пухлику снилась дверка под лестницей.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-6-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "След тележки ведёт из погреба. Банки увезли.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-6-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Ступеньки над головой — значит, мы под лестницей.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-6-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Ни ложек, ни крошек. Банки унесли целыми.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-6-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Осколков нет. На полках — ровные кружки.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-6-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Мэр запретил раздавать до юбилея. Так в дневнике.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-6-10",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Отличная попытка! Запишем и подумаем.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-NB-01",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Свежие следы барсучьи. Значит, это Хвостс.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C4-L2-NB-01",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "В дневнике я была дома.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C4-NB-02",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Сны ведут в кладовку Конторы.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C4-NB-06",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Тележка уехала. За бочкой пусто.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C4-L2-NB-03",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Сны показывают лестницу, не чердак.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C4-NB-03",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Банки ждут праздника. Это тайный запас.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C4-NB-04",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Банки увезли целыми, не съели.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C4-NB-05",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Банки увезли целыми, не разбили.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C4-L2-NB-02",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Мэр запретил раздавать до юбилея.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C4-L2-H-01",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Начни с полок. Где стояли банки?",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C4-L2-H-02",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Сравни следы. Есть ли тут ежиные?",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C4-L2-H-03",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Дневник Ватсони помнит, кто где был.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C4-L2-H-04",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Пухлик что-то видел. Позови его.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C4-L2-H-05",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Перечитай Блокнот. Даже строчку про меня.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C4-L2-R-03",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "watsony",
+   "text": "Заплатка на колесе… Где-то я её видела.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C4-L2-R-01",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "watsony",
+   "text": "Дневник… Где мой дневник? Ах, в лапах!",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C4-L2-R-02",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "watsony",
+   "text": "Мне снилась лестница. Или я по ней шла?",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C4-L2-R-04",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "watsony",
+   "text": "Кажется, я что-то записывала дома.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C4-2-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Следы банок",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-2-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Кружки в пыли. Банки унесли целыми.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-2-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Пол без осколков",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-2-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Ни осколков, ни ложек. Не разбили и не съели.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-2-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "След тележки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-2-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "След тележки. Он ведёт к выходу.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-2-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Заплатка-звёздочка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-2-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "На колесе была заплатка. Видишь звёздочку в пыли?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-4-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Мышь: крошечные следы",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-4-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Мышиные. Мышата приходили давно, считать банки.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-4-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Хомяк: круглая лапка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-4-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Посмотри на размер. Следы совсем крошечные.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-4-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Барсук: широкая лапа с когтями",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-3-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Ёж: маленькие лапки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-4-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Эти следы большие. Посчитай когти.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-4-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Широкая лапа, длинные когти… Это барсук.",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C4-L2-3-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "У ежа лапки маленькие. А тут широкая лапа.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-4-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Три недели: банки пересчитали",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-4-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Три недели: никому до юбилея",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-4-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Две недели: Хвостс с тележкой",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-4-B05",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Две недели: Ватсони вязала дома",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-4-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Посмотри, какая неделя на странице.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-5-N01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "pukhlik",
+   "text": "Выбери, где прячется сон.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-5-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Кладовка Конторы",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-5-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Да! Дверка под лестницей в Конторе.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-5-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Норка Шуршиков",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-5-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Не совсем. Вот ещё сон.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-5-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "За бочкой",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-5-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Чердак мэрии",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-5-N02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "pukhlik",
+   "text": "Выбери, что случилось с банками.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-5-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Тайный запас",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-5-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Да! Банки ждут праздника.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-5-B05",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Съели",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-5-B06",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Разбили",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-5-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Раздали гостям",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-5-N03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "pukhlik",
+   "text": "Выбери, чей это сонный след.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-5-B07",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Шерлок Хвостс",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-5-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Да… Только он сам забыл.",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C4-5-B08",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Мэр Пудинг",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-5-B09",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Мышата Шуршики",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-5-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Доктор Ватсони",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-8-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Три банки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-8-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Поровну! Никто не обижен.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-8-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Четыре банки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-8-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Посмотри: на одном столе больше. Переставим?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-8-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Три стола",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-8-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Три банки открыть",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "GL-suspect-DEF",
+   "rev": 1,
+   "kind": "glossary",
+   "speaker": "narrator",
+   "text": "Подозреваемый — тот, кого проверяют без обвинения.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "GL-suspect",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Подозреваемый",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c4-badge",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Значок-лапка «Честное варенье»",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c4-sticker-2",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Стикер «Честное варенье», две звёздочки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c4-title-junior",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Звание: Младший детектив",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c4-decor-jar",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Банка варенья для Конторы",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c4-activity",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Карточка «Сахарный опыт»",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C4-TITLE",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Сахарный опыт",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C4-01",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Возьми две одинаковые ягоды.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C4-02",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Взрослый моет баночки и подписывает даты.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C4-03",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Одну ягоду посыпь сахаром.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C4-04",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Сравни баночки через день.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C4-S01",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Не пробуй ягоды после опыта.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C4-S02",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Плесень трогает только взрослый.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L-01",
+   "rev": 1,
+   "kind": "comfort",
+   "speaker": "watsony",
+   "text": "Тут светло и пахнет вареньем. Это просто погреб.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C4-F-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Сегодня мой фонарь снов будет у вас.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-F-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Хранитель знает разгадку. Остальные — не подглядывайте!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C4-F-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Хранитель, выбери сон. Без прямых слов!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C4-F-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Можно задать один вопрос. Хранитель ответит да или нет.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-F-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Вы угадали вместе! Победа общая.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-0-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Погреб мэрии",
+   "voiced": true,
+   "delivery": "neutral"
+  }
+ ],
+ "speakers": [],
+ "skills": [
+  {
+   "id": "dream-keeper",
+   "title": "SK-dream-keeper"
+  },
+  {
+   "id": "equal-share",
+   "title": "SK-equal-share"
+  }
+ ],
+ "scenes": [
+  {
+   "id": "C4-0",
+   "title": "Контора: мэр в отчаянии",
+   "location": "office",
+   "cast": [
+    "pudding",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "cutscene",
+   "steps": [
+    {
+     "t": "dir",
+     "id": "C4-0-D01",
+     "text": "Контора. Мэр Пудинг в отчаянии держит пустую баночку."
+    },
+    {
+     "t": "line",
+     "line": "C4-0-01"
+    },
+    {
+     "t": "line",
+     "line": "C4-0-02"
+    },
+    {
+     "t": "line",
+     "line": "C4-0-03"
+    },
+    {
+     "t": "line",
+     "line": "C4-0-04"
+    },
+    {
+     "t": "skill",
+     "skill": "map",
+     "first": [
+      {
+       "t": "dir",
+       "id": "C4-0-D02",
+       "text": "На карте активна точка «Погреб мэрии»."
+      }
+     ],
+     "known": []
+    },
+    {
+     "t": "goto",
+     "scene": "C4-L2-1"
+    }
+   ]
+  },
+  {
+   "id": "C4-L2-1",
+   "title": "Завязка: четыре подозреваемых",
+   "location": "mayor-cellar",
+   "cast": [
+    "pudding",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "line",
+     "line": "C4-1-01"
+    },
+    {
+     "t": "line",
+     "line": "C4-1-02"
+    },
+    {
+     "t": "line",
+     "line": "C4-1-03"
+    },
+    {
+     "t": "line",
+     "line": "C4-1-04"
+    },
+    {
+     "t": "line",
+     "line": "C4-1-05"
+    },
+    {
+     "t": "line",
+     "line": "C4-1-06"
+    },
+    {
+     "t": "line",
+     "line": "C4-L2-1-01"
+    },
+    {
+     "t": "line",
+     "line": "C4-L2-1-02"
+    },
+    {
+     "t": "line",
+     "line": "C4-L2-1-03"
+    },
+    {
+     "t": "skill",
+     "skill": "notebook",
+     "first": [
+      {
+       "t": "dir",
+       "id": "C4-L2-1-D01",
+       "text": "Блокнот раскрывается: четыре строки в каждой колонке."
+      },
+      {
+       "t": "line",
+       "line": "C4-1-07"
+      }
+     ],
+     "known": [
+      {
+       "t": "dir",
+       "id": "C4-L2-1-D01",
+       "text": "Блокнот раскрывается: четыре строки в каждой колонке."
+      },
+      {
+       "t": "line",
+       "line": "C4-1-07"
+      }
+     ]
+    },
+    {
+     "t": "line",
+     "line": "C4-L2-1-04"
+    },
+    {
+     "t": "line",
+     "line": "C4-L2-1-05"
+    },
+    {
+     "t": "line",
+     "line": "C4-L2-1-06"
+    },
+    {
+     "t": "skill",
+     "skill": "klubki",
+     "first": [
+      {
+       "t": "line",
+       "line": "C4-1-N01"
+      },
+      {
+       "t": "line",
+       "line": "C4-1-N02"
+      }
+     ],
+     "known": []
+    },
+    {
+     "t": "goto",
+     "scene": "C4-L2-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C4-L2-HUB",
+   "title": "Погреб: выбор",
+   "location": "mayor-cellar",
+   "cast": [
+    "pudding",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "hub",
+   "steps": [
+    {
+     "t": "if",
+     "when": {
+      "all": [
+       {
+        "all": [
+         {
+          "clue": "c4-cellar"
+         },
+         {
+          "clue": "c4-tracks"
+         },
+         {
+          "clue": "c4-diary"
+         },
+         {
+          "clue": "c4-dreams"
+         }
+        ]
+       },
+       {
+        "not": {
+         "visited": "C4-L2-6"
+        }
+       }
+      ]
+     },
+     "then": [
+      {
+       "t": "goto",
+       "scene": "C4-L2-6"
+      }
+     ],
+     "else": []
+    },
+    {
+     "t": "menu",
+     "id": "C4-L2-M",
+     "prompt": null,
+     "pageSize": 3,
+     "options": [
+      {
+       "id": "shelves",
+       "label": "C4-1-B01",
+       "to": "C4-L2-2",
+       "when": null,
+       "hideWhen": {
+        "visited": "C4-L2-2"
+       },
+       "optional": false
+      },
+      {
+       "id": "mayor",
+       "label": "C4-1-B02",
+       "to": "C4-3",
+       "when": null,
+       "hideWhen": {
+        "visited": "C4-3"
+       },
+       "optional": true
+      },
+      {
+       "id": "tracks",
+       "label": "C4-2-B04",
+       "to": "C4-L2-3",
+       "when": {
+        "clue": "c4-cellar"
+       },
+       "hideWhen": {
+        "visited": "C4-L2-3"
+       },
+       "optional": false
+      },
+      {
+       "id": "diary",
+       "label": "C4-L2-4-B01",
+       "to": "C4-L2-4",
+       "when": {
+        "visited": "C4-L2-3"
+       },
+       "hideWhen": {
+        "visited": "C4-L2-4"
+       },
+       "optional": false
+      },
+      {
+       "id": "dreams",
+       "label": "C4-1-B03",
+       "to": "C4-L2-5",
+       "when": {
+        "clue": "c4-cellar"
+       },
+       "hideWhen": {
+        "visited": "C4-L2-5"
+       },
+       "optional": false
+      }
+     ],
+     "back": null
+    }
+   ]
+  },
+  {
+   "id": "C4-L2-2",
+   "title": "Полки: «Лупа»",
+   "location": "mayor-cellar-shelves",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "magnifier",
+     "first": [
+      {
+       "t": "line",
+       "line": "C4-L2-2-01"
+      }
+     ],
+     "known": []
+    },
+    {
+     "t": "minigame",
+     "minigame": "c4l2-lupa"
+    },
+    {
+     "t": "line",
+     "line": "C4-2-05"
+    },
+    {
+     "t": "line",
+     "line": "C4-2-06"
+    },
+    {
+     "t": "clue",
+     "clue": "c4-cellar"
+    },
+    {
+     "t": "goto",
+     "scene": "C4-L2-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C4-3",
+   "title": "Мэр: три недели назад",
+   "location": "mayor-cellar",
+   "cast": [
+    "pudding",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "line",
+     "line": "C4-3-01"
+    },
+    {
+     "t": "line",
+     "line": "C4-3-02"
+    },
+    {
+     "t": "line",
+     "line": "C4-3-03"
+    },
+    {
+     "t": "line",
+     "line": "C4-3-04"
+    },
+    {
+     "t": "goto",
+     "scene": "C4-L2-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C4-L2-3",
+   "title": "«Кто наследил?»",
+   "location": "cellar-steps",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "line",
+     "line": "C4-4-01"
+    },
+    {
+     "t": "line",
+     "line": "C4-4-02"
+    },
+    {
+     "t": "skill",
+     "skill": "tracks",
+     "first": [
+      {
+       "t": "line",
+       "line": "C4-4-N01"
+      }
+     ],
+     "known": []
+    },
+    {
+     "t": "minigame",
+     "minigame": "c4l2-tracks"
+    },
+    {
+     "t": "line",
+     "line": "C4-4-07"
+    },
+    {
+     "t": "line",
+     "line": "C4-4-08"
+    },
+    {
+     "t": "line",
+     "line": "C4-4-09"
+    },
+    {
+     "t": "line",
+     "line": "C4-4-10"
+    },
+    {
+     "t": "line",
+     "line": "C4-L2-3-02"
+    },
+    {
+     "t": "line",
+     "line": "C4-L2-3-03"
+    },
+    {
+     "t": "clue",
+     "clue": "c4-tracks"
+    },
+    {
+     "t": "goto",
+     "scene": "C4-L2-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C4-L2-4",
+   "title": "«Лента времени»: дневник",
+   "location": "office-diary",
+   "cast": [
+    "watsony",
+    "khvosts"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "timeline",
+     "first": [
+      {
+       "t": "line",
+       "line": "C4-L2-4-01"
+      },
+      {
+       "t": "line",
+       "line": "C4-L2-4-02"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C4-L2-4-03"
+      }
+     ]
+    },
+    {
+     "t": "line",
+     "line": "C4-L2-4-04"
+    },
+    {
+     "t": "minigame",
+     "minigame": "c4l2-timeline"
+    },
+    {
+     "t": "line",
+     "line": "C4-L2-4-05"
+    },
+    {
+     "t": "line",
+     "line": "C4-L2-4-06"
+    },
+    {
+     "t": "line",
+     "line": "C4-L2-4-07"
+    },
+    {
+     "t": "line",
+     "line": "C4-L2-4-08"
+    },
+    {
+     "t": "clue",
+     "clue": "c4-diary"
+    },
+    {
+     "t": "goto",
+     "scene": "C4-L2-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C4-L2-5",
+   "title": "«Хранитель снов»",
+   "location": "mayor-cellar",
+   "cast": [
+    "pukhlik",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "dream-keeper",
+     "first": [
+      {
+       "t": "line",
+       "line": "C4-5-01"
+      },
+      {
+       "t": "line",
+       "line": "C4-5-02"
+      },
+      {
+       "t": "line",
+       "line": "C4-5-03"
+      },
+      {
+       "t": "line",
+       "line": "C4-5-04"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C4-5-01"
+      },
+      {
+       "t": "line",
+       "line": "C4-5-02"
+      },
+      {
+       "t": "line",
+       "line": "C4-5-03"
+      },
+      {
+       "t": "line",
+       "line": "C4-5-04"
+      }
+     ]
+    },
+    {
+     "t": "line",
+     "line": "C4-L2-5-01"
+    },
+    {
+     "t": "minigame",
+     "minigame": "c4l2-dreams"
+    },
+    {
+     "t": "line",
+     "line": "C4-5-09"
+    },
+    {
+     "t": "line",
+     "line": "C4-5-10"
+    },
+    {
+     "t": "clue",
+     "clue": "c4-dreams"
+    },
+    {
+     "t": "goto",
+     "scene": "C4-L2-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C4-L2-6",
+   "title": "Версия: «Приглашу на разговор»",
+   "location": "mayor-cellar",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "version",
+     "first": [
+      {
+       "t": "line",
+       "line": "C4-6-01"
+      },
+      {
+       "t": "line",
+       "line": "C4-6-02"
+      }
+     ],
+     "known": []
+    },
+    {
+     "t": "goto",
+     "scene": "C4-L2-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C4-L2-7",
+   "title": "Кладовка Конторы",
+   "location": "office-pantry",
+   "cast": [
+    "pudding",
+    "mouse",
+    "pukhlik",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "cutscene",
+   "steps": [
+    {
+     "t": "dir",
+     "id": "C4-7-D01",
+     "text": "Контора. Под лестницей маленькая дверка; внутри двенадцать банок с бантиками."
+    },
+    {
+     "t": "line",
+     "line": "C4-7-01"
+    },
+    {
+     "t": "line",
+     "line": "C4-7-02"
+    },
+    {
+     "t": "line",
+     "line": "C4-7-03"
+    },
+    {
+     "t": "line",
+     "line": "C4-7-04"
+    },
+    {
+     "t": "line",
+     "line": "C4-7-05"
+    },
+    {
+     "t": "line",
+     "line": "C4-7-06"
+    },
+    {
+     "t": "line",
+     "line": "C4-7-07"
+    },
+    {
+     "t": "line",
+     "line": "C4-7-08"
+    },
+    {
+     "t": "line",
+     "line": "C4-7-09"
+    },
+    {
+     "t": "line",
+     "line": "C4-7-10"
+    },
+    {
+     "t": "line",
+     "line": "C4-7-11"
+    },
+    {
+     "t": "line",
+     "line": "C4-7-12"
+    },
+    {
+     "t": "line",
+     "line": "C4-L2-7-01"
+    },
+    {
+     "t": "line",
+     "line": "C4-L2-7-02"
+    },
+    {
+     "t": "line",
+     "line": "C4-L2-7-03"
+    },
+    {
+     "t": "line",
+     "line": "C4-7-13"
+    },
+    {
+     "t": "line",
+     "line": "C4-7-14"
+    },
+    {
+     "t": "line",
+     "line": "C4-7-15"
+    },
+    {
+     "t": "line",
+     "line": "C4-7-16"
+    },
+    {
+     "t": "line",
+     "line": "C4-7-17"
+    },
+    {
+     "t": "goto",
+     "scene": "C4-L2-8"
+    }
+   ]
+  },
+  {
+   "id": "C4-L2-8",
+   "title": "Большое чаепитие",
+   "location": "town-square",
+   "cast": [
+    "pudding",
+    "mouse",
+    "pukhlik",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "equal-share",
+     "first": [
+      {
+       "t": "line",
+       "line": "C4-8-01"
+      },
+      {
+       "t": "line",
+       "line": "C4-8-02"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C4-8-01"
+      },
+      {
+       "t": "line",
+       "line": "C4-8-02"
+      }
+     ]
+    },
+    {
+     "t": "line",
+     "line": "C4-L2-8-01"
+    },
+    {
+     "t": "minigame",
+     "minigame": "c4l2-tea"
+    },
+    {
+     "t": "line",
+     "line": "C4-8-05"
+    },
+    {
+     "t": "line",
+     "line": "C4-8-06"
+    },
+    {
+     "t": "line",
+     "line": "C4-8-07"
+    },
+    {
+     "t": "goto",
+     "scene": "C4-9"
+    }
+   ]
+  },
+  {
+   "id": "C4-9",
+   "title": "«А ты знал?»",
+   "location": "town-square",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "encyclopedia",
+     "first": [
+      {
+       "t": "dir",
+       "id": "C4-9-D01",
+       "text": "Три карточки фактов складываются в Энциклопедию."
+      }
+     ],
+     "known": []
+    },
+    {
+     "t": "line",
+     "line": "C4-9-01"
+    },
+    {
+     "t": "line",
+     "line": "C4-9-02"
+    },
+    {
+     "t": "line",
+     "line": "C4-9-03"
+    },
+    {
+     "t": "line",
+     "line": "C4-9-04"
+    },
+    {
+     "t": "goto",
+     "scene": "C4-10"
+    }
+   ]
+  },
+  {
+   "id": "C4-10",
+   "title": "Награда",
+   "location": "office",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "cutscene",
+   "steps": [
+    {
+     "t": "line",
+     "line": "C4-10-01"
+    },
+    {
+     "t": "line",
+     "line": "C4-10-02"
+    },
+    {
+     "t": "line",
+     "line": "C4-10-03"
+    },
+    {
+     "t": "line",
+     "line": "C4-10-04"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c4-badge"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c4-buttons-l2"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c4-sticker-l2"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c4-title-junior"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c4-decor-jar"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c4-activity"
+    },
+    {
+     "t": "dir",
+     "id": "C4-10-D01",
+     "text": "Новое слово в словарике: подозреваемый. Банка варенья ставится в Конторе."
+    },
+    {
+     "t": "skill",
+     "skill": "cozy-day",
+     "first": [
+      {
+       "t": "await",
+       "action": "office.place"
+      }
+     ],
+     "known": []
+    },
+    {
+     "t": "end"
+    }
+   ]
+  }
+ ],
+ "logic": {
+  "axes": [
+   {
+    "id": "who",
+    "title": "C4-AX-who",
+    "values": [
+     {
+      "id": "khvosts",
+      "label": "NM-khvosts"
+     },
+     {
+      "id": "pudding",
+      "label": "NM-pudding"
+     },
+     {
+      "id": "mouse",
+      "label": "NM-mouse"
+     },
+     {
+      "id": "watsony",
+      "label": "NM-watsony"
+     }
+    ]
+   },
+   {
+    "id": "where",
+    "title": "C4-AX-where",
+    "values": [
+     {
+      "id": "office-pantry",
+      "label": "C4-AX-office-pantry"
+     },
+     {
+      "id": "mouse-hole",
+      "label": "C4-AX-mouse-hole"
+     },
+     {
+      "id": "cellar-barrel",
+      "label": "C4-AX-cellar-barrel"
+     },
+     {
+      "id": "mayor-attic",
+      "label": "C4-AX-mayor-attic"
+     }
+    ]
+   },
+   {
+    "id": "what",
+    "title": "C4-AX-what",
+    "values": [
+     {
+      "id": "secret-stock",
+      "label": "C4-AX-secret-stock"
+     },
+     {
+      "id": "eaten",
+      "label": "C4-AX-eaten"
+     },
+     {
+      "id": "broken",
+      "label": "C4-AX-broken"
+     },
+     {
+      "id": "shared-early",
+      "label": "C4-AX-shared-early"
+     }
+    ]
+   }
+  ],
+  "intended": {
+   "who": "khvosts",
+   "where": "office-pantry",
+   "what": "secret-stock"
+  },
+  "clues": [
+   {
+    "id": "c4-cellar",
+    "title": "C4-CL-cellar",
+    "required": true,
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "ne",
+       "axis": "where",
+       "value": "cellar-barrel"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "eaten"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "broken"
+      }
+     ]
+    },
+    "requires": [],
+    "source": "C4-L2-2",
+    "summary": "Кружки, целый пол, след тележки и заплатка-звёздочка."
+   },
+   {
+    "id": "c4-tracks",
+    "title": "C4-CL-tracks",
+    "required": true,
+    "predicate": {
+     "op": "eq",
+     "axis": "who",
+     "value": "khvosts"
+    },
+    "requires": [
+     "c4-cellar"
+    ],
+    "source": "C4-L2-3",
+    "summary": "Старые мышиные следы; свежие барсучьи; хомячьих и ежиных нет."
+   },
+   {
+    "id": "c4-diary",
+    "title": "C4-CL-diary",
+    "required": true,
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "watsony"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "shared-early"
+      }
+     ]
+    },
+    "requires": [
+     "c4-tracks"
+    ],
+    "source": "C4-L2-4",
+    "summary": "Ватсони вязала дома; мэр запретил раздавать варенье до юбилея."
+   },
+   {
+    "id": "c4-dreams",
+    "title": "C4-CL-dreams",
+    "required": true,
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "eq",
+       "axis": "where",
+       "value": "office-pantry"
+      },
+      {
+       "op": "eq",
+       "axis": "what",
+       "value": "secret-stock"
+      }
+     ]
+    },
+    "requires": [
+     "c4-cellar"
+    ],
+    "source": "C4-L2-5",
+    "summary": "Сны мягко ведут к кладовке под лестницей и тайному запасу."
+   }
+  ],
+  "version": {
+   "button": "UI-hud.version",
+   "available": {
+    "visited": "C4-L2-6"
+   },
+   "onSolved": "C4-L2-7"
+  },
+  "wrongVersion": {
+   "intro": [
+    {
+     "line": "C4-6-03",
+     "when": null
+    }
+   ],
+   "byValue": [
+    {
+     "axis": "who",
+     "value": "pudding",
+     "clues": [
+      "c4-tracks"
+     ],
+     "lines": [
+      {
+       "line": "C4-6-04",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "who",
+     "value": "mouse",
+     "clues": [
+      "c4-tracks"
+     ],
+     "lines": [
+      {
+       "line": "C4-6-05",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "who",
+     "value": "watsony",
+     "clues": [
+      "c4-diary"
+     ],
+     "lines": [
+      {
+       "line": "C4-L2-6-01",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "where",
+     "value": "mouse-hole",
+     "clues": [
+      "c4-dreams"
+     ],
+     "lines": [
+      {
+       "line": "C4-6-06",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "where",
+     "value": "cellar-barrel",
+     "clues": [
+      "c4-cellar"
+     ],
+     "lines": [
+      {
+       "line": "C4-6-07",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "where",
+     "value": "mayor-attic",
+     "clues": [
+      "c4-dreams"
+     ],
+     "lines": [
+      {
+       "line": "C4-L2-6-02",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "what",
+     "value": "eaten",
+     "clues": [
+      "c4-cellar"
+     ],
+     "lines": [
+      {
+       "line": "C4-6-08",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "what",
+     "value": "broken",
+     "clues": [
+      "c4-cellar"
+     ],
+     "lines": [
+      {
+       "line": "C4-6-09",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "what",
+     "value": "shared-early",
+     "clues": [
+      "c4-diary"
+     ],
+     "lines": [
+      {
+       "line": "C4-L2-6-03",
+       "when": null
+      }
+     ]
+    }
+   ],
+   "outro": [
+    {
+     "line": "C4-6-10",
+     "when": null
+    }
+   ]
+  },
+  "redHerrings": [
+   {
+    "id": "rh-c4-mice-sweet",
+    "summary": "Мыши якобы любят сладкое.",
+    "presentedBy": [
+     "C4-1-02"
+    ],
+    "explainedBy": [
+     "C4-7-11"
+    ]
+   },
+   {
+    "id": "rh-c4-sticky-mayor",
+    "summary": "Липкие лапки мэра от мёда.",
+    "presentedBy": [
+     "C4-1-03"
+    ],
+    "explainedBy": [
+     "C4-7-12"
+    ]
+   },
+   {
+    "id": "rh-c4-detective",
+    "summary": "Сыщик тоже может быть подозреваемым.",
+    "presentedBy": [
+     "C4-1-06"
+    ],
+    "explainedBy": [
+     "C4-7-13",
+     "C4-7-14"
+    ]
+   },
+   {
+    "id": "rh-c4-watsony",
+    "summary": "Ватсони сомневается и думает, что была на чердаке.",
+    "presentedBy": [
+     "C4-L2-1-02",
+     "C4-L2-1-03"
+    ],
+    "explainedBy": [
+     "C4-L2-7-02",
+     "C4-L2-7-03"
+    ]
+   },
+   {
+    "id": "rh-c4-attic-jar",
+    "summary": "Пустая банка на чердаке старая.",
+    "presentedBy": [
+     "C4-L2-1-01"
+    ],
+    "explainedBy": [
+     "C4-L2-7-01"
+    ]
+   }
+  ]
+ },
+ "deduction": {
+  "schema": 1,
+  "id": "case04-l2",
+  "axes": [
+   {
+    "id": "who",
+    "values": [
+     "khvosts",
+     "pudding",
+     "mouse",
+     "watsony"
+    ]
+   },
+   {
+    "id": "where",
+    "values": [
+     "office-pantry",
+     "mouse-hole",
+     "cellar-barrel",
+     "mayor-attic"
+    ]
+   },
+   {
+    "id": "what",
+    "values": [
+     "secret-stock",
+     "eaten",
+     "broken",
+     "shared-early"
+    ]
+   }
+  ],
+  "compatibility": null,
+  "intended": {
+   "who": "khvosts",
+   "where": "office-pantry",
+   "what": "secret-stock"
+  },
+  "clues": [
+   {
+    "id": "c4-cellar",
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "ne",
+       "axis": "where",
+       "value": "cellar-barrel"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "eaten"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "broken"
+      }
+     ]
+    },
+    "requires": [],
+    "requiresAnswer": false,
+    "explanationKey": "C4-CL-cellar"
+   },
+   {
+    "id": "c4-tracks",
+    "predicate": {
+     "op": "eq",
+     "axis": "who",
+     "value": "khvosts"
+    },
+    "requires": [
+     "c4-cellar"
+    ],
+    "requiresAnswer": false,
+    "explanationKey": "C4-CL-tracks"
+   },
+   {
+    "id": "c4-diary",
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "watsony"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "shared-early"
+      }
+     ]
+    },
+    "requires": [
+     "c4-tracks"
+    ],
+    "requiresAnswer": false,
+    "explanationKey": "C4-CL-diary"
+   },
+   {
+    "id": "c4-dreams",
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "eq",
+       "axis": "where",
+       "value": "office-pantry"
+      },
+      {
+       "op": "eq",
+       "axis": "what",
+       "value": "secret-stock"
+      }
+     ]
+    },
+    "requires": [
+     "c4-cellar"
+    ],
+    "requiresAnswer": false,
+    "explanationKey": "C4-CL-dreams"
+   }
+  ],
+  "redHerrings": [
+   {
+    "id": "rh-c4-mice-sweet",
+    "explanationKey": "C4-7-11"
+   },
+   {
+    "id": "rh-c4-sticky-mayor",
+    "explanationKey": "C4-7-12"
+   },
+   {
+    "id": "rh-c4-detective",
+    "explanationKey": "C4-7-13"
+   },
+   {
+    "id": "rh-c4-watsony",
+    "explanationKey": "C4-L2-7-02"
+   },
+   {
+    "id": "rh-c4-attic-jar",
+    "explanationKey": "C4-L2-7-01"
+   }
+  ],
+  "maxCandidates": 64
+ },
+ "notebookHelp": {
+  "mode": "suggest",
+  "marks": [
+   {
+    "axis": "who",
+    "value": "khvosts",
+    "mark": "confirmed",
+    "clues": [
+     "c4-tracks"
+    ],
+    "line": "C4-NB-01"
+   },
+   {
+    "axis": "who",
+    "value": "pudding",
+    "mark": "excluded",
+    "clues": [
+     "c4-tracks"
+    ],
+    "line": "C4-6-04"
+   },
+   {
+    "axis": "who",
+    "value": "mouse",
+    "mark": "excluded",
+    "clues": [
+     "c4-tracks"
+    ],
+    "line": "C4-6-05"
+   },
+   {
+    "axis": "who",
+    "value": "watsony",
+    "mark": "excluded",
+    "clues": [
+     "c4-diary"
+    ],
+    "line": "C4-L2-NB-01"
+   },
+   {
+    "axis": "where",
+    "value": "office-pantry",
+    "mark": "confirmed",
+    "clues": [
+     "c4-dreams"
+    ],
+    "line": "C4-NB-02"
+   },
+   {
+    "axis": "where",
+    "value": "mouse-hole",
+    "mark": "excluded",
+    "clues": [
+     "c4-dreams"
+    ],
+    "line": "C4-6-06"
+   },
+   {
+    "axis": "where",
+    "value": "cellar-barrel",
+    "mark": "excluded",
+    "clues": [
+     "c4-cellar"
+    ],
+    "line": "C4-NB-06"
+   },
+   {
+    "axis": "where",
+    "value": "mayor-attic",
+    "mark": "excluded",
+    "clues": [
+     "c4-dreams"
+    ],
+    "line": "C4-L2-NB-03"
+   },
+   {
+    "axis": "what",
+    "value": "secret-stock",
+    "mark": "confirmed",
+    "clues": [
+     "c4-dreams"
+    ],
+    "line": "C4-NB-03"
+   },
+   {
+    "axis": "what",
+    "value": "eaten",
+    "mark": "excluded",
+    "clues": [
+     "c4-cellar"
+    ],
+    "line": "C4-NB-04"
+   },
+   {
+    "axis": "what",
+    "value": "broken",
+    "mark": "excluded",
+    "clues": [
+     "c4-cellar"
+    ],
+    "line": "C4-NB-05"
+   },
+   {
+    "axis": "what",
+    "value": "shared-early",
+    "mark": "excluded",
+    "clues": [
+     "c4-diary"
+    ],
+    "line": "C4-L2-NB-02"
+   }
+  ],
+  "pointers": [],
+  "nothing": "UI-notebook.nothing"
+ },
+ "hints": {
+  "klubok": {
+   "speaker": "khvosts",
+   "precision": "exact",
+   "allowance": 3,
+   "rules": [
+    {
+     "id": "C4-L2-H-01",
+     "when": {
+      "not": {
+       "clue": "c4-cellar"
+      }
+     },
+     "cites": []
+    },
+    {
+     "id": "C4-L2-H-02",
+     "when": {
+      "all": [
+       {
+        "clue": "c4-cellar"
+       },
+       {
+        "not": {
+         "clue": "c4-tracks"
+        }
+       }
+      ]
+     },
+     "cites": [
+      "c4-cellar"
+     ]
+    },
+    {
+     "id": "C4-L2-H-03",
+     "when": {
+      "all": [
+       {
+        "clue": "c4-tracks"
+       },
+       {
+        "not": {
+         "clue": "c4-diary"
+        }
+       }
+      ]
+     },
+     "cites": [
+      "c4-tracks"
+     ]
+    },
+    {
+     "id": "C4-L2-H-04",
+     "when": {
+      "all": [
+       {
+        "clue": "c4-cellar"
+       },
+       {
+        "not": {
+         "clue": "c4-dreams"
+        }
+       }
+      ]
+     },
+     "cites": [
+      "c4-cellar"
+     ]
+    },
+    {
+     "id": "C4-L2-H-05",
+     "when": {
+      "visited": "C4-L2-6"
+     },
+     "cites": [
+      "c4-cellar",
+      "c4-tracks",
+      "c4-diary",
+      "c4-dreams"
+     ]
+    }
+   ],
+   "review": "C4-L2-H-05",
+   "exhausted": "UI-hint.klubokEmptyShell"
+  },
+  "shell": {
+   "speaker": "watsony",
+   "precision": "vague",
+   "allowance": null,
+   "rules": [
+    {
+     "id": "C4-L2-R-03",
+     "when": {
+      "all": [
+       {
+        "clue": "c4-cellar"
+       },
+       {
+        "not": {
+         "clue": "c4-tracks"
+        }
+       }
+      ]
+     },
+     "cites": [
+      "c4-cellar"
+     ]
+    },
+    {
+     "id": "C4-L2-R-01",
+     "when": {
+      "all": [
+       {
+        "clue": "c4-tracks"
+       },
+       {
+        "not": {
+         "clue": "c4-diary"
+        }
+       }
+      ]
+     },
+     "cites": [
+      "c4-tracks"
+     ]
+    },
+    {
+     "id": "C4-L2-R-02",
+     "when": {
+      "all": [
+       {
+        "clue": "c4-cellar"
+       },
+       {
+        "not": {
+         "clue": "c4-dreams"
+        }
+       }
+      ]
+     },
+     "cites": [
+      "c4-cellar"
+     ]
+    }
+   ],
+   "review": "C4-L2-R-04",
+   "exhausted": null
+  }
+ },
+ "minigames": [
+  {
+   "id": "c4l2-lupa",
+   "skill": "magnifier",
+   "config": {
+    "kind": "magnifier",
+    "targets": [
+     {
+      "id": "jar-circles",
+      "label": "C4-2-B01",
+      "required": true,
+      "reply": [
+       "C4-2-02"
+      ]
+     },
+     {
+      "id": "clean-floor",
+      "label": "C4-2-B02",
+      "required": true,
+      "reply": [
+       "C4-2-03"
+      ]
+     },
+     {
+      "id": "cart-track",
+      "label": "C4-2-B03",
+      "required": true,
+      "reply": [
+       "C4-2-04"
+      ]
+     },
+     {
+      "id": "patch",
+      "label": "C4-L2-2-B01",
+      "required": true,
+      "reply": [
+       "C4-L2-2-02"
+      ]
+     }
+    ],
+    "afterFirst": [],
+    "afterFirstSkill": null,
+    "assistAfterMisses": 3
+   }
+  },
+  {
+   "id": "c4l2-tracks",
+   "skill": "tracks",
+   "config": {
+    "kind": "tracks",
+    "steps": [
+     {
+      "id": "old",
+      "prompt": null,
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "mouse",
+        "label": "C4-4-B01",
+        "correct": true,
+        "reply": [
+         "C4-4-03"
+        ]
+       },
+       {
+        "id": "hamster",
+        "label": "C4-4-B02",
+        "correct": false,
+        "reply": [
+         "C4-4-04"
+        ]
+       },
+       {
+        "id": "badger",
+        "label": "C4-4-B03",
+        "correct": false,
+        "reply": [
+         "C4-4-04"
+        ]
+       },
+       {
+        "id": "hedgehog",
+        "label": "C4-L2-3-B01",
+        "correct": false,
+        "reply": [
+         "C4-4-04"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "fresh",
+      "prompt": null,
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "mouse",
+        "label": "C4-4-B01",
+        "correct": false,
+        "reply": [
+         "C4-4-06"
+        ]
+       },
+       {
+        "id": "hamster",
+        "label": "C4-4-B02",
+        "correct": false,
+        "reply": [
+         "C4-4-06"
+        ]
+       },
+       {
+        "id": "badger",
+        "label": "C4-4-B03",
+        "correct": true,
+        "reply": [
+         "C4-4-05"
+        ]
+       },
+       {
+        "id": "hedgehog",
+        "label": "C4-L2-3-B01",
+        "correct": false,
+        "reply": [
+         "C4-L2-3-01"
+        ]
+       }
+      ]
+     }
+    ],
+    "question": null
+   }
+  },
+  {
+   "id": "c4l2-timeline",
+   "skill": "timeline",
+   "config": {
+    "kind": "timeline",
+    "items": [
+     {
+      "id": "count",
+      "time": "три недели назад",
+      "label": "C4-L2-4-B02"
+     },
+     {
+      "id": "rule",
+      "time": "три недели назад",
+      "label": "C4-L2-4-B03"
+     },
+     {
+      "id": "cart",
+      "time": "две недели назад, вечер",
+      "label": "C4-L2-4-B04"
+     },
+     {
+      "id": "home",
+      "time": "две недели назад, вечер",
+      "label": "C4-L2-4-B05"
+     }
+    ],
+    "solution": [
+     "count",
+     "rule",
+     "cart",
+     "home"
+    ],
+    "wrong": [
+     "C4-L2-4-09"
+    ]
+   }
+  },
+  {
+   "id": "c4l2-dreams",
+   "skill": "dream-keeper",
+   "config": {
+    "kind": "staged",
+    "mechanic": "dream-keeper",
+    "description": "Пухлик показывает по три мягкие карты-сна.",
+    "steps": [
+     {
+      "id": "where",
+      "prompt": "C4-5-N01",
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "office",
+        "label": "C4-5-B01",
+        "correct": true,
+        "reply": [
+         "C4-5-05"
+        ]
+       },
+       {
+        "id": "mouse",
+        "label": "C4-5-B02",
+        "correct": false,
+        "reply": [
+         "C4-5-06"
+        ]
+       },
+       {
+        "id": "barrel",
+        "label": "C4-5-B03",
+        "correct": false,
+        "reply": [
+         "C4-5-06"
+        ]
+       },
+       {
+        "id": "attic",
+        "label": "C4-L2-5-B01",
+        "correct": false,
+        "reply": [
+         "C4-5-06"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "what",
+      "prompt": "C4-5-N02",
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "stock",
+        "label": "C4-5-B04",
+        "correct": true,
+        "reply": [
+         "C4-5-07"
+        ]
+       },
+       {
+        "id": "eaten",
+        "label": "C4-5-B05",
+        "correct": false,
+        "reply": [
+         "C4-5-06"
+        ]
+       },
+       {
+        "id": "broken",
+        "label": "C4-5-B06",
+        "correct": false,
+        "reply": [
+         "C4-5-06"
+        ]
+       },
+       {
+        "id": "shared",
+        "label": "C4-L2-5-B02",
+        "correct": false,
+        "reply": [
+         "C4-5-06"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "who",
+      "prompt": "C4-5-N03",
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "khvosts",
+        "label": "C4-5-B07",
+        "correct": true,
+        "reply": [
+         "C4-5-08"
+        ]
+       },
+       {
+        "id": "pudding",
+        "label": "C4-5-B08",
+        "correct": false,
+        "reply": [
+         "C4-5-06"
+        ]
+       },
+       {
+        "id": "mouse",
+        "label": "C4-5-B09",
+        "correct": false,
+        "reply": [
+         "C4-5-06"
+        ]
+       },
+       {
+        "id": "watsony",
+        "label": "C4-L2-5-B03",
+        "correct": false,
+        "reply": [
+         "C4-5-06"
+        ]
+       }
+      ]
+     }
+    ],
+    "lines": []
+   }
+  },
+  {
+   "id": "c4l2-tea",
+   "skill": "equal-share",
+   "config": {
+    "kind": "staged",
+    "mechanic": "equal-share",
+    "description": "Разделить банки и посчитать розетки.",
+    "steps": [
+     {
+      "id": "tables",
+      "prompt": "C4-8-02",
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "four-tables",
+        "label": "C4-8-B03",
+        "correct": true,
+        "reply": [
+         "C4-8-04"
+        ]
+       },
+       {
+        "id": "three-tables",
+        "label": "C4-8-B02",
+        "correct": false,
+        "reply": [
+         "C4-8-03"
+        ]
+       },
+       {
+        "id": "wrong",
+        "label": "C4-8-B01",
+        "correct": false,
+        "reply": [
+         "C4-8-03"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "open",
+      "prompt": "C4-L2-8-01",
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "three-jars",
+        "label": "C4-L2-8-B01",
+        "correct": true,
+        "reply": [
+         "C4-8-04"
+        ]
+       },
+       {
+        "id": "four-jars",
+        "label": "C4-8-B02",
+        "correct": false,
+        "reply": [
+         "C4-8-03"
+        ]
+       },
+       {
+        "id": "one",
+        "label": "C4-8-B01",
+        "correct": false,
+        "reply": [
+         "C4-8-03"
+        ]
+       }
+      ]
+     }
+    ],
+    "lines": []
+   }
+  }
+ ],
+ "facts": [
+  {
+   "id": "fact-c4-sugar-preserves",
+   "line": "C4-9-01"
+  },
+  {
+   "id": "fact-c4-badger-bedding",
+   "line": "C4-9-02"
+  },
+  {
+   "id": "fact-c4-old-sett",
+   "line": "C4-9-03"
+  }
+ ],
+ "glossary": [
+  {
+   "id": "suspect",
+   "word": "подозреваемый",
+   "definition": "GL-suspect-DEF",
+   "label": "GL-suspect",
+   "forms": [
+    "подозреваемый",
+    "подозреваемого",
+    "подозреваемому",
+    "подозреваемым",
+    "подозреваемом",
+    "подозреваемые",
+    "подозреваемых",
+    "подозреваемыми"
+   ]
+  }
+ ],
+ "rewards": [
+  {
+   "id": "rw-c4-badge",
+   "kind": "badge",
+   "label": "RW-c4-badge",
+   "amount": 1,
+   "claimKey": "case04:badge"
+  },
+  {
+   "id": "rw-c4-buttons-l2",
+   "kind": "buttons",
+   "label": "RW-buttons-15",
+   "amount": 15,
+   "claimKey": "case04:l2:buttons"
+  },
+  {
+   "id": "rw-c4-sticker-l2",
+   "kind": "sticker",
+   "label": "RW-c4-sticker-2",
+   "amount": 1,
+   "claimKey": "case04:l2:sticker"
+  },
+  {
+   "id": "rw-c4-decor-jar",
+   "kind": "decor",
+   "label": "RW-c4-decor-jar",
+   "amount": 1,
+   "claimKey": "case04:decor:jar"
+  },
+  {
+   "id": "rw-c4-title-junior",
+   "kind": "title",
+   "label": "RW-c4-title-junior",
+   "amount": 1,
+   "claimKey": "case04:title:junior-detective"
+  },
+  {
+   "id": "rw-c4-activity",
+   "kind": "activity",
+   "label": "RW-c4-activity",
+   "amount": 1,
+   "claimKey": "case04:activity:sugar-berries"
+  }
+ ],
+ "collections": [],
+ "activities": [
+  {
+   "id": "act-c4-sugar-berries",
+   "title": "ACT-C4-TITLE",
+   "steps": [
+    {
+     "line": "ACT-C4-01",
+     "adultOnly": false
+    },
+    {
+     "line": "ACT-C4-02",
+     "adultOnly": true
+    },
+    {
+     "line": "ACT-C4-03",
+     "adultOnly": false
+    },
+    {
+     "line": "ACT-C4-04",
+     "adultOnly": false
+    }
+   ],
+   "safety": [
+    "ACT-C4-S01",
+    "ACT-C4-S02"
+   ],
+   "allergens": [
+    "ягоды"
+   ]
+  }
+ ],
+ "comfort": [
+  {
+   "scene": "*",
+   "line": "C4-L-01"
+  }
+ ],
+ "cutscenes": [
+  {
+   "id": "cs-c4-office",
+   "scene": "C4-0",
+   "summary": "Мэр сообщает о пропаже варенья; Хвостс смутно вспоминает что-то."
+  },
+  {
+   "id": "cs-c4-cellar",
+   "scene": "C4-L2-1",
+   "summary": "Освещённый погреб: пустые полки, липкие лапки мэра, Хвостс вписывает себя в подозреваемые."
+  },
+  {
+   "id": "cs-c4-pantry",
+   "scene": "C4-L2-7",
+   "summary": "В кладовке Конторы находятся банки и записка Хвостса; он извиняется."
+  },
+  {
+   "id": "cs-c4-tea",
+   "scene": "C4-L2-8",
+   "summary": "Большое чаепитие на площади; варенье делят поровну."
+  },
+  {
+   "id": "cs-c4-reward",
+   "scene": "C4-10",
+   "summary": "Награда «Честное варенье», банка для Конторы и звание «Младший детектив»."
+  }
+ ],
+ "reserved": [
+  {
+   "lines": [
+    "C4-F-01",
+    "C4-F-02",
+    "C4-F-03",
+    "C4-F-04",
+    "C4-F-05"
+   ],
+   "reason": "семейный «Хранитель снов», Q34 handoff"
+  },
+  {
+   "lines": [
+    "C4-0-B01"
+   ],
+   "reason": "названия новых механик и точки карты используются системами каталога"
+  }
+ ],
+ "revision": "a78ad0f8beffc9d9503bfe2dcc757873f786b75cc37e9b2ba05a22995de329f7"
+}

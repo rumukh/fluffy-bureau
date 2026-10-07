@@ -1,0 +1,3408 @@
+{
+ "format": "fluffy-content-pack",
+ "schema": 1,
+ "id": "case02-l1",
+ "kind": "case",
+ "title": "C2-TITLE",
+ "case": {
+  "number": 2,
+  "level": 1
+ },
+ "requires": [
+  "shared"
+ ],
+ "start": "C2-0",
+ "lines": [
+  {
+   "id": "C2-TITLE",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Письма, которые улетели",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-0-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Странно. Почтовый жук сегодня не прилетал.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-0-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "И газеты нет. Я бы запомнила… наверное.",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C2-0-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Беда! Пропали все письма к юбилею!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C2-0-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Новое дело, {имя}! Бежим на почту.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-0-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Почта",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-1-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Я оставил сумку с письмами для Стеллы.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-1-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Там приглашения на юбилей. Для всех жителей!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C2-1-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Вернулся — а сумки нет!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C2-1-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Это сорока-воровка! Сороки тащат всё подряд.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-1-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Или мыши. Мыши грызут бумагу!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C2-1-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Стелла — наш почтальон. Не будем спешить.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-1-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Сыщик верит не виду, а уликам. Помнишь?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-1-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Господин мэр, вы ведь тоже всё теряете…",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C2-1-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Ну… бывает. Но не письма же!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C2-1-10",
+   "rev": 2,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Открой Блокнот: кто, где письма, что случилось?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-1-11",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Письма могли спрятать. Утащить. Или потерять.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-1-12",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "А где Стелла?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-1-13",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Улетела с посылками к Медовому пруду.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-1-19",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Вот три волшебных клубка.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-1-20",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Потянешь нитку — я подскажу, куда идти.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C2-1-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Осмотреть крыльцо",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-1-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Навестить Шуршиков",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-1-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Спросить мэра",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-2-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Прочитать записку",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-2-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Возьми лупу. Найди три странные мелочи.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-2-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Подпись оторвалась. Кто же её написал?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-2-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Новая улика! Записала: записка без подписи.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-button-cipher",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Шифр на пуговицах",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-3-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Почтальоны пишут важное пуговичным шифром.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-3-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Найди пуговицу в таблице. Рядом её буква.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-3-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Начнём с первого слова. Смотри на дырочки!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C2-3-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Гнездо! Письма отнесли в гнездо!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C2-3-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Дождь! Кто-то спешил до дождя.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-3-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Письма не потеряли. Их нарочно отнесли.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-3-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "И не ради блеска. Бумага ведь не блестит.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-3-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Мотив — это причина, почему кто-то так сделал.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-3-10",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Спасти письма от дождя — вот и мотив!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C2-3-11",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Ещё одна улика! Записала.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-4-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Все говорят: мыши грызут бумагу…",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C2-4-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Мы что, теперь виноваты?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-4-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Мышата расстроены. Подбери добрые слова.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-4-12",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Это флажки к юбилею. Мы их вырезали!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C2-4-13",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Всё утро вешали их в библиотеке.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-4-14",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Вместе с мэром. Он держал лесенку.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-4-15",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Алиби — это где ты был, когда всё случилось.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-4-16",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "У мышат есть алиби. И у мэра тоже!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C2-4-17",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "А в окно мы видели сороку.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-4-18",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Она летела с сумкой к Старому Дубу.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-4-19",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Загляни в норку. Писем там нет.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-4-20",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Есть улика! Записала… и флажки тоже.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-5-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Господин мэр, где вы были утром?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-5-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "В библиотеке. Держал лесенку для мышат.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-5-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Сумку я оставил на крыльце. Совсем ненадолго!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C2-5-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Записала. Проверим у мышат.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-6-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Улики собраны. Какая у тебя версия?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-6-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Выбери: кто, где письма и что случилось.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-7-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "text": "Я слышала… меня зовут воровкой.",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C2-7-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Мы пришли не ругать, Стелла. Мы пришли разобраться.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-7-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "text": "Это я спрятала письма в гнездо.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-7-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "text": "Ветер раскидал их по улице. Я собрала.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-7-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "text": "Тучи были чёрные. А у гнезда есть крыша.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-7-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "text": "Потом я улетела к пруду и забыла сказать.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-7-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "text": "Записку оставила, а она упала. Простите!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C2-7-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Сухие! Все до одного!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C2-7-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Стелла, это ты меня прости. Я назвал тебя воровкой.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-7-10",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "И вас, мышата. Я поспешил.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-7-11",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Разберём наши ложные следы.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-7-12",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Сорока-воровка — это сказка. Стелла письма спасала.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-7-13",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Обрывки у норки — флажки к юбилею.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-7-14",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "А у мэра было алиби: лесенка в библиотеке.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-7-15",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Твоя версия подтвердилась, {имя}!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C2-7-16",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "И мотив был добрый — спасти письма.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-7-17",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "text": "Я всё исправлю. Разнесём письма вместе?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-7-18",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Элементарно, пушинка! Дело раскрыто!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "SK-postal",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Почтальон",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-8-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "text": "Номер домика — это дырочки на пуговице.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-8-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "text": "Сколько дырочек — такой и домик.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-8-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Пусть все видят: письма спасены!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C2-8-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "text": "Это Выставка писем! Красиво, правда?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-8-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "text": "Моё приглашение висит рядом с флажком!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C2-8-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Спасибо, {имя}! Юбилей будет чудесный.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-9-01",
+   "rev": 1,
+   "kind": "fact",
+   "speaker": "narrator",
+   "text": "Сороки не тащат всё блестящее. Учёные это проверили.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C2-9-02",
+   "rev": 2,
+   "kind": "fact",
+   "speaker": "narrator",
+   "text": "Почтовые голуби носили письма. Они умеют находить дом.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C2-9-03",
+   "rev": 1,
+   "kind": "fact",
+   "speaker": "narrator",
+   "text": "Сороки строят гнёзда с крышей из веточек.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C2-9-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Записала в Энциклопедию! Гнездо с крышей — надо же.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-10-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Второе дело раскрыто, {имя}!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C2-10-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Держи значок-лапку „Письма спасены“.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-10-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "И новое звание — помощник сыщика!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C2-10-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Повесим плакат в Конторе? Будем писать секретно!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C2-AX-who",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Кто?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-AX-where",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Где письма?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-AX-porch",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Под крыльцом почты",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-AX-nest",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Гнездо Стеллы",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-AX-hole",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Норка Шуршиков",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-AX-what",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Что случилось?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-AX-rain",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Спрятать от дождя",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-AX-sparkle",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Утащить ради блеска",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-AX-lost",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Потерять по дороге",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-CL-lupa",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Записка без подписи",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-CL-cipher-nest",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Шифр: гнездо и дождь",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-CL-cocoa",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Алиби в библиотеке",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-CL-mayor",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Мэр был в библиотеке",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-6-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Версия не подтвердилась! Зато вспомним кое-что.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-6-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "У мышат алиби: они вешали флажки.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-6-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Мэр держал лесенку в библиотеке.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-6-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "В записке сказано: письма — в гнездо.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-6-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "В норке только флажки к празднику.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-6-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Бумага не блестит. А в записке — про дождь.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-6-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Письма не потеряли. Их нарочно отнесли.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-6-10",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Отличная попытка! Запишем и подумаем.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-NB-01",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Сороку видели с сумкой. Это Стелла.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C2-NB-02",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Записка ведёт к гнезду и дождю.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C2-H-01",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Начни с крыльца почты. Там была сумка.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C2-H-02",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Найди таблицу на стене почты. Там шифр.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C2-H-03",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Мышата грустят. Может, их утешить?",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C2-H-04",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Перечитай Блокнот. Где ещё стоит вопрос?",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C2-R-01",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "watsony",
+   "text": "Записка с пуговицами! Таблица висит на стене.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C2-R-02",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "watsony",
+   "text": "Мышата в библиотеке. Им нужны добрые слова.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C2-R-03",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "watsony",
+   "text": "У кого алиби? Вычеркни их в Блокноте.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C2-2-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Зонт-мухомор",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-2-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Зонт-мухомор вывернуло. Утром был сильный ветер!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C2-2-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Чёрно-белое перо",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-2-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Чёрно-белое перо. Здесь была сорока.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-2-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Записка с пуговицами",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-2-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Записка! Но вместо букв — пуговицы.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-3-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "ГНЕЗДО",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-3-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "ДОЖДЬ",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-3-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Сравни дырочки ещё раз. Сколько их?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-L2-4-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "ДУБ",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-4-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Мы пришли не ругать.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-4-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Правда? Ну ладно.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-4-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Не бойтесь. Мы вам верим.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-4-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Спасибо! Стало спокойнее.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-4-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Зачем вам столько бумаги?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-4-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Опять про бумагу…",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C2-4-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Сначала успокоим малышей. Попробуем мягче?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-4-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Чем вы сегодня занимались?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-4-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Сейчас покажем!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C2-4-B05",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Какие красивые флажки!",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-4-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Это не обрывки! Сейчас покажем!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C2-4-B06",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Признавайтесь, где письма?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-4-10",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Мы ничего не брали…",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C2-4-11",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Мышата боятся. Спросим по-доброму?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-8-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Домик 1",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-8-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "text": "Посчитай дырочки ещё раз. Не спеши.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-8-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Домик 2",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-8-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "text": "Доставлено! Ты настоящий почтальон.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-8-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Домик 4",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "GL-alibi-DEF",
+   "rev": 1,
+   "kind": "glossary",
+   "speaker": "narrator",
+   "text": "Алиби — где ты был, когда всё случилось.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "GL-alibi",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Алиби",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "GL-motive-DEF",
+   "rev": 1,
+   "kind": "glossary",
+   "speaker": "narrator",
+   "text": "Мотив — причина, почему кто-то так сделал.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "GL-motive",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Мотив",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c2-badge",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Значок-лапка «Письма спасены»",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c2-sticker-1",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Стикер «Письма спасены», одна звёздочка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c2-title-helper",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Звание: Помощник сыщика",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c2-decor-poster",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Плакат «Почтовый шифр Пушистино»",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c2-activity",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Карточка «Магнитная пуговица»",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C2-TITLE",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Магнитная пуговица: что притянется?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C2-01",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Возьми пуговицу без острых краёв.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C2-02",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Взрослый даёт маленький магнит.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C2-03",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Проверь ложку, скрепку и карандаш.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C2-04",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Что притянулось? Нарисуй три значка.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C2-S01",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Мелкие магниты держит только взрослый.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C2-S02",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Не подноси магнит к технике.",
+   "voiced": true,
+   "delivery": "neutral"
+  }
+ ],
+ "speakers": [],
+ "skills": [
+  {
+   "id": "button-cipher",
+   "title": "SK-button-cipher"
+  },
+  {
+   "id": "postal",
+   "title": "SK-postal"
+  }
+ ],
+ "scenes": [
+  {
+   "id": "C2-0",
+   "title": "Контора: письма не пришли",
+   "location": "office",
+   "cast": [
+    "khvosts",
+    "watsony",
+    "pudding"
+   ],
+   "presentation": "cutscene",
+   "steps": [
+    {
+     "t": "dir",
+     "id": "C2-0-D01",
+     "text": "Контора. Почтовый жук не прилетел. В дверь стучит мэр Пудинг."
+    },
+    {
+     "t": "line",
+     "line": "C2-0-01"
+    },
+    {
+     "t": "line",
+     "line": "C2-0-02"
+    },
+    {
+     "t": "line",
+     "line": "C2-0-03"
+    },
+    {
+     "t": "line",
+     "line": "C2-0-04"
+    },
+    {
+     "t": "skill",
+     "skill": "map",
+     "first": [
+      {
+       "t": "dir",
+       "id": "C2-0-D02",
+       "text": "На карте Пушистино активна точка «Почта»."
+      },
+      {
+       "t": "line",
+       "line": "C2-0-B01"
+      }
+     ],
+     "known": [
+      {
+       "t": "dir",
+       "id": "C2-0-D02",
+       "text": "На карте Пушистино активна точка «Почта»."
+      },
+      {
+       "t": "line",
+       "line": "C2-0-B01"
+      }
+     ]
+    },
+    {
+     "t": "goto",
+     "scene": "C2-1"
+    }
+   ]
+  },
+  {
+   "id": "C2-1",
+   "title": "Завязка: крыльцо почты",
+   "location": "post-office",
+   "cast": [
+    "pudding",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "dir",
+     "id": "C2-1-D01",
+     "text": "Крыльцо почты на Пироговой улице. Вокруг листья и ветки."
+    },
+    {
+     "t": "line",
+     "line": "C2-1-01"
+    },
+    {
+     "t": "line",
+     "line": "C2-1-02"
+    },
+    {
+     "t": "line",
+     "line": "C2-1-03"
+    },
+    {
+     "t": "line",
+     "line": "C2-1-04"
+    },
+    {
+     "t": "line",
+     "line": "C2-1-05"
+    },
+    {
+     "t": "dir",
+     "id": "C2-1-D02",
+     "text": "Хвостс пускает пузыри."
+    },
+    {
+     "t": "line",
+     "line": "C2-1-06"
+    },
+    {
+     "t": "line",
+     "line": "C2-1-07"
+    },
+    {
+     "t": "line",
+     "line": "C2-1-08"
+    },
+    {
+     "t": "line",
+     "line": "C2-1-09"
+    },
+    {
+     "t": "skill",
+     "skill": "notebook",
+     "first": [
+      {
+       "t": "dir",
+       "id": "C2-1-D03",
+       "text": "Блокнот раскрывается на три колонки дела."
+      },
+      {
+       "t": "line",
+       "line": "C2-1-10"
+      }
+     ],
+     "known": [
+      {
+       "t": "dir",
+       "id": "C2-1-D03",
+       "text": "Блокнот раскрывается на три колонки дела."
+      },
+      {
+       "t": "line",
+       "line": "C2-1-10"
+      }
+     ]
+    },
+    {
+     "t": "line",
+     "line": "C2-1-11"
+    },
+    {
+     "t": "line",
+     "line": "C2-1-12"
+    },
+    {
+     "t": "line",
+     "line": "C2-1-13"
+    },
+    {
+     "t": "skill",
+     "skill": "klubki",
+     "first": [
+      {
+       "t": "line",
+       "line": "C1-1-19"
+      },
+      {
+       "t": "line",
+       "line": "C1-1-20"
+      }
+     ],
+     "known": []
+    },
+    {
+     "t": "goto",
+     "scene": "C2-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C2-HUB",
+   "title": "Почта: выбор",
+   "location": "post-office",
+   "cast": [
+    "pudding",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "hub",
+   "steps": [
+    {
+     "t": "if",
+     "when": {
+      "all": [
+       {
+        "all": [
+         {
+          "clue": "c2-lupa"
+         },
+         {
+          "clue": "c2-cipher"
+         },
+         {
+          "clue": "c2-cocoa"
+         }
+        ]
+       },
+       {
+        "not": {
+         "visited": "C2-6"
+        }
+       }
+      ]
+     },
+     "then": [
+      {
+       "t": "goto",
+       "scene": "C2-6"
+      }
+     ],
+     "else": []
+    },
+    {
+     "t": "menu",
+     "id": "C2-M",
+     "prompt": null,
+     "pageSize": 3,
+     "options": [
+      {
+       "id": "porch",
+       "label": "C2-1-B01",
+       "to": "C2-2",
+       "when": null,
+       "hideWhen": {
+        "visited": "C2-2"
+       },
+       "optional": false
+      },
+      {
+       "id": "mice",
+       "label": "C2-1-B02",
+       "to": "C2-4",
+       "when": null,
+       "hideWhen": {
+        "visited": "C2-4"
+       },
+       "optional": false
+      },
+      {
+       "id": "mayor",
+       "label": "C2-1-B03",
+       "to": "C2-5",
+       "when": null,
+       "hideWhen": {
+        "visited": "C2-5"
+       },
+       "optional": true
+      },
+      {
+       "id": "cipher",
+       "label": "C2-2-B04",
+       "to": "C2-3",
+       "when": {
+        "clue": "c2-lupa"
+       },
+       "hideWhen": {
+        "visited": "C2-3"
+       },
+       "optional": false
+      }
+     ],
+     "back": null
+    }
+   ]
+  },
+  {
+   "id": "C2-2",
+   "title": "Крыльцо: «Лупа»",
+   "location": "post-porch",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "magnifier",
+     "first": [
+      {
+       "t": "line",
+       "line": "C2-2-01"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C2-2-01"
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c2l1-lupa"
+    },
+    {
+     "t": "line",
+     "line": "C2-2-05"
+    },
+    {
+     "t": "line",
+     "line": "C2-2-06"
+    },
+    {
+     "t": "clue",
+     "clue": "c2-lupa"
+    },
+    {
+     "t": "goto",
+     "scene": "C2-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C2-3",
+   "title": "Шифр на пуговицах",
+   "location": "post-office",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "button-cipher",
+     "first": [
+      {
+       "t": "line",
+       "line": "C2-3-01"
+      },
+      {
+       "t": "line",
+       "line": "C2-3-02"
+      },
+      {
+       "t": "line",
+       "line": "C2-3-03"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C2-3-01"
+      },
+      {
+       "t": "line",
+       "line": "C2-3-02"
+      },
+      {
+       "t": "line",
+       "line": "C2-3-03"
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c2l1-cipher"
+    },
+    {
+     "t": "line",
+     "line": "C2-3-05"
+    },
+    {
+     "t": "line",
+     "line": "C2-3-06"
+    },
+    {
+     "t": "line",
+     "line": "C2-3-07"
+    },
+    {
+     "t": "line",
+     "line": "C2-3-08"
+    },
+    {
+     "t": "line",
+     "line": "C2-3-09"
+    },
+    {
+     "t": "line",
+     "line": "C2-3-10"
+    },
+    {
+     "t": "line",
+     "line": "C2-3-11"
+    },
+    {
+     "t": "clue",
+     "clue": "c2-cipher"
+    },
+    {
+     "t": "goto",
+     "scene": "C2-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C2-4",
+   "title": "Библиотека: «Чашка какао»",
+   "location": "library-door",
+   "cast": [
+    "mouse",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "line",
+     "line": "C2-4-01"
+    },
+    {
+     "t": "line",
+     "line": "C2-4-02"
+    },
+    {
+     "t": "skill",
+     "skill": "cocoa",
+     "first": [
+      {
+       "t": "line",
+       "line": "C2-4-03"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C2-4-03"
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c2l1-cocoa"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c2-heart-mice"
+    },
+    {
+     "t": "line",
+     "line": "C2-4-12"
+    },
+    {
+     "t": "line",
+     "line": "C2-4-13"
+    },
+    {
+     "t": "line",
+     "line": "C2-4-14"
+    },
+    {
+     "t": "line",
+     "line": "C2-4-15"
+    },
+    {
+     "t": "line",
+     "line": "C2-4-16"
+    },
+    {
+     "t": "line",
+     "line": "C2-4-17"
+    },
+    {
+     "t": "line",
+     "line": "C2-4-18"
+    },
+    {
+     "t": "line",
+     "line": "C2-4-19"
+    },
+    {
+     "t": "line",
+     "line": "C2-4-20"
+    },
+    {
+     "t": "clue",
+     "clue": "c2-cocoa"
+    },
+    {
+     "t": "goto",
+     "scene": "C2-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C2-5",
+   "title": "Разговор с мэром",
+   "location": "post-office",
+   "cast": [
+    "pudding",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "line",
+     "line": "C2-5-01"
+    },
+    {
+     "t": "line",
+     "line": "C2-5-02"
+    },
+    {
+     "t": "line",
+     "line": "C2-5-03"
+    },
+    {
+     "t": "line",
+     "line": "C2-5-04"
+    },
+    {
+     "t": "clue",
+     "clue": "c2-mayor"
+    },
+    {
+     "t": "goto",
+     "scene": "C2-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C2-6",
+   "title": "Версия: «Приглашу на разговор»",
+   "location": "post-office",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "version",
+     "first": [
+      {
+       "t": "line",
+       "line": "C2-6-01"
+      },
+      {
+       "t": "line",
+       "line": "C2-6-02"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C2-6-01"
+      },
+      {
+       "t": "line",
+       "line": "C2-6-02"
+      }
+     ]
+    },
+    {
+     "t": "goto",
+     "scene": "C2-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C2-7",
+   "title": "Парк Старого Дуба",
+   "location": "old-oak",
+   "cast": [
+    "stella",
+    "pudding",
+    "mouse",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "cutscene",
+   "steps": [
+    {
+     "t": "dir",
+     "id": "C2-7-D01",
+     "text": "Парк Старого Дуба. Высоко видно гнездо Стеллы с крышей из веточек."
+    },
+    {
+     "t": "line",
+     "line": "C2-7-01"
+    },
+    {
+     "t": "line",
+     "line": "C2-7-02"
+    },
+    {
+     "t": "line",
+     "line": "C2-7-03"
+    },
+    {
+     "t": "line",
+     "line": "C2-7-04"
+    },
+    {
+     "t": "line",
+     "line": "C2-7-05"
+    },
+    {
+     "t": "line",
+     "line": "C2-7-06"
+    },
+    {
+     "t": "line",
+     "line": "C2-7-07"
+    },
+    {
+     "t": "line",
+     "line": "C2-7-08"
+    },
+    {
+     "t": "line",
+     "line": "C2-7-09"
+    },
+    {
+     "t": "line",
+     "line": "C2-7-10"
+    },
+    {
+     "t": "line",
+     "line": "C2-7-11"
+    },
+    {
+     "t": "line",
+     "line": "C2-7-12"
+    },
+    {
+     "t": "line",
+     "line": "C2-7-13"
+    },
+    {
+     "t": "line",
+     "line": "C2-7-14"
+    },
+    {
+     "t": "line",
+     "line": "C2-7-15"
+    },
+    {
+     "t": "line",
+     "line": "C2-7-16"
+    },
+    {
+     "t": "line",
+     "line": "C2-7-17"
+    },
+    {
+     "t": "line",
+     "line": "C2-7-18"
+    },
+    {
+     "t": "goto",
+     "scene": "C2-8"
+    }
+   ]
+  },
+  {
+   "id": "C2-8",
+   "title": "Почтальон и Выставка писем",
+   "location": "town-square",
+   "cast": [
+    "stella",
+    "pudding",
+    "tyopa",
+    "khvosts"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "postal",
+     "first": [
+      {
+       "t": "line",
+       "line": "C2-8-01"
+      },
+      {
+       "t": "line",
+       "line": "C2-8-02"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C2-8-01"
+      },
+      {
+       "t": "line",
+       "line": "C2-8-02"
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c2l1-postal"
+    },
+    {
+     "t": "line",
+     "line": "C2-8-05"
+    },
+    {
+     "t": "line",
+     "line": "C2-8-06"
+    },
+    {
+     "t": "line",
+     "line": "C2-8-07"
+    },
+    {
+     "t": "line",
+     "line": "C2-8-08"
+    },
+    {
+     "t": "goto",
+     "scene": "C2-9"
+    }
+   ]
+  },
+  {
+   "id": "C2-9",
+   "title": "«А ты знал?»",
+   "location": "town-square",
+   "cast": [
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "encyclopedia",
+     "first": [
+      {
+       "t": "dir",
+       "id": "C2-9-D01",
+       "text": "Карточки фактов складываются в Энциклопедию."
+      }
+     ],
+     "known": [
+      {
+       "t": "dir",
+       "id": "C2-9-D01",
+       "text": "Карточки фактов складываются в Энциклопедию."
+      }
+     ]
+    },
+    {
+     "t": "line",
+     "line": "C2-9-01"
+    },
+    {
+     "t": "line",
+     "line": "C2-9-02"
+    },
+    {
+     "t": "line",
+     "line": "C2-9-03"
+    },
+    {
+     "t": "line",
+     "line": "C2-9-04"
+    },
+    {
+     "t": "goto",
+     "scene": "C2-10"
+    }
+   ]
+  },
+  {
+   "id": "C2-10",
+   "title": "Награда",
+   "location": "office",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "cutscene",
+   "steps": [
+    {
+     "t": "line",
+     "line": "C2-10-01"
+    },
+    {
+     "t": "line",
+     "line": "C2-10-02"
+    },
+    {
+     "t": "line",
+     "line": "C2-10-03"
+    },
+    {
+     "t": "line",
+     "line": "C2-10-04"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c2-badge"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c2-buttons-l1"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c2-sticker-l1"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c2-title-helper"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c2-decor-poster"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c2-activity"
+    },
+    {
+     "t": "dir",
+     "id": "C2-10-D01",
+     "text": "Новые слова в словарике: алиби, мотив. Плакат шифра появляется в Конторе."
+    },
+    {
+     "t": "skill",
+     "skill": "cozy-day",
+     "first": [
+      {
+       "t": "await",
+       "action": "office.place"
+      }
+     ],
+     "known": []
+    },
+    {
+     "t": "end"
+    }
+   ]
+  }
+ ],
+ "logic": {
+  "axes": [
+   {
+    "id": "who",
+    "title": "C2-AX-who",
+    "values": [
+     {
+      "id": "stella",
+      "label": "NM-stella"
+     },
+     {
+      "id": "mouse",
+      "label": "NM-mouse"
+     },
+     {
+      "id": "pudding",
+      "label": "NM-pudding"
+     }
+    ]
+   },
+   {
+    "id": "where",
+    "title": "C2-AX-where",
+    "values": [
+     {
+      "id": "porch",
+      "label": "C2-AX-porch"
+     },
+     {
+      "id": "nest",
+      "label": "C2-AX-nest"
+     },
+     {
+      "id": "hole",
+      "label": "C2-AX-hole"
+     }
+    ]
+   },
+   {
+    "id": "what",
+    "title": "C2-AX-what",
+    "values": [
+     {
+      "id": "rain",
+      "label": "C2-AX-rain"
+     },
+     {
+      "id": "sparkle",
+      "label": "C2-AX-sparkle"
+     },
+     {
+      "id": "lost",
+      "label": "C2-AX-lost"
+     }
+    ]
+   }
+  ],
+  "intended": {
+   "who": "stella",
+   "where": "nest",
+   "what": "rain"
+  },
+  "clues": [
+   {
+    "id": "c2-lupa",
+    "title": "C2-CL-lupa",
+    "required": true,
+    "predicate": {
+     "op": "in",
+     "axis": "what",
+     "values": [
+      "rain",
+      "sparkle",
+      "lost"
+     ]
+    },
+    "requires": [],
+    "source": "C2-2",
+    "summary": "Зонт, перо и записка без подписи открывают шифр."
+   },
+   {
+    "id": "c2-cipher",
+    "title": "C2-CL-cipher-nest",
+    "required": true,
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "eq",
+       "axis": "where",
+       "value": "nest"
+      },
+      {
+       "op": "eq",
+       "axis": "what",
+       "value": "rain"
+      },
+      {
+       "op": "ne",
+       "axis": "where",
+       "value": "porch"
+      },
+      {
+       "op": "ne",
+       "axis": "where",
+       "value": "hole"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "sparkle"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "lost"
+      }
+     ]
+    },
+    "requires": [
+     "c2-lupa"
+    ],
+    "source": "C2-3",
+    "summary": "В записке: письма в гнездо, скоро дождь."
+   },
+   {
+    "id": "c2-cocoa",
+    "title": "C2-CL-cocoa",
+    "required": true,
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "eq",
+       "axis": "who",
+       "value": "stella"
+      },
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "mouse"
+      },
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "pudding"
+      },
+      {
+       "op": "ne",
+       "axis": "where",
+       "value": "hole"
+      }
+     ]
+    },
+    "requires": [],
+    "source": "C2-4",
+    "summary": "Мышата и мэр были в библиотеке; сороку с сумкой видели у Старого Дуба."
+   },
+   {
+    "id": "c2-mayor",
+    "title": "C2-CL-mayor",
+    "required": false,
+    "predicate": {
+     "op": "ne",
+     "axis": "who",
+     "value": "pudding"
+    },
+    "requires": [],
+    "source": "C2-5",
+    "summary": "Мэр говорит, что держал лесенку в библиотеке."
+   }
+  ],
+  "version": {
+   "button": "UI-hud.version",
+   "available": {
+    "visited": "C2-6"
+   },
+   "onSolved": "C2-7"
+  },
+  "wrongVersion": {
+   "intro": [
+    {
+     "line": "C2-6-03",
+     "when": null
+    }
+   ],
+   "byValue": [
+    {
+     "axis": "who",
+     "value": "mouse",
+     "clues": [
+      "c2-cocoa"
+     ],
+     "lines": [
+      {
+       "line": "C2-6-04",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "who",
+     "value": "pudding",
+     "clues": [
+      "c2-cocoa"
+     ],
+     "lines": [
+      {
+       "line": "C2-6-05",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "where",
+     "value": "porch",
+     "clues": [
+      "c2-cipher"
+     ],
+     "lines": [
+      {
+       "line": "C2-6-06",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "where",
+     "value": "hole",
+     "clues": [
+      "c2-cocoa"
+     ],
+     "lines": [
+      {
+       "line": "C2-6-07",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "what",
+     "value": "sparkle",
+     "clues": [
+      "c2-cipher"
+     ],
+     "lines": [
+      {
+       "line": "C2-6-08",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "what",
+     "value": "lost",
+     "clues": [
+      "c2-cipher"
+     ],
+     "lines": [
+      {
+       "line": "C2-6-09",
+       "when": null
+      }
+     ]
+    }
+   ],
+   "outro": [
+    {
+     "line": "C2-6-10",
+     "when": null
+    }
+   ]
+  },
+  "redHerrings": [
+   {
+    "id": "rh-c2-magpie-thief",
+    "summary": "Миф «сорока-воровка».",
+    "presentedBy": [
+     "C2-1-04"
+    ],
+    "explainedBy": [
+     "C2-7-12"
+    ]
+   },
+   {
+    "id": "rh-c2-paper-mice",
+    "summary": "Мыши якобы грызли письма.",
+    "presentedBy": [
+     "C2-1-05",
+     "C2-4-01"
+    ],
+    "explainedBy": [
+     "C2-7-13"
+    ]
+   },
+   {
+    "id": "rh-c2-mayor-loses",
+    "summary": "Мэр всё теряет.",
+    "presentedBy": [
+     "C2-1-08"
+    ],
+    "explainedBy": [
+     "C2-7-14"
+    ]
+   }
+  ]
+ },
+ "deduction": {
+  "schema": 1,
+  "id": "case02-l1",
+  "axes": [
+   {
+    "id": "who",
+    "values": [
+     "stella",
+     "mouse",
+     "pudding"
+    ]
+   },
+   {
+    "id": "where",
+    "values": [
+     "porch",
+     "nest",
+     "hole"
+    ]
+   },
+   {
+    "id": "what",
+    "values": [
+     "rain",
+     "sparkle",
+     "lost"
+    ]
+   }
+  ],
+  "compatibility": null,
+  "intended": {
+   "who": "stella",
+   "where": "nest",
+   "what": "rain"
+  },
+  "clues": [
+   {
+    "id": "c2-lupa",
+    "predicate": {
+     "op": "in",
+     "axis": "what",
+     "values": [
+      "rain",
+      "sparkle",
+      "lost"
+     ]
+    },
+    "requires": [],
+    "requiresAnswer": false,
+    "explanationKey": "C2-CL-lupa"
+   },
+   {
+    "id": "c2-cipher",
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "eq",
+       "axis": "where",
+       "value": "nest"
+      },
+      {
+       "op": "eq",
+       "axis": "what",
+       "value": "rain"
+      },
+      {
+       "op": "ne",
+       "axis": "where",
+       "value": "porch"
+      },
+      {
+       "op": "ne",
+       "axis": "where",
+       "value": "hole"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "sparkle"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "lost"
+      }
+     ]
+    },
+    "requires": [
+     "c2-lupa"
+    ],
+    "requiresAnswer": false,
+    "explanationKey": "C2-CL-cipher-nest"
+   },
+   {
+    "id": "c2-cocoa",
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "eq",
+       "axis": "who",
+       "value": "stella"
+      },
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "mouse"
+      },
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "pudding"
+      },
+      {
+       "op": "ne",
+       "axis": "where",
+       "value": "hole"
+      }
+     ]
+    },
+    "requires": [],
+    "requiresAnswer": false,
+    "explanationKey": "C2-CL-cocoa"
+   }
+  ],
+  "redHerrings": [
+   {
+    "id": "rh-c2-magpie-thief",
+    "explanationKey": "C2-7-12"
+   },
+   {
+    "id": "rh-c2-paper-mice",
+    "explanationKey": "C2-7-13"
+   },
+   {
+    "id": "rh-c2-mayor-loses",
+    "explanationKey": "C2-7-14"
+   }
+  ],
+  "maxCandidates": 27
+ },
+ "notebookHelp": {
+  "mode": "suggest",
+  "marks": [
+   {
+    "axis": "who",
+    "value": "stella",
+    "mark": "confirmed",
+    "clues": [
+     "c2-cocoa"
+    ],
+    "line": "C2-NB-01"
+   },
+   {
+    "axis": "who",
+    "value": "mouse",
+    "mark": "excluded",
+    "clues": [
+     "c2-cocoa"
+    ],
+    "line": "C2-6-04"
+   },
+   {
+    "axis": "who",
+    "value": "pudding",
+    "mark": "excluded",
+    "clues": [
+     "c2-cocoa"
+    ],
+    "line": "C2-6-05"
+   },
+   {
+    "axis": "where",
+    "value": "nest",
+    "mark": "confirmed",
+    "clues": [
+     "c2-cipher"
+    ],
+    "line": "C2-NB-02"
+   },
+   {
+    "axis": "where",
+    "value": "porch",
+    "mark": "excluded",
+    "clues": [
+     "c2-cipher"
+    ],
+    "line": "C2-6-06"
+   },
+   {
+    "axis": "where",
+    "value": "hole",
+    "mark": "excluded",
+    "clues": [
+     "c2-cocoa"
+    ],
+    "line": "C2-6-07"
+   },
+   {
+    "axis": "what",
+    "value": "rain",
+    "mark": "confirmed",
+    "clues": [
+     "c2-cipher"
+    ],
+    "line": "C2-3-10"
+   },
+   {
+    "axis": "what",
+    "value": "sparkle",
+    "mark": "excluded",
+    "clues": [
+     "c2-cipher"
+    ],
+    "line": "C2-6-08"
+   },
+   {
+    "axis": "what",
+    "value": "lost",
+    "mark": "excluded",
+    "clues": [
+     "c2-cipher"
+    ],
+    "line": "C2-6-09"
+   }
+  ],
+  "pointers": [],
+  "nothing": "UI-notebook.nothing"
+ },
+ "hints": {
+  "klubok": {
+   "speaker": "khvosts",
+   "precision": "exact",
+   "allowance": 3,
+   "rules": [
+    {
+     "id": "C2-H-01",
+     "when": {
+      "not": {
+       "clue": "c2-lupa"
+      }
+     },
+     "cites": []
+    },
+    {
+     "id": "C2-H-02",
+     "when": {
+      "all": [
+       {
+        "clue": "c2-lupa"
+       },
+       {
+        "not": {
+         "clue": "c2-cipher"
+        }
+       }
+      ]
+     },
+     "cites": [
+      "c2-lupa"
+     ]
+    },
+    {
+     "id": "C2-H-03",
+     "when": {
+      "not": {
+       "clue": "c2-cocoa"
+      }
+     },
+     "cites": []
+    }
+   ],
+   "review": "C2-H-04",
+   "exhausted": "UI-hint.klubokEmptyShell"
+  },
+  "shell": {
+   "speaker": "watsony",
+   "precision": "exact",
+   "allowance": null,
+   "rules": [
+    {
+     "id": "C2-R-01",
+     "when": {
+      "all": [
+       {
+        "clue": "c2-lupa"
+       },
+       {
+        "not": {
+         "clue": "c2-cipher"
+        }
+       }
+      ]
+     },
+     "cites": [
+      "c2-lupa"
+     ]
+    },
+    {
+     "id": "C2-R-02",
+     "when": {
+      "not": {
+       "clue": "c2-cocoa"
+      }
+     },
+     "cites": []
+    },
+    {
+     "id": "C2-R-03",
+     "when": {
+      "all": [
+       {
+        "clue": "c2-cocoa"
+       },
+       {
+        "not": {
+         "clue": "c2-cipher"
+        }
+       }
+      ]
+     },
+     "cites": [
+      "c2-cocoa"
+     ]
+    }
+   ],
+   "review": "C2-H-04",
+   "exhausted": null
+  }
+ },
+ "minigames": [
+  {
+   "id": "c2l1-lupa",
+   "skill": "magnifier",
+   "config": {
+    "kind": "magnifier",
+    "targets": [
+     {
+      "id": "umbrella",
+      "label": "C2-2-B01",
+      "required": true,
+      "reply": [
+       "C2-2-02"
+      ]
+     },
+     {
+      "id": "feather",
+      "label": "C2-2-B02",
+      "required": true,
+      "reply": [
+       "C2-2-03"
+      ]
+     },
+     {
+      "id": "note",
+      "label": "C2-2-B03",
+      "required": true,
+      "reply": [
+       "C2-2-04"
+      ]
+     }
+    ],
+    "afterFirst": [],
+    "afterFirstSkill": null,
+    "assistAfterMisses": 3
+   }
+  },
+  {
+   "id": "c2l1-cipher",
+   "skill": "button-cipher",
+   "config": {
+    "kind": "staged",
+    "mechanic": "button-cipher",
+    "description": "Сопоставить пуговицы с буквами.",
+    "steps": [
+     {
+      "id": "word1",
+      "prompt": null,
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "nest",
+        "label": "C2-3-B01",
+        "correct": true,
+        "reply": [
+         "C2-3-05"
+        ]
+       },
+       {
+        "id": "rain",
+        "label": "C2-3-B02",
+        "correct": false,
+        "reply": [
+         "C2-3-04"
+        ]
+       },
+       {
+        "id": "oak",
+        "label": "C2-L2-4-B01",
+        "correct": false,
+        "reply": [
+         "C2-3-04"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "word2",
+      "prompt": null,
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "rain",
+        "label": "C2-3-B02",
+        "correct": true,
+        "reply": [
+         "C2-3-06"
+        ]
+       },
+       {
+        "id": "nest",
+        "label": "C2-3-B01",
+        "correct": false,
+        "reply": [
+         "C2-3-04"
+        ]
+       },
+       {
+        "id": "oak",
+        "label": "C2-L2-4-B01",
+        "correct": false,
+        "reply": [
+         "C2-3-04"
+        ]
+       }
+      ]
+     }
+    ],
+    "lines": []
+   }
+  },
+  {
+   "id": "c2l1-cocoa",
+   "skill": "cocoa",
+   "config": {
+    "kind": "cocoa",
+    "rounds": [
+     {
+      "id": "r1",
+      "options": [
+       {
+        "id": "kind1",
+        "label": "C2-4-B01",
+        "correct": true,
+        "reply": [
+         "C2-4-04"
+        ]
+       },
+       {
+        "id": "kind2",
+        "label": "C2-4-B02",
+        "correct": true,
+        "reply": [
+         "C2-4-05"
+        ]
+       },
+       {
+        "id": "paper",
+        "label": "C2-4-B03",
+        "correct": false,
+        "reply": [
+         "C2-4-06"
+        ]
+       }
+      ],
+      "retry": [
+       "C2-4-07"
+      ]
+     },
+     {
+      "id": "r2",
+      "options": [
+       {
+        "id": "doing",
+        "label": "C2-4-B04",
+        "correct": true,
+        "reply": [
+         "C2-4-08"
+        ]
+       },
+       {
+        "id": "flags",
+        "label": "C2-4-B05",
+        "correct": true,
+        "reply": [
+         "C2-4-09"
+        ]
+       },
+       {
+        "id": "where",
+        "label": "C2-4-B06",
+        "correct": false,
+        "reply": [
+         "C2-4-10"
+        ]
+       }
+      ],
+      "retry": [
+       "C2-4-11"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "c2l1-postal",
+   "skill": "postal",
+   "config": {
+    "kind": "staged",
+    "mechanic": "postal",
+    "description": "Посчитать дырочки и выбрать домик.",
+    "steps": [
+     {
+      "id": "p2",
+      "prompt": null,
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "h1",
+        "label": "C2-8-B01",
+        "correct": false,
+        "reply": [
+         "C2-8-03"
+        ]
+       },
+       {
+        "id": "h2",
+        "label": "C2-8-B02",
+        "correct": true,
+        "reply": [
+         "C2-8-04"
+        ]
+       },
+       {
+        "id": "h4",
+        "label": "C2-8-B03",
+        "correct": false,
+        "reply": [
+         "C2-8-03"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "p4",
+      "prompt": null,
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "h1",
+        "label": "C2-8-B01",
+        "correct": false,
+        "reply": [
+         "C2-8-03"
+        ]
+       },
+       {
+        "id": "h2",
+        "label": "C2-8-B02",
+        "correct": false,
+        "reply": [
+         "C2-8-03"
+        ]
+       },
+       {
+        "id": "h4",
+        "label": "C2-8-B03",
+        "correct": true,
+        "reply": [
+         "C2-8-04"
+        ]
+       }
+      ]
+     }
+    ],
+    "lines": []
+   }
+  }
+ ],
+ "facts": [
+  {
+   "id": "fact-c2-magpies-shiny",
+   "line": "C2-9-01"
+  },
+  {
+   "id": "fact-c2-pigeons",
+   "line": "C2-9-02"
+  },
+  {
+   "id": "fact-c2-nests",
+   "line": "C2-9-03"
+  }
+ ],
+ "glossary": [
+  {
+   "id": "alibi",
+   "word": "алиби",
+   "definition": "GL-alibi-DEF",
+   "label": "GL-alibi",
+   "forms": [
+    "алиби"
+   ]
+  },
+  {
+   "id": "motive",
+   "word": "мотив",
+   "definition": "GL-motive-DEF",
+   "label": "GL-motive",
+   "forms": [
+    "мотив",
+    "мотива",
+    "мотиву",
+    "мотивом",
+    "мотиве"
+   ]
+  }
+ ],
+ "rewards": [
+  {
+   "id": "rw-c2-heart-mice",
+   "kind": "hearts",
+   "label": "RW-heart",
+   "amount": 1,
+   "claimKey": "case02:heart:mice"
+  },
+  {
+   "id": "rw-c2-badge",
+   "kind": "badge",
+   "label": "RW-c2-badge",
+   "amount": 1,
+   "claimKey": "case02:badge"
+  },
+  {
+   "id": "rw-c2-buttons-l1",
+   "kind": "buttons",
+   "label": "RW-buttons-10",
+   "amount": 10,
+   "claimKey": "case02:l1:buttons"
+  },
+  {
+   "id": "rw-c2-sticker-l1",
+   "kind": "sticker",
+   "label": "RW-c2-sticker-1",
+   "amount": 1,
+   "claimKey": "case02:l1:sticker"
+  },
+  {
+   "id": "rw-c2-decor-poster",
+   "kind": "decor",
+   "label": "RW-c2-decor-poster",
+   "amount": 1,
+   "claimKey": "case02:decor:poster"
+  },
+  {
+   "id": "rw-c2-title-helper",
+   "kind": "title",
+   "label": "RW-c2-title-helper",
+   "amount": 1,
+   "claimKey": "case02:title:helper"
+  },
+  {
+   "id": "rw-c2-activity",
+   "kind": "activity",
+   "label": "RW-c2-activity",
+   "amount": 1,
+   "claimKey": "case02:activity:magnet-button"
+  }
+ ],
+ "collections": [],
+ "activities": [
+  {
+   "id": "act-c2-magnet-button",
+   "title": "ACT-C2-TITLE",
+   "steps": [
+    {
+     "line": "ACT-C2-01",
+     "adultOnly": false
+    },
+    {
+     "line": "ACT-C2-02",
+     "adultOnly": true
+    },
+    {
+     "line": "ACT-C2-03",
+     "adultOnly": false
+    },
+    {
+     "line": "ACT-C2-04",
+     "adultOnly": false
+    }
+   ],
+   "safety": [
+    "ACT-C2-S01",
+    "ACT-C2-S02"
+   ],
+   "allergens": []
+  }
+ ],
+ "comfort": [],
+ "cutscenes": [
+  {
+   "id": "cs-c2-office",
+   "scene": "C2-0",
+   "summary": "Почтовый жук не прилетает; мэр сообщает о пропаже писем."
+  },
+  {
+   "id": "cs-c2-oak",
+   "scene": "C2-7",
+   "summary": "Стелла показывает сухие письма в гнезде и объясняет, что спасла их от дождя."
+  },
+  {
+   "id": "cs-c2-exhibition",
+   "scene": "C2-8",
+   "summary": "Жители развешивают приглашения на Выставке писем."
+  },
+  {
+   "id": "cs-c2-reward",
+   "scene": "C2-10",
+   "summary": "Хвостс вручает значок, звание и плакат шифра."
+  }
+ ],
+ "reserved": [],
+ "revision": "37ccd673cea2b712455ae2478cdade3bdb0b1e6a6fb2df4e38ec5d0890794f68"
+}

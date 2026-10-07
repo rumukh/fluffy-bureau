@@ -45,6 +45,9 @@ describe('content build', () => {
       l.rev = 2;
     })).toContain('WORDS-MAX');
   });
+  it('fails when a PM line is dropped from content', () => {
+    expect(codes((s) => { s.cases[1]!.lines = s.cases[1]!.lines.filter((l) => l.id !== 'C1-7-16'); })).toContain('PM-MISSING');
+  });
   it('fails on text drift from the PM script without a change record', () => {
     expect(codes((s) => { line(s, 'C1-1-02').text = 'Я испёк его к ужину.'; })).toContain('PM-DRIFT');
   });
