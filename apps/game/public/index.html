@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light" />
+    <meta name="referrer" content="no-referrer" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' blob: data:; media-src 'self' blob:; style-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self'; worker-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'"
+    />
+    <meta name="fluffy-base" content="%BASE%" />
+    <meta name="fluffy-build" content="%BUILD_ID%" />
+    <meta name="fluffy-channel" content="%CHANNEL%" />
+    <meta name="theme-color" content="#f3d9a4" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Пушистое бюро" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./icons/icon-180.png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./app.css" />
+    <title>Пушистое бюро расследований</title>
+  </head>
+  <body>
+    <div id="app" aria-busy="true"><p class="boot">Загружаем бюро…</p></div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
