@@ -138,6 +138,7 @@ export function exploreFlow(
           if (c.kind === 'tracks') { c.steps.forEach((st) => { if (st.prompt) sure.push(st.prompt); opts(st.options); }); if (c.question) { sure.push(c.question.prompt); opts(c.question.options); } }
           if (c.kind === 'scent-pairs') { maybe.push(...c.mismatch); if (c.question) { sure.push(c.question.prompt); opts(c.question.options); } }
           if (c.kind === 'timeline') maybe.push(...c.wrong);
+          if (c.kind === 'staged') { c.steps.forEach((st) => { if (st.prompt) sure.push(st.prompt); opts(st.options); }); maybe.push(...c.lines); }
           if (c.kind === 'baker') { c.steps.forEach((st) => { sure.push(st.prompt); maybe.push(...st.afterWrong); }); maybe.push(...c.tooMuch, ...c.tooLittle); }
           sure.forEach((id) => playLine(w, id));
           // Optional replies may present a red herring (never count as teaching or as an explanation).

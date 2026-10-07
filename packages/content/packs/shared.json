@@ -1359,6 +1359,27 @@
    "nameLabel": "NM-mouse",
    "species": "мышонок",
    "voiceNote": "Тоненький робкий голосок."
+  },
+  {
+   "id": "damka",
+   "name": "Дамка",
+   "nameLabel": "NM-damka",
+   "species": "бобёрша",
+   "voiceNote": "Смотритель Медового маяка и инженер; деловитая, тёплая (D20)."
+  },
+  {
+   "id": "pukhlik",
+   "name": "Пухлик",
+   "nameLabel": "NM-pukhlik",
+   "species": "совёнок",
+   "voiceNote": "Ночной стажёр; тихий, застенчивый, хранит секрет (D07, D09)."
+  },
+  {
+   "id": "all",
+   "name": "Все вместе",
+   "nameLabel": "NM-all",
+   "species": "хор",
+   "voiceNote": "Все герои хором."
   }
  ],
  "skills": [
@@ -1540,5 +1561,6 @@
  "activities": [],
  "comfort": [],
  "cutscenes": [],
- "revision": "bd9a57dd0857ee554852e6eb3577a7ba452ce6df9e616c75f4ea4a9c46d9397d"
+ "reserved": [],
+ "revision": "fcbc9ebede0b3811e9f3497ab612ca13385623c75743a2323718cf2b01d49168"
 }

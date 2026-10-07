@@ -293,6 +293,17 @@ export type MinigameConfig =
       question: Question | null;
     }
   | {
+      /**
+       * Preparatory generic mechanic for cases 2–8 (C2): a sequence of choice steps plus any
+       * extra lines the mechanic speaks. Replaced by a dedicated kind when the runtime builds it.
+       */
+      kind: 'staged';
+      mechanic: string;
+      description: string;
+      steps: { id: string; prompt: LineId | null; pageSize: number; options: ChoiceOption[] }[];
+      lines: LineId[];
+    }
+  | {
       kind: 'baker'; // «Пекарь»: amounts in eighths of a cup (integer units, exactQuantity-style)
       measures: { id: string; label: LineId; units: number }[];
       /** Each pick adds a measure. sum > target → tooMuch, pick undone; a pick outside `ideal` while sum < target → tooLittle. sum = target → next step. */
@@ -400,9 +411,12 @@ export interface ContentPack {
   activities: ActivityCard[];
   comfort: ComfortLine[];
   cutscenes: Cutscene[];
+  /** Lines owned by systems not modelled by the step language yet (family mode, …); still validated and voiced. */
+  reserved: { lines: LineId[]; reason: string }[];
 }
 
 // ---------------------------------------------------------------- voice manifest
+
 
 export interface ManifestEntry {
   id: LineId;
