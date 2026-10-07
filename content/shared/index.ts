@@ -166,6 +166,9 @@ export const shared: SharedSource = {
     { id: 'kartofan', name: 'Картофан', nameLabel: 'NM-kartofan', species: 'крот', voiceNote: 'Рассеянный садовник, говорит медленно, по-доброму смущается.' },
     { id: 'stella', name: 'Стелла', nameLabel: 'NM-stella', species: 'сорока', voiceNote: 'Бойкая почтальонша, тараторит, честная.' },
     { id: 'mouse', name: 'Мышонок Шуршик', nameLabel: 'NM-mouse', species: 'мышонок', voiceNote: 'Тоненький робкий голосок.' },
+    { id: 'damka', name: 'Дамка', nameLabel: 'NM-damka', species: 'бобёрша', voiceNote: 'Смотритель Медового маяка и инженер; деловитая, тёплая (D20).' },
+    { id: 'pukhlik', name: 'Пухлик', nameLabel: 'NM-pukhlik', species: 'совёнок', voiceNote: 'Ночной стажёр; тихий, застенчивый, хранит секрет (D07, D09).' },
+    { id: 'all', name: 'Все вместе', nameLabel: 'NM-all', species: 'хор', voiceNote: 'Все герои хором.' },
   ],
   skills: [
     'inspect', 'replay', 'lamp', 'notebook', 'guess', 'shell', 'pause', 'map', 'klubki', 'magnifier', 'cocoa',
@@ -187,6 +190,8 @@ export const shared: SharedSource = {
     { word: 'черник', hint: 'черни́к' },
     { word: 'черничн', hint: 'черни́чн' },
     { word: 'Шерлок', hint: 'Ше́рлок' },
+    { word: 'Дамк', hint: 'Да́мк' },
+    { word: 'Пухлик', hint: 'Пу́хлик' },
     { word: 'щурился', hint: 'щу́рился' },
   ],
   rewards: [

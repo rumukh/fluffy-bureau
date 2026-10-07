@@ -2,11 +2,11 @@
  "format": "fluffy-voice-manifest",
  "schema": 1,
  "packs": {
-  "shared": "bd9a57dd0857ee554852e6eb3577a7ba452ce6df9e616c75f4ea4a9c46d9397d",
-  "prologue": "72d98b227e3f8e650b6ebe16aa48c55e1df4c2f526be057d7cdf3a4771f718de",
-  "case01-l1": "1a14bc1af6c466b6b113184dcd92f4bfcd3b91813e74312803a3576675c0aeb1",
-  "case01-l2": "8639f98886b61b3ff160aad8d1919afd30b6b111954170b62f7ccf983e3b6428",
-  "case01-l3": "5a99ba7a61c0cea3734edc74e9fa90ced9cad72e287efef3bdc4085b2bb29d9c"
+  "shared": "fcbc9ebede0b3811e9f3497ab612ca13385623c75743a2323718cf2b01d49168",
+  "prologue": "d7f5f3c33cdd0ea1c487f34f672ff4194235cd8b81130709e72a083037153afd",
+  "case01-l1": "386e6a71cae9ff6e6b5b27b8599431a0f92f9f8d86a13c0e6399029f1f782d8f",
+  "case01-l2": "2c2918adea95fc8b95911788664d0538b3307fb16af6a00e9ac70e5f6ab7172b",
+  "case01-l3": "98d6c7f41627ffb2285c181949f50e41abc18903c2638ad3e5daecacc15afaa1"
  },
  "lexicon": [
   {
@@ -68,6 +68,14 @@
   {
    "word": "Шерлок",
    "hint": "Ше́рлок"
+  },
+  {
+   "word": "Дамк",
+   "hint": "Да́мк"
+  },
+  {
+   "word": "Пухлик",
+   "hint": "Пу́хлик"
   },
   {
    "word": "щурился",
@@ -137,6 +145,27 @@
    "nameLabel": "NM-mouse",
    "species": "мышонок",
    "voiceNote": "Тоненький робкий голосок."
+  },
+  {
+   "id": "damka",
+   "name": "Дамка",
+   "nameLabel": "NM-damka",
+   "species": "бобёрша",
+   "voiceNote": "Смотритель Медового маяка и инженер; деловитая, тёплая (D20)."
+  },
+  {
+   "id": "pukhlik",
+   "name": "Пухлик",
+   "nameLabel": "NM-pukhlik",
+   "species": "совёнок",
+   "voiceNote": "Ночной стажёр; тихий, застенчивый, хранит секрет (D07, D09)."
+  },
+  {
+   "id": "all",
+   "name": "Все вместе",
+   "nameLabel": "NM-all",
+   "species": "хор",
+   "voiceNote": "Все герои хором."
   }
  ],
  "entries": [

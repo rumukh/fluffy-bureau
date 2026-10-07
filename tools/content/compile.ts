@@ -19,7 +19,7 @@ const ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$/;
 const PROLOGUE_SKILLS = ['inspect', 'replay', 'lamp', 'notebook', 'guess', 'shell', 'pause', 'map'];
 const PM_SPEAKERS: Record<string, string> = {
   Хвостс: 'khvosts', Ватсони: 'watsony', Пудинг: 'pudding', Тёпа: 'tyopa', Фитилёк: 'fitilyok',
-  Картофан: 'kartofan', Стелла: 'stella', Мышонок: 'mouse',
+  Картофан: 'kartofan', Стелла: 'stella', Мышонок: 'mouse', Дамка: 'damka', Пухлик: 'pukhlik', Все: 'all',
 };
 /** UI keys G maps by id (UI-<key>). */
 export const REQUIRED_UI = [
@@ -87,6 +87,7 @@ export function variantRefs(v: VariantSource, rewardLabel: (id: string) => strin
         c.fields.forEach((f) => { add(f.label); f.cards.forEach((x) => add(x.label)); }); c.mismatch.forEach(add);
         if (c.question) { add(c.question.prompt); c.question.options.forEach((o) => { add(o.label); o.reply.forEach(add); }); }
         break;
+      case 'staged': c.steps.forEach((st) => { add(st.prompt); st.options.forEach((o) => { add(o.label); o.reply.forEach(add); }); }); c.lines.forEach(add); break;
       case 'baker': c.measures.forEach((x) => add(x.label)); c.steps.forEach((st) => { add(st.prompt); st.afterWrong.forEach(add); }); c.tooMuch.forEach(add); c.tooLittle.forEach(add); break;
     }
   }
@@ -96,6 +97,7 @@ export function variantRefs(v: VariantSource, rewardLabel: (id: string) => strin
   v.collections.forEach((c) => { add(c.label); add(c.line); });
   v.activities.forEach((a) => { add(a.title); a.steps.forEach((s) => add(s.line)); a.safety.forEach(add); });
   v.comfort.forEach((c) => add(c.line));
+  (v.reserved ?? []).forEach((r) => r.lines.forEach(add));
   return out;
 }
 
@@ -148,7 +150,8 @@ export function build(shared: SharedSource, cases: CaseSource[], genderReview: G
     const edits = l.changes.filter((c) => c.before !== null);
     if (orig) {
       if (l.changes.some((c) => c.before === null)) err('PM-ADDED', l.id, 'line exists in PM scripts but is marked as added');
-      if (orig.speaker && PM_SPEAKERS[orig.speaker] && PM_SPEAKERS[orig.speaker] !== l.speaker) err('PM-SPEAKER', l.id, `speaker ${l.speaker} ≠ PM ${orig.speaker}`);
+      const pmSpeaker = orig.speaker?.replace(/\s*\(.*\)\s*$/u, '');
+      if (pmSpeaker && PM_SPEAKERS[pmSpeaker] && PM_SPEAKERS[pmSpeaker] !== l.speaker) err('PM-SPEAKER', l.id, `speaker ${l.speaker} ≠ PM ${orig.speaker}`);
       if (edits.length === 0 && l.text !== orig.text) err('PM-DRIFT', l.id, `text differs from PM without a change record: «${l.text}» vs «${orig.text}»`);
       if (edits.length > 0 && edits[0]!.before !== orig.text) err('PM-BEFORE', l.id, `change.before «${edits[0]!.before}» ≠ PM «${orig.text}»`);
       if (edits.length > 0 && l.text === orig.text) err('PM-NOOP', l.id, 'change recorded but text equals PM');
@@ -160,7 +163,7 @@ export function build(shared: SharedSource, cases: CaseSource[], genderReview: G
   }
 
   // Text rules
-  const reviewed = new Map(genderReview.map((g) => [`${g.id}@${g.rev}`, g]));
+  const reviewed = new Map([...genderReview, ...cases.flatMap((c) => c.genderReview ?? [])].map((g) => [`${g.id}@${g.rev}`, g]));
   const usedReviews = new Set<string>();
   for (const l of allLines) {
     const ss = sentences(l.text);
@@ -183,7 +186,9 @@ export function build(shared: SharedSource, cases: CaseSource[], genderReview: G
   for (const k of REQUIRED_UI) if (!lineIndex.has(`UI-${k}`)) err('UI-MISSING', `UI-${k}`, 'interface label requested by G is missing');
 
   // ---------------------------------------------------------------- packs
-  const rewardLabel = (id: string) => shared.rewards.find((r) => r.id === id)?.label;
+  const allRewards = [...shared.rewards, ...cases.flatMap((c) => c.rewards ?? [])];
+  const allSkills = [...shared.skills, ...cases.flatMap((c) => c.skills ?? [])];
+  const rewardLabel = (id: string) => allRewards.find((r) => r.id === id)?.label;
   const packs: ContentPack[] = [];
   const flows = new Map<string, FlowReport[]>();
   const stats = new Map<string, Record<string, number | string>>();
@@ -194,13 +199,15 @@ export function build(shared: SharedSource, cases: CaseSource[], genderReview: G
   packs.push(withRevision<ContentPack>({
     format: PACK_FORMAT, schema: PACK_SCHEMA, id: 'shared', kind: 'shared', title: null, case: null, requires: [], start: null,
     lines: shared.lines.map(toLine), speakers: shared.speakers, skills: shared.skills, scenes: [], logic: null, deduction: null,
-    notebookHelp: null, hints: null, minigames: [], facts: [], glossary: [], rewards: shared.rewards, collections: [], activities: [], comfort: [], cutscenes: [],
+    notebookHelp: null, hints: null, minigames: [], facts: [], glossary: [], rewards: shared.rewards, collections: [], activities: [], comfort: [], cutscenes: [], reserved: [],
   }));
   sharedRefs.forEach((id) => usedIds.add(id));
   for (const s of shared.skills) if (!lineIndex.has(s.title)) err('REF-LINE', `shared: skill ${s.id}`, `missing title ${s.title}`);
   for (const r of shared.rewards) if (!lineIndex.has(r.label)) err('REF-LINE', `shared: reward ${r.id}`, `missing label ${r.label}`);
 
   for (const c of cases) {
+    for (const k of c.skills ?? []) if (!lineIndex.has(k.title)) err('REF-LINE', `: skill ${k.id}`, `missing title ${k.title}`);
+    for (const rw of c.rewards ?? []) if (!lineIndex.has(rw.label)) err('REF-LINE', `: reward ${rw.id}`, `missing label ${rw.label}`);
     const caseNewTerms = new Set<string>();
     for (const v of c.variants) {
       const where = v.pack;
@@ -224,10 +231,10 @@ export function build(shared: SharedSource, cases: CaseSource[], genderReview: G
             if (prev !== undefined && prev !== st.text) err('DIR-CONFLICT', st.id, `stage direction ID reused with different text`);
             dirTexts.set(st.id, st.text);
           }
-          if (st.t === 'skill') { if (!shared.skills.some((k) => k.id === st.skill)) err('REF-SKILL', where, st.skill); walk(st.first); walk(st.known); }
+          if (st.t === 'skill') { if (!allSkills.some((k) => k.id === st.skill)) err('REF-SKILL', where, st.skill); walk(st.first); walk(st.known); }
           if (st.t === 'if') { walk(st.then); walk(st.else); }
           if (st.t === 'minigame' && !v.minigames.some((m) => m.id === st.minigame)) err('REF-MINIGAME', where, st.minigame);
-          if (st.t === 'reward' && !shared.rewards.some((r) => r.id === st.reward)) err('REF-REWARD', where, st.reward);
+          if (st.t === 'reward' && !allRewards.some((r) => r.id === st.reward)) err('REF-REWARD', where, st.reward);
           if (st.t === 'reward' && !v.rewards.includes(st.reward)) err('REF-REWARD', where, `${st.reward} granted but not listed`);
           if (st.t === 'clue' && !v.logic.clues.some((k) => k.id === st.clue)) err('REF-CLUE', where, st.clue);
           if (st.t === 'goto' && !v.scenes.some((x) => x.id === st.scene)) err('REF-SCENE', where, st.scene);
@@ -252,6 +259,7 @@ export function build(shared: SharedSource, cases: CaseSource[], genderReview: G
           cfg.steps.forEach((st) => { lists.push({ id: st.id, n: st.options.length, page: st.pageSize }); if (st.options.filter((o) => o.correct).length !== 1) err('MINIGAME', `${where}: ${m.id}`, `step ${st.id} needs exactly one correct card`); });
           if (cfg.question) lists.push({ id: 'question', n: cfg.question.options.length, page: 3 });
         }
+        if (cfg.kind === 'staged') cfg.steps.forEach((st) => lists.push({ id: st.id, n: st.options.length, page: st.pageSize }));
         if (cfg.kind === 'scent-pairs' && cfg.question) lists.push({ id: 'question', n: cfg.question.options.length, page: 3 });
         if (cfg.kind === 'timeline' && [...cfg.solution].sort().join() !== cfg.items.map((i) => i.id).sort().join()) err('MINIGAME', `${where}: ${m.id}`, 'solution must list every item once');
         if (cfg.kind === 'scent-pairs') for (const f of cfg.fields) {
@@ -321,7 +329,7 @@ export function build(shared: SharedSource, cases: CaseSource[], genderReview: G
 
       // ---------------------------------------------------------------- flow
       const fresh = exploreFlow(v, textOf, v.kind === 'prologue' ? [] : PROLOGUE_SKILLS, 'fresh', issues);
-      const veteran = exploreFlow(v, textOf, shared.skills.map((s) => s.id), 'veteran', issues);
+      const veteran = exploreFlow(v, textOf, allSkills.map((s) => s.id), 'veteran', issues);
       flows.set(v.pack, [fresh, veteran]);
       const revealsAnywhere = (k: string) => {
         const has = (steps: Step[]): boolean => steps.some((st) => (st.t === 'clue' && st.clue === k) || (st.t === 'skill' && (has(st.first) || has(st.known))) || (st.t === 'if' && (has(st.then) || has(st.else))));
@@ -337,10 +345,11 @@ export function build(shared: SharedSource, cases: CaseSource[], genderReview: G
 
       packs.push(withRevision<ContentPack>({
         format: PACK_FORMAT, schema: PACK_SCHEMA, id: v.pack, kind: v.kind, title: v.title, case: v.case, requires: ['shared'], start: v.start,
-        lines: own.map((id) => toLine(lineIndex.get(id)!)), speakers: [], skills: [], scenes: v.scenes, logic: v.logic, deduction,
+        lines: own.map((id) => toLine(lineIndex.get(id)!)), speakers: [], skills: c.skills ?? [], scenes: v.scenes, logic: v.logic, deduction,
         notebookHelp: v.notebookHelp, hints: v.hints, minigames: v.minigames, facts: v.facts, glossary: v.glossary,
-        rewards: shared.rewards.filter((r) => v.rewards.includes(r.id)),
+        rewards: allRewards.filter((r) => v.rewards.includes(r.id)),
         collections: v.collections, activities: v.activities, comfort: v.comfort, cutscenes: v.cutscenes,
+        reserved: v.reserved ?? [],
       }));
       const sentenceCounts = own.flatMap((id) => sentences(lineIndex.get(id)!.text).map((s) => tokenize(s).length));
       stats.set(v.pack, {

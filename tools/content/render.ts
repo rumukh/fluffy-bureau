@@ -104,6 +104,10 @@ export function renderVariant(r: BuildResult, v: VariantSource, pack: ContentPac
             c.fields.forEach((f) => out.push(`${ii}- поле ${txt(f.label)}: ${[...new Set(f.cards.map((x) => txt(x.label)))].join(', ')} (по две карточки)`));
             c.mismatch.forEach((x) => out.push(`${ii}- не пара: ${say(x)}`));
             if (c.question) { out.push(`${ii}- Вопрос: ${say(c.question.prompt)}`); opts(c.question.options); }
+          } else if (c.kind === 'staged') {
+            out.push(`${ii}- механика «${c.mechanic}»: ${c.description}`);
+            c.steps.forEach((st) => { out.push(`${ii}- Шаг \`${st.id}\`${st.prompt ? `: ${say(st.prompt)}` : ''}`); opts(st.options); });
+            c.lines.forEach((x) => out.push(`${ii}- реплика механики: ${say(x)}`));
           } else if (c.kind === 'baker') {
             out.push(`${ii}- мерки: ${c.measures.map((x) => `${txt(x.label)} = ${x.units}/8 стакана`).join(', ')}`);
             c.steps.forEach((st) => { out.push(`${ii}- ${say(st.prompt)} → нужно ${st.target}/8 стакана (${st.ideal.join(' или ')})`); st.afterWrong.forEach((x) => out.push(`${ii}  - после ошибки: ${say(x)}`)); });
@@ -173,6 +177,11 @@ export function renderVariant(r: BuildResult, v: VariantSource, pack: ContentPac
   if (v.cutscenes.length) {
     out.push('## Ролики', '');
     v.cutscenes.forEach((c) => out.push(`- \`${c.id}\` в сцене \`${c.scene}\`: ${c.summary}`));
+    out.push('');
+  }
+  if (v.reserved?.length) {
+    out.push('## Строки для систем следующих этапов', '');
+    for (const r of v.reserved) { out.push(`- ${r.reason}:`); r.lines.forEach((x) => out.push(`  - ${say(x)}`)); }
     out.push('');
   }
   if (v.decisions.length) {

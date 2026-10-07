@@ -181,12 +181,20 @@ export interface VariantSource {
   cutscenes: Cutscene[];
   /** Editorial notes on structural (non-text) normalization decisions. */
   decisions: { id: string; text: string; ref: string }[];
+  /** Lines used by systems the step language does not model yet (family mode, …). */
+  reserved?: { lines: string[]; reason: string }[];
 }
 
 export interface CaseSource {
   id: string; // prologue | case01 …
   lines: AuthoredLine[];
   variants: VariantSource[];
+  /** Mechanics introduced by this case (titles are lines SK-<id> in this case). */
+  skills?: Skill[];
+  /** Rewards introduced by this case (labels are lines in this case). */
+  rewards?: Reward[];
+  /** Gendered-address review entries for this case's lines. */
+  genderReview?: { id: string; rev: number; reason: string }[];
 }
 
 export type { Axis };
