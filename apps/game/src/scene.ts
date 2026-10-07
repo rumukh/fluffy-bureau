@@ -240,16 +240,18 @@ function renderHud(app: App, view: GameView, run: RunView | null): HTMLElement {
           },
         )
       : null,
-    button(
-      {
-        label: t(app, 'hud.lamp'),
-        key: 'hud-lamp',
-        icon: '💡',
-        class: 'hud-btn lamp',
-        pressed: view.lamp,
-      },
-      () => app.act({ type: 'lamp', on: !view.lamp }).then(() => app.applyPrefs()),
-    ),
+    run && !knows('lamp')
+      ? null
+      : button(
+          {
+            label: t(app, 'hud.lamp'),
+            key: 'hud-lamp',
+            icon: '💡',
+            class: 'hud-btn lamp',
+            pressed: view.lamp,
+          },
+          () => app.act({ type: 'lamp', on: !view.lamp }).then(() => app.applyPrefs()),
+        ),
     run?.hints.klubok.available && knows('klubki')
       ? button(
           {
@@ -392,6 +394,26 @@ function renderMenu(
         return h('div', { class: 'choice-row' }, choice, ear);
       }),
     ),
+    run.version?.available
+      ? button(
+          {
+            label: run.version.button.text,
+            key: 'open-version',
+            class: 'primary version-open',
+            icon: '🗣',
+          },
+          () => {
+            app.voice.stop();
+            app.ui.versionOpen = true;
+            app.render();
+          },
+        )
+      : null,
+    step.back
+      ? button({ label: t(app, 'hud.back'), key: 'menu-back', icon: '←', class: 'back' }, () =>
+          app.act({ type: 'back' }),
+        )
+      : null,
     pages > 1
       ? button(
           {
@@ -548,6 +570,32 @@ function renderAwait(app: App, view: GameView, action: string): HTMLElement {
           },
         ),
       );
+    case 'office.place': {
+      const decor = view.rewards.filter((r) => r.kind === 'decor');
+      const item = decor.find((r) => !view.decor.some((d) => d.item === r.id)) ?? decor[0];
+      if (!item) return h('p', null, '…');
+      return h(
+        'div',
+        { class: 'await office-place' },
+        h('p', { class: 'line-text' }, `${rewardIcon('decor')} ${item.label.text}`),
+        h(
+          'div',
+          { class: 'choices' },
+          ...OFFICE_SLOTS.map((slot, index) => {
+            const node = button(
+              {
+                label: `${t(app, 'office.place')}: ${t(app, `office.slot.${slot}`)}`,
+                key: `slot-${slot}`,
+                icon: '＋',
+              },
+              () => app.act({ type: 'decor', item: item.id, slot }),
+            );
+            if (index === 0) node.dataset.primary = '';
+            return node;
+          }),
+        ),
+      );
+    }
     default:
       return h(
         'div',
@@ -1057,11 +1105,24 @@ export function renderNotebook(app: App, close: () => HTMLElement): HTMLElement 
         ),
       ),
     ),
-    run.help
-      ? button({ label: t(app, 'hud.help'), key: 'nb-help', icon: '🤝', disabled: busy }, () =>
-          app.act({ type: 'help' }),
-        )
-      : null,
+    h(
+      'div',
+      { class: 'row' },
+      run.help
+        ? button({ label: t(app, 'hud.help'), key: 'nb-help', icon: '🤝', disabled: busy }, () =>
+            app.act({ type: 'help' }),
+          )
+        : null,
+      run.version?.available
+        ? button(
+            { label: run.version.button.text, key: 'nb-version', icon: '🗣', class: 'primary' },
+            async () => {
+              app.ui.versionOpen = true;
+              await app.setOverlay(null);
+            },
+          )
+        : null,
+    ),
     h('h3', null, t(app, 'notebook.clues')),
     h(
       'ul',
