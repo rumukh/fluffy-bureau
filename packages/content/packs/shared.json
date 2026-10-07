@@ -1,0 +1,1544 @@
+{
+ "format": "fluffy-content-pack",
+ "schema": 1,
+ "id": "shared",
+ "kind": "shared",
+ "title": null,
+ "case": null,
+ "requires": [],
+ "start": null,
+ "lines": [
+  {
+   "id": "UI-title.play",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Играть",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-profile.choose",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Кто играет?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-profile.new",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Новый сыщик",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-profile.full",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Мест больше нет",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-avatar.species.kitten",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Котёнок",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-avatar.species.fox",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Лисёнок",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-avatar.species.mouse",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Мышонок",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-avatar.species.squirrel",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Бельчонок",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-avatar.species.puppy",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Щенок",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-avatar.name.prompt",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Напиши своё имя.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-avatar.name.default",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Стажёр",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-avatar.skip",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Пропустить",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-avatar.done",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Готово",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-scarf.honey",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Медовый",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-scarf.sage",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Зелёный",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-scarf.rose",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Розовый",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-scarf.sky",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Голубой",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-scarf.berry",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Ягодный",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-scarf.mint",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Мятный",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-hud.pause",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Пауза",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-hud.notebook",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Блокнот",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-hud.map",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Карта",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-hud.lamp",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Лампа смелости",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-hud.replay",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Повторить",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-hud.next",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Дальше",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-hud.klubok",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Клубок",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-hud.shell",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Телефон-ракушка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-hud.help",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Помоги заполнить",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-hud.version",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Приглашу на разговор",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-hud.guess",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Сказать догадку",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-hud.back",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Назад",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-hud.close",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Закрыть",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-hud.ear",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Послушать",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-pause.title",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Пауза",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-pause.continue",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Продолжить",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-pause.settings",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Настройки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-pause.restartCase",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Начать дело заново",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-pause.restartConfirm",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Начать дело заново? Улики забудутся.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-pause.yes",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Да",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-pause.no",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Нет",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-pause.menu",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "В главное меню",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-pause.encyclopedia",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Энциклопедия",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-pause.glossary",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Словарик",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-pause.album",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Альбом",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-notebook.title",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Блокнот сыщика",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-notebook.confirmed",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Точно да",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-notebook.excluded",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Точно нет",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-notebook.unknown",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Пока не знаю",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-notebook.clear",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Убрать стикер",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-notebook.clues",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Улики",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-notebook.nothing",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "watsony",
+   "text": "Пока нечего вписать. Найдём ещё улики!",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-notebook.allDone",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "watsony",
+   "text": "Всё уже вписано! Блокнот в полном порядке.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-difficulty.title",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Выбери сложность",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-difficulty.1",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Лёгкая",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-difficulty.1.desc",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Три улики, ракушка всё подскажет.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-difficulty.2",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Средняя",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-difficulty.2.desc",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Четыре улики, ракушка только намекает.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-difficulty.3",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Трудная",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-difficulty.3.desc",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Пять улик и только три клубка.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-difficulty.start",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Начать дело",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-settings.title",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Настройки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-settings.voice",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Голос",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-settings.music",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Музыка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-settings.effects",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Звуки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-settings.textSize",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Размер букв",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-settings.readable",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Шрифт для чтения",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-settings.calm",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Спокойная анимация",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-settings.readChoices",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Читать варианты вслух",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-settings.on",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Включено",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-settings.off",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Выключено",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-rotate",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Поверни планшет",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-break.title",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Пора отдохнуть!",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-break.body",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Мы всё сохранили.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-break.rest",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Отдохнуть",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-break.more",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Ещё немного",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-parent.enter",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Для взрослых",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-parent.hold",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Нажми и держи",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-save.saved",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Сохранено",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-save.failed",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Не получилось сохранить. Попробуем ещё?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-save.retry",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Ещё раз",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-save.otherTab",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Игра открыта в другом окне.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-save.useHere",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Играть здесь",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-rewards.buttons",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Пуговки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-rewards.hearts",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Сердечки доброты",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-rewards.rank",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Звание",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-rewards.newWord",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Новое слово в Словарике!",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-rewards.newFact",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Новая карточка в Энциклопедии!",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-office.place",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Поставить сюда",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-office.title",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Контора",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-album.empty",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Альбом пока пустой. Раскрой первое дело!",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-encyclopedia.title",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Энциклопедия Пушистых Знаний",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-encyclopedia.true",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Это правда",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-encyclopedia.empty",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Здесь будут карточки с фактами.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-glossary.title",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Словарик сыщика",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-glossary.empty",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Здесь будут слова сыщика.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-activity.title",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Настоящее дело",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-activity.withAdult",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Со взрослым",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-activity.adultStep",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Это делает взрослый.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-map.locked",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Сюда пока рано",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-hint.klubokEmptyShell",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "khvosts",
+   "text": "Клубки кончились. Можно позвонить Ватсони!",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-hint.klubokEmpty",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "khvosts",
+   "text": "Клубки кончились. Перечитаем Блокнот вместе?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-hint.shellRing",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Звоним Ватсони…",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-case.complete",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Дело раскрыто!",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-inspect",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Осмотр",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-replay",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Ушко: повтор",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-lamp",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Лампа смелости",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-notebook",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Блокнот",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-guess",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Догадка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-shell",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Телефон-ракушка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-pause",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Пауза",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-map",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Карта",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-klubki",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Клубки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-magnifier",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Лупа",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-cocoa",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Чашка какао",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-tracks",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Кто наследил?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-version",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Версия",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-baker",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Пекарь",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-encyclopedia",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Энциклопедия",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-cozy-day",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Уютный денёк",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-timeline",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Лента времени",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-scent-pairs",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Пары запахов",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "NM-khvosts",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Шерлок Хвостс",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "NM-watsony",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Доктор Ватсони",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "NM-pudding",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Мэр Пудинг",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "NM-tyopa",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Енот Тёпа",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "NM-fitilyok",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Светлячок Фитилёк",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "NM-kartofan",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Крот Картофан",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "NM-stella",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Сорока Стелла",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "NM-mouse",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Мышата Шуршики",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "NM-narrator",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Рассказчик",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-badge-intern",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Значок стажёра",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-title-intern",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Звание: Стажёр",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-buttons-5",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Пять пуговок!",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-buttons-10",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Десять пуговок!",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-buttons-15",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Пятнадцать пуговок!",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-buttons-20",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Двадцать пуговок!",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-heart",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Сердечко доброты!",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c1-badge",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Значок-лапка «Пирог найден»",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c1-sticker-1",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Стикер «Пирог найден», одна звёздочка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c1-sticker-2",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Стикер «Пирог найден», две звёздочки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c1-sticker-3",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Стикер «Пирог найден», три звёздочки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c1-decor-basket",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Корзинка черники для Конторы",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c1-activity",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Карточка «Пирог по рецепту мэра Пудинга»",
+   "voiced": true,
+   "delivery": "neutral"
+  }
+ ],
+ "speakers": [
+  {
+   "id": "narrator",
+   "name": "Рассказчик",
+   "nameLabel": "NM-narrator",
+   "species": "—",
+   "voiceNote": "Тёплый спокойный рассказчик; читает подписи, факты, словарик, карточки."
+  },
+  {
+   "id": "khvosts",
+   "name": "Шерлок Хвостс",
+   "nameLabel": "NM-khvosts",
+   "species": "барсук, дедушка",
+   "voiceNote": "Пожилой, добрый, неторопливый; «Элементарно, пушинка!»; пускает пузыри, когда думает."
+  },
+  {
+   "id": "watsony",
+   "name": "Доктор Ватсони",
+   "nameLabel": "NM-watsony",
+   "species": "ежиха",
+   "voiceNote": "Заботливая, чуть забывчивая, улыбчивая; «Записала!.. кажется»."
+  },
+  {
+   "id": "pudding",
+   "name": "Мэр Пудинг",
+   "nameLabel": "NM-pudding",
+   "species": "хомяк",
+   "voiceNote": "Суетливый, громкий, добродушный; щёки набиты."
+  },
+  {
+   "id": "tyopa",
+   "name": "Тёпа",
+   "nameLabel": "NM-tyopa",
+   "species": "енот",
+   "voiceNote": "Мягкий добряк-мыловар; легко расстраивается, быстро оттаивает."
+  },
+  {
+   "id": "fitilyok",
+   "name": "Фитилёк",
+   "nameLabel": "NM-fitilyok",
+   "species": "светлячок",
+   "voiceNote": "Звонкий, быстрый, фокусник."
+  },
+  {
+   "id": "kartofan",
+   "name": "Картофан",
+   "nameLabel": "NM-kartofan",
+   "species": "крот",
+   "voiceNote": "Рассеянный садовник, говорит медленно, по-доброму смущается."
+  },
+  {
+   "id": "stella",
+   "name": "Стелла",
+   "nameLabel": "NM-stella",
+   "species": "сорока",
+   "voiceNote": "Бойкая почтальонша, тараторит, честная."
+  },
+  {
+   "id": "mouse",
+   "name": "Мышонок Шуршик",
+   "nameLabel": "NM-mouse",
+   "species": "мышонок",
+   "voiceNote": "Тоненький робкий голосок."
+  }
+ ],
+ "skills": [
+  {
+   "id": "inspect",
+   "title": "SK-inspect"
+  },
+  {
+   "id": "replay",
+   "title": "SK-replay"
+  },
+  {
+   "id": "lamp",
+   "title": "SK-lamp"
+  },
+  {
+   "id": "notebook",
+   "title": "SK-notebook"
+  },
+  {
+   "id": "guess",
+   "title": "SK-guess"
+  },
+  {
+   "id": "shell",
+   "title": "SK-shell"
+  },
+  {
+   "id": "pause",
+   "title": "SK-pause"
+  },
+  {
+   "id": "map",
+   "title": "SK-map"
+  },
+  {
+   "id": "klubki",
+   "title": "SK-klubki"
+  },
+  {
+   "id": "magnifier",
+   "title": "SK-magnifier"
+  },
+  {
+   "id": "cocoa",
+   "title": "SK-cocoa"
+  },
+  {
+   "id": "tracks",
+   "title": "SK-tracks"
+  },
+  {
+   "id": "version",
+   "title": "SK-version"
+  },
+  {
+   "id": "baker",
+   "title": "SK-baker"
+  },
+  {
+   "id": "encyclopedia",
+   "title": "SK-encyclopedia"
+  },
+  {
+   "id": "cozy-day",
+   "title": "SK-cozy-day"
+  },
+  {
+   "id": "timeline",
+   "title": "SK-timeline"
+  },
+  {
+   "id": "scent-pairs",
+   "title": "SK-scent-pairs"
+  }
+ ],
+ "scenes": [],
+ "logic": null,
+ "deduction": null,
+ "notebookHelp": null,
+ "hints": null,
+ "minigames": [],
+ "facts": [],
+ "glossary": [],
+ "rewards": [
+  {
+   "id": "rw-prologue-badge",
+   "kind": "badge",
+   "label": "RW-badge-intern",
+   "amount": 1,
+   "claimKey": "prologue:badge"
+  },
+  {
+   "id": "rw-prologue-title",
+   "kind": "title",
+   "label": "RW-title-intern",
+   "amount": 1,
+   "claimKey": "prologue:title"
+  },
+  {
+   "id": "rw-prologue-buttons",
+   "kind": "buttons",
+   "label": "RW-buttons-5",
+   "amount": 5,
+   "claimKey": "prologue:buttons"
+  },
+  {
+   "id": "rw-c1-heart-tyopa",
+   "kind": "hearts",
+   "label": "RW-heart",
+   "amount": 1,
+   "claimKey": "case01:heart:tyopa"
+  },
+  {
+   "id": "rw-c1-badge",
+   "kind": "badge",
+   "label": "RW-c1-badge",
+   "amount": 1,
+   "claimKey": "case01:badge"
+  },
+  {
+   "id": "rw-c1-buttons-l1",
+   "kind": "buttons",
+   "label": "RW-buttons-10",
+   "amount": 10,
+   "claimKey": "case01:l1:buttons"
+  },
+  {
+   "id": "rw-c1-buttons-l2",
+   "kind": "buttons",
+   "label": "RW-buttons-15",
+   "amount": 15,
+   "claimKey": "case01:l2:buttons"
+  },
+  {
+   "id": "rw-c1-buttons-l3",
+   "kind": "buttons",
+   "label": "RW-buttons-20",
+   "amount": 20,
+   "claimKey": "case01:l3:buttons"
+  },
+  {
+   "id": "rw-c1-sticker-l1",
+   "kind": "sticker",
+   "label": "RW-c1-sticker-1",
+   "amount": 1,
+   "claimKey": "case01:l1:sticker"
+  },
+  {
+   "id": "rw-c1-sticker-l2",
+   "kind": "sticker",
+   "label": "RW-c1-sticker-2",
+   "amount": 1,
+   "claimKey": "case01:l2:sticker"
+  },
+  {
+   "id": "rw-c1-sticker-l3",
+   "kind": "sticker",
+   "label": "RW-c1-sticker-3",
+   "amount": 1,
+   "claimKey": "case01:l3:sticker"
+  },
+  {
+   "id": "rw-c1-decor-basket",
+   "kind": "decor",
+   "label": "RW-c1-decor-basket",
+   "amount": 1,
+   "claimKey": "case01:decor:basket"
+  },
+  {
+   "id": "rw-c1-activity",
+   "kind": "activity",
+   "label": "RW-c1-activity",
+   "amount": 1,
+   "claimKey": "case01:activity:pie"
+  }
+ ],
+ "collections": [],
+ "activities": [],
+ "comfort": [],
+ "cutscenes": [],
+ "revision": "bd9a57dd0857ee554852e6eb3577a7ba452ce6df9e616c75f4ea4a9c46d9397d"
+}

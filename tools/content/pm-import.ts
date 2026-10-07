@@ -14,7 +14,7 @@ export interface PmLine {
 const PM_DIR = join(import.meta.dirname, '..', '..', 'docs', 'pm', '2026-10-07');
 const ID = String.raw`(?:P\d|C\d|L[23])(?:-[A-Za-z0-9]+)+`;
 const ENTRY = new RegExp(
-  String.raw`(?<![\w-])(${ID})\s+(?:\*\*([^*]+?):\*\*\s+)?«(.+?)»(?=\s*(?:\(|\||→|$|\.|,|;|—|\*))`,
+  String.raw`(?<![\w-])(${ID})\s+(?:\*\*([^*]+?):\*\*\s+)?«(.+?)»(?=\s*(?:$|[(|→.,;—*])|\s+[А-ЯЁA-Z])`,
   'gu',
 );
 

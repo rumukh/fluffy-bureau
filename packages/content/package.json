@@ -1,0 +1,17 @@
+{
+  "name": "@fluffy/content",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Normalized, validated content packs and the voice/label manifest for «Пушистое бюро расследований».",
+  "exports": {
+    ".": "./src/index.ts",
+    "./schema": "./src/schema.ts",
+    "./packs/*.json": "./packs/*.json",
+    "./voice-manifest.json": "./voice-manifest.json"
+  },
+  "scripts": {
+    "build": "node ../../tools/content/build.ts",
+    "check": "node ../../tools/content/build.ts --check"
+  }
+}
