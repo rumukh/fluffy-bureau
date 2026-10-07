@@ -41,11 +41,17 @@ export interface Line {
   speaker: SpeakerId; // 'narrator' for labels, facts, cards
   /** Text shown to the player. May contain {имя}. */
   text: string;
+  /** Spoken form when it differs from text (numbers, times), before {имя} substitution. */
+  tts?: string;
   /** Spoken? false only for parent-corner text (Q29). */
   voiced: boolean;
-  /** Delivery/emotion note for voice production. */
+  /** Delivery for SSML prosody (A). */
+  delivery: Delivery;
+  /** Free-text context/emotion note for voice production. */
   note?: string;
 }
+
+export type Delivery = 'neutral' | 'cheerful' | 'excited' | 'worried' | 'sad' | 'shy' | 'thinking' | 'whisper' | 'warm';
 
 export interface Speaker {
   id: SpeakerId;
@@ -62,6 +68,7 @@ export type Cond =
   | { clue: ClueId } // clue revealed in this case
   | { visited: SceneId } // scene entered at least once in this run
   | { flag: FlagId } // case-run flag set by a {t:'set'} step
+  | { notebookConfirmed: AxisId } // the player placed a ✔ in this notebook column
   | { skill: SkillId } // mechanic already learned in this profile (persists across cases)
   | { all: Cond[] }
   | { any: Cond[] }
@@ -82,11 +89,23 @@ export type Step =
   | { t: 'reward'; reward: string }
   | { t: 'if'; when: Cond; then: Step[]; else: Step[] }
   /** Decision screen. Options whose `when` fails or `hideWhen` holds are not shown. */
-  | { t: 'menu'; id: string; prompt: LineId | null; pageSize: number; options: MenuOption[] }
-  /** Notebook version / guess check (C1-6, P2). Loops until correct, then continues. */
-  | { t: 'version'; button: LineId }
+  | { t: 'menu'; id: string; prompt: LineId | null; pageSize: number; options: MenuOption[]; back: SceneId | null }
+  /** Wait until the player performs a taught interaction. */
+  | { t: 'await'; action: AwaitAction }
   | { t: 'goto'; scene: SceneId }
   | { t: 'end' };
+
+/** Blocking interaction: the runtime shows the matching UI and continues when the child does it. */
+export type AwaitAction =
+  | 'avatar.species'
+  | 'avatar.name'
+  | 'avatar.scarf'
+  | 'lamp.on'
+  | 'lamp.off'
+  | 'replay'
+  | 'notebook.open'
+  | 'pause'
+  | 'office.place';
 
 export interface MenuOption {
   id: string;
@@ -161,8 +180,8 @@ export interface CaseLogic {
   axes: Axis[];
   intended: Record<AxisId, ValueId>;
   clues: Clue[];
-  /** Version button enabled when this holds. */
-  versionAvailable: Cond;
+  /** Notebook version / guess check: button label, availability, scene played on success. Wrong versions never end the case. */
+  version: { button: LineId; available: Cond; onSolved: SceneId };
   wrongVersion: {
     intro: CondLine[];
     /** Explain the first wrong value by column order. */
@@ -214,7 +233,6 @@ export interface HintRule {
 }
 
 export interface HintChannel {
-  available: boolean;
   speaker: SpeakerId;
   precision: 'exact' | 'vague';
   /** null = unlimited (shell). Klubok: 3 per case run. */
@@ -229,7 +247,8 @@ export interface HintChannel {
 
 export interface Hints {
   klubok: HintChannel;
-  shell: HintChannel;
+  /** null when the shell is unavailable (level 3, D03). */
+  shell: HintChannel | null;
 }
 
 // ---------------------------------------------------------------- minigames
@@ -245,6 +264,10 @@ export type MinigameConfig =
   | {
       kind: 'magnifier'; // «Лупа» (aegis scene-selection)
       targets: { id: string; label: LineId; required: boolean; reply: LineId[] }[];
+      /** Played once after the first found target (e.g. teaching the replay button). */
+      afterFirst: LineId[];
+      /** Skill learned together with afterFirst, or null. */
+      afterFirstSkill: SkillId | null;
       /** Highlight a remaining target after this many misses (no timer). */
       assistAfterMisses: number;
     }
@@ -255,6 +278,7 @@ export type MinigameConfig =
   | {
       kind: 'tracks'; // «Кто наследил?»
       steps: { id: string; prompt: LineId | null; pageSize: number; options: ChoiceOption[] }[];
+      question: Question | null;
     }
   | {
       kind: 'timeline'; // «Лента времени» (aegis ordering)
@@ -266,19 +290,22 @@ export type MinigameConfig =
       kind: 'scent-pairs'; // «Пары запахов» (aegis matching)
       fields: { id: string; label: LineId; cards: { id: string; pair: string; label: LineId }[] }[];
       mismatch: LineId[];
+      question: Question | null;
     }
   | {
-      kind: 'baker'; // «Пекарь»: amounts in quarter-cup units (exactQuantity)
-      measures: { id: string; label: LineId; quarters: number }[];
-      steps: { id: string; prompt: LineId; targetQuarters: number }[];
+      kind: 'baker'; // «Пекарь»: amounts in eighths of a cup (integer units, exactQuantity-style)
+      measures: { id: string; label: LineId; units: number }[];
+      /** Each pick adds a measure. sum > target → tooMuch, pick undone; a pick outside `ideal` while sum < target → tooLittle. sum = target → next step. */
+      steps: { id: string; prompt: LineId; target: number; ideal: string[]; afterWrong: LineId[] }[];
       tooMuch: LineId[];
       tooLittle: LineId[];
     }
-  | {
-      kind: 'question'; // closing question inside a minigame scene (e.g. «Какой след глубже?»)
-      prompt: LineId;
-      options: ChoiceOption[];
-    };
+
+/** Closing question: wrong options reply and stay; the correct option completes. */
+export interface Question {
+  prompt: LineId;
+  options: ChoiceOption[];
+}
 
 export interface Minigame {
   id: string;
@@ -387,8 +414,11 @@ export interface ManifestEntry {
   /** sha256(ttsText); combine with voice configuration for audio cache keys. */
   ttsHash: string;
   pronunciation: { word: string; hint: string }[];
+  delivery: Delivery;
   note: string;
   packs: PackId[];
+  /** Present when an earlier entry has the same speaker and ttsText: reuse that recording. */
+  sameAudioAs?: LineId;
 }
 
 export interface VoiceManifest {
