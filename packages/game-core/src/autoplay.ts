@@ -40,7 +40,9 @@ export async function autoplay(
   const send = async (action: GameAction) => {
     const outcome = await host.dispatch(action);
     if (!outcome.ok)
-      throw new Error(`Autoplay rejected ${JSON.stringify(action)}: ${JSON.stringify(outcome.error)}`);
+      throw new Error(
+        `Autoplay rejected ${JSON.stringify(action)}: ${JSON.stringify(outcome.error)}`,
+      );
     actions.push(action);
     await policy.after?.(action, host.getView());
   };
