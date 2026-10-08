@@ -9,6 +9,7 @@ export interface HotspotRect {
 }
 
 export interface BackgroundLayer extends HotspotRect {
+  asset: string;
   url: string;
   target?: string;
   levels?: number[];
@@ -27,10 +28,20 @@ export interface AssetManifest {
     }
   >;
   voice: Record<string, { url: string; cues: string | null; durationMs: number }>;
-  characters: Record<string, { base: string }>;
-  avatar: Record<string, { base: string; scarfMask: string | null }>;
+  characters: Record<string, { base: string; puppet: PuppetDocuments | null }>;
+  avatar: Record<
+    string,
+    { base: string; scarfMask: string | null; puppet: PuppetDocuments | null }
+  >;
   music: Record<string, string>;
   sfx: Record<string, string>;
+  /** Files referenced by name inside documents (atlas images). */
+  files: Record<string, string>;
+}
+
+export interface PuppetDocuments {
+  rigId: string;
+  documents: string[];
 }
 
 export const EMPTY_MANIFEST: AssetManifest = {
@@ -42,6 +53,7 @@ export const EMPTY_MANIFEST: AssetManifest = {
   avatar: {},
   music: {},
   sfx: {},
+  files: {},
 };
 
 export const LOGICAL = { width: 2560, height: 1600 } as const;
@@ -185,6 +197,44 @@ export class Assets {
   hotspotFor(location: string, id: string): HotspotRect | undefined {
     const spots = this.hotspots(location);
     return spots[id] ?? Object.entries(spots).find(([key]) => key.startsWith(`${id}-`))?.[1];
+  }
+
+  /** Resolves an asset ID (or a file name used inside documents, or `cues:<lineId>`) to a URL. */
+  resolve(id: string): string {
+    if (id.startsWith('cues:')) {
+      const cues = this.manifest.voice[id.slice(5)]?.cues;
+      if (cues) return this.url(cues);
+    }
+    const asset = this.manifest.assets[id]?.url ?? this.manifest.files[id];
+    if (!asset) throw new Error(`Unknown asset ${id}`);
+    return this.url(asset);
+  }
+
+  backgroundId(location: string): string | null {
+    const matches = Object.keys(this.manifest.backgrounds).filter(
+      (id) => this.manifest.backgrounds[id]!.location === location,
+    );
+    return matches.find((id) => id.endsWith('-interior')) ?? matches[0] ?? null;
+  }
+
+  rawLayers(location: string, level: number | null) {
+    const id = this.backgroundId(location);
+    return (id ? this.manifest.backgrounds[id]!.layers : []).filter(
+      (layer) => !layer.levels || layer.levels.includes(level ?? 1),
+    );
+  }
+
+  assetSize(id: string): { width: number; height: number } | null {
+    const asset = this.manifest.assets[id];
+    return asset?.width && asset.height ? { width: asset.width, height: asset.height } : null;
+  }
+
+  puppet(speaker: string): PuppetDocuments | null {
+    return this.manifest.characters[speaker]?.puppet ?? null;
+  }
+
+  avatarPuppet(species: string): PuppetDocuments | null {
+    return this.manifest.avatar[species]?.puppet ?? null;
   }
 
   music(name: string): string | null {

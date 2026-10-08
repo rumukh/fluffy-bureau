@@ -171,10 +171,9 @@ function renderRun(app: App, view: GameView, run: RunView): HTMLElement {
   });
   const step = run.step;
   // While searching with the magnifier the characters step back so every object is visible.
-  presenter.element.classList.toggle(
-    'searching',
-    step?.kind === 'minigame' && step.game === 'magnifier',
-  );
+  const searching = step?.kind === 'minigame' && step.game === 'magnifier';
+  presenter.element.classList.toggle('searching', searching);
+  presenter.setSearching?.(searching);
   const overlayLayer = h('div', { class: 'stage-hotspots' });
   const panel = h('section', { class: 'panel', 'aria-live': 'off' });
   const beat = beatKey(app, run);
@@ -231,8 +230,11 @@ function renderRun(app: App, view: GameView, run: RunView): HTMLElement {
   );
   const isNewBeat = app.ui.beat !== beat;
   app.ui.beat = beat;
-  if (isNewBeat && !app.overlay)
-    queueMicrotask(() => focusFirst(node.querySelector('.panel') ?? node));
+  if (!app.overlay)
+    queueMicrotask(() => {
+      const lost = !document.activeElement || document.activeElement === document.body;
+      if (isNewBeat || lost) focusFirst(node.querySelector('.panel') ?? node);
+    });
   return node;
 }
 

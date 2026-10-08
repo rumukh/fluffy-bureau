@@ -39,9 +39,9 @@
     "vitest": "^4.1.0"
   },
   "dependencies": {
-    "@aegis/browser": "file:vendor/aegis/0abd61b5a679/aegis-browser-0.0.0-local.r0abd61b5a679.dc349e8c5ff2bae20.tgz",
-    "@aegis/core": "file:vendor/aegis/0abd61b5a679/aegis-core-0.0.0-local.r0abd61b5a679.dc349e8c5ff2bae20.tgz",
-    "@aegis/narrative": "file:vendor/aegis/0abd61b5a679/aegis-narrative-0.0.0-local.r0abd61b5a679.dc349e8c5ff2bae20.tgz",
-    "@aegis/runtime": "file:vendor/aegis/0abd61b5a679/aegis-runtime-0.0.0-local.r0abd61b5a679.dc349e8c5ff2bae20.tgz"
+    "@aegis/browser": "file:vendor/aegis/711ec456e242/aegis-browser-0.0.0-local.r711ec456e242.de24d64e705d74bf2.tgz",
+    "@aegis/core": "file:vendor/aegis/711ec456e242/aegis-core-0.0.0-local.r711ec456e242.de24d64e705d74bf2.tgz",
+    "@aegis/narrative": "file:vendor/aegis/711ec456e242/aegis-narrative-0.0.0-local.r711ec456e242.de24d64e705d74bf2.tgz",
+    "@aegis/runtime": "file:vendor/aegis/711ec456e242/aegis-runtime-0.0.0-local.r711ec456e242.de24d64e705d74bf2.tgz"
   }
 }

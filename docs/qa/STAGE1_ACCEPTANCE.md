@@ -2,7 +2,7 @@
 
 **Compiled by:** workstream G, 2026-10-08. **Scope:** prologue «Первый день стажёра» and case 1
 «Пирог, которого не было», levels 1–3 (T01). **Build:** `rumukh-fluffy-game-runtime`, AEGIS SDK
-`0abd61b5a679`, content from C (`rumukh-fluffy-content-and-logic`, eb6b971), art and audio from A
+`711ec456e242` (E's artifact set with the 2D stage), content from C (`rumukh-fluffy-content-and-logic`, eb6b971), art and audio from A
 (`rumukh-fluffy-art-and-audio`, e403de8: 1,253 assets with provenance, 531 voice lines with mouth cues,
 12 music loops, 30 sound effects).
 
@@ -13,12 +13,13 @@
 | Logic, rules, saves, offline, privacy, accessibility (automated) | **Technically ready** — evidence below |
 | Narration (recorded voices) | **Integrated** — every child-facing line and label has a recording; PM voice approval (Q30) is A's/PM's |
 | Art, music, sound effects | **Integrated** — A's backgrounds, characters, avatar with runtime scarf tint, prop layers per level, music with warm comfort variants, SFX |
-| Animation, lip-sync, cutscenes with the avatar | **Pending E** — static presenter behind the `Presenter` adapter |
+| Animated puppets and lip-sync | **Integrated** — E's stage with A's rigs; lip-sync from cue tracks, asserted in Chromium |
+| Cutscenes with the avatar | **Pending** — engine supports them; no cutscene documents are authored yet (owner to be decided) |
 | Human playtest with a child (Q44, T15) | **Pending the family** — protocol: `docs/qa/T15_PLAYTEST_PROTOCOL_RU.md` |
 | Physical iPad / Android tablet | **Pending the family** — only Chromium and WebKit automation on Windows so far |
 
 Stage 1 is therefore **not accepted** under Q44: it is technically complete with content, art and voices, and
-blocked on animation (E) and the human checks above.
+blocked on authored cutscenes and the human checks above.
 
 ## How to reproduce
 
@@ -30,8 +31,8 @@ npm run preview         # http://127.0.0.1:4320/ — local static preview of app
 ```
 
 Last full run (2026-10-08, Windows, Node 25.6.0): content check 0 errors; **49 unit tests** passed
-(game-core 15 incl. scenario traces, game-session 8, content tools 26); release build OK; **24 E2E tests**
-passed (12 Chromium + 12 WebKit, serial, 6.4 min).
+(game-core rules and scenario traces, game-session, C's content tools); release build OK; **26 E2E tests**
+passed (13 Chromium + 13 WebKit, serial, 5.8 min).
 
 ## 1. Brief checklist (TZ section 15), per variant
 
@@ -104,8 +105,8 @@ passed (12 Chromium + 12 WebKit, serial, 6.4 min).
 | Requirement | Status |
 |---|---|
 | Narration for every child-facing line and label (Q29) | ✅ A's 531 recordings: auto-play, stop on advance, replay, ear buttons, optional reading of choices; music crossfades to warm variants under the lamp |
-| Lip-sync on every spoken line | **pending E** (ANIM stack); A's Rhubarb mouth cues are shipped with every line |
-| Cutscenes including the player's avatar | **pending E**; avatar shown in every scene by the static presenter |
+| Lip-sync on every spoken line | ✅ for characters on stage: `puppet.speak` binds A's cue track (converted to `aegis-cues/1`) to the narration clock; `stage.spec.ts` asserts `cues:synchronized` in Chromium. WebKit-Windows has no audio output in Playwright, so it shows the honest `unheard` neutral mouth. Narrator lines have no mouth. |
+| Cutscenes including the player's avatar | **pending authored cutscene files**; the avatar puppet is in every scene, including those marked `cutscene` |
 
 ## 7. Offline and privacy
 
@@ -123,10 +124,10 @@ Animated scene with A's art (office background, three illustrated characters, bu
 
 | Browser | CPU | Mean fps | p95 frame | Worst frame | «Дальше» latency |
 |---|---|---|---|---|---|
-| Chromium (Windows) | 4× throttled (iPad 9 proxy) | 59.4–60.0 | 16.7 ms | 33 ms | 133–170 ms |
-| WebKit (Windows port, headless) | unthrottled | 19–45 (varies with machine load) | 46–108 ms | 109–144 ms | 123–607 ms |
+| Chromium (Windows) | 4× throttled (iPad 9 proxy) | 54.4 (WebGL stage, puppets breathing/blinking) | 33 ms | 133 ms | 198–224 ms |
+| WebKit (Windows port, headless) | unthrottled | 21 (software rendering) | 49 ms | 64 ms | 321–378 ms |
 
-Chromium meets the 60 fps target with the CPU slowed 4× and is the asserted gate (≥ 30). Playwright's
+With E's puppet stage Chromium stays near the 60 fps target with the CPU slowed 4× and is the asserted gate (≥ 30); with still images it measured 59–60. Playwright's
 WebKit on Windows renders without GPU compositing and is recorded only. To get there with real art the
 stage uses compositor-only motion (`will-change`), no box-shadow animation and three bubbles. The iPad
 number remains **pending a physical check (T15)**; E's puppet animation will need re-measurement.
@@ -140,7 +141,7 @@ Chrome on Android tablets, Edge (Chromium-based, expected equivalent), Firefox (
 
 1. A's assets are integrated; three backgrounds share location `shed` and the runtime picks the
    interior — per-scene selection waits for E's stage or a content field.
-2. Puppets, lip-sync and cutscenes (E): swap `StaticPresenter` for E's stage behind `Presenter`.
+2. Cutscene documents for scenes marked `cutscene` (C1-7, C1-10, P3) need an author (C or A) — E's player is ready.
 3. Update flow and break reminder are implemented but not covered by E2E yet.
 4. Stage directions (`dir`) reach the presenter with their text; the static presenter only renders bubbles.
 5. Human playtest and device checks (T15), pie card bake (T10).

@@ -35,7 +35,14 @@ export class Voice {
         id: pack.id,
         revision: pack.revision,
         assets: lines.map((line) => ({ id: line.id, src: this.assets.voice(line.id)!.url })),
-        lines: lines.map((line) => ({ id: line.id, asset: line.id, caption: line.text })),
+        lines: lines.map((line) => ({
+          id: line.id,
+          asset: line.id,
+          caption: line.text,
+          speaker: line.speaker,
+          // Lip-sync track, resolved by the stage through Assets.resolve('cues:<id>').
+          ...(this.assets.voice(line.id)?.cues ? { cues: `cues:${line.id}` } : {}),
+        })),
       });
       for (const line of lines)
         if (!this.lineToPack.has(line.id)) this.lineToPack.set(line.id, pack.id);
@@ -79,8 +86,24 @@ export class Voice {
     return this.lineToPack.has(lineId);
   }
 
-  /** Plays one line (replacing whatever is playing), then optional follow-up lines in order. */
-  say(lineId: string | null, then: readonly string[] = []): void {
+  /** The narration controller, shared with the animation stage for lip-sync. */
+  get controller() {
+    return this.narration;
+  }
+
+  packOf(lineId: string): string | null {
+    return this.lineToPack.get(lineId) ?? null;
+  }
+
+  /**
+   * Plays one line (replacing whatever is playing), then optional follow-up lines in order.
+   * `start` lets the stage start the line itself (puppet speech with lip-sync).
+   */
+  say(
+    lineId: string | null,
+    then: readonly string[] = [],
+    start?: (packId: string, lineId: string) => Promise<void>,
+  ): void {
     this.sequence = [...then];
     this.current = lineId;
     this.narration.stop();
@@ -94,7 +117,9 @@ export class Voice {
       this.playNextInSequence();
       return;
     }
-    void this.narration.playLine(pack, lineId).catch(() => this.set('failed'));
+    void (start ? start(pack, lineId) : this.narration.playLine(pack, lineId)).catch(() =>
+      this.set('failed'),
+    );
   }
 
   private playNextInSequence(): void {

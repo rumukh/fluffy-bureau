@@ -1,7 +1,7 @@
 # Fluffy Bureau runtime architecture (Stage 1)
 
 **Owner:** workstream G. **Status:** Stage 1 implementation, 2026-10-08.
-**Engine:** AEGIS SDK pinned at `rumukh/aegis-engine` `0abd61b5a679` (see `vendor/aegis/README.md`).
+**Engine:** AEGIS SDK artifact set `711ec456e242` from workstream E (see `vendor/aegis/README.md`).
 
 ```mermaid
 flowchart LR
@@ -136,16 +136,23 @@ visibility changes add the `visibility` reason.
 
 ## 7. Presentation adapter
 
-`Presenter` (`apps/game/src/presenter.ts`) is the boundary for E's `@aegis/browser/stage`:
-`show(scene)`, `speak(speaker, lineId)`, `setPaused`, `dispose`. Until E delivers puppets, lip-sync and
-cutscenes, `StaticPresenter` shows A's layered still images on a letterboxed 2560×1600 logical stage
-(background, per-level prop layers, cast, and the player's avatar whose scarf is tinted at runtime through
-A's mask), with a cross-fade and compositor-only CSS motion (disabled under reduced motion). Hotspots use
-the same logical coordinates. Music follows the location and switches to A's `-warm` variant under the
-comfort lamp; sound effects mark finds, misses, cards, lamp, hearts and buttons. No animation
-engine is implemented here. Mapping plan for E's API (from E0): `createStage` ↔ presenter construction,
-`stage.puppet(...).speak(...)` ↔ `speak`, `stage.cutscene(json, { avatar })` for scenes with
-`presentation: 'cutscene'`, completion committed by an ordinary runtime command.
+`Presenter` (`apps/game/src/presenter.ts`) separates the game from drawing: `show(scene)`,
+`speakLine(speaker, pack, line)`, `setSearching`, `setPaused`, `dispose`. Two implementations:
+
+- **`StagePresenter`** on E's `@aegis/browser/stage` (default whenever A's puppet documents are
+  present): one WebGL/Canvas surface on the letterboxed 2560×1600 logical stage; A's background and
+  per-level prop sprites; a rigged puppet per cast member and the player's avatar puppet with the scarf
+  tinted at runtime (T05); breathing and blinking; **lip-sync** — a voiced line from a character on
+  stage is started with `puppet.speak`, so the mouth follows A's cue track on the narration clock
+  (`data-speech="cues:synchronized"` on the stage element, asserted in E2E). Reduced motion, comfort
+  grade and pause are forwarded to the stage. Hotspots stay DOM buttons in the same logical coordinates.
+- **`StaticPresenter`**: layered still images with CSS motion; the fallback when the stage cannot load.
+
+A's Rhubarb cue files are converted to `aegis-cues/1` at build time with E's `importRhubarb`.
+Cutscene documents (`stage.cutscene`) are supported by the engine but **no cutscene files are authored
+yet**; scenes marked `cutscene` currently play as dialogue on the stage with the avatar present.
+Music follows the location and switches to A's `-warm` variant under the comfort lamp; sound effects
+mark finds, misses, cards, lamp, hearts and buttons.
 
 ## 8. Offline and updates (`@aegis/browser/offline`)
 

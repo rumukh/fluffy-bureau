@@ -28,7 +28,7 @@ import { Voice } from './audio.js';
 import { button, focusFirst, h, setErrorSink } from './dom.js';
 import { createLabels, type Label, type LabelLookup } from './labels.js';
 import { Offline } from './offline.js';
-import { avatarFigure, StaticPresenter, type Presenter } from './presenter.js';
+import { avatarFigure, createPresenter, type Presenter } from './presenter.js';
 import { renderGame, renderNotebook } from './scene.js';
 import { renderParentCorner, renderParentGate } from './parent.js';
 
@@ -252,7 +252,7 @@ export class App {
       storage: this.storage,
       profileId,
       library: this.library,
-      engineRevision: '0abd61b5a679',
+      engineRevision: '711ec456e242',
     });
     if (result.kind === 'recovery') {
       this.recovery = result;
@@ -292,7 +292,7 @@ export class App {
         },
       ),
     );
-    this.presenter = new StaticPresenter(this.assets);
+    this.presenter = createPresenter(this.assets, this.voice, this.options.baseUrl);
     this.playedMs = 0;
     this.resumeClock();
     this.applyPrefs();
@@ -412,8 +412,15 @@ export class App {
     if (key === this.spokenKey) return;
     this.spokenKey = key;
     if (this.overlay && this.overlay !== 'notebook') return;
-    this.voice.say(line?.voiced ? line.id : null, this.prefs?.readChoices ? follow : []);
-    this.presenter?.speak(line?.speaker ?? null, line?.id ?? null);
+    const presenter = this.presenter;
+    this.voice.say(
+      line?.voiced ? line.id : null,
+      this.prefs?.readChoices ? follow : [],
+      presenter && line
+        ? (packId, lineId) => presenter.speakLine(line.speaker, packId, lineId)
+        : undefined,
+    );
+    presenter?.speak(line?.speaker ?? null, line?.id ?? null);
   }
 
   label(key: string): Label {
@@ -439,6 +446,14 @@ export class App {
       this.voice.resume();
       this.resumeClock();
     }
+    // WebKit loses keyboard focus navigation when the focused control is removed while a dialog
+    // closes; blur it first so focus can be placed again in the new screen.
+    if (
+      !overlay &&
+      document.activeElement instanceof HTMLElement &&
+      this.overlayNode.contains(document.activeElement)
+    )
+      document.activeElement.blur();
     this.overlay = overlay;
     this.ui.overlayData = undefined;
     this.render();
@@ -447,6 +462,9 @@ export class App {
       this.closeOverlay = null;
       this.focusBookmark?.restore();
       this.focusBookmark = null;
+      // The control that opened the overlay may be gone (e.g. a case started): keep focus in the game.
+      if (!this.root.contains(document.activeElement) || document.activeElement === document.body)
+        focusFirst(this.screenNode);
     }
   }
 

@@ -51,7 +51,13 @@ export class Player {
       }
       await this.page.keyboard.press('Tab');
     }
-    throw new Error(`Not reachable by keyboard: ${await target.getAttribute('data-key')}`);
+    const where = await this.page.evaluate(() => {
+      const a = document.activeElement as HTMLElement | null;
+      return `${a?.tagName}.${a?.dataset?.key ?? ''}`;
+    });
+    throw new Error(
+      `Not reachable by keyboard: ${await target.getAttribute('data-key')} (focus ${where})`,
+    );
   }
 
   key(key: string): Locator {

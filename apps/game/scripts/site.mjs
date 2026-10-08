@@ -2,6 +2,7 @@
 import { build } from 'esbuild';
 import { createHash } from 'node:crypto';
 import { Buffer } from 'node:buffer';
+import { importRhubarb } from '@aegis/browser/animation';
 import { cpSync, existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { dirname, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -158,6 +159,7 @@ export function writeAssets(out) {
     avatar: {},
     music: {},
     sfx: {},
+    files: {},
   };
   if (existsSync(manifestPath)) {
     const manifest = JSON.parse(readFileSync(manifestPath, 'utf8'));
@@ -196,19 +198,49 @@ export function writeAssets(out) {
         })),
       };
     }
+    // Puppet documents: rig and atlas asset IDs plus the rig's own ID (E's stage loads them).
+    const puppet = (entry, what) => {
+      if (!entry.rig || !entry.atlas) return null;
+      url(entry.rig, what);
+      url(entry.atlas, what);
+      url(entry.atlasImage, what);
+      const rig = JSON.parse(readFileSync(join(out, index.assets[entry.rig].url), 'utf8'));
+      const atlas = JSON.parse(readFileSync(join(out, index.assets[entry.atlas].url), 'utf8'));
+      // Atlases name their image by file name; map it to the shipped asset.
+      index.files[atlas.image] = index.assets[entry.atlasImage].url;
+      return { rigId: rig.id, documents: [entry.atlas, entry.rig] };
+    };
     for (const [id, entry] of Object.entries(manifest.characters ?? {}))
-      index.characters[id] = { base: url(entry.base, `character ${id}`) };
+      index.characters[id] = {
+        base: url(entry.base, `character ${id}`),
+        puppet: puppet(entry, `character ${id}`),
+      };
     for (const [id, entry] of Object.entries(manifest.avatar ?? {}))
       index.avatar[id] = {
         base: url(entry.base, `avatar ${id}`),
         scarfMask: url(entry.scarfMask, `avatar ${id}`),
+        puppet: puppet(entry, `avatar ${id}`),
       };
-    for (const [id, entry] of Object.entries(manifest.voice ?? {}))
+    // Mouth cues: A ships Rhubarb JSON; E's stage reads `aegis-cues/1`, converted here.
+    for (const [id, entry] of Object.entries(manifest.voice ?? {})) {
+      let cues = null;
+      if (entry.cues) {
+        const source = url(entry.cues, `cues ${id}`);
+        const rhubarb = JSON.parse(readFileSync(join(out, source), 'utf8'));
+        const track = importRhubarb(rhubarb, {
+          line: id,
+          revision: String(entry.revision ?? 1),
+          duration: (entry.durationMs ?? 0) / 1000 || undefined,
+        });
+        cues = source.replace(/(\.cues)?\.json$/, '.aegis-cues.json');
+        writeFileSync(join(out, cues), JSON.stringify(track));
+      }
       index.voice[id] = {
         url: url(entry.asset, `voice ${id}`),
-        cues: url(entry.cues, `cues ${id}`),
+        cues,
         durationMs: entry.durationMs ?? 0,
       };
+    }
     for (const kind of ['music', 'sfx'])
       for (const [name, id] of Object.entries(manifest[kind] ?? {}))
         index[kind][name] = url(id, `${kind} ${name}`);
