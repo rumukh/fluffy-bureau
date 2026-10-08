@@ -1,0 +1,33 @@
+{
+ "format": "aegis-rig/1",
+ "id": "prop.light-signal-strip",
+ "revision": "1",
+ "atlases": [
+  "prop.light-signal-strip.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -600.0,
+  "y": -61.5,
+  "width": 1200,
+  "height": 123
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 600.0,
+    "y": 61.5
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "frame": "prop.light-signal-strip.atlas#body.rest"
+  }
+ ]
+}

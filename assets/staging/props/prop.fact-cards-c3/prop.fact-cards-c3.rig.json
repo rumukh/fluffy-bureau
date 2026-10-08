@@ -1,0 +1,33 @@
+{
+ "format": "aegis-rig/1",
+ "id": "prop.fact-cards-c3",
+ "revision": "1",
+ "atlases": [
+  "prop.fact-cards-c3.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -260.0,
+  "y": -165.0,
+  "width": 520,
+  "height": 330
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 260.0,
+    "y": 165.0
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "frame": "prop.fact-cards-c3.atlas#body.rest"
+  }
+ ]
+}

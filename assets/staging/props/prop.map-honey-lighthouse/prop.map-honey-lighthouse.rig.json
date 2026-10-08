@@ -1,0 +1,33 @@
+{
+ "format": "aegis-rig/1",
+ "id": "prop.map-honey-lighthouse",
+ "revision": "1",
+ "atlases": [
+  "prop.map-honey-lighthouse.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -130.0,
+  "y": -307.5,
+  "width": 260,
+  "height": 308
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 130.0,
+    "y": 307.5
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "frame": "prop.map-honey-lighthouse.atlas#body.rest"
+  }
+ ]
+}

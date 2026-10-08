@@ -193,6 +193,33 @@ PROPS = {
     "prop.garland-100": ({"rest": ("props/garland-100-c2.png", 1400)}, "rest", "center"),
     "prop.bunting": ({"rest": ("props/bunting.png", 2200)}, "rest", "center"),
     "prop.title-card": ({"rest": ("props/title-card-c1.png", 1400)}, "rest", "center"),
+    # Stage 2 (cases 2-4), ids from C's ASSET_REQUESTS (e4f11fb).
+    "prop.badge-letters-saved": ({"rest": ("props/badge-letters-saved.png", 320)}, "rest", "center"),
+    "prop.badge-beacon": ({"rest": ("props/badge-lighthouse-light.png", 320)}, "rest", "center"),
+    "prop.badge-jam-c4": ({"rest": ("props/badge-honest-jam.png", 320)}, "rest", "center"),
+    "prop.c2-cipher-poster": ({"rest": ("props/cipher-poster.png", 560)}, "rest", "center"),
+    "prop.c2-dry-letters": ({"rest": ("props/dry-letters.png", 300)}, "rest", "bottom"),
+    "prop.c2-letter-garland": ({"rest": ("props/letter-garland.png", 1600)}, "rest", "center"),
+    "prop.c2-magpie-nest": ({"rest": ("props/place-nest.png", 420)}, "rest", "bottom"),
+    "prop.chamomile-note": ({"rest": ("props/chamomile-note.png", 160)}, "rest", "center"),
+    "prop.empty-jam-jar": ({"rest": ("props/empty-jam-jar.png", 200)}, "rest", "bottom"),
+    "prop.fact-cards-c3": ({"rest": ("props/fact-cards.png", 520)}, "rest", "center"),
+    "prop.firefly-lamp": ({"rest": ("props/decor-star-lamp.png", 260)}, "rest", "bottom"),
+    "prop.firefly-lantern": ({"rest": ("props/firefly-lantern.png", 220)}, "rest", "bottom"),
+    "prop.jam-jar-c4": ({"rest": ("props/jam-jar-bow.png", 220)}, "rest", "bottom"),
+    "prop.jam-jars-c4": ({"rest": ("props/jam-jars-group.png", 620)}, "rest", "bottom"),
+    "prop.light-code-book": ({"rest": ("props/book-open-bookmark.png", 420)}, "rest", "center"),
+    "prop.light-signal-strip": ({"rest": ("props/light-signal-strip.png", 1200)}, "rest", "center"),
+    "prop.map-honey-lighthouse": ({"rest": ("props/place-lighthouse.png", 260)}, "rest", "bottom"),
+    "prop.note-khvosts": ({"rest": ("props/note-khvosts.png", 220)}, "rest", "center"),
+    "prop.notebook-secret-notes": ({"rest": ("props/notebook-secret.png", 640)}, "rest", "center"),
+    "prop.paddle-repaired": ({"rest": ("props/paddle-repaired.png", 520)}, "rest", "center"),
+    "prop.tea-table-c4": ({"rest": ("props/tea-table-long.png", 1500)}, "rest", "bottom"),
+}
+STICKERS = {  # prop.<id>-1/2/3 with one to three stars under the sticker
+    "prop.sticker-letters": "props/sticker-letters.png",
+    "prop.sticker-beacon": "props/sticker-lighthouse.png",
+    "prop.sticker-jam-c4": "props/sticker-jam.png",
 }
 
 
@@ -227,6 +254,12 @@ def write_props() -> dict[str, list[str]]:
     for rid, im in (("prop.box-pie-closed", closed), ("prop.box-pie-open", opened)):
         puppet(rid, {"rest": im}, "rest", OUT / "props" / rid, "bottom")
         sources[rid] = ["props/pie-box-closed.png" if rid.endswith("closed") else "props/box-pie-open.png"]
+    for base_id, master in STICKERS.items():
+        st = fit(trimmed(pick(master)), width=300)
+        for n in (1, 2, 3):
+            rid = f"{base_id}-{n}"
+            puppet(rid, {"rest": stars(st, n)}, "rest", OUT / "props" / rid, "center")
+            sources[rid] = [master]
     return sources
 
 
@@ -238,6 +271,10 @@ ACCESSORIES = {
     "acc.hat.beret": ("props/hat-beret.png", 300, "brim"),
     "acc.hat.flower": ("props/hat-flower.png", 340, "brim"),
     "acc.hat.acorn": ("props/hat-acorn.png", 300, "brim"),
+    "acc.hat.bobble": ("props/hat-bobble.png", 300, "brim"),
+    "acc.hat.captain": ("props/hat-captain.png", 320, "brim"),
+    "acc.hat.flower-crown": ("props/hat-flower-crown.png", 320, "brim"),
+    "acc.hat.top": ("props/hat-top.png", 300, "brim"),
 }
 
 

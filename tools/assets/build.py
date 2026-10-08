@@ -51,6 +51,11 @@ def gen_provenance(master: Path, notes: str = "") -> dict:
     else:
         raise FileNotFoundError(f"no generation provenance for {master}")
     job = g.get("job", {})
+    if g.get("operation") == "own-work":
+        return {"tool": g["tool"], "source": f"master {master.name} sha256:{sha256(master)[:16]}" +
+                (f"; font {g['font']}" if g.get("font") else ""),
+                "createdAt": g["createdAt"], "licence": LIC_OWN + (" Lettering: Nunito, SIL OFL 1.1." if g.get("font") else ""),
+                "notes": (g.get("notes") or "") + (" " + notes if notes else "")}
     refs = [Path(r["path"]).name if isinstance(r, dict) else Path(r).name for r in g.get("reference_images") or []]
     created = datetime.fromtimestamp(cand.stat().st_mtime, timezone.utc).isoformat(timespec="seconds")
     prompt = job.get("prompt_file", "")
@@ -107,11 +112,14 @@ def build_props(cat: dict) -> list:
     out = []
     for pid, spec in cat["props"].items():
         src = MASTERS / spec["master"]
-        im = trim(Image.open(src).convert("RGBA"))
+        if spec.get("opaque"):
+            im = Image.open(src).convert("RGB")
+        else:
+            im = trim(Image.open(src).convert("RGBA"))
         size = spec.get("size", 512)
         im.thumbnail((size, size), Image.LANCZOS)
-        dst = ASSETS / spec.get("dir", "props") / f"{pid.split('.', 1)[1]}.webp"
-        to_webp(im, dst, 90)
+        dst = ASSETS / spec.get("dir", "props") / f"{spec.get('file') or pid.split('.', 1)[1]}.webp"
+        to_webp(im, dst, 88 if spec.get("opaque") else 90)
         out.append(entry(pid, dst, spec["pack"], spec.get("kind", "ui"), gen_provenance(src, spec.get("notes", "")),
                          im.width, im.height))
     return out

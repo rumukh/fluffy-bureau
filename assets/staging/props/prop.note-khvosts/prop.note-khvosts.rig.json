@@ -1,0 +1,33 @@
+{
+ "format": "aegis-rig/1",
+ "id": "prop.note-khvosts",
+ "revision": "1",
+ "atlases": [
+  "prop.note-khvosts.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -110.0,
+  "y": -89.5,
+  "width": 220,
+  "height": 179
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 110.0,
+    "y": 89.5
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "frame": "prop.note-khvosts.atlas#body.rest"
+  }
+ ]
+}

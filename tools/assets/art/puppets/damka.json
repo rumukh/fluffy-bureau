@@ -1,0 +1,72 @@
+{
+ "id": "damka",
+ "base": "puppets/damka/base.png",
+ "creature": "friendly beaver lady with big front teeth",
+ "editCrop": [
+  262,
+  100,
+  512
+ ],
+ "neck": {
+  "y": 482,
+  "overlap": 18,
+  "pivot": [
+   512,
+   492
+  ]
+ },
+ "features": {
+  "eyes": {
+   "ellipses": [
+    [
+     518,
+     325,
+     112,
+     40
+    ]
+   ],
+   "variants": [
+    "half",
+    "closed",
+    "happy"
+   ]
+  },
+  "brows": {
+   "ellipses": [
+    [
+     523,
+     256,
+     120,
+     20
+    ]
+   ],
+   "variants": [
+    "up",
+    "worried"
+   ]
+  },
+  "mouth": {
+   "ellipses": [
+    [
+     528,
+     418,
+     78,
+     48
+    ]
+   ],
+   "variants": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+   ],
+   "phrases": {
+    "A": "the smiling mouth closed with lips pressed together, the two big front teeth still visible below the lip"
+   }
+  }
+ },
+ "scale": 0.86,
+ "bodyVariants": {}
+}

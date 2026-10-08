@@ -1,0 +1,16 @@
+{
+ "format": "aegis-atlas/1",
+ "id": "prop.c2-cipher-poster.atlas",
+ "image": "prop.c2-cipher-poster.atlas.webp",
+ "width": 1024,
+ "height": 1024,
+ "scale": 1,
+ "frames": {
+  "body.rest": {
+   "x": 2,
+   "y": 2,
+   "w": 560,
+   "h": 702
+  }
+ }
+}
