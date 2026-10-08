@@ -10,6 +10,8 @@ import type { Issue } from './flow.ts';
 const ASSETS = join(import.meta.dirname, '..', '..', 'assets');
 /** Cutscenes allowed without the player's avatar (T25: only the wordless intro). */
 export const NO_AVATAR = new Set(['intro']);
+/** G loads a cutscene's backgrounds at its start under a 128 MiB budget; one 2560×1600 background is 16 MiB. */
+export const MAX_BACKGROUNDS = 4;
 
 export interface AnimationAssets {
   available: boolean;
@@ -111,6 +113,9 @@ export function checkCutscenes(
     if (new Set(markers).size !== markers.length) err('CUTSCENE-MARKER', where, 'duplicate marker');
 
     // Asset IDs (backgrounds, music, sfx, including comfort variants)
+    const backgrounds = new Set<string>();
+    for (const s of d.steps) if (s.op === 'background') for (const a of [s.asset, s.comfort?.['asset']]) if (typeof a === 'string') backgrounds.add(a);
+    if (backgrounds.size > MAX_BACKGROUNDS) err('CUTSCENE-BUDGET', where, `${backgrounds.size} distinct backgrounds (max ${MAX_BACKGROUNDS}: G loads them together under a 128 MiB image budget)`);
     if (assets.available) {
       for (const s of d.steps) {
         const refs: unknown[] = [];

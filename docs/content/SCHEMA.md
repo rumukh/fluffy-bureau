@@ -121,6 +121,7 @@ Documents follow `aegis-cutscene/1` (engine `docs/api/animation.md` §9, SDK 711
 - Camera presets and effects are fixed in `packages/content/src/stage.ts` (`CAMERA_PRESETS`,
   `EFFECTS`); G registers exactly these on the stage.
 - Every document has markers after major beats (restore points).
+- At most 4 distinct backgrounds per cutscene, including comfort variants: G loads them together under a 128 MiB decoded-image budget (one 2560×1600 background is 16 MiB).
 - The build validates every document with `validateCutscene` (rigs, clips, expressions, emotes,
   captioned lines, presets, effects) and checks: the cutscene exists and is played in its declared
   scene; exactly one avatar (none in the intro); every line ID exists, is voiced dialogue of this pack,
