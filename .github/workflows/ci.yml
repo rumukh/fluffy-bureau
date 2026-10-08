@@ -54,11 +54,13 @@ jobs:
       - run: npm install -g npm@11.8.0
       - run: npm ci
       - name: Release build
-        run: |
-          if [ -d packages/content/packs ]; then npm run build
-          else npm run build -- --fixture-content 2>/dev/null || npm run build; fi
+        run: npm run build
       - name: Smoke tests
         run: npx playwright test e2e/smoke.spec.ts
+      - name: GitHub Pages layout (/fluffy-bureau/)
+        run: |
+          npm run build:pages
+          FLUFFY_E2E_BASE=/fluffy-bureau/ npx playwright test e2e/smoke.spec.ts e2e/pages.spec.ts
       - uses: actions/upload-artifact@v4
         if: failure()
         with:

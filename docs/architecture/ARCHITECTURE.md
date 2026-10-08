@@ -190,7 +190,8 @@ takes over at the next launch; saves migrate as described in §4. The parent cor
 No accounts, telemetry, analytics, outbound links or remote calls; a strict Content-Security-Policy
 (`connect-src 'self'`, `frame-src 'none'`); no debug globals (E2E checks `window`); errors are shown
 locally and only logged in the dev channel. The parent corner (T17: 3-second hold + two-digit ×
-one-digit question) is text-only (Q29).
+one-digit question) is text-only (Q29). The published site (GitHub Pages, T30) is unlisted: a `noindex` robots meta
+tag on the page, plus a disallow-all `robots.txt` as a courtesy.
 
 ## 10. Build and verification
 

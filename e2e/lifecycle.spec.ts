@@ -6,6 +6,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 // @ts-expect-error -- plain ESM helper without declarations
 import { serveStatic } from '../apps/game/scripts/preview.mjs';
+import { BASE } from './env.js';
 import { Player } from './player.js';
 
 /** Stop listening and drop keep-alive sockets, so the next build is really what the browser sees. */
@@ -80,7 +81,7 @@ test('update: build B installs beside A without interrupting the case and takes 
   for (const [name, dir] of Object.entries(builds))
     execFileSync(
       process.execPath,
-      ['apps/game/scripts/build.mjs', '--out', dir, '--label', name.toUpperCase()],
+      ['apps/game/scripts/build.mjs', '--out', dir, '--base', BASE, '--label', name.toUpperCase()],
       { stdio: 'ignore' },
     );
   const buildId = (dir: string) =>
@@ -96,9 +97,9 @@ test('update: build B installs beside A without interrupting the case and takes 
       offline,
     });
   // An OS-assigned free port (kept for build B, which must be published at the same origin).
-  let server = await serveStatic(builds.a, { port: 0 });
+  let server = await serveStatic(builds.a, { port: 0, base: BASE });
   const port = (server.address() as { port: number }).port;
-  const origin = `http://127.0.0.1:${port}/`;
+  const origin = `http://127.0.0.1:${port}${BASE}`;
   let context = await launch();
   try {
     // Build A: install for offline use, restart so the worker controls the page.
@@ -137,7 +138,7 @@ test('update: build B installs beside A without interrupting the case and takes 
 
     // Publish build B on the same address; the game finds it when the tablet comes back online.
     stop(server);
-    server = await serveStatic(builds.b, { port });
+    server = await serveStatic(builds.b, { port, base: BASE });
     await page.evaluate(() => dispatchEvent(new Event('online')));
     await expect(page.locator('html')).toHaveAttribute(
       'data-offline',
