@@ -201,6 +201,7 @@ export function writeAssets(out) {
     music: {},
     sfx: {},
     files: {},
+    documents: {},
   };
   if (existsSync(manifestPath)) {
     const manifest = JSON.parse(readFileSync(manifestPath, 'utf8'));
@@ -281,6 +282,28 @@ export function writeAssets(out) {
         cues,
         durationMs: entry.durationMs ?? 0,
       };
+    }
+    // Animation documents by their own ID (rigs, atlases, clips), so cutscenes can load what they
+    // name: rig -> its atlases, clip/atlas -> itself. Atlas images are mapped by file name.
+    for (const asset of manifest.assets) {
+      if (!asset.path.endsWith('.json') || asset.kind === 'cues' || asset.path.startsWith('voice/'))
+        continue;
+      let doc;
+      try {
+        doc = JSON.parse(readFileSync(join(out, index.assets[asset.id].url), 'utf8'));
+      } catch {
+        continue;
+      }
+      const format = typeof doc?.format === 'string' ? doc.format : '';
+      if (!/^aegis-(rig|atlas|clip)\//.test(format) || typeof doc.id !== 'string') continue;
+      index.documents[doc.id] = { asset: asset.id, format, atlases: doc.atlases ?? [] };
+      if (format.startsWith('aegis-atlas/') && typeof doc.image === 'string') {
+        const image = manifest.assets.find(
+          (a) =>
+            a.path === asset.path.replace(/[^/]+$/, doc.image) || a.path.endsWith(`/${doc.image}`),
+        );
+        if (image) index.files[doc.image] = index.assets[image.id].url;
+      }
     }
     // Particle effects: E's stage draws particles from `atlas#frame`; A ships plain images, so
     // wrap each in a one-frame atlas.

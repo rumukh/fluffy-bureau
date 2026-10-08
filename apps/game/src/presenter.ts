@@ -1,15 +1,16 @@
-// Presentation adapter boundary. Workstream E's @aegis/browser/stage (puppets, lip-sync,
-// cutscenes) will implement `Presenter`; until then StaticPresenter shows layered still images
-// with simple CSS transitions. No competing animation engine lives here.
+// Presentation adapter boundary: StagePresenter on E's @aegis/browser/stage (puppets, lip-sync,
+// cutscenes), StaticPresenter (layered still images) as the fallback. No animation engine lives here.
 import type { Scarf, Species } from '@fluffy/game-core';
 import { h } from './dom.js';
 import {
   createStage,
   type CutsceneController,
+  type EffectDefinition,
   type Stage,
   type StagePuppet,
 } from '@aegis/browser/stage';
 import type { CutsceneFile } from '@aegis/browser/animation';
+import { CAMERA_PRESETS, EFFECTS } from './stage-config.js';
 import { SCARF_COLORS, type Assets } from './assets.js';
 import type { Voice } from './audio.js';
 
@@ -276,6 +277,7 @@ export class StagePresenter implements Presenter {
   private generation = 0;
   private searching = false;
   readonly fallback: StaticPresenter;
+  private readonly effectDefinitions: Record<string, EffectDefinition> = EFFECTS;
   private failed = false;
   private speaking: StagePuppet | null = null;
   private reporter = 0;
@@ -299,38 +301,8 @@ export class StagePresenter implements Presenter {
       comfort: { brightness: 1.12, warmth: 0.6 },
       maxDevicePixelRatio: 2,
       // Camera framings and particle effects named by C's cutscene documents (T25 contract).
-      cameraPresets: {
-        'close-left': { x: 900, y: 950, zoom: 1.4 },
-        'close-center': { x: 1280, y: 950, zoom: 1.4 },
-        'close-right': { x: 1660, y: 950, zoom: 1.4 },
-        sky: { x: 1280, y: 500, zoom: 1.2 },
-      },
-      effects: {
-        bubbles: {
-          frame: 'fx.bubble#bubble',
-          count: 10,
-          life: 2.4,
-          spread: 220,
-          rise: 420,
-          scale: 0.6,
-        },
-        sparkles: {
-          frame: 'fx.sparkle#sparkle',
-          count: 16,
-          life: 1.2,
-          spread: 260,
-          rise: 120,
-          scale: 0.5,
-        },
-        steam: {
-          frame: 'fx.bubble#bubble',
-          count: 8,
-          life: 2,
-          spread: 120,
-          rise: 300,
-          scale: 0.35,
-        },
-      },
+      cameraPresets: CAMERA_PRESETS,
+      effects: this.effectDefinitions,
       // Cutscene music and sounds go through the game's audio pack (A's `music.*`/`sfx.*` IDs).
       audio: {
         music: (asset) =>
@@ -508,15 +480,28 @@ export class StagePresenter implements Presenter {
     const rigs = Object.values(document.cast)
       .map((cast) => (cast as { rig?: string }).rig)
       .filter((rig): rig is string => Boolean(rig));
-    const docs = rigs.flatMap((rig) => this.puppetDocsForRig(rig));
+    const docs = [
+      ...rigs.flatMap((rig) => this.assets.rigDocuments(rig)),
+      // Clips (poses, emotes) are small JSON: load them all. Atlases only for the cast and effects,
+      // to stay inside the stage's decoded-image budget.
+      ...this.assets.documentAssets('clip'),
+      ...this.effectAtlases(),
+    ];
     const species = request.avatar.species;
     const avatarDocs = species ? this.assets.avatarPuppet(species) : null;
     if (avatarDocs) docs.push(...avatarDocs.documents);
-    const images = document.steps
-      .filter((step) => step.op === 'background')
-      .map((step) => (step as { asset: string }).asset);
+    const images = [
+      ...new Set(
+        document.steps.flatMap((step) => {
+          const record = step as { op: string; asset?: string; comfort?: { asset?: string } };
+          return record.op === 'background'
+            ? [record.asset, record.comfort?.asset].filter((a): a is string => Boolean(a))
+            : [];
+        }),
+      ),
+    ];
     const ok = await this.ensure(
-      [...docs, 'fx.bubble.atlas', 'fx.sparkle.atlas'].filter((id) => this.assetExists(id)),
+      [...new Set(docs)].filter((id) => this.assetExists(id)),
       images,
     ).catch(() => false);
     if (this.cutscene !== entry) return;
@@ -564,12 +549,15 @@ export class StagePresenter implements Presenter {
     }
   }
 
-  private puppetDocsForRig(rig: string): string[] {
-    for (const speaker of Object.keys(this.assets.manifest.characters)) {
-      const docs = this.assets.puppet(speaker);
-      if (docs?.rigId === rig) return docs.documents;
-    }
-    return [];
+  /** Atlas assets named by the registered particle effects (`atlas#frame`). */
+  private effectAtlases(): string[] {
+    return Object.values(this.effectDefinitions)
+      .map(
+        (effect) =>
+          this.assets.manifest.documents[effect.frame.split('#')[0]!]?.asset ??
+          `${effect.frame.split('#')[0]}.atlas`,
+      )
+      .filter((id) => this.assetExists(id));
   }
 
   setPaused(paused: boolean): void {

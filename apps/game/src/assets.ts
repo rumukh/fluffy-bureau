@@ -37,6 +37,8 @@ export interface AssetManifest {
   sfx: Record<string, string>;
   /** Files referenced by name inside documents (atlas images). */
   files: Record<string, string>;
+  /** Animation documents by document ID: asset ID, format and (for rigs) atlas IDs. */
+  documents: Record<string, { asset: string; format: string; atlases: string[] }>;
 }
 
 export interface PuppetDocuments {
@@ -54,6 +56,7 @@ export const EMPTY_MANIFEST: AssetManifest = {
   music: {},
   sfx: {},
   files: {},
+  documents: {},
 };
 
 export const LOGICAL = { width: 2560, height: 1600 } as const;
@@ -227,6 +230,23 @@ export class Assets {
   assetSize(id: string): { width: number; height: number } | null {
     const asset = this.manifest.assets[id];
     return asset?.width && asset.height ? { width: asset.width, height: asset.height } : null;
+  }
+
+  /** Asset IDs to load for a rig: its atlases first, then the rig. */
+  rigDocuments(rigId: string): string[] {
+    const rig = this.manifest.documents[rigId];
+    if (!rig) return [];
+    const atlases = rig.atlases
+      .map((id) => this.manifest.documents[id]?.asset)
+      .filter((id): id is string => Boolean(id));
+    return [...atlases, rig.asset];
+  }
+
+  /** Every clip and atlas document (small JSON), for cutscenes that pose and emote. */
+  documentAssets(kind: 'clip' | 'atlas'): string[] {
+    return Object.values(this.manifest.documents)
+      .filter((d) => d.format.startsWith(`aegis-${kind}/`))
+      .map((d) => d.asset);
   }
 
   puppet(speaker: string): PuppetDocuments | null {
