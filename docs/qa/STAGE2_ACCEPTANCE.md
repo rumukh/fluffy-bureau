@@ -3,8 +3,8 @@
 **Compiled by:** workstream G, 2026-10-08. **Scope:** T26 — cases 2–4 at three levels with their
 new minigames, notebook pages, the family «Хранитель снов» (T31), the basic «Уютный денёк» (shop with
 returns, decorations, tea party with residents' stories; T28, T29), ranks (D12), stage-direction
-actions (U10) and the «нажми на окно» beat (U11). **Build:** `npm run build -- --production`
-(PRODUCTION_PACK_IDS; the published site keeps only released packs until v0.2.0, T30). AEGIS SDK
+actions (U10) and the «нажми на окно» beat (U11). **Build:** the release build — C moved cases 2–4 and
+`cozy` into `PACK_IDS` for v0.2.0 (adfa8ef), so `npm run build:pages` ships cases 1–4 (T30). AEGIS SDK
 `17ed4bebd329`; content from C (PR #8, `rumukh-fluffy-content-stage2` at 031d2c2); art and audio
 from A (PR #11, 979e896: Дамка and Пухлик puppets, case 2–4 backgrounds, props, dream cards, cipher
 kit, sound clues, shop items with scarf-pattern overlays, music, 1,453 voice recordings with mouth cues).
@@ -110,7 +110,11 @@ skip-button race (the intro ended on its own mid-click); the player now tolerate
    `scarfPattern` slot, untinted above the tinted scarf); hats in the `hat` slot. Both are asserted on
    E's stage in `office.spec.ts`.
 2. Music follows the new locations (dusk and lighthouse, dreams, tea party, town map).
-3. Stage 2 packs ship to players only at v0.2.0: the release build still uses `PACK_IDS` until C
-   moves cases 2–4 there (T30).
-4. Family mode needs a real family session (T15) to judge the handoff wording and timing.
-5. Human playtest and device checks (T15) remain pending, as for Stage 1.
+3. The release is now ~110 MB offline (prologue, cases 1–4, cozy). Installing it takes minutes in
+   WebKit on Windows (the E2E install waits were raised to 6 min). On iPadOS, check the storage
+   estimate and the install time on the real device (T15).
+4. The update check no longer drops a request that arrives while a check or install is running.
+   With the larger release this made the update test flaky, and it would have delayed a real update
+   by up to 30 minutes. The update spec passed 3× in Chromium and 2× in WebKit under `/fluffy-bureau/`.
+5. Family mode needs a real family session (T15) to judge the handoff wording and timing.
+6. Human playtest and device checks (T15) remain pending, as for Stage 1.

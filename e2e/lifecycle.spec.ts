@@ -74,7 +74,8 @@ test('update: build B installs beside A without interrupting the case and takes 
   playwright,
   browserName,
 }) => {
-  test.setTimeout(420_000);
+  // The full release (cases 1–4) is ~110 MB: installing it in WebKit can take several minutes.
+  test.setTimeout(900_000);
   const browserType = playwright[browserName];
   const root = mkdtempSync(join(tmpdir(), `fluffy-update-${browserName}-`));
   const builds = { a: join(root, 'a'), b: join(root, 'b') };
@@ -111,7 +112,7 @@ test('update: build B installs beside A without interrupting the case and takes 
           page.evaluate(
             async () => (await navigator.serviceWorker.getRegistration())?.active?.state,
           ),
-        { timeout: 120_000, intervals: [500] },
+        { timeout: 360_000, intervals: [500] },
       )
       .toBe('activated');
     await page.waitForTimeout(1000);
