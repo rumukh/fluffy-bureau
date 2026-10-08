@@ -96,11 +96,18 @@ def main() -> None:
         paths[v] = "a/" + by_id[v]["path"]
 
     cutscenes, lines = [], set()
+    # G's presenter presets (apps/game/src/presenter.ts). E's lab declares only `close`, so the preview
+    # copies get explicit framings; the shipped documents are untouched.
+    presets = {"close-left": {"x": 900, "y": 950, "zoom": 1.4}, "close-center": {"x": 1280, "y": 950, "zoom": 1.4},
+               "close-right": {"x": 1660, "y": 950, "zoom": 1.4}, "sky": {"x": 1280, "y": 500, "zoom": 1.2}}
     for f in sorted(Path(a.cutscenes).rglob("*.json")):
         doc = json.loads(f.read_text(encoding="utf-8"))
         if doc.get("format") != "aegis-cutscene/1":
             continue
-        shutil.copy(f, out / f.name)
+        for s in doc["steps"]:
+            if s.get("op") == "camera" and s.get("preset") in presets:
+                s["to"] = dict(presets[s.pop("preset")])
+        (out / f.name).write_text(json.dumps(doc, ensure_ascii=False), encoding="utf-8")
         paths[doc["id"]] = f.name
         documents.append(doc["id"])
         cutscenes.append(doc["id"])
