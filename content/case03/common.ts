@@ -59,7 +59,7 @@ export const collections: VariantSource['collections'] = [
   { id: 'c3-chamomile-note', collection: 'secret-notes', label: 'C3-COL-secret-note', line: 'C3-COL-secret-note-L' },
 ];
 
-export const commonCutscenes: VariantSource['cutscenes'] = [
+export const commonCutscenes: NonNullable<VariantSource['plannedCutscenes']> = [
   { id: 'cs-c3-intro', scene: 'C3-0', summary: 'Вечером мышата сообщают о мигании на маяке; команда идёт к Медовому пруду.' },
   { id: 'cs-c3-note', scene: 'C3-3', summary: 'У починенного весла Дамки найдена ромашка; первая Тайная заметка попадает в Блокнот.' },
   { id: 'cs-c3-reveal', scene: 'C3-8', summary: 'Пухлик признаётся, что по ночам учил игровые сигналы огоньков.' },

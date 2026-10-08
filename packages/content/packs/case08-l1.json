@@ -3677,7 +3677,8 @@
    "line": "C8-L-01"
   }
  ],
- "cutscenes": [
+ "cutscenes": [],
+ "plannedCutscenes": [
   {
    "id": "cs-c8-office-closed",
    "scene": "C8-0",
@@ -3700,5 +3701,5 @@
   }
  ],
  "reserved": [],
- "revision": "9b0721981dd000da52586b590bcd139785a1f9c533a8708097412e6978b23869"
+ "revision": "301f9611341f314035671ba757c7feef9eaf3947cd0c1b0323b02d176000f723"
 }

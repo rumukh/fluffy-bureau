@@ -4349,10 +4349,11 @@
    "line": "C7-L-02"
   }
  ],
- "cutscenes": [
+ "cutscenes": [],
+ "plannedCutscenes": [
   {
    "id": "cs-c7-intro",
-   "scene": "C7-0",
+   "scene": "C7-L2-1",
    "summary": "Пудинг зовёт Бюро на залитую площадь; утки плавают у фонтана."
   },
   {
@@ -4362,12 +4363,12 @@
   },
   {
    "id": "cs-c7-resolution",
-   "scene": "C7-8",
+   "scene": "C7-L2-7",
    "summary": "Дамка признаётся: строила новый шлюз с водяным салютом и не успела до дождя."
   },
   {
    "id": "cs-c7-salute",
-   "scene": "C7-9",
+   "scene": "C7-L2-8",
    "summary": "Игрок помогает закрыть шлюз; водяной салют переливается радугой."
   },
   {
@@ -4377,5 +4378,5 @@
   }
  ],
  "reserved": [],
- "revision": "8a2fa148b76407b977a881a90e3848d87a0382b41b118dd2484cfe32a4f21dce"
+ "revision": "1006fb05a9ebce814abbc04adc1b27e0190123f3add48b2d62cf6063d91d022d"
 }

@@ -1,4 +1,4 @@
-import { all, dir, goto, has, L, menu, minigame, not, opt as mopt, reveal, scene, seq, skill, when, type VariantSource } from '../../tools/content/dsl.ts';
+import { all, dir, goto, has, L, menu, minigame, not, opt as mopt, reveal, scene, seq, skill, when, type VariantSource, retarget } from '../../tools/content/dsl.ts';
 import { activity, and, cl, comfort, commonCollections, commonCutscenes, commonDecisions, eq, facts, factsScene, finale, glossary, intended, intro0, ne, opt, rewardScene, rulesScene, secretNote, what, where, who } from './common.ts';
 
 const HUB = 'C5-L3-HUB';
@@ -217,7 +217,7 @@ export const level3: VariantSource = {
   collections: commonCollections,
   activities: [activity],
   comfort,
-  cutscenes: commonCutscenes,
+  cutscenes: [], plannedCutscenes: retarget(commonCutscenes, { "C5-8": "C5-L3-8", "C5-9": "C5-L3-9" }),
   reserved: [],
   decisions: [...commonDecisions, { id: 'C5L3-D1', text: 'Тапочек мэра сохранён как ложный след: он исключается следами и записями, а мышата возвращают его в финале.', ref: 'D04, Q17' }],
 };

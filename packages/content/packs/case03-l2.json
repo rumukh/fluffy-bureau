@@ -4263,7 +4263,8 @@
    "line": "C3-L-02"
   }
  ],
- "cutscenes": [
+ "cutscenes": [],
+ "plannedCutscenes": [
   {
    "id": "cs-c3-intro",
    "scene": "C3-0",
@@ -4276,7 +4277,7 @@
   },
   {
    "id": "cs-c3-reveal",
-   "scene": "C3-8",
+   "scene": "C3-L2-8",
    "summary": "Пухлик признаётся, что по ночам учил игровые сигналы огоньков."
   },
   {
@@ -4286,5 +4287,5 @@
   }
  ],
  "reserved": [],
- "revision": "009034def3d3f5034a29789ae58bfb9d291fede4ed2e06002b34caa53d681a5e"
+ "revision": "63e03308ee3dcaf9864c31ab07d15d994e4899c09d10c2bfb676c2e06c70b1aa"
 }

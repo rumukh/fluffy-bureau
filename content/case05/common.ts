@@ -110,7 +110,7 @@ export const commonCollections: VariantSource['collections'] = [
   { id: 'c5-secret-feather', collection: 'secret-notes', label: 'C5-COL-secret-feather', line: 'C5-2-05' },
 ];
 
-export const commonCutscenes: VariantSource['cutscenes'] = [
+export const commonCutscenes: NonNullable<VariantSource['plannedCutscenes']> = [
   { id: 'cs-c5-secret-note', scene: 'C5-2', summary: 'Починенная высокая полка и серое пёрышко в Тайных заметках.' },
   { id: 'cs-c5-mice', scene: 'C5-8', summary: 'Мышата Шуршики выходят из-за дальнего стеллажа и просят разрешения.' },
   { id: 'cs-c5-rules', scene: 'C5-9', summary: 'Мэр, мышата и Ватсони рисуют правила Ночной библиотеки.' },

@@ -4161,7 +4161,8 @@
    "line": "C5-L-01"
   }
  ],
- "cutscenes": [
+ "cutscenes": [],
+ "plannedCutscenes": [
   {
    "id": "cs-c5-secret-note",
    "scene": "C5-2",
@@ -4169,12 +4170,12 @@
   },
   {
    "id": "cs-c5-mice",
-   "scene": "C5-8",
+   "scene": "C5-L2-7",
    "summary": "Мышата Шуршики выходят из-за дальнего стеллажа и просят разрешения."
   },
   {
    "id": "cs-c5-rules",
-   "scene": "C5-9",
+   "scene": "C5-L2-8",
    "summary": "Мэр, мышата и Ватсони рисуют правила Ночной библиотеки."
   },
   {
@@ -4184,5 +4185,5 @@
   }
  ],
  "reserved": [],
- "revision": "6bff1f92d2970a27b472b389e87acda42bd7fc55aea679ddb997da031038ee3a"
+ "revision": "6cc49da8d3dca813c0dbde945d295dc14fd3508872d0901e0f2a568fde5b6837"
 }

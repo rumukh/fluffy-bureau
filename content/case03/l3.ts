@@ -1,3 +1,4 @@
+import { retarget } from '../../tools/content/dsl.ts';
 import type { VariantSource } from '../../tools/content/dsl.ts';
 import {
   activity, and, baseRewards, cl, collections, commonComfort, commonCutscenes, eq, facts, factsScene, finalLightScene,
@@ -143,7 +144,7 @@ export const level3: VariantSource = {
     ], solution: ['t19', 't20', 't2030', 't21', 't22'], wrong: ['C3-L2-6-W01'] } },
     lightGame('c3l3-light', 3),
   ],
-  facts, glossary, rewards: baseRewards(3), collections, activities: [activity], comfort: commonComfort, cutscenes: commonCutscenes,
+  facts, glossary, rewards: baseRewards(3), collections, activities: [activity], comfort: commonComfort, cutscenes: [], plannedCutscenes: retarget(commonCutscenes, { "C3-8": "C3-L3-8" }),
   decisions: [
     { id: 'C3L3-D1', text: 'Свой световой сигнал смоделирован staged-выбором, потому что await для поля профиля ещё нет.', ref: 'D22' },
     { id: 'C3L3-D2', text: 'Рисунок мышат — добросовестная ошибка; сам рисунок нужен только для У5.', ref: 'D04' },

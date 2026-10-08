@@ -4196,28 +4196,29 @@
    "line": "C8-L-01"
   }
  ],
- "cutscenes": [
+ "cutscenes": [],
+ "plannedCutscenes": [
   {
    "id": "cs-c8-office-closed",
-   "scene": "C8-0",
+   "scene": "C8-L2-0",
    "summary": "Контора украшена, но Ватсони мягко закрывает дверь: сегодня экзамен."
   },
   {
    "id": "cs-c8-attic-lights",
-   "scene": "C8-8",
+   "scene": "C8-L2-8",
    "summary": "На чердаке огоньки включаются по одному, все шепчут «Сюрприз…»."
   },
   {
    "id": "cs-c8-oath",
-   "scene": "C8-9",
+   "scene": "C8-L2-9",
    "summary": "Хвостс принимает Клятву сыщика и повторяет слова кампании."
   },
   {
    "id": "cs-c8-jubilee",
-   "scene": "C8-12",
+   "scene": "C8-L2-12",
    "summary": "Площадь показывает результаты всех дел и световой сигнал игрока."
   }
  ],
  "reserved": [],
- "revision": "f4e437add34fa7b2ab128e23ec718c0515c516f5d1071de958bf8affe86bdba5"
+ "revision": "57deaae26c1699c40b1f80e37a8345db2869676a1f2d552e722be76adf8863b9"
 }

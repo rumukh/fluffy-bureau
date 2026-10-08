@@ -6,6 +6,7 @@ import type {
 } from '../../packages/content/src/schema.ts';
 import { MANIFEST_FORMAT, NAME_PLACEHOLDER, NAME_TTS, PACK_FORMAT, PACK_SCHEMA } from '../../packages/content/src/schema.ts';
 import type { AuthoredLine, CaseSource, SharedSource, VariantSource } from './dsl.ts';
+import { checkBackgrounds, checkCutscenes, cutsceneLines } from './cutscenes.ts';
 import { exploreFlow, restartSafety, type FlowReport, type Issue } from './flow.ts';
 import { proves, sameCandidate, solve } from './logic.ts';
 import { pmIndex } from './pm-import.ts';
@@ -34,7 +35,7 @@ export const REQUIRED_UI = [
   'settings.calm', 'settings.readChoices', 'settings.on', 'settings.off', 'rotate', 'break.title', 'break.body', 'break.rest', 'break.more',
   'parent.enter', 'parent.hold', 'save.saved', 'save.failed', 'save.retry', 'save.otherTab', 'save.useHere', 'rewards.buttons',
   'rewards.hearts', 'rewards.rank', 'office.place', 'office.title', 'album.empty', 'encyclopedia.empty', 'glossary.empty', 'map.locked',
-  'case.complete',
+  'case.complete', 'cutscene.skip', 'cutscene.replay',
 ];
 
 export interface GenderReview { id: string; rev: number; reason: string }
@@ -61,6 +62,7 @@ export function variantRefs(v: VariantSource, rewardLabel: (id: string) => strin
       else if (s.t === 'skill') { add(skillTitle(s.skill)); walk(s.first); walk(s.known); }
       else if (s.t === 'if') { walk(s.then); walk(s.else); }
       else if (s.t === 'menu') { add(s.prompt); s.options.forEach((o) => add(o.label)); }
+      else if (s.t === 'cutscene') { const c = v.cutscenes.find((x) => x.id === s.cutscene); if (c?.document) cutsceneLines(c.document).forEach((l) => add(l.line)); }
     }
   };
   add(v.title);
@@ -205,7 +207,7 @@ export function build(shared: SharedSource, cases: CaseSource[], genderReview: G
   packs.push(withRevision<ContentPack>({
     format: PACK_FORMAT, schema: PACK_SCHEMA, id: 'shared', kind: 'shared', title: null, case: null, requires: [], start: null,
     lines: shared.lines.map(toLine), speakers: shared.speakers, skills: shared.skills, scenes: [], logic: null, deduction: null,
-    notebookHelp: null, hints: null, minigames: [], facts: [], glossary: [], rewards: shared.rewards, collections: [], activities: [], comfort: [], cutscenes: [], reserved: [],
+    notebookHelp: null, hints: null, minigames: [], facts: [], glossary: [], rewards: shared.rewards, collections: [], activities: [], comfort: [], cutscenes: [], plannedCutscenes: [], reserved: [],
   }));
   sharedRefs.forEach((id) => usedIds.add(id));
   for (const s of shared.skills) if (!lineIndex.has(s.title)) err('REF-LINE', `shared: skill ${s.id}`, `missing title ${s.title}`);
@@ -235,8 +237,9 @@ export function build(shared: SharedSource, cases: CaseSource[], genderReview: G
         const walk = (steps: Step[]) => steps.forEach((st) => {
           if (st.t === 'dir') {
             const prev = dirTexts.get(st.id);
-            if (prev !== undefined && prev !== st.text) err('DIR-CONFLICT', st.id, `stage direction ID reused with different text`);
-            dirTexts.set(st.id, st.text);
+            const sig = `${st.text}\u0000${st.background ?? ''}`;
+            if (prev !== undefined && prev !== sig) err('DIR-CONFLICT', st.id, `stage direction ID reused with different text or background`);
+            dirTexts.set(st.id, sig);
           }
           if (st.t === 'skill') { if (!allSkills.some((k) => k.id === st.skill)) err('REF-SKILL', where, st.skill); walk(st.first); walk(st.known); }
           if (st.t === 'if') { walk(st.then); walk(st.else); }
@@ -253,6 +256,8 @@ export function build(shared: SharedSource, cases: CaseSource[], genderReview: G
         walk(s.steps);
       }
       restartSafety(v, issues);
+      checkCutscenes(v, lineIndex, new Set(refs), issues);
+      checkBackgrounds(v, issues);
 
       // minigame choice limits
       for (const m of v.minigames) {
@@ -356,6 +361,7 @@ export function build(shared: SharedSource, cases: CaseSource[], genderReview: G
         notebookHelp: v.notebookHelp, hints: v.hints, minigames: v.minigames, facts: v.facts, glossary: v.glossary,
         rewards: allRewards.filter((r) => v.rewards.includes(r.id)),
         collections: v.collections, activities: v.activities, comfort: v.comfort, cutscenes: v.cutscenes,
+        plannedCutscenes: v.plannedCutscenes ?? [],
         reserved: v.reserved ?? [],
       }));
       const sentenceCounts = own.flatMap((id) => sentences(lineIndex.get(id)!.text).map((s) => tokenize(s).length));
@@ -374,6 +380,13 @@ export function build(shared: SharedSource, cases: CaseSource[], genderReview: G
     if (caseNewTerms.size > MAX_NEW_TERMS) err('GLOSSARY-MAX', c.id, `${caseNewTerms.size} new terms in the case`);
   }
   for (const l of allLines) if (!usedIds.has(l.id)) warn('UNUSED', l.id, 'line is not referenced by any pack');
+  // Cutscene IDs are unique across all packs (E's bundle validator, AEG-ANIM-0006).
+  const csSeen = new Map<string, string>();
+  for (const c of cases) for (const v of c.variants) for (const cs of v.cutscenes) {
+    const prev = csSeen.get(cs.id);
+    if (prev && prev !== v.pack) err('ID-DUPLICATE', `${v.pack}: cutscene ${cs.id}`, `cutscene ID also used in ${prev}`);
+    csSeen.set(cs.id, v.pack);
+  }
 
   // ---------------------------------------------------------------- manifest
   const membership = new Map<string, string[]>();

@@ -1,4 +1,4 @@
-import { all, dir, goto, has, L, menu, minigame, not, opt as mopt, reveal, scene, seq, skill, when, type VariantSource } from '../../tools/content/dsl.ts';
+import { all, dir, goto, has, L, menu, minigame, not, opt as mopt, reveal, scene, seq, skill, when, type VariantSource, retarget } from '../../tools/content/dsl.ts';
 import { activity, and, cl, comfort, commonCollections, commonCutscenes, commonDecisions, eq, facts, factsScene, finale, glossary, intended, intro0, ne, opt, rewardScene, rulesScene, secretNote, what, where, who } from './common.ts';
 
 const HUB = 'C5-L2-HUB';
@@ -201,7 +201,7 @@ export const level2: VariantSource = {
   collections: commonCollections,
   activities: [activity],
   comfort,
-  cutscenes: commonCutscenes,
+  cutscenes: [], plannedCutscenes: retarget(commonCutscenes, { "C5-8": "C5-L2-7", "C5-9": "C5-L2-8" }),
   reserved: [],
   decisions: [...commonDecisions, { id: 'C5L2-D1', text: 'Добросовестная ошибка мэра про полночь оставлена в сцене ленты времени, но не нужна для единственного решения.', ref: 'D04, Q17' }],
 };

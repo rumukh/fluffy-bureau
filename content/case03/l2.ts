@@ -1,3 +1,4 @@
+import { retarget } from '../../tools/content/dsl.ts';
 import type { VariantSource } from '../../tools/content/dsl.ts';
 import {
   activity, and, baseRewards, cl, collections, commonComfort, commonCutscenes, eq, facts, factsScene, finalLightScene, fitilyokScene,
@@ -144,7 +145,7 @@ export const level2: VariantSource = {
     ], solution: ['t19', 't20', 't21', 't22'], wrong: ['C3-L2-6-W01'] } },
     lightGame('c3l2-light', 2),
   ],
-  facts, glossary, rewards: baseRewards(2), collections, activities: [activity], comfort: commonComfort, cutscenes: commonCutscenes,
+  facts, glossary, rewards: baseRewards(2), collections, activities: [activity], comfort: commonComfort, cutscenes: [], plannedCutscenes: retarget(commonCutscenes, { "C3-8": "C3-L2-8" }),
   decisions: [
     { id: 'C3L2-D1', text: 'Фраза про отсутствие молотка не исключает ремонт; ремонт исключают пыльные инструменты и журнал смотрителя.', ref: 'R03' },
     { id: 'C3L2-D2', text: 'Ошибка Дамки про закрытое окно оставлена добросовестной и исправляется в осмотре.', ref: 'D04' },

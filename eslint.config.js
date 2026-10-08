@@ -15,11 +15,13 @@ export default tseslint.config(
   {
     ignores: [
       '**/dist/**',
-      'out/**',
+      '**/out/**',
+      '**/test-results/**',
       '**/node_modules/**',
       'vendor/**',
       'playwright-report/**',
       'test-results/**',
+      '*.tmp.mjs',
     ],
   },
   js.configs.recommended,
@@ -33,6 +35,7 @@ export default tseslint.config(
   {
     // Authoritative rules must stay deterministic: no wall clock, no unseeded randomness.
     files: ['packages/game-core/src/**/*.ts'],
+    // game-session may use wall-clock-free browser storage only via injected adapters.
     rules: {
       'no-restricted-globals': [
         'error',

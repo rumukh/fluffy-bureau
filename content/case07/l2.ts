@@ -1,5 +1,5 @@
 // Case 7, level 2 (4×4×4). Explicit normalized variant.
-import { all, cl, goto, has, L, menu, minigame, not, opt as mopt, reveal, seq, skill, when, type VariantSource } from '../../tools/content/dsl.ts';
+import { all, cl, goto, has, L, menu, minigame, not, opt as mopt, reveal, seq, skill, when, type VariantSource, retarget } from '../../tools/content/dsl.ts';
 import { activity, and, baseDecisions, cocoaScene, commonCollections, commonComfort, commonCutscenes, eq, facts, factsScene, glossary, intended, intro, mayorScene, ne, opt, repairScene, resolutionScene, rewardScene, secretScene, versionScene, waterScene, what, where, who } from './common.ts';
 
 const HUB = 'C7-L2-HUB';
@@ -113,6 +113,6 @@ export const level2: VariantSource = {
       { id: 'support', prompt: null, pageSize: 3, options: [opt('stakes', 'C7-L2-8-B01', true, 'C7-L2-8-01'), opt('lay', 'C7-L2-8-B02', false, 'C7-L2-8-02'), opt('ribbon', 'C7-L2-8-B03', false, 'C7-L2-8-03')] },
       { id: 'water', prompt: null, pageSize: 3, options: [opt('pond', 'C7-9-B07', true, 'C7-9-08'), opt('leave', 'C7-9-B08', false, 'C7-9-09'), opt('garden', 'C7-9-B09', false, 'C7-9-10')] },
     ], lines: ['C7-9-02','C7-9-03','C7-9-04','C7-9-05','C7-9-06','C7-9-07','C7-9-08','C7-9-09','C7-9-10','C7-L2-8-01','C7-L2-8-02','C7-L2-8-03'] } },
-  ], facts, glossary, rewards: ['rw-c7-heart-kartofan','rw-c7-badge','rw-c7-buttons-l2','rw-c7-sticker-l2','rw-c7-decor-lock','rw-c7-activity'], collections: commonCollections, activities: [activity], comfort: commonComfort, cutscenes: commonCutscenes, decisions: [...baseDecisions, { id: 'C7L2-D1', text: 'У3 и У4 размещены у шлюза после обязательной C7-4: сначала дождемер, затем цепочка с лишней карточкой.', ref: 'D03, R04' }],
+  ], facts, glossary, rewards: ['rw-c7-heart-kartofan','rw-c7-badge','rw-c7-buttons-l2','rw-c7-sticker-l2','rw-c7-decor-lock','rw-c7-activity'], collections: commonCollections, activities: [activity], comfort: commonComfort, cutscenes: [], plannedCutscenes: retarget(commonCutscenes, { "C7-0": "C7-L2-1", "C7-8": "C7-L2-7", "C7-9": "C7-L2-8" }), decisions: [...baseDecisions, { id: 'C7L2-D1', text: 'У3 и У4 размещены у шлюза после обязательной C7-4: сначала дождемер, затем цепочка с лишней карточкой.', ref: 'D03, R04' }],
   reserved: [],
 };

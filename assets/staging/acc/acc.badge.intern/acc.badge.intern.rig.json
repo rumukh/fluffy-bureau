@@ -1,0 +1,33 @@
+{
+ "format": "aegis-rig/1",
+ "id": "acc.badge.intern",
+ "revision": "1",
+ "atlases": [
+  "acc.badge.intern.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -48.0,
+  "y": -63.0,
+  "width": 96,
+  "height": 126
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 48.0,
+    "y": 63.0
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "frame": "acc.badge.intern.atlas#body.rest"
+  }
+ ]
+}

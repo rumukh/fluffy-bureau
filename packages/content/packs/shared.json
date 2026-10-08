@@ -936,6 +936,24 @@
    "delivery": "neutral"
   },
   {
+   "id": "UI-cutscene.skip",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Пропустить ролик",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-cutscene.replay",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Смотреть сначала",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
    "id": "SK-inspect",
    "rev": 1,
    "kind": "label",
@@ -1094,6 +1112,15 @@
    "kind": "label",
    "speaker": "narrator",
    "text": "Пары запахов",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-intro",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Вступление",
    "voiced": true,
    "delivery": "neutral"
   },
@@ -1454,6 +1481,10 @@
   {
    "id": "scent-pairs",
    "title": "SK-scent-pairs"
+  },
+  {
+   "id": "intro",
+   "title": "SK-intro"
   }
  ],
  "scenes": [],
@@ -1561,6 +1592,7 @@
  "activities": [],
  "comfort": [],
  "cutscenes": [],
+ "plannedCutscenes": [],
  "reserved": [],
- "revision": "fcbc9ebede0b3811e9f3497ab612ca13385623c75743a2323718cf2b01d49168"
+ "revision": "0c5022b43122993501aafbe0ac4a6769762c3bf5f51089b9ac7ad68581648b44"
 }

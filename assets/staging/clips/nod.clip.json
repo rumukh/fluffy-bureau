@@ -1,0 +1,65 @@
+{
+ "format": "aegis-clip/1",
+ "id": "nod",
+ "duration": 0.8,
+ "loop": false,
+ "blend": "override",
+ "tracks": [
+  {
+   "part": "head",
+   "property": "y",
+   "keys": [
+    {
+     "t": 0,
+     "v": 0,
+     "ease": "easeInOutSine"
+    },
+    {
+     "t": 0.2,
+     "v": 10,
+     "ease": "easeInOutSine"
+    },
+    {
+     "t": 0.4,
+     "v": 0,
+     "ease": "easeInOutSine"
+    },
+    {
+     "t": 0.6,
+     "v": 10,
+     "ease": "easeInOutSine"
+    },
+    {
+     "t": 0.8,
+     "v": 0
+    }
+   ]
+  },
+  {
+   "part": "head",
+   "property": "rotation",
+   "keys": [
+    {
+     "t": 0,
+     "v": 0
+    },
+    {
+     "t": 0.2,
+     "v": 1.5
+    },
+    {
+     "t": 0.4,
+     "v": 0
+    },
+    {
+     "t": 0.6,
+     "v": 1.5
+    },
+    {
+     "t": 0.8,
+     "v": 0
+    }
+   ]
+  }
+ ]
+}

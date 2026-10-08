@@ -6,12 +6,14 @@ export default defineConfig({
   testDir: './e2e',
   timeout: 60_000,
   fullyParallel: false,
-  workers: 2,
+  // Service-worker installation and persistent browser profiles are timing-sensitive: run serially.
+  workers: 1,
   reporter: [['list']],
   use: {
     baseURL: `http://127.0.0.1:${port}/`,
     viewport: { width: 1280, height: 800 },
     locale: 'ru-RU',
+    actionTimeout: 15_000,
   },
   webServer: {
     command: `node apps/game/scripts/preview.mjs --dir apps/game/dist --port ${port}`,

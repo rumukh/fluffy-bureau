@@ -55,7 +55,7 @@ export const heroCollections = (ids: ('pukhlik' | 'stella' | 'fitilyok' | 'damka
   ...ids.map((id) => ({ id: `c8-hero-${id}`, collection: 'hero-traits' as const, label: `COL-C8-${id}`, line: `COL-C8-${id}` })),
 ];
 
-export const baseCutscenes: VariantSource['cutscenes'] = [
+export const baseCutscenes: NonNullable<VariantSource['plannedCutscenes']> = [
   { id: 'cs-c8-office-closed', scene: 'C8-0', summary: 'Контора украшена, но Ватсони мягко закрывает дверь: сегодня экзамен.' },
   { id: 'cs-c8-attic-lights', scene: 'C8-8', summary: 'На чердаке огоньки включаются по одному, все шепчут «Сюрприз…».' },
   { id: 'cs-c8-oath', scene: 'C8-9', summary: 'Хвостс принимает Клятву сыщика и повторяет слова кампании.' },

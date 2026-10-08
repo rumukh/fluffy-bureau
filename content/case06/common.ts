@@ -34,7 +34,7 @@ export const rewardScene = (level: 1 | 2 | 3): VariantSource['scenes'][number] =
 ] });
 export const cabinetScene = (next: string, extraAfterFalse: Step[] = []): VariantSource['scenes'][number] => ({ id: 'C6-7', title: 'Старый шкаф Конторы', location: 'office', cast: ['pudding', 'khvosts', 'watsony'], presentation: 'cutscene', steps: [dir('C6-7-D01', 'Золотой Жёлудь входит в замок старого шкафа.'), ...seq('C6-7-', 1, 13), L('C6-7-N01'), ...extraAfterFalse, goto(next)] });
 export const alleyScene = (id: string, level: 1 | 2 | 3, next = 'C6-9'): VariantSource['scenes'][number] => ({ id, title: 'Аллея юбилея', location: 'fountain-square', cast: ['pudding', 'stella', 'khvosts'], presentation: 'minigame', steps: [skill('compass-directions', [L(level === 3 ? 'C6-L3-9-01' : level === 2 ? 'C6-L2-8-01' : 'C6-8-N01')]), minigame(`c6l${level}-alley`), ...seq('C6-8-', 1, 6), goto(next)] });
-export const commonCutscenes: VariantSource['cutscenes'] = [
+export const commonCutscenes: NonNullable<VariantSource['plannedCutscenes']> = [
   { id: 'cs-c6-intro', scene: 'C6-1', summary: 'Пустая витрина мэрии, Пудинг паникует, Хвостс открывает Блокнот.' },
   { id: 'cs-c6-cabinet', scene: 'C6-7', summary: 'Золотой Жёлудь открывает старый шкаф с альбомом первых сыщиков.' },
   { id: 'cs-c6-alley', scene: 'C6-8', summary: 'У фонтана сажают дубки будущей юбилейной аллеи.' },

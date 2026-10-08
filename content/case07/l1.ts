@@ -102,6 +102,6 @@ export const level1: VariantSource = {
       { id: 'log', prompt: null, pageSize: 3, options: [opt('short', 'C7-9-B04', false, 'C7-9-05'), opt('right', 'C7-9-B05', true, 'C7-9-06'), opt('long', 'C7-9-B06', false, 'C7-9-07')] },
       { id: 'water', prompt: null, pageSize: 3, options: [opt('pond', 'C7-9-B07', true, 'C7-9-08'), opt('leave', 'C7-9-B08', false, 'C7-9-09'), opt('garden', 'C7-9-B09', false, 'C7-9-10')] },
     ], lines: ['C7-9-02','C7-9-03','C7-9-04','C7-9-05','C7-9-06','C7-9-07','C7-9-08','C7-9-09','C7-9-10'] } },
-  ], facts, glossary, rewards: ['rw-c7-heart-kartofan','rw-c7-badge','rw-c7-buttons-l1','rw-c7-sticker-l1','rw-c7-decor-lock','rw-c7-activity'], collections: commonCollections, activities: [activity], comfort: commonComfort, cutscenes: commonCutscenes, decisions: [...baseDecisions, { id: 'C7L1-D1', text: 'C7-5 оставлена необязательной уликой о фонтане; обязательная У1 уже проверяет кран.', ref: 'D01, Q16' }],
+  ], facts, glossary, rewards: ['rw-c7-heart-kartofan','rw-c7-badge','rw-c7-buttons-l1','rw-c7-sticker-l1','rw-c7-decor-lock','rw-c7-activity'], collections: commonCollections, activities: [activity], comfort: commonComfort, cutscenes: [], plannedCutscenes: commonCutscenes, decisions: [...baseDecisions, { id: 'C7L1-D1', text: 'C7-5 оставлена необязательной уликой о фонтане; обязательная У1 уже проверяет кран.', ref: 'D01, Q16' }],
   reserved: [],
 };

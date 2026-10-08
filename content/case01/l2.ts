@@ -1,9 +1,10 @@
 // Case 1, level 2 (4×4×4). SCRIPT_CASE01_LEVELS23_RU.md, L2-1…L2-9, expanded explicitly (R04).
-import { all, cl, dir, end, goto, has, L, Ls, menu, minigame, not, opt as mopt, reveal, reward, seq, skill, when, type VariantSource } from '../../tools/content/dsl.ts';
+import { all, cl, cutscene, dir, end, goto, has, L, menu, minigame, not, opt as mopt, reveal, reward, seq, skill, when, type VariantSource } from '../../tools/content/dsl.ts';
 import {
-  activity, and, bakerMeasures, commonCutscenes, eq, facts, factsScene, glossary, intended, intro, klubkiTutorial, ne, noConstraint, opt, oven,
-  rewardScene, shedOpening, versionScene, what, where, who,
+  activity, and, bakerMeasures, eq, facts, factsScene, glossary, intended, intro, klubkiTutorial, ne, noConstraint, opt,
+  rewardScene, versionScene, what, where, who,
 } from './common.ts';
+import { oven, reward as rewardCutscene, shedL2 } from '../cutscenes/index.ts';
 
 const HUB = 'L2-HUB';
 const ALL4 = ['eaten', 'mixed', 'cheeks', 'mail'];
@@ -85,7 +86,8 @@ export const level2: VariantSource = {
       steps: [
         skill('tracks', [L('C1-5-01')]),
         minigame('c1l2-tracks'),
-        dir('C1-5-D01', 'Следы ведут к сараю Картофана. Игрок нажимает на окно. У коробки мэра в крышке окошко, в нём виден пирог.'),
+        dir('C1-5-D01', 'Следы ведут к сараю Картофана.'),
+        dir('C1-5-D02', 'Игрок нажимает на окно. Окно сарая крупно: у коробки мэра в крышке окошко, в нём виден пирог.', 'bg.shed-window'),
         ...seq('C1-5-', 5, 7),
         reveal('c1-tracks'),
         goto(HUB),
@@ -105,11 +107,11 @@ export const level2: VariantSource = {
     versionScene('L2-7', HUB),
     {
       id: 'L2-8', title: 'Разговор в сарае', location: 'shed', cast: ['kartofan', 'pudding', 'tyopa', 'stella', 'fitilyok', 'khvosts', 'watsony'], presentation: 'cutscene',
-      steps: [...shedOpening(), L('L2-8-01'), L('L2-8-02'), ...seq('C1-7-', 12, 14), ...Ls('C1-7-14a', 'C1-7-14b', 'L2-8-03', 'L2-8-04', 'C1-7-16', 'C1-7-17'), goto('L2-9')],
+      steps: [cutscene('c1.shed.l2'), goto('L2-9')],
     },
     {
       id: 'L2-9', title: 'Финал: «Пекарь»', location: 'bakery', cast: ['pudding', 'kartofan', 'tyopa', 'stella', 'fitilyok', 'khvosts', 'watsony'], presentation: 'minigame',
-      steps: [skill('baker', [L('C1-8-01')]), minigame('c1l2-baker'), oven(), L('C1-8-07'), L('C1-8-08'), goto('C1-9')],
+      steps: [skill('baker', [L('C1-8-01')]), minigame('c1l2-baker'), cutscene('c1.oven.l2'), goto('C1-9')],
     },
     { ...factsScene(), steps: [...factsScene().steps, goto('C1-10')] },
     rewardScene(2, [end()]),
@@ -267,8 +269,9 @@ export const level2: VariantSource = {
   collections: [],
   activities: [activity],
   comfort: [],
-  cutscenes: [...commonCutscenes.map((c) => (c.scene === 'C1-1' ? { ...c, scene: 'L2-1' } : c.scene === 'C1-7' ? { ...c, scene: 'L2-8' } : c.scene === 'C1-8' ? { ...c, scene: 'L2-9' } : c))],
+  cutscenes: [shedL2, oven(2, 'L2-9'), rewardCutscene(2)],
   decisions: [
+    { id: 'C1L2-T25', text: 'Ролики T25: разговор в сарае (L2-8, c1.shed.l2), пирог в печи (L2-9, c1.oven.l2) и награда (C1-10, c1.reward.l2). Реплики звучат в ролике в прежнем порядке; ремарки сцен заменены постановкой ролика; награды, «Уютный денёк» и переходы — шаги после ролика.', ref: 'T25' },
     { id: 'C1L2-D1', text: '«Часы на пекарне» открываются в меню «Расспросить жителей» (после разговора со Стеллой), а не на улице: иначе на экране было бы четыре варианта.', ref: 'Q11' },
     { id: 'C1L2-D2', text: 'В «Кто наследил?» четыре карточки; они показываются страницами по три.', ref: 'Q11' },
     { id: 'C1L2-D3', text: 'Ракушка (расплывчатая) не подсказывает начало дела: когда не подходит L2-R-01/02, звучит разбор L2-R-03. Клубок по-прежнему точен.', ref: 'D03' },

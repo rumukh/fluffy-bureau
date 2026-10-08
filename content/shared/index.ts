@@ -109,7 +109,9 @@ const uiLines = lines('shared/ui', 'label', [
   ['UI-hint.klubokEmptyShell', 'khvosts', 'Клубки кончились. Можно позвонить Ватсони!', ui('Клубки исчерпаны, ракушка доступна (D03)')],
   ['UI-hint.klubokEmpty', 'khvosts', 'Клубки кончились. Перечитаем Блокнот вместе?', ui('Клубки исчерпаны на сложности 3 (D03)')],
   ['UI-hint.shellRing', 'narrator', 'Звоним Ватсони…', ui()],
-  ['UI-case.complete', 'narrator', 'Дело раскрыто!', ui()],  // Skill titles
+  ['UI-case.complete', 'narrator', 'Дело раскрыто!', ui()],
+  ['UI-cutscene.skip', 'narrator', 'Пропустить ролик', ui('Кнопка ролика (T25)')],
+  ['UI-cutscene.replay', 'narrator', 'Смотреть сначала', ui('Кнопка ролика (T25)')],  // Skill titles
   ['SK-inspect', 'narrator', 'Осмотр', ui()],
   ['SK-replay', 'narrator', 'Ушко: повтор', ui()],
   ['SK-lamp', 'narrator', 'Лампа смелости', ui()],
@@ -128,6 +130,7 @@ const uiLines = lines('shared/ui', 'label', [
   ['SK-cozy-day', 'narrator', 'Уютный денёк', ui()],
   ['SK-timeline', 'narrator', 'Лента времени', ui()],
   ['SK-scent-pairs', 'narrator', 'Пары запахов', ui()],
+  ['SK-intro', 'narrator', 'Вступление', ui('Название ролика-вступления (T25)')],
   // Speaker names (character pickers, encyclopedia of heroes)
   ['NM-khvosts', 'narrator', 'Шерлок Хвостс', ui()],
   ['NM-watsony', 'narrator', 'Доктор Ватсони', ui()],
@@ -172,7 +175,7 @@ export const shared: SharedSource = {
   ],
   skills: [
     'inspect', 'replay', 'lamp', 'notebook', 'guess', 'shell', 'pause', 'map', 'klubki', 'magnifier', 'cocoa',
-    'tracks', 'version', 'baker', 'encyclopedia', 'cozy-day', 'timeline', 'scent-pairs',
+    'tracks', 'version', 'baker', 'encyclopedia', 'cozy-day', 'timeline', 'scent-pairs', 'intro',
   ].map((id) => ({ id, title: `SK-${id}` })),
   lexicon: [
     { word: 'Хвостс', hint: 'Хво́стс' },

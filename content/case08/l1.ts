@@ -95,5 +95,5 @@ export const level1: VariantSource = {
       { id: 'hypothesis', prompt: null, pageSize: 3, options: [opt('hypothesis', 'C8-9-B04', true, 'C8-9-03'), opt('alibi', 'C8-9-B05', false, 'C8-9-05'), opt('motive', 'C8-9-B06', false, 'C8-9-05')] },
       { id: 'truth', prompt: null, pageSize: 3, options: [opt('truth', 'C8-9-B07', true, 'C8-9-04'), opt('hurt', 'C8-9-B08', false, 'C8-9-05'), opt('hurry', 'C8-9-B09', false, 'C8-9-05')] },
     ] } },
-  ], facts, glossary: [], rewards: rewardsFor(1), collections: heroCollections(['pukhlik', 'stella', 'fitilyok']), activities: [activity], comfort, cutscenes: baseCutscenes, decisions: commonDecisions(1), reserved: [],
+  ], facts, glossary: [], rewards: rewardsFor(1), collections: heroCollections(['pukhlik', 'stella', 'fitilyok']), activities: [activity], comfort, cutscenes: [], plannedCutscenes: baseCutscenes, decisions: commonDecisions(1), reserved: [],
 };

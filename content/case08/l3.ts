@@ -1,4 +1,4 @@
-import { all, cl, dir, goto, has, L, menu, minigame, not, opt as mopt, reveal, seq, skill, type VariantSource } from '../../tools/content/dsl.ts';
+import { all, cl, dir, goto, has, L, menu, minigame, not, opt as mopt, reveal, seq, skill, type VariantSource, retarget } from '../../tools/content/dsl.ts';
 import { activity, anyOf, baseCutscenes, commonDecisions, comfort, eq, facts, finalScenes, heroCollections, intended, introScene, invitationCards, opt, rewardsFor, versionScene, what, where, who } from './common.ts';
 
 const HUB = 'C8-L3-HUB';
@@ -81,5 +81,5 @@ export const level3: VariantSource = {
       { id: 'hypothesis', prompt: null, pageSize: 3, options: [opt('hypothesis', 'C8-9-B04', true, 'C8-9-03'), opt('alibi', 'C8-9-B05', false, 'C8-9-05'), opt('motive', 'C8-9-B06', false, 'C8-9-05')] },
       { id: 'truth', prompt: null, pageSize: 3, options: [opt('truth', 'C8-9-B07', true, 'C8-9-04'), opt('hurt', 'C8-9-B08', false, 'C8-9-05'), opt('hurry', 'C8-9-B09', false, 'C8-9-05')] },
     ] } },
-  ], facts, glossary: [], rewards: rewardsFor(3), collections: heroCollections(['pukhlik', 'stella', 'fitilyok', 'damka', 'mouse']), activities: [activity], comfort, cutscenes: baseCutscenes, decisions: [...commonDecisions(3), { id: 'C8L3-D7', text: 'Ракушки на уровне 3 нет; подсказки дают только три точных Клубка.', ref: 'D03' }, { id: 'C8L3-D8', text: 'Свой световой сигнал игрока показывается в финале маяка как визуальный результат профиля.', ref: 'D22' }], reserved: [],
+  ], facts, glossary: [], rewards: rewardsFor(3), collections: heroCollections(['pukhlik', 'stella', 'fitilyok', 'damka', 'mouse']), activities: [activity], comfort, cutscenes: [], plannedCutscenes: retarget(baseCutscenes, { "C8-0": "C8-L3-0", "C8-8": "C8-L3F-8", "C8-9": "C8-L3F-9", "C8-12": "C8-L3F-12" }), decisions: [...commonDecisions(3), { id: 'C8L3-D7', text: 'Ракушки на уровне 3 нет; подсказки дают только три точных Клубка.', ref: 'D03' }, { id: 'C8L3-D8', text: 'Свой световой сигнал игрока показывается в финале маяка как визуальный результат профиля.', ref: 'D22' }], reserved: [],
 };

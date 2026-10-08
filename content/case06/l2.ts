@@ -1,4 +1,4 @@
-import { all, cl, goto, has, L, menu, minigame, not, opt as mopt, reveal, seq, skill, when, type VariantSource } from '../../tools/content/dsl.ts';
+import { all, cl, goto, has, L, menu, minigame, not, opt as mopt, reveal, seq, skill, when, type VariantSource, retarget } from '../../tools/content/dsl.ts';
 import { activity, alleyScene, and, cabinetScene, collections, comfort, commonCutscenes, directionsMinigame, eq, facts, factsScene, glossary, intended, ne, officeIntro, opt, rewardScene, versionIntro, what, where, who } from './common.ts';
 
 const HUB = 'C6-L2-HUB';
@@ -46,7 +46,7 @@ export const level2: VariantSource = {
     { id: 'c6l2-compass', skill: 'compass', config: { kind: 'staged', mechanic: 'Компас', description: 'Повернуть карту к северу; крестик у Старого Дуба.', steps: [{ id: 'map', prompt: 'C6-5-04', pageSize: 3, options: [opt('left', 'C6-5-B04', false, 'C6-5-10'), opt('right', 'C6-5-B05', false, 'C6-5-10'), opt('oak', 'C6-5-B06', true, 'C6-L2-4-N01')] }], lines: ['C6-5-10', 'C6-L2-4-N01'] } },
     { id: 'c6l2-route', skill: 'compass-route', config: { kind: 'staged', mechanic: 'Маршрут по компасу', description: 'От фонтана два шага на север и один на восток.', steps: [{ id: 'step1', prompt: 'C6-L2-5-01', pageSize: 3, options: [opt('n', 'C6-L2-5-B01', true, 'C6-L2-5-02'), opt('e', 'C6-L2-5-B02', false, 'C6-L2-5-03'), opt('s', 'C6-L2-5-B03', false, 'C6-L2-5-03')] }, { id: 'step2', prompt: 'C6-L2-5-02', pageSize: 3, options: [opt('n', 'C6-L2-5-B01', true, 'C6-L2-5-02'), opt('e', 'C6-L2-5-B02', false, 'C6-L2-5-03'), opt('w', 'C6-L2-5-B04', false, 'C6-L2-5-03')] }, { id: 'step3', prompt: 'C6-L2-5-02', pageSize: 3, options: [opt('e', 'C6-L2-5-B02', true, 'C6-L2-5-04'), opt('n', 'C6-L2-5-B01', false, 'C6-L2-5-03'), opt('s', 'C6-L2-5-B03', false, 'C6-L2-5-03')] }], lines: ['C6-L2-5-03', 'C6-L2-5-04'] } },
     directionsMinigame('c6l2-alley', 2),
-  ], facts, glossary, rewards: ['rw-c6-badge', 'rw-c6-buttons-l2', 'rw-c6-sticker-l2', 'rw-c6-decor-compass', 'rw-c6-title-detective', 'rw-c6-activity'], collections, activities: [activity], comfort, cutscenes: commonCutscenes.map((c) => c.scene === 'C6-8' ? { ...c, scene: 'C6-L2-8' } : c), decisions: [
+  ], facts, glossary, rewards: ['rw-c6-badge', 'rw-c6-buttons-l2', 'rw-c6-sticker-l2', 'rw-c6-decor-compass', 'rw-c6-title-detective', 'rw-c6-activity'], collections, activities: [activity], comfort, cutscenes: [], plannedCutscenes: retarget(commonCutscenes.map((c) => c.scene === 'C6-8' ? { ...c, scene: 'C6-L2-8' } : c), { "C6-1": "C6-L2-1" }), decisions: [
     { id: 'C6L2-D1', text: 'Сложность 2 явно расширяет C6-5-11: крестик только у Старого Дуба, а корни доказывает маршрут.', ref: 'R04' },
     { id: 'C6L2-D2', text: 'Ракушка расплывчатая; Клубок точный с лимитом три.', ref: 'D03' },
   ],

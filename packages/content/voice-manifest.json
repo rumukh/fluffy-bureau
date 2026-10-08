@@ -2,11 +2,11 @@
  "format": "fluffy-voice-manifest",
  "schema": 1,
  "packs": {
-  "shared": "fcbc9ebede0b3811e9f3497ab612ca13385623c75743a2323718cf2b01d49168",
-  "prologue": "d7f5f3c33cdd0ea1c487f34f672ff4194235cd8b81130709e72a083037153afd",
-  "case01-l1": "386e6a71cae9ff6e6b5b27b8599431a0f92f9f8d86a13c0e6399029f1f782d8f",
-  "case01-l2": "2c2918adea95fc8b95911788664d0538b3307fb16af6a00e9ac70e5f6ab7172b",
-  "case01-l3": "98d6c7f41627ffb2285c181949f50e41abc18903c2638ad3e5daecacc15afaa1"
+  "shared": "0c5022b43122993501aafbe0ac4a6769762c3bf5f51089b9ac7ad68581648b44",
+  "prologue": "672aa015433f299d499be76e82f0d23a2e82ffa2cc842b51e3f0e78b78f2be16",
+  "case01-l1": "b70df46d77d6db9fd7bb8232ca8e76cc3a680858a32deb779c5fc0835c4d706c",
+  "case01-l2": "603252f09aa556883c1a2f9765ef3aa2ba847d4c6ed16fa0569d5f83a08fa901",
+  "case01-l3": "90744f146f919c533dffeb2f1c87c7068fc6803bdcdbf4556e1cf76f9ba9bc57"
  },
  "lexicon": [
   {
@@ -1727,6 +1727,36 @@
    ]
   },
   {
+   "id": "UI-cutscene.skip",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Пропустить ролик",
+   "ttsText": "Пропустить ролик",
+   "ttsHash": "77d8d3abe28520c70ec9cfd4918aec6a9277d1de8a28c76d254ed32692440cd4",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
+   "id": "UI-cutscene.replay",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Смотреть сначала",
+   "ttsText": "Смотреть сначала",
+   "ttsHash": "126a2df7a1392b42f270b4b7cd8488e130c6aaa28733b0762557ccde4f201268",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
    "id": "SK-inspect",
    "revision": 1,
    "kind": "label",
@@ -1995,6 +2025,21 @@
    "displayText": "Пары запахов",
    "ttsText": "Пары запахов",
    "ttsHash": "54c6a241abe89faec40a6a65f27522950efe202ace0b17fe7641c4efd23aaa56",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
+   "id": "SK-intro",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Вступление",
+   "ttsText": "Вступление",
+   "ttsHash": "ab2953bf9e441cd5fc4d8202ec5ebdaf08e4b9a52360cb18c746da47e20d083f",
    "pronunciation": [],
    "delivery": "neutral",
    "note": "",

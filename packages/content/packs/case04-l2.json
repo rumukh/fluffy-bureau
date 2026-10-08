@@ -4014,7 +4014,8 @@
    "line": "C4-L-01"
   }
  ],
- "cutscenes": [
+ "cutscenes": [],
+ "plannedCutscenes": [
   {
    "id": "cs-c4-office",
    "scene": "C4-0",
@@ -4059,5 +4060,5 @@
    "reason": "названия новых механик и точки карты используются системами каталога"
   }
  ],
- "revision": "a78ad0f8beffc9d9503bfe2dcc757873f786b75cc37e9b2ba05a22995de329f7"
+ "revision": "320bec687a51c0cc7d14ed946466de10cc43b2c40a1e060d0ac91b0f01696be0"
 }

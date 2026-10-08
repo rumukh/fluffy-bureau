@@ -1,8 +1,9 @@
 // Prologue «Первый день стажёра» (SCRIPT_PROLOGUE_CASE01_RU.md, P0–P3).
 import {
-  added, all, any, changed, cl, dir, goto, has, L, lines, menu, minigame, not, opt, reveal, reward, scene,
+  added, all, any, changed, cl, cutscene, dir, goto, has, L, lines, menu, minigame, not, opt, reveal, reward, scene,
   seq, set, skill, wait, when, end, type CaseSource,
 } from '../../tools/content/dsl.ts';
+import { intro, p3Letter } from '../cutscenes/index.ts';
 
 const L_ = lines('prologue', 'dialogue', [
   ['P0-01', 'watsony', 'Ой, у нас пополнение! Сейчас запишу.', changed('Ой, новенький стажёр! Сейчас запишу.', '«Новенький» — обращение мужского рода к игроку; заменено нейтральным', 'R07, D05')],
@@ -66,6 +67,7 @@ const scenes = [
   scene({
     id: 'P0', title: 'Анкета стажёра', location: 'office-desk', cast: ['watsony'], presentation: 'dialogue',
     steps: [
+      skill('intro', [cutscene('intro')], []),
       dir('P0-D01', 'Стол Ватсони в Конторе. Ватсони держит перо.'),
       L('P0-01'), L('P0-02'), wait('avatar.species'), L('P0-03'), wait('avatar.name'), L('P0-04'), wait('avatar.scarf'), L('P0-05'),
       goto('P1'),
@@ -125,8 +127,7 @@ const scenes = [
     steps: [
       skill('shell', seq('P3-', 1, 3)),
       skill('pause', [L('P3-04')]),
-      dir('P3-D01', 'Влетает почтовый жук с письмом. Звучит мягкий звон.'),
-      ...seq('P3-', 5, 7),
+      cutscene('p3.letter'),
       reward('rw-prologue-badge'), reward('rw-prologue-title'), reward('rw-prologue-buttons'),
       skill('map', [dir('P3-D02', 'Открывается карта Пушистино. Активна только Пироговая улица.'), L('P3-08')]),
       goto('P3-MAP'),
@@ -217,13 +218,14 @@ export const prologue: CaseSource = {
       activities: [],
       comfort: [],
       cutscenes: [
-        { id: 'cs-p1-enter', scene: 'P1', summary: 'Хвостс входит в Контору в облаке мыльных пузырей.' },
-        { id: 'cs-p3-letter', scene: 'P3', summary: 'Почтовый жук влетает с письмом мэра; Хвостс вручает значок стажёра.' },
+        intro,
+        p3Letter,
       ],
       decisions: [
         { id: 'P-D1', text: 'Реплика P1-08 и навык «повтор» привязаны к первому найденному предмету внутри осмотра (поле afterFirst мини-игры), как в сценарии.', ref: 'R09' },
         { id: 'P-D2', text: 'Кнопка «Сказать догадку» доступна, когда в колонке есть ✔ или осмотрены все три предмета; вводная P2-10 звучит один раз при первом появлении кнопки.', ref: 'Q14' },
         { id: 'P-D3', text: '«Помоги заполнить» в прологе предлагает стикеры, объясняя их репликами осмотра P2-06, P2-08, P2-09 (сложность 1 по D03).', ref: 'D03' },
+        { id: 'P-D5', text: 'Ролики T25: вступление без слов (один раз на профиль, навык intro) в начале P0 и прилёт письма в P3 (P3-05…P3-07 звучат внутри ролика; награды выдаются шагами после него). Вход Хвостса в P1 остаётся обычной сценой диалога: T25 его не включает.', ref: 'T25' },
         { id: 'P-D4', text: 'Пролог не содержит фактов и слов словарика: это обучение, а не дело (правило «ровно 3 факта» применяется к делам).', ref: 'T01' },
       ],
     },

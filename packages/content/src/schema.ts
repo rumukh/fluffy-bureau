@@ -1,3 +1,5 @@
+import type { CutsceneFile } from '@aegis/browser/animation';
+
 // Fluffy Bureau content pack schema (format "fluffy-content-pack", schema 1).
 // Compiled packs are plain JSON; every reference is explicit (no inheritance).
 // Deduction data embeds the @aegis/narrative DeductionCase (schema 1) verbatim.
@@ -79,10 +81,19 @@ export type Cond =
 export type Step =
   | { t: 'line'; line: LineId }
   /** Stage direction / animation cue. Not child-facing text; never voiced. */
-  | { t: 'dir'; id: string; text: string }
+  /**
+   * Stage direction / animation cue. Optional ackground (A asset ID): from this step on, until the
+   * scene ends or another dir sets one, the stage shows that background. Only at the scene's top level.
+   */
+  | { t: 'dir'; id: string; text: string; background?: string }
   /** First-encounter tutorial ([НАВЫК]). `first` plays when the profile lacks the skill, else `known`. Afterwards the skill is learned. */
   | { t: 'skill'; skill: SkillId; first: Step[]; known: Step[] }
   | { t: 'minigame'; minigame: string }
+  /**
+   * Play a cutscene (T25) from this pack's cutscenes. Blocking; completes when the player
+   * finishes or skips it. Gameplay effects never live inside a cutscene: they follow as steps.
+   */
+  | { t: 'cutscene'; cutscene: string }
   /** Reveal a clue in the notebook; enables notebook-help marks that cite it. */
   | { t: 'clue'; clue: ClueId }
   | { t: 'set'; flag: FlagId }
@@ -125,6 +136,8 @@ export interface Scene {
   location: string; // background id for A/G
   cast: SpeakerId[]; // characters on stage (the player avatar is always present)
   presentation: Presentation;
+  /** Default background (A asset ID), overriding the location's default. */
+  background?: string;
   steps: Step[];
 }
 
@@ -376,10 +389,13 @@ export interface ComfortLine {
   line: LineId;
 }
 
+/** Engine-played cutscene (T25): an aegis-cutscene/1 document (@aegis/browser/animation). */
 export interface Cutscene {
   id: string;
   scene: SceneId;
   summary: string;
+  /** Lines name this pack's line IDs; the narration pack is the content pack. advance is always input. */
+  document: CutsceneFile;
 }
 
 // ---------------------------------------------------------------- pack
@@ -411,6 +427,8 @@ export interface ContentPack {
   activities: ActivityCard[];
   comfort: ComfortLine[];
   cutscenes: Cutscene[];
+  /** Editorial plan for cutscenes not yet authored (preview packs only); never played. */
+  plannedCutscenes: { id: string; scene: SceneId; summary: string }[];
   /** Lines owned by systems not modelled by the step language yet (family mode, …); still validated and voiced. */
   reserved: { lines: LineId[]; reason: string }[];
 }

@@ -1,0 +1,33 @@
+{
+ "format": "aegis-rig/1",
+ "id": "acc.hat.detective",
+ "revision": "1",
+ "atlases": [
+  "acc.hat.detective.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -165.0,
+  "y": -209.1,
+  "width": 330,
+  "height": 246
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 165.0,
+    "y": 209.1
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "frame": "acc.hat.detective.atlas#body.rest"
+  }
+ ]
+}

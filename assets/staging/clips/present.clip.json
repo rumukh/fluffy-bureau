@@ -1,0 +1,88 @@
+{
+ "format": "aegis-clip/1",
+ "id": "present",
+ "duration": 1.2,
+ "loop": false,
+ "blend": "override",
+ "tracks": [
+  {
+   "part": "body",
+   "property": "scaleX",
+   "keys": [
+    {
+     "t": 0,
+     "v": 0.6,
+     "ease": "easeOutBack"
+    },
+    {
+     "t": 0.6,
+     "v": 1.08,
+     "ease": "easeInOutSine"
+    },
+    {
+     "t": 1.2,
+     "v": 1
+    }
+   ]
+  },
+  {
+   "part": "body",
+   "property": "scaleY",
+   "keys": [
+    {
+     "t": 0,
+     "v": 0.6,
+     "ease": "easeOutBack"
+    },
+    {
+     "t": 0.6,
+     "v": 1.08,
+     "ease": "easeInOutSine"
+    },
+    {
+     "t": 1.2,
+     "v": 1
+    }
+   ]
+  },
+  {
+   "part": "body",
+   "property": "y",
+   "keys": [
+    {
+     "t": 0,
+     "v": 40,
+     "ease": "easeOutBack"
+    },
+    {
+     "t": 0.6,
+     "v": -20,
+     "ease": "easeInOutSine"
+    },
+    {
+     "t": 1.2,
+     "v": 0
+    }
+   ]
+  },
+  {
+   "part": "body",
+   "property": "opacity",
+   "keys": [
+    {
+     "t": 0,
+     "v": 0,
+     "ease": "easeOutSine"
+    },
+    {
+     "t": 0.3,
+     "v": 1
+    },
+    {
+     "t": 1.2,
+     "v": 1
+    }
+   ]
+  }
+ ]
+}

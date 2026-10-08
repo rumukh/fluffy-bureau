@@ -184,7 +184,7 @@ export const level1: VariantSource = {
   collections: commonCollections,
   activities: [activity],
   comfort,
-  cutscenes: commonCutscenes,
+  cutscenes: [], plannedCutscenes: commonCutscenes,
   reserved: [],
   decisions: [
     ...commonDecisions,

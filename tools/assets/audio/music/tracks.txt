@@ -1,0 +1,6 @@
+title-office|92|F major
+town-map|104|C major
+investigation|84|D minor
+gentle-mystery|72|A minor
+heartfelt|66|G major
+celebration-baking|116|Bb major

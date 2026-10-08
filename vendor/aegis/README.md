@@ -5,9 +5,11 @@ The game installs the AEGIS SDK (`@aegis/core`, `@aegis/runtime`, `@aegis/narrat
 `npm run pack:sdk`. There are no registry packages, source aliases, workspace links or
 deep imports into an engine checkout.
 
-| Directory | Engine revision | Source | Consumer test |
+Previous sets: `0abd61b5a679` (public `main`, PR #16) and `711ec456e242` (E), both replaced on 2026-10-08.
+
+| Directory | Engine revision | Source | Verification |
 |---|---|---|---|
-| `0abd61b5a679/` | `0abd61b5a679020bfb66bf4db24888df9e339d4d` (`main`, PR #16) | public `rumukh/aegis-engine` | `npm run test:consumer` passed 2026-10-08 (Windows, Node 25.6.0, npm 11.8.0) |
+| `17ed4bebd329/` | `17ed4bebd329994d41aba3077926f080a15cc790` (E's branch `rumukh-fluffy-bureau-engine-extensions`; stage, animation, `puppet.onSpeech`, incremental claim ledgers) | artifact set delivered by E | E: full engine gate (2,588 tests) and `test:consumer` passed; G verified `artifacts.json` and tarball SHA-256 against E's message, then ran `npm run verify` |
 
 `artifacts.json` in each directory records the version string, every tarball's SHA-256
 and npm integrity, and the build inputs digest. `package-lock.json` pins the same integrity.

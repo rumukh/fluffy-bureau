@@ -1,0 +1,24 @@
+{
+ "format": "aegis-clip/1",
+ "id": "stars-3",
+ "duration": 0.05,
+ "loop": false,
+ "blend": "override",
+ "tracks": [
+  {
+   "part": "stars",
+   "property": "variant",
+   "keys": [
+    {
+     "t": 0,
+     "v": "3",
+     "ease": "step"
+    },
+    {
+     "t": 0.05,
+     "v": "3"
+    }
+   ]
+  }
+ ]
+}

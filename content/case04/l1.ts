@@ -104,5 +104,5 @@ export const level1: VariantSource = {
       { id: 'tables', prompt: 'C4-8-02', pageSize: 3, options: [choice('three', 'C4-8-B01', true, 'C4-8-04'), choice('four', 'C4-8-B02', false, 'C4-8-03'), choice('three-jars', 'C4-8-B03', false, 'C4-8-03')] },
     ], lines: [] } },
   ],
-  facts, glossary, rewards, collections: [], activities: [activityCard], comfort: [{ scene: '*', line: 'C4-L-01' }], cutscenes: commonCutscenes, decisions: [...baseDecisions], reserved: [{ lines: ['C4-F-01', 'C4-F-02', 'C4-F-03', 'C4-F-04', 'C4-F-05'], reason: 'семейный «Хранитель снов», Q34 handoff' }, { lines: ['C4-0-B01'], reason: 'названия новых механик и точки карты используются системами каталога' }],
+  facts, glossary, rewards, collections: [], activities: [activityCard], comfort: [{ scene: '*', line: 'C4-L-01' }], cutscenes: [], plannedCutscenes: commonCutscenes, decisions: [...baseDecisions], reserved: [{ lines: ['C4-F-01', 'C4-F-02', 'C4-F-03', 'C4-F-04', 'C4-F-05'], reason: 'семейный «Хранитель снов», Q34 handoff' }, { lines: ['C4-0-B01'], reason: 'названия новых механик и точки карты используются системами каталога' }],
 };

@@ -1,0 +1,187 @@
+{
+ "format": "aegis-rig/1",
+ "id": "avatar.fox",
+ "revision": "1",
+ "atlases": [
+  "avatar.fox.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -188.78,
+  "y": -601.34,
+  "width": 319.25,
+  "height": 601.34
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 262.2,
+    "y": 513.5
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "variants": {
+    "rest": "avatar.fox.atlas#body.rest"
+   },
+   "variant": "rest",
+   "scale": {
+    "x": 0.72,
+    "y": 0.72
+   }
+  },
+  {
+   "id": "head",
+   "parent": "body",
+   "frame": "avatar.fox.atlas#head",
+   "pivot": {
+    "x": 192.0,
+    "y": 328.8
+   },
+   "position": {
+    "x": 0.0,
+    "y": -506.4
+   },
+   "z": 20
+  },
+  {
+   "id": "eyes",
+   "parent": "head",
+   "pivot": {
+    "x": 112.2,
+    "y": 43.2
+   },
+   "position": {
+    "x": 1.8,
+    "y": -103.8
+   },
+   "z": 21,
+   "variants": {
+    "open": "avatar.fox.atlas#eyes.open",
+    "half": "avatar.fox.atlas#eyes.half",
+    "closed": "avatar.fox.atlas#eyes.closed",
+    "happy": "avatar.fox.atlas#eyes.happy"
+   },
+   "variant": "open"
+  },
+  {
+   "id": "brows",
+   "parent": "head",
+   "pivot": {
+    "x": 103.2,
+    "y": 19.2
+   },
+   "position": {
+    "x": 1.8,
+    "y": -168.0
+   },
+   "z": 22,
+   "variants": {
+    "neutral": "avatar.fox.atlas#brows.neutral",
+    "up": "avatar.fox.atlas#brows.up",
+    "worried": "avatar.fox.atlas#brows.worried"
+   },
+   "variant": "neutral"
+  },
+  {
+   "id": "mouth",
+   "parent": "head",
+   "pivot": {
+    "x": 61.2,
+    "y": 24.0
+   },
+   "position": {
+    "x": 0.0,
+    "y": -37.8
+   },
+   "z": 23,
+   "variants": {
+    "X": "avatar.fox.atlas#mouth.X",
+    "A": "avatar.fox.atlas#mouth.A",
+    "B": "avatar.fox.atlas#mouth.B",
+    "C": "avatar.fox.atlas#mouth.C",
+    "D": "avatar.fox.atlas#mouth.D",
+    "E": "avatar.fox.atlas#mouth.E",
+    "F": "avatar.fox.atlas#mouth.F"
+   },
+   "variant": "X"
+  },
+  {
+   "id": "scarf",
+   "parent": "body",
+   "frame": "avatar.fox.atlas#scarf",
+   "pivot": {
+    "x": 89.4,
+    "y": 41.16
+   },
+   "position": {
+    "x": 6.6,
+    "y": -462.84
+   },
+   "z": 15,
+   "tint": {
+    "channel": "scarf"
+   }
+  }
+ ],
+ "roles": {
+  "head": "head",
+  "lookAt": "head",
+  "eyes": "eyes",
+  "brows": "brows",
+  "mouth": "mouth"
+ },
+ "expressions": {
+  "neutral": {
+   "brows": "neutral",
+   "eyes": "open"
+  },
+  "surprised": {
+   "brows": "up"
+  },
+  "worried": {
+   "brows": "worried"
+  },
+  "happy": {
+   "eyes": "happy"
+  }
+ },
+ "emotes": {
+  "joy": {
+   "expression": "happy",
+   "clip": "cheer"
+  },
+  "nod": {
+   "expression": "neutral",
+   "clip": "nod"
+  }
+ },
+ "slots": {
+  "hat": {
+   "parent": "head",
+   "position": {
+    "x": 0,
+    "y": -243.0
+   },
+   "z": 40
+  }
+ },
+ "tints": {
+  "scarf": {
+   "default": "#c8553d"
+  }
+ },
+ "anchors": {
+  "badge": {
+   "part": "scarf",
+   "x": 89.4,
+   "y": 92.61
+  }
+ }
+}

@@ -148,6 +148,11 @@ export function exploreFlow(
           }
           break;
         }
+        case 'cutscene': {
+          const c = v.cutscenes.find((x) => x.id === s.cutscene);
+          for (const st of c?.document?.steps ?? []) if (st.op === 'line') playLine(w, st.line);
+          break;
+        }
         case 'dir': case 'await': case 'reward': break;
         case 'clue': w.st.clues.add(s.clue); report.cluesRevealed.add(s.clue); break;
         case 'set': w.st.flags.add(s.flag); break;

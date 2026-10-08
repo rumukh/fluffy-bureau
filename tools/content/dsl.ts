@@ -111,9 +111,10 @@ export function seq(prefix: string, from: number, to: number): Step[] {
   return out;
 }
 export const Ls = (...ids: string[]): Step[] => ids.map(L);
-export const dir = (id: string, text: string): Step => ({ t: 'dir', id, text });
+export const dir = (id: string, text: string, background?: string): Step => ({ t: 'dir', id, text, ...(background ? { background } : {}) });
 export const skill = (id: string, first: Step[], known: Step[] = first): Step => ({ t: 'skill', skill: id, first, known });
 export const minigame = (id: string): Step => ({ t: 'minigame', minigame: id });
+export const cutscene = (id: string): Step => ({ t: 'cutscene', cutscene: id });
 export const reveal = (clue: ClueId): Step => ({ t: 'clue', clue });
 export const set = (flag: string): Step => ({ t: 'set', flag });
 export const reward = (id: string): Step => ({ t: 'reward', reward: id });
@@ -149,6 +150,11 @@ export const cl = (line: string, cond: Cond | null = null): CondLine => ({ line,
 
 export const scene = (s: Scene): Scene => s;
 
+/** Re-points planned cutscenes at this variant's scene IDs (levels 2–3 rename level 1 scenes). */
+export function retarget<T extends { scene: string }>(plans: T[], map: Record<string, string>): T[] {
+  return plans.map((p) => (map[p.scene] ? { ...p, scene: map[p.scene]! } : p));
+}
+
 // ---------------------------------------------------------------- sources
 
 export interface SharedSource {
@@ -179,6 +185,8 @@ export interface VariantSource {
   activities: ActivityCard[];
   comfort: ComfortLine[];
   cutscenes: Cutscene[];
+  /** Cutscenes planned in the script but not yet authored as engine documents (preview cases). Never played. */
+  plannedCutscenes?: { id: string; scene: string; summary: string }[];
   /** Editorial notes on structural (non-text) normalization decisions. */
   decisions: { id: string; text: string; ref: string }[];
   /** Lines used by systems the step language does not model yet (family mode, …). */

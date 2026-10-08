@@ -1,4 +1,4 @@
-import { all, cl, dir, goto, has, L, menu, minigame, not, opt as mopt, reveal, seq, skill, type VariantSource } from '../../tools/content/dsl.ts';
+import { all, cl, dir, goto, has, L, menu, minigame, not, opt as mopt, reveal, seq, skill, type VariantSource, retarget } from '../../tools/content/dsl.ts';
 import { activity, anyOf, baseCutscenes, commonDecisions, comfort, eq, facts, finalScenes, heroCollections, intended, introScene, invitationCards, opt, rewardsFor, versionScene, what, where, who } from './common.ts';
 
 const HUB = 'C8-L2-HUB';
@@ -73,5 +73,5 @@ export const level2: VariantSource = {
       { id: 'hypothesis', prompt: null, pageSize: 3, options: [opt('hypothesis', 'C8-9-B04', true, 'C8-9-03'), opt('alibi', 'C8-9-B05', false, 'C8-9-05'), opt('motive', 'C8-9-B06', false, 'C8-9-05')] },
       { id: 'truth', prompt: null, pageSize: 3, options: [opt('truth', 'C8-9-B07', true, 'C8-9-04'), opt('hurt', 'C8-9-B08', false, 'C8-9-05'), opt('hurry', 'C8-9-B09', false, 'C8-9-05')] },
     ] } },
-  ], facts, glossary: [], rewards: rewardsFor(2), collections: heroCollections(['pukhlik', 'stella', 'fitilyok', 'damka']), activities: [activity], comfort, cutscenes: baseCutscenes, decisions: [...commonDecisions(2), { id: 'C8L2-D7', text: 'Ракушка на уровне 2 расплывчатая; точные пробелы закрывает Клубок.', ref: 'D03' }], reserved: [],
+  ], facts, glossary: [], rewards: rewardsFor(2), collections: heroCollections(['pukhlik', 'stella', 'fitilyok', 'damka']), activities: [activity], comfort, cutscenes: [], plannedCutscenes: retarget(baseCutscenes, { "C8-0": "C8-L2-0", "C8-8": "C8-L2-8", "C8-9": "C8-L2-9", "C8-12": "C8-L2-12" }), decisions: [...commonDecisions(2), { id: 'C8L2-D7', text: 'Ракушка на уровне 2 расплывчатая; точные пробелы закрывает Клубок.', ref: 'D03' }], reserved: [],
 };

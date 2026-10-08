@@ -28,22 +28,24 @@ line ID is looked up in the case pack first, then in `shared`.
 | `kind`, `title`, `case` | `prologue` or `case` (`{number, level}`); `shared` holds speakers, skills, UI labels, rewards. |
 | `start` | First scene. |
 | `lines[]` | `id`, `rev`, `kind`, `speaker`, `text` (may contain `{имя}`), optional `tts`, `voiced`, `delivery`, `note`. |
-| `scenes[]` | `id`, `title`, `location` (background id; `map` = town map), `cast`, `presentation` (`dialogue`, `cutscene`, `hub`, `minigame`), `steps[]`. |
+| `scenes[]` | `id`, `title`, `location` (background id; `map` = town map), optional `background` (A's `bg.*` ID overriding the location default), `cast`, `presentation` (`dialogue`, `cutscene`, `hub`, `minigame`), `steps[]`. |
 | `logic` | Axes with labelled values, `intended`, `clues[]` (predicate, `required`, `requires`), `version` (`button`, `available`, `onSolved`), `wrongVersion`, `redHerrings`. |
 | `deduction` | `@aegis/narrative` `DeductionCase` schema 1 (required clues only); validated with `validateDeduction` at build time. |
 | `notebookHelp` | D03: `mode` `suggest` (levels 1–2, propose sticker + reason line) or `point` (level 3, pointer line per clue). `marks[]` cite the clues that prove each mark. |
 | `hints` | `klubok` (3 per run, exact) and `shell` (unlimited; exact on level 1, vague on level 2; `null` on level 3). |
 | `minigames[]` | `id`, `skill`, `config` by `kind` (below). |
-| `facts`, `glossary`, `rewards`, `collections`, `activities`, `comfort`, `cutscenes` | Catalogs. Rewards carry `claimKey` (once per profile, Q38/Q40). |
+| `cutscenes[]` | `{ id, scene, summary, document }`; `document` is E's `aegis-cutscene/1` (see Cutscenes below). |
+| `facts`, `glossary`, `rewards`, `collections`, `activities`, `comfort` | Catalogs. Rewards carry `claimKey` (once per profile, Q38/Q40). |
 
 ### Steps
 
 | Step | Runtime behaviour |
 |---|---|
 | `line` | Show and narrate the line. |
-| `dir` | Stage direction / animation cue (`id` stable). Never shown as dialogue, never voiced. |
+| `dir` | Stage direction / animation cue (`id` stable). Never shown as dialogue, never voiced. Optional `background` (A's `bg.*` ID): from this step on, until the scene ends or another `dir` sets one, the stage shows that background. Only at the scene's top level, so the runtime can take the latest one at or before the cursor (restart-safe). |
 | `skill` | `[НАВЫК]`: play `first` when the profile lacks the skill, else `known`; then mark it learned (profile-level). |
 | `minigame` | Run the minigame; continue when complete. |
+| `cutscene` | Play `cutscenes[id].document` on the stage (T25). Blocking; completes when finished or skipped. Rewards, clues and flags are never inside a cutscene: they follow as ordinary steps, so skip, replay and restore never re-apply them. |
 | `clue` | Reveal the clue in the notebook (idempotent). |
 | `set` | Set a case-run flag (idempotent). |
 | `reward` | Grant once per `claimKey`. |
@@ -96,6 +98,36 @@ propose the first and speak its `line`; never place it. `point`: for the first s
 | `timeline` | `items[]` (`time`, `label`), `solution[]`, `wrong[]` | aegis `ordering`. |
 | `scent-pairs` | `fields[]` of `cards[]` (`pair`), `mismatch[]`, `question` | aegis `matching`; no timer. |
 | `baker` | `measures[]` (`units` = eighths of a cup), `steps[]` (`prompt`, `target`, `ideal`, `afterWrong`), `tooMuch[]`, `tooLittle[]` | Sum > target: `tooMuch` (+`afterWrong`), undo the pick. Pick outside `ideal` with sum < target: `tooLittle` (+`afterWrong`). Sum = target: next step. |
+
+## Cutscenes (T25)
+
+Documents follow `aegis-cutscene/1` (engine `docs/api/animation.md` §9, SDK 711ec45). Sources:
+`content/cutscenes/index.ts`.
+
+| Cutscene | Pack | Played in | Avatar |
+|---|---|---|---|
+| `intro` | prologue | P0, profile-once skill `intro` | no (wordless, music only) |
+| `p3.letter` | prologue | P3 | yes |
+| `c1.shed.l1` / `.l2` / `.l3` | case01-l1 / l2 / l3 | C1-7 / L2-8 / L3-9 | yes |
+| `c1.oven.l1` / `.l2` / `.l3` | case01-l1 / l2 / l3 | C1-8 / L2-9 / L3-10 | yes |
+| `c1.reward.l1` / `.l2` / `.l3` | case01-l1 / l2 / l3 (sticker rig `prop.sticker-pie-<level>`) | C1-10 | yes |
+
+- `line` steps name this pack's line IDs; the narration pack is the content pack. Only existing
+  script lines are spoken (no new text). `advance` is `"input"`: after each line the player presses
+  «Дальше»; motion without speech runs on its own.
+- `cast` keys equal speaker IDs and use the rig with the same ID; the player is `{ role: "avatar" }`.
+  Props are puppets (`prop.*`, A). States that must persist use single-state rigs (`prop.box-pie-closed` swapped for `prop.box-pie-open`, `prop.sticker-pie-N`): a clip's variant change reverts when the clip ends. Backgrounds, music (`music.*`, comfort `music.*-warm`) and sfx
+  (`sfx.*`) are A's asset IDs.
+- Camera presets and effects are fixed in `packages/content/src/stage.ts` (`CAMERA_PRESETS`,
+  `EFFECTS`); G registers exactly these on the stage.
+- Every document has markers after major beats (restore points).
+- At most 4 distinct backgrounds per cutscene, including comfort variants: G loads them together under a 128 MiB decoded-image budget (one 2560×1600 background is 16 MiB).
+- The build validates every document with `validateCutscene` (rigs, clips, expressions, emotes,
+  captioned lines, presets, effects) and checks: the cutscene exists and is played in its declared
+  scene; exactly one avatar (none in the intro); every line ID exists, is voiced dialogue of this pack,
+  is spoken by its speaker, waits for input and is spoken once; markers exist and are unique; every
+  asset ID is in `assets/manifest.json`. The flow walker counts cutscene lines for glossary
+  repetitions and red-herring explanations.
 
 ## Voice and label manifest (C → A)
 

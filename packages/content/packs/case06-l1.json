@@ -3390,7 +3390,8 @@
    "line": "C6-L-01"
   }
  ],
- "cutscenes": [
+ "cutscenes": [],
+ "plannedCutscenes": [
   {
    "id": "cs-c6-intro",
    "scene": "C6-1",
@@ -3413,5 +3414,5 @@
   }
  ],
  "reserved": [],
- "revision": "01ec51b77176beeada9ea370d55f8eebec66d273f1a99717988d86680b1fdab6"
+ "revision": "5a21fb8be1793b0aaa9f550ea5825cf85048643dd4b1ca6dbf70efdb25916378"
 }

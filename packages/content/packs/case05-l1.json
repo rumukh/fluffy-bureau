@@ -3411,7 +3411,8 @@
    "line": "C5-L-01"
   }
  ],
- "cutscenes": [
+ "cutscenes": [],
+ "plannedCutscenes": [
   {
    "id": "cs-c5-secret-note",
    "scene": "C5-2",
@@ -3434,5 +3435,5 @@
   }
  ],
  "reserved": [],
- "revision": "e02bab7a7af952ca94119b25555455c0ccf8af89aea897dc5efd14982258e4e7"
+ "revision": "da3e6543a6cb5101942d797f75a79e619984b410e87fcfaf1a99667d90f16315"
 }

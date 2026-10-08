@@ -54,6 +54,31 @@ export function renderVariant(r: BuildResult, v: VariantSource, pack: ContentPac
           out.push(`${indent}- 🎁 **Награда:** ${rw ? txt(rw.label) : s.reward}${rw && rw.amount > 1 ? ` ×${rw.amount}` : ''}`);
           break;
         }
+        case 'cutscene': {
+          const c = v.cutscenes.find((x) => x.id === s.cutscene);
+          out.push(`${indent}- 🎬 **Ролик** \`${s.cutscene}\`${c ? `: ${c.summary}` : ' ⚠ нет ролика'}`);
+          if (c?.document) {
+            const ii = `${indent}  `;
+            const cast = Object.entries(c.document.cast).map(([k, e]) => (e.role === 'avatar' ? `${k} = аватар игрока` : `${k} = ${e.rig}`));
+            out.push(`${ii}- состав: ${cast.join(', ') || '—'}; после каждой реплики — «Дальше»`);
+            for (const st of c.document.steps) {
+              if (st.op === 'line') out.push(`${ii}- ${say(st.line)}`);
+              else if (st.op === 'marker') out.push(`${ii}- ◆ метка \`${st.id}\``);
+              else if (st.op === 'background') out.push(`${ii}- _фон \`${st.asset}\`_`);
+              else if (st.op === 'music') out.push(`${ii}- _музыка ${st.asset ? `\`${st.asset}\`` : 'стихает'}_`);
+              else if (st.op === 'enter') out.push(`${ii}- _входит ${st.actor}_`);
+              else if (st.op === 'exit') out.push(`${ii}- _уходит ${st.actor}_`);
+              else if (st.op === 'pose') out.push(`${ii}- _${st.actor}: ${[st.expression && `лицо ${st.expression}`, st.clip && `движение ${st.clip}`, st.face && `смотрит ${st.face === 'left' ? 'влево' : 'вправо'}`].filter(Boolean).join(', ')}_`);
+              else if (st.op === 'emote') out.push(`${ii}- _${st.actor}: эмоция ${st.emote}_`);
+              else if (st.op === 'effect') out.push(`${ii}- _эффект ${st.effect}_`);
+              else if (st.op === 'sfx') out.push(`${ii}- _звук \`${st.asset}\`_`);
+              else if (st.op === 'camera') out.push(`${ii}- _камера ${st.preset ?? `${st.to?.x},${st.to?.y}×${st.to?.zoom}`}_`);
+              else if (st.op === 'wait' && st.seconds) out.push(`${ii}- _пауза ${st.seconds} с_`);
+              else if (st.op === 'transition') out.push(`${ii}- _переход ${st.type}_`);
+            }
+          }
+          break;
+        }
         case 'goto': out.push(`${indent}- → \`${s.scene}\``); break;
         case 'end': out.push(`${indent}- ■ конец пакета`); break;
         case 'skill':

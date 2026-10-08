@@ -4631,7 +4631,8 @@
   }
  ],
  "comfort": [],
- "cutscenes": [
+ "cutscenes": [],
+ "plannedCutscenes": [
   {
    "id": "cs-c2-office",
    "scene": "C2-0",
@@ -4654,5 +4655,5 @@
   }
  ],
  "reserved": [],
- "revision": "6ee1f4be45791062253b8895b7a1306a29f148af25e1668c88bdd5f3f60bd74b"
+ "revision": "25c13e4003634cf7ce84f0e5c0631ad2fcc3bc4de492675c5cff443b1a0417f3"
 }

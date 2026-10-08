@@ -101,7 +101,7 @@ export const level1: VariantSource = {
       { id: 'p4', prompt: null, pageSize: 3, options: [choice('h1', 'C2-8-B01', false, 'C2-8-03'), choice('h2', 'C2-8-B02', false, 'C2-8-03'), choice('h4', 'C2-8-B03', true, 'C2-8-04')] },
     ], lines: [] } },
   ],
-  facts, glossary, rewards: ['rw-c2-heart-mice', 'rw-c2-badge', 'rw-c2-buttons-l1', 'rw-c2-sticker-l1', 'rw-c2-title-helper', 'rw-c2-decor-poster', 'rw-c2-activity'], collections: [], activities: [activityCard], comfort: [], cutscenes: commonCutscenes, decisions: [...baseDecisions], reserved: [],
+  facts, glossary, rewards: ['rw-c2-heart-mice', 'rw-c2-badge', 'rw-c2-buttons-l1', 'rw-c2-sticker-l1', 'rw-c2-title-helper', 'rw-c2-decor-poster', 'rw-c2-activity'], collections: [], activities: [activityCard], comfort: [], cutscenes: [], plannedCutscenes: commonCutscenes, decisions: [...baseDecisions], reserved: [],
 };
 
 

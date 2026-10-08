@@ -2656,7 +2656,13 @@
     {
      "t": "dir",
      "id": "C1-5-D01",
-     "text": "Следы ведут к сараю Картофана. Игрок нажимает на окно. У коробки мэра в крышке окошко, в нём виден пирог."
+     "text": "Следы ведут к сараю Картофана."
+    },
+    {
+     "t": "dir",
+     "id": "C1-5-D02",
+     "text": "Игрок нажимает на окно. Окно сарая крупно: у коробки мэра в крышке окошко, в нём виден пирог.",
+     "background": "bg.shed-window"
     },
     {
      "t": "line",
@@ -2825,107 +2831,8 @@
    "presentation": "cutscene",
    "steps": [
     {
-     "t": "dir",
-     "id": "C1-7-D01",
-     "text": "Сарай Картофана: полки с рассадой, лейки, коробка мэра среди ящиков."
-    },
-    {
-     "t": "line",
-     "line": "C1-7-01"
-    },
-    {
-     "t": "line",
-     "line": "C1-7-02"
-    },
-    {
-     "t": "dir",
-     "id": "C1-7-D02",
-     "text": "Картофан шевелит носом."
-    },
-    {
-     "t": "line",
-     "line": "C1-7-03"
-    },
-    {
-     "t": "line",
-     "line": "C1-7-04"
-    },
-    {
-     "t": "line",
-     "line": "C1-7-05"
-    },
-    {
-     "t": "line",
-     "line": "C1-7-06"
-    },
-    {
-     "t": "line",
-     "line": "C1-7-07"
-    },
-    {
-     "t": "dir",
-     "id": "C1-7-D03",
-     "text": "Картофан открывает коробку. Пирог съехал набок и рассыпался."
-    },
-    {
-     "t": "line",
-     "line": "C1-7-08"
-    },
-    {
-     "t": "line",
-     "line": "C1-7-09"
-    },
-    {
-     "t": "line",
-     "line": "C1-7-10"
-    },
-    {
-     "t": "line",
-     "line": "C1-7-11"
-    },
-    {
-     "t": "line",
-     "line": "L2-8-01"
-    },
-    {
-     "t": "line",
-     "line": "L2-8-02"
-    },
-    {
-     "t": "line",
-     "line": "C1-7-12"
-    },
-    {
-     "t": "line",
-     "line": "C1-7-13"
-    },
-    {
-     "t": "line",
-     "line": "C1-7-14"
-    },
-    {
-     "t": "line",
-     "line": "C1-7-14a"
-    },
-    {
-     "t": "line",
-     "line": "C1-7-14b"
-    },
-    {
-     "t": "line",
-     "line": "L2-8-03"
-    },
-    {
-     "t": "line",
-     "line": "L2-8-04"
-    },
-    {
-     "t": "line",
-     "line": "C1-7-16"
-    },
-    {
-     "t": "line",
-     "line": "C1-7-17"
+     "t": "cutscene",
+     "cutscene": "c1.shed.l2"
     },
     {
      "t": "goto",
@@ -2969,17 +2876,8 @@
      "minigame": "c1l2-baker"
     },
     {
-     "t": "dir",
-     "id": "C1-8-D01",
-     "text": "Пирог в печи на медовой карамели, тёплый свет. Ожидание декоративное, его можно пропустить."
-    },
-    {
-     "t": "line",
-     "line": "C1-8-07"
-    },
-    {
-     "t": "line",
-     "line": "C1-8-08"
+     "t": "cutscene",
+     "cutscene": "c1.oven.l2"
     },
     {
      "t": "goto",
@@ -3047,12 +2945,8 @@
    "presentation": "cutscene",
    "steps": [
     {
-     "t": "line",
-     "line": "C1-10-01"
-    },
-    {
-     "t": "line",
-     "line": "C1-10-02"
+     "t": "cutscene",
+     "cutscene": "c1.reward.l2"
     },
     {
      "t": "reward",
@@ -4425,26 +4319,976 @@
  "comfort": [],
  "cutscenes": [
   {
-   "id": "cs-c1-intro",
-   "scene": "L2-1",
-   "summary": "Мэр Пудинг у пекарни в панике; пустая скамейка; Хвостс пускает пузыри."
-  },
-  {
-   "id": "cs-c1-shed",
+   "id": "c1.shed.l2",
    "scene": "L2-8",
-   "summary": "Картофан нюхает коробку, понимает ошибку, открывает её: пирог съехал набок."
+   "summary": "Разговор в сарае (сложность 2): как на сложности 1, плюс разбор пера и честной ошибки Стеллы; мэр извиняется перед Тёпой и Стеллой, Стелла обещает ленточку.",
+   "document": {
+    "format": "aegis-cutscene/1",
+    "id": "c1.shed.l2",
+    "revision": "1",
+    "advance": "input",
+    "cast": {
+     "kartofan": {
+      "rig": "kartofan"
+     },
+     "khvosts": {
+      "rig": "khvosts"
+     },
+     "watsony": {
+      "rig": "watsony"
+     },
+     "pudding": {
+      "rig": "pudding"
+     },
+     "tyopa": {
+      "rig": "tyopa"
+     },
+     "fitilyok": {
+      "rig": "fitilyok"
+     },
+     "player": {
+      "role": "avatar"
+     },
+     "box": {
+      "rig": "prop.box-pie-closed"
+     },
+     "boxOpen": {
+      "rig": "prop.box-pie-open"
+     },
+     "stella": {
+      "rig": "stella"
+     }
+    },
+    "steps": [
+     {
+      "op": "background",
+      "asset": "bg.shed-interior",
+      "transition": {
+       "type": "cut"
+      }
+     },
+     {
+      "op": "music",
+      "asset": "music.heartfelt",
+      "fade": 1.5,
+      "comfort": {
+       "asset": "music.heartfelt-warm"
+      }
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "cut": true
+     },
+     {
+      "op": "enter",
+      "actor": "box",
+      "from": {
+       "x": 1500,
+       "y": 1520
+      },
+      "to": {
+       "x": 1500,
+       "y": 1520
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "box",
+      "clip": "present"
+     },
+     {
+      "op": "enter",
+      "actor": "kartofan",
+      "from": "right",
+      "to": {
+       "x": 1850,
+       "y": 1450
+      },
+      "duration": 0.8,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "watsony",
+      "from": "left",
+      "to": {
+       "x": 380,
+       "y": 1450
+      },
+      "duration": 1.2,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "player",
+      "from": "left",
+      "to": {
+       "x": 700,
+       "y": 1450
+      },
+      "duration": 1.2,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "khvosts",
+      "from": "left",
+      "to": {
+       "x": 1020,
+       "y": 1450
+      },
+      "duration": 1.2,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "pudding",
+      "from": "left",
+      "to": {
+       "x": 1300,
+       "y": 1450
+      },
+      "duration": 1.4,
+      "wait": false
+     },
+     {
+      "op": "join"
+     },
+     {
+      "op": "pose",
+      "actor": "kartofan",
+      "face": "left"
+     },
+     {
+      "op": "marker",
+      "id": "shed.arrive"
+     },
+     {
+      "op": "line",
+      "actor": "kartofan",
+      "line": "C1-7-01"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C1-7-02"
+     },
+     {
+      "op": "marker",
+      "id": "shed.sniff"
+     },
+     {
+      "op": "camera",
+      "preset": "close-right",
+      "duration": 1.2,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "move",
+      "actor": "kartofan",
+      "to": {
+       "x": 1700,
+       "y": 1450
+      },
+      "duration": 0.6
+     },
+     {
+      "op": "pose",
+      "actor": "kartofan",
+      "clip": "sniff",
+      "wait": true
+     },
+     {
+      "op": "pose",
+      "actor": "kartofan",
+      "expression": "surprised"
+     },
+     {
+      "op": "line",
+      "actor": "kartofan",
+      "line": "C1-7-03"
+     },
+     {
+      "op": "pose",
+      "actor": "kartofan",
+      "expression": "worried"
+     },
+     {
+      "op": "line",
+      "actor": "kartofan",
+      "line": "C1-7-04"
+     },
+     {
+      "op": "line",
+      "actor": "kartofan",
+      "line": "C1-7-05"
+     },
+     {
+      "op": "pose",
+      "actor": "kartofan",
+      "clip": "bow",
+      "wait": true
+     },
+     {
+      "op": "line",
+      "actor": "kartofan",
+      "line": "C1-7-06"
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "duration": 1.2,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "pose",
+      "actor": "pudding",
+      "expression": "happy"
+     },
+     {
+      "op": "line",
+      "actor": "pudding",
+      "line": "C1-7-07"
+     },
+     {
+      "op": "marker",
+      "id": "shed.box"
+     },
+     {
+      "op": "camera",
+      "preset": "close-right",
+      "duration": 1.2,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "pose",
+      "actor": "box",
+      "clip": "wobble",
+      "wait": true
+     },
+     {
+      "op": "exit",
+      "actor": "box",
+      "to": {
+       "x": 1500,
+       "y": 1520
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "enter",
+      "actor": "boxOpen",
+      "from": {
+       "x": 1500,
+       "y": 1520
+      },
+      "to": {
+       "x": 1500,
+       "y": 1520
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.pick-up",
+      "gain": 0.8
+     },
+     {
+      "op": "pose",
+      "actor": "pudding",
+      "expression": "surprised"
+     },
+     {
+      "op": "pose",
+      "actor": "kartofan",
+      "clip": "shrug-shy",
+      "wait": true
+     },
+     {
+      "op": "line",
+      "actor": "kartofan",
+      "line": "C1-7-08"
+     },
+     {
+      "op": "pose",
+      "actor": "pudding",
+      "expression": "neutral"
+     },
+     {
+      "op": "pose",
+      "actor": "kartofan",
+      "expression": "happy"
+     },
+     {
+      "op": "line",
+      "actor": "kartofan",
+      "line": "C1-7-09"
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "duration": 1.2,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "enter",
+      "actor": "tyopa",
+      "from": "right",
+      "to": {
+       "x": 2150,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "fitilyok",
+      "from": "right",
+      "to": {
+       "x": 2280,
+       "y": 950
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "join"
+     },
+     {
+      "op": "pose",
+      "actor": "fitilyok",
+      "clip": "hover",
+      "wait": false
+     },
+     {
+      "op": "marker",
+      "id": "shed.herrings"
+     },
+     {
+      "op": "effect",
+      "effect": "bubbles",
+      "at": {
+       "x": 1020,
+       "y": 650
+      },
+      "duration": 3,
+      "wait": false
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.bubbles",
+      "gain": 0.4
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C1-7-10"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C1-7-11"
+     },
+     {
+      "op": "enter",
+      "actor": "stella",
+      "from": "right",
+      "to": {
+       "x": 1900,
+       "y": 900
+      },
+      "duration": 0.9,
+      "wait": false
+     },
+     {
+      "op": "pose",
+      "actor": "stella",
+      "clip": "hover",
+      "wait": false
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "L2-8-01"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "L2-8-02"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C1-7-12"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C1-7-13"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C1-7-14"
+     },
+     {
+      "op": "emote",
+      "actor": "khvosts",
+      "emote": "nod"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C1-7-14a"
+     },
+     {
+      "op": "emote",
+      "actor": "player",
+      "emote": "joy"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C1-7-14b"
+     },
+     {
+      "op": "emote",
+      "actor": "fitilyok",
+      "emote": "joy"
+     },
+     {
+      "op": "pose",
+      "actor": "pudding",
+      "face": "right"
+     },
+     {
+      "op": "pose",
+      "actor": "pudding",
+      "clip": "bow",
+      "wait": true
+     },
+     {
+      "op": "line",
+      "actor": "pudding",
+      "line": "L2-8-03"
+     },
+     {
+      "op": "pose",
+      "actor": "stella",
+      "expression": "happy"
+     },
+     {
+      "op": "line",
+      "actor": "stella",
+      "line": "L2-8-04"
+     },
+     {
+      "op": "pose",
+      "actor": "tyopa",
+      "face": "left"
+     },
+     {
+      "op": "pose",
+      "actor": "tyopa",
+      "expression": "happy"
+     },
+     {
+      "op": "line",
+      "actor": "tyopa",
+      "line": "C1-7-16"
+     },
+     {
+      "op": "marker",
+      "id": "shed.solved"
+     },
+     {
+      "op": "pose",
+      "actor": "khvosts",
+      "expression": "happy"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C1-7-17"
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.success",
+      "gain": 0.8
+     },
+     {
+      "op": "effect",
+      "effect": "confetti",
+      "at": {
+       "x": 1280,
+       "y": 700
+      },
+      "duration": 2.5,
+      "wait": false
+     },
+     {
+      "op": "emote",
+      "actor": "player",
+      "emote": "joy"
+     },
+     {
+      "op": "marker",
+      "id": "shed.end"
+     }
+    ]
+   }
   },
   {
-   "id": "cs-c1-oven",
+   "id": "c1.oven.l2",
    "scene": "L2-9",
-   "summary": "Пирог в печи, тёплый свет, все герои вокруг стола."
+   "summary": "Пирог в печи на медовой карамели, тёплый свет; Тёпа и мэр радуются. Ожидание декоративное, ролик можно пропустить.",
+   "document": {
+    "format": "aegis-cutscene/1",
+    "id": "c1.oven.l2",
+    "revision": "1",
+    "advance": "input",
+    "cast": {
+     "pudding": {
+      "rig": "pudding"
+     },
+     "tyopa": {
+      "rig": "tyopa"
+     },
+     "kartofan": {
+      "rig": "kartofan"
+     },
+     "player": {
+      "role": "avatar"
+     },
+     "pie": {
+      "rig": "prop.pie-baked"
+     }
+    },
+    "steps": [
+     {
+      "op": "background",
+      "asset": "bg.bakery-oven",
+      "transition": {
+       "type": "cut"
+      }
+     },
+     {
+      "op": "music",
+      "asset": "music.celebration-baking",
+      "fade": 1.5,
+      "comfort": {
+       "asset": "music.celebration-baking-warm"
+      }
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "cut": true
+     },
+     {
+      "op": "enter",
+      "actor": "pudding",
+      "from": "left",
+      "to": {
+       "x": 1000,
+       "y": 1450
+      },
+      "duration": 0.8,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "player",
+      "from": "left",
+      "to": {
+       "x": 1350,
+       "y": 1450
+      },
+      "duration": 0.8,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "kartofan",
+      "from": "right",
+      "to": {
+       "x": 1750,
+       "y": 1450
+      },
+      "duration": 0.8,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "tyopa",
+      "from": "right",
+      "to": {
+       "x": 2100,
+       "y": 1450
+      },
+      "duration": 0.8,
+      "wait": false
+     },
+     {
+      "op": "join"
+     },
+     {
+      "op": "marker",
+      "id": "oven.baking"
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.oven",
+      "gain": 0.6
+     },
+     {
+      "op": "camera",
+      "preset": "close-left",
+      "duration": 1.5,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "effect",
+      "effect": "glow",
+      "at": {
+       "x": 640,
+       "y": 820
+      },
+      "duration": 4,
+      "wait": false
+     },
+     {
+      "op": "effect",
+      "effect": "steam",
+      "at": {
+       "x": 640,
+       "y": 700
+      },
+      "duration": 4,
+      "wait": false
+     },
+     {
+      "op": "wait",
+      "seconds": 2.5
+     },
+     {
+      "op": "enter",
+      "actor": "pie",
+      "from": {
+       "x": 1500,
+       "y": 1400
+      },
+      "to": {
+       "x": 1500,
+       "y": 1400
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "pie",
+      "clip": "present"
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "duration": 1.2,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "pose",
+      "actor": "tyopa",
+      "face": "left"
+     },
+     {
+      "op": "pose",
+      "actor": "tyopa",
+      "expression": "happy"
+     },
+     {
+      "op": "line",
+      "actor": "tyopa",
+      "line": "C1-8-07"
+     },
+     {
+      "op": "pose",
+      "actor": "pudding",
+      "face": "right"
+     },
+     {
+      "op": "emote",
+      "actor": "pudding",
+      "emote": "joy"
+     },
+     {
+      "op": "line",
+      "actor": "pudding",
+      "line": "C1-8-08"
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.sparkle",
+      "gain": 0.8
+     },
+     {
+      "op": "effect",
+      "effect": "sparkles",
+      "at": {
+       "x": 1350,
+       "y": 900
+      },
+      "duration": 1.5,
+      "wait": false
+     },
+     {
+      "op": "marker",
+      "id": "oven.end"
+     }
+    ]
+   }
   },
   {
-   "id": "cs-c1-reward",
+   "id": "c1.reward.l2",
    "scene": "C1-10",
-   "summary": "Вручение значка-лапки «Пирог найден», корзинка черники для Конторы."
+   "summary": "Награда в Конторе: значок-лапка «Пирог найден», стикер в альбом (звёздочки по сложности), корзинка черники. Сами награды выдаются шагами после ролика.",
+   "document": {
+    "format": "aegis-cutscene/1",
+    "id": "c1.reward.l2",
+    "revision": "1",
+    "advance": "input",
+    "cast": {
+     "khvosts": {
+      "rig": "khvosts"
+     },
+     "watsony": {
+      "rig": "watsony"
+     },
+     "player": {
+      "role": "avatar"
+     },
+     "badge": {
+      "rig": "prop.badge-pie-found"
+     },
+     "sticker": {
+      "rig": "prop.sticker-pie-2"
+     },
+     "basket": {
+      "rig": "prop.blueberry-basket"
+     }
+    },
+    "steps": [
+     {
+      "op": "background",
+      "asset": "bg.office",
+      "transition": {
+       "type": "cut"
+      }
+     },
+     {
+      "op": "music",
+      "asset": "music.celebration-baking",
+      "fade": 1.5,
+      "comfort": {
+       "asset": "music.celebration-baking-warm"
+      }
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "cut": true
+     },
+     {
+      "op": "enter",
+      "actor": "watsony",
+      "from": "left",
+      "to": {
+       "x": 600,
+       "y": 1450
+      },
+      "duration": 0.8,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "player",
+      "from": "left",
+      "to": {
+       "x": 1050,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "khvosts",
+      "from": "right",
+      "to": {
+       "x": 1700,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "join"
+     },
+     {
+      "op": "pose",
+      "actor": "khvosts",
+      "face": "left"
+     },
+     {
+      "op": "marker",
+      "id": "reward.solved"
+     },
+     {
+      "op": "pose",
+      "actor": "khvosts",
+      "expression": "happy"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C1-10-01"
+     },
+     {
+      "op": "marker",
+      "id": "reward.badge"
+     },
+     {
+      "op": "camera",
+      "preset": "close-center",
+      "duration": 1.2,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "enter",
+      "actor": "badge",
+      "from": {
+       "x": 1280,
+       "y": 900
+      },
+      "to": {
+       "x": 1280,
+       "y": 900
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "badge",
+      "clip": "present"
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.reward",
+      "gain": 0.8
+     },
+     {
+      "op": "effect",
+      "effect": "sparkles",
+      "at": {
+       "x": 1280,
+       "y": 900
+      },
+      "duration": 2,
+      "wait": false
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C1-10-02"
+     },
+     {
+      "op": "emote",
+      "actor": "player",
+      "emote": "joy"
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "duration": 1.2,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "marker",
+      "id": "reward.sticker"
+     },
+     {
+      "op": "enter",
+      "actor": "sticker",
+      "from": {
+       "x": 1650,
+       "y": 700
+      },
+      "to": {
+       "x": 1650,
+       "y": 700
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "sticker",
+      "clip": "present"
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.sticker-check",
+      "gain": 0.6
+     },
+     {
+      "op": "enter",
+      "actor": "basket",
+      "from": {
+       "x": 900,
+       "y": 1300
+      },
+      "to": {
+       "x": 900,
+       "y": 1300
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "basket",
+      "clip": "present"
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.pick-up",
+      "gain": 0.5
+     },
+     {
+      "op": "emote",
+      "actor": "watsony",
+      "emote": "joy"
+     },
+     {
+      "op": "wait",
+      "seconds": 1.5
+     },
+     {
+      "op": "marker",
+      "id": "reward.end"
+     }
+    ]
+   }
   }
  ],
+ "plannedCutscenes": [],
  "reserved": [],
- "revision": "2c2918adea95fc8b95911788664d0538b3307fb16af6a00e9ac70e5f6ab7172b"
+ "revision": "603252f09aa556883c1a2f9765ef3aa2ba847d4c6ed16fa0569d5f83a08fa901"
 }

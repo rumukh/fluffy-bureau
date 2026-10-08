@@ -65,7 +65,7 @@ export const level1: VariantSource = {
     { id: 'c6l1-compass', skill: 'compass', config: { kind: 'staged', mechanic: 'Компас', description: 'Повернуть карту по стрелке компаса и выбрать северный корень.', steps: [ { id: 'map', prompt: 'C6-5-04', pageSize: 3, options: [opt('left', 'C6-5-B04', false, 'C6-5-10'), opt('right', 'C6-5-B05', false, 'C6-5-10'), opt('match', 'C6-5-B06', true, 'C6-5-11')] }, { id: 'root', prompt: 'C6-5-12', pageSize: 3, options: [opt('north', 'C6-5-B07', true, 'C6-5-13'), opt('south', 'C6-5-B08', false, 'C6-5-12'), opt('west', 'C6-5-B09', false, 'C6-5-12'), opt('east', 'C6-5-B10', false, 'C6-5-12')] } ], lines: ['C6-5-10', 'C6-5-11', 'C6-5-12', 'C6-5-13'] } },
     directionsMinigame('c6l1-alley', 1),
   ],
-  facts, glossary, rewards: ['rw-c6-badge', 'rw-c6-buttons-l1', 'rw-c6-sticker-l1', 'rw-c6-decor-compass', 'rw-c6-title-detective', 'rw-c6-activity'], collections, activities: [activity], comfort, cutscenes: commonCutscenes, decisions: [
+  facts, glossary, rewards: ['rw-c6-badge', 'rw-c6-buttons-l1', 'rw-c6-sticker-l1', 'rw-c6-decor-compass', 'rw-c6-title-detective', 'rw-c6-activity'], collections, activities: [activity], comfort, cutscenes: [], plannedCutscenes: commonCutscenes, decisions: [
     { id: 'C6L1-D1', text: 'Кнопка версии — «Проверить версию», потому что Серую Тень нельзя пригласить на разговор.', ref: 'D08' },
     { id: 'C6L1-D2', text: 'Время карточек уточнено: дождь закончился в 2:30, под карточками сухо, мышата спят с 2:00, Стелла спит до 6:00.', ref: 'R03' },
     { id: 'C6L1-D3', text: 'Все четыре карточки-символа находятся на обязательном пути и входят в коллекцию symbol-cards.', ref: 'D10' },

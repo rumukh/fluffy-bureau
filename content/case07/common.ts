@@ -153,7 +153,7 @@ export const commonCollections: VariantSource['collections'] = [
   { id: 'c7-symbol-heart', collection: 'symbol-cards', label: 'C7-COL-heart', line: 'C7-4-09' },
 ];
 
-export const commonCutscenes: VariantSource['cutscenes'] = [
+export const commonCutscenes: NonNullable<VariantSource['plannedCutscenes']> = [
   { id: 'cs-c7-intro', scene: 'C7-0', summary: 'Пудинг зовёт Бюро на залитую площадь; утки плавают у фонтана.' },
   { id: 'cs-c7-secret', scene: 'C7-4', summary: 'Ночная запись у шлюза показывает тихое «ух»; под брёвнами найдены колокольчик и сердечко.' },
   { id: 'cs-c7-resolution', scene: 'C7-8', summary: 'Дамка признаётся: строила новый шлюз с водяным салютом и не успела до дождя.' },

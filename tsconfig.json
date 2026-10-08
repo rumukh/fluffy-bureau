@@ -11,6 +11,7 @@
     "apps/*/test/**/*.ts",
     "e2e/**/*.ts",
     "tools/**/*.ts",
+    "content/**/*.ts",
     "*.config.ts"
   ]
 }

@@ -4005,10 +4005,11 @@
    "line": "C6-L-01"
   }
  ],
- "cutscenes": [
+ "cutscenes": [],
+ "plannedCutscenes": [
   {
    "id": "cs-c6-intro",
-   "scene": "C6-1",
+   "scene": "C6-L2-1",
    "summary": "Пустая витрина мэрии, Пудинг паникует, Хвостс открывает Блокнот."
   },
   {
@@ -4028,5 +4029,5 @@
   }
  ],
  "reserved": [],
- "revision": "79c6198bdcd1f918cbc6a0c9b793a91f0e8b898d79be874609589c02b8810f09"
+ "revision": "f0afab3130a1a1e300047af9aa379417270ee35ddb0a0ae9003ec8d48cc1acf7"
 }

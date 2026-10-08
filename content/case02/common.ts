@@ -103,7 +103,7 @@ export const rewardScene = (level: 1 | 2 | 3): VariantSource['scenes'][number] =
     { t: 'end' },
   ],
 });
-export const commonCutscenes: VariantSource['cutscenes'] = [
+export const commonCutscenes: NonNullable<VariantSource['plannedCutscenes']> = [
   { id: 'cs-c2-office', scene: 'C2-0', summary: 'Почтовый жук не прилетает; мэр сообщает о пропаже писем.' },
   { id: 'cs-c2-oak', scene: 'C2-7', summary: 'Стелла показывает сухие письма в гнезде и объясняет, что спасла их от дождя.' },
   { id: 'cs-c2-exhibition', scene: 'C2-8', summary: 'Жители развешивают приглашения на Выставке писем.' },

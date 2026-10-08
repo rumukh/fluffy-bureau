@@ -1,0 +1,84 @@
+{
+ "id": "avatar.mouse",
+ "dir": "avatar_mouse",
+ "base": "puppets/avatar_mouse/base.png",
+ "creature": "young little mouse child",
+ "editCrop": [
+  271,
+  200,
+  512
+ ],
+ "neck": {
+  "y": 636,
+  "overlap": 18,
+  "pivot": [
+   512,
+   646
+  ]
+ },
+ "features": {
+  "eyes": {
+   "ellipses": [
+    [
+     521,
+     462,
+     180,
+     62
+    ]
+   ],
+   "variants": [
+    "half",
+    "closed",
+    "happy"
+   ]
+  },
+  "brows": {
+   "ellipses": [
+    [
+     511,
+     352,
+     160,
+     24
+    ]
+   ],
+   "variants": [
+    "up",
+    "worried"
+   ]
+  },
+  "mouth": {
+   "ellipses": [
+    [
+     513,
+     574,
+     80,
+     30
+    ]
+   ],
+   "variants": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+   ]
+  }
+ },
+ "avatar": {
+  "scarf": {
+   "y": [
+    586,
+    1090
+   ],
+   "x": [
+    262,
+    762
+   ],
+   "satMax": 0.24,
+   "valMin": 0.55
+  }
+ },
+ "bodyVariants": {},
+ "scale": 0.72
+}

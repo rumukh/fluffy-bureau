@@ -161,7 +161,7 @@ export const level1: VariantSource = {
   collections,
   activities: [activity],
   comfort: commonComfort,
-  cutscenes: commonCutscenes,
+  cutscenes: [], plannedCutscenes: commonCutscenes,
   decisions: [
     { id: 'C3L1-D1', text: 'C3-3 сделана обязательным шлюзом перед осмотром маяка и следов, чтобы Тайная заметка не пропускалась.', ref: 'D06, Q21' },
     { id: 'C3L1-D2', text: '«Услышь разницу» описана как staged-механика с визуальными волнами и иконками характера звука.', ref: 'Q31, R09' },

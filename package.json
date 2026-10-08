@@ -21,7 +21,8 @@
     "dev": "npm run dev -w @fluffy/game",
     "build": "npm run build -w @fluffy/game",
     "preview": "npm run preview -w @fluffy/game",
-    "verify": "npm run typecheck && npm run lint && npm run test && npm run build && npm run test:e2e"
+    "content:check": "node tools/content/build.ts --check",
+    "verify": "npm run content:check && npm run typecheck && npm run lint && npm run test && npm run build && npm run test:e2e"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -38,9 +39,9 @@
     "vitest": "^4.1.0"
   },
   "dependencies": {
-    "@aegis/browser": "file:vendor/aegis/0abd61b5a679/aegis-browser-0.0.0-local.r0abd61b5a679.dc349e8c5ff2bae20.tgz",
-    "@aegis/core": "file:vendor/aegis/0abd61b5a679/aegis-core-0.0.0-local.r0abd61b5a679.dc349e8c5ff2bae20.tgz",
-    "@aegis/narrative": "file:vendor/aegis/0abd61b5a679/aegis-narrative-0.0.0-local.r0abd61b5a679.dc349e8c5ff2bae20.tgz",
-    "@aegis/runtime": "file:vendor/aegis/0abd61b5a679/aegis-runtime-0.0.0-local.r0abd61b5a679.dc349e8c5ff2bae20.tgz"
+    "@aegis/browser": "file:vendor/aegis/17ed4bebd329/aegis-browser-0.0.0-local.r17ed4bebd329.d1aa7062366d08df3.tgz",
+    "@aegis/core": "file:vendor/aegis/17ed4bebd329/aegis-core-0.0.0-local.r17ed4bebd329.d1aa7062366d08df3.tgz",
+    "@aegis/narrative": "file:vendor/aegis/17ed4bebd329/aegis-narrative-0.0.0-local.r17ed4bebd329.d1aa7062366d08df3.tgz",
+    "@aegis/runtime": "file:vendor/aegis/17ed4bebd329/aegis-runtime-0.0.0-local.r17ed4bebd329.d1aa7062366d08df3.tgz"
   }
 }

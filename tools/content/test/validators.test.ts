@@ -108,4 +108,33 @@ describe('content build', () => {
       sc.steps.splice(6, 0, { t: 'if', when: { clue: 'c1-mayor' }, then: [], else: [] });
     })).toContain('RESTART-SAFETY');
   });
-});
+  describe('cutscenes (T25)', () => {
+    const shed = (s: Src) => variant(s, 'case01-l1').cutscenes.find((c) => c.id === 'c1.shed.l1')!.document;
+    it('fails on an unknown line ID', () => {
+      expect(codes((s) => { const d = shed(s); (d.steps as unknown[]).push({ op: 'line', actor: 'khvosts', line: 'C1-7-99' }); })).toContain('CUTSCENE-LINE');
+    });
+    it('fails when the avatar role is missing', () => {
+      expect(codes((s) => { const d = shed(s) as { cast: Record<string, unknown> }; delete d.cast['player']; })).toContain('CUTSCENE-AVATAR');
+    });
+    it('fails when a line is given to the wrong speaker', () => {
+      expect(codes((s) => { const d = shed(s); const st = d.steps.find((x) => x.op === 'line') as { actor?: string }; st.actor = 'khvosts'; })).toContain('CUTSCENE-SPEAKER');
+    });
+    it('fails when a line does not wait for «Дальше»', () => {
+      expect(codes((s) => { const d = shed(s); const st = d.steps.find((x) => x.op === 'line') as { advance?: string }; st.advance = 'auto'; })).toContain('CUTSCENE-ADVANCE');
+    });
+    it('fails on unknown assets and engine-invalid references', () => {
+      const c = codes((s) => { const d = shed(s); (d.steps as unknown[]).unshift({ op: 'background', asset: 'bg.nowhere' }, { op: 'camera', preset: 'dolly' }); });
+      expect(c).toContain('CUTSCENE-ASSET');
+      expect(c.some((x) => x.startsWith('E:'))).toBe(true);
+    });
+    it('fails on an unknown or nested stage background', () => {
+      expect(codes((s) => { const sc = variant(s, 'case01-l1').scenes.find((x) => x.id === 'C1-5')!; sc.background = 'bg.nowhere'; })).toContain('BACKGROUND');
+      expect(codes((s) => { const sc = variant(s, 'case01-l1').scenes.find((x) => x.id === 'C1-5')!; sc.steps.unshift({ t: 'if', when: { flag: 'x' }, then: [{ t: 'dir', id: 'X-D01', text: 'x', background: 'bg.office' }], else: [] }); })).toContain('BACKGROUND');
+    });
+    it('fails when a cutscene loads more than four backgrounds', () => {
+      expect(codes((s) => { const d = shed(s); (d.steps as unknown[]).unshift(...['bg.office', 'bg.bench', 'bg.garden', 'bg.post'].map((asset) => ({ op: 'background', asset }))); })).toContain('CUTSCENE-BUDGET');
+    });
+    it('fails when a cutscene step names an unknown cutscene', () => {
+      expect(codes((s) => { const sc = variant(s, 'case01-l1').scenes.find((x) => x.id === 'C1-7')!; sc.steps[0] = { t: 'cutscene', cutscene: 'c1.nope' }; })).toContain('REF-CUTSCENE');
+    });
+  });});

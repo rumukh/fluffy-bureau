@@ -1,7 +1,7 @@
 // Building blocks shared by the three case 1 variants. Each variant still compiles to an
 // explicit, self-contained pack: these helpers only avoid retyping identical data.
 import {
-  cl, dir, goto, L, Ls, reward, seq, skill, wait, type VariantSource,
+  cl, cutscene, dir, goto, Ls, reward, seq, skill, wait, type VariantSource,
 } from '../../tools/content/dsl.ts';
 import type { ChoiceOption, Fact, GlossaryEntry, Predicate, Step } from '../../packages/content/src/schema.ts';
 
@@ -83,15 +83,6 @@ export const versionScene = (id: string, hub: string): VariantSource['scenes'][n
   steps: [skill('version', seq('C1-6-', 1, 4)), goto(hub)],
 });
 
-export const shedOpening = (): Step[] => [
-  dir('C1-7-D01', 'Сарай Картофана: полки с рассадой, лейки, коробка мэра среди ящиков.'),
-  ...seq('C1-7-', 1, 2),
-  dir('C1-7-D02', 'Картофан шевелит носом.'),
-  ...seq('C1-7-', 3, 7),
-  dir('C1-7-D03', 'Картофан открывает коробку. Пирог съехал набок и рассыпался.'),
-  ...seq('C1-7-', 8, 11),
-];
-
 export const factsScene = (): VariantSource['scenes'][number] => ({
   id: 'C1-9', title: '«А ты знал?»', location: 'bakery', cast: ['watsony'], presentation: 'dialogue',
   steps: [skill('encyclopedia', [dir('C1-9-D01', 'Карточки в рамочке «Это правда» складываются в Энциклопедию.')]), ...seq('C1-9-', 1, 4)],
@@ -100,7 +91,7 @@ export const factsScene = (): VariantSource['scenes'][number] => ({
 export const rewardScene = (level: 1 | 2 | 3, next: Step[]): VariantSource['scenes'][number] => ({
   id: 'C1-10', title: 'Награда и переход', location: 'office', cast: ['khvosts', 'watsony'], presentation: 'cutscene',
   steps: [
-    L('C1-10-01'), L('C1-10-02'),
+    cutscene(`c1.reward.l${level}`),
     reward('rw-c1-badge'), reward(`rw-c1-buttons-l${level}`), reward(`rw-c1-sticker-l${level}`),
     reward('rw-c1-decor-basket'), reward('rw-c1-activity'),
     dir('C1-10-D01', 'Новые слова в «Словарике сыщика»: улика, свидетель, версия.'),
@@ -113,15 +104,6 @@ export const bakerMeasures = [
   { id: 'cup', label: 'C1-8-B01', units: 8 },
   { id: 'half', label: 'C1-8-B02', units: 4 },
   { id: 'spoon', label: 'C1-8-B03', units: 1 },
-];
-
-export const oven = (): Step => dir('C1-8-D01', 'Пирог в печи на медовой карамели, тёплый свет. Ожидание декоративное, его можно пропустить.');
-
-export const commonCutscenes: VariantSource['cutscenes'] = [
-  { id: 'cs-c1-intro', scene: 'C1-1', summary: 'Мэр Пудинг у пекарни в панике; пустая скамейка; Хвостс пускает пузыри.' },
-  { id: 'cs-c1-shed', scene: 'C1-7', summary: 'Картофан нюхает коробку, понимает ошибку, открывает её: пирог съехал набок.' },
-  { id: 'cs-c1-oven', scene: 'C1-8', summary: 'Пирог в печи, тёплый свет, все герои вокруг стола.' },
-  { id: 'cs-c1-reward', scene: 'C1-10', summary: 'Вручение значка-лапки «Пирог найден», корзинка черники для Конторы.' },
 ];
 
 export { cl };

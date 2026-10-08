@@ -1,0 +1,90 @@
+{
+ "id": "stella",
+ "base": "puppets/stella/base.png",
+ "creature": "magpie bird with a small dark beak",
+ "editCrop": [
+  256,
+  19,
+  512
+ ],
+ "neck": {
+  "y": 470,
+  "overlap": 18,
+  "pivot": [
+   512,
+   480
+  ]
+ },
+ "features": {
+  "eyes": {
+   "ellipses": [
+    [
+     414,
+     297,
+     62,
+     58
+    ],
+    [
+     606,
+     297,
+     62,
+     58
+    ]
+   ],
+   "variants": [
+    "half",
+    "closed",
+    "happy",
+    "wide",
+    "worried"
+   ],
+   "phrases": {
+    "happy": "both eyes closed in happy upward curved arcs, smiling eyes",
+    "wide": "both eyes opened wide and round in gentle surprise, bright highlights",
+    "worried": "both eyes looking slightly up with the upper lids tilted at the inner corners, a gentle worried, apologetic look"
+   }
+  },
+  "mouth": {
+   "ellipses": [
+    [
+     513,
+     352,
+     80,
+     48
+    ]
+   ],
+   "variants": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+   ],
+   "phrases": {
+    "A": "the beak firmly closed",
+    "B": "the beak very slightly open, a thin gap between the upper and lower beak",
+    "C": "the beak open medium, showing a little pink inside",
+    "D": "the beak wide open, showing the pink inside and a tiny tongue",
+    "E": "the beak open in a rounded way, medium-small opening",
+    "F": "the beak almost closed with a tiny round opening at the tip"
+   }
+  }
+ },
+ "bodyVariants": {},
+ "expressions": {
+  "neutral": {
+   "eyes": "open"
+  },
+  "surprised": {
+   "eyes": "wide"
+  },
+  "worried": {
+   "eyes": "worried"
+  },
+  "happy": {
+   "eyes": "happy"
+  }
+ },
+ "scale": 0.8
+}

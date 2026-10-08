@@ -1,0 +1,84 @@
+{
+ "id": "avatar.squirrel",
+ "dir": "avatar_squirrel",
+ "base": "puppets/avatar_squirrel/base.png",
+ "creature": "young red squirrel child",
+ "editCrop": [
+  226,
+  200,
+  512
+ ],
+ "neck": {
+  "y": 646,
+  "overlap": 18,
+  "pivot": [
+   480,
+   656
+  ]
+ },
+ "features": {
+  "eyes": {
+   "ellipses": [
+    [
+     482,
+     472,
+     175,
+     62
+    ]
+   ],
+   "variants": [
+    "half",
+    "closed",
+    "happy"
+   ]
+  },
+  "brows": {
+   "ellipses": [
+    [
+     482,
+     358,
+     160,
+     20
+    ]
+   ],
+   "variants": [
+    "up",
+    "worried"
+   ]
+  },
+  "mouth": {
+   "ellipses": [
+    [
+     477,
+     582,
+     85,
+     30
+    ]
+   ],
+   "variants": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+   ]
+  }
+ },
+ "avatar": {
+  "scarf": {
+   "y": [
+    596,
+    1090
+   ],
+   "x": [
+    230,
+    730
+   ],
+   "satMax": 0.24,
+   "valMin": 0.55
+  }
+ },
+ "bodyVariants": {},
+ "scale": 0.72
+}

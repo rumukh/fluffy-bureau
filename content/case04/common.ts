@@ -98,7 +98,7 @@ export const rewardScene = (level: 1 | 2 | 3): VariantSource['scenes'][number] =
     { t: 'end' },
   ],
 });
-export const commonCutscenes: VariantSource['cutscenes'] = [
+export const commonCutscenes: NonNullable<VariantSource['plannedCutscenes']> = [
   { id: 'cs-c4-office', scene: 'C4-0', summary: 'Мэр сообщает о пропаже варенья; Хвостс смутно вспоминает что-то.' },
   { id: 'cs-c4-cellar', scene: 'C4-1', summary: 'Освещённый погреб: пустые полки, липкие лапки мэра, Хвостс вписывает себя в подозреваемые.' },
   { id: 'cs-c4-pantry', scene: 'C4-7', summary: 'В кладовке Конторы находятся банки и записка Хвостса; он извиняется.' },
