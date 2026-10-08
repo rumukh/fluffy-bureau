@@ -177,7 +177,24 @@ export class App {
       else if (ready) void this.offline.update();
     });
     // Updates arrive quietly while playing: when the device comes back online and twice an hour.
-    addEventListener('online', () => void this.offline.update());
+    // Back online: finish downloading later cases first, otherwise look for a new build.
+    const resume = () => {
+      const incomplete = this.offline.packs.some((p) => !this.offline.installed.has(p.id));
+      if (incomplete) void this.offline.install().catch(() => {});
+      // Queued behind any install: a build published meanwhile is still found.
+      void this.offline.update();
+    };
+    addEventListener('online', () => {
+      resume();
+      if (this.overlay === 'cases') this.renderOverlay();
+    });
+    addEventListener('offline', () => {
+      if (this.overlay === 'cases') this.renderOverlay();
+    });
+    // The parent corner and the case picker show which cases already work without internet.
+    this.offline.subscribe(() => {
+      if (this.overlay === 'parent' || this.overlay === 'cases') this.renderOverlay();
+    });
     setInterval(() => void this.offline.update(), 30 * 60_000);
   }
 
@@ -1076,8 +1093,23 @@ export class App {
           );
         }),
       ),
+      // Offline, a case whose pictures and voices are still downloading waits for the internet.
+      !navigator.onLine && !this.offline.isAvailableOffline(`${selectedCase}-l${selected}`)
+        ? h(
+            'p',
+            { class: 'note', dataset: { testid: 'case-needs-internet' } },
+            t('offline.caseLater'),
+          )
+        : null,
       button(
-        { label: t('difficulty.start'), key: 'case-start', class: 'primary', disabled: !unlocked },
+        {
+          label: t('difficulty.start'),
+          key: 'case-start',
+          class: 'primary',
+          disabled:
+            !unlocked ||
+            (!navigator.onLine && !this.offline.isAvailableOffline(`${selectedCase}-l${selected}`)),
+        },
         async () => {
           await this.setOverlay(null);
           await this.act({ type: 'start', pack: `${selectedCase}-l${selected}` });

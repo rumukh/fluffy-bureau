@@ -10,7 +10,7 @@ test.describe('Stage 1 playthrough', () => {
     test.setTimeout(600_000);
     const outbound: string[] = [];
     page.on('request', (request) => {
-      if (!request.url().startsWith(ORIGIN) && !request.url().startsWith('data:'))
+      if (!request.url().startsWith(ORIGIN) && !/^(data|blob):/.test(request.url()))
         outbound.push(request.url());
     });
     await page.goto('./');

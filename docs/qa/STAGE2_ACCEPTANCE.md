@@ -126,9 +126,31 @@ e2e/install-metrics.spec.ts` after `npm run build:pages` (Windows, local loopbac
 | WebKit (Windows port) | ~5,175 | 1.5–2 s | 89–91 s (149 s measured by the coordinator under load) |
 
 E2E budgets: the install/activation poll is 360 s and the update wait is 360 s, about 2.4× the worst
-observed. The game is playable online from the title screen; offline readiness is what takes long.
-v0.2.1 will make the shell, prologue and case 1 offline-ready first and install the other cases in the
-background (fewer requests: e.g. one cue bundle per pack).
+observed.
+
+### v0.2.1: prioritized install, fewer requests
+
+- **Fewer files:**
+  - A's Rhubarb cue sources are no longer shipped; only their converted tracks are used.
+  - The converted tracks are bundled into one file per pack and served to the stage from memory as
+    local `blob:` URLs.
+  - Content packs (text and rules, 0.9 MB) live in `shell`, so a profile always opens offline.
+- **Priority:** the shell, prologue and case 1 install first. The worker activates as soon as they
+  are stored, and cases 2–4 and the cozy day continue in the background with 8 parallel requests
+  (the engine's `maxRequests`).
+- **While online,** a case still downloading streams from the same site. **Offline,** the case
+  picker shows «Это дело ещё скачивается…» instead of starting it.
+- **Parent corner:** each pack is shown as «без интернета ✔», «скачивается…» or «ждёт интернета».
+
+| Browser | Files / requests | Core offline (shell, prologue, case 1) | All cases offline |
+|---|---|---|---|
+| Chromium | 2,239 / ~2,280 | 9.9–10.2 s | 12.0–12.8 s |
+| WebKit (Windows port) | 2,239 / ~2,281 | 13.0–13.9 s | 22.0–22.9 s |
+
+Before v0.2.1 there were 5,139 files and ~5,175 requests: offline-ready in 24–28 s on Chromium and
+89–149 s on WebKit. `e2e/offline-priority.spec.ts` covers the prioritized install in Chromium and
+WebKit: the server refuses cases 2–4, yet the worker activates, an offline cold start opens the
+profile and the prologue, and the parent corner shows the core stored and cases 2–4 not stored.
 
 ## Known gaps and follow-ups
 

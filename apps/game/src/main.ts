@@ -18,6 +18,8 @@ async function boot(): Promise<void> {
       loadContent(baseUrl),
       loadAssetManifest(baseUrl),
     ]);
+    const assets = new Assets(manifest, baseUrl);
+    await assets.loadCues();
     const app = new App({
       root,
       baseUrl,
@@ -25,7 +27,7 @@ async function boot(): Promise<void> {
       channel: FLUFFY_DEV ? 'dev' : meta('fluffy-channel') || 'release',
       library,
       packs,
-      assets: new Assets(manifest, baseUrl),
+      assets,
     });
     await app.start();
   } catch (error) {
