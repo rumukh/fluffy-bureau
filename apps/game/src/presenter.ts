@@ -18,6 +18,8 @@ export interface StageScene {
   reducedMotion: boolean;
   /** Difficulty level of the case (background prop layers may depend on it). */
   level: number | null;
+  /** Background asset that overrides the location's default for this moment. */
+  background?: string | null;
 }
 
 export interface Presenter {
@@ -63,8 +65,15 @@ export class StaticPresenter implements Presenter {
     this.current = scene;
     this.element.dataset.reducedMotion = String(scene.reducedMotion);
     this.element.classList.toggle('comfort', scene.comfort);
-    if (!previous || previous.location !== scene.location || previous.title !== scene.title) {
-      this.background.src = this.assets.background(scene.location, scene.title);
+    if (
+      !previous ||
+      previous.location !== scene.location ||
+      previous.title !== scene.title ||
+      previous.background !== scene.background
+    ) {
+      this.background.src = scene.background
+        ? this.assets.resolve(scene.background)
+        : this.assets.background(scene.location, scene.title);
       this.element.dataset.location = scene.location;
       if (!scene.reducedMotion) {
         this.element.classList.remove('enter');
@@ -237,8 +246,8 @@ export class StagePresenter implements Presenter {
   }
 
   private async build(scene: StageScene, generation: number): Promise<void> {
-    const background = this.assets.backgroundId(scene.location);
-    const layers = this.assets.rawLayers(scene.location, scene.level);
+    const background = scene.background ?? this.assets.backgroundId(scene.location);
+    const layers = scene.background ? [] : this.assets.rawLayers(scene.location, scene.level);
     const castDocs = scene.cast.map((c) => this.assets.puppet(c.id));
     const avatarDocs = scene.avatar.species ? this.assets.avatarPuppet(scene.avatar.species) : null;
     const ok = await this.ensure(

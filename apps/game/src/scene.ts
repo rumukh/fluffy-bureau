@@ -5,6 +5,7 @@ import type { App } from './app.js';
 import { rewardIcon } from './app.js';
 import { fallbackHotspots, LOGICAL, SCARF_COLORS, type HotspotRect } from './assets.js';
 import { append, button, focusFirst, h } from './dom.js';
+import { BACKGROUND_BY_LINE } from './staging.js';
 
 type Json = Record<string, unknown>;
 
@@ -168,6 +169,10 @@ function renderRun(app: App, view: GameView, run: RunView): HTMLElement {
     comfort: view.lamp,
     reducedMotion: app.reducedMotion(),
     level: run.level,
+    background:
+      BACKGROUND_BY_LINE[
+        run.queue?.line.id ?? (run.step?.kind === 'line' ? run.step.line.id : '')
+      ] ?? null,
   });
   const step = run.step;
   // While searching with the magnifier the characters step back so every object is visible.
