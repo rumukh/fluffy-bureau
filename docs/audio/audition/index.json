@@ -1,0 +1,1056 @@
+{
+ "format": "fluffy-voice-index",
+ "schema": 1,
+ "lines": {
+  "AUD-damka-1a": {
+   "id": "AUD-damka-1a",
+   "revision": 1,
+   "ttsHash": "04b528c5633c517ec46f2613832e9e809ee5539f1505210c5b3ed922da8f71df",
+   "speaker": "damka",
+   "voice": "en-GB-AdaMultilingualNeural",
+   "key": "cea8dac695",
+   "pack": "shell",
+   "file": "shell/AUD-damka-1a.cea8dac695.mp3",
+   "cues": "shell/AUD-damka-1a.cea8dac695.cues.json",
+   "durationMs": 5642,
+   "lufs": -18.5,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "en-GB-AdaMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:54:26+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Здравствуй пушинка. Я дамка смотритель маяка.",
+    "match": true
+   }
+  },
+  "AUD-damka-1b": {
+   "id": "AUD-damka-1b",
+   "revision": 1,
+   "ttsHash": "04b528c5633c517ec46f2613832e9e809ee5539f1505210c5b3ed922da8f71df",
+   "speaker": "damka",
+   "voice": "es-MX-DaliaMultilingualNeural",
+   "key": "7360b931ff",
+   "pack": "shell",
+   "file": "shell/AUD-damka-1b.7360b931ff.mp3",
+   "cues": "shell/AUD-damka-1b.7360b931ff.cues.json",
+   "durationMs": 5825,
+   "lufs": -18.5,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "es-MX-DaliaMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:54:29+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Здравствуй пушинка. Я дамка смотритель маяка.",
+    "match": true
+   }
+  },
+  "AUD-fitilyok-1a": {
+   "id": "AUD-fitilyok-1a",
+   "revision": 1,
+   "ttsHash": "86260d711227792943e701e7ce19e34f1baab49d812e1cb0bdbbabf992a257cd",
+   "speaker": "fitilyok",
+   "voice": "en-US-FableTurboMultilingualNeural",
+   "key": "998a2aa28f",
+   "pack": "shell",
+   "file": "shell/AUD-fitilyok-1a.998a2aa28f.mp3",
+   "cues": "shell/AUD-fitilyok-1a.998a2aa28f.cues.json",
+   "durationMs": 2664,
+   "lufs": -19.0,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "en-US-FableTurboMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:54:12+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Правда, я светил ему все утро.",
+    "match": true
+   }
+  },
+  "AUD-fitilyok-1b": {
+   "id": "AUD-fitilyok-1b",
+   "revision": 1,
+   "ttsHash": "86260d711227792943e701e7ce19e34f1baab49d812e1cb0bdbbabf992a257cd",
+   "speaker": "fitilyok",
+   "voice": "en-US-AlloyTurboMultilingualNeural",
+   "key": "0a878ebbc3",
+   "pack": "shell",
+   "file": "shell/AUD-fitilyok-1b.0a878ebbc3.mp3",
+   "cues": "shell/AUD-fitilyok-1b.0a878ebbc3.cues.json",
+   "durationMs": 2821,
+   "lufs": -18.5,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "en-US-AlloyTurboMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:54:15+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Правда, я светил ему все утро.",
+    "match": true
+   }
+  },
+  "AUD-kartofan-1a": {
+   "id": "AUD-kartofan-1a",
+   "revision": 1,
+   "ttsHash": "141dc9780a87881881fe2d394170c1f6a08cb30dd7a2817e399a710564ed410b",
+   "speaker": "kartofan",
+   "voice": "en-US-OnyxTurboMultilingualNeural",
+   "key": "a0349766a0",
+   "pack": "shell",
+   "file": "shell/AUD-kartofan-1a.a0349766a0.mp3",
+   "cues": "shell/AUD-kartofan-1a.a0349766a0.cues.json",
+   "durationMs": 3683,
+   "lufs": -18.5,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "en-US-OnyxTurboMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:53:31+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Гости ой я вас плохо вижу.",
+    "match": true
+   }
+  },
+  "AUD-kartofan-1b": {
+   "id": "AUD-kartofan-1b",
+   "revision": 1,
+   "ttsHash": "141dc9780a87881881fe2d394170c1f6a08cb30dd7a2817e399a710564ed410b",
+   "speaker": "kartofan",
+   "voice": "en-US-BrianMultilingualNeural",
+   "key": "69729e84de",
+   "pack": "shell",
+   "file": "shell/AUD-kartofan-1b.69729e84de.mp3",
+   "cues": "shell/AUD-kartofan-1b.69729e84de.cues.json",
+   "durationMs": 4023,
+   "lufs": -18.5,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "en-US-BrianMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:53:35+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Гости ой я вас плохо вижу.",
+    "match": true
+   }
+  },
+  "AUD-kartofan-2a": {
+   "id": "AUD-kartofan-2a",
+   "revision": 1,
+   "ttsHash": "bd3330c6eda29ad599ab83e14ec8bdaef626923a6a14381705afb701a8ca83fe",
+   "speaker": "kartofan",
+   "voice": "en-US-OnyxTurboMultilingualNeural",
+   "key": "93974a0fc7",
+   "pack": "shell",
+   "file": "shell/AUD-kartofan-2a.93974a0fc7.mp3",
+   "cues": "shell/AUD-kartofan-2a.93974a0fc7.cues.json",
+   "durationMs": 3056,
+   "lufs": -18.5,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "en-US-OnyxTurboMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:53:39+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "А взял чужую перепутал.",
+    "match": true
+   }
+  },
+  "AUD-kartofan-2b": {
+   "id": "AUD-kartofan-2b",
+   "revision": 1,
+   "ttsHash": "bd3330c6eda29ad599ab83e14ec8bdaef626923a6a14381705afb701a8ca83fe",
+   "speaker": "kartofan",
+   "voice": "en-US-BrianMultilingualNeural",
+   "key": "0368ba644e",
+   "pack": "shell",
+   "file": "shell/AUD-kartofan-2b.0368ba644e.mp3",
+   "cues": "shell/AUD-kartofan-2b.0368ba644e.cues.json",
+   "durationMs": 3265,
+   "lufs": -18.4,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "en-US-BrianMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:53:48+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "А взял чужую перепутал.",
+    "match": true
+   }
+  },
+  "AUD-khvosts-1a": {
+   "id": "AUD-khvosts-1a",
+   "revision": 1,
+   "ttsHash": "206561299cdd65a939c1887fab6222c606d0b13daa6d4b44ea9a2dc6896ce4c6",
+   "speaker": "khvosts",
+   "voice": "ru-RU-DmitryNeural",
+   "key": "ad50f8e6c1",
+   "pack": "shell",
+   "file": "shell/AUD-khvosts-1a.ad50f8e6c1.mp3",
+   "cues": "shell/AUD-khvosts-1a.ad50f8e6c1.cues.json",
+   "durationMs": 5799,
+   "lufs": -18.4,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "ru-RU-DmitryNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:52:19+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Я Шерлок хвост.Когда думаю пускай пузырей.",
+    "match": false
+   }
+  },
+  "AUD-khvosts-1b": {
+   "id": "AUD-khvosts-1b",
+   "revision": 1,
+   "ttsHash": "206561299cdd65a939c1887fab6222c606d0b13daa6d4b44ea9a2dc6896ce4c6",
+   "speaker": "khvosts",
+   "voice": "en-US-DustinMultilingualNeural",
+   "key": "d26f2c9796",
+   "pack": "shell",
+   "file": "shell/AUD-khvosts-1b.d26f2c9796.mp3",
+   "cues": "shell/AUD-khvosts-1b.d26f2c9796.cues.json",
+   "durationMs": 4598,
+   "lufs": -18.4,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "en-US-DustinMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:52:22+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Я Шерлок хвост когда думаю пускай пузыри.",
+    "match": false
+   }
+  },
+  "AUD-khvosts-2a": {
+   "id": "AUD-khvosts-2a",
+   "revision": 1,
+   "ttsHash": "20bf4b4664c336477d107644dd4fdc7fb1323a80fe2c801fd8fc0d502266e97b",
+   "speaker": "khvosts",
+   "voice": "ru-RU-DmitryNeural",
+   "key": "4b02ca5d2a",
+   "pack": "shell",
+   "file": "shell/AUD-khvosts-2a.4b02ca5d2a.mp3",
+   "cues": "shell/AUD-khvosts-2a.4b02ca5d2a.cues.json",
+   "durationMs": 5381,
+   "lufs": -18.5,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "ru-RU-DmitryNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:52:24+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Не судья по виду пушинка.Суди пауликам.",
+    "match": false
+   }
+  },
+  "AUD-khvosts-2b": {
+   "id": "AUD-khvosts-2b",
+   "revision": 1,
+   "ttsHash": "20bf4b4664c336477d107644dd4fdc7fb1323a80fe2c801fd8fc0d502266e97b",
+   "speaker": "khvosts",
+   "voice": "en-US-DustinMultilingualNeural",
+   "key": "da3fdd12e6",
+   "pack": "shell",
+   "file": "shell/AUD-khvosts-2b.da3fdd12e6.mp3",
+   "cues": "shell/AUD-khvosts-2b.da3fdd12e6.cues.json",
+   "durationMs": 4336,
+   "lufs": -18.4,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "en-US-DustinMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:52:28+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Не суди по виду пущенка судьи по уликам.",
+    "match": false
+   }
+  },
+  "AUD-khvosts-3a": {
+   "id": "AUD-khvosts-3a",
+   "revision": 1,
+   "ttsHash": "e853f83f94764e8109f0ceff0982176c6cd10f7cd85a0a31b7950f1217e6d7a1",
+   "speaker": "khvosts",
+   "voice": "ru-RU-DmitryNeural",
+   "key": "1e01d60c9b",
+   "pack": "shell",
+   "file": "shell/AUD-khvosts-3a.1e01d60c9b.mp3",
+   "cues": "shell/AUD-khvosts-3a.1e01d60c9b.cues.json",
+   "durationMs": 5146,
+   "lufs": -18.5,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "ru-RU-DmitryNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:52:30+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Элементарно пушинка.Дело раскрыто.",
+    "match": true
+   }
+  },
+  "AUD-khvosts-3b": {
+   "id": "AUD-khvosts-3b",
+   "revision": 1,
+   "ttsHash": "e853f83f94764e8109f0ceff0982176c6cd10f7cd85a0a31b7950f1217e6d7a1",
+   "speaker": "khvosts",
+   "voice": "en-US-DustinMultilingualNeural",
+   "key": "3d728e17eb",
+   "pack": "shell",
+   "file": "shell/AUD-khvosts-3b.3d728e17eb.mp3",
+   "cues": "shell/AUD-khvosts-3b.3d728e17eb.cues.json",
+   "durationMs": 3840,
+   "lufs": -18.5,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "en-US-DustinMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:52:33+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Элементарно пущенка дело раскрыто.",
+    "match": false
+   }
+  },
+  "AUD-mouse-1a": {
+   "id": "AUD-mouse-1a",
+   "revision": 1,
+   "ttsHash": "837c7d463d5de7cbef15c7e9290b9856ae7a2fd749e6fd89d50d9c5cbf90e1f5",
+   "speaker": "mouse",
+   "voice": "zh-CN-XiaoyouMultilingualNeural",
+   "key": "01a219b67f",
+   "pack": "shell",
+   "file": "shell/AUD-mouse-1a.01a219b67f.mp3",
+   "cues": "shell/AUD-mouse-1a.01a219b67f.cues.json",
+   "durationMs": 2926,
+   "lufs": -18.5,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "zh-CN-XiaoyouMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:54:17+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Мы ничего не брали, только крошки.",
+    "match": true
+   }
+  },
+  "AUD-mouse-1b": {
+   "id": "AUD-mouse-1b",
+   "revision": 1,
+   "ttsHash": "837c7d463d5de7cbef15c7e9290b9856ae7a2fd749e6fd89d50d9c5cbf90e1f5",
+   "speaker": "mouse",
+   "voice": "en-US-LolaMultilingualNeural",
+   "key": "71f0d1380b",
+   "pack": "shell",
+   "file": "shell/AUD-mouse-1b.71f0d1380b.mp3",
+   "cues": "shell/AUD-mouse-1b.71f0d1380b.cues.json",
+   "durationMs": 3056,
+   "lufs": -18.7,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "en-US-LolaMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:54:20+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Мы ничего не брали, только крошки.",
+    "match": true
+   }
+  },
+  "AUD-mouse-2a": {
+   "id": "AUD-mouse-2a",
+   "revision": 1,
+   "ttsHash": "b8d45b0eb4176bfb85d8b6d29176425ee5cd9fa0ca3be97edd2e61c085d4e7df",
+   "speaker": "mouse",
+   "voice": "zh-CN-XiaoyouMultilingualNeural",
+   "key": "db4e9be522",
+   "pack": "shell",
+   "file": "shell/AUD-mouse-2a.db4e9be522.mp3",
+   "cues": "shell/AUD-mouse-2a.db4e9be522.cues.json",
+   "durationMs": 2011,
+   "lufs": -18.5,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "zh-CN-XiaoyouMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:54:22+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "А можно нам тоже пирога?",
+    "match": true
+   }
+  },
+  "AUD-mouse-2b": {
+   "id": "AUD-mouse-2b",
+   "revision": 1,
+   "ttsHash": "b8d45b0eb4176bfb85d8b6d29176425ee5cd9fa0ca3be97edd2e61c085d4e7df",
+   "speaker": "mouse",
+   "voice": "en-US-LolaMultilingualNeural",
+   "key": "70a9667b0f",
+   "pack": "shell",
+   "file": "shell/AUD-mouse-2b.70a9667b0f.mp3",
+   "cues": "shell/AUD-mouse-2b.70a9667b0f.cues.json",
+   "durationMs": 2038,
+   "lufs": -18.5,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "en-US-LolaMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:54:24+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "А можно нам тоже пирога?",
+    "match": true
+   }
+  },
+  "AUD-narrator-1a": {
+   "id": "AUD-narrator-1a",
+   "revision": 1,
+   "ttsHash": "b0a5c7893a55af3c7c05f46f40a342e2e8e038c128ca177f4e39fd85f8099ddb",
+   "speaker": "narrator",
+   "voice": "ru-RU-SvetlanaNeural",
+   "key": "14e642954d",
+   "pack": "shell",
+   "file": "shell/AUD-narrator-1a.14e642954d.mp3",
+   "cues": "shell/AUD-narrator-1a.14e642954d.cues.json",
+   "durationMs": 2586,
+   "lufs": -18.5,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "ru-RU-SvetlanaNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:52:01+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Осмотреть скамейку.",
+    "match": true
+   }
+  },
+  "AUD-narrator-1b": {
+   "id": "AUD-narrator-1b",
+   "revision": 1,
+   "ttsHash": "b0a5c7893a55af3c7c05f46f40a342e2e8e038c128ca177f4e39fd85f8099ddb",
+   "speaker": "narrator",
+   "voice": "en-GB-AdaMultilingualNeural",
+   "key": "706a636eca",
+   "pack": "shell",
+   "file": "shell/AUD-narrator-1b.706a636eca.mp3",
+   "cues": "shell/AUD-narrator-1b.706a636eca.cues.json",
+   "durationMs": 2351,
+   "lufs": -18.5,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "en-GB-AdaMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:52:03+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Осмотреть скамейку.",
+    "match": true
+   }
+  },
+  "AUD-narrator-2a": {
+   "id": "AUD-narrator-2a",
+   "revision": 1,
+   "ttsHash": "96eadb1abd89d2824f37d937687e303ddb3ab9ddccb15fd2f792cac676fac15c",
+   "speaker": "narrator",
+   "voice": "ru-RU-SvetlanaNeural",
+   "key": "96ddbb67d8",
+   "pack": "shell",
+   "file": "shell/AUD-narrator-2a.96ddbb67d8.mp3",
+   "cues": "shell/AUD-narrator-2a.96ddbb67d8.cues.json",
+   "durationMs": 8098,
+   "lufs": -18.4,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "ru-RU-SvetlanaNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:52:05+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "А ты знал кроты видят плохо.Зато отлично чуют и осязают носом.",
+    "match": true
+   }
+  },
+  "AUD-narrator-2b": {
+   "id": "AUD-narrator-2b",
+   "revision": 1,
+   "ttsHash": "96eadb1abd89d2824f37d937687e303ddb3ab9ddccb15fd2f792cac676fac15c",
+   "speaker": "narrator",
+   "voice": "en-GB-AdaMultilingualNeural",
+   "key": "f7fc0f1205",
+   "pack": "shell",
+   "file": "shell/AUD-narrator-2b.f7fc0f1205.mp3",
+   "cues": "shell/AUD-narrator-2b.f7fc0f1205.cues.json",
+   "durationMs": 7367,
+   "lufs": -18.5,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "en-GB-AdaMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:52:09+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "А ты знал кроты видят плохо, зато отлично чуют и осязают носом.",
+    "match": true
+   }
+  },
+  "AUD-narrator-3a": {
+   "id": "AUD-narrator-3a",
+   "revision": 1,
+   "ttsHash": "d6c212643217d05f8259456345d742edd670cb5e5db5bbd7b1ac6625aa8d30f7",
+   "speaker": "narrator",
+   "voice": "ru-RU-SvetlanaNeural",
+   "key": "f943a43456",
+   "pack": "shell",
+   "file": "shell/AUD-narrator-3a.f943a43456.mp3",
+   "cues": "shell/AUD-narrator-3a.f943a43456.cues.json",
+   "durationMs": 11781,
+   "lufs": -18.5,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "ru-RU-SvetlanaNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:55:08+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Шерлок хвостц ватсоне пудинг тепла картафон фитилек Стелла шуршики дамка и пухлик.Городок пушистина.",
+    "match": false
+   }
+  },
+  "AUD-narrator-3b": {
+   "id": "AUD-narrator-3b",
+   "revision": 1,
+   "ttsHash": "d6c212643217d05f8259456345d742edd670cb5e5db5bbd7b1ac6625aa8d30f7",
+   "speaker": "narrator",
+   "voice": "en-GB-AdaMultilingualNeural",
+   "key": "96183c8524",
+   "pack": "shell",
+   "file": "shell/AUD-narrator-3b.96183c8524.mp3",
+   "cues": "shell/AUD-narrator-3b.96183c8524.cues.json",
+   "durationMs": 12121,
+   "lufs": -18.5,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "en-GB-AdaMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:55:17+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Шерлок хвост ватсоне пудинг тепа картафон фителек Стелла шуршике дамка и пухлик городок пушестина.",
+    "match": false
+   }
+  },
+  "AUD-pudding-1a": {
+   "id": "AUD-pudding-1a",
+   "revision": 1,
+   "ttsHash": "b6b56e704b15516112b0be26919dc662afb4263033c7d5a6d282f10fe550842e",
+   "speaker": "pudding",
+   "voice": "en-US-DerekMultilingualNeural",
+   "key": "04a68b3682",
+   "pack": "shell",
+   "file": "shell/AUD-pudding-1a.04a68b3682.mp3",
+   "cues": "shell/AUD-pudding-1a.04a68b3682.cues.json",
+   "durationMs": 3056,
+   "lufs": -18.5,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "en-US-DerekMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:52:49+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Беда мой черничный пирог пропал.",
+    "match": true
+   }
+  },
+  "AUD-pudding-1b": {
+   "id": "AUD-pudding-1b",
+   "revision": 1,
+   "ttsHash": "b6b56e704b15516112b0be26919dc662afb4263033c7d5a6d282f10fe550842e",
+   "speaker": "pudding",
+   "voice": "en-US-BrandonMultilingualNeural",
+   "key": "0f56dfd2df",
+   "pack": "shell",
+   "file": "shell/AUD-pudding-1b.0f56dfd2df.mp3",
+   "cues": "shell/AUD-pudding-1b.0f56dfd2df.cues.json",
+   "durationMs": 3448,
+   "lufs": -18.5,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "en-US-BrandonMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:52:53+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Беда мой черничный пирог пропал.",
+    "match": true
+   }
+  },
+  "AUD-pudding-2a": {
+   "id": "AUD-pudding-2a",
+   "revision": 1,
+   "ttsHash": "a4e59a4d0c9c8303d1a451b4d740be1fc7fb1e91135de1a05902784f54f1051d",
+   "speaker": "pudding",
+   "voice": "en-US-DerekMultilingualNeural",
+   "key": "bf93ec5f46",
+   "pack": "shell",
+   "file": "shell/AUD-pudding-2a.bf93ec5f46.mp3",
+   "cues": "shell/AUD-pudding-2a.bf93ec5f46.cues.json",
+   "durationMs": 2873,
+   "lufs": -18.7,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "en-US-DerekMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:52:57+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Пирог щеки не влезет, он большой.",
+    "match": false
+   }
+  },
+  "AUD-pudding-2b": {
+   "id": "AUD-pudding-2b",
+   "revision": 1,
+   "ttsHash": "a4e59a4d0c9c8303d1a451b4d740be1fc7fb1e91135de1a05902784f54f1051d",
+   "speaker": "pudding",
+   "voice": "en-US-BrandonMultilingualNeural",
+   "key": "d99052997f",
+   "pack": "shell",
+   "file": "shell/AUD-pudding-2b.d99052997f.mp3",
+   "cues": "shell/AUD-pudding-2b.d99052997f.cues.json",
+   "durationMs": 3396,
+   "lufs": -18.5,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "en-US-BrandonMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:53:00+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Пирог в щеке не влезет, он большой.",
+    "match": false
+   }
+  },
+  "AUD-pukhlik-1a": {
+   "id": "AUD-pukhlik-1a",
+   "revision": 1,
+   "ttsHash": "07d3fa3ab52fb2e4321d500231ebedafd011fcd1d3ccdd1c8e80463ff22bd7d7",
+   "speaker": "pukhlik",
+   "voice": "en-US-CoraMultilingualNeural",
+   "key": "edb4331d35",
+   "pack": "shell",
+   "file": "shell/AUD-pukhlik-1a.edb4331d35.mp3",
+   "cues": "shell/AUD-pukhlik-1a.edb4331d35.cues.json",
+   "durationMs": 6217,
+   "lufs": -18.4,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "en-US-CoraMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:54:33+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Здравствуй пушинка я пухлик я тренируюсь по ночам.",
+    "match": true
+   }
+  },
+  "AUD-pukhlik-1b": {
+   "id": "AUD-pukhlik-1b",
+   "revision": 1,
+   "ttsHash": "07d3fa3ab52fb2e4321d500231ebedafd011fcd1d3ccdd1c8e80463ff22bd7d7",
+   "speaker": "pukhlik",
+   "voice": "zh-CN-XiaoyuMultilingualNeural",
+   "key": "c648bbae71",
+   "pack": "shell",
+   "file": "shell/AUD-pukhlik-1b.c648bbae71.mp3",
+   "cues": "shell/AUD-pukhlik-1b.c648bbae71.cues.json",
+   "durationMs": 5616,
+   "lufs": -18.5,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "zh-CN-XiaoyuMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:54:36+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Здравствуй пушинка я пухлик я тренируюсь по ночам.",
+    "match": true
+   }
+  },
+  "AUD-stella-1a": {
+   "id": "AUD-stella-1a",
+   "revision": 1,
+   "ttsHash": "9b8ab66e4dedefbb1e8304d81aee2cd1e85d5f91c8e80efa4595045e19d0fde6",
+   "speaker": "stella",
+   "voice": "es-ES-XimenaMultilingualNeural",
+   "key": "5368d8b3ab",
+   "pack": "shell",
+   "file": "shell/AUD-stella-1a.5368d8b3ab.mp3",
+   "cues": "shell/AUD-stella-1a.5368d8b3ab.cues.json",
+   "durationMs": 2482,
+   "lufs": -18.5,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "es-ES-XimenaMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:55:25+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "А еще я видела тёпу.",
+    "match": false
+   }
+  },
+  "AUD-stella-1b": {
+   "id": "AUD-stella-1b",
+   "revision": 1,
+   "ttsHash": "9b8ab66e4dedefbb1e8304d81aee2cd1e85d5f91c8e80efa4595045e19d0fde6",
+   "speaker": "stella",
+   "voice": "en-US-ShimmerTurboMultilingualNeural",
+   "key": "b6419d56e9",
+   "pack": "shell",
+   "file": "shell/AUD-stella-1b.b6419d56e9.mp3",
+   "cues": "shell/AUD-stella-1b.b6419d56e9.cues.json",
+   "durationMs": 2116,
+   "lufs": -18.5,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "en-US-ShimmerTurboMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:55:28+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "А ещё я видела тёпу с коробкой.",
+    "match": true
+   }
+  },
+  "AUD-stella-2a": {
+   "id": "AUD-stella-2a",
+   "revision": 1,
+   "ttsHash": "a0f87fe9ff72732152eccc67ea0a1cc8d7029949452fe6601d9ec05c7f04a4c7",
+   "speaker": "stella",
+   "voice": "es-ES-XimenaMultilingualNeural",
+   "key": "41edd32429",
+   "pack": "shell",
+   "file": "shell/AUD-stella-2a.41edd32429.mp3",
+   "cues": "shell/AUD-stella-2a.41edd32429.cues.json",
+   "durationMs": 3500,
+   "lufs": -18.5,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "es-ES-XimenaMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:54:08+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Эта же коробка с мылом я ошиблась.",
+    "match": false
+   }
+  },
+  "AUD-stella-2b": {
+   "id": "AUD-stella-2b",
+   "revision": 1,
+   "ttsHash": "a0f87fe9ff72732152eccc67ea0a1cc8d7029949452fe6601d9ec05c7f04a4c7",
+   "speaker": "stella",
+   "voice": "en-US-ShimmerTurboMultilingualNeural",
+   "key": "8ac4d46ab8",
+   "pack": "shell",
+   "file": "shell/AUD-stella-2b.8ac4d46ab8.mp3",
+   "cues": "shell/AUD-stella-2b.8ac4d46ab8.cues.json",
+   "durationMs": 2847,
+   "lufs": -18.5,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "en-US-ShimmerTurboMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:54:10+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Эта же коробка с мылом я ошиблась.",
+    "match": false
+   }
+  },
+  "AUD-tyopa-1a": {
+   "id": "AUD-tyopa-1a",
+   "revision": 1,
+   "ttsHash": "c47b0e8ee1b7bb0a4ccce215efb0770e3b32485d47b4198f535a1b4aa50de334",
+   "speaker": "tyopa",
+   "voice": "en-US-AndrewMultilingualNeural",
+   "key": "51f15f52ad",
+   "pack": "shell",
+   "file": "shell/AUD-tyopa-1a.51f15f52ad.mp3",
+   "cues": "shell/AUD-tyopa-1a.51f15f52ad.cues.json",
+   "durationMs": 2638,
+   "lufs": -18.5,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "en-US-AndrewMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:53:06+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Вы тоже думаете, что это я?",
+    "match": true
+   }
+  },
+  "AUD-tyopa-1b": {
+   "id": "AUD-tyopa-1b",
+   "revision": 1,
+   "ttsHash": "c47b0e8ee1b7bb0a4ccce215efb0770e3b32485d47b4198f535a1b4aa50de334",
+   "speaker": "tyopa",
+   "voice": "en-US-SteffanMultilingualNeural",
+   "key": "1f5d711df1",
+   "pack": "shell",
+   "file": "shell/AUD-tyopa-1b.1f5d711df1.mp3",
+   "cues": "shell/AUD-tyopa-1b.1f5d711df1.cues.json",
+   "durationMs": 3056,
+   "lufs": -18.5,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "en-US-SteffanMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:53:11+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Вы тоже думаете, что это я?",
+    "match": true
+   }
+  },
+  "AUD-tyopa-2a": {
+   "id": "AUD-tyopa-2a",
+   "revision": 1,
+   "ttsHash": "2884230a28ef8f84f073fe5702b6d14d260cc2731b4e915965575aa9d0c0a09d",
+   "speaker": "tyopa",
+   "voice": "en-US-AndrewMultilingualNeural",
+   "key": "bf14e3a6a4",
+   "pack": "shell",
+   "file": "shell/AUD-tyopa-2a.bf14e3a6a4.mp3",
+   "cues": "shell/AUD-tyopa-2a.bf14e3a6a4.cues.json",
+   "durationMs": 5042,
+   "lufs": -18.5,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "en-US-AndrewMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:53:16+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Лапы синие от мыла я варю черничное мыло к празднику.",
+    "match": true
+   }
+  },
+  "AUD-tyopa-2b": {
+   "id": "AUD-tyopa-2b",
+   "revision": 1,
+   "ttsHash": "2884230a28ef8f84f073fe5702b6d14d260cc2731b4e915965575aa9d0c0a09d",
+   "speaker": "tyopa",
+   "voice": "en-US-SteffanMultilingualNeural",
+   "key": "478e200275",
+   "pack": "shell",
+   "file": "shell/AUD-tyopa-2b.478e200275.mp3",
+   "cues": "shell/AUD-tyopa-2b.478e200275.cues.json",
+   "durationMs": 5590,
+   "lufs": -18.5,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "en-US-SteffanMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:53:24+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Лапе синие, отмыла я варю черничное мыло к празднику.",
+    "match": false
+   }
+  },
+  "AUD-watsony-1a": {
+   "id": "AUD-watsony-1a",
+   "revision": 1,
+   "ttsHash": "a869703b5ec930f1bbe908de43edd8683d8c47ecd195747741e954301e6f01bb",
+   "speaker": "watsony",
+   "voice": "ru-RU-DariyaNeural",
+   "key": "8a73075893",
+   "pack": "shell",
+   "file": "shell/AUD-watsony-1a.8a73075893.mp3",
+   "cues": "shell/AUD-watsony-1a.8a73075893.cues.json",
+   "durationMs": 4467,
+   "lufs": -18.5,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "ru-RU-DariyaNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:52:35+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Записала пушинка.Не забуду кажется.",
+    "match": true
+   }
+  },
+  "AUD-watsony-1b": {
+   "id": "AUD-watsony-1b",
+   "revision": 1,
+   "ttsHash": "a869703b5ec930f1bbe908de43edd8683d8c47ecd195747741e954301e6f01bb",
+   "speaker": "watsony",
+   "voice": "en-US-LolaMultilingualNeural",
+   "key": "9164fa607f",
+   "pack": "shell",
+   "file": "shell/AUD-watsony-1b.9164fa607f.mp3",
+   "cues": "shell/AUD-watsony-1b.9164fa607f.cues.json",
+   "durationMs": 4624,
+   "lufs": -19.0,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "en-US-LolaMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:52:38+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Записала пущенко, не забуду кажется.",
+    "match": false
+   }
+  },
+  "AUD-watsony-2a": {
+   "id": "AUD-watsony-2a",
+   "revision": 1,
+   "ttsHash": "ff7d42f78ee1ca2b280accd216a776bd2166ae533c4394b4e216d842ba67689a",
+   "speaker": "watsony",
+   "voice": "ru-RU-DariyaNeural",
+   "key": "1e0f8d27f1",
+   "pack": "shell",
+   "file": "shell/AUD-watsony-2a.1e0f8d27f1.mp3",
+   "cues": "shell/AUD-watsony-2a.1e0f8d27f1.cues.json",
+   "durationMs": 4859,
+   "lufs": -18.4,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "ru-RU-DariyaNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:52:40+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Версия не подтвердилась, зато вспомним кое что.",
+    "match": true
+   }
+  },
+  "AUD-watsony-2b": {
+   "id": "AUD-watsony-2b",
+   "revision": 1,
+   "ttsHash": "ff7d42f78ee1ca2b280accd216a776bd2166ae533c4394b4e216d842ba67689a",
+   "speaker": "watsony",
+   "voice": "en-US-LolaMultilingualNeural",
+   "key": "025deaef0c",
+   "pack": "shell",
+   "file": "shell/AUD-watsony-2b.025deaef0c.mp3",
+   "cues": "shell/AUD-watsony-2b.025deaef0c.cues.json",
+   "durationMs": 4101,
+   "lufs": -18.6,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "en-US-LolaMultilingualNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-07T22:52:43+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Версия не подтвердилась, зато вспомним кое что.",
+    "match": true
+   }
+  }
+ }
+}

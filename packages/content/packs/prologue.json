@@ -1,0 +1,1937 @@
+{
+ "format": "fluffy-content-pack",
+ "schema": 1,
+ "id": "prologue",
+ "kind": "prologue",
+ "title": "P-TITLE",
+ "case": null,
+ "requires": [
+  "shared"
+ ],
+ "start": "P0",
+ "lines": [
+  {
+   "id": "P-TITLE",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Первый день стажёра",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P0-01",
+   "rev": 2,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Ой, у нас пополнение! Сейчас запишу.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P0-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Кто ты? Выбери себя.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P0-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Как тебя зовут?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P0-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Какого цвета твой шарфик?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P0-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Записала, {имя}! Не забуду… кажется.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P1-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Добро пожаловать в Пушистое бюро, {имя}!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "P1-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Я Шерлок Хвостс. Когда думаю, пускаю пузыри.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P1-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Сыщик замечает мелочи. Давай потренируемся!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "P1-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Нажми на то, что светится.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P1-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "А это лампа смелости.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P1-10",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Станет неуютно — нажми её.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P1-11",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Будет светло, тепло и спокойно.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "P1-12",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Видишь? Лампа всегда рядом.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "P2-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Ой! Где мои очки? Ничего не вижу!",
+   "voiced": true,
+   "delivery": "worried"
+  },
+  {
+   "id": "P2-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Твоё первое дело, {имя}. Найдём очки!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "P2-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "В Блокноте три места. Где же очки?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P2-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Крестик — точно нет. Галочка — точно да.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P2-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Вопрос — пока не знаю. Это тоже честно.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P2-AX-shelf",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Полка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P2-AX-teapot",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Чайник",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P2-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Зеркало",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P2-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "На полке только книги. Очков нет.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P2-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Поставь крестик у полки.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P2-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "В чайнике тёплый чай. Очков нет.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P2-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "В зеркале Ватсони. На голове что-то блестит!",
+   "voiced": true,
+   "delivery": "excited"
+  },
+  {
+   "id": "P2-10",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Всё проверено? Скажи Ватсони свою догадку.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P2-11",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "На голове? Ой… и правда! Вот они!",
+   "voiced": true,
+   "delivery": "excited"
+  },
+  {
+   "id": "P2-12",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Спасибо, {имя}! Я бы искала до вечера.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P2-13",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Элементарно, пушинка!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "P3-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Держи телефон-ракушку.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P3-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Трудно — позвони Ватсони. Она подскажет.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P3-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Подскажу! Если не забуду…",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P3-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Нужен отдых? Нажми паузу. Мы всё запомним.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "P3-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Письмо от мэра Пудинга. Читаю…",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "P3-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Срочно! Пропал черничный пирог!",
+   "voiced": true,
+   "delivery": "excited"
+  },
+  {
+   "id": "P3-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Настоящее дело, {имя}! Держи значок стажёра.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P3-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Нажми на Пироговую улицу. Бежим!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "P3-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Пироговая улица",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P2-AX-where",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Где?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P2-AX-head",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Голова Ватсони",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P2-CL-shelf",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Полка: очков нет",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P2-CL-teapot",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Чайник: очков нет",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P2-CL-mirror",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Зеркало: на голове что-то блестит",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P2-14",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Отличная попытка! Запишем и подумаем.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "P2-15",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Мы ещё не смотрели в зеркало.",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "P2-16",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Что блестело в зеркале?",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "P1-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Лупа",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P1-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Это лупа. Она делает мелочи большими.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P1-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Блокнот сыщика",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P1-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Это Блокнот сыщика. Там живут наши догадки.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P1-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Почтовый жук",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P1-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Заводной почтовый жук. Он носит письма.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "P1-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Не слышно? Нажми ушко. Я повторю.",
+   "voiced": true,
+   "delivery": "neutral"
+  }
+ ],
+ "speakers": [],
+ "skills": [],
+ "scenes": [
+  {
+   "id": "P0",
+   "title": "Анкета стажёра",
+   "location": "office-desk",
+   "cast": [
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "intro",
+     "first": [
+      {
+       "t": "cutscene",
+       "cutscene": "intro"
+      }
+     ],
+     "known": []
+    },
+    {
+     "t": "dir",
+     "id": "P0-D01",
+     "text": "Стол Ватсони в Конторе. Ватсони держит перо."
+    },
+    {
+     "t": "line",
+     "line": "P0-01"
+    },
+    {
+     "t": "line",
+     "line": "P0-02"
+    },
+    {
+     "t": "await",
+     "action": "avatar.species"
+    },
+    {
+     "t": "line",
+     "line": "P0-03"
+    },
+    {
+     "t": "await",
+     "action": "avatar.name"
+    },
+    {
+     "t": "line",
+     "line": "P0-04"
+    },
+    {
+     "t": "await",
+     "action": "avatar.scarf"
+    },
+    {
+     "t": "line",
+     "line": "P0-05"
+    },
+    {
+     "t": "goto",
+     "scene": "P1"
+    }
+   ]
+  },
+  {
+   "id": "P1",
+   "title": "Контора бюро",
+   "location": "office",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "dir",
+     "id": "P1-D01",
+     "text": "Входит Шерлок Хвостс, вокруг него плывут мыльные пузыри."
+    },
+    {
+     "t": "line",
+     "line": "P1-01"
+    },
+    {
+     "t": "line",
+     "line": "P1-02"
+    },
+    {
+     "t": "line",
+     "line": "P1-03"
+    },
+    {
+     "t": "skill",
+     "skill": "inspect",
+     "first": [
+      {
+       "t": "dir",
+       "id": "P1-D02",
+       "text": "Три предмета мягко светятся."
+      },
+      {
+       "t": "line",
+       "line": "P1-04"
+      },
+      {
+       "t": "minigame",
+       "minigame": "p1-inspect"
+      }
+     ],
+     "known": [
+      {
+       "t": "dir",
+       "id": "P1-D02",
+       "text": "Три предмета мягко светятся."
+      },
+      {
+       "t": "line",
+       "line": "P1-04"
+      },
+      {
+       "t": "minigame",
+       "minigame": "p1-inspect"
+      }
+     ]
+    },
+    {
+     "t": "skill",
+     "skill": "lamp",
+     "first": [
+      {
+       "t": "dir",
+       "id": "P1-D03",
+       "text": "В углу Конторы стоит лампа."
+      },
+      {
+       "t": "line",
+       "line": "P1-09"
+      },
+      {
+       "t": "line",
+       "line": "P1-10"
+      },
+      {
+       "t": "line",
+       "line": "P1-11"
+      },
+      {
+       "t": "await",
+       "action": "lamp.on"
+      },
+      {
+       "t": "dir",
+       "id": "P1-D04",
+       "text": "Свет теплеет, музыка мягче. Нажать ещё раз — всё как было."
+      },
+      {
+       "t": "await",
+       "action": "lamp.off"
+      },
+      {
+       "t": "line",
+       "line": "P1-12"
+      }
+     ],
+     "known": [
+      {
+       "t": "dir",
+       "id": "P1-D03",
+       "text": "В углу Конторы стоит лампа."
+      },
+      {
+       "t": "line",
+       "line": "P1-09"
+      },
+      {
+       "t": "line",
+       "line": "P1-10"
+      },
+      {
+       "t": "line",
+       "line": "P1-11"
+      },
+      {
+       "t": "await",
+       "action": "lamp.on"
+      },
+      {
+       "t": "dir",
+       "id": "P1-D04",
+       "text": "Свет теплеет, музыка мягче. Нажать ещё раз — всё как было."
+      },
+      {
+       "t": "await",
+       "action": "lamp.off"
+      },
+      {
+       "t": "line",
+       "line": "P1-12"
+      }
+     ]
+    },
+    {
+     "t": "goto",
+     "scene": "P2"
+    }
+   ]
+  },
+  {
+   "id": "P2",
+   "title": "Мини-дело «Где очки Ватсони?»",
+   "location": "office",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "line",
+     "line": "P2-01"
+    },
+    {
+     "t": "line",
+     "line": "P2-02"
+    },
+    {
+     "t": "skill",
+     "skill": "notebook",
+     "first": [
+      {
+       "t": "dir",
+       "id": "P2-D01",
+       "text": "Открывается Блокнот с одной колонкой «Где?»."
+      },
+      {
+       "t": "line",
+       "line": "P2-03"
+      },
+      {
+       "t": "line",
+       "line": "P2-04"
+      },
+      {
+       "t": "line",
+       "line": "P2-05"
+      }
+     ],
+     "known": [
+      {
+       "t": "dir",
+       "id": "P2-D01",
+       "text": "Открывается Блокнот с одной колонкой «Где?»."
+      },
+      {
+       "t": "line",
+       "line": "P2-03"
+      },
+      {
+       "t": "line",
+       "line": "P2-04"
+      },
+      {
+       "t": "line",
+       "line": "P2-05"
+      }
+     ]
+    },
+    {
+     "t": "goto",
+     "scene": "P2-HUB"
+    }
+   ]
+  },
+  {
+   "id": "P2-HUB",
+   "title": "Осмотр Конторы",
+   "location": "office",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "hub",
+   "steps": [
+    {
+     "t": "if",
+     "when": {
+      "all": [
+       {
+        "any": [
+         {
+          "notebookConfirmed": "where"
+         },
+         {
+          "all": [
+           {
+            "visited": "P2-SHELF"
+           },
+           {
+            "visited": "P2-TEAPOT"
+           },
+           {
+            "visited": "P2-MIRROR"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "not": {
+         "visited": "P2-GUESS"
+        }
+       }
+      ]
+     },
+     "then": [
+      {
+       "t": "goto",
+       "scene": "P2-GUESS"
+      }
+     ],
+     "else": []
+    },
+    {
+     "t": "menu",
+     "id": "P2-M",
+     "prompt": null,
+     "pageSize": 3,
+     "options": [
+      {
+       "id": "shelf",
+       "label": "P2-AX-shelf",
+       "to": "P2-SHELF",
+       "when": null,
+       "hideWhen": null,
+       "optional": false
+      },
+      {
+       "id": "teapot",
+       "label": "P2-AX-teapot",
+       "to": "P2-TEAPOT",
+       "when": null,
+       "hideWhen": null,
+       "optional": false
+      },
+      {
+       "id": "mirror",
+       "label": "P2-B03",
+       "to": "P2-MIRROR",
+       "when": null,
+       "hideWhen": null,
+       "optional": false
+      }
+     ],
+     "back": null
+    }
+   ]
+  },
+  {
+   "id": "P2-SHELF",
+   "title": "Полка",
+   "location": "office",
+   "cast": [
+    "khvosts"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "line",
+     "line": "P2-06"
+    },
+    {
+     "t": "if",
+     "when": {
+      "not": {
+       "flag": "p2-shelf-seen"
+      }
+     },
+     "then": [
+      {
+       "t": "line",
+       "line": "P2-07"
+      }
+     ],
+     "else": []
+    },
+    {
+     "t": "set",
+     "flag": "p2-shelf-seen"
+    },
+    {
+     "t": "clue",
+     "clue": "p-shelf"
+    },
+    {
+     "t": "goto",
+     "scene": "P2-HUB"
+    }
+   ]
+  },
+  {
+   "id": "P2-TEAPOT",
+   "title": "Чайник",
+   "location": "office",
+   "cast": [
+    "khvosts"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "line",
+     "line": "P2-08"
+    },
+    {
+     "t": "clue",
+     "clue": "p-teapot"
+    },
+    {
+     "t": "goto",
+     "scene": "P2-HUB"
+    }
+   ]
+  },
+  {
+   "id": "P2-MIRROR",
+   "title": "Зеркало",
+   "location": "office",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "line",
+     "line": "P2-09"
+    },
+    {
+     "t": "clue",
+     "clue": "p-mirror"
+    },
+    {
+     "t": "goto",
+     "scene": "P2-HUB"
+    }
+   ]
+  },
+  {
+   "id": "P2-GUESS",
+   "title": "Кнопка «Сказать догадку»",
+   "location": "office",
+   "cast": [
+    "khvosts"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "guess",
+     "first": [
+      {
+       "t": "line",
+       "line": "P2-10"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "P2-10"
+      }
+     ]
+    },
+    {
+     "t": "goto",
+     "scene": "P2-HUB"
+    }
+   ]
+  },
+  {
+   "id": "P2-WIN",
+   "title": "Очки найдены",
+   "location": "office",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "line",
+     "line": "P2-11"
+    },
+    {
+     "t": "line",
+     "line": "P2-12"
+    },
+    {
+     "t": "line",
+     "line": "P2-13"
+    },
+    {
+     "t": "goto",
+     "scene": "P3"
+    }
+   ]
+  },
+  {
+   "id": "P3",
+   "title": "Ракушка, пауза и первое письмо",
+   "location": "office",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "cutscene",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "shell",
+     "first": [
+      {
+       "t": "line",
+       "line": "P3-01"
+      },
+      {
+       "t": "line",
+       "line": "P3-02"
+      },
+      {
+       "t": "line",
+       "line": "P3-03"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "P3-01"
+      },
+      {
+       "t": "line",
+       "line": "P3-02"
+      },
+      {
+       "t": "line",
+       "line": "P3-03"
+      }
+     ]
+    },
+    {
+     "t": "skill",
+     "skill": "pause",
+     "first": [
+      {
+       "t": "line",
+       "line": "P3-04"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "P3-04"
+      }
+     ]
+    },
+    {
+     "t": "cutscene",
+     "cutscene": "p3.letter"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-prologue-badge"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-prologue-title"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-prologue-buttons"
+    },
+    {
+     "t": "skill",
+     "skill": "map",
+     "first": [
+      {
+       "t": "dir",
+       "id": "P3-D02",
+       "text": "Открывается карта Пушистино. Активна только Пироговая улица."
+      },
+      {
+       "t": "line",
+       "line": "P3-08"
+      }
+     ],
+     "known": [
+      {
+       "t": "dir",
+       "id": "P3-D02",
+       "text": "Открывается карта Пушистино. Активна только Пироговая улица."
+      },
+      {
+       "t": "line",
+       "line": "P3-08"
+      }
+     ]
+    },
+    {
+     "t": "goto",
+     "scene": "P3-MAP"
+    }
+   ]
+  },
+  {
+   "id": "P3-MAP",
+   "title": "Карта Пушистино",
+   "location": "map",
+   "cast": [],
+   "presentation": "hub",
+   "steps": [
+    {
+     "t": "menu",
+     "id": "P3-M",
+     "prompt": null,
+     "pageSize": 3,
+     "options": [
+      {
+       "id": "pirogovaya",
+       "label": "P3-B01",
+       "to": "P3-END",
+       "when": null,
+       "hideWhen": null,
+       "optional": false
+      }
+     ],
+     "back": null
+    }
+   ]
+  },
+  {
+   "id": "P3-END",
+   "title": "Переход к делу №1",
+   "location": "map",
+   "cast": [],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "end"
+    }
+   ]
+  }
+ ],
+ "logic": {
+  "axes": [
+   {
+    "id": "where",
+    "title": "P2-AX-where",
+    "values": [
+     {
+      "id": "shelf",
+      "label": "P2-AX-shelf"
+     },
+     {
+      "id": "teapot",
+      "label": "P2-AX-teapot"
+     },
+     {
+      "id": "head",
+      "label": "P2-AX-head"
+     }
+    ]
+   }
+  ],
+  "intended": {
+   "where": "head"
+  },
+  "clues": [
+   {
+    "id": "p-shelf",
+    "title": "P2-CL-shelf",
+    "required": true,
+    "predicate": {
+     "op": "ne",
+     "axis": "where",
+     "value": "shelf"
+    },
+    "requires": [],
+    "source": "P2-SHELF",
+    "summary": "На полке только книги."
+   },
+   {
+    "id": "p-teapot",
+    "title": "P2-CL-teapot",
+    "required": true,
+    "predicate": {
+     "op": "ne",
+     "axis": "where",
+     "value": "teapot"
+    },
+    "requires": [],
+    "source": "P2-TEAPOT",
+    "summary": "В чайнике только чай."
+   },
+   {
+    "id": "p-mirror",
+    "title": "P2-CL-mirror",
+    "required": true,
+    "predicate": {
+     "op": "eq",
+     "axis": "where",
+     "value": "head"
+    },
+    "requires": [],
+    "source": "P2-MIRROR",
+    "summary": "В зеркале видно, что очки на голове Ватсони."
+   }
+  ],
+  "version": {
+   "button": "UI-hud.guess",
+   "available": {
+    "any": [
+     {
+      "notebookConfirmed": "where"
+     },
+     {
+      "all": [
+       {
+        "visited": "P2-SHELF"
+       },
+       {
+        "visited": "P2-TEAPOT"
+       },
+       {
+        "visited": "P2-MIRROR"
+       }
+      ]
+     }
+    ]
+   },
+   "onSolved": "P2-WIN"
+  },
+  "wrongVersion": {
+   "intro": [
+    {
+     "line": "P2-14",
+     "when": null
+    }
+   ],
+   "byValue": [
+    {
+     "axis": "where",
+     "value": "shelf",
+     "clues": [
+      "p-shelf"
+     ],
+     "lines": [
+      {
+       "line": "P2-15",
+       "when": {
+        "not": {
+         "visited": "P2-MIRROR"
+        }
+       }
+      },
+      {
+       "line": "P2-16",
+       "when": {
+        "visited": "P2-MIRROR"
+       }
+      }
+     ]
+    },
+    {
+     "axis": "where",
+     "value": "teapot",
+     "clues": [
+      "p-teapot"
+     ],
+     "lines": [
+      {
+       "line": "P2-15",
+       "when": {
+        "not": {
+         "visited": "P2-MIRROR"
+        }
+       }
+      },
+      {
+       "line": "P2-16",
+       "when": {
+        "visited": "P2-MIRROR"
+       }
+      }
+     ]
+    }
+   ],
+   "outro": []
+  },
+  "redHerrings": []
+ },
+ "deduction": {
+  "schema": 1,
+  "id": "prologue",
+  "axes": [
+   {
+    "id": "where",
+    "values": [
+     "shelf",
+     "teapot",
+     "head"
+    ]
+   }
+  ],
+  "compatibility": null,
+  "intended": {
+   "where": "head"
+  },
+  "clues": [
+   {
+    "id": "p-shelf",
+    "predicate": {
+     "op": "ne",
+     "axis": "where",
+     "value": "shelf"
+    },
+    "requires": [],
+    "requiresAnswer": false,
+    "explanationKey": "P2-CL-shelf"
+   },
+   {
+    "id": "p-teapot",
+    "predicate": {
+     "op": "ne",
+     "axis": "where",
+     "value": "teapot"
+    },
+    "requires": [],
+    "requiresAnswer": false,
+    "explanationKey": "P2-CL-teapot"
+   },
+   {
+    "id": "p-mirror",
+    "predicate": {
+     "op": "eq",
+     "axis": "where",
+     "value": "head"
+    },
+    "requires": [],
+    "requiresAnswer": false,
+    "explanationKey": "P2-CL-mirror"
+   }
+  ],
+  "redHerrings": [],
+  "maxCandidates": 3
+ },
+ "notebookHelp": {
+  "mode": "suggest",
+  "marks": [
+   {
+    "axis": "where",
+    "value": "shelf",
+    "mark": "excluded",
+    "clues": [
+     "p-shelf"
+    ],
+    "line": "P2-06"
+   },
+   {
+    "axis": "where",
+    "value": "teapot",
+    "mark": "excluded",
+    "clues": [
+     "p-teapot"
+    ],
+    "line": "P2-08"
+   },
+   {
+    "axis": "where",
+    "value": "head",
+    "mark": "confirmed",
+    "clues": [
+     "p-mirror"
+    ],
+    "line": "P2-09"
+   }
+  ],
+  "pointers": [],
+  "nothing": "UI-notebook.nothing"
+ },
+ "hints": null,
+ "minigames": [
+  {
+   "id": "p1-inspect",
+   "skill": "inspect",
+   "config": {
+    "kind": "magnifier",
+    "targets": [
+     {
+      "id": "magnifier",
+      "label": "P1-B01",
+      "required": true,
+      "reply": [
+       "P1-05"
+      ]
+     },
+     {
+      "id": "notebook",
+      "label": "P1-B02",
+      "required": true,
+      "reply": [
+       "P1-06"
+      ]
+     },
+     {
+      "id": "bug",
+      "label": "P1-B03",
+      "required": true,
+      "reply": [
+       "P1-07"
+      ]
+     }
+    ],
+    "afterFirst": [
+     "P1-08"
+    ],
+    "afterFirstSkill": "replay",
+    "assistAfterMisses": 3
+   }
+  }
+ ],
+ "facts": [],
+ "glossary": [],
+ "rewards": [
+  {
+   "id": "rw-prologue-badge",
+   "kind": "badge",
+   "label": "RW-badge-intern",
+   "amount": 1,
+   "claimKey": "prologue:badge"
+  },
+  {
+   "id": "rw-prologue-title",
+   "kind": "title",
+   "label": "RW-title-intern",
+   "amount": 1,
+   "claimKey": "prologue:title"
+  },
+  {
+   "id": "rw-prologue-buttons",
+   "kind": "buttons",
+   "label": "RW-buttons-5",
+   "amount": 5,
+   "claimKey": "prologue:buttons"
+  }
+ ],
+ "collections": [],
+ "activities": [],
+ "comfort": [],
+ "cutscenes": [
+  {
+   "id": "intro",
+   "scene": "P0",
+   "summary": "Вступление без слов (≈26 с, только музыка): Пушистино на закате, флажки и гирлянда к юбилею, огоньки; название игры; вывеска бюро и пузыри Хвостса в круглом окне.",
+   "document": {
+    "format": "aegis-cutscene/1",
+    "id": "intro",
+    "revision": "1",
+    "advance": "input",
+    "cast": {
+     "title": {
+      "rig": "prop.title-card"
+     },
+     "garland": {
+      "rig": "prop.garland-100"
+     },
+     "bunting": {
+      "rig": "prop.bunting"
+     }
+    },
+    "steps": [
+     {
+      "op": "music",
+      "asset": "music.title-office",
+      "fade": 2,
+      "comfort": {
+       "asset": "music.title-office-warm"
+      }
+     },
+     {
+      "op": "background",
+      "asset": "bg.intro-town",
+      "transition": {
+       "type": "cut"
+      }
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "cut": true
+     },
+     {
+      "op": "marker",
+      "id": "intro.town"
+     },
+     {
+      "op": "effect",
+      "effect": "fireflies",
+      "at": {
+       "x": 640,
+       "y": 900
+      },
+      "duration": 8,
+      "wait": false
+     },
+     {
+      "op": "effect",
+      "effect": "fireflies",
+      "at": {
+       "x": 1900,
+       "y": 950
+      },
+      "duration": 8,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "bunting",
+      "from": {
+       "x": 1280,
+       "y": 330
+      },
+      "to": {
+       "x": 1280,
+       "y": 330
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "bunting",
+      "clip": "present"
+     },
+     {
+      "op": "camera",
+      "to": {
+       "x": 1280,
+       "y": 760,
+       "zoom": 1.08
+      },
+      "duration": 6,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "enter",
+      "actor": "garland",
+      "from": {
+       "x": 1280,
+       "y": 1180
+      },
+      "to": {
+       "x": 1280,
+       "y": 1180
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "garland",
+      "clip": "present"
+     },
+     {
+      "op": "effect",
+      "effect": "confetti",
+      "at": {
+       "x": 1280,
+       "y": 500
+      },
+      "duration": 3,
+      "wait": false
+     },
+     {
+      "op": "wait",
+      "seconds": 2
+     },
+     {
+      "op": "camera",
+      "preset": "sky",
+      "duration": 2.5,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "marker",
+      "id": "intro.title"
+     },
+     {
+      "op": "enter",
+      "actor": "title",
+      "from": {
+       "x": 1280,
+       "y": 420
+      },
+      "to": {
+       "x": 1280,
+       "y": 420
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "title",
+      "clip": "present"
+     },
+     {
+      "op": "effect",
+      "effect": "glow",
+      "at": {
+       "x": 1280,
+       "y": 420
+      },
+      "duration": 4,
+      "wait": false
+     },
+     {
+      "op": "wait",
+      "seconds": 4
+     },
+     {
+      "op": "transition",
+      "type": "crossfade",
+      "duration": 1.5
+     },
+     {
+      "op": "exit",
+      "actor": "title",
+      "to": {
+       "x": 1280,
+       "y": 420
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "exit",
+      "actor": "garland",
+      "to": {
+       "x": 1280,
+       "y": 1180
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "exit",
+      "actor": "bunting",
+      "to": {
+       "x": 1280,
+       "y": 330
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "background",
+      "asset": "bg.intro-bureau",
+      "transition": {
+       "type": "crossfade",
+       "duration": 1.5
+      }
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "cut": true
+     },
+     {
+      "op": "marker",
+      "id": "intro.bureau"
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.bubbles",
+      "gain": 0.5
+     },
+     {
+      "op": "effect",
+      "effect": "bubbles",
+      "at": {
+       "x": 520,
+       "y": 620
+      },
+      "duration": 5,
+      "wait": false
+     },
+     {
+      "op": "wait",
+      "seconds": 5
+     },
+     {
+      "op": "music",
+      "asset": null,
+      "fade": 2
+     },
+     {
+      "op": "transition",
+      "type": "fade",
+      "duration": 1.5,
+      "color": "#f3dca8"
+     },
+     {
+      "op": "marker",
+      "id": "intro.end"
+     }
+    ]
+   }
+  },
+  {
+   "id": "p3.letter",
+   "scene": "P3",
+   "summary": "Почтовый жук влетает с письмом мэра (мягкий звон); Хвостс читает о пропаже пирога и вручает значок стажёра.",
+   "document": {
+    "format": "aegis-cutscene/1",
+    "id": "p3.letter",
+    "revision": "1",
+    "advance": "input",
+    "cast": {
+     "khvosts": {
+      "rig": "khvosts"
+     },
+     "watsony": {
+      "rig": "watsony"
+     },
+     "player": {
+      "role": "avatar"
+     },
+     "beetle": {
+      "rig": "prop.postal-beetle"
+     },
+     "badge": {
+      "rig": "prop.badge-intern"
+     }
+    },
+    "steps": [
+     {
+      "op": "background",
+      "asset": "bg.office",
+      "transition": {
+       "type": "cut"
+      }
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "cut": true
+     },
+     {
+      "op": "enter",
+      "actor": "watsony",
+      "from": "left",
+      "to": {
+       "x": 600,
+       "y": 1450
+      },
+      "duration": 0.8,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "player",
+      "from": "left",
+      "to": {
+       "x": 1050,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "khvosts",
+      "from": "right",
+      "to": {
+       "x": 1700,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "join"
+     },
+     {
+      "op": "pose",
+      "actor": "khvosts",
+      "face": "left"
+     },
+     {
+      "op": "marker",
+      "id": "p3.letter.arrives"
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.postal-beetle",
+      "gain": 0.8
+     },
+     {
+      "op": "enter",
+      "actor": "beetle",
+      "from": "right",
+      "to": {
+       "x": 1420,
+       "y": 900
+      },
+      "duration": 1.8,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "beetle",
+      "clip": "flutter",
+      "wait": false
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.letter-chime",
+      "gain": 0.8
+     },
+     {
+      "op": "pose",
+      "actor": "khvosts",
+      "expression": "surprised"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "P3-05"
+     },
+     {
+      "op": "pose",
+      "actor": "watsony",
+      "expression": "worried"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "P3-06"
+     },
+     {
+      "op": "exit",
+      "actor": "beetle",
+      "to": "right",
+      "duration": 1.4,
+      "walk": false,
+      "wait": false
+     },
+     {
+      "op": "marker",
+      "id": "p3.badge"
+     },
+     {
+      "op": "pose",
+      "actor": "khvosts",
+      "expression": "happy"
+     },
+     {
+      "op": "pose",
+      "actor": "watsony",
+      "expression": "happy"
+     },
+     {
+      "op": "camera",
+      "preset": "close-center",
+      "duration": 1.2,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "enter",
+      "actor": "badge",
+      "from": {
+       "x": 1280,
+       "y": 950
+      },
+      "to": {
+       "x": 1280,
+       "y": 950
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "badge",
+      "clip": "present"
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.reward",
+      "gain": 0.8
+     },
+     {
+      "op": "effect",
+      "effect": "sparkles",
+      "at": {
+       "x": 1280,
+       "y": 950
+      },
+      "duration": 1.5,
+      "wait": false
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "P3-07"
+     },
+     {
+      "op": "emote",
+      "actor": "player",
+      "emote": "joy"
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "duration": 1.2,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "marker",
+      "id": "p3.end"
+     }
+    ]
+   }
+  }
+ ],
+ "reserved": [],
+ "revision": "5b3a8df47dc48dccee85d863c4cdf41f1028f93702947ab59f185fd0d7523008"
+}

@@ -1,0 +1,78 @@
+{
+ "id": "kartofan",
+ "base": "puppets/kartofan/base.png",
+ "creature": "mole gardener with tiny squinting eyes",
+ "editCrop": [
+  257,
+  76,
+  512
+ ],
+ "neck": {
+  "y": 590,
+  "overlap": 18,
+  "pivot": [
+   512,
+   600
+  ]
+ },
+ "features": {
+  "eyes": {
+   "ellipses": [
+    [
+     514,
+     384,
+     140,
+     26
+    ]
+   ],
+   "variants": [
+    "half",
+    "closed",
+    "happy",
+    "wide",
+    "worried"
+   ],
+   "phrases": {
+    "half": "the tiny squinting eyes pressed almost completely shut, very thin curved lines",
+    "closed": "the tiny eyes fully closed, drawn as soft curved lines, peaceful blink",
+    "happy": "the tiny eyes closed in happy upward curved arcs, smiling eyes",
+    "wide": "the tiny eyes opened a little wider than usual in gentle surprise, two small round dark dots with tiny highlights",
+    "worried": "the tiny squinting eyes tilted with the inner ends raised, a gentle worried, apologetic look"
+   }
+  },
+  "mouth": {
+   "ellipses": [
+    [
+     513,
+     474,
+     80,
+     32
+    ]
+   ],
+   "variants": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+   ]
+  }
+ },
+ "bodyVariants": {},
+ "expressions": {
+  "neutral": {
+   "eyes": "open"
+  },
+  "surprised": {
+   "eyes": "wide"
+  },
+  "worried": {
+   "eyes": "worried"
+  },
+  "happy": {
+   "eyes": "happy"
+  }
+ },
+ "scale": 0.82
+}

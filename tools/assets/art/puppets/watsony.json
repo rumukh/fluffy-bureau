@@ -1,0 +1,69 @@
+{
+ "id": "watsony",
+ "base": "puppets/watsony/base.png",
+ "creature": "hedgehog lady doctor",
+ "editCrop": [
+  257,
+  81,
+  512
+ ],
+ "neck": {
+  "y": 548,
+  "overlap": 18,
+  "pivot": [
+   512,
+   560
+  ]
+ },
+ "features": {
+  "eyes": {
+   "ellipses": [
+    [
+     513,
+     400,
+     150,
+     48
+    ]
+   ],
+   "variants": [
+    "half",
+    "closed",
+    "happy"
+   ]
+  },
+  "mouth": {
+   "ellipses": [
+    [
+     513,
+     490,
+     80,
+     38
+    ]
+   ],
+   "variants": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+   ]
+  },
+  "brows": {
+   "ellipses": [
+    [
+     515,
+     330,
+     140,
+     24
+    ]
+   ],
+   "variants": [
+    "up",
+    "worried"
+   ]
+  }
+ },
+ "bodyVariants": {},
+ "scale": 0.84
+}

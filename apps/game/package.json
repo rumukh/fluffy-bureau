@@ -1,0 +1,15 @@
+{
+  "name": "@fluffy/game",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Fluffy Bureau browser app (static offline PWA).",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/preview.mjs"
+  },
+  "dependencies": {
+    "@fluffy/game-core": "*"
+  }
+}

@@ -13,3 +13,6 @@ test-results/
 .env.*
 .DS_Store
 Thumbs.db
+apps/game/out/
+*.tmp.mjs
+shot-*.png

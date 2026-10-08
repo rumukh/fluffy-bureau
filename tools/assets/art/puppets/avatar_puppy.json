@@ -1,0 +1,84 @@
+{
+ "id": "avatar.puppy",
+ "dir": "avatar_puppy",
+ "base": "puppets/avatar_puppy/base.png",
+ "creature": "young puppy child",
+ "editCrop": [
+  254,
+  200,
+  512
+ ],
+ "neck": {
+  "y": 592,
+  "overlap": 18,
+  "pivot": [
+   512,
+   602
+  ]
+ },
+ "features": {
+  "eyes": {
+   "ellipses": [
+    [
+     511,
+     408,
+     170,
+     60
+    ]
+   ],
+   "variants": [
+    "half",
+    "closed",
+    "happy"
+   ]
+  },
+  "brows": {
+   "ellipses": [
+    [
+     511,
+     292,
+     165,
+     28
+    ]
+   ],
+   "variants": [
+    "up",
+    "worried"
+   ]
+  },
+  "mouth": {
+   "ellipses": [
+    [
+     512,
+     544,
+     100,
+     32
+    ]
+   ],
+   "variants": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+   ]
+  }
+ },
+ "avatar": {
+  "scarf": {
+   "y": [
+    542,
+    1090
+   ],
+   "x": [
+    262,
+    762
+   ],
+   "satMax": 0.24,
+   "valMin": 0.55
+  }
+ },
+ "bodyVariants": {},
+ "scale": 0.72
+}

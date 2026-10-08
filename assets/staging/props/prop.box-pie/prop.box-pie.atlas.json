@@ -1,0 +1,28 @@
+{
+ "format": "aegis-atlas/1",
+ "id": "prop.box-pie.atlas",
+ "image": "prop.box-pie.atlas.webp",
+ "width": 1024,
+ "height": 512,
+ "scale": 1,
+ "frames": {
+  "box.closed": {
+   "x": 2,
+   "y": 2,
+   "w": 340,
+   "h": 357
+  },
+  "box.open": {
+   "x": 346,
+   "y": 2,
+   "w": 340,
+   "h": 357
+  },
+  "body.anchor": {
+   "x": 1018,
+   "y": 506,
+   "w": 4,
+   "h": 4
+  }
+ }
+}

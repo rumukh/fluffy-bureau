@@ -1,0 +1,13 @@
+node_modules/
+dist/
+out/
+vendor/
+package-lock.json
+docs/pm/
+content/
+assets/
+playwright-report/
+test-results/
+*.md
+docs/audio/
+docs/art/

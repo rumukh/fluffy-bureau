@@ -1,0 +1,6161 @@
+{
+ "format": "fluffy-content-pack",
+ "schema": 1,
+ "id": "case01-l3",
+ "kind": "case",
+ "title": "C1-TITLE",
+ "case": {
+  "number": 1,
+  "level": 3
+ },
+ "requires": [
+  "shared"
+ ],
+ "start": "L3-1",
+ "lines": [
+  {
+   "id": "C1-TITLE",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Пирог, которого не было",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-1-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Беда! Мой черничный пирог пропал!",
+   "voiced": true,
+   "delivery": "worried"
+  },
+  {
+   "id": "C1-1-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Я испёк его к празднику.",
+   "voiced": true,
+   "delivery": "worried"
+  },
+  {
+   "id": "C1-1-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Поставил коробку на скамейку. Отвернулся на минутку…",
+   "voiced": true,
+   "delivery": "worried"
+  },
+  {
+   "id": "C1-1-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "А пирога нет!",
+   "voiced": true,
+   "delivery": "worried"
+  },
+  {
+   "id": "C1-1-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Спокойно, господин мэр. Бюро разберётся.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C1-1-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Это енот Тёпа! Я видел его утром.",
+   "voiced": true,
+   "delivery": "excited"
+  },
+  {
+   "id": "C1-1-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Еноты вечно что-то тащат!",
+   "voiced": true,
+   "delivery": "excited"
+  },
+  {
+   "id": "L3-1-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Или Стелла! Или мышата Шуршики!",
+   "voiced": true,
+   "delivery": "excited"
+  },
+  {
+   "id": "L3-1-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Они вечно что-то тащат в норку.",
+   "voiced": true,
+   "delivery": "excited"
+  },
+  {
+   "id": "C1-1-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Не будем спешить, пушинка.",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C1-1-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Сыщик верит не виду, а уликам.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C1-1-10",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Улика — это след, который подсказывает правду.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C1-1-11",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Записала! Кажется…",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-1-12",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Господин мэр, кто был утром на улице?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-1-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Тёпа шёл в мыловарню. Картофан нёс рассаду.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-1-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Стелла летала с почтой. Мышата бегали тут.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-1-14",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Ну и я, конечно.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-1-15",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Открой Блокнот. Теперь в нём три вопроса.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-1-16",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Кто? Где пирог сейчас? Что случилось?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L2-1-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Пирог могли съесть, спрятать или перепутать.",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "L2-1-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "А могли отправить по почте!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C1-1-19",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Вот три волшебных клубка.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-1-20",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Потянешь нитку — я подскажу, куда идти.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C1-1-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Осмотреть скамейку",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-1-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Утешить Тёпу",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L2-1-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Расспросить жителей",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-2-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Пойти по следам",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-5-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Принюхаться",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-2-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Возьми лупу. Найди пять странных мелочей.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-2-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Внутри рассада, а не пирог.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-2-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Кто-то оставил свою коробку взамен!",
+   "voiced": true,
+   "delivery": "excited"
+  },
+  {
+   "id": "C1-2-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Новая улика! Записала: коробку оставили.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-3-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "text": "Вы тоже думаете, что это я?",
+   "voiced": true,
+   "delivery": "sad"
+  },
+  {
+   "id": "C1-3-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "text": "Все смотрят на мои лапы…",
+   "voiced": true,
+   "delivery": "sad"
+  },
+  {
+   "id": "C1-3-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Тёпа расстроен. Подбери добрые слова.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C1-3-12",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "text": "Лапы синие от мыла.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-3-13",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "text": "Я варю черничное мыло к празднику.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-3-14",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "text": "Всё утро был тут. Спросите Фитилька!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C1-3-15",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "fitilyok",
+   "text": "Правда! Я светил ему всё утро.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-3-16",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Свидетель — тот, кто сам всё видел.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C1-3-17",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Фитилёк — наш свидетель. Тёпа ни при чём.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-3-18",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "text": "Загляни в котёл. Пирога тут нет.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-3-19",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "text": "А утром мимо шёл кто-то с коробкой.",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C1-3-20",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "text": "Шёл медленно и всё время щурился.",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C1-3-21",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Щурился? Наверное, плохо видел…",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C1-3-22",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Ещё одна улика! Записала.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L2-4-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Часы на пекарне",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L2-4-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "text": "Я рано улетела на почту.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L2-4-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "text": "Часы на пекарне как раз били восемь.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-4-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "text": "Больше я ничего не видела. Честно-честно.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L2-4-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Когда что было? Спросим у часов на пекарне.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-4-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Мы ничего не брали! Только крошки.",
+   "voiced": true,
+   "delivery": "shy"
+  },
+  {
+   "id": "L3-4-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Крошки лежали у скамейки. Маковые, вкусные.",
+   "voiced": true,
+   "delivery": "shy"
+  },
+  {
+   "id": "L3-4-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Спасибо. Крошки — это не пирог.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C1-4-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Господин мэр, а что у вас в щеках?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-4-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Семечки к празднику! Вот, смотрите.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-4-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Пирог в щёки не влезет. Он большой!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C1-4-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Записала: в щеках только семечки.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-4-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Господин мэр, когда вы ушли в пекарню?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-4-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Ровно в девять! Я помню точно.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-4-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Перед этим съел маковую булочку.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-4-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "В полдесятого? Ой, я перепутал. Часы не обманешь!",
+   "voiced": true,
+   "delivery": "shy"
+  },
+  {
+   "id": "L3-5-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Тут два следа! Чьи они?",
+   "voiced": true,
+   "delivery": "excited"
+  },
+  {
+   "id": "C1-5-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Сравни след с карточками. Чья это лапа?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-5-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "След ушёл в огород и пропал.",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "L3-5-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Земля тут мягкая. Лапа не видна.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-5-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Есть улика! Записала… кажется, всё.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L2-6-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Часы с окошками всё помнят.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L2-6-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Почтовый жук задел их, картинки рассыпались.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L2-6-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Разложи картинки по порядку. Смотри на стрелки.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-6-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Снова часы! Теперь картинок пять.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L2-6-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Стелла улетела в восемь. Пирог появился в девять.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L2-6-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Значит, Стелла пирога даже не видела!",
+   "voiced": true,
+   "delivery": "excited"
+  },
+  {
+   "id": "L3-6-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "А мышата пришли, когда коробки уже не было.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L2-6-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Ещё одна улика! Записала.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-7-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Крот чует носом лучше нас. Но попробуем!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "L3-7-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Переворачивай по две карточки. Ищи одинаковые запахи.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-7-07",
+   "rev": 2,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Там коробка мэра. В окошке виден пирог!",
+   "voiced": true,
+   "delivery": "excited"
+  },
+  {
+   "id": "L3-7-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Значит, пирог никто не ел.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-7-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Ещё улика! Записала крупными буквами.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-6-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Улики собраны. Пора строить версию.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-6-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Версия — это наша догадка, как всё было.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C1-6-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Выбери в Блокноте: кто, где и что случилось.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-6-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Потом пригласим героя на разговор.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-7-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "text": "Гости? Ой, я вас плохо вижу.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-7-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Картофан, понюхай вот эту коробку.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-7-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "text": "Пахнет черникой… Это не моя рассада!",
+   "voiced": true,
+   "delivery": "worried"
+  },
+  {
+   "id": "C1-7-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "text": "Коробки одинаковые. Я поставил свою…",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C1-7-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "text": "А взял чужую. Перепутал!",
+   "voiced": true,
+   "delivery": "shy"
+  },
+  {
+   "id": "C1-7-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "text": "Господин мэр, простите меня, пожалуйста!",
+   "voiced": true,
+   "delivery": "shy"
+  },
+  {
+   "id": "C1-7-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Ничего, Картофан. Ты же не нарочно.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C1-7-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "text": "Ой… я нёс её боком.",
+   "voiced": true,
+   "delivery": "shy"
+  },
+  {
+   "id": "C1-7-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "text": "Я всё исправлю. Принесу свежей черники!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C1-7-10",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "А теперь честно разберём наши ложные следы.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-7-11",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Синие лапы Тёпы — от черничного мыла.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L2-8-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Перо у скамейки? Стелла пролетала там в восемь.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-9-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Маковые крошки — от булочки мэра.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-9-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Мышата их собрали. Мышиный след — к норке.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-7-12",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "В щеках мэра — семечки к празднику.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-7-13",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "А Тёпу заподозрили только по виду.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-7-14",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Не суди по виду, пушинка. Суди по уликам.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C1-7-14a",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Твоя версия подтвердилась! Молодец.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-7-14b",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "И спасибо нашему свидетелю Фитильку!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "L3-9-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Тёпа, Стелла, мышата — простите. Я поспешил.",
+   "voiced": true,
+   "delivery": "shy"
+  },
+  {
+   "id": "L2-8-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "text": "Мир! Я принесу ленточку для пирога.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-9-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "А можно нам тоже пирога?",
+   "voiced": true,
+   "delivery": "shy"
+  },
+  {
+   "id": "L3-9-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Конечно! Гостей много — удвоим рецепт!",
+   "voiced": true,
+   "delivery": "excited"
+  },
+  {
+   "id": "C1-7-17",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Элементарно, пушинка! Дело раскрыто!",
+   "voiced": true,
+   "delivery": "excited"
+  },
+  {
+   "id": "L3-10-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Удвоим рецепт! Каждой мерки — в два раза больше.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-8-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "text": "Пахнет как моё мыло! Только вкуснее.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-8-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Лучший пирог в Пушистино! Спасибо, {имя}!",
+   "voiced": true,
+   "delivery": "excited"
+  },
+  {
+   "id": "C1-9-01",
+   "rev": 1,
+   "kind": "fact",
+   "speaker": "narrator",
+   "text": "Кроты видят плохо. Зато отлично чуют и осязают носом.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C1-9-02",
+   "rev": 1,
+   "kind": "fact",
+   "speaker": "narrator",
+   "text": "Черника — лесная ягода. Она растёт на низких кустиках.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C1-9-03",
+   "rev": 1,
+   "kind": "fact",
+   "speaker": "narrator",
+   "text": "Еноты часто мочат лапки. Так они лучше чувствуют на ощупь.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C1-9-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Записала в Энциклопедию! Теперь точно не забуду.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-10-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Первое дело раскрыто, {имя}!",
+   "voiced": true,
+   "delivery": "excited"
+  },
+  {
+   "id": "C1-10-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Держи значок-лапку „Пирог найден“.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C1-10-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Контора теперь и твоя. Укрась её!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C1-10-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Поставим корзинку черники? Я знаю место!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C1-AX-who",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Кто?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-AX-where",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Где пирог сейчас?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-AX-bakery",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Пекарня",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-AX-soap",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Мыловарня Тёпы",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-AX-post",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Почта",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-AX-garden",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Огород Картофана",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-AX-shed",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Сарай Картофана",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-AX-what",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Что случилось?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-AX-eaten",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Съел пирог",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-AX-mixed",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Перепутал коробки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-AX-cheeks",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Спрятал в щёки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-AX-mail",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Отправил по почте",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-CL-lupa",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Чужая коробка с рассадой",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-CL-cocoa",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Свидетель Фитилёк",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-CL-timeline",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Часы на пекарне",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-CL-two-tracks",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Два следа: мышиный и кротовый",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-CL-scents",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Пирогом пахнет у сарая",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-CL-mayor",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Семечки в щеках мэра",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-6-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Версия не подтвердилась! Зато вспомним кое-что.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C1-6-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Свидетель Фитилёк видел Тёпу всё утро.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C1-6-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Следы у скамейки — кротовые, а не хомячьи.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "L2-7-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Стелла улетела раньше, чем появился пирог.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "L3-8-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Мышата пришли, когда коробки уже не было.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "L3-8-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Пирогом пахло у сарая, а не здесь.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C1-6-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Тёпа показал котёл. Пирога там нет.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "L2-7-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Почту унесли до того, как появился пирог.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "L3-8-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "В огороде пахнет морковью, а не пирогом.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "L3-8-04",
+   "rev": 2,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "В окошке коробки виден пирог. Его не ели.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C1-6-11",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Пирог в сарае, а не в щеках.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "L2-7-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Стелла улетела в восемь, а пирог — в девять.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C1-6-12",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Отличная попытка! Запишем и подумаем.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "L2-2-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Чёрно-белое перо. Здесь пролетала сорока.",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "L3-2-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Крошки с маком. Пирог-то черничный!",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "L3-5-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Мышиные лапки. Ведут к норке Шуршиков.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-5-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Кротовые следы глубокие. Крот нёс тяжёлое!",
+   "voiced": true,
+   "delivery": "excited"
+  },
+  {
+   "id": "L3-7-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Черника и тесто! Заглянем в щёлку.",
+   "voiced": true,
+   "delivery": "excited"
+  },
+  {
+   "id": "L2-NB-01",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Пирог не ели, не прятали и не отправляли. Коробки перепутали!",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "L3-NB-01",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Вернись к скамейке. Что там нашла лупа?",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "L3-NB-02",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Вспомни, что сказал свидетель Фитилёк.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "L3-NB-03",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Посмотри ещё раз на часы с окошками.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "L3-NB-04",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Вернись к двум следам. Какой из них глубже?",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "L3-NB-05",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Вспомни, где пахло черникой и тестом.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "L3-NB-06",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Вспомни, что было в щеках у мэра.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "L3-H-01",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Начни со скамейки. Там стоял пирог.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "L2-H-02",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Стелла летала утром. Поговори с ней.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "L3-H-02",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Часы на пекарне помнят, кто когда был.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "L2-H-04",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Следы у скамейки куда-то ведут.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "L3-H-03",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Два следа — какой из них глубже?",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "L3-H-04",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "След пропал в огороде. Доверься носу.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "L3-H-05",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Тёпа грустит. Сначала спроси, как он.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "L3-H-06",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Перечитай Блокнот. Где ещё стоит вопрос?",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C1-2-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Коробка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-2-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Коробка такая же, как у мэра!",
+   "voiced": true,
+   "delivery": "excited"
+  },
+  {
+   "id": "C1-2-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Комочки земли",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-2-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Комочки земли. Свежие, ещё влажные.",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C1-2-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Отпечаток лапы",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-2-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "След широкой лапы. Куда он ведёт?",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "L2-2-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Перо",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-2-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Крошки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-3-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Здравствуй, Тёпа. Ты как?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-3-01",
+   "rev": 2,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "text": "Грустно. Но спасибо за вопрос.",
+   "voiced": true,
+   "delivery": "shy"
+  },
+  {
+   "id": "L3-3-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Мы ищем пирог мэра.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-3-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "text": "Значит, вы пришли ко мне…",
+   "voiced": true,
+   "delivery": "sad"
+  },
+  {
+   "id": "L3-3-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Сначала узнаем, как дела у друга.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "L3-3-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Какой у тебя большой котёл!",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-3-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "text": "Большой… Только мне не до котла.",
+   "voiced": true,
+   "delivery": "sad"
+  },
+  {
+   "id": "L3-3-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Мы не думаем, что это ты.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-3-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "text": "Правда? Вот хорошо.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "L3-3-B05",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Не грусти, всё выяснится.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-3-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "text": "Легко сказать…",
+   "voiced": true,
+   "delivery": "sad"
+  },
+  {
+   "id": "L3-3-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Покажем, что мы на его стороне?",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "L3-3-B06",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Мэр просто испугался.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-3-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "text": "А мне всё равно обидно.",
+   "voiced": true,
+   "delivery": "sad"
+  },
+  {
+   "id": "L2-3-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Спасибо, что не сердишься.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L2-3-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "text": "На друзей я не сержусь.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "L2-3-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Расскажешь, что видел утром?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L2-3-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "text": "Расскажу! Слушай внимательно.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L2-3-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Ты точно-точно не брал?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L2-3-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "text": "Ох… опять про пирог…",
+   "voiced": true,
+   "delivery": "sad"
+  },
+  {
+   "id": "L2-3-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Мы уже верим Тёпе. Спросим иначе?",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "L3-5-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Мышь: крошечные лапки с пальчиками",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L2-5-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Сорока: тонкие птичьи лапки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L2-5-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "У птицы тонкие лапки. Этот след шире.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-5-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Хомяк: маленькая круглая лапка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-5-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "У хомяка лапка круглее. Сравним ещё?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-5-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Енот: лапка как ладошка с пальчиками",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-5-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "У енота лапка как ладошка. Сравним ещё?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-5-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Крот: широкая лапа-лопатка с когтями",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-5-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Лапа-лопатка! Так копает только крот.",
+   "voiced": true,
+   "delivery": "excited"
+  },
+  {
+   "id": "L3-5-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Какой след глубже? Кто нёс тяжёлую коробку?",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "L3-5-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Мышиный",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-5-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Мышиные следы лёгкие. Коробку так не унести.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-5-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Кротовый",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L2-6-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "8:00. Стелла улетает с сумкой писем.",
+   "tts": "Восемь часов. Стелла улетает с сумкой писем.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L2-6-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "9:00. Мэр ставит коробку на скамейку.",
+   "tts": "Девять часов. Мэр ставит коробку на скамейку.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-6-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "9:30. Мэр ест булочку и уходит в пекарню.",
+   "tts": "Половина десятого. Мэр ест булочку и уходит в пекарню.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L2-6-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "10:00. Мэр выходит, а коробки нет.",
+   "tts": "Десять часов. Мэр выходит, а коробки нет.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-6-B05",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "10:30. Мышата собирают крошки у скамейки.",
+   "tts": "Половина одиннадцатого. Мышата собирают крошки у скамейки.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L2-6-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Посмотри на стрелки ещё раз.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "L3-7-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Огород",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-7-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Земля",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-7-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Морковь",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-7-B05",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Укроп",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-7-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Сарай",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-7-B06",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Черника",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-7-B07",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Тесто",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-7-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Не совпало. Запомни, где что лежит.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "L3-7-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Где пахнет черничным пирогом?",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "L3-7-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "В огороде морковь и укроп. Пирогом не пахнет.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-8-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Целый стакан",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-8-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Половинка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-8-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Ложка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "L3-10-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Обычно муки два стакана. А теперь?",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "L3-10-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "В два раза больше — это ещё столько же.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "L3-10-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Сахара была половинка. А теперь?",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "L3-10-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "text": "Черники был стакан. Несу ещё!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C1-8-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Ой, многовато! Отсыплем и попробуем ещё.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C1-8-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Маловато! Добавим ещё чуть-чуть?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "GL-evidence-DEF",
+   "rev": 1,
+   "kind": "glossary",
+   "speaker": "narrator",
+   "text": "Улика — это след, который подсказывает правду.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "GL-evidence",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Улика",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "GL-witness-DEF",
+   "rev": 1,
+   "kind": "glossary",
+   "speaker": "narrator",
+   "text": "Свидетель — тот, кто сам всё видел.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "GL-witness",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Свидетель",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "GL-version-DEF",
+   "rev": 1,
+   "kind": "glossary",
+   "speaker": "narrator",
+   "text": "Версия — это наша догадка, как всё было.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "GL-version",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Версия",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C1-TITLE",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Пирог по рецепту мэра Пудинга",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C1-01",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Попроси взрослого испечь пирог вместе.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C1-02",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Нужно два стакана муки и полстакана сахара.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C1-03",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Ещё стакан черники и стакан кефира.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C1-04",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Ещё два яйца и пятьдесят граммов сливочного масла.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C1-05",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Ещё чайная ложка разрыхлителя и щепотка соли.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C1-06",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Можно добавить ложку мёда.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C1-07",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Наш стакан — это двести миллилитров.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C1-08",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Взрослый растапливает масло. Пусть оно остынет.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C1-09",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Взбей яйца с сахаром венчиком.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C1-10",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Добавь кефир, масло, мёд и соль. Перемешай.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C1-11",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Смешай муку с разрыхлителем. Всыпь в тесто.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C1-12",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Мешай ложкой, пока не пропадут комочки.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C1-13",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Осторожно вмешай чернику.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C1-14",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Взрослый смазывает форму и выливает тесто.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C1-15",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Взрослый ставит пирог в духовку на 180 градусов.",
+   "tts": "Взрослый ставит пирог в духовку на сто восемьдесят градусов.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C1-16",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Пирог печётся от 35 до 40 минут.",
+   "tts": "Пирог печётся от тридцати пяти до сорока минут.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C1-17",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Взрослый проверяет пирог деревянной шпажкой. Сухая — готово!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "ACT-C1-18",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Взрослый достаёт горячую форму. Пирог остывает.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C1-19",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Взрослый режет пирог ножом. Приятного аппетита!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "ACT-C1-S01",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Нож, духовка и горячая форма — только для взрослого.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C1-S02",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "В пироге есть мука, яйца и молочное.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C1-S03",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Есть аллергия? Сначала спроси взрослого.",
+   "voiced": true,
+   "delivery": "neutral"
+  }
+ ],
+ "speakers": [],
+ "skills": [],
+ "scenes": [
+  {
+   "id": "L3-1",
+   "title": "Завязка",
+   "location": "pirogovaya-street",
+   "cast": [
+    "pudding",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "dir",
+     "id": "C1-1-D01",
+     "text": "Пироговая улица. У пекарни стоит мэр-хомяк Пудинг. Рядом пустая скамейка."
+    },
+    {
+     "t": "line",
+     "line": "C1-1-01"
+    },
+    {
+     "t": "line",
+     "line": "C1-1-02"
+    },
+    {
+     "t": "line",
+     "line": "C1-1-03"
+    },
+    {
+     "t": "line",
+     "line": "C1-1-04"
+    },
+    {
+     "t": "line",
+     "line": "C1-1-05"
+    },
+    {
+     "t": "line",
+     "line": "C1-1-06"
+    },
+    {
+     "t": "line",
+     "line": "C1-1-07"
+    },
+    {
+     "t": "dir",
+     "id": "C1-1-D02",
+     "text": "Хвостс пускает пузыри."
+    },
+    {
+     "t": "line",
+     "line": "L3-1-01"
+    },
+    {
+     "t": "line",
+     "line": "L3-1-02"
+    },
+    {
+     "t": "line",
+     "line": "C1-1-08"
+    },
+    {
+     "t": "line",
+     "line": "C1-1-09"
+    },
+    {
+     "t": "line",
+     "line": "C1-1-10"
+    },
+    {
+     "t": "line",
+     "line": "C1-1-11"
+    },
+    {
+     "t": "line",
+     "line": "C1-1-12"
+    },
+    {
+     "t": "line",
+     "line": "L3-1-03"
+    },
+    {
+     "t": "line",
+     "line": "L3-1-04"
+    },
+    {
+     "t": "line",
+     "line": "C1-1-14"
+    },
+    {
+     "t": "skill",
+     "skill": "notebook",
+     "first": [
+      {
+       "t": "dir",
+       "id": "L3-1-D01",
+       "text": "Блокнот раскрывается: три колонки, до пяти строк."
+      },
+      {
+       "t": "line",
+       "line": "C1-1-15"
+      },
+      {
+       "t": "line",
+       "line": "C1-1-16"
+      }
+     ],
+     "known": [
+      {
+       "t": "dir",
+       "id": "L3-1-D01",
+       "text": "Блокнот раскрывается: три колонки, до пяти строк."
+      },
+      {
+       "t": "line",
+       "line": "C1-1-15"
+      },
+      {
+       "t": "line",
+       "line": "C1-1-16"
+      }
+     ]
+    },
+    {
+     "t": "line",
+     "line": "L2-1-04"
+    },
+    {
+     "t": "line",
+     "line": "L2-1-05"
+    },
+    {
+     "t": "skill",
+     "skill": "klubki",
+     "first": [
+      {
+       "t": "line",
+       "line": "C1-1-19"
+      },
+      {
+       "t": "line",
+       "line": "C1-1-20"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C1-1-19"
+      },
+      {
+       "t": "line",
+       "line": "C1-1-20"
+      }
+     ]
+    },
+    {
+     "t": "goto",
+     "scene": "L3-HUB"
+    }
+   ]
+  },
+  {
+   "id": "L3-HUB",
+   "title": "Пироговая улица: выбор",
+   "location": "pirogovaya-street",
+   "cast": [
+    "pudding",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "hub",
+   "steps": [
+    {
+     "t": "if",
+     "when": {
+      "all": [
+       {
+        "clue": "c1-lupa"
+       },
+       {
+        "clue": "c1-cocoa"
+       },
+       {
+        "clue": "c1-timeline"
+       },
+       {
+        "clue": "c1-tracks"
+       },
+       {
+        "clue": "c1-scents"
+       },
+       {
+        "not": {
+         "visited": "L3-8"
+        }
+       }
+      ]
+     },
+     "then": [
+      {
+       "t": "goto",
+       "scene": "L3-8"
+      }
+     ],
+     "else": []
+    },
+    {
+     "t": "menu",
+     "id": "L3-M",
+     "prompt": null,
+     "pageSize": 3,
+     "options": [
+      {
+       "id": "bench",
+       "label": "C1-1-B01",
+       "to": "L3-2",
+       "when": null,
+       "hideWhen": {
+        "visited": "L3-2"
+       },
+       "optional": false
+      },
+      {
+       "id": "tyopa",
+       "label": "C1-1-B02",
+       "to": "L3-3",
+       "when": null,
+       "hideWhen": {
+        "visited": "L3-3"
+       },
+       "optional": false
+      },
+      {
+       "id": "residents",
+       "label": "L2-1-B01",
+       "to": "L3-4",
+       "when": null,
+       "hideWhen": {
+        "all": [
+         {
+          "visited": "L3-4S"
+         },
+         {
+          "visited": "L3-4M"
+         },
+         {
+          "visited": "L3-4P"
+         },
+         {
+          "visited": "L3-6"
+         }
+        ]
+       },
+       "optional": false
+      },
+      {
+       "id": "tracks",
+       "label": "C1-2-B01",
+       "to": "L3-5",
+       "when": {
+        "visited": "L3-2"
+       },
+       "hideWhen": {
+        "visited": "L3-5"
+       },
+       "optional": false
+      },
+      {
+       "id": "sniff",
+       "label": "L3-5-B04",
+       "to": "L3-7",
+       "when": {
+        "visited": "L3-5"
+       },
+       "hideWhen": {
+        "visited": "L3-7"
+       },
+       "optional": false
+      }
+     ],
+     "back": null
+    }
+   ]
+  },
+  {
+   "id": "L3-2",
+   "title": "Скамейка: «Лупа»",
+   "location": "bench",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "magnifier",
+     "first": [
+      {
+       "t": "line",
+       "line": "L3-2-01"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "L3-2-01"
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c1l3-lupa"
+    },
+    {
+     "t": "dir",
+     "id": "C1-2-D01",
+     "text": "Игрок открывает коробку."
+    },
+    {
+     "t": "line",
+     "line": "C1-2-05"
+    },
+    {
+     "t": "line",
+     "line": "C1-2-06"
+    },
+    {
+     "t": "line",
+     "line": "C1-2-07"
+    },
+    {
+     "t": "clue",
+     "clue": "c1-lupa"
+    },
+    {
+     "t": "goto",
+     "scene": "L3-HUB"
+    }
+   ]
+  },
+  {
+   "id": "L3-3",
+   "title": "Мыловарня: «Чашка какао», три раунда",
+   "location": "soap-workshop",
+   "cast": [
+    "tyopa",
+    "fitilyok",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "dir",
+     "id": "C1-3-D01",
+     "text": "Тёпа сидит у котла и прячет синие лапы за спину. Рядом светлячок Фитилёк."
+    },
+    {
+     "t": "line",
+     "line": "C1-3-01"
+    },
+    {
+     "t": "line",
+     "line": "C1-3-02"
+    },
+    {
+     "t": "skill",
+     "skill": "cocoa",
+     "first": [
+      {
+       "t": "line",
+       "line": "C1-3-03"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C1-3-03"
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c1l3-cocoa"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c1-heart-tyopa"
+    },
+    {
+     "t": "line",
+     "line": "C1-3-12"
+    },
+    {
+     "t": "line",
+     "line": "C1-3-13"
+    },
+    {
+     "t": "line",
+     "line": "C1-3-14"
+    },
+    {
+     "t": "line",
+     "line": "C1-3-15"
+    },
+    {
+     "t": "line",
+     "line": "C1-3-16"
+    },
+    {
+     "t": "line",
+     "line": "C1-3-17"
+    },
+    {
+     "t": "line",
+     "line": "C1-3-18"
+    },
+    {
+     "t": "line",
+     "line": "C1-3-19"
+    },
+    {
+     "t": "line",
+     "line": "C1-3-20"
+    },
+    {
+     "t": "line",
+     "line": "C1-3-21"
+    },
+    {
+     "t": "line",
+     "line": "C1-3-22"
+    },
+    {
+     "t": "clue",
+     "clue": "c1-cocoa"
+    },
+    {
+     "t": "goto",
+     "scene": "L3-HUB"
+    }
+   ]
+  },
+  {
+   "id": "L3-4",
+   "title": "Расспросы",
+   "location": "pirogovaya-street",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "hub",
+   "steps": [
+    {
+     "t": "if",
+     "when": {
+      "all": [
+       {
+        "visited": "L3-4S"
+       },
+       {
+        "visited": "L3-4M"
+       },
+       {
+        "visited": "L3-4P"
+       },
+       {
+        "visited": "L3-6"
+       }
+      ]
+     },
+     "then": [
+      {
+       "t": "goto",
+       "scene": "L3-HUB"
+      }
+     ],
+     "else": []
+    },
+    {
+     "t": "menu",
+     "id": "L3-4-M",
+     "prompt": null,
+     "pageSize": 3,
+     "options": [
+      {
+       "id": "stella",
+       "label": "NM-stella",
+       "to": "L3-4S",
+       "when": null,
+       "hideWhen": {
+        "visited": "L3-4S"
+       },
+       "optional": false
+      },
+      {
+       "id": "mice",
+       "label": "NM-mouse",
+       "to": "L3-4M",
+       "when": null,
+       "hideWhen": {
+        "visited": "L3-4M"
+       },
+       "optional": true
+      },
+      {
+       "id": "mayor",
+       "label": "NM-pudding",
+       "to": "L3-4P",
+       "when": null,
+       "hideWhen": {
+        "visited": "L3-4P"
+       },
+       "optional": true
+      },
+      {
+       "id": "clock",
+       "label": "L2-4-B03",
+       "to": "L3-6",
+       "when": {
+        "visited": "L3-4S"
+       },
+       "hideWhen": {
+        "visited": "L3-6"
+       },
+       "optional": false
+      }
+     ],
+     "back": "L3-HUB"
+    }
+   ]
+  },
+  {
+   "id": "L3-4S",
+   "title": "Стелла",
+   "location": "post-box",
+   "cast": [
+    "stella",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "dir",
+     "id": "L2-4-D01",
+     "text": "Стелла сидит на почтовом ящике с большой сумкой."
+    },
+    {
+     "t": "line",
+     "line": "L2-4-01"
+    },
+    {
+     "t": "line",
+     "line": "L2-4-02"
+    },
+    {
+     "t": "line",
+     "line": "L3-4-01"
+    },
+    {
+     "t": "line",
+     "line": "L2-4-08"
+    },
+    {
+     "t": "goto",
+     "scene": "L3-4"
+    }
+   ]
+  },
+  {
+   "id": "L3-4M",
+   "title": "Мышата Шуршики",
+   "location": "mouse-hole",
+   "cast": [
+    "mouse",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "dir",
+     "id": "L3-4-D01",
+     "text": "Мышата Шуршики выглядывают из норки у пекарни."
+    },
+    {
+     "t": "line",
+     "line": "L3-4-02"
+    },
+    {
+     "t": "line",
+     "line": "L3-4-03"
+    },
+    {
+     "t": "line",
+     "line": "L3-4-04"
+    },
+    {
+     "t": "goto",
+     "scene": "L3-4"
+    }
+   ]
+  },
+  {
+   "id": "L3-4P",
+   "title": "Мэр: щёки и время",
+   "location": "pirogovaya-street",
+   "cast": [
+    "pudding",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "line",
+     "line": "C1-4-01"
+    },
+    {
+     "t": "line",
+     "line": "C1-4-02"
+    },
+    {
+     "t": "dir",
+     "id": "C1-4-D01",
+     "text": "Пудинг высыпает семечки в ладошку и смущённо собирает обратно."
+    },
+    {
+     "t": "line",
+     "line": "C1-4-03"
+    },
+    {
+     "t": "line",
+     "line": "C1-4-04"
+    },
+    {
+     "t": "clue",
+     "clue": "c1-mayor"
+    },
+    {
+     "t": "line",
+     "line": "L3-4-05"
+    },
+    {
+     "t": "line",
+     "line": "L3-4-06"
+    },
+    {
+     "t": "line",
+     "line": "L3-4-07"
+    },
+    {
+     "t": "if",
+     "when": {
+      "visited": "L3-6"
+     },
+     "then": [
+      {
+       "t": "line",
+       "line": "L3-4-08"
+      }
+     ],
+     "else": []
+    },
+    {
+     "t": "goto",
+     "scene": "L3-4"
+    }
+   ]
+  },
+  {
+   "id": "L3-5",
+   "title": "«Кто наследил?»: два следа",
+   "location": "garden-path",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "line",
+     "line": "L3-5-01"
+    },
+    {
+     "t": "skill",
+     "skill": "tracks",
+     "first": [
+      {
+       "t": "line",
+       "line": "C1-5-01"
+      }
+     ],
+     "known": []
+    },
+    {
+     "t": "minigame",
+     "minigame": "c1l3-tracks"
+    },
+    {
+     "t": "line",
+     "line": "L3-5-07"
+    },
+    {
+     "t": "line",
+     "line": "L3-5-08"
+    },
+    {
+     "t": "line",
+     "line": "L3-5-09"
+    },
+    {
+     "t": "clue",
+     "clue": "c1-tracks"
+    },
+    {
+     "t": "goto",
+     "scene": "L3-HUB"
+    }
+   ]
+  },
+  {
+   "id": "L3-6",
+   "title": "«Лента времени»: пять карточек",
+   "location": "bakery-clock",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "dir",
+     "id": "L2-6-D01",
+     "text": "Часы на пекарне — заводные, с окошками. После каждого удара в окошке остаётся картинка."
+    },
+    {
+     "t": "skill",
+     "skill": "timeline",
+     "first": [
+      {
+       "t": "line",
+       "line": "L2-6-01"
+      },
+      {
+       "t": "line",
+       "line": "L2-6-02"
+      },
+      {
+       "t": "line",
+       "line": "L2-6-03"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "L3-6-01"
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c1l3-timeline"
+    },
+    {
+     "t": "line",
+     "line": "L2-6-05"
+    },
+    {
+     "t": "line",
+     "line": "L2-6-06"
+    },
+    {
+     "t": "line",
+     "line": "L3-6-02"
+    },
+    {
+     "t": "line",
+     "line": "L2-6-07"
+    },
+    {
+     "t": "clue",
+     "clue": "c1-timeline"
+    },
+    {
+     "t": "if",
+     "when": {
+      "visited": "L3-4P"
+     },
+     "then": [
+      {
+       "t": "line",
+       "line": "L3-4-08"
+      }
+     ],
+     "else": []
+    },
+    {
+     "t": "goto",
+     "scene": "L3-HUB"
+    }
+   ]
+  },
+  {
+   "id": "L3-7",
+   "title": "«Пары запахов»",
+   "location": "garden-and-shed",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "dir",
+     "id": "L3-7-D01",
+     "text": "У огорода и у сарая лежат перевёрнутые карточки-запахи. Огород и сарай — явно разные места."
+    },
+    {
+     "t": "skill",
+     "skill": "scent-pairs",
+     "first": [
+      {
+       "t": "line",
+       "line": "L3-7-01"
+      },
+      {
+       "t": "line",
+       "line": "L3-7-02"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "L3-7-01"
+      },
+      {
+       "t": "line",
+       "line": "L3-7-02"
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c1l3-scents"
+    },
+    {
+     "t": "dir",
+     "id": "L3-7-D02",
+     "text": "Щёлка в стене сарая крупно: коробка мэра, в окошке крышки виден пирог.",
+     "background": "bg.shed-window"
+    },
+    {
+     "t": "line",
+     "line": "L3-7-07"
+    },
+    {
+     "t": "line",
+     "line": "L3-7-08"
+    },
+    {
+     "t": "line",
+     "line": "L3-7-09"
+    },
+    {
+     "t": "clue",
+     "clue": "c1-scents"
+    },
+    {
+     "t": "goto",
+     "scene": "L3-HUB"
+    }
+   ]
+  },
+  {
+   "id": "L3-8",
+   "title": "Версия: «Приглашу на разговор»",
+   "location": "pirogovaya-street",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "version",
+     "first": [
+      {
+       "t": "line",
+       "line": "C1-6-01"
+      },
+      {
+       "t": "line",
+       "line": "C1-6-02"
+      },
+      {
+       "t": "line",
+       "line": "C1-6-03"
+      },
+      {
+       "t": "line",
+       "line": "C1-6-04"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C1-6-01"
+      },
+      {
+       "t": "line",
+       "line": "C1-6-02"
+      },
+      {
+       "t": "line",
+       "line": "C1-6-03"
+      },
+      {
+       "t": "line",
+       "line": "C1-6-04"
+      }
+     ]
+    },
+    {
+     "t": "goto",
+     "scene": "L3-HUB"
+    }
+   ]
+  },
+  {
+   "id": "L3-9",
+   "title": "Разговор в сарае",
+   "location": "shed",
+   "cast": [
+    "kartofan",
+    "pudding",
+    "tyopa",
+    "stella",
+    "mouse",
+    "fitilyok",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "cutscene",
+   "steps": [
+    {
+     "t": "cutscene",
+     "cutscene": "c1.shed.l3"
+    },
+    {
+     "t": "goto",
+     "scene": "L3-10"
+    }
+   ]
+  },
+  {
+   "id": "L3-10",
+   "title": "Финал: «Пекарь», двойной рецепт",
+   "location": "bakery",
+   "cast": [
+    "pudding",
+    "kartofan",
+    "tyopa",
+    "stella",
+    "mouse",
+    "fitilyok",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "baker",
+     "first": [
+      {
+       "t": "line",
+       "line": "L3-10-01"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "L3-10-01"
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c1l3-baker"
+    },
+    {
+     "t": "cutscene",
+     "cutscene": "c1.oven.l3"
+    },
+    {
+     "t": "goto",
+     "scene": "C1-9"
+    }
+   ]
+  },
+  {
+   "id": "C1-9",
+   "title": "«А ты знал?»",
+   "location": "bakery",
+   "cast": [
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "encyclopedia",
+     "first": [
+      {
+       "t": "dir",
+       "id": "C1-9-D01",
+       "text": "Карточки в рамочке «Это правда» складываются в Энциклопедию."
+      }
+     ],
+     "known": [
+      {
+       "t": "dir",
+       "id": "C1-9-D01",
+       "text": "Карточки в рамочке «Это правда» складываются в Энциклопедию."
+      }
+     ]
+    },
+    {
+     "t": "line",
+     "line": "C1-9-01"
+    },
+    {
+     "t": "line",
+     "line": "C1-9-02"
+    },
+    {
+     "t": "line",
+     "line": "C1-9-03"
+    },
+    {
+     "t": "line",
+     "line": "C1-9-04"
+    },
+    {
+     "t": "goto",
+     "scene": "C1-10"
+    }
+   ]
+  },
+  {
+   "id": "C1-10",
+   "title": "Награда и переход",
+   "location": "office",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "cutscene",
+   "steps": [
+    {
+     "t": "cutscene",
+     "cutscene": "c1.reward.l3"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c1-badge"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c1-buttons-l3"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c1-sticker-l3"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c1-decor-basket"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c1-activity"
+    },
+    {
+     "t": "dir",
+     "id": "C1-10-D01",
+     "text": "Новые слова в «Словарике сыщика»: улика, свидетель, версия."
+    },
+    {
+     "t": "skill",
+     "skill": "cozy-day",
+     "first": [
+      {
+       "t": "line",
+       "line": "C1-10-03"
+      },
+      {
+       "t": "line",
+       "line": "C1-10-04"
+      },
+      {
+       "t": "await",
+       "action": "office.place"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C1-10-03"
+      },
+      {
+       "t": "line",
+       "line": "C1-10-04"
+      },
+      {
+       "t": "await",
+       "action": "office.place"
+      }
+     ]
+    },
+    {
+     "t": "end"
+    }
+   ]
+  }
+ ],
+ "logic": {
+  "axes": [
+   {
+    "id": "who",
+    "title": "C1-AX-who",
+    "values": [
+     {
+      "id": "tyopa",
+      "label": "NM-tyopa"
+     },
+     {
+      "id": "kartofan",
+      "label": "NM-kartofan"
+     },
+     {
+      "id": "pudding",
+      "label": "NM-pudding"
+     },
+     {
+      "id": "stella",
+      "label": "NM-stella"
+     },
+     {
+      "id": "mice",
+      "label": "NM-mouse"
+     }
+    ]
+   },
+   {
+    "id": "where",
+    "title": "C1-AX-where",
+    "values": [
+     {
+      "id": "bakery",
+      "label": "C1-AX-bakery"
+     },
+     {
+      "id": "soap",
+      "label": "C1-AX-soap"
+     },
+     {
+      "id": "post",
+      "label": "C1-AX-post"
+     },
+     {
+      "id": "garden",
+      "label": "C1-AX-garden"
+     },
+     {
+      "id": "shed",
+      "label": "C1-AX-shed"
+     }
+    ]
+   },
+   {
+    "id": "what",
+    "title": "C1-AX-what",
+    "values": [
+     {
+      "id": "eaten",
+      "label": "C1-AX-eaten"
+     },
+     {
+      "id": "mixed",
+      "label": "C1-AX-mixed"
+     },
+     {
+      "id": "cheeks",
+      "label": "C1-AX-cheeks"
+     },
+     {
+      "id": "mail",
+      "label": "C1-AX-mail"
+     }
+    ]
+   }
+  ],
+  "intended": {
+   "who": "kartofan",
+   "where": "shed",
+   "what": "mixed"
+  },
+  "clues": [
+   {
+    "id": "c1-lupa",
+    "title": "C1-CL-lupa",
+    "required": true,
+    "predicate": {
+     "op": "in",
+     "axis": "what",
+     "values": [
+      "eaten",
+      "mixed",
+      "cheeks",
+      "mail"
+     ]
+    },
+    "requires": [],
+    "source": "L3-2",
+    "summary": "Коробка с рассадой; перо; маковые крошки. Открывает следы."
+   },
+   {
+    "id": "c1-cocoa",
+    "title": "C1-CL-cocoa",
+    "required": true,
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "tyopa"
+      },
+      {
+       "op": "ne",
+       "axis": "where",
+       "value": "soap"
+      }
+     ]
+    },
+    "requires": [],
+    "source": "L3-3",
+    "summary": "Алиби Тёпы; кто-то щурился с коробкой."
+   },
+   {
+    "id": "c1-timeline",
+    "title": "C1-CL-timeline",
+    "required": true,
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "stella"
+      },
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "mice"
+      },
+      {
+       "op": "ne",
+       "axis": "where",
+       "value": "post"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "mail"
+      }
+     ]
+    },
+    "requires": [],
+    "source": "L3-6",
+    "summary": "Стелла улетела в 8:00; пирог в 9:00; пропал к 10:00; мышата пришли в 10:30."
+   },
+   {
+    "id": "c1-tracks",
+    "title": "C1-CL-two-tracks",
+    "required": true,
+    "predicate": {
+     "op": "eq",
+     "axis": "who",
+     "value": "kartofan"
+    },
+    "requires": [
+     "c1-lupa"
+    ],
+    "source": "L3-5",
+    "summary": "Мышиный след — к норке, лёгкий; кротовый — глубокий, в огород, где теряется."
+   },
+   {
+    "id": "c1-scents",
+    "title": "C1-CL-scents",
+    "required": true,
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "eq",
+       "axis": "where",
+       "value": "shed"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "eaten"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "cheeks"
+      }
+     ]
+    },
+    "requires": [
+     "c1-tracks"
+    ],
+    "source": "L3-7",
+    "summary": "Черникой и тестом пахнет у сарая; в щёлку видна коробка мэра, в окошке несъеденный пирог (R03)."
+   },
+   {
+    "id": "c1-mayor",
+    "title": "C1-CL-mayor",
+    "required": false,
+    "predicate": {
+     "op": "ne",
+     "axis": "what",
+     "value": "cheeks"
+    },
+    "requires": [],
+    "source": "L3-4P",
+    "summary": "В щеках у мэра семечки."
+   }
+  ],
+  "version": {
+   "button": "UI-hud.version",
+   "available": {
+    "visited": "L3-8"
+   },
+   "onSolved": "L3-9"
+  },
+  "wrongVersion": {
+   "intro": [
+    {
+     "line": "C1-6-05",
+     "when": null
+    }
+   ],
+   "byValue": [
+    {
+     "axis": "who",
+     "value": "tyopa",
+     "clues": [
+      "c1-cocoa"
+     ],
+     "lines": [
+      {
+       "line": "C1-6-06",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "who",
+     "value": "pudding",
+     "clues": [
+      "c1-tracks"
+     ],
+     "lines": [
+      {
+       "line": "C1-6-07",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "who",
+     "value": "stella",
+     "clues": [
+      "c1-timeline"
+     ],
+     "lines": [
+      {
+       "line": "L2-7-01",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "who",
+     "value": "mice",
+     "clues": [
+      "c1-timeline"
+     ],
+     "lines": [
+      {
+       "line": "L3-8-01",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "where",
+     "value": "bakery",
+     "clues": [
+      "c1-scents"
+     ],
+     "lines": [
+      {
+       "line": "L3-8-02",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "where",
+     "value": "soap",
+     "clues": [
+      "c1-cocoa"
+     ],
+     "lines": [
+      {
+       "line": "C1-6-09",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "where",
+     "value": "post",
+     "clues": [
+      "c1-timeline"
+     ],
+     "lines": [
+      {
+       "line": "L2-7-02",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "where",
+     "value": "garden",
+     "clues": [
+      "c1-scents"
+     ],
+     "lines": [
+      {
+       "line": "L3-8-03",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "what",
+     "value": "eaten",
+     "clues": [
+      "c1-scents"
+     ],
+     "lines": [
+      {
+       "line": "L3-8-04",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "what",
+     "value": "cheeks",
+     "clues": [
+      "c1-scents"
+     ],
+     "lines": [
+      {
+       "line": "C1-6-11",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "what",
+     "value": "mail",
+     "clues": [
+      "c1-timeline"
+     ],
+     "lines": [
+      {
+       "line": "L2-7-03",
+       "when": null
+      }
+     ]
+    }
+   ],
+   "outro": [
+    {
+     "line": "C1-6-12",
+     "when": null
+    }
+   ]
+  },
+  "redHerrings": [
+   {
+    "id": "rh-c1-blue-paws",
+    "summary": "Синие лапы Тёпы — черничное мыло.",
+    "presentedBy": [
+     "C1-3-02"
+    ],
+    "explainedBy": [
+     "C1-3-12",
+     "C1-7-11"
+    ]
+   },
+   {
+    "id": "rh-c1-looks",
+    "summary": "Подозрение «по виду»: Тёпа, Стелла, Шуршики.",
+    "presentedBy": [
+     "C1-1-06",
+     "L3-1-01",
+     "L3-1-02"
+    ],
+    "explainedBy": [
+     "C1-7-13",
+     "C1-7-14",
+     "L3-9-03"
+    ]
+   },
+   {
+    "id": "rh-c1-feather",
+    "summary": "Перо сороки: Стелла пролетала там в восемь.",
+    "presentedBy": [
+     "L2-2-02"
+    ],
+    "explainedBy": [
+     "L2-8-01"
+    ]
+   },
+   {
+    "id": "rh-c1-crumbs",
+    "summary": "Маковые крошки — от булочки мэра.",
+    "presentedBy": [
+     "L3-2-02"
+    ],
+    "explainedBy": [
+     "L3-9-01"
+    ]
+   },
+   {
+    "id": "rh-c1-mouse-track",
+    "summary": "Мышиный след: мышата собирали крошки, след ведёт к норке.",
+    "presentedBy": [
+     "L3-5-02"
+    ],
+    "explainedBy": [
+     "L3-9-02"
+    ]
+   },
+   {
+    "id": "rh-c1-cheeks",
+    "summary": "Полные щёки мэра — семечки.",
+    "presentedBy": [
+     "C1-4-01"
+    ],
+    "explainedBy": [
+     "C1-7-12"
+    ]
+   },
+   {
+    "id": "rh-c1-mayor-time",
+    "summary": "Добросовестная ошибка: мэр называет 9:00 вместо 9:30 и сам поправляется.",
+    "presentedBy": [
+     "L3-4-06"
+    ],
+    "explainedBy": [
+     "L3-4-08"
+    ]
+   }
+  ]
+ },
+ "deduction": {
+  "schema": 1,
+  "id": "case01-l3",
+  "axes": [
+   {
+    "id": "who",
+    "values": [
+     "tyopa",
+     "kartofan",
+     "pudding",
+     "stella",
+     "mice"
+    ]
+   },
+   {
+    "id": "where",
+    "values": [
+     "bakery",
+     "soap",
+     "post",
+     "garden",
+     "shed"
+    ]
+   },
+   {
+    "id": "what",
+    "values": [
+     "eaten",
+     "mixed",
+     "cheeks",
+     "mail"
+    ]
+   }
+  ],
+  "compatibility": null,
+  "intended": {
+   "who": "kartofan",
+   "where": "shed",
+   "what": "mixed"
+  },
+  "clues": [
+   {
+    "id": "c1-lupa",
+    "predicate": {
+     "op": "in",
+     "axis": "what",
+     "values": [
+      "eaten",
+      "mixed",
+      "cheeks",
+      "mail"
+     ]
+    },
+    "requires": [],
+    "requiresAnswer": false,
+    "explanationKey": "C1-CL-lupa"
+   },
+   {
+    "id": "c1-cocoa",
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "tyopa"
+      },
+      {
+       "op": "ne",
+       "axis": "where",
+       "value": "soap"
+      }
+     ]
+    },
+    "requires": [],
+    "requiresAnswer": false,
+    "explanationKey": "C1-CL-cocoa"
+   },
+   {
+    "id": "c1-timeline",
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "stella"
+      },
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "mice"
+      },
+      {
+       "op": "ne",
+       "axis": "where",
+       "value": "post"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "mail"
+      }
+     ]
+    },
+    "requires": [],
+    "requiresAnswer": false,
+    "explanationKey": "C1-CL-timeline"
+   },
+   {
+    "id": "c1-tracks",
+    "predicate": {
+     "op": "eq",
+     "axis": "who",
+     "value": "kartofan"
+    },
+    "requires": [
+     "c1-lupa"
+    ],
+    "requiresAnswer": false,
+    "explanationKey": "C1-CL-two-tracks"
+   },
+   {
+    "id": "c1-scents",
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "eq",
+       "axis": "where",
+       "value": "shed"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "eaten"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "cheeks"
+      }
+     ]
+    },
+    "requires": [
+     "c1-tracks"
+    ],
+    "requiresAnswer": false,
+    "explanationKey": "C1-CL-scents"
+   }
+  ],
+  "redHerrings": [
+   {
+    "id": "rh-c1-blue-paws",
+    "explanationKey": "C1-3-12"
+   },
+   {
+    "id": "rh-c1-looks",
+    "explanationKey": "C1-7-13"
+   },
+   {
+    "id": "rh-c1-feather",
+    "explanationKey": "L2-8-01"
+   },
+   {
+    "id": "rh-c1-crumbs",
+    "explanationKey": "L3-9-01"
+   },
+   {
+    "id": "rh-c1-mouse-track",
+    "explanationKey": "L3-9-02"
+   },
+   {
+    "id": "rh-c1-cheeks",
+    "explanationKey": "C1-7-12"
+   },
+   {
+    "id": "rh-c1-mayor-time",
+    "explanationKey": "L3-4-08"
+   }
+  ],
+  "maxCandidates": 100
+ },
+ "notebookHelp": {
+  "mode": "point",
+  "marks": [
+   {
+    "axis": "who",
+    "value": "tyopa",
+    "mark": "excluded",
+    "clues": [
+     "c1-cocoa"
+    ],
+    "line": "C1-6-06"
+   },
+   {
+    "axis": "where",
+    "value": "soap",
+    "mark": "excluded",
+    "clues": [
+     "c1-cocoa"
+    ],
+    "line": "C1-6-09"
+   },
+   {
+    "axis": "who",
+    "value": "stella",
+    "mark": "excluded",
+    "clues": [
+     "c1-timeline"
+    ],
+    "line": "L2-7-01"
+   },
+   {
+    "axis": "who",
+    "value": "mice",
+    "mark": "excluded",
+    "clues": [
+     "c1-timeline"
+    ],
+    "line": "L3-8-01"
+   },
+   {
+    "axis": "where",
+    "value": "post",
+    "mark": "excluded",
+    "clues": [
+     "c1-timeline"
+    ],
+    "line": "L2-7-02"
+   },
+   {
+    "axis": "what",
+    "value": "mail",
+    "mark": "excluded",
+    "clues": [
+     "c1-timeline"
+    ],
+    "line": "L2-7-03"
+   },
+   {
+    "axis": "who",
+    "value": "kartofan",
+    "mark": "confirmed",
+    "clues": [
+     "c1-tracks"
+    ],
+    "line": "L3-5-06"
+   },
+   {
+    "axis": "who",
+    "value": "pudding",
+    "mark": "excluded",
+    "clues": [
+     "c1-tracks"
+    ],
+    "line": "C1-6-07"
+   },
+   {
+    "axis": "where",
+    "value": "shed",
+    "mark": "confirmed",
+    "clues": [
+     "c1-scents"
+    ],
+    "line": "L3-7-06"
+   },
+   {
+    "axis": "where",
+    "value": "garden",
+    "mark": "excluded",
+    "clues": [
+     "c1-scents"
+    ],
+    "line": "L3-8-03"
+   },
+   {
+    "axis": "where",
+    "value": "bakery",
+    "mark": "excluded",
+    "clues": [
+     "c1-scents"
+    ],
+    "line": "L3-8-02"
+   },
+   {
+    "axis": "what",
+    "value": "eaten",
+    "mark": "excluded",
+    "clues": [
+     "c1-scents"
+    ],
+    "line": "L3-8-04"
+   },
+   {
+    "axis": "what",
+    "value": "cheeks",
+    "mark": "excluded",
+    "clues": [
+     "c1-mayor"
+    ],
+    "line": "C1-4-04"
+   },
+   {
+    "axis": "what",
+    "value": "cheeks",
+    "mark": "excluded",
+    "clues": [
+     "c1-scents"
+    ],
+    "line": "C1-6-11"
+   },
+   {
+    "axis": "what",
+    "value": "mixed",
+    "mark": "confirmed",
+    "clues": [
+     "c1-timeline",
+     "c1-scents"
+    ],
+    "line": "L2-NB-01"
+   }
+  ],
+  "pointers": [
+   {
+    "clue": "c1-lupa",
+    "line": "L3-NB-01"
+   },
+   {
+    "clue": "c1-cocoa",
+    "line": "L3-NB-02"
+   },
+   {
+    "clue": "c1-timeline",
+    "line": "L3-NB-03"
+   },
+   {
+    "clue": "c1-tracks",
+    "line": "L3-NB-04"
+   },
+   {
+    "clue": "c1-scents",
+    "line": "L3-NB-05"
+   },
+   {
+    "clue": "c1-mayor",
+    "line": "L3-NB-06"
+   }
+  ],
+  "nothing": "UI-notebook.nothing"
+ },
+ "hints": {
+  "klubok": {
+   "speaker": "khvosts",
+   "precision": "exact",
+   "allowance": 3,
+   "rules": [
+    {
+     "id": "L3-H-01",
+     "when": {
+      "not": {
+       "clue": "c1-lupa"
+      }
+     },
+     "cites": []
+    },
+    {
+     "id": "L2-H-02",
+     "when": {
+      "not": {
+       "visited": "L3-4S"
+      }
+     },
+     "cites": []
+    },
+    {
+     "id": "L3-H-02",
+     "when": {
+      "all": [
+       {
+        "visited": "L3-4S"
+       },
+       {
+        "not": {
+         "clue": "c1-timeline"
+        }
+       }
+      ]
+     },
+     "cites": []
+    },
+    {
+     "id": "L2-H-04",
+     "when": {
+      "all": [
+       {
+        "clue": "c1-lupa"
+       },
+       {
+        "not": {
+         "visited": "L3-5"
+        }
+       }
+      ]
+     },
+     "cites": [
+      "c1-lupa"
+     ]
+    },
+    {
+     "id": "L3-H-03",
+     "when": {
+      "all": [
+       {
+        "visited": "L3-5"
+       },
+       {
+        "not": {
+         "clue": "c1-tracks"
+        }
+       }
+      ]
+     },
+     "cites": []
+    },
+    {
+     "id": "L3-H-04",
+     "when": {
+      "all": [
+       {
+        "clue": "c1-tracks"
+       },
+       {
+        "not": {
+         "clue": "c1-scents"
+        }
+       }
+      ]
+     },
+     "cites": [
+      "c1-tracks"
+     ]
+    },
+    {
+     "id": "L3-H-05",
+     "when": {
+      "not": {
+       "clue": "c1-cocoa"
+      }
+     },
+     "cites": []
+    }
+   ],
+   "review": "L3-H-06",
+   "exhausted": "UI-hint.klubokEmpty"
+  },
+  "shell": null
+ },
+ "minigames": [
+  {
+   "id": "c1l3-lupa",
+   "skill": "magnifier",
+   "config": {
+    "kind": "magnifier",
+    "targets": [
+     {
+      "id": "box",
+      "label": "C1-2-B02",
+      "required": true,
+      "reply": [
+       "C1-2-02"
+      ]
+     },
+     {
+      "id": "soil",
+      "label": "C1-2-B03",
+      "required": true,
+      "reply": [
+       "C1-2-03"
+      ]
+     },
+     {
+      "id": "paw-print",
+      "label": "C1-2-B04",
+      "required": true,
+      "reply": [
+       "C1-2-04"
+      ]
+     },
+     {
+      "id": "feather",
+      "label": "L2-2-B01",
+      "required": true,
+      "reply": [
+       "L2-2-02"
+      ]
+     },
+     {
+      "id": "crumbs",
+      "label": "L3-2-B01",
+      "required": true,
+      "reply": [
+       "L3-2-02"
+      ]
+     }
+    ],
+    "afterFirst": [],
+    "afterFirstSkill": null,
+    "assistAfterMisses": 3
+   }
+  },
+  {
+   "id": "c1l3-cocoa",
+   "skill": "cocoa",
+   "config": {
+    "kind": "cocoa",
+    "rounds": [
+     {
+      "id": "r1",
+      "options": [
+       {
+        "id": "hello",
+        "label": "L3-3-B01",
+        "correct": true,
+        "reply": [
+         "L3-3-01"
+        ]
+       },
+       {
+        "id": "pie",
+        "label": "L3-3-B02",
+        "correct": false,
+        "reply": [
+         "L3-3-02",
+         "L3-3-03"
+        ]
+       },
+       {
+        "id": "pot",
+        "label": "L3-3-B03",
+        "correct": false,
+        "reply": [
+         "L3-3-04",
+         "L3-3-03"
+        ]
+       }
+      ],
+      "retry": []
+     },
+     {
+      "id": "r2",
+      "options": [
+       {
+        "id": "not-you",
+        "label": "L3-3-B04",
+        "correct": true,
+        "reply": [
+         "L3-3-05"
+        ]
+       },
+       {
+        "id": "dont-be-sad",
+        "label": "L3-3-B05",
+        "correct": false,
+        "reply": [
+         "L3-3-06",
+         "L3-3-07"
+        ]
+       },
+       {
+        "id": "scared",
+        "label": "L3-3-B06",
+        "correct": false,
+        "reply": [
+         "L3-3-08",
+         "L3-3-07"
+        ]
+       }
+      ],
+      "retry": []
+     },
+     {
+      "id": "r3",
+      "options": [
+       {
+        "id": "thanks",
+        "label": "L2-3-B01",
+        "correct": true,
+        "reply": [
+         "L2-3-01"
+        ]
+       },
+       {
+        "id": "tell",
+        "label": "L2-3-B02",
+        "correct": true,
+        "reply": [
+         "L2-3-02"
+        ]
+       },
+       {
+        "id": "sure",
+        "label": "L2-3-B03",
+        "correct": false,
+        "reply": [
+         "L2-3-03"
+        ]
+       }
+      ],
+      "retry": [
+       "L2-3-04"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "c1l3-tracks",
+   "skill": "tracks",
+   "config": {
+    "kind": "tracks",
+    "steps": [
+     {
+      "id": "small",
+      "prompt": null,
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "mouse",
+        "label": "L3-5-B01",
+        "correct": true,
+        "reply": [
+         "L3-5-02"
+        ]
+       },
+       {
+        "id": "magpie",
+        "label": "L2-5-B01",
+        "correct": false,
+        "reply": [
+         "L2-5-01"
+        ]
+       },
+       {
+        "id": "hamster",
+        "label": "C1-5-B02",
+        "correct": false,
+        "reply": [
+         "L3-5-03"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "wide",
+      "prompt": null,
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "raccoon",
+        "label": "C1-5-B01",
+        "correct": false,
+        "reply": [
+         "C1-5-02"
+        ]
+       },
+       {
+        "id": "mole",
+        "label": "C1-5-B03",
+        "correct": true,
+        "reply": [
+         "C1-5-04"
+        ]
+       },
+       {
+        "id": "hamster",
+        "label": "C1-5-B02",
+        "correct": false,
+        "reply": [
+         "L3-5-03"
+        ]
+       }
+      ]
+     }
+    ],
+    "question": {
+     "prompt": "L3-5-04",
+     "options": [
+      {
+       "id": "mouse-deep",
+       "label": "L3-5-B02",
+       "correct": false,
+       "reply": [
+        "L3-5-05"
+       ]
+      },
+      {
+       "id": "mole-deep",
+       "label": "L3-5-B03",
+       "correct": true,
+       "reply": [
+        "L3-5-06"
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c1l3-timeline",
+   "skill": "timeline",
+   "config": {
+    "kind": "timeline",
+    "items": [
+     {
+      "id": "t0800",
+      "time": "8:00",
+      "label": "L2-6-B01"
+     },
+     {
+      "id": "t0900",
+      "time": "9:00",
+      "label": "L2-6-B02"
+     },
+     {
+      "id": "t0930",
+      "time": "9:30",
+      "label": "L3-6-B03"
+     },
+     {
+      "id": "t1000",
+      "time": "10:00",
+      "label": "L2-6-B04"
+     },
+     {
+      "id": "t1030",
+      "time": "10:30",
+      "label": "L3-6-B05"
+     }
+    ],
+    "solution": [
+     "t0800",
+     "t0900",
+     "t0930",
+     "t1000",
+     "t1030"
+    ],
+    "wrong": [
+     "L2-6-04"
+    ]
+   }
+  },
+  {
+   "id": "c1l3-scents",
+   "skill": "scent-pairs",
+   "config": {
+    "kind": "scent-pairs",
+    "fields": [
+     {
+      "id": "garden",
+      "label": "L3-7-B01",
+      "cards": [
+       {
+        "id": "g-soil-1",
+        "pair": "soil",
+        "label": "L3-7-B03"
+       },
+       {
+        "id": "g-soil-2",
+        "pair": "soil",
+        "label": "L3-7-B03"
+       },
+       {
+        "id": "g-carrot-1",
+        "pair": "carrot",
+        "label": "L3-7-B04"
+       },
+       {
+        "id": "g-carrot-2",
+        "pair": "carrot",
+        "label": "L3-7-B04"
+       },
+       {
+        "id": "g-dill-1",
+        "pair": "dill",
+        "label": "L3-7-B05"
+       },
+       {
+        "id": "g-dill-2",
+        "pair": "dill",
+        "label": "L3-7-B05"
+       }
+      ]
+     },
+     {
+      "id": "shed",
+      "label": "L3-7-B02",
+      "cards": [
+       {
+        "id": "s-soil-1",
+        "pair": "soil",
+        "label": "L3-7-B03"
+       },
+       {
+        "id": "s-soil-2",
+        "pair": "soil",
+        "label": "L3-7-B03"
+       },
+       {
+        "id": "s-bilberry-1",
+        "pair": "bilberry",
+        "label": "L3-7-B06"
+       },
+       {
+        "id": "s-bilberry-2",
+        "pair": "bilberry",
+        "label": "L3-7-B06"
+       },
+       {
+        "id": "s-dough-1",
+        "pair": "dough",
+        "label": "L3-7-B07"
+       },
+       {
+        "id": "s-dough-2",
+        "pair": "dough",
+        "label": "L3-7-B07"
+       }
+      ]
+     }
+    ],
+    "mismatch": [
+     "L3-7-03"
+    ],
+    "question": {
+     "prompt": "L3-7-04",
+     "options": [
+      {
+       "id": "garden",
+       "label": "L3-7-B01",
+       "correct": false,
+       "reply": [
+        "L3-7-05"
+       ]
+      },
+      {
+       "id": "shed",
+       "label": "L3-7-B02",
+       "correct": true,
+       "reply": [
+        "L3-7-06"
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "c1l3-baker",
+   "skill": "baker",
+   "config": {
+    "kind": "baker",
+    "measures": [
+     {
+      "id": "cup",
+      "label": "C1-8-B01",
+      "units": 8
+     },
+     {
+      "id": "half",
+      "label": "C1-8-B02",
+      "units": 4
+     },
+     {
+      "id": "spoon",
+      "label": "C1-8-B03",
+      "units": 1
+     }
+    ],
+    "steps": [
+     {
+      "id": "flour",
+      "prompt": "L3-10-02",
+      "target": 32,
+      "ideal": [
+       "cup"
+      ],
+      "afterWrong": [
+       "L3-10-05"
+      ]
+     },
+     {
+      "id": "sugar",
+      "prompt": "L3-10-03",
+      "target": 8,
+      "ideal": [
+       "cup",
+       "half"
+      ],
+      "afterWrong": [
+       "L3-10-05"
+      ]
+     },
+     {
+      "id": "bilberry",
+      "prompt": "L3-10-04",
+      "target": 16,
+      "ideal": [
+       "cup"
+      ],
+      "afterWrong": [
+       "L3-10-05"
+      ]
+     }
+    ],
+    "tooMuch": [
+     "C1-8-05"
+    ],
+    "tooLittle": [
+     "C1-8-06"
+    ]
+   }
+  }
+ ],
+ "facts": [
+  {
+   "id": "fact-c1-moles",
+   "line": "C1-9-01"
+  },
+  {
+   "id": "fact-c1-bilberry",
+   "line": "C1-9-02"
+  },
+  {
+   "id": "fact-c1-raccoons",
+   "line": "C1-9-03"
+  }
+ ],
+ "glossary": [
+  {
+   "id": "evidence",
+   "word": "улика",
+   "definition": "GL-evidence-DEF",
+   "label": "GL-evidence",
+   "forms": [
+    "улика",
+    "улики",
+    "улике",
+    "улику",
+    "уликой",
+    "уликою",
+    "улик",
+    "уликам",
+    "уликами",
+    "уликах"
+   ]
+  },
+  {
+   "id": "witness",
+   "word": "свидетель",
+   "definition": "GL-witness-DEF",
+   "label": "GL-witness",
+   "forms": [
+    "свидетель",
+    "свидетеля",
+    "свидетелю",
+    "свидетелем",
+    "свидетеле",
+    "свидетели",
+    "свидетелей",
+    "свидетелям",
+    "свидетелями",
+    "свидетелях"
+   ]
+  },
+  {
+   "id": "version",
+   "word": "версия",
+   "definition": "GL-version-DEF",
+   "label": "GL-version",
+   "forms": [
+    "версия",
+    "версии",
+    "версию",
+    "версией",
+    "версиею",
+    "версий",
+    "версиям",
+    "версиями",
+    "версиях"
+   ]
+  }
+ ],
+ "rewards": [
+  {
+   "id": "rw-c1-heart-tyopa",
+   "kind": "hearts",
+   "label": "RW-heart",
+   "amount": 1,
+   "claimKey": "case01:heart:tyopa"
+  },
+  {
+   "id": "rw-c1-badge",
+   "kind": "badge",
+   "label": "RW-c1-badge",
+   "amount": 1,
+   "claimKey": "case01:badge"
+  },
+  {
+   "id": "rw-c1-buttons-l3",
+   "kind": "buttons",
+   "label": "RW-buttons-20",
+   "amount": 20,
+   "claimKey": "case01:l3:buttons"
+  },
+  {
+   "id": "rw-c1-sticker-l3",
+   "kind": "sticker",
+   "label": "RW-c1-sticker-3",
+   "amount": 1,
+   "claimKey": "case01:l3:sticker"
+  },
+  {
+   "id": "rw-c1-decor-basket",
+   "kind": "decor",
+   "label": "RW-c1-decor-basket",
+   "amount": 1,
+   "claimKey": "case01:decor:basket"
+  },
+  {
+   "id": "rw-c1-activity",
+   "kind": "activity",
+   "label": "RW-c1-activity",
+   "amount": 1,
+   "claimKey": "case01:activity:pie"
+  }
+ ],
+ "collections": [],
+ "activities": [
+  {
+   "id": "act-c1-pie",
+   "title": "ACT-C1-TITLE",
+   "steps": [
+    {
+     "line": "ACT-C1-01",
+     "adultOnly": false
+    },
+    {
+     "line": "ACT-C1-02",
+     "adultOnly": false
+    },
+    {
+     "line": "ACT-C1-03",
+     "adultOnly": false
+    },
+    {
+     "line": "ACT-C1-04",
+     "adultOnly": false
+    },
+    {
+     "line": "ACT-C1-05",
+     "adultOnly": false
+    },
+    {
+     "line": "ACT-C1-06",
+     "adultOnly": false
+    },
+    {
+     "line": "ACT-C1-07",
+     "adultOnly": false
+    },
+    {
+     "line": "ACT-C1-08",
+     "adultOnly": true
+    },
+    {
+     "line": "ACT-C1-09",
+     "adultOnly": false
+    },
+    {
+     "line": "ACT-C1-10",
+     "adultOnly": false
+    },
+    {
+     "line": "ACT-C1-11",
+     "adultOnly": false
+    },
+    {
+     "line": "ACT-C1-12",
+     "adultOnly": false
+    },
+    {
+     "line": "ACT-C1-13",
+     "adultOnly": false
+    },
+    {
+     "line": "ACT-C1-14",
+     "adultOnly": true
+    },
+    {
+     "line": "ACT-C1-15",
+     "adultOnly": true
+    },
+    {
+     "line": "ACT-C1-16",
+     "adultOnly": true
+    },
+    {
+     "line": "ACT-C1-17",
+     "adultOnly": true
+    },
+    {
+     "line": "ACT-C1-18",
+     "adultOnly": true
+    },
+    {
+     "line": "ACT-C1-19",
+     "adultOnly": true
+    }
+   ],
+   "safety": [
+    "ACT-C1-S01",
+    "ACT-C1-S02",
+    "ACT-C1-S03"
+   ],
+   "allergens": [
+    "глютен",
+    "яйца",
+    "молоко"
+   ]
+  }
+ ],
+ "comfort": [],
+ "cutscenes": [
+  {
+   "id": "c1.shed.l3",
+   "scene": "L3-9",
+   "summary": "Разговор в сарае (сложность 3): разбор пера, маковых крошек и мышиного следа; мэр извиняется перед Тёпой, Стеллой и мышатами; мышата просят пирога — рецепт удваивается.",
+   "document": {
+    "format": "aegis-cutscene/1",
+    "id": "c1.shed.l3",
+    "revision": "1",
+    "advance": "input",
+    "cast": {
+     "kartofan": {
+      "rig": "kartofan"
+     },
+     "khvosts": {
+      "rig": "khvosts"
+     },
+     "watsony": {
+      "rig": "watsony"
+     },
+     "pudding": {
+      "rig": "pudding"
+     },
+     "tyopa": {
+      "rig": "tyopa"
+     },
+     "fitilyok": {
+      "rig": "fitilyok"
+     },
+     "player": {
+      "role": "avatar"
+     },
+     "box": {
+      "rig": "prop.box-pie-closed"
+     },
+     "boxOpen": {
+      "rig": "prop.box-pie-open"
+     },
+     "stella": {
+      "rig": "stella"
+     },
+     "mouse": {
+      "rig": "mouse"
+     }
+    },
+    "steps": [
+     {
+      "op": "background",
+      "asset": "bg.shed-interior",
+      "transition": {
+       "type": "cut"
+      }
+     },
+     {
+      "op": "music",
+      "asset": "music.heartfelt",
+      "fade": 1.5,
+      "comfort": {
+       "asset": "music.heartfelt-warm"
+      }
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "cut": true
+     },
+     {
+      "op": "enter",
+      "actor": "box",
+      "from": {
+       "x": 1500,
+       "y": 1520
+      },
+      "to": {
+       "x": 1500,
+       "y": 1520
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "box",
+      "clip": "present"
+     },
+     {
+      "op": "enter",
+      "actor": "kartofan",
+      "from": "right",
+      "to": {
+       "x": 1850,
+       "y": 1450
+      },
+      "duration": 0.8,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "watsony",
+      "from": "left",
+      "to": {
+       "x": 380,
+       "y": 1450
+      },
+      "duration": 1.2,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "player",
+      "from": "left",
+      "to": {
+       "x": 700,
+       "y": 1450
+      },
+      "duration": 1.2,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "khvosts",
+      "from": "left",
+      "to": {
+       "x": 1020,
+       "y": 1450
+      },
+      "duration": 1.2,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "pudding",
+      "from": "left",
+      "to": {
+       "x": 1300,
+       "y": 1450
+      },
+      "duration": 1.4,
+      "wait": false
+     },
+     {
+      "op": "join"
+     },
+     {
+      "op": "pose",
+      "actor": "kartofan",
+      "face": "left"
+     },
+     {
+      "op": "marker",
+      "id": "shed.arrive"
+     },
+     {
+      "op": "line",
+      "actor": "kartofan",
+      "line": "C1-7-01"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C1-7-02"
+     },
+     {
+      "op": "marker",
+      "id": "shed.sniff"
+     },
+     {
+      "op": "camera",
+      "preset": "close-right",
+      "duration": 1.2,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "move",
+      "actor": "kartofan",
+      "to": {
+       "x": 1700,
+       "y": 1450
+      },
+      "duration": 0.6
+     },
+     {
+      "op": "pose",
+      "actor": "kartofan",
+      "clip": "sniff",
+      "wait": true
+     },
+     {
+      "op": "pose",
+      "actor": "kartofan",
+      "expression": "surprised"
+     },
+     {
+      "op": "line",
+      "actor": "kartofan",
+      "line": "C1-7-03"
+     },
+     {
+      "op": "pose",
+      "actor": "kartofan",
+      "expression": "worried"
+     },
+     {
+      "op": "line",
+      "actor": "kartofan",
+      "line": "C1-7-04"
+     },
+     {
+      "op": "line",
+      "actor": "kartofan",
+      "line": "C1-7-05"
+     },
+     {
+      "op": "pose",
+      "actor": "kartofan",
+      "clip": "bow",
+      "wait": true
+     },
+     {
+      "op": "line",
+      "actor": "kartofan",
+      "line": "C1-7-06"
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "duration": 1.2,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "pose",
+      "actor": "pudding",
+      "expression": "happy"
+     },
+     {
+      "op": "line",
+      "actor": "pudding",
+      "line": "C1-7-07"
+     },
+     {
+      "op": "marker",
+      "id": "shed.box"
+     },
+     {
+      "op": "camera",
+      "preset": "close-right",
+      "duration": 1.2,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "pose",
+      "actor": "box",
+      "clip": "wobble",
+      "wait": true
+     },
+     {
+      "op": "exit",
+      "actor": "box",
+      "to": {
+       "x": 1500,
+       "y": 1520
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "enter",
+      "actor": "boxOpen",
+      "from": {
+       "x": 1500,
+       "y": 1520
+      },
+      "to": {
+       "x": 1500,
+       "y": 1520
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.pick-up",
+      "gain": 0.8
+     },
+     {
+      "op": "pose",
+      "actor": "pudding",
+      "expression": "surprised"
+     },
+     {
+      "op": "pose",
+      "actor": "kartofan",
+      "clip": "shrug-shy",
+      "wait": true
+     },
+     {
+      "op": "line",
+      "actor": "kartofan",
+      "line": "C1-7-08"
+     },
+     {
+      "op": "pose",
+      "actor": "pudding",
+      "expression": "neutral"
+     },
+     {
+      "op": "pose",
+      "actor": "kartofan",
+      "expression": "happy"
+     },
+     {
+      "op": "line",
+      "actor": "kartofan",
+      "line": "C1-7-09"
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "duration": 1.2,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "enter",
+      "actor": "tyopa",
+      "from": "right",
+      "to": {
+       "x": 2150,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "fitilyok",
+      "from": "right",
+      "to": {
+       "x": 2280,
+       "y": 950
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "join"
+     },
+     {
+      "op": "pose",
+      "actor": "fitilyok",
+      "clip": "hover",
+      "wait": false
+     },
+     {
+      "op": "marker",
+      "id": "shed.herrings"
+     },
+     {
+      "op": "effect",
+      "effect": "bubbles",
+      "at": {
+       "x": 1020,
+       "y": 650
+      },
+      "duration": 3,
+      "wait": false
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.bubbles",
+      "gain": 0.4
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C1-7-10"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C1-7-11"
+     },
+     {
+      "op": "enter",
+      "actor": "stella",
+      "from": "right",
+      "to": {
+       "x": 1900,
+       "y": 900
+      },
+      "duration": 0.9,
+      "wait": false
+     },
+     {
+      "op": "pose",
+      "actor": "stella",
+      "clip": "hover",
+      "wait": false
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "L2-8-01"
+     },
+     {
+      "op": "enter",
+      "actor": "mouse",
+      "from": "left",
+      "to": {
+       "x": 520,
+       "y": 1450
+      },
+      "duration": 0.9,
+      "wait": false
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "L3-9-01"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "L3-9-02"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C1-7-12"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C1-7-13"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C1-7-14"
+     },
+     {
+      "op": "emote",
+      "actor": "khvosts",
+      "emote": "nod"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C1-7-14a"
+     },
+     {
+      "op": "emote",
+      "actor": "player",
+      "emote": "joy"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C1-7-14b"
+     },
+     {
+      "op": "emote",
+      "actor": "fitilyok",
+      "emote": "joy"
+     },
+     {
+      "op": "pose",
+      "actor": "pudding",
+      "face": "right"
+     },
+     {
+      "op": "pose",
+      "actor": "pudding",
+      "clip": "bow",
+      "wait": true
+     },
+     {
+      "op": "line",
+      "actor": "pudding",
+      "line": "L3-9-03"
+     },
+     {
+      "op": "pose",
+      "actor": "stella",
+      "expression": "happy"
+     },
+     {
+      "op": "line",
+      "actor": "stella",
+      "line": "L2-8-04"
+     },
+     {
+      "op": "pose",
+      "actor": "mouse",
+      "face": "right"
+     },
+     {
+      "op": "pose",
+      "actor": "mouse",
+      "clip": "shrug-shy",
+      "wait": true
+     },
+     {
+      "op": "line",
+      "actor": "mouse",
+      "line": "L3-9-04"
+     },
+     {
+      "op": "pose",
+      "actor": "pudding",
+      "face": "left"
+     },
+     {
+      "op": "emote",
+      "actor": "pudding",
+      "emote": "joy"
+     },
+     {
+      "op": "line",
+      "actor": "pudding",
+      "line": "L3-9-05"
+     },
+     {
+      "op": "marker",
+      "id": "shed.solved"
+     },
+     {
+      "op": "pose",
+      "actor": "khvosts",
+      "expression": "happy"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C1-7-17"
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.success",
+      "gain": 0.8
+     },
+     {
+      "op": "effect",
+      "effect": "confetti",
+      "at": {
+       "x": 1280,
+       "y": 700
+      },
+      "duration": 2.5,
+      "wait": false
+     },
+     {
+      "op": "emote",
+      "actor": "player",
+      "emote": "joy"
+     },
+     {
+      "op": "marker",
+      "id": "shed.end"
+     }
+    ]
+   }
+  },
+  {
+   "id": "c1.oven.l3",
+   "scene": "L3-10",
+   "summary": "Пирог в печи на медовой карамели, тёплый свет; Тёпа и мэр радуются. Ожидание декоративное, ролик можно пропустить.",
+   "document": {
+    "format": "aegis-cutscene/1",
+    "id": "c1.oven.l3",
+    "revision": "1",
+    "advance": "input",
+    "cast": {
+     "pudding": {
+      "rig": "pudding"
+     },
+     "tyopa": {
+      "rig": "tyopa"
+     },
+     "kartofan": {
+      "rig": "kartofan"
+     },
+     "player": {
+      "role": "avatar"
+     },
+     "pie": {
+      "rig": "prop.pie-baked"
+     }
+    },
+    "steps": [
+     {
+      "op": "background",
+      "asset": "bg.bakery-oven",
+      "transition": {
+       "type": "cut"
+      }
+     },
+     {
+      "op": "music",
+      "asset": "music.celebration-baking",
+      "fade": 1.5,
+      "comfort": {
+       "asset": "music.celebration-baking-warm"
+      }
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "cut": true
+     },
+     {
+      "op": "enter",
+      "actor": "pudding",
+      "from": "left",
+      "to": {
+       "x": 1000,
+       "y": 1450
+      },
+      "duration": 0.8,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "player",
+      "from": "left",
+      "to": {
+       "x": 1350,
+       "y": 1450
+      },
+      "duration": 0.8,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "kartofan",
+      "from": "right",
+      "to": {
+       "x": 1750,
+       "y": 1450
+      },
+      "duration": 0.8,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "tyopa",
+      "from": "right",
+      "to": {
+       "x": 2100,
+       "y": 1450
+      },
+      "duration": 0.8,
+      "wait": false
+     },
+     {
+      "op": "join"
+     },
+     {
+      "op": "marker",
+      "id": "oven.baking"
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.oven",
+      "gain": 0.6
+     },
+     {
+      "op": "camera",
+      "preset": "close-left",
+      "duration": 1.5,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "effect",
+      "effect": "glow",
+      "at": {
+       "x": 640,
+       "y": 820
+      },
+      "duration": 4,
+      "wait": false
+     },
+     {
+      "op": "effect",
+      "effect": "steam",
+      "at": {
+       "x": 640,
+       "y": 700
+      },
+      "duration": 4,
+      "wait": false
+     },
+     {
+      "op": "wait",
+      "seconds": 2.5
+     },
+     {
+      "op": "enter",
+      "actor": "pie",
+      "from": {
+       "x": 1500,
+       "y": 1400
+      },
+      "to": {
+       "x": 1500,
+       "y": 1400
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "pie",
+      "clip": "present"
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "duration": 1.2,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "pose",
+      "actor": "tyopa",
+      "face": "left"
+     },
+     {
+      "op": "pose",
+      "actor": "tyopa",
+      "expression": "happy"
+     },
+     {
+      "op": "line",
+      "actor": "tyopa",
+      "line": "C1-8-07"
+     },
+     {
+      "op": "pose",
+      "actor": "pudding",
+      "face": "right"
+     },
+     {
+      "op": "emote",
+      "actor": "pudding",
+      "emote": "joy"
+     },
+     {
+      "op": "line",
+      "actor": "pudding",
+      "line": "C1-8-08"
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.sparkle",
+      "gain": 0.8
+     },
+     {
+      "op": "effect",
+      "effect": "sparkles",
+      "at": {
+       "x": 1350,
+       "y": 900
+      },
+      "duration": 1.5,
+      "wait": false
+     },
+     {
+      "op": "marker",
+      "id": "oven.end"
+     }
+    ]
+   }
+  },
+  {
+   "id": "c1.reward.l3",
+   "scene": "C1-10",
+   "summary": "Награда в Конторе: значок-лапка «Пирог найден», стикер в альбом (звёздочки по сложности), корзинка черники. Сами награды выдаются шагами после ролика.",
+   "document": {
+    "format": "aegis-cutscene/1",
+    "id": "c1.reward.l3",
+    "revision": "1",
+    "advance": "input",
+    "cast": {
+     "khvosts": {
+      "rig": "khvosts"
+     },
+     "watsony": {
+      "rig": "watsony"
+     },
+     "player": {
+      "role": "avatar"
+     },
+     "badge": {
+      "rig": "prop.badge-pie-found"
+     },
+     "sticker": {
+      "rig": "prop.sticker-pie-3"
+     },
+     "basket": {
+      "rig": "prop.blueberry-basket"
+     }
+    },
+    "steps": [
+     {
+      "op": "background",
+      "asset": "bg.office",
+      "transition": {
+       "type": "cut"
+      }
+     },
+     {
+      "op": "music",
+      "asset": "music.celebration-baking",
+      "fade": 1.5,
+      "comfort": {
+       "asset": "music.celebration-baking-warm"
+      }
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "cut": true
+     },
+     {
+      "op": "enter",
+      "actor": "watsony",
+      "from": "left",
+      "to": {
+       "x": 600,
+       "y": 1450
+      },
+      "duration": 0.8,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "player",
+      "from": "left",
+      "to": {
+       "x": 1050,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "khvosts",
+      "from": "right",
+      "to": {
+       "x": 1700,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "join"
+     },
+     {
+      "op": "pose",
+      "actor": "khvosts",
+      "face": "left"
+     },
+     {
+      "op": "marker",
+      "id": "reward.solved"
+     },
+     {
+      "op": "pose",
+      "actor": "khvosts",
+      "expression": "happy"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C1-10-01"
+     },
+     {
+      "op": "marker",
+      "id": "reward.badge"
+     },
+     {
+      "op": "camera",
+      "preset": "close-center",
+      "duration": 1.2,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "enter",
+      "actor": "badge",
+      "from": {
+       "x": 1280,
+       "y": 900
+      },
+      "to": {
+       "x": 1280,
+       "y": 900
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "badge",
+      "clip": "present"
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.reward",
+      "gain": 0.8
+     },
+     {
+      "op": "effect",
+      "effect": "sparkles",
+      "at": {
+       "x": 1280,
+       "y": 900
+      },
+      "duration": 2,
+      "wait": false
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C1-10-02"
+     },
+     {
+      "op": "emote",
+      "actor": "player",
+      "emote": "joy"
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "duration": 1.2,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "marker",
+      "id": "reward.sticker"
+     },
+     {
+      "op": "enter",
+      "actor": "sticker",
+      "from": {
+       "x": 1650,
+       "y": 700
+      },
+      "to": {
+       "x": 1650,
+       "y": 700
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "sticker",
+      "clip": "present"
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.sticker-check",
+      "gain": 0.6
+     },
+     {
+      "op": "enter",
+      "actor": "basket",
+      "from": {
+       "x": 900,
+       "y": 1300
+      },
+      "to": {
+       "x": 900,
+       "y": 1300
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "basket",
+      "clip": "present"
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.pick-up",
+      "gain": 0.5
+     },
+     {
+      "op": "emote",
+      "actor": "watsony",
+      "emote": "joy"
+     },
+     {
+      "op": "wait",
+      "seconds": 1.5
+     },
+     {
+      "op": "marker",
+      "id": "reward.end"
+     }
+    ]
+   }
+  }
+ ],
+ "reserved": [],
+ "revision": "5de107b01f9514e57a82e790ec35a72f35bdd02ee3334d8709c69430cc3c5f84"
+}

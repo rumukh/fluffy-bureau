@@ -1,0 +1,83 @@
+{
+ "format": "aegis-clip/1",
+ "id": "shrug-shy",
+ "duration": 1.0,
+ "loop": false,
+ "blend": "override",
+ "tracks": [
+  {
+   "part": "head",
+   "property": "y",
+   "keys": [
+    {
+     "t": 0,
+     "v": 0,
+     "ease": "easeInOutSine"
+    },
+    {
+     "t": 0.3,
+     "v": 12
+    },
+    {
+     "t": 0.8,
+     "v": 12,
+     "ease": "easeInOutSine"
+    },
+    {
+     "t": 1.0,
+     "v": 0
+    }
+   ]
+  },
+  {
+   "part": "head",
+   "property": "rotation",
+   "keys": [
+    {
+     "t": 0,
+     "v": 0,
+     "ease": "easeInOutSine"
+    },
+    {
+     "t": 0.3,
+     "v": -5,
+     "ease": "easeInOutSine"
+    },
+    {
+     "t": 0.6,
+     "v": 4,
+     "ease": "easeInOutSine"
+    },
+    {
+     "t": 1.0,
+     "v": 0
+    }
+   ]
+  },
+  {
+   "part": "body",
+   "property": "rotation",
+   "keys": [
+    {
+     "t": 0,
+     "v": 0,
+     "ease": "easeInOutSine"
+    },
+    {
+     "t": 0.35,
+     "v": -1.5,
+     "ease": "easeInOutSine"
+    },
+    {
+     "t": 0.7,
+     "v": 1.5,
+     "ease": "easeInOutSine"
+    },
+    {
+     "t": 1.0,
+     "v": 0
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "fluffy-bureau",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "«Пушистое бюро расследований» — offline PWA on the AEGIS SDK.",
+  "engines": {
+    "node": ">=25.6",
+    "npm": ">=11.8"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint . && prettier --check .",
+    "format": "prettier --write .",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "dev": "npm run dev -w @fluffy/game",
+    "build": "npm run build -w @fluffy/game",
+    "preview": "npm run preview -w @fluffy/game",
+    "content:check": "node tools/content/build.ts --check",
+    "verify": "npm run content:check && npm run typecheck && npm run lint && npm run test && npm run build && npm run test:e2e"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@fontsource/andika": "^5.3.0",
+    "@fontsource/nunito": "^5.3.0",
+    "@playwright/test": "1.64.0",
+    "@types/node": "^24.19.1",
+    "esbuild": "0.28.2",
+    "eslint": "^10.12.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "3.9.9",
+    "typescript": "5.9.3",
+    "typescript-eslint": "^8.71.1",
+    "vitest": "^4.1.0"
+  },
+  "dependencies": {
+    "@aegis/browser": "file:vendor/aegis/17ed4bebd329/aegis-browser-0.0.0-local.r17ed4bebd329.d1aa7062366d08df3.tgz",
+    "@aegis/core": "file:vendor/aegis/17ed4bebd329/aegis-core-0.0.0-local.r17ed4bebd329.d1aa7062366d08df3.tgz",
+    "@aegis/narrative": "file:vendor/aegis/17ed4bebd329/aegis-narrative-0.0.0-local.r17ed4bebd329.d1aa7062366d08df3.tgz",
+    "@aegis/runtime": "file:vendor/aegis/17ed4bebd329/aegis-runtime-0.0.0-local.r17ed4bebd329.d1aa7062366d08df3.tgz"
+  }
+}

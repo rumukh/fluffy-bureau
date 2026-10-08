@@ -1,0 +1,187 @@
+{
+ "format": "aegis-rig/1",
+ "id": "avatar.mouse",
+ "revision": "1",
+ "atlases": [
+  "avatar.mouse.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -123.98,
+  "y": -591.84,
+  "width": 322.7,
+  "height": 591.84
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 172.2,
+    "y": 493.2
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "variants": {
+    "rest": "avatar.mouse.atlas#body.rest"
+   },
+   "variant": "rest",
+   "scale": {
+    "x": 0.72,
+    "y": 0.72
+   }
+  },
+  {
+   "id": "head",
+   "parent": "body",
+   "frame": "avatar.mouse.atlas#head",
+   "pivot": {
+    "x": 257.4,
+    "y": 336.0
+   },
+   "position": {
+    "x": 0.0,
+    "y": -486.0
+   },
+   "z": 20
+  },
+  {
+   "id": "eyes",
+   "parent": "head",
+   "pivot": {
+    "x": 115.2,
+    "y": 44.4
+   },
+   "position": {
+    "x": 5.4,
+    "y": -110.4
+   },
+   "z": 21,
+   "variants": {
+    "open": "avatar.mouse.atlas#eyes.open",
+    "half": "avatar.mouse.atlas#eyes.half",
+    "closed": "avatar.mouse.atlas#eyes.closed",
+    "happy": "avatar.mouse.atlas#eyes.happy"
+   },
+   "variant": "open"
+  },
+  {
+   "id": "brows",
+   "parent": "head",
+   "pivot": {
+    "x": 103.2,
+    "y": 21.6
+   },
+   "position": {
+    "x": -0.6,
+    "y": -176.4
+   },
+   "z": 22,
+   "variants": {
+    "neutral": "avatar.mouse.atlas#brows.neutral",
+    "up": "avatar.mouse.atlas#brows.up",
+    "worried": "avatar.mouse.atlas#brows.worried"
+   },
+   "variant": "neutral"
+  },
+  {
+   "id": "mouth",
+   "parent": "head",
+   "pivot": {
+    "x": 55.2,
+    "y": 25.2
+   },
+   "position": {
+    "x": 0.6,
+    "y": -43.2
+   },
+   "z": 23,
+   "variants": {
+    "X": "avatar.mouse.atlas#mouth.X",
+    "A": "avatar.mouse.atlas#mouth.A",
+    "B": "avatar.mouse.atlas#mouth.B",
+    "C": "avatar.mouse.atlas#mouth.C",
+    "D": "avatar.mouse.atlas#mouth.D",
+    "E": "avatar.mouse.atlas#mouth.E",
+    "F": "avatar.mouse.atlas#mouth.F"
+   },
+   "variant": "X"
+  },
+  {
+   "id": "scarf",
+   "parent": "body",
+   "frame": "avatar.mouse.atlas#scarf",
+   "pivot": {
+    "x": 82.5,
+    "y": 40.68
+   },
+   "position": {
+    "x": -0.3,
+    "y": -438.72
+   },
+   "z": 15,
+   "tint": {
+    "channel": "scarf"
+   }
+  }
+ ],
+ "roles": {
+  "head": "head",
+  "lookAt": "head",
+  "eyes": "eyes",
+  "brows": "brows",
+  "mouth": "mouth"
+ },
+ "expressions": {
+  "neutral": {
+   "brows": "neutral",
+   "eyes": "open"
+  },
+  "surprised": {
+   "brows": "up"
+  },
+  "worried": {
+   "brows": "worried"
+  },
+  "happy": {
+   "eyes": "happy"
+  }
+ },
+ "emotes": {
+  "joy": {
+   "expression": "happy",
+   "clip": "cheer"
+  },
+  "nod": {
+   "expression": "neutral",
+   "clip": "nod"
+  }
+ },
+ "slots": {
+  "hat": {
+   "parent": "head",
+   "position": {
+    "x": 0,
+    "y": -252.0
+   },
+   "z": 40
+  }
+ },
+ "tints": {
+  "scarf": {
+   "default": "#c8553d"
+  }
+ },
+ "anchors": {
+  "badge": {
+   "part": "scarf",
+   "x": 82.5,
+   "y": 91.53
+  }
+ }
+}

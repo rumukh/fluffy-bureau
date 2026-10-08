@@ -1,0 +1,67 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [master, rumukh-game-feasibility-assessment]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    name: Lint, typecheck, unit tests, content validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 25.6.0
+          cache: npm
+      - run: npm install -g npm@11.8.0
+      - run: npm ci
+      - name: Content validation (C)
+        run: |
+          if [ -f tools/content/build.ts ]; then node tools/content/build.ts --check
+          else echo "No content compiler on this branch yet"; fi
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm test
+
+  smoke:
+    name: Browser smoke (Chromium + WebKit)
+    # Playwright's image ships the exact browsers and system libraries for 1.64.0, so no apt install
+    # runs per job (the version must match @playwright/test). 1.64.0 is published for arm64 only so
+    # far, hence the arm runner; switch to the amd64 tag once it exists.
+    runs-on: ubuntu-24.04-arm
+    timeout-minutes: 30
+    container:
+      image: mcr.microsoft.com/playwright:v1.64.0-noble-arm64
+      options: --user 1001
+    env:
+      PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 25.6.0
+          cache: npm
+      - run: npm install -g npm@11.8.0
+      - run: npm ci
+      - name: Release build
+        run: |
+          if [ -d packages/content/packs ]; then npm run build
+          else npm run build -- --fixture-content 2>/dev/null || npm run build; fi
+      - name: Smoke tests
+        run: npx playwright test e2e/smoke.spec.ts
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-results
+          path: test-results/
+          retention-days: 7

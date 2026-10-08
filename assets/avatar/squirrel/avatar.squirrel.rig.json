@@ -1,0 +1,187 @@
+{
+ "format": "aegis-rig/1",
+ "id": "avatar.squirrel",
+ "revision": "1",
+ "atlases": [
+  "avatar.squirrel.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -142.99,
+  "y": -609.12,
+  "width": 360.72,
+  "height": 609.12
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 198.6,
+    "y": 485.4
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "variants": {
+    "rest": "avatar.squirrel.atlas#body.rest"
+   },
+   "variant": "rest",
+   "scale": {
+    "x": 0.72,
+    "y": 0.72
+   }
+  },
+  {
+   "id": "head",
+   "parent": "body",
+   "frame": "avatar.squirrel.atlas#head",
+   "pivot": {
+    "x": 199.8,
+    "y": 367.8
+   },
+   "position": {
+    "x": -19.2,
+    "y": -478.2
+   },
+   "z": 20
+  },
+  {
+   "id": "eyes",
+   "parent": "head",
+   "pivot": {
+    "x": 112.2,
+    "y": 44.4
+   },
+   "position": {
+    "x": 1.2,
+    "y": -110.4
+   },
+   "z": 21,
+   "variants": {
+    "open": "avatar.squirrel.atlas#eyes.open",
+    "half": "avatar.squirrel.atlas#eyes.half",
+    "closed": "avatar.squirrel.atlas#eyes.closed",
+    "happy": "avatar.squirrel.atlas#eyes.happy"
+   },
+   "variant": "open"
+  },
+  {
+   "id": "brows",
+   "parent": "head",
+   "pivot": {
+    "x": 103.2,
+    "y": 19.2
+   },
+   "position": {
+    "x": 1.2,
+    "y": -178.8
+   },
+   "z": 22,
+   "variants": {
+    "neutral": "avatar.squirrel.atlas#brows.neutral",
+    "up": "avatar.squirrel.atlas#brows.up",
+    "worried": "avatar.squirrel.atlas#brows.worried"
+   },
+   "variant": "neutral"
+  },
+  {
+   "id": "mouth",
+   "parent": "head",
+   "pivot": {
+    "x": 58.2,
+    "y": 25.2
+   },
+   "position": {
+    "x": -1.8,
+    "y": -44.4
+   },
+   "z": 23,
+   "variants": {
+    "X": "avatar.squirrel.atlas#mouth.X",
+    "A": "avatar.squirrel.atlas#mouth.A",
+    "B": "avatar.squirrel.atlas#mouth.B",
+    "C": "avatar.squirrel.atlas#mouth.C",
+    "D": "avatar.squirrel.atlas#mouth.D",
+    "E": "avatar.squirrel.atlas#mouth.E",
+    "F": "avatar.squirrel.atlas#mouth.F"
+   },
+   "variant": "X"
+  },
+  {
+   "id": "scarf",
+   "parent": "body",
+   "frame": "avatar.squirrel.atlas#scarf",
+   "pivot": {
+    "x": 103.5,
+    "y": 45.6
+   },
+   "position": {
+    "x": -12.3,
+    "y": -431.4
+   },
+   "z": 15,
+   "tint": {
+    "channel": "scarf"
+   }
+  }
+ ],
+ "roles": {
+  "head": "head",
+  "lookAt": "head",
+  "eyes": "eyes",
+  "brows": "brows",
+  "mouth": "mouth"
+ },
+ "expressions": {
+  "neutral": {
+   "brows": "neutral",
+   "eyes": "open"
+  },
+  "surprised": {
+   "brows": "up"
+  },
+  "worried": {
+   "brows": "worried"
+  },
+  "happy": {
+   "eyes": "happy"
+  }
+ },
+ "emotes": {
+  "joy": {
+   "expression": "happy",
+   "clip": "cheer"
+  },
+  "nod": {
+   "expression": "neutral",
+   "clip": "nod"
+  }
+ },
+ "slots": {
+  "hat": {
+   "parent": "head",
+   "position": {
+    "x": 0,
+    "y": -250.2
+   },
+   "z": 40
+  }
+ },
+ "tints": {
+  "scarf": {
+   "default": "#c8553d"
+  }
+ },
+ "anchors": {
+  "badge": {
+   "part": "scarf",
+   "x": 103.5,
+   "y": 102.6
+  }
+ }
+}
