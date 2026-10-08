@@ -81,6 +81,11 @@ export class Player {
       await page.waitForFunction(() => !document.querySelector('#app')?.getAttribute('aria-busy'));
       if (await page.locator('.case-end').count()) return;
       const next = this.key('next');
+      if ((await this.stepKind()) === 'cutscene') {
+        if (await next.isEnabled().catch(() => false)) await this.activate(next);
+        else await page.waitForTimeout(200);
+        continue;
+      }
       if (await next.isVisible().catch(() => false)) {
         await this.activate(next);
         continue;

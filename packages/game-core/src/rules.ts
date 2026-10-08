@@ -87,6 +87,8 @@ export type GameAction =
   | { type: 'await'; action: AwaitAction }
   | { type: 'decor'; item: string; slot: string }
   | { type: 'leave' }
+  | { type: 'cutscene'; outcome: 'completed' | 'skipped' }
+  | { type: 'cutscene-marker'; marker: string }
   | { type: 'import'; state: JsonValue };
 
 type JsonValue = null | boolean | number | string | JsonValue[] | { [key: string]: JsonValue };
@@ -146,6 +148,11 @@ const actionSchema: Schema<GameAction> = schema.union(
   }),
   schema.object({ type: schema.literal('decor'), item: id, slot: id }),
   schema.object({ type: schema.literal('leave') }),
+  schema.object({
+    type: schema.literal('cutscene'),
+    outcome: schema.union(schema.literal('completed'), schema.literal('skipped')),
+  }),
+  schema.object({ type: schema.literal('cutscene-marker'), marker: id }),
   schema.object({ type: schema.literal('import'), state: json }),
 ) as Schema<GameAction>;
 
@@ -349,6 +356,10 @@ function parseRun(value: unknown, rules: GameRules, contentIndex: ContentIndex):
       };
     }),
     versionAttempts: Number(value.versionAttempts),
+    cutsceneMarker:
+      value.cutsceneMarker === undefined || value.cutsceneMarker === null
+        ? null
+        : String(value.cutsceneMarker),
     stage: stringList(value.stage, 256),
     ended: value.ended === true,
   };
@@ -736,6 +747,21 @@ export function createGameAdapter(
       profile.decor.push({ item: action.item, slot: action.slot });
       resolveAwait(context, 'office.place');
     },
+    cutscene: (context, action: { outcome: 'completed' | 'skipped' }) => {
+      const { run, index } = requireRun(context);
+      requireIdle(run);
+      const step = selectStep(currentStep(index, run), 'cutscene');
+      // Presentation only: finishing or skipping never grants anything by itself (effects are steps).
+      run.flags.push(`cutscene:${step.cutscene}`);
+      if (action.outcome === 'skipped') run.flags.push(`cutscene-skipped:${step.cutscene}`);
+      run.cutsceneMarker = null;
+      advance(context, run, index);
+    },
+    'cutscene-marker': (context, action: { marker: string }) => {
+      const { run, index } = requireRun(context);
+      selectStep(currentStep(index, run), 'cutscene');
+      run.cutsceneMarker = action.marker;
+    },
     leave: (context) => {
       const { run } = requireRun(context);
       if (!run.ended) throw new Error('The case is not finished');
@@ -842,6 +868,7 @@ export function migrateProfileJson(
         minigame: null,
         suggestions: [],
         stage: [],
+        cutsceneMarker: null,
         ended: false,
         clues: Array.isArray(run.clues) ? run.clues.filter((c) => declared.has(c as string)) : [],
         notebook: null,
