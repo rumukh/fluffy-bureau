@@ -81,7 +81,11 @@ export type Cond =
 export type Step =
   | { t: 'line'; line: LineId }
   /** Stage direction / animation cue. Not child-facing text; never voiced. */
-  | { t: 'dir'; id: string; text: string }
+  /**
+   * Stage direction / animation cue. Optional ackground (A asset ID): from this step on, until the
+   * scene ends or another dir sets one, the stage shows that background. Only at the scene's top level.
+   */
+  | { t: 'dir'; id: string; text: string; background?: string }
   /** First-encounter tutorial ([НАВЫК]). `first` plays when the profile lacks the skill, else `known`. Afterwards the skill is learned. */
   | { t: 'skill'; skill: SkillId; first: Step[]; known: Step[] }
   | { t: 'minigame'; minigame: string }
@@ -132,6 +136,8 @@ export interface Scene {
   location: string; // background id for A/G
   cast: SpeakerId[]; // characters on stage (the player avatar is always present)
   presentation: Presentation;
+  /** Default background (A asset ID), overriding the location's default. */
+  background?: string;
   steps: Step[];
 }
 

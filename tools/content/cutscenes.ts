@@ -51,6 +51,26 @@ export function cutsceneLines(doc: CutsceneFile): { actor?: string; line: string
   return doc.steps.flatMap((s) => (s.op === 'line' ? [{ actor: s.actor, line: s.line, advance: s.advance }] : []));
 }
 
+/** Scene and stage-direction backgrounds (G's per-scene staging): existing A background IDs, top-level only. */
+export function checkBackgrounds(v: VariantSource, issues: Issue[]): void {
+  const err = (code: string, where: string, message: string) => issues.push({ level: 'error', code, where: `${v.pack}: ${where}`, message });
+  const assets = loadAnimationAssets();
+  const known = (id: string) => id.startsWith('bg.') && (!assets.available || assets.assetIds.has(id));
+  for (const sc of v.scenes) {
+    if (sc.background !== undefined && !known(sc.background)) err('BACKGROUND', sc.id, `unknown background ${sc.background}`);
+    sc.steps.forEach((s) => {
+      if (s.t === 'dir' && s.background !== undefined && !known(s.background)) err('BACKGROUND', `${sc.id} ${s.id}`, `unknown background ${s.background}`);
+    });
+    const nested = (steps: VariantSource['scenes'][number]['steps']): boolean =>
+      steps.some((s) => (s.t === 'dir' && s.background !== undefined) || (s.t === 'skill' && (nested(s.first) || nested(s.known))) || (s.t === 'if' && (nested(s.then) || nested(s.else))));
+    for (const s of sc.steps) {
+      if ((s.t === 'skill' && (nested(s.first) || nested(s.known))) || (s.t === 'if' && (nested(s.then) || nested(s.else)))) {
+        err('BACKGROUND', sc.id, 'a dir with background must be a top-level scene step');
+      }
+    }
+  }
+}
+
 export function checkCutscenes(
   v: VariantSource,
   lineIndex: Map<string, AuthoredLine>,

@@ -124,6 +124,10 @@ describe('content build', () => {
       expect(c).toContain('CUTSCENE-ASSET');
       expect(c.some((x) => x.startsWith('E:'))).toBe(true);
     });
+    it('fails on an unknown or nested stage background', () => {
+      expect(codes((s) => { const sc = variant(s, 'case01-l1').scenes.find((x) => x.id === 'C1-5')!; sc.background = 'bg.nowhere'; })).toContain('BACKGROUND');
+      expect(codes((s) => { const sc = variant(s, 'case01-l1').scenes.find((x) => x.id === 'C1-5')!; sc.steps.unshift({ t: 'if', when: { flag: 'x' }, then: [{ t: 'dir', id: 'X-D01', text: 'x', background: 'bg.office' }], else: [] }); })).toContain('BACKGROUND');
+    });
     it('fails when a cutscene loads more than four backgrounds', () => {
       expect(codes((s) => { const d = shed(s); (d.steps as unknown[]).unshift(...['bg.office', 'bg.bench', 'bg.garden', 'bg.post'].map((asset) => ({ op: 'background', asset }))); })).toContain('CUTSCENE-BUDGET');
     });

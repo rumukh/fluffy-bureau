@@ -111,7 +111,7 @@ export function seq(prefix: string, from: number, to: number): Step[] {
   return out;
 }
 export const Ls = (...ids: string[]): Step[] => ids.map(L);
-export const dir = (id: string, text: string): Step => ({ t: 'dir', id, text });
+export const dir = (id: string, text: string, background?: string): Step => ({ t: 'dir', id, text, ...(background ? { background } : {}) });
 export const skill = (id: string, first: Step[], known: Step[] = first): Step => ({ t: 'skill', skill: id, first, known });
 export const minigame = (id: string): Step => ({ t: 'minigame', minigame: id });
 export const cutscene = (id: string): Step => ({ t: 'cutscene', cutscene: id });

@@ -3276,6 +3276,12 @@
      "minigame": "c1l3-scents"
     },
     {
+     "t": "dir",
+     "id": "L3-7-D02",
+     "text": "Щёлка в стене сарая крупно: коробка мэра, в окошке крышки виден пирог.",
+     "background": "bg.shed-window"
+    },
+    {
      "t": "line",
      "line": "L3-7-07"
     },
@@ -6151,5 +6157,5 @@
   }
  ],
  "reserved": [],
- "revision": "3f45c27a1001909b997e7631f620e8e40ddbf0c63c48b78866349d3a36fca009"
+ "revision": "5de107b01f9514e57a82e790ec35a72f35bdd02ee3334d8709c69430cc3c5f84"
 }
