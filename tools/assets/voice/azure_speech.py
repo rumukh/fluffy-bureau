@@ -100,6 +100,11 @@ def assess(audio: Path, reference_text: str | None, language: str = "ru-RU") -> 
                 time.sleep(4 * (attempt + 1))
                 continue
             raise
+        except (TimeoutError, urllib.error.URLError, ConnectionError):
+            if attempt < 3:
+                time.sleep(5 * (attempt + 1))
+                continue
+            raise
     best = (payload.get("NBest") or [{}])[0]
     pa = best.get("PronunciationAssessment") or best
     return {

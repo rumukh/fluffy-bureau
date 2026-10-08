@@ -1,0 +1,33 @@
+{
+ "format": "aegis-rig/1",
+ "id": "prop.badge-letters-saved",
+ "revision": "1",
+ "atlases": [
+  "prop.badge-letters-saved.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -160.0,
+  "y": -173.5,
+  "width": 320,
+  "height": 347
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 160.0,
+    "y": 173.5
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "frame": "prop.badge-letters-saved.atlas#body.rest"
+  }
+ ]
+}

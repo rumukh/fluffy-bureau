@@ -1,0 +1,33 @@
+{
+ "format": "aegis-rig/1",
+ "id": "prop.c2-magpie-nest",
+ "revision": "1",
+ "atlases": [
+  "prop.c2-magpie-nest.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -210.0,
+  "y": -412.5,
+  "width": 420,
+  "height": 413
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 210.0,
+    "y": 412.5
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "frame": "prop.c2-magpie-nest.atlas#body.rest"
+  }
+ ]
+}

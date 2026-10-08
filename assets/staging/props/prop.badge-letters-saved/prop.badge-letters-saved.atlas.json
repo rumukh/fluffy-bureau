@@ -1,0 +1,16 @@
+{
+ "format": "aegis-atlas/1",
+ "id": "prop.badge-letters-saved.atlas",
+ "image": "prop.badge-letters-saved.atlas.webp",
+ "width": 512,
+ "height": 512,
+ "scale": 1,
+ "frames": {
+  "body.rest": {
+   "x": 2,
+   "y": 2,
+   "w": 320,
+   "h": 347
+  }
+ }
+}

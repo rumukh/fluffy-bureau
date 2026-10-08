@@ -1,0 +1,148 @@
+{
+ "format": "aegis-rig/1",
+ "id": "damka",
+ "revision": "1",
+ "atlases": [
+  "damka.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -200.21,
+  "y": -686.8,
+  "width": 392.68,
+  "height": 686.8
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 232.8,
+    "y": 574.5
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "variants": {
+    "rest": "damka.atlas#body.rest"
+   },
+   "variant": "rest",
+   "scale": {
+    "x": 0.86,
+    "y": 0.86
+   }
+  },
+  {
+   "id": "head",
+   "parent": "body",
+   "frame": "damka.atlas#head",
+   "pivot": {
+    "x": 161.4,
+    "y": 231.0
+   },
+   "position": {
+    "x": 0.0,
+    "y": -567.6
+   },
+   "z": 20
+  },
+  {
+   "id": "eyes",
+   "parent": "head",
+   "pivot": {
+    "x": 74.4,
+    "y": 31.2
+   },
+   "position": {
+    "x": 3.6,
+    "y": -100.2
+   },
+   "z": 21,
+   "variants": {
+    "open": "damka.atlas#eyes.open",
+    "half": "damka.atlas#eyes.half",
+    "closed": "damka.atlas#eyes.closed",
+    "happy": "damka.atlas#eyes.happy"
+   },
+   "variant": "open"
+  },
+  {
+   "id": "brows",
+   "parent": "head",
+   "pivot": {
+    "x": 79.2,
+    "y": 19.2
+   },
+   "position": {
+    "x": 6.6,
+    "y": -141.6
+   },
+   "z": 22,
+   "variants": {
+    "neutral": "damka.atlas#brows.neutral",
+    "up": "damka.atlas#brows.up",
+    "worried": "damka.atlas#brows.worried"
+   },
+   "variant": "neutral"
+  },
+  {
+   "id": "mouth",
+   "parent": "head",
+   "pivot": {
+    "x": 54.0,
+    "y": 36.0
+   },
+   "position": {
+    "x": 9.6,
+    "y": -44.4
+   },
+   "z": 23,
+   "variants": {
+    "X": "damka.atlas#mouth.X",
+    "A": "damka.atlas#mouth.A",
+    "B": "damka.atlas#mouth.B",
+    "C": "damka.atlas#mouth.C",
+    "D": "damka.atlas#mouth.D",
+    "E": "damka.atlas#mouth.E",
+    "F": "damka.atlas#mouth.F"
+   },
+   "variant": "X"
+  }
+ ],
+ "roles": {
+  "head": "head",
+  "lookAt": "head",
+  "eyes": "eyes",
+  "brows": "brows",
+  "mouth": "mouth"
+ },
+ "expressions": {
+  "neutral": {
+   "brows": "neutral",
+   "eyes": "open"
+  },
+  "surprised": {
+   "brows": "up"
+  },
+  "worried": {
+   "brows": "worried"
+  },
+  "happy": {
+   "eyes": "happy"
+  }
+ },
+ "emotes": {
+  "joy": {
+   "expression": "happy",
+   "clip": "cheer"
+  },
+  "nod": {
+   "expression": "neutral",
+   "clip": "nod"
+  }
+ }
+}

@@ -260,9 +260,18 @@ TRACKS = {
                   "rhythm": [1.5, 0.5, 2], "bass": [0, None, 7, None], "pad": True, "comp": False, "purr": 0.07, "seed": 53, "repeat": 2},
     "celebration-baking": {"bpm": 116, "key": "A#2", "scale": PENT, "prog": ["I", "IV", "I", "V", "I", "IV", "V", "I"], "lead": "mallet",
                            "rhythm": [0.5, 0.5, 0.5, 0.5, 1, 0.5, 0.5], "bass": [0, 7, 12, 7], "tick": True, "double": True, "seed": 67, "repeat": 2},
+    # Stage 2 (cases 2-4).
+    "dusk-lighthouse": {"bpm": 76, "key": "E2", "scale": MAJ, "prog": ["Imaj7", "vi7", "IVmaj7", "V", "Imaj7", "iii", "IV", "V"], "lead": "celesta",
+                        "rhythm": [1, 0.5, 0.5, 2], "bass": [0, None, 7, None], "pad": True, "comp": True, "double": True,
+                        "purr": 0.04, "seed": 71, "repeat": 2},
+    "dreams": {"bpm": 64, "key": "D3", "scale": PENT, "prog": ["I", "vi", "IV", "I", "ii", "IV", "V", "I"], "lead": "celesta",
+               "rhythm": [2, 1, 1], "bass": [0, None, None, None], "pad": True, "comp": False, "purr": 0.05, "seed": 83, "repeat": 2},
+    "tea-party": {"bpm": 108, "key": "G2", "scale": MAJ, "prog": ["I", "IV", "V", "I", "vi", "ii", "V", "I"], "lead": "mallet",
+                  "rhythm": [0.5, 0.5, 1, 0.5, 0.5, 1], "bass": [0, 7, 12, 7], "tick": True, "double": True, "seed": 97, "repeat": 2},
 }
 PACK = {"title-office": "shell", "town-map": "shell", "investigation": "shell", "gentle-mystery": "shell",
-        "heartfelt": "shell", "celebration-baking": "case01"}
+        "heartfelt": "shell", "celebration-baking": "case01", "dusk-lighthouse": "case03", "dreams": "case04",
+        "tea-party": "case04"}
 
 
 def write_wav(path: Path, x: np.ndarray) -> None:

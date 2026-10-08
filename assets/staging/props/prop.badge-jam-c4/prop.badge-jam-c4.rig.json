@@ -1,0 +1,33 @@
+{
+ "format": "aegis-rig/1",
+ "id": "prop.badge-jam-c4",
+ "revision": "1",
+ "atlases": [
+  "prop.badge-jam-c4.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -160.0,
+  "y": -202.0,
+  "width": 320,
+  "height": 404
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 160.0,
+    "y": 202.0
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "frame": "prop.badge-jam-c4.atlas#body.rest"
+  }
+ ]
+}

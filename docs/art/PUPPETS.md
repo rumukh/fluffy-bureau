@@ -1,6 +1,6 @@
 # Куклы и аватар: как устроены и как пересобрать
 
-**Версия:** 1, 8 октября 2026 года. Формат — `aegis-rig/1` и `aegis-atlas/1`
+**Версия:** 2, 9 октября 2026 года (Этап 2: Дамка, Пухлик, новые шапки). Формат — `aegis-rig/1` и `aegis-atlas/1`
 (контракт E: `docs/api/animation.md` в `rumukh/aegis-engine`, коммит `c35d3a4`).
 
 ## Что лежит в `assets/`
@@ -9,11 +9,12 @@
 |---|---|
 | `assets/characters/<id>/` | `<id>.rig.json`, `<id>.atlas.json`, `<id>.atlas.webp`, `base.webp` (поза покоя одним слоем — для рантайма без кукол) |
 | `assets/avatar/<species>/` | то же, плюс `scarf-mask.webp` (белая маска шарфика под тонировку) |
-| `assets/avatar/hats/` | шапки: `hat-detective`, `hat-beret`, `hat-flower`, `hat-acorn` |
+| `assets/avatar/hats/` | шапки: `hat-detective`, `hat-beret`, `hat-flower`, `hat-acorn`; с Этапа 2 для лавки (T29) ещё `hat-bobble`, `hat-captain`, `hat-flower-crown`, `hat-top`. Для роликов каждая шапка есть и ригом-аксессуаром `acc.hat.<id>` в `assets/staging/` |
 
 ID героев совпадают с `speaker` из манифеста озвучки C: `khvosts`, `watsony`,
 `pudding`, `tyopa`, `kartofan`, `fitilyok`, `stella`, `mouse` (мышонок в кепке) и
-`mouse2` (мышка в платке). Аватары: `avatar.kitten`, `avatar.fox`, `avatar.mouse`,
+`mouse2` (мышка в платке), с Этапа 2 — `damka` (бобриха Дамка, ≈ 690 px в сцене, масштаб покоя 0,86) и
+`pukhlik` (совёнок Пухлик, ≈ 370 px, масштаб покоя 0,5). Аватары: `avatar.kitten`, `avatar.fox`, `avatar.mouse`,
 `avatar.squirrel`, `avatar.puppy`.
 
 ## Части рига
@@ -46,6 +47,15 @@ ID героев совпадают с `speaker` из манифеста озву
 
 Шапки — отдельные картинки: нижний край по центру ставится в точку слота `hat`.
 
+**Узоры шарфика (T29, лавка).** У каждого аватара есть слот `scarfPattern` (родитель `scarf`,
+позиция (0, 0), z 16 — над тонированным шарфиком, под головой). Накладка
+`acc.scarf.<узор>.<вид>` (`stripes`, `dots`, `hearts`, `stars` × пять видов, 20 ригов в
+`assets/staging/acc/`) имеет тот же кадр и ту же опорную точку, что и шарфик этого вида, и уже
+обрезана по его форме. Цвет свой — кремовый, с тенями складок шарфика и лёгкой тенью под
+мотивом, поэтому узор читается на любом цвете; тонировка к накладке не применяется. ID лавки C
+`scarf.pattern.<узор>` → `acc.scarf.<узор>.<вид аватара>`; картинки для витрины —
+`scarf.pattern.<узор>` и `…-swatch`.
+
 ## Как пересобрать
 
 ```powershell
@@ -71,5 +81,7 @@ python tools/assets/art/rig_preview.py assets/characters/<id>/<id>.rig.json out.
 
 
 ## Проверка валидатором E
+
+9 октября 2026 (Этап 2): 73 атласа, 72 рига и 14 клипов — 0 ошибок; 1075 новых дорожек форм рта (Rhubarb JSON, принимаются напрямую) — 0 ошибок.
 
 8 октября 2026: `aegis-animation validate` (ветка `rumukh-fluffy-bureau-engine-extensions`) — 14 атласов и 14 ригов без ошибок; все 513 дорожек форм рта после `import-rhubarb` — без ошибок и предупреждений, длительности совпадают со звуком.

@@ -1,0 +1,16 @@
+{
+ "format": "aegis-atlas/1",
+ "id": "prop.c2-letter-garland.atlas",
+ "image": "prop.c2-letter-garland.atlas.webp",
+ "width": 2048,
+ "height": 1024,
+ "scale": 1,
+ "frames": {
+  "body.rest": {
+   "x": 2,
+   "y": 2,
+   "w": 1600,
+   "h": 703
+  }
+ }
+}

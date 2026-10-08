@@ -1,0 +1,16 @@
+{
+ "format": "aegis-atlas/1",
+ "id": "prop.empty-jam-jar.atlas",
+ "image": "prop.empty-jam-jar.atlas.webp",
+ "width": 256,
+ "height": 256,
+ "scale": 1,
+ "frames": {
+  "body.rest": {
+   "x": 2,
+   "y": 2,
+   "w": 200,
+   "h": 245
+  }
+ }
+}

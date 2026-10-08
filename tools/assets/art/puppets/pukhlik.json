@@ -1,0 +1,93 @@
+{
+ "id": "pukhlik",
+ "base": "puppets/pukhlik/base.png",
+ "creature": "fluffy round owlet with huge amber eyes and a tiny beak",
+ "editCrop": [
+  191,
+  124,
+  640
+ ],
+ "neck": {
+  "y": 668,
+  "overlap": 18,
+  "pivot": [
+   512,
+   680
+  ]
+ },
+ "features": {
+  "eyes": {
+   "ellipses": [
+    [
+     357,
+     508,
+     92,
+     90
+    ],
+    [
+     660,
+     505,
+     92,
+     90
+    ]
+   ],
+   "variants": [
+    "half",
+    "closed",
+    "happy"
+   ]
+  },
+  "brows": {
+   "ellipses": [
+    [
+     366,
+     338,
+     58,
+     20
+    ],
+    [
+     656,
+     338,
+     58,
+     20
+    ]
+   ],
+   "variants": [
+    "up",
+    "worried"
+   ],
+   "phrases": {
+    "up": "the little feather brow tufts above the eyes raised high in gentle surprise",
+    "worried": "the little feather brow tufts above the eyes tilted with inner ends raised, gently worried"
+   }
+  },
+  "mouth": {
+   "ellipses": [
+    [
+     509,
+     580,
+     52,
+     56
+    ]
+   ],
+   "variants": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+   ],
+   "phrases": {
+    "A": "the small beak firmly closed",
+    "B": "the beak very slightly open, a thin gap between the upper and lower beak",
+    "C": "the beak open medium, showing a little pink inside",
+    "D": "the beak wide open, showing the pink inside",
+    "E": "the beak open in a rounded way, medium-small opening",
+    "F": "the beak almost closed with a tiny round opening at the tip"
+   }
+  }
+ },
+ "scale": 0.5,
+ "bodyVariants": {}
+}

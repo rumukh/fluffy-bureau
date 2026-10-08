@@ -1,0 +1,33 @@
+{
+ "format": "aegis-rig/1",
+ "id": "prop.c2-letter-garland",
+ "revision": "1",
+ "atlases": [
+  "prop.c2-letter-garland.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -800.0,
+  "y": -351.5,
+  "width": 1600,
+  "height": 703
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 800.0,
+    "y": 351.5
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "frame": "prop.c2-letter-garland.atlas#body.rest"
+  }
+ ]
+}

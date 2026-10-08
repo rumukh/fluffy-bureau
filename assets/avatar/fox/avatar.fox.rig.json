@@ -170,6 +170,14 @@
     "y": -243.0
    },
    "z": 40
+  },
+  "scarfPattern": {
+   "parent": "scarf",
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 16
   }
  },
  "tints": {

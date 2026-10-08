@@ -1,0 +1,33 @@
+{
+ "format": "aegis-rig/1",
+ "id": "acc.scarf.stripes.puppy",
+ "revision": "1",
+ "atlases": [
+  "acc.scarf.stripes.puppy.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -96.0,
+  "y": -42.24,
+  "width": 192,
+  "height": 211
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 96.0,
+    "y": 42.24
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "frame": "acc.scarf.stripes.puppy.atlas#body.rest"
+  }
+ ]
+}

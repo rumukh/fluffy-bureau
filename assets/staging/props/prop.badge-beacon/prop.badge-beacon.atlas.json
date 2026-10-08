@@ -1,0 +1,16 @@
+{
+ "format": "aegis-atlas/1",
+ "id": "prop.badge-beacon.atlas",
+ "image": "prop.badge-beacon.atlas.webp",
+ "width": 512,
+ "height": 512,
+ "scale": 1,
+ "frames": {
+  "body.rest": {
+   "x": 2,
+   "y": 2,
+   "w": 320,
+   "h": 374
+  }
+ }
+}

@@ -4,6 +4,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 // @ts-expect-error -- plain ESM helper without declarations
 import { serveStatic } from '../apps/game/scripts/preview.mjs';
+import { BASE } from './env.js';
 import { Player } from './player.js';
 
 test('offline: install, close mid-minigame, cold start with the network gone, resume', async ({
@@ -15,8 +16,8 @@ test('offline: install, close mid-minigame, cold start with the network gone, re
 
   const profile = mkdtempSync(join(tmpdir(), `fluffy-offline-${browserName}-`));
   // An OS-assigned free port, so parallel runs on one machine never collide.
-  const server = await serveStatic('apps/game/dist', { port: 0 });
-  const origin = `http://127.0.0.1:${(server.address() as { port: number }).port}/`;
+  const server = await serveStatic('apps/game/dist', { port: 0, base: BASE });
+  const origin = `http://127.0.0.1:${(server.address() as { port: number }).port}${BASE}`;
   try {
     let context = await browserType.launchPersistentContext(profile, {
       viewport: { width: 1280, height: 800 },

@@ -1,0 +1,58 @@
+# GitHub Pages release (T30): only on a version tag (v0.1.0 = Stage 1, v0.2.0 = Stage 2, …) or a
+# manual run — never on ordinary pushes. Unlisted site (Q43): noindex meta on the page.
+name: Pages release
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deployment at a time; a newer release waits rather than cancelling one in flight.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Check and build for /fluffy-bureau/
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 25.6.0
+          cache: npm
+      - run: npm install -g npm@11.8.0
+      - run: npm ci
+      - name: Content validation
+        run: npm run content:check
+      - name: Unit tests and scenario traces
+        run: npm test
+      - name: Release build under the Pages base path
+        run: npm run build:pages
+      - name: Record the release
+        run: |
+          echo "Build: $(node -p "require('./apps/game/dist/build-report.json').buildId")" >> "$GITHUB_STEP_SUMMARY"
+          echo "Ref: ${GITHUB_REF_NAME} (${GITHUB_SHA})" >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: apps/game/dist
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
