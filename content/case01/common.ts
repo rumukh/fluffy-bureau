@@ -91,7 +91,7 @@ export const factsScene = (): VariantSource['scenes'][number] => ({
 export const rewardScene = (level: 1 | 2 | 3, next: Step[]): VariantSource['scenes'][number] => ({
   id: 'C1-10', title: 'Награда и переход', location: 'office', cast: ['khvosts', 'watsony'], presentation: 'cutscene',
   steps: [
-    cutscene('c1.reward'),
+    cutscene(`c1.reward.l${level}`),
     reward('rw-c1-badge'), reward(`rw-c1-buttons-l${level}`), reward(`rw-c1-sticker-l${level}`),
     reward('rw-c1-decor-basket'), reward('rw-c1-activity'),
     dir('C1-10-D01', 'Новые слова в «Словарике сыщика»: улика, свидетель, версия.'),

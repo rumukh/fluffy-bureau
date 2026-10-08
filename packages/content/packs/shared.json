@@ -936,6 +936,24 @@
    "delivery": "neutral"
   },
   {
+   "id": "UI-cutscene.skip",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Пропустить ролик",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-cutscene.replay",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Смотреть сначала",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
    "id": "SK-inspect",
    "rev": 1,
    "kind": "label",
@@ -1575,5 +1593,5 @@
  "comfort": [],
  "cutscenes": [],
  "reserved": [],
- "revision": "0d7204f5ed08db9a487dcfa5778492f2e431de50f3a0def9db43253cc1031aae"
+ "revision": "55bb9f8c6541999c82631739851f5eb24dfd4ec82a34b0a6e2f9dc46c672c734"
 }

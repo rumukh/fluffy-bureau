@@ -2264,7 +2264,7 @@
     },
     {
      "t": "cutscene",
-     "cutscene": "c1.oven"
+     "cutscene": "c1.oven.l1"
     },
     {
      "t": "goto",
@@ -2333,7 +2333,7 @@
    "steps": [
     {
      "t": "cutscene",
-     "cutscene": "c1.reward"
+     "cutscene": "c1.reward.l1"
     },
     {
      "t": "reward",
@@ -3902,12 +3902,12 @@
    }
   },
   {
-   "id": "c1.oven",
+   "id": "c1.oven.l1",
    "scene": "C1-8",
    "summary": "Пирог в печи на медовой карамели, тёплый свет; Тёпа и мэр радуются. Ожидание декоративное, ролик можно пропустить.",
    "document": {
     "format": "aegis-cutscene/1",
-    "id": "c1.oven",
+    "id": "c1.oven.l1",
     "revision": "1",
     "advance": "input",
     "cast": {
@@ -4112,12 +4112,12 @@
    }
   },
   {
-   "id": "c1.reward",
+   "id": "c1.reward.l1",
    "scene": "C1-10",
    "summary": "Награда в Конторе: значок-лапка «Пирог найден», стикер в альбом (звёздочки по сложности), корзинка черники. Сами награды выдаются шагами после ролика.",
    "document": {
     "format": "aegis-cutscene/1",
-    "id": "c1.reward",
+    "id": "c1.reward.l1",
     "revision": "1",
     "advance": "input",
     "cast": {
@@ -4351,5 +4351,5 @@
   }
  ],
  "reserved": [],
- "revision": "0efb4dc03068a6405588c6606dae9a4407ea09c57d8429825fd80611492532af"
+ "revision": "91ab0bf58d1cbb7e1d31d1fe49c7da626c7af3e45166907869d02996531d605e"
 }

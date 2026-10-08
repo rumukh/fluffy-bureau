@@ -109,8 +109,8 @@ Documents follow `aegis-cutscene/1` (engine `docs/api/animation.md` §9, SDK 711
 | `intro` | prologue | P0, profile-once skill `intro` | no (wordless, music only) |
 | `p3.letter` | prologue | P3 | yes |
 | `c1.shed.l1` / `.l2` / `.l3` | case01-l1 / l2 / l3 | C1-7 / L2-8 / L3-9 | yes |
-| `c1.oven` | case01-l1/l2/l3 | C1-8 / L2-9 / L3-10 | yes |
-| `c1.reward` | case01-l1/l2/l3 (sticker clip `stars-<level>`) | C1-10 | yes |
+| `c1.oven.l1` / `.l2` / `.l3` | case01-l1 / l2 / l3 | C1-8 / L2-9 / L3-10 | yes |
+| `c1.reward.l1` / `.l2` / `.l3` | case01-l1 / l2 / l3 (sticker clip `stars-<level>`) | C1-10 | yes |
 
 - `line` steps name this pack's line IDs; the narration pack is the content pack. Only existing
   script lines are spoken (no new text). `advance` is `"input"`: after each line the player presses

@@ -110,7 +110,7 @@ export const level2: VariantSource = {
     },
     {
       id: 'L2-9', title: 'Финал: «Пекарь»', location: 'bakery', cast: ['pudding', 'kartofan', 'tyopa', 'stella', 'fitilyok', 'khvosts', 'watsony'], presentation: 'minigame',
-      steps: [skill('baker', [L('C1-8-01')]), minigame('c1l2-baker'), cutscene('c1.oven'), goto('C1-9')],
+      steps: [skill('baker', [L('C1-8-01')]), minigame('c1l2-baker'), cutscene('c1.oven.l2'), goto('C1-9')],
     },
     { ...factsScene(), steps: [...factsScene().steps, goto('C1-10')] },
     rewardScene(2, [end()]),
@@ -268,9 +268,9 @@ export const level2: VariantSource = {
   collections: [],
   activities: [activity],
   comfort: [],
-  cutscenes: [shedL2, oven('L2-9'), rewardCutscene(2)],
+  cutscenes: [shedL2, oven(2, 'L2-9'), rewardCutscene(2)],
   decisions: [
-    { id: 'C1L2-T25', text: 'Ролики T25: разговор в сарае (L2-8, c1.shed.l2), пирог в печи (L2-9, c1.oven) и награда (C1-10, c1.reward). Реплики звучат в ролике в прежнем порядке; ремарки сцен заменены постановкой ролика; награды, «Уютный денёк» и переходы — шаги после ролика.', ref: 'T25' },
+    { id: 'C1L2-T25', text: 'Ролики T25: разговор в сарае (L2-8, c1.shed.l2), пирог в печи (L2-9, c1.oven.l2) и награда (C1-10, c1.reward.l2). Реплики звучат в ролике в прежнем порядке; ремарки сцен заменены постановкой ролика; награды, «Уютный денёк» и переходы — шаги после ролика.', ref: 'T25' },
     { id: 'C1L2-D1', text: '«Часы на пекарне» открываются в меню «Расспросить жителей» (после разговора со Стеллой), а не на улице: иначе на экране было бы четыре варианта.', ref: 'Q11' },
     { id: 'C1L2-D2', text: 'В «Кто наследил?» четыре карточки; они показываются страницами по три.', ref: 'Q11' },
     { id: 'C1L2-D3', text: 'Ракушка (расплывчатая) не подсказывает начало дела: когда не подходит L2-R-01/02, звучит разбор L2-R-03. Клубок по-прежнему точен.', ref: 'D03' },

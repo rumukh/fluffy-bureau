@@ -281,11 +281,11 @@ export const shedL3: Cutscene = {
 
 // ---------------------------------------------------------------- C1-8 oven (optional in T25)
 
-export const oven = (scene: string): Cutscene => ({
-  id: 'c1.oven',
+export const oven = (level: 1 | 2 | 3, scene: string): Cutscene => ({
+  id: `c1.oven.l${level}`,
   scene,
   summary: 'Пирог в печи на медовой карамели, тёплый свет; Тёпа и мэр радуются. Ожидание декоративное, ролик можно пропустить.',
-  document: doc('c1.oven', { pudding: rig('pudding'), tyopa: rig('tyopa'), kartofan: rig('kartofan'), player: avatar, pie: rig('prop.pie-baked') }, [
+  document: doc(`c1.oven.l${level}`, { pudding: rig('pudding'), tyopa: rig('tyopa'), kartofan: rig('kartofan'), player: avatar, pie: rig('prop.pie-baked') }, [
     background('bg.bakery-oven'),
     music('celebration-baking'),
     cut('wide'),
@@ -317,10 +317,10 @@ export const oven = (scene: string): Cutscene => ({
 // ---------------------------------------------------------------- C1-10 reward
 
 export const reward = (level: 1 | 2 | 3): Cutscene => ({
-  id: 'c1.reward',
+  id: `c1.reward.l${level}`,
   scene: 'C1-10',
   summary: 'Награда в Конторе: значок-лапка «Пирог найден», стикер в альбом (звёздочки по сложности), корзинка черники. Сами награды выдаются шагами после ролика.',
-  document: doc('c1.reward', {
+  document: doc(`c1.reward.l${level}`, {
     khvosts: rig('khvosts'), watsony: rig('watsony'), player: avatar,
     badge: rig('prop.badge-pie-found'), sticker: rig('prop.sticker-pie'), basket: rig('prop.blueberry-basket'),
   }, [

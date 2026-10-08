@@ -2,11 +2,11 @@
  "format": "fluffy-voice-manifest",
  "schema": 1,
  "packs": {
-  "shared": "0d7204f5ed08db9a487dcfa5778492f2e431de50f3a0def9db43253cc1031aae",
+  "shared": "55bb9f8c6541999c82631739851f5eb24dfd4ec82a34b0a6e2f9dc46c672c734",
   "prologue": "5b3a8df47dc48dccee85d863c4cdf41f1028f93702947ab59f185fd0d7523008",
-  "case01-l1": "0efb4dc03068a6405588c6606dae9a4407ea09c57d8429825fd80611492532af",
-  "case01-l2": "1ff2a1a4a604ee52f47378794ac1f02c95872f88a78338e21a9aca3ca6a1e23d",
-  "case01-l3": "cfacf29c2d907a64d0db7e41657303691de4fe6d836e39c36494418564c6db52"
+  "case01-l1": "91ab0bf58d1cbb7e1d31d1fe49c7da626c7af3e45166907869d02996531d605e",
+  "case01-l2": "e49dcae14ac2545e2b63e5492d4dbe453740977eb76fb0d0e08c8ad88bf6c807",
+  "case01-l3": "df8faf5e94fbfd9030d264d0884b9c970303e8f04ff0ab99dd16790202165448"
  },
  "lexicon": [
   {
@@ -1719,6 +1719,36 @@
    "displayText": "Дело раскрыто!",
    "ttsText": "Дело раскрыто!",
    "ttsHash": "89c71e72bac1d22863e070b45dd338408e934af0d53f7924d3c9407b6cb84e2b",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
+   "id": "UI-cutscene.skip",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Пропустить ролик",
+   "ttsText": "Пропустить ролик",
+   "ttsHash": "77d8d3abe28520c70ec9cfd4918aec6a9277d1de8a28c76d254ed32692440cd4",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
+   "id": "UI-cutscene.replay",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Смотреть сначала",
+   "ttsText": "Смотреть сначала",
+   "ttsHash": "126a2df7a1392b42f270b4b7cd8488e130c6aaa28733b0762557ccde4f201268",
    "pronunciation": [],
    "delivery": "neutral",
    "note": "",

@@ -109,7 +109,9 @@ const uiLines = lines('shared/ui', 'label', [
   ['UI-hint.klubokEmptyShell', 'khvosts', 'Клубки кончились. Можно позвонить Ватсони!', ui('Клубки исчерпаны, ракушка доступна (D03)')],
   ['UI-hint.klubokEmpty', 'khvosts', 'Клубки кончились. Перечитаем Блокнот вместе?', ui('Клубки исчерпаны на сложности 3 (D03)')],
   ['UI-hint.shellRing', 'narrator', 'Звоним Ватсони…', ui()],
-  ['UI-case.complete', 'narrator', 'Дело раскрыто!', ui()],  // Skill titles
+  ['UI-case.complete', 'narrator', 'Дело раскрыто!', ui()],
+  ['UI-cutscene.skip', 'narrator', 'Пропустить ролик', ui('Кнопка ролика (T25)')],
+  ['UI-cutscene.replay', 'narrator', 'Смотреть сначала', ui('Кнопка ролика (T25)')],  // Skill titles
   ['SK-inspect', 'narrator', 'Осмотр', ui()],
   ['SK-replay', 'narrator', 'Ушко: повтор', ui()],
   ['SK-lamp', 'narrator', 'Лампа смелости', ui()],

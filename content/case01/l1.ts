@@ -90,7 +90,7 @@ export const level1: VariantSource = {
     },
     {
       id: 'C1-8', title: 'Финал: «Пекарь»', location: 'bakery', cast: ['pudding', 'kartofan', 'tyopa', 'fitilyok', 'khvosts', 'watsony'], presentation: 'minigame',
-      steps: [skill('baker', [L('C1-8-01')]), minigame('c1l1-baker'), cutscene('c1.oven'), goto('C1-9')],
+      steps: [skill('baker', [L('C1-8-01')]), minigame('c1l1-baker'), cutscene('c1.oven.l1'), goto('C1-9')],
     },
     { ...factsScene(), steps: [...factsScene().steps, goto('C1-10')] },
     rewardScene(1, [end()]),
@@ -220,9 +220,9 @@ export const level1: VariantSource = {
   collections: [],
   activities: [activity],
   comfort: [],
-  cutscenes: [shedL1, oven('C1-8'), rewardCutscene(1)],
+  cutscenes: [shedL1, oven(1, 'C1-8'), rewardCutscene(1)],
   decisions: [
-    { id: 'C1L1-T25', text: 'Ролики T25: разговор в сарае (C1-7, c1.shed.l1), пирог в печи (C1-8, c1.oven) и награда (C1-10, c1.reward). Реплики звучат в ролике в прежнем порядке; ремарки сцен заменены постановкой ролика; награды, «Уютный денёк» и переходы — шаги после ролика.', ref: 'T25' },
+    { id: 'C1L1-T25', text: 'Ролики T25: разговор в сарае (C1-7, c1.shed.l1), пирог в печи (C1-8, c1.oven.l1) и награда (C1-10, c1.reward.l1). Реплики звучат в ролике в прежнем порядке; ремарки сцен заменены постановкой ролика; награды, «Уютный денёк» и переходы — шаги после ролика.', ref: 'T25' },
     { id: 'C1L1-D1', text: 'Варианты выбора на Пироговой улице исчезают после посещения; «Пойти по следам» появляется после «Лупы». На экране не больше трёх вариантов.', ref: 'Q11' },
     { id: 'C1L1-D2', text: 'Сцена C1-6 (вводная версии) звучит один раз, когда собраны У1–У3; затем кнопка «Приглашу на разговор» доступна в Блокноте.', ref: 'Q14' },
     { id: 'C1L1-D3', text: 'В «Помоги заполнить» ✔ «перепутал коробки» и ✖ «в щёки» предлагаются уже после У3: улика У3 их доказывает (сценарий предлагал только пять стикеров).', ref: 'D03, R03' },

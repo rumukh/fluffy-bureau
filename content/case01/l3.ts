@@ -125,7 +125,7 @@ export const level3: VariantSource = {
     },
     {
       id: 'L3-10', title: 'Финал: «Пекарь», двойной рецепт', location: 'bakery', cast: ['pudding', 'kartofan', 'tyopa', 'stella', 'mouse', 'fitilyok', 'khvosts', 'watsony'], presentation: 'minigame',
-      steps: [skill('baker', [L('L3-10-01')]), minigame('c1l3-baker'), cutscene('c1.oven'), goto('C1-9')],
+      steps: [skill('baker', [L('L3-10-01')]), minigame('c1l3-baker'), cutscene('c1.oven.l3'), goto('C1-9')],
     },
     { ...factsScene(), steps: [...factsScene().steps, goto('C1-10')] },
     rewardScene(3, [end()]),
@@ -312,9 +312,9 @@ export const level3: VariantSource = {
   collections: [],
   activities: [activity],
   comfort: [],
-  cutscenes: [shedL3, oven('L3-10'), rewardCutscene(3)],
+  cutscenes: [shedL3, oven(3, 'L3-10'), rewardCutscene(3)],
   decisions: [
-    { id: 'C1L3-T25', text: 'Ролики T25: разговор в сарае (L3-9, c1.shed.l3), пирог в печи (L3-10, c1.oven) и награда (C1-10, c1.reward). Реплики звучат в ролике в прежнем порядке; ремарки сцен заменены постановкой ролика; награды, «Уютный денёк» и переходы — шаги после ролика.', ref: 'T25' },
+    { id: 'C1L3-T25', text: 'Ролики T25: разговор в сарае (L3-9, c1.shed.l3), пирог в печи (L3-10, c1.oven.l3) и награда (C1-10, c1.reward.l3). Реплики звучат в ролике в прежнем порядке; ремарки сцен заменены постановкой ролика; награды, «Уютный денёк» и переходы — шаги после ролика.', ref: 'T25' },
     { id: 'C1L3-D1', text: 'Реплика L2-8-02 убрана: на сложности 3 Стелла ничего не видела (L3-4-01).', ref: 'R04' },
     { id: 'C1L3-D2', text: '«Чашка какао» на сложности 3 начинается с C1-3-01…C1-3-03 (вводная механики), как на сложностях 1–2.', ref: 'R09, R04' },
     { id: 'C1L3-D3', text: '«Кто наследил?» на сложности 3 при первой встрече добавляет вводную C1-5-01 после L3-5-01.', ref: 'R09' },
