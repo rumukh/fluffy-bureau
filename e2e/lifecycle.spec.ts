@@ -87,8 +87,7 @@ test('update: build B installs beside A without interrupting the case and takes 
     (JSON.parse(readFileSync(join(dir, 'build-report.json'), 'utf8')) as { buildId: string })
       .buildId;
   expect(buildId(builds.a)).not.toBe(buildId(builds.b));
-  const port = browserName === 'webkit' ? 4472 : 4471;
-  const origin = `http://127.0.0.1:${port}/`;
+
   const profile = join(root, 'profile');
   const launch = (offline = false) =>
     browserType.launchPersistentContext(profile, {
@@ -96,7 +95,10 @@ test('update: build B installs beside A without interrupting the case and takes 
       serviceWorkers: 'allow',
       offline,
     });
-  let server = await serveStatic(builds.a, { port });
+  // An OS-assigned free port (kept for build B, which must be published at the same origin).
+  let server = await serveStatic(builds.a, { port: 0 });
+  const port = (server.address() as { port: number }).port;
+  const origin = `http://127.0.0.1:${port}/`;
   let context = await launch();
   try {
     // Build A: install for offline use, restart so the worker controls the page.

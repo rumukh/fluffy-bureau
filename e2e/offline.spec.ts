@@ -12,10 +12,11 @@ test('offline: install, close mid-minigame, cold start with the network gone, re
 }) => {
   const browserType = playwright[browserName];
   test.setTimeout(240_000);
-  const port = 4400 + (browserName === 'webkit' ? 7 : 3);
-  const origin = `http://127.0.0.1:${port}/`;
+
   const profile = mkdtempSync(join(tmpdir(), `fluffy-offline-${browserName}-`));
-  const server = await serveStatic('apps/game/dist', { port });
+  // An OS-assigned free port, so parallel runs on one machine never collide.
+  const server = await serveStatic('apps/game/dist', { port: 0 });
+  const origin = `http://127.0.0.1:${(server.address() as { port: number }).port}/`;
   try {
     let context = await browserType.launchPersistentContext(profile, {
       viewport: { width: 1280, height: 800 },
