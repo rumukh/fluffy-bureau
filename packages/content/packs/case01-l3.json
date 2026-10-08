@@ -5215,11 +5215,11 @@
       "actor": "box",
       "from": {
        "x": 1500,
-       "y": 1300
+       "y": 1520
       },
       "to": {
        "x": 1500,
-       "y": 1300
+       "y": 1520
       },
       "duration": 0.1,
       "walk": false
@@ -5404,7 +5404,7 @@
       "actor": "box",
       "to": {
        "x": 1500,
-       "y": 1300
+       "y": 1520
       },
       "duration": 0.1,
       "walk": false
@@ -5414,11 +5414,11 @@
       "actor": "boxOpen",
       "from": {
        "x": 1500,
-       "y": 1300
+       "y": 1520
       },
       "to": {
        "x": 1500,
-       "y": 1300
+       "y": 1520
       },
       "duration": 0.1,
       "walk": false
@@ -5843,12 +5843,12 @@
       "op": "enter",
       "actor": "pie",
       "from": {
-       "x": 760,
-       "y": 1080
+       "x": 1500,
+       "y": 1400
       },
       "to": {
-       "x": 760,
-       "y": 1080
+       "x": 1500,
+       "y": 1400
       },
       "duration": 0.1,
       "walk": false
@@ -6151,5 +6151,5 @@
   }
  ],
  "reserved": [],
- "revision": "5f802d7c12ba75986357b47d4d03ca8dc8606b75bc9b697b72354d6a98d4adeb"
+ "revision": "3f45c27a1001909b997e7631f620e8e40ddbf0c63c48b78866349d3a36fca009"
 }
