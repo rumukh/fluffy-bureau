@@ -20,7 +20,7 @@
   color: var(--ink);
   background: #fbf1dc;
   font-family: 'Nunito', system-ui, sans-serif;
-  font-size: var(--base);
+  font-size: calc(22px * var(--text-scale, 1));
   line-height: 1.45;
   overflow-wrap: break-word;
   hyphens: auto;
@@ -839,8 +839,8 @@
 }
 
 @media (max-height: 700px) {
-  :root {
-    --base: calc(19px * var(--text-scale));
+  #app.fluffy {
+    font-size: calc(19px * var(--text-scale, 1));
   }
   .panel {
     max-height: 60vh;

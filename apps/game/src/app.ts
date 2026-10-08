@@ -360,16 +360,28 @@ export class App {
   // ------------------------------------------------------------ commands
 
   /** Dispatch a game command bound to the revision the UI was rendered from. */
-  async act(action: GameAction): Promise<boolean> {
+  act(action: GameAction): Promise<boolean> {
+    // Commands are serialized: a tap during a pending save waits instead of being dropped.
+    const rendered = this.session?.game.host.getStatus().revision;
+    const run = this.actions.then(() => this.actNow(action, rendered));
+    this.actions = run.catch(() => false);
+    return run;
+  }
+
+  private actions: Promise<unknown> = Promise.resolve();
+
+  private async actNow(action: GameAction, rendered: number | undefined): Promise<boolean> {
     const session = this.session;
     if (!session) return false;
     const host = session.game.host;
+    if (host.getStatus().checkpoint === 'pending') await host.flush();
     const status = host.getStatus();
     if (status.checkpoint === 'failed') {
       await this.retrySave();
       return false;
     }
-    const outcome = await session.dispatch(action, status.revision);
+    // Bound to the revision the child saw: a stale double tap is rejected, never applied twice.
+    const outcome = await session.dispatch(action, rendered ?? status.revision);
     if (!outcome.ok) {
       if (outcome.progress.accepted) this.saveStatus = 'failed';
       this.renderStatus();

@@ -184,7 +184,6 @@ export class Player {
         }
         // Pairs: open a hidden card, then its partner.
         const fields = config.fields as unknown as { cards: { id: string; pair: string }[] }[];
-        const all = fields.flatMap((f) => f.cards);
         const hidden = page.locator('#app .scent:not(.matched):not(.open)');
         const open = page.locator('#app .scent.open');
         if ((await open.count()) === 1) {
