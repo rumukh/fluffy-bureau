@@ -1,0 +1,67 @@
+{
+ "id": "pudding",
+ "base": "puppets/pudding/base.png",
+ "creature": "plump hamster mayor with stuffed cheeks",
+ "editCrop": [
+  255,
+  56,
+  512
+ ],
+ "neck": {
+  "y": 610,
+  "overlap": 18,
+  "pivot": [
+   512,
+   620
+  ]
+ },
+ "features": {
+  "eyes": {
+   "ellipses": [
+    [
+     515,
+     382,
+     145,
+     44
+    ]
+   ],
+   "variants": [
+    "half",
+    "closed"
+   ]
+  },
+  "mouth": {
+   "ellipses": [
+    [
+     512,
+     494,
+     90,
+     40
+    ]
+   ],
+   "variants": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+   ]
+  },
+  "brows": {
+   "ellipses": [
+    [
+     515,
+     292,
+     130,
+     22
+    ]
+   ],
+   "variants": [
+    "up",
+    "worried"
+   ]
+  }
+ },
+ "bodyVariants": {}
+}

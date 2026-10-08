@@ -1,0 +1,67 @@
+{
+ "id": "mouse2",
+ "base": "puppets/mouse2/base.png",
+ "creature": "little mouse girl wearing a headscarf",
+ "editCrop": [
+  246,
+  107,
+  512
+ ],
+ "neck": {
+  "y": 575,
+  "overlap": 18,
+  "pivot": [
+   512,
+   585
+  ]
+ },
+ "features": {
+  "eyes": {
+   "ellipses": [
+    [
+     526,
+     410,
+     170,
+     54
+    ]
+   ],
+   "variants": [
+    "half",
+    "closed"
+   ]
+  },
+  "mouth": {
+   "ellipses": [
+    [
+     524,
+     510,
+     85,
+     30
+    ]
+   ],
+   "variants": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+   ]
+  },
+  "brows": {
+   "ellipses": [
+    [
+     532,
+     304,
+     145,
+     20
+    ]
+   ],
+   "variants": [
+    "up",
+    "worried"
+   ]
+  }
+ },
+ "bodyVariants": {}
+}

@@ -1,0 +1,1066 @@
+{
+ "backgrounds": {
+  "bg.office": {
+   "master": "backgrounds/office-c1.png",
+   "pack": "shell",
+   "location": "office",
+   "hotspots": {
+    "magnifier": {
+     "x": 230,
+     "y": 790,
+     "w": 210,
+     "h": 120
+    },
+    "notebook": {
+     "x": 440,
+     "y": 740,
+     "w": 220,
+     "h": 110
+    },
+    "bug": {
+     "x": 660,
+     "y": 700,
+     "w": 230,
+     "h": 160
+    },
+    "shelf": {
+     "x": 1460,
+     "y": 60,
+     "w": 400,
+     "h": 840
+    },
+    "teapot": {
+     "x": 1940,
+     "y": 590,
+     "w": 230,
+     "h": 140
+    },
+    "mirror": {
+     "x": 2000,
+     "y": 110,
+     "w": 290,
+     "h": 460
+    },
+    "lamp": {
+     "x": 2080,
+     "y": 720,
+     "w": 200,
+     "h": 300
+    }
+   },
+   "notes": "Office of the bureau: Watsoni's desk (left), shelf, teapot, mirror, lamp on the cart (comfort lamp corner)."
+  },
+  "bg.office-desk": {
+   "master": "backgrounds/office-desk-c1.png",
+   "pack": "prologue",
+   "location": "office-desk",
+   "hotspots": {},
+   "notes": "Close-up of Watsoni's desk for the intern questionnaire (P0)."
+  },
+  "bg.map": {
+   "master": "backgrounds/map-c1.png",
+   "pack": "shell",
+   "location": "map",
+   "hotspots": {
+    "office": {
+     "x": 780,
+     "y": 170,
+     "w": 300,
+     "h": 330
+    },
+    "pirogovaya-street": {
+     "x": 280,
+     "y": 520,
+     "w": 400,
+     "h": 300
+    },
+    "soap-workshop": {
+     "x": 1500,
+     "y": 340,
+     "w": 360,
+     "h": 380
+    },
+    "town-hall": {
+     "x": 1080,
+     "y": 280,
+     "w": 360,
+     "h": 380
+    },
+    "garden-path": {
+     "x": 220,
+     "y": 940,
+     "w": 600,
+     "h": 330
+    },
+    "post-box": {
+     "x": 1930,
+     "y": 640,
+     "w": 320,
+     "h": 360
+    },
+    "honey-pond": {
+     "x": 240,
+     "y": 80,
+     "w": 420,
+     "h": 330
+    },
+    "quiet-burrow": {
+     "x": 1640,
+     "y": 80,
+     "w": 400,
+     "h": 220
+    },
+    "old-oak": {
+     "x": 1980,
+     "y": 300,
+     "w": 340,
+     "h": 330
+    },
+    "town-hall-cellar": {
+     "x": 1120,
+     "y": 1060,
+     "w": 340,
+     "h": 260
+    }
+   },
+   "notes": "Pushistino map. Stage 1: only pirogovaya-street is active; other hotspots are for later stages."
+  },
+  "bg.pirogovaya": {
+   "master": "backgrounds/pirogovaya-c1.png",
+   "pack": "case01",
+   "location": "pirogovaya-street",
+   "hotspots": {
+    "bakery": {
+     "x": 580,
+     "y": 600,
+     "w": 240,
+     "h": 360
+    },
+    "bench": {
+     "x": 1450,
+     "y": 830,
+     "w": 480,
+     "h": 280
+    },
+    "tyopa": {
+     "x": 2050,
+     "y": 640,
+     "w": 280,
+     "h": 340
+    },
+    "mouse-hole": {
+     "x": 300,
+     "y": 820,
+     "w": 160,
+     "h": 150
+    },
+    "bakery-clock": {
+     "x": 600,
+     "y": 200,
+     "w": 320,
+     "h": 320
+    },
+    "tracks": {
+     "x": 1560,
+     "y": 1100,
+     "w": 500,
+     "h": 300
+    }
+   },
+   "notes": "Pirogovaya street: loaf-shaped bakery with the window clock, bench, mouse door, path to the soap workshop on the right."
+  },
+  "bg.bench": {
+   "master": "backgrounds/bench-c1.png",
+   "pack": "case01",
+   "location": "bench",
+   "hotspots": {
+    "box": {
+     "x": 1160,
+     "y": 960,
+     "w": 340,
+     "h": 260
+    },
+    "soil": {
+     "x": 1460,
+     "y": 790,
+     "w": 260,
+     "h": 140
+    },
+    "paw-print": {
+     "x": 2000,
+     "y": 1210,
+     "w": 230,
+     "h": 190
+    },
+    "feather": {
+     "x": 560,
+     "y": 1260,
+     "w": 260,
+     "h": 150
+    },
+    "crumbs": {
+     "x": 1040,
+     "y": 1340,
+     "w": 240,
+     "h": 140
+    }
+   },
+   "notes": "Magnifier scene. Targets are overlay props (see layers); paint them over the background at these rects.",
+   "layers": [
+    {
+     "asset": "minigame.box-seedlings-closed",
+     "target": "box",
+     "x": 1160,
+     "y": 960,
+     "w": 340,
+     "h": 260
+    },
+    {
+     "asset": "minigame.soil-clumps",
+     "target": "soil",
+     "x": 1460,
+     "y": 790,
+     "w": 260,
+     "h": 140
+    },
+    {
+     "asset": "minigame.fp-mole",
+     "target": "paw-print",
+     "x": 2000,
+     "y": 1210,
+     "w": 230,
+     "h": 190
+    },
+    {
+     "asset": "minigame.feather",
+     "target": "feather",
+     "x": 560,
+     "y": 1260,
+     "w": 260,
+     "h": 150,
+     "levels": [
+      2,
+      3
+     ]
+    },
+    {
+     "asset": "minigame.crumbs",
+     "target": "crumbs",
+     "x": 1040,
+     "y": 1340,
+     "w": 240,
+     "h": 140,
+     "levels": [
+      3
+     ]
+    }
+   ]
+  },
+  "bg.soap-workshop": {
+   "master": "backgrounds/soap-workshop-c1.png",
+   "pack": "case01",
+   "location": "soap-workshop",
+   "hotspots": {
+    "cauldron": {
+     "x": 440,
+     "y": 240,
+     "w": 420,
+     "h": 300
+    }
+   },
+   "notes": "Tyopa's soap workshop; blueberry soap bubbling in the copper cauldron."
+  },
+  "bg.garden-path": {
+   "master": "backgrounds/garden-path-c1.png",
+   "pack": "case01",
+   "location": "garden-path",
+   "hotspots": {
+    "shed": {
+     "x": 920,
+     "y": 120,
+     "w": 300,
+     "h": 280
+    }
+   },
+   "notes": "Track-matching scene: footprints overlay the smooth path in the foreground.",
+   "layers": [
+    {
+     "asset": "minigame.track-mole",
+     "target": "track-mole",
+     "x": 760,
+     "y": 1000,
+     "w": 560,
+     "h": 520
+    },
+    {
+     "asset": "minigame.track-mouse",
+     "target": "track-mouse",
+     "x": 1380,
+     "y": 1060,
+     "w": 420,
+     "h": 420,
+     "levels": [
+      3
+     ]
+    }
+   ]
+  },
+  "bg.shed-exterior": {
+   "master": "backgrounds/shed-exterior-c2.png",
+   "pack": "case01",
+   "location": "shed",
+   "hotspots": {
+    "window": {
+     "x": 1330,
+     "y": 500,
+     "w": 380,
+     "h": 300
+    }
+   },
+   "notes": "Kartofan's shed from outside; the window is the hotspot that opens bg.shed-window."
+  },
+  "bg.shed-window": {
+   "master": "backgrounds/shed-window-c2.png",
+   "pack": "case01",
+   "location": "shed",
+   "hotspots": {
+    "box": {
+     "x": 1860,
+     "y": 270,
+     "w": 420,
+     "h": 300
+    }
+   },
+   "notes": "Close-up through the shed window: the mayor's closed box, the pie visible through the lid window (R03). Also used for the L3 crack shot."
+  },
+  "bg.shed-interior": {
+   "master": "backgrounds/shed-interior-c1.png",
+   "pack": "case01",
+   "location": "shed",
+   "hotspots": {
+    "boxes": {
+     "x": 480,
+     "y": 220,
+     "w": 400,
+     "h": 110
+    }
+   },
+   "notes": "Inside Kartofan's shed: boxes on the workbench, seedlings, watering cans. Final conversation (C1-7)."
+  },
+  "bg.garden": {
+   "master": "backgrounds/garden-c1.png",
+   "pack": "case01",
+   "location": "garden-and-shed",
+   "hotspots": {
+    "garden": {
+     "x": 360,
+     "y": 640,
+     "w": 1400,
+     "h": 620
+    },
+    "shed": {
+     "x": 1640,
+     "y": 60,
+     "w": 690,
+     "h": 520
+    }
+   },
+   "notes": "Level 3: the garden (foreground beds) and the shed (behind the sage gate) read as two different places."
+  },
+  "bg.bakery-interior": {
+   "master": "backgrounds/bakery-interior-c1.png",
+   "pack": "case01",
+   "location": "bakery",
+   "hotspots": {
+    "table": {
+     "x": 340,
+     "y": 380,
+     "w": 540,
+     "h": 260
+    },
+    "oven": {
+     "x": 640,
+     "y": 140,
+     "w": 300,
+     "h": 220
+    }
+   },
+   "notes": "Finale: baking at the round table, honey-caramel oven glowing."
+  },
+  "bg.post": {
+   "master": "backgrounds/post-c2.png",
+   "pack": "case01",
+   "location": "post-box",
+   "hotspots": {
+    "post-box": {
+     "x": 1800,
+     "y": 160,
+     "w": 200,
+     "h": 360
+    }
+   },
+   "notes": "Level 2-3: Stella sits on the domed brass post box; postal beetle on the doorstep."
+  },
+  "bg.bakery-clock": {
+   "master": "backgrounds/bakery-clock-c1.png",
+   "pack": "case01",
+   "location": "bakery-clock",
+   "hotspots": {},
+   "notes": "Level 2-3 timeline: the window clock close-up; timeline cards are separate assets."
+  },
+  "bg.mouse-burrow": {
+   "master": "backgrounds/mouse-burrow-c1.png",
+   "pack": "case01",
+   "location": "mouse-hole",
+   "hotspots": {
+    "door": {
+     "x": 440,
+     "y": 240,
+     "w": 260,
+     "h": 300
+    }
+   },
+   "notes": "Level 3: the Shurshiki mouse door at the bakery foundation."
+  }
+ },
+ "props": {
+  "minigame.box-pie": {
+   "master": "props/box-pie.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.box-seedlings": {
+   "master": "props/box-seedlings.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.box-seedlings-closed": {
+   "master": "props/box-seedlings-closed.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.box-pie-open": {
+   "master": "props/box-pie-open.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.pie-baked": {
+   "master": "props/pie-baked.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.seeds-paw": {
+   "master": "props/seeds-paw.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.feather": {
+   "master": "props/feather.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.soil-clumps": {
+   "master": "props/soil-clumps.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.crumbs": {
+   "master": "props/crumbs.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.track-mole": {
+   "master": "props/track-mole.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 640,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.track-mouse": {
+   "master": "props/track-mouse.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 640,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.cocoa-cup": {
+   "master": "props/cocoa-cup.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.measure-cup": {
+   "master": "props/measure-cup.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.measure-half": {
+   "master": "props/measure-half.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.measure-spoon": {
+   "master": "props/measure-spoon.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.flour-sack": {
+   "master": "props/flour-sack.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.sugar-jar": {
+   "master": "props/sugar-jar.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.blueberry-bowl": {
+   "master": "props/blueberry-bowl.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.honey-pot": {
+   "master": "props/honey-pot.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.mixing-bowl": {
+   "master": "props/mixing-bowl.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.fp-raccoon": {
+   "master": "props/fp-raccoon.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.fp-hamster": {
+   "master": "props/fp-hamster.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.fp-mole": {
+   "master": "props/fp-mole.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.fp-magpie": {
+   "master": "props/fp-magpie.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.fp-mouse": {
+   "master": "props/fp-mouse.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.smell-soil": {
+   "master": "props/smell-soil.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.smell-carrot": {
+   "master": "props/smell-carrot.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.smell-dill": {
+   "master": "props/smell-dill.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.smell-blueberry": {
+   "master": "props/smell-blueberry.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.smell-dough": {
+   "master": "props/smell-dough.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.what-ate": {
+   "master": "props/what-ate.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.what-swap": {
+   "master": "props/what-swap.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.what-cheeks": {
+   "master": "props/what-cheeks.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.what-post": {
+   "master": "props/what-post.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.place-bakery": {
+   "master": "props/place-bakery.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.place-soap": {
+   "master": "props/place-soap.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.place-post": {
+   "master": "props/place-post.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.place-garden": {
+   "master": "props/place-garden.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.place-shed": {
+   "master": "props/place-shed.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.place-shelf": {
+   "master": "props/place-shelf.png",
+   "pack": "prologue",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.place-teapot": {
+   "master": "props/place-teapot.png",
+   "pack": "prologue",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.letter": {
+   "master": "props/letter.png",
+   "pack": "prologue",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.badge-intern": {
+   "master": "props/badge-intern.png",
+   "pack": "prologue",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "reward.badge-pie-found": {
+   "master": "props/badge-pie-found.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "reward.blueberry-basket": {
+   "master": "props/blueberry-basket.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 512,
+   "notes": "",
+   "dir": "props"
+  },
+  "fact.mole": {
+   "master": "props/fact-mole.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 768,
+   "notes": "",
+   "dir": "props"
+  },
+  "fact.blueberry": {
+   "master": "props/fact-blueberry.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 768,
+   "notes": "",
+   "dir": "props"
+  },
+  "fact.raccoon": {
+   "master": "props/fact-raccoon.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 768,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.tl-0800": {
+   "master": "cards/tl-0800.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 640,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.tl-0900": {
+   "master": "cards/tl-0900.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 640,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.tl-0930": {
+   "master": "cards/tl-0930.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 640,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.tl-1000": {
+   "master": "cards/tl-1000.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 640,
+   "notes": "",
+   "dir": "props"
+  },
+  "minigame.tl-1030": {
+   "master": "cards/tl-1030.png",
+   "pack": "case01",
+   "kind": "minigame",
+   "size": 640,
+   "notes": "",
+   "dir": "props"
+  },
+  "art.lamp-off": {
+   "master": "props/lamp-off.png",
+   "pack": "shell",
+   "kind": "minigame",
+   "size": 384,
+   "notes": "",
+   "dir": "props"
+  },
+  "art.lamp-on": {
+   "master": "props/lamp-on.png",
+   "pack": "shell",
+   "kind": "minigame",
+   "size": 384,
+   "notes": "",
+   "dir": "props"
+  },
+  "art.shell-phone": {
+   "master": "props/shell-phone.png",
+   "pack": "shell",
+   "kind": "minigame",
+   "size": 384,
+   "notes": "",
+   "dir": "props"
+  },
+  "art.yarn-ball": {
+   "master": "props/yarn-ball.png",
+   "pack": "shell",
+   "kind": "minigame",
+   "size": 384,
+   "notes": "",
+   "dir": "props"
+  },
+  "art.magnifier": {
+   "master": "props/magnifier.png",
+   "pack": "shell",
+   "kind": "minigame",
+   "size": 384,
+   "notes": "",
+   "dir": "props"
+  },
+  "art.notebook": {
+   "master": "props/notebook.png",
+   "pack": "shell",
+   "kind": "minigame",
+   "size": 384,
+   "notes": "",
+   "dir": "props"
+  },
+  "art.button-coin": {
+   "master": "props/button-coin.png",
+   "pack": "shell",
+   "kind": "minigame",
+   "size": 384,
+   "notes": "",
+   "dir": "props"
+  },
+  "art.heart-kindness": {
+   "master": "props/heart-kindness.png",
+   "pack": "shell",
+   "kind": "minigame",
+   "size": 384,
+   "notes": "",
+   "dir": "props"
+  },
+  "art.postal-beetle": {
+   "master": "props/postal-beetle.png",
+   "pack": "shell",
+   "kind": "minigame",
+   "size": 384,
+   "notes": "",
+   "dir": "props"
+  },
+  "effect.bubble": {
+   "master": "props/bubble.png",
+   "pack": "shell",
+   "kind": "minigame",
+   "size": 128,
+   "notes": "",
+   "dir": "props"
+  },
+  "effect.sparkle": {
+   "master": "props/sparkle.png",
+   "pack": "shell",
+   "kind": "minigame",
+   "size": 128,
+   "notes": "",
+   "dir": "props"
+  },
+  "effect.firefly": {
+   "master": "props/firefly.png",
+   "pack": "shell",
+   "kind": "minigame",
+   "size": 128,
+   "notes": "",
+   "dir": "props"
+  },
+  "avatar.hat-detective": {
+   "master": "props/hat-detective.png",
+   "pack": "shell",
+   "kind": "avatar-layer",
+   "size": 320,
+   "dir": "avatar/hats",
+   "notes": "Hat layer; attach at the avatar rig's hat slot, centred, bottom edge on the slot point."
+  },
+  "avatar.hat-beret": {
+   "master": "props/hat-beret.png",
+   "pack": "shell",
+   "kind": "avatar-layer",
+   "size": 320,
+   "dir": "avatar/hats",
+   "notes": "Hat layer; attach at the avatar rig's hat slot, centred, bottom edge on the slot point."
+  },
+  "avatar.hat-flower": {
+   "master": "props/hat-flower.png",
+   "pack": "shell",
+   "kind": "avatar-layer",
+   "size": 320,
+   "dir": "avatar/hats",
+   "notes": "Hat layer; attach at the avatar rig's hat slot, centred, bottom edge on the slot point."
+  },
+  "avatar.hat-acorn": {
+   "master": "props/hat-acorn.png",
+   "pack": "shell",
+   "kind": "avatar-layer",
+   "size": 320,
+   "dir": "avatar/hats",
+   "notes": "Hat layer; attach at the avatar rig's hat slot, centred, bottom edge on the slot point."
+  }
+ },
+ "puppets": {
+  "char.khvosts": {
+   "config": "khvosts",
+   "dir": "characters",
+   "name": "khvosts",
+   "pack": "shell"
+  },
+  "char.watsony": {
+   "config": "watsony",
+   "dir": "characters",
+   "name": "watsony",
+   "pack": "shell"
+  },
+  "char.pudding": {
+   "config": "pudding",
+   "dir": "characters",
+   "name": "pudding",
+   "pack": "shell"
+  },
+  "char.tyopa": {
+   "config": "tyopa",
+   "dir": "characters",
+   "name": "tyopa",
+   "pack": "shell"
+  },
+  "char.kartofan": {
+   "config": "kartofan",
+   "dir": "characters",
+   "name": "kartofan",
+   "pack": "shell"
+  },
+  "char.fitilyok": {
+   "config": "fitilyok",
+   "dir": "characters",
+   "name": "fitilyok",
+   "pack": "shell"
+  },
+  "char.stella": {
+   "config": "stella",
+   "dir": "characters",
+   "name": "stella",
+   "pack": "shell"
+  },
+  "char.mouse": {
+   "config": "mouse",
+   "dir": "characters",
+   "name": "mouse",
+   "pack": "shell"
+  },
+  "char.mouse2": {
+   "config": "mouse2",
+   "dir": "characters",
+   "name": "mouse2",
+   "pack": "shell"
+  },
+  "avatar.kitten": {
+   "config": "avatar_kitten",
+   "dir": "avatar",
+   "name": "kitten",
+   "pack": "shell"
+  },
+  "avatar.fox": {
+   "config": "avatar_fox",
+   "dir": "avatar",
+   "name": "fox",
+   "pack": "shell"
+  },
+  "avatar.mouse": {
+   "config": "avatar_mouse",
+   "dir": "avatar",
+   "name": "mouse",
+   "pack": "shell"
+  },
+  "avatar.squirrel": {
+   "config": "avatar_squirrel",
+   "dir": "avatar",
+   "name": "squirrel",
+   "pack": "shell"
+  },
+  "avatar.puppy": {
+   "config": "avatar_puppy",
+   "dir": "avatar",
+   "name": "puppy",
+   "pack": "shell"
+  }
+ }
+}

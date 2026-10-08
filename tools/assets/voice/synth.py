@@ -115,12 +115,32 @@ def duration(path: Path) -> float:
     return float(done.stdout.strip())
 
 
-def encode(master: Path, out_mp3: Path, post: dict) -> float:
+def speech_span(master: Path, threshold_db: float = -42.0, pad: float = 0.06) -> tuple[float, float]:
+    """Start/end seconds of audible speech in a WAV, padded; used to trim synthesizer silence."""
+    import wave
+
+    import numpy as np  # noqa: PLC0415
+
+    with wave.open(str(master), "rb") as w:
+        rate = w.getframerate()
+        data = np.frombuffer(w.readframes(w.getnframes()), dtype=np.int16).astype(np.float32) / 32768
+    win = max(1, int(rate * 0.01))
+    n = len(data) // win
+    rms = np.sqrt(np.mean(data[: n * win].reshape(n, win) ** 2, axis=1) + 1e-12)
+    loud = np.nonzero(20 * np.log10(rms) > threshold_db)[0]
+    total = len(data) / rate
+    if not len(loud):
+        return 0.0, total
+    return max(0.0, loud[0] * win / rate - pad), min(total, (loud[-1] + 1) * win / rate + pad)
+
+
+def encode(master: Path, out_mp3: Path, post: dict, span: tuple[float, float] | None = None) -> float:
     lufs = loudness(master)
     gain = (post["targetLufs"] - lufs) if lufs is not None else 0.0
     limit = 10 ** (post["truePeakDb"] / 20)
     out_mp3.parent.mkdir(parents=True, exist_ok=True)
-    done = run(["ffmpeg", "-nostdin", "-y", "-v", "error", "-i", str(master), "-af",
+    trim = ["-ss", f"{span[0]:.3f}", "-to", f"{span[1]:.3f}"] if span else []
+    done = run(["ffmpeg", "-nostdin", "-y", "-v", "error", *trim, "-i", str(master), "-af",
                 f"volume={gain:.2f}dB,aresample={post['sampleRate']}:resampler=soxr,alimiter=limit={limit:.4f}:level=false",
                 "-ac", "1", "-ar", str(post["sampleRate"]), "-c:a", "libmp3lame", "-b:a", post["mp3Bitrate"], str(out_mp3)])
     if done.returncode:
@@ -173,6 +193,7 @@ def main():
     ap.add_argument("--out", default=str(REPO / "assets/voice"))
     ap.add_argument("--only", default="")
     ap.add_argument("--assess", action="store_true")
+    ap.add_argument("--reencode", action="store_true", help="rebuild MP3s and cues from cached masters")
     ap.add_argument("--index", default=None, help="index path (default <out>/index.json)")
     a = ap.parse_args()
 
@@ -189,6 +210,8 @@ def main():
     only = set(filter(None, a.only.split(",")))
     report = []
     entries = [e for e in manifest["entries"] if not only or e["id"] in only]
+    same = [e for e in entries if e.get("sameAudioAs")]
+    entries = [e for e in entries if not e.get("sameAudioAs")]
     for n, e in enumerate(entries, 1):
         ssml, voice = b.ssml(e)
         key = hashlib.sha256(ssml.encode("utf-8")).hexdigest()[:10]
@@ -196,7 +219,7 @@ def main():
         rel = f"{pack}/{e['id']}.{key}"
         mp3, cue_path = out / f"{rel}.mp3", out / f"{rel}.cues.json"
         prev = index["lines"].get(e["id"])
-        if prev and prev.get("key") == key and (out / prev["file"]).exists() and (out / prev["cues"]).exists():
+        if not a.reencode and prev and prev.get("key") == key and (out / prev["file"]).exists() and (out / prev["cues"]).exists():
             continue
         wav = masters / f"{e['id']}.{key}.wav"
         ev_path = wav.with_suffix(".events.json")
@@ -204,13 +227,14 @@ def main():
             events = load_json(ev_path)
         else:
             events = synthesize(ssml, wav)
-            ev_path.write_text(json.dumps(events, ensure_ascii=False), encoding="utf-8")
-            wav.with_suffix(".ssml").write_text(ssml, encoding="utf-8")
-        lufs = encode(wav, mp3, casting["postprocess"])
+            ev_path.write_text(json.dumps(events, ensure_ascii=False), encoding="utf-8", newline="\n")
+            wav.with_suffix(".ssml").write_text(ssml, encoding="utf-8", newline="\n")
+        span = speech_span(wav)
+        lufs = encode(wav, mp3, casting["postprocess"], span)
         dur = duration(mp3)
-        cues = cues_from(events["visemes"], dur)
+        cues = cues_from([(t - span[0], v) for t, v in events["visemes"] if span[0] <= t < span[1]], dur)
         cue_path.write_text(json.dumps({"metadata": {"soundFile": mp3.name, "duration": round(dur, 3)},
-                                        "mouthCues": cues}, ensure_ascii=False), encoding="utf-8")
+                                        "mouthCues": cues}, ensure_ascii=False), encoding="utf-8", newline="\n")
         if prev and prev.get("file") != f"{rel}.mp3":
             for old in (prev.get("file"), prev.get("cues")):
                 if old and (out / old).exists():
@@ -232,11 +256,22 @@ def main():
                 report.append({"id": e["id"], "want": e["ttsText"], "heard": r.get("display", "")})
         index["lines"][e["id"]] = rec
         print(f"[{n}/{len(entries)}] {e['id']} {voice} {dur:.2f}s {lufs:.1f} LUFS", flush=True)
+    for e in same:
+        src = index["lines"].get(e["sameAudioAs"])
+        if not src:
+            print(f"WARN {e['id']}: sameAudioAs {e['sameAudioAs']} has no recording")
+            continue
+        index["lines"][e["id"]] = {**src, "id": e["id"], "revision": e.get("revision", 1), "ttsHash": e.get("ttsHash"),
+                                   "sameAudioAs": e["sameAudioAs"]}
+    known = {e["id"] for e in manifest["entries"]}
+    if not only:
+        for stale in [k for k in index["lines"] if k not in known]:
+            del index["lines"][stale]
     index_path.parent.mkdir(parents=True, exist_ok=True)
     index["lines"] = dict(sorted(index["lines"].items()))
-    index_path.write_text(json.dumps(index, ensure_ascii=False, indent=1), encoding="utf-8")
+    index_path.write_text(json.dumps(index, ensure_ascii=False, indent=1), encoding="utf-8", newline="\n")
     if report:
-        (masters / "assess-report.json").write_text(json.dumps(report, ensure_ascii=False, indent=1), encoding="utf-8")
+        (masters / "assess-report.json").write_text(json.dumps(report, ensure_ascii=False, indent=1), encoding="utf-8", newline="\n")
         print(f"{len(report)} transcript mismatches -> {masters / 'assess-report.json'}")
 
 

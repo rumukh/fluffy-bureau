@@ -16,7 +16,7 @@ import hashlib
 import json
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFilter
+from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageOps
 
 MASTERS = Path("F:/AI/GameAssets/fluffy-bureau")
 REPO = Path(__file__).resolve().parents[3]
@@ -47,21 +47,25 @@ PHRASES = {"mouth": MOUTH, "eyes": EYES, "brows": BROWS}
 
 def load(cfg_path: str) -> dict:
     cfg = json.loads(Path(cfg_path).read_text(encoding="utf-8"))
-    cfg["_dir"] = MASTERS / "puppets" / cfg["id"]
+    cfg["_dir"] = MASTERS / "puppets" / cfg.get("dir", cfg["id"])
     return cfg
 
 
 def ellipse_mask(size, ellipse, offset=(0, 0), scale=1.0, feather=0):
-    """White ellipse on black. ellipse = [cx, cy, rx, ry] in base coordinates."""
-    cx, cy, rx, ry = ellipse
+    """White ellipses on black. Each ellipse = [cx, cy, rx, ry] in base coordinates."""
     m = Image.new("L", size, 0)
     d = ImageDraw.Draw(m)
-    x0, y0 = (cx - rx - offset[0]) * scale, (cy - ry - offset[1]) * scale
-    x1, y1 = (cx + rx - offset[0]) * scale, (cy + ry - offset[1]) * scale
-    d.ellipse([x0, y0, x1, y1], fill=255)
+    for cx, cy, rx, ry in ellipse:
+        x0, y0 = (cx - rx - offset[0]) * scale, (cy - ry - offset[1]) * scale
+        x1, y1 = (cx + rx - offset[0]) * scale, (cy + ry - offset[1]) * scale
+        d.ellipse([x0, y0, x1, y1], fill=255)
     if feather:
         m = m.filter(ImageFilter.GaussianBlur(feather))
     return m
+
+
+def ellipses_of(spec: dict) -> list:
+    return spec.get("ellipses") or [spec["ellipse"]]
 
 
 def prepare(cfg: dict) -> None:
@@ -79,7 +83,7 @@ def prepare(cfg: dict) -> None:
     scale = 1024 / s
     jobs = []
     for feat, spec in cfg["features"].items():
-        m = ellipse_mask((1024, 1024), spec["ellipse"], (x, y), scale)
+        m = ellipse_mask((1024, 1024), ellipses_of(spec), (x, y), scale)
         rgba = Image.new("RGBA", (1024, 1024), (0, 0, 0, 255))
         rgba.putalpha(Image.eval(m, lambda v: 255 - v))  # transparent = editable
         mpath = out / f"mask_{feat}.png"
@@ -94,7 +98,7 @@ def prepare(cfg: dict) -> None:
                 "Same framing and scale, no text."
             )
             pfile = PROMPTS / f"{cfg['id']}_{feat}_{var}.txt"
-            pfile.write_text(prompt, encoding="utf-8")
+            pfile.write_text(prompt, encoding="utf-8", newline="\n")
             jobs.append({"id": f"{cfg['id']}_{feat}_{var}", "prompt_file": str(pfile),
                          "out": str(out / f"{feat}_{var}.png"), "size": "1024x1024",
                          "quality": cfg.get("editQuality", "medium"), "refs": [str(crop_path)], "mask": str(mpath)})
@@ -110,7 +114,7 @@ def prepare(cfg: dict) -> None:
         for poly in spec.get("extraMask", []):
             d.polygon([tuple(p) for p in poly], fill=(0, 0, 0, 0))
         bm.save(cfg["_dir"] / f"mask_body_{var}.png")
-    (cfg["_dir"] / "jobs_edits.json").write_text(json.dumps(jobs, ensure_ascii=False, indent=1), encoding="utf-8")
+    (cfg["_dir"] / "jobs_edits.json").write_text(json.dumps(jobs, ensure_ascii=False, indent=1), encoding="utf-8", newline="\n")
     print(f"{len(jobs)} jobs -> {cfg['_dir'] / 'jobs_edits.json'}")
 
 
@@ -124,9 +128,49 @@ def pick(path: Path) -> Path:
     raise FileNotFoundError(path)
 
 
-def bbox_of(ellipse, pad=4):
-    cx, cy, rx, ry = ellipse
-    return (int(cx - rx - pad), int(cy - ry - pad), int(cx + rx + pad), int(cy + ry + pad))
+def scarf_mask_of(base: Image.Image, spec: dict, folder: Path) -> Image.Image:
+    """Scarf region from masked edits that painted the scarf flat magenta (scarf_magenta*.png).
+
+    Edits are used only as masks (their union); scarf pixels themselves come from the untouched base.
+    """
+    import numpy as np  # noqa: PLC0415
+
+    m = None
+    for f in sorted(folder.glob("scarf_magenta*.png")):
+        ed = Image.open(f).convert("RGB").resize(base.size, Image.LANCZOS)
+        rgb = np.asarray(ed).astype(np.int16)
+        r, g, b = rgb[..., 0], rgb[..., 1], rgb[..., 2]
+        cur = (r > 170) & (b > 150) & (g < 120) & (r - g > 90) & (b - g > 70)
+        m = cur if m is None else (m | cur)
+    if m is None:
+        raise FileNotFoundError(folder / "scarf_magenta.png")
+    win = np.zeros_like(m)
+    win[spec["y"][0]:spec["y"][1], spec["x"][0]:spec["x"][1]] = True
+    m &= win & (np.asarray(base.getchannel("A")) > 0)
+    # The edit can drift a little: add nearby neutral-grey pixels (the real scarf is light grey) and
+    # drop painted pixels whose original colour is clearly saturated (shirt, fur).
+    src = np.asarray(base.convert("RGB")).astype(np.float32) / 255
+    mx, mn = src.max(axis=2), src.min(axis=2)
+    sat = np.where(mx > 0, (mx - mn) / np.maximum(mx, 1e-6), 0)
+    greyish = (sat < min(spec.get("satMax", 0.24), 0.21)) & (mx > spec.get("valMin", 0.5))
+    near = np.asarray(Image.fromarray((m * 255).astype("uint8"), "L").filter(ImageFilter.MaxFilter(41))) > 0
+    m = ((m | (greyish & near)) & (sat < 0.235)) & win
+    img = Image.fromarray((m * 255).astype("uint8"), "L")
+    img = img.filter(ImageFilter.MaxFilter(11)).filter(ImageFilter.MinFilter(11)).filter(ImageFilter.MedianFilter(3))
+    # Drop stray islands (edit spill on the shirt): keep components >= 8% of the largest.
+    from scipy import ndimage  # noqa: PLC0415
+
+    lab, n = ndimage.label(np.asarray(img) > 127)
+    if n > 1:
+        sizes = ndimage.sum(np.ones_like(lab), lab, range(1, n + 1))
+        keep = np.isin(lab, [i + 1 for i, s in enumerate(sizes) if s >= 0.08 * sizes.max()])
+        img = Image.fromarray((keep * 255).astype("uint8"), "L")
+    img = ImageChops.multiply(img, base.getchannel("A").point(lambda v: 255 if v > 0 else 0))
+    return img.filter(ImageFilter.GaussianBlur(0.8))
+
+def bbox_of(ellipses, pad=4):
+    return (int(min(e[0] - e[2] for e in ellipses) - pad), int(min(e[1] - e[3] for e in ellipses) - pad),
+            int(max(e[0] + e[2] for e in ellipses) + pad), int(max(e[1] + e[3] for e in ellipses) + pad))
 
 
 def assemble(cfg: dict, out_dir: Path, scale: float) -> None:
@@ -146,7 +190,18 @@ def assemble(cfg: dict, out_dir: Path, scale: float) -> None:
     for i in range(ov):
         d.line([(0, ny + i), (W, ny + i)], fill=int(255 * (1 - (i + 1) / (ov + 1))))
     head = base.copy()
-    head.putalpha(Image.composite(alpha, Image.new("L", (W, H), 0), hm))
+    head_alpha = Image.composite(alpha, Image.new("L", (W, H), 0), hm)
+    scarf_mask = None
+    if "avatar" in cfg:
+        scarf_mask = scarf_mask_of(base, cfg["avatar"]["scarf"], cfg["_dir"])
+        # The scarf is its own tinted part; keep untinted head pixels from drawing over it.
+        head_alpha = ImageChops.multiply(head_alpha, ImageChops.invert(scarf_mask))
+        scarf = ImageOps.grayscale(base).convert("RGBA")
+        scarf.putalpha(ImageChops.multiply(alpha, scarf_mask))
+        sb = scarf.getbbox()
+        frames["scarf"] = scarf.crop(sb)
+        origin_of["scarf"] = sb[:2]
+    head.putalpha(head_alpha)
     hb = head.getbbox()
     frames["head"] = head.crop(hb)
     origin_of["head"] = hb[:2]
@@ -173,8 +228,8 @@ def assemble(cfg: dict, out_dir: Path, scale: float) -> None:
     # Feature patches.
     edits = cfg["_dir"] / "edits"
     for feat, spec in cfg["features"].items():
-        box = bbox_of(spec["ellipse"], pad=spec.get("feather", 6) * 2)
-        mask = ellipse_mask((W, H), spec["ellipse"], feather=spec.get("feather", 6))
+        box = bbox_of(ellipses_of(spec), pad=spec.get("feather", 6) * 2)
+        mask = ellipse_mask((W, H), ellipses_of(spec), feather=spec.get("feather", 6))
         default = {"eyes": "open", "brows": "neutral", "mouth": "X"}[feat]
         sources = {default: base}
         for var in spec["variants"]:
@@ -221,7 +276,7 @@ def assemble(cfg: dict, out_dir: Path, scale: float) -> None:
     atlas_json = {"format": "aegis-atlas/1", "id": atlas_id, "image": img_name, "width": atlas_w, "height": atlas_h,
                   "scale": 1,
                   "frames": {k: {"x": p[0], "y": p[1], "w": scaled[k].width, "h": scaled[k].height} for k, p in pos.items()}}
-    (out_dir / f"{cid}.atlas.json").write_text(json.dumps(atlas_json, ensure_ascii=False, indent=1), encoding="utf-8")
+    (out_dir / f"{cid}.atlas.json").write_text(json.dumps(atlas_json, ensure_ascii=False, indent=1), encoding="utf-8", newline="\n")
 
     # Rig in logical px == base px * scale; atlas scale maps atlas px back to logical px 1:1 here,
     # so rig coordinates are in base pixels multiplied by `scale` (logical = atlas px).
@@ -262,6 +317,19 @@ def assemble(cfg: dict, out_dir: Path, scale: float) -> None:
         roles[feat] = feat
     for k in [k for k in expressions if not expressions[k]]:
         del expressions[k]
+    if "scarf" in frames:
+        sx_, sy_ = origin_of["scarf"]
+        sw, sh = frames["scarf"].size
+        parts.append({"id": "scarf", "parent": "body", "frame": f"{atlas_id}#scarf",
+                      "pivot": {"x": f(sw / 2), "y": f(sh * 0.2)},
+                      "position": {"x": f(sx_ + sw / 2 - root[0]), "y": f(sy_ + sh * 0.2 - root[1])},
+                      "z": 15, "tint": {"channel": "scarf"}})
+        # Hat slot: top of the head along the centre column, in head space.
+        hcol = alpha.crop((pivot_head[0] - 30, 0, pivot_head[0] + 30, ny)).point(lambda v: 255 if v > 128 else 0)
+        top_y = hcol.getbbox()[1]
+        cfg.setdefault("slots", {})["hat"] = {"parent": "head", "position": {"x": 0, "y": f(top_y + 40 - pivot_head[1])}, "z": 40}
+        cfg.setdefault("tints", {})["scarf"] = {"default": "#c8553d"}
+        cfg.setdefault("anchors", {})["badge"] = {"part": "scarf", "x": f(sw * 0.5), "y": f(sh * 0.45)}
     rig = {"format": "aegis-rig/1", "id": cid, "revision": str(cfg.get("revision", 1)), "atlases": [atlas_id],
            "origin": {"x": 0, "y": 0},
            "bounds": {"x": f(union[0] - root[0]), "y": f(min(hb[1], union[1]) - root[1]),
@@ -272,7 +340,16 @@ def assemble(cfg: dict, out_dir: Path, scale: float) -> None:
     for extra in ("slots", "tints", "anchors"):
         if extra in cfg:
             rig[extra] = cfg[extra]
-    (out_dir / f"{cid}.rig.json").write_text(json.dumps(rig, ensure_ascii=False, indent=1), encoding="utf-8")
+    (out_dir / f"{cid}.rig.json").write_text(json.dumps(rig, ensure_ascii=False, indent=1), encoding="utf-8", newline="\n")
+    # Static exports for runtimes that do not load rigs yet: rest pose and scarf tint mask on one canvas.
+    full = alpha.getbbox()
+    size = (round((full[2] - full[0]) * scale), round((full[3] - full[1]) * scale))
+    base.crop(full).resize(size, Image.LANCZOS).save(out_dir / "base.webp", "WEBP", quality=90, method=6, exact=True)
+    if scarf_mask is not None:
+        m = ImageChops.multiply(alpha, scarf_mask).crop(full).resize(size, Image.LANCZOS)
+        white = Image.new("RGBA", size, (255, 255, 255, 0))
+        white.putalpha(m)
+        white.save(out_dir / "scarf-mask.webp", "WEBP", quality=95, method=6, exact=True)
     digest = hashlib.sha256((out_dir / img_name).read_bytes()).hexdigest()
     print(json.dumps({"rig": str(out_dir / f"{cid}.rig.json"), "atlas": [atlas_w, atlas_h], "frames": len(frames), "sha256": digest}))
 
@@ -288,9 +365,11 @@ def main():
     if a.command == "prepare":
         prepare(cfg)
     else:
-        assemble(cfg, Path(a.out) / cfg["id"], a.scale)
+        sub = Path(a.out) if a.out != str(REPO / "assets/characters") or "avatar" not in cfg else REPO / "assets/avatar"
+        assemble(cfg, sub / cfg.get("outName", cfg["id"].split(".")[-1]), a.scale)
 
 
 if __name__ == "__main__":
     main()
+
 

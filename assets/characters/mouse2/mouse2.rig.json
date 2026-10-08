@@ -1,0 +1,130 @@
+{
+ "format": "aegis-rig/1",
+ "id": "mouse2",
+ "revision": "1",
+ "atlases": [
+  "mouse2.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -244.8,
+  "y": -765.6,
+  "width": 448.2,
+  "height": 765.6
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 244.8,
+    "y": 495.6
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "variants": {
+    "rest": "mouse2.atlas#body.rest"
+   },
+   "variant": "rest"
+  },
+  {
+   "id": "head",
+   "parent": "body",
+   "frame": "mouse2.atlas#head",
+   "pivot": {
+    "x": 225.6,
+    "y": 277.2
+   },
+   "position": {
+    "x": 0.0,
+    "y": -488.4
+   },
+   "z": 20
+  },
+  {
+   "id": "eyes",
+   "parent": "head",
+   "pivot": {
+    "x": 109.2,
+    "y": 39.6
+   },
+   "position": {
+    "x": 8.4,
+    "y": -105.0
+   },
+   "z": 21,
+   "variants": {
+    "open": "mouse2.atlas#eyes.open",
+    "half": "mouse2.atlas#eyes.half",
+    "closed": "mouse2.atlas#eyes.closed"
+   },
+   "variant": "open"
+  },
+  {
+   "id": "mouth",
+   "parent": "head",
+   "pivot": {
+    "x": 58.2,
+    "y": 25.2
+   },
+   "position": {
+    "x": 7.2,
+    "y": -45.0
+   },
+   "z": 23,
+   "variants": {
+    "X": "mouse2.atlas#mouth.X",
+    "A": "mouse2.atlas#mouth.A",
+    "B": "mouse2.atlas#mouth.B",
+    "C": "mouse2.atlas#mouth.C",
+    "D": "mouse2.atlas#mouth.D",
+    "E": "mouse2.atlas#mouth.E",
+    "F": "mouse2.atlas#mouth.F"
+   },
+   "variant": "X"
+  },
+  {
+   "id": "brows",
+   "parent": "head",
+   "pivot": {
+    "x": 94.2,
+    "y": 19.2
+   },
+   "position": {
+    "x": 12.0,
+    "y": -168.6
+   },
+   "z": 22,
+   "variants": {
+    "neutral": "mouse2.atlas#brows.neutral",
+    "up": "mouse2.atlas#brows.up",
+    "worried": "mouse2.atlas#brows.worried"
+   },
+   "variant": "neutral"
+  }
+ ],
+ "roles": {
+  "head": "head",
+  "lookAt": "head",
+  "eyes": "eyes",
+  "mouth": "mouth",
+  "brows": "brows"
+ },
+ "expressions": {
+  "neutral": {
+   "brows": "neutral",
+   "eyes": "open"
+  },
+  "surprised": {
+   "brows": "up"
+  },
+  "worried": {
+   "brows": "worried"
+  }
+ }
+}

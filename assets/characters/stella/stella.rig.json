@@ -1,0 +1,103 @@
+{
+ "format": "aegis-rig/1",
+ "id": "stella",
+ "revision": "1",
+ "atlases": [
+  "stella.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -208.8,
+  "y": -868.8,
+  "width": 418.2,
+  "height": 868.8
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 208.8,
+    "y": 609.0
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "variants": {
+    "rest": "stella.atlas#body.rest"
+   },
+   "variant": "rest"
+  },
+  {
+   "id": "head",
+   "parent": "body",
+   "frame": "stella.atlas#head",
+   "pivot": {
+    "x": 140.4,
+    "y": 267.0
+   },
+   "position": {
+    "x": 0.0,
+    "y": -601.8
+   },
+   "z": 20
+  },
+  {
+   "id": "eyes",
+   "parent": "head",
+   "pivot": {
+    "x": 102.0,
+    "y": 42.0
+   },
+   "position": {
+    "x": -1.2,
+    "y": -109.8
+   },
+   "z": 21,
+   "variants": {
+    "open": "stella.atlas#eyes.open",
+    "half": "stella.atlas#eyes.half",
+    "closed": "stella.atlas#eyes.closed"
+   },
+   "variant": "open"
+  },
+  {
+   "id": "mouth",
+   "parent": "head",
+   "pivot": {
+    "x": 55.2,
+    "y": 36.0
+   },
+   "position": {
+    "x": 0.6,
+    "y": -76.8
+   },
+   "z": 23,
+   "variants": {
+    "X": "stella.atlas#mouth.X",
+    "A": "stella.atlas#mouth.A",
+    "B": "stella.atlas#mouth.B",
+    "C": "stella.atlas#mouth.C",
+    "D": "stella.atlas#mouth.D",
+    "E": "stella.atlas#mouth.E",
+    "F": "stella.atlas#mouth.F"
+   },
+   "variant": "X"
+  }
+ ],
+ "roles": {
+  "head": "head",
+  "lookAt": "head",
+  "eyes": "eyes",
+  "mouth": "mouth"
+ },
+ "expressions": {
+  "neutral": {
+   "eyes": "open"
+  }
+ }
+}
