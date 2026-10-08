@@ -10,6 +10,8 @@ import type { Issue } from './flow.ts';
 const ASSETS = join(import.meta.dirname, '..', '..', 'assets');
 /** Cutscenes allowed without the player's avatar (T25: only the wordless intro). */
 export const NO_AVATAR = new Set(['intro']);
+/** G loads a cutscene's backgrounds at its start under a 128 MiB budget; one 2560×1600 background is 16 MiB. */
+export const MAX_BACKGROUNDS = 4;
 
 export interface AnimationAssets {
   available: boolean;
@@ -47,6 +49,26 @@ export function loadAnimationAssets(): AnimationAssets {
 
 export function cutsceneLines(doc: CutsceneFile): { actor?: string; line: string; advance?: string }[] {
   return doc.steps.flatMap((s) => (s.op === 'line' ? [{ actor: s.actor, line: s.line, advance: s.advance }] : []));
+}
+
+/** Scene and stage-direction backgrounds (G's per-scene staging): existing A background IDs, top-level only. */
+export function checkBackgrounds(v: VariantSource, issues: Issue[]): void {
+  const err = (code: string, where: string, message: string) => issues.push({ level: 'error', code, where: `${v.pack}: ${where}`, message });
+  const assets = loadAnimationAssets();
+  const known = (id: string) => id.startsWith('bg.') && (!assets.available || assets.assetIds.has(id));
+  for (const sc of v.scenes) {
+    if (sc.background !== undefined && !known(sc.background)) err('BACKGROUND', sc.id, `unknown background ${sc.background}`);
+    sc.steps.forEach((s) => {
+      if (s.t === 'dir' && s.background !== undefined && !known(s.background)) err('BACKGROUND', `${sc.id} ${s.id}`, `unknown background ${s.background}`);
+    });
+    const nested = (steps: VariantSource['scenes'][number]['steps']): boolean =>
+      steps.some((s) => (s.t === 'dir' && s.background !== undefined) || (s.t === 'skill' && (nested(s.first) || nested(s.known))) || (s.t === 'if' && (nested(s.then) || nested(s.else))));
+    for (const s of sc.steps) {
+      if ((s.t === 'skill' && (nested(s.first) || nested(s.known))) || (s.t === 'if' && (nested(s.then) || nested(s.else)))) {
+        err('BACKGROUND', sc.id, 'a dir with background must be a top-level scene step');
+      }
+    }
+  }
 }
 
 export function checkCutscenes(
@@ -111,6 +133,9 @@ export function checkCutscenes(
     if (new Set(markers).size !== markers.length) err('CUTSCENE-MARKER', where, 'duplicate marker');
 
     // Asset IDs (backgrounds, music, sfx, including comfort variants)
+    const backgrounds = new Set<string>();
+    for (const s of d.steps) if (s.op === 'background') for (const a of [s.asset, s.comfort?.['asset']]) if (typeof a === 'string') backgrounds.add(a);
+    if (backgrounds.size > MAX_BACKGROUNDS) err('CUTSCENE-BUDGET', where, `${backgrounds.size} distinct backgrounds (max ${MAX_BACKGROUNDS}: G loads them together under a 128 MiB image budget)`);
     if (assets.available) {
       for (const s of d.steps) {
         const refs: unknown[] = [];

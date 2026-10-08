@@ -113,6 +113,7 @@ export const level3: VariantSource = {
         dir('L3-7-D01', 'У огорода и у сарая лежат перевёрнутые карточки-запахи. Огород и сарай — явно разные места.'),
         skill('scent-pairs', seq('L3-7-', 1, 2)),
         minigame('c1l3-scents'),
+        dir('L3-7-D02', 'Щёлка в стене сарая крупно: коробка мэра, в окошке крышки виден пирог.', 'bg.shed-window'),
         ...seq('L3-7-', 7, 9),
         reveal('c1-scents'),
         goto(HUB),

@@ -6,7 +6,7 @@ import type {
 } from '../../packages/content/src/schema.ts';
 import { MANIFEST_FORMAT, NAME_PLACEHOLDER, NAME_TTS, PACK_FORMAT, PACK_SCHEMA } from '../../packages/content/src/schema.ts';
 import type { AuthoredLine, CaseSource, SharedSource, VariantSource } from './dsl.ts';
-import { checkCutscenes, cutsceneLines } from './cutscenes.ts';
+import { checkBackgrounds, checkCutscenes, cutsceneLines } from './cutscenes.ts';
 import { exploreFlow, restartSafety, type FlowReport, type Issue } from './flow.ts';
 import { proves, sameCandidate, solve } from './logic.ts';
 import { pmIndex } from './pm-import.ts';
@@ -230,8 +230,9 @@ export function build(shared: SharedSource, cases: CaseSource[], genderReview: G
         const walk = (steps: Step[]) => steps.forEach((st) => {
           if (st.t === 'dir') {
             const prev = dirTexts.get(st.id);
-            if (prev !== undefined && prev !== st.text) err('DIR-CONFLICT', st.id, `stage direction ID reused with different text`);
-            dirTexts.set(st.id, st.text);
+            const sig = `${st.text}\u0000${st.background ?? ''}`;
+            if (prev !== undefined && prev !== sig) err('DIR-CONFLICT', st.id, `stage direction ID reused with different text or background`);
+            dirTexts.set(st.id, sig);
           }
           if (st.t === 'skill') { if (!allSkills.some((k) => k.id === st.skill)) err('REF-SKILL', where, st.skill); walk(st.first); walk(st.known); }
           if (st.t === 'if') { walk(st.then); walk(st.else); }
@@ -249,6 +250,7 @@ export function build(shared: SharedSource, cases: CaseSource[], genderReview: G
       }
       restartSafety(v, issues);
       checkCutscenes(v, lineIndex, new Set(refs), issues);
+      checkBackgrounds(v, issues);
 
       // minigame choice limits
       for (const m of v.minigames) {

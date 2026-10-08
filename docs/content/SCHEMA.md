@@ -28,7 +28,7 @@ line ID is looked up in the case pack first, then in `shared`.
 | `kind`, `title`, `case` | `prologue` or `case` (`{number, level}`); `shared` holds speakers, skills, UI labels, rewards. |
 | `start` | First scene. |
 | `lines[]` | `id`, `rev`, `kind`, `speaker`, `text` (may contain `{имя}`), optional `tts`, `voiced`, `delivery`, `note`. |
-| `scenes[]` | `id`, `title`, `location` (background id; `map` = town map), `cast`, `presentation` (`dialogue`, `cutscene`, `hub`, `minigame`), `steps[]`. |
+| `scenes[]` | `id`, `title`, `location` (background id; `map` = town map), optional `background` (A's `bg.*` ID overriding the location default), `cast`, `presentation` (`dialogue`, `cutscene`, `hub`, `minigame`), `steps[]`. |
 | `logic` | Axes with labelled values, `intended`, `clues[]` (predicate, `required`, `requires`), `version` (`button`, `available`, `onSolved`), `wrongVersion`, `redHerrings`. |
 | `deduction` | `@aegis/narrative` `DeductionCase` schema 1 (required clues only); validated with `validateDeduction` at build time. |
 | `notebookHelp` | D03: `mode` `suggest` (levels 1–2, propose sticker + reason line) or `point` (level 3, pointer line per clue). `marks[]` cite the clues that prove each mark. |
@@ -42,7 +42,7 @@ line ID is looked up in the case pack first, then in `shared`.
 | Step | Runtime behaviour |
 |---|---|
 | `line` | Show and narrate the line. |
-| `dir` | Stage direction / animation cue (`id` stable). Never shown as dialogue, never voiced. |
+| `dir` | Stage direction / animation cue (`id` stable). Never shown as dialogue, never voiced. Optional `background` (A's `bg.*` ID): from this step on, until the scene ends or another `dir` sets one, the stage shows that background. Only at the scene's top level, so the runtime can take the latest one at or before the cursor (restart-safe). |
 | `skill` | `[НАВЫК]`: play `first` when the profile lacks the skill, else `known`; then mark it learned (profile-level). |
 | `minigame` | Run the minigame; continue when complete. |
 | `cutscene` | Play `cutscenes[id].document` on the stage (T25). Blocking; completes when finished or skipped. Rewards, clues and flags are never inside a cutscene: they follow as ordinary steps, so skip, replay and restore never re-apply them. |
@@ -121,6 +121,7 @@ Documents follow `aegis-cutscene/1` (engine `docs/api/animation.md` §9, SDK 711
 - Camera presets and effects are fixed in `packages/content/src/stage.ts` (`CAMERA_PRESETS`,
   `EFFECTS`); G registers exactly these on the stage.
 - Every document has markers after major beats (restore points).
+- At most 4 distinct backgrounds per cutscene, including comfort variants: G loads them together under a 128 MiB decoded-image budget (one 2560×1600 background is 16 MiB).
 - The build validates every document with `validateCutscene` (rigs, clips, expressions, emotes,
   captioned lines, presets, effects) and checks: the cutscene exists and is played in its declared
   scene; exactly one avatar (none in the intro); every line ID exists, is voiced dialogue of this pack,
