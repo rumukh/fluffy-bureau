@@ -525,7 +525,7 @@
    "durationMs": null,
    "format": "json",
    "bytes": 1356,
-   "sha256": "94f511605d6f80f46501074b5a62aa2c1a7a8cf676bbef52f1bf4de3f57cb42c",
+   "sha256": "2a681c0b5b9c9a199285888c963103dc10c67860a217433b510a9ab16604d7c0",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:4a63c63c68b32d2e; prompt tools/assets/art/prompts/puppets/avatar_fox_base.txt sha256:2ce4985cf0cd0447; references style_office_v1-c2.png",
@@ -539,12 +539,12 @@
    "path": "avatar/fox/avatar.fox.atlas.webp",
    "pack": "shell",
    "kind": "avatar-layer",
-   "width": 2048,
-   "height": 1024,
+   "width": 896,
+   "height": 692,
    "durationMs": null,
    "format": "webp",
-   "bytes": 199262,
-   "sha256": "f55d11e5adc1b352783dcbf6f911870e91d7f553accd9b356add13dc971d1af9",
+   "bytes": 204300,
+   "sha256": "0bb1effa974ac0b6d9dea7af9f80db076ef54d7fced124089347ada639c5c5de",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:4a63c63c68b32d2e; prompt tools/assets/art/prompts/puppets/avatar_fox_base.txt sha256:2ce4985cf0cd0447; references style_office_v1-c2.png",
@@ -695,8 +695,8 @@
    "height": null,
    "durationMs": null,
    "format": "json",
-   "bytes": 1362,
-   "sha256": "474085f88bc57770a1e20152e64f061e9df8bb65ff76c2fbf5ef213d14352736",
+   "bytes": 1360,
+   "sha256": "b8b3a9ca06b57f50e3a8b713c1c3ea6d97a81b898d208c483b6c7716ad7d44ad",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:4c23dc904e7ffbbf; prompt tools/assets/art/prompts/puppets/avatar_kitten_base.txt sha256:ebd169fbd9e2da47; references style_office_v1-c2.png",
@@ -710,12 +710,12 @@
    "path": "avatar/kitten/avatar.kitten.atlas.webp",
    "pack": "shell",
    "kind": "avatar-layer",
-   "width": 2048,
-   "height": 1024,
+   "width": 896,
+   "height": 708,
    "durationMs": null,
    "format": "webp",
-   "bytes": 196600,
-   "sha256": "6cda3d33488d3c52fc748ec9cd70097e8208546d21a63f42563a4e6f024643fa",
+   "bytes": 200340,
+   "sha256": "98d784989aab5c3761fd169c221a17765acc664d887864703e7f8f3032e4c86e",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:4c23dc904e7ffbbf; prompt tools/assets/art/prompts/puppets/avatar_kitten_base.txt sha256:ebd169fbd9e2da47; references style_office_v1-c2.png",
@@ -790,8 +790,8 @@
    "height": null,
    "durationMs": null,
    "format": "json",
-   "bytes": 1362,
-   "sha256": "ab5401baff53c16d667507e397b634b72b609977a918fc5f805fc6d3bbf6a1f3",
+   "bytes": 1363,
+   "sha256": "c65e06ba654426de6670ed9113de3f2c57cfc55538582dd6c1dc9c7cee14a32a",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:59732523a71e0c38; prompt tools/assets/art/prompts/puppets/avatar_mouse_base.txt sha256:d838acc924c0b90c; references style_office_v1-c2.png",
@@ -805,12 +805,12 @@
    "path": "avatar/mouse/avatar.mouse.atlas.webp",
    "pack": "shell",
    "kind": "avatar-layer",
-   "width": 2048,
-   "height": 1024,
+   "width": 1152,
+   "height": 548,
    "durationMs": null,
    "format": "webp",
-   "bytes": 197186,
-   "sha256": "f86e31d2cfd350030aa0de81840de236a4b6fa0ab0f324d33561a305bf5383ec",
+   "bytes": 201888,
+   "sha256": "b621ede1cdb1977831a70c44b7fe5f9e7ffb0c30955d01be8d68f422218c5b64",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:59732523a71e0c38; prompt tools/assets/art/prompts/puppets/avatar_mouse_base.txt sha256:d838acc924c0b90c; references style_office_v1-c2.png",
@@ -885,8 +885,8 @@
    "height": null,
    "durationMs": null,
    "format": "json",
-   "bytes": 1360,
-   "sha256": "23352f6a8ee32cc9534eb1ac3d5f38564e601ba155f7a858783aa4f8e7187692",
+   "bytes": 1364,
+   "sha256": "9a5105bfe8a13d02200f10133c54928e5cb56c37eb05fc713aa347840530cb6e",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:c9d3bc1f459cc53a; prompt tools/assets/art/prompts/puppets/avatar_puppy_base.txt sha256:80e2f9fef422d0fe; references style_office_v1-c2.png",
@@ -900,12 +900,12 @@
    "path": "avatar/puppy/avatar.puppy.atlas.webp",
    "pack": "shell",
    "kind": "avatar-layer",
-   "width": 2048,
-   "height": 1024,
+   "width": 1152,
+   "height": 564,
    "durationMs": null,
    "format": "webp",
-   "bytes": 186728,
-   "sha256": "db81f56006f25af156da714c74b9c834754aba25c7052e620a78c7f9ba3d6f36",
+   "bytes": 194826,
+   "sha256": "bd44cc54e187f44320177db6c0485868f160f37f052fb0bd4b9887574d666b2a",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:c9d3bc1f459cc53a; prompt tools/assets/art/prompts/puppets/avatar_puppy_base.txt sha256:80e2f9fef422d0fe; references style_office_v1-c2.png",
@@ -980,8 +980,8 @@
    "height": null,
    "durationMs": null,
    "format": "json",
-   "bytes": 1369,
-   "sha256": "81c22431ebd05a1acb6e1ed4090fb1c9d580a51ac22eb22e9964b82eec72f54c",
+   "bytes": 1365,
+   "sha256": "7eb56b1382dfca5b97859e0eba1b38ecb07563bf7117e87780ebb284652c4c5a",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:65513394ba1ac9eb; prompt tools/assets/art/prompts/puppets/avatar_squirrel_base.txt sha256:230241ca89a92fe6; references style_office_v1-c2.png",
@@ -995,12 +995,12 @@
    "path": "avatar/squirrel/avatar.squirrel.atlas.webp",
    "pack": "shell",
    "kind": "avatar-layer",
-   "width": 2048,
-   "height": 1024,
+   "width": 1024,
+   "height": 680,
    "durationMs": null,
    "format": "webp",
-   "bytes": 226862,
-   "sha256": "9cde2e2498907fcc37e706eb2451d40f263d687e8879aac534d00e0067ec28b9",
+   "bytes": 231854,
+   "sha256": "78d0481fd592e15fc3418bb41b27561eff153ac9bfaa3ffa56ae2785edf9af3b",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:65513394ba1ac9eb; prompt tools/assets/art/prompts/puppets/avatar_squirrel_base.txt sha256:230241ca89a92fe6; references style_office_v1-c2.png",
@@ -1436,8 +1436,8 @@
    "height": null,
    "durationMs": null,
    "format": "json",
-   "bytes": 1278,
-   "sha256": "b6c7eb02badbd2cd7b964e0ecc6ecc876cf7baa0dfef335e458370789d8d17f3",
+   "bytes": 1287,
+   "sha256": "c5cc2e1f0d714bfa3c319b85d8084d28ffeb6174a5c35061a86f69cc17692326",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:a29cc8fb2f40fadd; prompt tools/assets/art/prompts/puppets/fitilyok_base.txt sha256:0d987461ffa6a91f; references sheet_fitilyok-c1.png, style_office_v1-c2.png",
@@ -1451,12 +1451,12 @@
    "path": "characters/fitilyok/fitilyok.atlas.webp",
    "pack": "shell",
    "kind": "character-layer",
-   "width": 2048,
-   "height": 512,
+   "width": 1280,
+   "height": 472,
    "durationMs": null,
    "format": "webp",
-   "bytes": 182884,
-   "sha256": "a7042255cff326dcb4f8431d4ef4b0cef2166b63efb3917383007153c6d513c0",
+   "bytes": 188044,
+   "sha256": "591d9721529a1dbd00a71c962be7b2f615a0ad7f17cc9a3844198c9615abfaaf",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:a29cc8fb2f40fadd; prompt tools/assets/art/prompts/puppets/fitilyok_base.txt sha256:0d987461ffa6a91f; references sheet_fitilyok-c1.png, style_office_v1-c2.png",
@@ -1512,8 +1512,8 @@
    "height": null,
    "durationMs": null,
    "format": "json",
-   "bytes": 1202,
-   "sha256": "729fd49672cbdcd417874fa95c1603d5c28643a99f4c25f7788ae308e7c7cc5d",
+   "bytes": 1209,
+   "sha256": "f933ee30bbd6d553b56680454fcab0cc30b3fa02f516f087882e6f040c1393bb",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:9e4224ef0f615192; prompt tools/assets/art/prompts/puppets/kartofan_base.txt sha256:4865896e26216e11; references sheet_kartofan-c1.png, style_office_v1-c2.png",
@@ -1527,12 +1527,12 @@
    "path": "characters/kartofan/kartofan.atlas.webp",
    "pack": "shell",
    "kind": "character-layer",
-   "width": 2048,
-   "height": 1024,
+   "width": 1024,
+   "height": 504,
    "durationMs": null,
    "format": "webp",
-   "bytes": 177198,
-   "sha256": "4cb320b4bf831834677994ef14b699b6125eab8b98f328cd16846863c15caec8",
+   "bytes": 185106,
+   "sha256": "690d9c160edf971ec9166f577ea97048a65018db850e4206e76c009229521afa",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:9e4224ef0f615192; prompt tools/assets/art/prompts/puppets/kartofan_base.txt sha256:4865896e26216e11; references sheet_kartofan-c1.png, style_office_v1-c2.png",
@@ -1588,8 +1588,8 @@
    "height": null,
    "durationMs": null,
    "format": "json",
-   "bytes": 1275,
-   "sha256": "d4188d73e8d711ed99e22f2f303744ebbd7688b9e69b502e3c7d66c7edddc4a2",
+   "bytes": 1282,
+   "sha256": "08ef6de1fe76e43f6c6dda751719fec5f6e47f04154f41f5db8c6d3ca29289b2",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:07b81b8295885b45; prompt tools/assets/art/prompts/puppets/khvosts_base.txt sha256:ae2b08c750ae74fe; references sheet_khvosts-c1.png, style_office_v1-c2.png",
@@ -1603,12 +1603,12 @@
    "path": "characters/khvosts/khvosts.atlas.webp",
    "pack": "shell",
    "kind": "character-layer",
-   "width": 2048,
-   "height": 1024,
+   "width": 640,
+   "height": 816,
    "durationMs": null,
    "format": "webp",
-   "bytes": 189406,
-   "sha256": "e9fb381fa418dea85a9b501f5f378be75fb35a5fcc7e0edf033226e64985a7f1",
+   "bytes": 198744,
+   "sha256": "fae1d9b61478de3b34a1f41ee050758e8dd62db7cdec20f5d79d68415c3b98e9",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:07b81b8295885b45; prompt tools/assets/art/prompts/puppets/khvosts_base.txt sha256:ae2b08c750ae74fe; references sheet_khvosts-c1.png, style_office_v1-c2.png",
@@ -1664,8 +1664,8 @@
    "height": null,
    "durationMs": null,
    "format": "json",
-   "bytes": 1273,
-   "sha256": "e961725ff6077ba1c48c240de97d858dc37617f76d717ebb874116e2b1cc8065",
+   "bytes": 1279,
+   "sha256": "daa85fc8971ba77a09f941472b6a71b2fcd52c8796b1e61d0d8212984c0c6c2e",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:e487c36fef82b8ad; prompt tools/assets/art/prompts/puppets/mouse_base.txt sha256:dff6723c4a458a28; references sheet_shurshiki-c1.png, style_office_v1-c2.png",
@@ -1679,12 +1679,12 @@
    "path": "characters/mouse/mouse.atlas.webp",
    "pack": "shell",
    "kind": "character-layer",
-   "width": 2048,
-   "height": 1024,
+   "width": 1024,
+   "height": 524,
    "durationMs": null,
    "format": "webp",
-   "bytes": 179060,
-   "sha256": "f0afd042f00663d5403401f05a70089f76cfb30e0a173e6d39c8fe3ef78f9b41",
+   "bytes": 182354,
+   "sha256": "49780a47c80b10d9691a1faa1940bcd998c576094a81875468b317606a96f1e8",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:e487c36fef82b8ad; prompt tools/assets/art/prompts/puppets/mouse_base.txt sha256:dff6723c4a458a28; references sheet_shurshiki-c1.png, style_office_v1-c2.png",
@@ -1740,8 +1740,8 @@
    "height": null,
    "durationMs": null,
    "format": "json",
-   "bytes": 1276,
-   "sha256": "33b9daa198053b3bc9b54dab29bd6cb069d1caf27799828149d195f4f479da73",
+   "bytes": 1282,
+   "sha256": "125572721e54329e1b4bb02adbb050d379a8fdd46cd27ce6185b4b44893fba95",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:74edfad28c8a4351; prompt tools/assets/art/prompts/puppets/mouse2_base.txt sha256:64bf6ed9c894c228; references sheet_shurshiki-c1.png, style_office_v1-c2.png",
@@ -1755,12 +1755,12 @@
    "path": "characters/mouse2/mouse2.atlas.webp",
    "pack": "shell",
    "kind": "character-layer",
-   "width": 2048,
-   "height": 1024,
+   "width": 1024,
+   "height": 544,
    "durationMs": null,
    "format": "webp",
-   "bytes": 177308,
-   "sha256": "054deda53c6aff7a9ec1eb482d632d81a6b167b07f41f1fe86c187518b738422",
+   "bytes": 179614,
+   "sha256": "c8b5602390d56a8a7d00ee88dc21b7bf4bb4879d8c994e062c31b63bf3da332a",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:74edfad28c8a4351; prompt tools/assets/art/prompts/puppets/mouse2_base.txt sha256:64bf6ed9c894c228; references sheet_shurshiki-c1.png, style_office_v1-c2.png",
@@ -1816,8 +1816,8 @@
    "height": null,
    "durationMs": null,
    "format": "json",
-   "bytes": 1279,
-   "sha256": "b179e338d5fde113e9861f28345e746ab38faaccce0ff51781f677ca40be0497",
+   "bytes": 1282,
+   "sha256": "563acf3e767bf634b12531ba97bc8e6f59d3d26ac600f5c566c78924f0f0e216",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:a4810057ff84c5dc; prompt tools/assets/art/prompts/puppets/pudding_base.txt sha256:3b44a91b65b51eca; references sheet_puding-c1.png, style_office_v1-c2.png",
@@ -1831,12 +1831,12 @@
    "path": "characters/pudding/pudding.atlas.webp",
    "pack": "shell",
    "kind": "character-layer",
-   "width": 2048,
-   "height": 1024,
+   "width": 1024,
+   "height": 624,
    "durationMs": null,
    "format": "webp",
-   "bytes": 205030,
-   "sha256": "3d9bea07514a3314b1cbaad6835846076bb8df99d58f094dcf8dcf7b49314687",
+   "bytes": 206638,
+   "sha256": "c4152d920af137fd435822b53e7631bc131a16d80055e807b860c8a0d2d7879f",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:a4810057ff84c5dc; prompt tools/assets/art/prompts/puppets/pudding_base.txt sha256:3b44a91b65b51eca; references sheet_puding-c1.png, style_office_v1-c2.png",
@@ -1892,8 +1892,8 @@
    "height": null,
    "durationMs": null,
    "format": "json",
-   "bytes": 1199,
-   "sha256": "2cf8fbf6f37c969930e158e606470b662ee08cc22cf03a2bf314687937a8b0a4",
+   "bytes": 1205,
+   "sha256": "388838f9a7bcb8b0a03319764e5b9c9bee55e2b88e291a68e6b7cc1942d10bff",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:d1d54e2bce597dcf; prompt tools/assets/art/prompts/puppets/stella_base.txt sha256:0779d15899ac89aa; references sheet_stella-c1.png, style_office_v1-c2.png",
@@ -1907,12 +1907,12 @@
    "path": "characters/stella/stella.atlas.webp",
    "pack": "shell",
    "kind": "character-layer",
-   "width": 2048,
-   "height": 1024,
+   "width": 768,
+   "height": 732,
    "durationMs": null,
    "format": "webp",
-   "bytes": 164812,
-   "sha256": "4e3ccc71caa5b6b56dc27c8bd4b10c908b22de3fdcc6af91d3118a0ab4b629c5",
+   "bytes": 171790,
+   "sha256": "e97eca41b08c69cba8b26cd0130e181170e62f29fdd346a8ae74e3f8e352acdb",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:d1d54e2bce597dcf; prompt tools/assets/art/prompts/puppets/stella_base.txt sha256:0779d15899ac89aa; references sheet_stella-c1.png, style_office_v1-c2.png",
@@ -1968,8 +1968,8 @@
    "height": null,
    "durationMs": null,
    "format": "json",
-   "bytes": 1262,
-   "sha256": "2ac7073fcd8d87ed2dd903603a8d88f32a4a1488e4e9c43c1205817e193ab15e",
+   "bytes": 1274,
+   "sha256": "b1334e06e440dd73cf0a0698427ff881a95ed2090de0437479c2b698588bce4a",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:d89e4f20acacc9f0; prompt tools/assets/art/prompts/puppets/tyopa_base.txt sha256:8f1978a179414742; references sheet_tyopa-c1.png, style_office_v1-c2.png",
@@ -1983,12 +1983,12 @@
    "path": "characters/tyopa/tyopa.atlas.webp",
    "pack": "shell",
    "kind": "character-layer",
-   "width": 2048,
-   "height": 1024,
+   "width": 768,
+   "height": 640,
    "durationMs": null,
    "format": "webp",
-   "bytes": 178262,
-   "sha256": "934e12c27a1231e895fa005176bbd1936f27a1cb2c5e58270b5cc5cf991d797f",
+   "bytes": 186198,
+   "sha256": "94a5ea2bf08f7ed26e2e6d6078a0bc66d3bc154c6f34a83b601befc9cbe2d549",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:d89e4f20acacc9f0; prompt tools/assets/art/prompts/puppets/tyopa_base.txt sha256:8f1978a179414742; references sheet_tyopa-c1.png, style_office_v1-c2.png",
@@ -2044,8 +2044,8 @@
    "height": null,
    "durationMs": null,
    "format": "json",
-   "bytes": 1277,
-   "sha256": "08bb91e23754609dd1b46f98b5e7c888d5f828025d8d9fbba03175a339f89f6c",
+   "bytes": 1283,
+   "sha256": "e96ae45cb9ed8b919c1e459beaafedaaa749a95f7c0e91b47fe5495e980fd05c",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:0468e2ead92b80cd; prompt tools/assets/art/prompts/puppets/watsony_base.txt sha256:24b8bfffc92601c7; references sheet_vatsoni-c1.png, style_office_v1-c2.png",
@@ -2059,12 +2059,12 @@
    "path": "characters/watsony/watsony.atlas.webp",
    "pack": "shell",
    "kind": "character-layer",
-   "width": 2048,
-   "height": 1024,
+   "width": 1024,
+   "height": 524,
    "durationMs": null,
    "format": "webp",
-   "bytes": 178116,
-   "sha256": "cd7053b51036e045926acf5d2ff8e065d7c76fa34f33809991d447c2f7e13a46",
+   "bytes": 186090,
+   "sha256": "56eb609ce7877d3bec443031478eb0620efe5fae4848f814a2577763af59bf53",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:0468e2ead92b80cd; prompt tools/assets/art/prompts/puppets/watsony_base.txt sha256:24b8bfffc92601c7; references sheet_vatsoni-c1.png, style_office_v1-c2.png",
@@ -2106,7 +2106,7 @@
    "provenance": {
     "tool": "tools/assets/art/staging.py",
     "source": "hand-authored keyframes",
-    "createdAt": "2026-10-08T03:26:29+00:00",
+    "createdAt": "2026-10-08T03:42:55+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": "aegis-clip/1 motion for T25 cutscenes."
    }
@@ -2125,7 +2125,7 @@
    "provenance": {
     "tool": "tools/assets/art/staging.py",
     "source": "hand-authored keyframes",
-    "createdAt": "2026-10-08T03:26:29+00:00",
+    "createdAt": "2026-10-08T03:42:55+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": "aegis-clip/1 motion for T25 cutscenes."
    }
@@ -2144,7 +2144,7 @@
    "provenance": {
     "tool": "tools/assets/art/staging.py",
     "source": "hand-authored keyframes",
-    "createdAt": "2026-10-08T03:26:29+00:00",
+    "createdAt": "2026-10-08T03:42:55+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": "aegis-clip/1 motion for T25 cutscenes."
    }
@@ -2163,7 +2163,7 @@
    "provenance": {
     "tool": "tools/assets/art/staging.py",
     "source": "hand-authored keyframes",
-    "createdAt": "2026-10-08T03:26:29+00:00",
+    "createdAt": "2026-10-08T03:42:55+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": "aegis-clip/1 motion for T25 cutscenes."
    }
@@ -2182,7 +2182,7 @@
    "provenance": {
     "tool": "tools/assets/art/staging.py",
     "source": "hand-authored keyframes",
-    "createdAt": "2026-10-08T03:26:29+00:00",
+    "createdAt": "2026-10-08T03:42:55+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": "aegis-clip/1 motion for T25 cutscenes."
    }
@@ -2201,7 +2201,7 @@
    "provenance": {
     "tool": "tools/assets/art/staging.py",
     "source": "hand-authored keyframes",
-    "createdAt": "2026-10-08T03:26:29+00:00",
+    "createdAt": "2026-10-08T03:42:55+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": "aegis-clip/1 motion for T25 cutscenes."
    }
@@ -2220,7 +2220,7 @@
    "provenance": {
     "tool": "tools/assets/art/staging.py",
     "source": "hand-authored keyframes",
-    "createdAt": "2026-10-08T03:26:29+00:00",
+    "createdAt": "2026-10-08T03:42:55+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": "aegis-clip/1 motion for T25 cutscenes."
    }
@@ -2239,7 +2239,7 @@
    "provenance": {
     "tool": "tools/assets/art/staging.py",
     "source": "hand-authored keyframes",
-    "createdAt": "2026-10-08T03:26:29+00:00",
+    "createdAt": "2026-10-08T03:42:55+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": "aegis-clip/1 motion for T25 cutscenes."
    }
@@ -2258,7 +2258,7 @@
    "provenance": {
     "tool": "tools/assets/art/staging.py",
     "source": "hand-authored keyframes",
-    "createdAt": "2026-10-08T03:26:29+00:00",
+    "createdAt": "2026-10-08T03:42:55+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": "aegis-clip/1 motion for T25 cutscenes."
    }
@@ -2277,7 +2277,7 @@
    "provenance": {
     "tool": "tools/assets/art/staging.py",
     "source": "hand-authored keyframes",
-    "createdAt": "2026-10-08T03:26:29+00:00",
+    "createdAt": "2026-10-08T03:42:55+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": "aegis-clip/1 motion for T25 cutscenes."
    }
@@ -2296,7 +2296,7 @@
    "provenance": {
     "tool": "tools/assets/art/staging.py",
     "source": "hand-authored keyframes",
-    "createdAt": "2026-10-08T03:26:29+00:00",
+    "createdAt": "2026-10-08T03:42:55+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": "aegis-clip/1 motion for T25 cutscenes."
    }
@@ -2315,7 +2315,7 @@
    "provenance": {
     "tool": "tools/assets/art/staging.py",
     "source": "hand-authored keyframes",
-    "createdAt": "2026-10-08T03:26:29+00:00",
+    "createdAt": "2026-10-08T03:42:55+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": "aegis-clip/1 motion for T25 cutscenes."
    }
@@ -2334,7 +2334,7 @@
    "provenance": {
     "tool": "tools/assets/art/staging.py",
     "source": "hand-authored keyframes",
-    "createdAt": "2026-10-08T03:26:29+00:00",
+    "createdAt": "2026-10-08T03:42:55+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": "aegis-clip/1 motion for T25 cutscenes."
    }
@@ -2353,7 +2353,7 @@
    "provenance": {
     "tool": "tools/assets/art/staging.py",
     "source": "hand-authored keyframes",
-    "createdAt": "2026-10-08T03:26:29+00:00",
+    "createdAt": "2026-10-08T03:42:55+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": "aegis-clip/1 motion for T25 cutscenes."
    }
@@ -14595,6 +14595,120 @@
    }
   },
   {
+   "id": "prop.box-pie-closed:prop.box-pie-closed.atlas.json",
+   "path": "staging/props/prop.box-pie-closed/prop.box-pie-closed.atlas.json",
+   "pack": "shell",
+   "kind": "prop-puppet",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "json",
+   "bytes": 240,
+   "sha256": "76fc038d8e10d7b5df0230dece137f76ee8d0621e641979f4a40090c9f0e5dea",
+   "provenance": {
+    "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
+    "source": "master pie-box-closed-c1.png sha256:9b20336925d06214; prompt tools/assets/art/prompts/props/pie-box-closed.txt sha256:9425516a542c7af8; references style_office_v1-c2.png, box-pie.png",
+    "createdAt": "2026-10-08T02:49:21+00:00",
+    "licence": "Generated by the project with Azure OpenAI image model gpt-image-2.5 (owner's deployment); output owned by the project under the Microsoft Product Terms. No third-party artwork used.",
+    "notes": "Built by tools/assets/art/staging.py from props/pie-box-closed.png."
+   }
+  },
+  {
+   "id": "prop.box-pie-closed:prop.box-pie-closed.atlas.webp",
+   "path": "staging/props/prop.box-pie-closed/prop.box-pie-closed.atlas.webp",
+   "pack": "shell",
+   "kind": "prop-puppet",
+   "width": 512,
+   "height": 512,
+   "durationMs": null,
+   "format": "webp",
+   "bytes": 32388,
+   "sha256": "e2e8d3e159c81644ea591f7f148faadf2473fcf89c41be7340268f765fbf1541",
+   "provenance": {
+    "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
+    "source": "master pie-box-closed-c1.png sha256:9b20336925d06214; prompt tools/assets/art/prompts/props/pie-box-closed.txt sha256:9425516a542c7af8; references style_office_v1-c2.png, box-pie.png",
+    "createdAt": "2026-10-08T02:49:21+00:00",
+    "licence": "Generated by the project with Azure OpenAI image model gpt-image-2.5 (owner's deployment); output owned by the project under the Microsoft Product Terms. No third-party artwork used.",
+    "notes": "Built by tools/assets/art/staging.py from props/pie-box-closed.png."
+   }
+  },
+  {
+   "id": "prop.box-pie-closed:prop.box-pie-closed.rig.json",
+   "path": "staging/props/prop.box-pie-closed/prop.box-pie-closed.rig.json",
+   "pack": "shell",
+   "kind": "prop-puppet",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "json",
+   "bytes": 440,
+   "sha256": "89277dabe85eec3a9a2aee75dbaba446ea7fe9228cac195dfa49c227d763d525",
+   "provenance": {
+    "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
+    "source": "master pie-box-closed-c1.png sha256:9b20336925d06214; prompt tools/assets/art/prompts/props/pie-box-closed.txt sha256:9425516a542c7af8; references style_office_v1-c2.png, box-pie.png",
+    "createdAt": "2026-10-08T02:49:21+00:00",
+    "licence": "Generated by the project with Azure OpenAI image model gpt-image-2.5 (owner's deployment); output owned by the project under the Microsoft Product Terms. No third-party artwork used.",
+    "notes": "Built by tools/assets/art/staging.py from props/pie-box-closed.png."
+   }
+  },
+  {
+   "id": "prop.box-pie-open:prop.box-pie-open.atlas.json",
+   "path": "staging/props/prop.box-pie-open/prop.box-pie-open.atlas.json",
+   "pack": "shell",
+   "kind": "prop-puppet",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "json",
+   "bytes": 236,
+   "sha256": "9b6b8b1940902e3c6f69bd612eff014430979f0a80af9dde0947c5a9cfc64600",
+   "provenance": {
+    "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality medium)",
+    "source": "master box-pie-open.png sha256:3cb8ae552d632634; prompt tools/assets/art/prompts/props/box-pie-open.txt sha256:c7587e505916e738; references style_office_v1-c2.png",
+    "createdAt": "2026-10-07T23:21:12+00:00",
+    "licence": "Generated by the project with Azure OpenAI image model gpt-image-2.5 (owner's deployment); output owned by the project under the Microsoft Product Terms. No third-party artwork used.",
+    "notes": "Built by tools/assets/art/staging.py from props/box-pie-open.png."
+   }
+  },
+  {
+   "id": "prop.box-pie-open:prop.box-pie-open.atlas.webp",
+   "path": "staging/props/prop.box-pie-open/prop.box-pie-open.atlas.webp",
+   "pack": "shell",
+   "kind": "prop-puppet",
+   "width": 512,
+   "height": 512,
+   "durationMs": null,
+   "format": "webp",
+   "bytes": 38946,
+   "sha256": "e71e4e623ee854de6e9c624b31151635519a35c16d6be3b936267d66bd1b0e61",
+   "provenance": {
+    "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality medium)",
+    "source": "master box-pie-open.png sha256:3cb8ae552d632634; prompt tools/assets/art/prompts/props/box-pie-open.txt sha256:c7587e505916e738; references style_office_v1-c2.png",
+    "createdAt": "2026-10-07T23:21:12+00:00",
+    "licence": "Generated by the project with Azure OpenAI image model gpt-image-2.5 (owner's deployment); output owned by the project under the Microsoft Product Terms. No third-party artwork used.",
+    "notes": "Built by tools/assets/art/staging.py from props/box-pie-open.png."
+   }
+  },
+  {
+   "id": "prop.box-pie-open:prop.box-pie-open.rig.json",
+   "path": "staging/props/prop.box-pie-open/prop.box-pie-open.rig.json",
+   "pack": "shell",
+   "kind": "prop-puppet",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "json",
+   "bytes": 434,
+   "sha256": "1eb2297a94b14c61e3ca7a51a10514f3526f52f3cfb837fd404e50d30dd43686",
+   "provenance": {
+    "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality medium)",
+    "source": "master box-pie-open.png sha256:3cb8ae552d632634; prompt tools/assets/art/prompts/props/box-pie-open.txt sha256:c7587e505916e738; references style_office_v1-c2.png",
+    "createdAt": "2026-10-07T23:21:12+00:00",
+    "licence": "Generated by the project with Azure OpenAI image model gpt-image-2.5 (owner's deployment); output owned by the project under the Microsoft Product Terms. No third-party artwork used.",
+    "notes": "Built by tools/assets/art/staging.py from props/box-pie-open.png."
+   }
+  },
+  {
    "id": "prop.box-pie:prop.box-pie.atlas.json",
    "path": "staging/props/prop.box-pie/prop.box-pie.atlas.json",
    "pack": "shell",
@@ -14934,6 +15048,177 @@
     "createdAt": "2026-10-07T23:22:22+00:00",
     "licence": "Generated by the project with Azure OpenAI image model gpt-image-2.5 (owner's deployment); output owned by the project under the Microsoft Product Terms. No third-party artwork used.",
     "notes": "Built by tools/assets/art/staging.py from props/postal-beetle.png."
+   }
+  },
+  {
+   "id": "prop.sticker-pie-1:prop.sticker-pie-1.atlas.json",
+   "path": "staging/props/prop.sticker-pie-1/prop.sticker-pie-1.atlas.json",
+   "pack": "shell",
+   "kind": "prop-puppet",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "json",
+   "bytes": 238,
+   "sha256": "bb3f823a543abdfa2831faa86ce70425f1c500561556ccede65b425c4b419338",
+   "provenance": {
+    "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
+    "source": "master sticker-pie-c1.png sha256:53f27f5a0863fdda; prompt tools/assets/art/prompts/props/sticker-pie.txt sha256:13eb4770917ccd27; references style_office_v1-c2.png",
+    "createdAt": "2026-10-08T02:48:16+00:00",
+    "licence": "Generated by the project with Azure OpenAI image model gpt-image-2.5 (owner's deployment); output owned by the project under the Microsoft Product Terms. No third-party artwork used.",
+    "notes": "Built by tools/assets/art/staging.py from props/sticker-pie.png."
+   }
+  },
+  {
+   "id": "prop.sticker-pie-1:prop.sticker-pie-1.atlas.webp",
+   "path": "staging/props/prop.sticker-pie-1/prop.sticker-pie-1.atlas.webp",
+   "pack": "shell",
+   "kind": "prop-puppet",
+   "width": 512,
+   "height": 512,
+   "durationMs": null,
+   "format": "webp",
+   "bytes": 36846,
+   "sha256": "87352dfc09e0ff65debc51aa5267c069769c2b24e6372ac0f2d772ede3750718",
+   "provenance": {
+    "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
+    "source": "master sticker-pie-c1.png sha256:53f27f5a0863fdda; prompt tools/assets/art/prompts/props/sticker-pie.txt sha256:13eb4770917ccd27; references style_office_v1-c2.png",
+    "createdAt": "2026-10-08T02:48:16+00:00",
+    "licence": "Generated by the project with Azure OpenAI image model gpt-image-2.5 (owner's deployment); output owned by the project under the Microsoft Product Terms. No third-party artwork used.",
+    "notes": "Built by tools/assets/art/staging.py from props/sticker-pie.png."
+   }
+  },
+  {
+   "id": "prop.sticker-pie-1:prop.sticker-pie-1.rig.json",
+   "path": "staging/props/prop.sticker-pie-1/prop.sticker-pie-1.rig.json",
+   "pack": "shell",
+   "kind": "prop-puppet",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "json",
+   "bytes": 437,
+   "sha256": "c39d8c09a6fcc88cbc79149f5d08eff583ca2dd1777d5bafcf4fdfe26260b535",
+   "provenance": {
+    "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
+    "source": "master sticker-pie-c1.png sha256:53f27f5a0863fdda; prompt tools/assets/art/prompts/props/sticker-pie.txt sha256:13eb4770917ccd27; references style_office_v1-c2.png",
+    "createdAt": "2026-10-08T02:48:16+00:00",
+    "licence": "Generated by the project with Azure OpenAI image model gpt-image-2.5 (owner's deployment); output owned by the project under the Microsoft Product Terms. No third-party artwork used.",
+    "notes": "Built by tools/assets/art/staging.py from props/sticker-pie.png."
+   }
+  },
+  {
+   "id": "prop.sticker-pie-2:prop.sticker-pie-2.atlas.json",
+   "path": "staging/props/prop.sticker-pie-2/prop.sticker-pie-2.atlas.json",
+   "pack": "shell",
+   "kind": "prop-puppet",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "json",
+   "bytes": 238,
+   "sha256": "2180936dc8ded281820455305be8713f7ce1f45bcbec9aaba38f4fd3c3118fe6",
+   "provenance": {
+    "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
+    "source": "master sticker-pie-c1.png sha256:53f27f5a0863fdda; prompt tools/assets/art/prompts/props/sticker-pie.txt sha256:13eb4770917ccd27; references style_office_v1-c2.png",
+    "createdAt": "2026-10-08T02:48:16+00:00",
+    "licence": "Generated by the project with Azure OpenAI image model gpt-image-2.5 (owner's deployment); output owned by the project under the Microsoft Product Terms. No third-party artwork used.",
+    "notes": "Built by tools/assets/art/staging.py from props/sticker-pie.png."
+   }
+  },
+  {
+   "id": "prop.sticker-pie-2:prop.sticker-pie-2.atlas.webp",
+   "path": "staging/props/prop.sticker-pie-2/prop.sticker-pie-2.atlas.webp",
+   "pack": "shell",
+   "kind": "prop-puppet",
+   "width": 512,
+   "height": 512,
+   "durationMs": null,
+   "format": "webp",
+   "bytes": 37998,
+   "sha256": "6195ff79553254f830513dd879824df1174442fe643f393cfe5ae9c8e1ab0a32",
+   "provenance": {
+    "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
+    "source": "master sticker-pie-c1.png sha256:53f27f5a0863fdda; prompt tools/assets/art/prompts/props/sticker-pie.txt sha256:13eb4770917ccd27; references style_office_v1-c2.png",
+    "createdAt": "2026-10-08T02:48:16+00:00",
+    "licence": "Generated by the project with Azure OpenAI image model gpt-image-2.5 (owner's deployment); output owned by the project under the Microsoft Product Terms. No third-party artwork used.",
+    "notes": "Built by tools/assets/art/staging.py from props/sticker-pie.png."
+   }
+  },
+  {
+   "id": "prop.sticker-pie-2:prop.sticker-pie-2.rig.json",
+   "path": "staging/props/prop.sticker-pie-2/prop.sticker-pie-2.rig.json",
+   "pack": "shell",
+   "kind": "prop-puppet",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "json",
+   "bytes": 437,
+   "sha256": "7c1863548f5d7de51190398fa6f8e6f9311ff515b8101f59ea3a05d471861938",
+   "provenance": {
+    "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
+    "source": "master sticker-pie-c1.png sha256:53f27f5a0863fdda; prompt tools/assets/art/prompts/props/sticker-pie.txt sha256:13eb4770917ccd27; references style_office_v1-c2.png",
+    "createdAt": "2026-10-08T02:48:16+00:00",
+    "licence": "Generated by the project with Azure OpenAI image model gpt-image-2.5 (owner's deployment); output owned by the project under the Microsoft Product Terms. No third-party artwork used.",
+    "notes": "Built by tools/assets/art/staging.py from props/sticker-pie.png."
+   }
+  },
+  {
+   "id": "prop.sticker-pie-3:prop.sticker-pie-3.atlas.json",
+   "path": "staging/props/prop.sticker-pie-3/prop.sticker-pie-3.atlas.json",
+   "pack": "shell",
+   "kind": "prop-puppet",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "json",
+   "bytes": 238,
+   "sha256": "f72f15cda8990abba6f2ff506e4dad3c78876841ff5faa8caa38432feaab0d9c",
+   "provenance": {
+    "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
+    "source": "master sticker-pie-c1.png sha256:53f27f5a0863fdda; prompt tools/assets/art/prompts/props/sticker-pie.txt sha256:13eb4770917ccd27; references style_office_v1-c2.png",
+    "createdAt": "2026-10-08T02:48:16+00:00",
+    "licence": "Generated by the project with Azure OpenAI image model gpt-image-2.5 (owner's deployment); output owned by the project under the Microsoft Product Terms. No third-party artwork used.",
+    "notes": "Built by tools/assets/art/staging.py from props/sticker-pie.png."
+   }
+  },
+  {
+   "id": "prop.sticker-pie-3:prop.sticker-pie-3.atlas.webp",
+   "path": "staging/props/prop.sticker-pie-3/prop.sticker-pie-3.atlas.webp",
+   "pack": "shell",
+   "kind": "prop-puppet",
+   "width": 512,
+   "height": 512,
+   "durationMs": null,
+   "format": "webp",
+   "bytes": 38946,
+   "sha256": "e7e005411b39892675af6759747ffa9bc6e7e287b388565d121b039d80f5287c",
+   "provenance": {
+    "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
+    "source": "master sticker-pie-c1.png sha256:53f27f5a0863fdda; prompt tools/assets/art/prompts/props/sticker-pie.txt sha256:13eb4770917ccd27; references style_office_v1-c2.png",
+    "createdAt": "2026-10-08T02:48:16+00:00",
+    "licence": "Generated by the project with Azure OpenAI image model gpt-image-2.5 (owner's deployment); output owned by the project under the Microsoft Product Terms. No third-party artwork used.",
+    "notes": "Built by tools/assets/art/staging.py from props/sticker-pie.png."
+   }
+  },
+  {
+   "id": "prop.sticker-pie-3:prop.sticker-pie-3.rig.json",
+   "path": "staging/props/prop.sticker-pie-3/prop.sticker-pie-3.rig.json",
+   "pack": "shell",
+   "kind": "prop-puppet",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "json",
+   "bytes": 437,
+   "sha256": "2c8d639a0335ad09753bd623add06a9431dd83c9d79f95781571477da1877b4e",
+   "provenance": {
+    "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
+    "source": "master sticker-pie-c1.png sha256:53f27f5a0863fdda; prompt tools/assets/art/prompts/props/sticker-pie.txt sha256:13eb4770917ccd27; references style_office_v1-c2.png",
+    "createdAt": "2026-10-08T02:48:16+00:00",
+    "licence": "Generated by the project with Azure OpenAI image model gpt-image-2.5 (owner's deployment); output owned by the project under the Microsoft Product Terms. No third-party artwork used.",
+    "notes": "Built by tools/assets/art/staging.py from props/sticker-pie.png."
    }
   },
   {
@@ -31520,6 +31805,16 @@
     "atlasImage": "prop.blueberry-basket:prop.blueberry-basket.atlas.webp",
     "rig": "prop.blueberry-basket:prop.blueberry-basket.rig.json"
    },
+   "prop.box-pie-closed": {
+    "atlas": "prop.box-pie-closed:prop.box-pie-closed.atlas.json",
+    "atlasImage": "prop.box-pie-closed:prop.box-pie-closed.atlas.webp",
+    "rig": "prop.box-pie-closed:prop.box-pie-closed.rig.json"
+   },
+   "prop.box-pie-open": {
+    "atlas": "prop.box-pie-open:prop.box-pie-open.atlas.json",
+    "atlasImage": "prop.box-pie-open:prop.box-pie-open.atlas.webp",
+    "rig": "prop.box-pie-open:prop.box-pie-open.rig.json"
+   },
    "prop.box-pie": {
     "atlas": "prop.box-pie:prop.box-pie.atlas.json",
     "atlasImage": "prop.box-pie:prop.box-pie.atlas.webp",
@@ -31549,6 +31844,21 @@
     "atlas": "prop.postal-beetle:prop.postal-beetle.atlas.json",
     "atlasImage": "prop.postal-beetle:prop.postal-beetle.atlas.webp",
     "rig": "prop.postal-beetle:prop.postal-beetle.rig.json"
+   },
+   "prop.sticker-pie-1": {
+    "atlas": "prop.sticker-pie-1:prop.sticker-pie-1.atlas.json",
+    "atlasImage": "prop.sticker-pie-1:prop.sticker-pie-1.atlas.webp",
+    "rig": "prop.sticker-pie-1:prop.sticker-pie-1.rig.json"
+   },
+   "prop.sticker-pie-2": {
+    "atlas": "prop.sticker-pie-2:prop.sticker-pie-2.atlas.json",
+    "atlasImage": "prop.sticker-pie-2:prop.sticker-pie-2.atlas.webp",
+    "rig": "prop.sticker-pie-2:prop.sticker-pie-2.rig.json"
+   },
+   "prop.sticker-pie-3": {
+    "atlas": "prop.sticker-pie-3:prop.sticker-pie-3.atlas.json",
+    "atlasImage": "prop.sticker-pie-3:prop.sticker-pie-3.atlas.webp",
+    "rig": "prop.sticker-pie-3:prop.sticker-pie-3.rig.json"
    },
    "prop.sticker-pie": {
     "atlas": "prop.sticker-pie:prop.sticker-pie.atlas.json",

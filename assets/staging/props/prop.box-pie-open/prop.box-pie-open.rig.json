@@ -1,0 +1,33 @@
+{
+ "format": "aegis-rig/1",
+ "id": "prop.box-pie-open",
+ "revision": "1",
+ "atlases": [
+  "prop.box-pie-open.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -170.0,
+  "y": -356.5,
+  "width": 340,
+  "height": 357
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 170.0,
+    "y": 356.5
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "frame": "prop.box-pie-open.atlas#body.rest"
+  }
+ ]
+}
