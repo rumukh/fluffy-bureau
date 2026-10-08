@@ -30,9 +30,9 @@ npm run verify          # content check, typecheck, lint, unit tests, release bu
 npm run preview         # http://127.0.0.1:4320/ — local static preview of apps/game/dist
 ```
 
-Last full run (2026-10-08, Windows, Node 25.6.0): content check 0 errors; **58 unit tests** passed
-(game-core rules and scenario traces, game-session, C's content tools); release build OK; **34 E2E tests**
-passed (17 Chromium + 17 WebKit, serial, 12.1 min).
+Last full run (2026-10-08, Windows, Node 25.6.0): content check 0 errors; **61 unit tests** passed
+(game-core rules and scenario traces, game-session, C's content tools); release build OK; **38 E2E tests**
+passed (19 Chromium + 19 WebKit, serial, 14.4 min).
 
 ## 1. Brief checklist (TZ section 15), per variant
 
@@ -142,9 +142,8 @@ Chrome on Android tablets, Edge (Chromium-based, expected equivalent), Firefox (
 
 1. Per-scene backgrounds come from the content (C's `scene.background` and `dir.background`): the
    trail ends on the shed window close-up with the pie in the lid window (C1-5-05..07, L3-7-06..08,
-   unit-tested) and the conversations use the shed interior. At levels 1–2, `bg.shed-exterior` is set
-   by a direction followed immediately by the window close-up, so it is not on screen for a line;
-   reported to C.
+   unit-tested) and the conversations use the shed interior. An arrival beat on `bg.shed-exterior`
+   (tap the window) is a Stage 2 follow-up with C.
 2. T25 cutscenes are integrated; the stage releases backgrounds between scenes and uses a 128 MiB decoded-image budget (A repacked atlases to ~2 MiB).
 3. Stage directions (`dir`) outside cutscenes reach the presenter with their text only; mapping them
    to puppet emotes, poses and props needs a structured action field from C (follow-up for Stage 2).
