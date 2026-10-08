@@ -19,7 +19,9 @@
     "test": "vitest run",
     "test:e2e": "playwright test",
     "dev": "npm run dev -w @fluffy/game",
-    "build": "npm run build -w @fluffy/game",
+    "build": "npm run build -w @fluffy/game --",
+    "build:pages": "node apps/game/scripts/build.mjs --base /fluffy-bureau/",
+    "test:e2e:pages": "node scripts/e2e-pages.mjs",
     "preview": "npm run preview -w @fluffy/game",
     "content:check": "node tools/content/build.ts --check",
     "verify": "npm run content:check && npm run typecheck && npm run lint && npm run test && npm run build && npm run test:e2e"

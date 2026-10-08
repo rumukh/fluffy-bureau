@@ -29,6 +29,9 @@ Owner: workstream G. Applies to every workstream working in `rumukh/fluffy-burea
 | `npm run preview` | Read-only loopback server for `apps/game/dist`: http://127.0.0.1:4320/ |
 | `npm run test:e2e` | Playwright (needs `npm run build` first; `npx playwright install chromium webkit` once) |
 | `npm run verify` | All of the above in order |
+| `npm run build:pages` | Release build for GitHub Pages, base `/fluffy-bureau/` |
+| `npm run test:e2e:pages` | Pages, smoke, offline and update specs served under `/fluffy-bureau/` (after `build:pages`) |
+| `npx playwright test` with `FLUFFY_E2E_BASE=/sub/` | Any spec under a sub-path; `FLUFFY_E2E_PORT` moves the preview port for parallel runs |
 
 ## Ownership and where things go
 
@@ -67,3 +70,21 @@ Each pack gets its own digest-checked resource graph (`dist/offline/<packId>.jso
 Each workstream works on its own branch from `rumukh-game-feasibility-assessment` and opens
 PRs against it. To use a sibling's unmerged work, fetch and merge its branch locally. Lockfile
 conflicts: rebase/merge, then rerun `npm install` (never hand-edit the lockfile).
+
+## Releases (T30)
+
+The site https://rumukh.github.io/fluffy-bureau/ is published by `.github/workflows/pages.yml`
+**only** for a pushed `v*` tag (v0.1.0 = Stage 1, v0.2.0 = Stage 2, …) or a manual
+`workflow_dispatch` run, never for ordinary pushes. The workflow validates content, runs the unit
+tests and scenario traces, builds with `--base /fluffy-bureau/` and deploys through
+`upload-pages-artifact` and `deploy-pages` (one deployment at a time). Only released packs
+(`PACK_IDS`) are built. Every PR's CI also boots the Pages build under the sub-path
+(`e2e/pages.spec.ts`: worker scope, manifest `start_url`/`scope`, icons, every pack URL, no request
+outside the base).
+
+The site is unlisted (Q43): `<meta name="robots" content="noindex, nofollow, noarchive">` on the page
+does the work. The bundled `robots.txt` disallows everything, but crawlers only read it at the domain
+root (`rumukh.github.io/robots.txt`, not ours), so it is a courtesy, not a guarantee.
+
+Before tagging, locally: `npm run verify`, then `npm run build:pages && npm run test:e2e:pages`, and
+`npm run preview -- --base /fluffy-bureau/` for a look at http://127.0.0.1:4320/fluffy-bureau/.
