@@ -1,0 +1,482 @@
+{
+ "format": "fluffy-cipher-kit",
+ "schema": 1,
+ "buttons": [
+  {
+   "id": "button-honey-1-circle",
+   "color": "honey",
+   "holes": 1,
+   "shape": "circle",
+   "label": "медовая пуговица, круглая, одна дырочка"
+  },
+  {
+   "id": "button-honey-1-square",
+   "color": "honey",
+   "holes": 1,
+   "shape": "square",
+   "label": "медовая пуговица, квадратная, одна дырочка"
+  },
+  {
+   "id": "button-honey-1-flower",
+   "color": "honey",
+   "holes": 1,
+   "shape": "flower",
+   "label": "медовая пуговица, цветок, одна дырочка"
+  },
+  {
+   "id": "button-honey-1-heart",
+   "color": "honey",
+   "holes": 1,
+   "shape": "heart",
+   "label": "медовая пуговица, сердечко, одна дырочка"
+  },
+  {
+   "id": "button-honey-2-circle",
+   "color": "honey",
+   "holes": 2,
+   "shape": "circle",
+   "label": "медовая пуговица, круглая, две дырочки"
+  },
+  {
+   "id": "button-honey-2-square",
+   "color": "honey",
+   "holes": 2,
+   "shape": "square",
+   "label": "медовая пуговица, квадратная, две дырочки"
+  },
+  {
+   "id": "button-honey-2-flower",
+   "color": "honey",
+   "holes": 2,
+   "shape": "flower",
+   "label": "медовая пуговица, цветок, две дырочки"
+  },
+  {
+   "id": "button-honey-2-heart",
+   "color": "honey",
+   "holes": 2,
+   "shape": "heart",
+   "label": "медовая пуговица, сердечко, две дырочки"
+  },
+  {
+   "id": "button-honey-3-circle",
+   "color": "honey",
+   "holes": 3,
+   "shape": "circle",
+   "label": "медовая пуговица, круглая, три дырочки"
+  },
+  {
+   "id": "button-honey-3-square",
+   "color": "honey",
+   "holes": 3,
+   "shape": "square",
+   "label": "медовая пуговица, квадратная, три дырочки"
+  },
+  {
+   "id": "button-honey-3-flower",
+   "color": "honey",
+   "holes": 3,
+   "shape": "flower",
+   "label": "медовая пуговица, цветок, три дырочки"
+  },
+  {
+   "id": "button-honey-3-heart",
+   "color": "honey",
+   "holes": 3,
+   "shape": "heart",
+   "label": "медовая пуговица, сердечко, три дырочки"
+  },
+  {
+   "id": "button-honey-4-circle",
+   "color": "honey",
+   "holes": 4,
+   "shape": "circle",
+   "label": "медовая пуговица, круглая, четыре дырочки"
+  },
+  {
+   "id": "button-honey-4-square",
+   "color": "honey",
+   "holes": 4,
+   "shape": "square",
+   "label": "медовая пуговица, квадратная, четыре дырочки"
+  },
+  {
+   "id": "button-honey-4-flower",
+   "color": "honey",
+   "holes": 4,
+   "shape": "flower",
+   "label": "медовая пуговица, цветок, четыре дырочки"
+  },
+  {
+   "id": "button-honey-4-heart",
+   "color": "honey",
+   "holes": 4,
+   "shape": "heart",
+   "label": "медовая пуговица, сердечко, четыре дырочки"
+  },
+  {
+   "id": "button-blue-1-circle",
+   "color": "blue",
+   "holes": 1,
+   "shape": "circle",
+   "label": "голубая пуговица, круглая, одна дырочка"
+  },
+  {
+   "id": "button-blue-1-square",
+   "color": "blue",
+   "holes": 1,
+   "shape": "square",
+   "label": "голубая пуговица, квадратная, одна дырочка"
+  },
+  {
+   "id": "button-blue-1-flower",
+   "color": "blue",
+   "holes": 1,
+   "shape": "flower",
+   "label": "голубая пуговица, цветок, одна дырочка"
+  },
+  {
+   "id": "button-blue-1-heart",
+   "color": "blue",
+   "holes": 1,
+   "shape": "heart",
+   "label": "голубая пуговица, сердечко, одна дырочка"
+  },
+  {
+   "id": "button-blue-2-circle",
+   "color": "blue",
+   "holes": 2,
+   "shape": "circle",
+   "label": "голубая пуговица, круглая, две дырочки"
+  },
+  {
+   "id": "button-blue-2-square",
+   "color": "blue",
+   "holes": 2,
+   "shape": "square",
+   "label": "голубая пуговица, квадратная, две дырочки"
+  },
+  {
+   "id": "button-blue-2-flower",
+   "color": "blue",
+   "holes": 2,
+   "shape": "flower",
+   "label": "голубая пуговица, цветок, две дырочки"
+  },
+  {
+   "id": "button-blue-2-heart",
+   "color": "blue",
+   "holes": 2,
+   "shape": "heart",
+   "label": "голубая пуговица, сердечко, две дырочки"
+  },
+  {
+   "id": "button-blue-3-circle",
+   "color": "blue",
+   "holes": 3,
+   "shape": "circle",
+   "label": "голубая пуговица, круглая, три дырочки"
+  },
+  {
+   "id": "button-blue-3-square",
+   "color": "blue",
+   "holes": 3,
+   "shape": "square",
+   "label": "голубая пуговица, квадратная, три дырочки"
+  },
+  {
+   "id": "button-blue-3-flower",
+   "color": "blue",
+   "holes": 3,
+   "shape": "flower",
+   "label": "голубая пуговица, цветок, три дырочки"
+  },
+  {
+   "id": "button-blue-3-heart",
+   "color": "blue",
+   "holes": 3,
+   "shape": "heart",
+   "label": "голубая пуговица, сердечко, три дырочки"
+  },
+  {
+   "id": "button-blue-4-circle",
+   "color": "blue",
+   "holes": 4,
+   "shape": "circle",
+   "label": "голубая пуговица, круглая, четыре дырочки"
+  },
+  {
+   "id": "button-blue-4-square",
+   "color": "blue",
+   "holes": 4,
+   "shape": "square",
+   "label": "голубая пуговица, квадратная, четыре дырочки"
+  },
+  {
+   "id": "button-blue-4-flower",
+   "color": "blue",
+   "holes": 4,
+   "shape": "flower",
+   "label": "голубая пуговица, цветок, четыре дырочки"
+  },
+  {
+   "id": "button-blue-4-heart",
+   "color": "blue",
+   "holes": 4,
+   "shape": "heart",
+   "label": "голубая пуговица, сердечко, четыре дырочки"
+  },
+  {
+   "id": "button-rose-1-circle",
+   "color": "rose",
+   "holes": 1,
+   "shape": "circle",
+   "label": "розовая пуговица, круглая, одна дырочка"
+  },
+  {
+   "id": "button-rose-1-square",
+   "color": "rose",
+   "holes": 1,
+   "shape": "square",
+   "label": "розовая пуговица, квадратная, одна дырочка"
+  },
+  {
+   "id": "button-rose-1-flower",
+   "color": "rose",
+   "holes": 1,
+   "shape": "flower",
+   "label": "розовая пуговица, цветок, одна дырочка"
+  },
+  {
+   "id": "button-rose-1-heart",
+   "color": "rose",
+   "holes": 1,
+   "shape": "heart",
+   "label": "розовая пуговица, сердечко, одна дырочка"
+  },
+  {
+   "id": "button-rose-2-circle",
+   "color": "rose",
+   "holes": 2,
+   "shape": "circle",
+   "label": "розовая пуговица, круглая, две дырочки"
+  },
+  {
+   "id": "button-rose-2-square",
+   "color": "rose",
+   "holes": 2,
+   "shape": "square",
+   "label": "розовая пуговица, квадратная, две дырочки"
+  },
+  {
+   "id": "button-rose-2-flower",
+   "color": "rose",
+   "holes": 2,
+   "shape": "flower",
+   "label": "розовая пуговица, цветок, две дырочки"
+  },
+  {
+   "id": "button-rose-2-heart",
+   "color": "rose",
+   "holes": 2,
+   "shape": "heart",
+   "label": "розовая пуговица, сердечко, две дырочки"
+  },
+  {
+   "id": "button-rose-3-circle",
+   "color": "rose",
+   "holes": 3,
+   "shape": "circle",
+   "label": "розовая пуговица, круглая, три дырочки"
+  },
+  {
+   "id": "button-rose-3-square",
+   "color": "rose",
+   "holes": 3,
+   "shape": "square",
+   "label": "розовая пуговица, квадратная, три дырочки"
+  },
+  {
+   "id": "button-rose-3-flower",
+   "color": "rose",
+   "holes": 3,
+   "shape": "flower",
+   "label": "розовая пуговица, цветок, три дырочки"
+  },
+  {
+   "id": "button-rose-3-heart",
+   "color": "rose",
+   "holes": 3,
+   "shape": "heart",
+   "label": "розовая пуговица, сердечко, три дырочки"
+  },
+  {
+   "id": "button-rose-4-circle",
+   "color": "rose",
+   "holes": 4,
+   "shape": "circle",
+   "label": "розовая пуговица, круглая, четыре дырочки"
+  },
+  {
+   "id": "button-rose-4-square",
+   "color": "rose",
+   "holes": 4,
+   "shape": "square",
+   "label": "розовая пуговица, квадратная, четыре дырочки"
+  },
+  {
+   "id": "button-rose-4-flower",
+   "color": "rose",
+   "holes": 4,
+   "shape": "flower",
+   "label": "розовая пуговица, цветок, четыре дырочки"
+  },
+  {
+   "id": "button-rose-4-heart",
+   "color": "rose",
+   "holes": 4,
+   "shape": "heart",
+   "label": "розовая пуговица, сердечко, четыре дырочки"
+  },
+  {
+   "id": "button-green-1-circle",
+   "color": "green",
+   "holes": 1,
+   "shape": "circle",
+   "label": "зелёная пуговица, круглая, одна дырочка"
+  },
+  {
+   "id": "button-green-1-square",
+   "color": "green",
+   "holes": 1,
+   "shape": "square",
+   "label": "зелёная пуговица, квадратная, одна дырочка"
+  },
+  {
+   "id": "button-green-1-flower",
+   "color": "green",
+   "holes": 1,
+   "shape": "flower",
+   "label": "зелёная пуговица, цветок, одна дырочка"
+  },
+  {
+   "id": "button-green-1-heart",
+   "color": "green",
+   "holes": 1,
+   "shape": "heart",
+   "label": "зелёная пуговица, сердечко, одна дырочка"
+  },
+  {
+   "id": "button-green-2-circle",
+   "color": "green",
+   "holes": 2,
+   "shape": "circle",
+   "label": "зелёная пуговица, круглая, две дырочки"
+  },
+  {
+   "id": "button-green-2-square",
+   "color": "green",
+   "holes": 2,
+   "shape": "square",
+   "label": "зелёная пуговица, квадратная, две дырочки"
+  },
+  {
+   "id": "button-green-2-flower",
+   "color": "green",
+   "holes": 2,
+   "shape": "flower",
+   "label": "зелёная пуговица, цветок, две дырочки"
+  },
+  {
+   "id": "button-green-2-heart",
+   "color": "green",
+   "holes": 2,
+   "shape": "heart",
+   "label": "зелёная пуговица, сердечко, две дырочки"
+  },
+  {
+   "id": "button-green-3-circle",
+   "color": "green",
+   "holes": 3,
+   "shape": "circle",
+   "label": "зелёная пуговица, круглая, три дырочки"
+  },
+  {
+   "id": "button-green-3-square",
+   "color": "green",
+   "holes": 3,
+   "shape": "square",
+   "label": "зелёная пуговица, квадратная, три дырочки"
+  },
+  {
+   "id": "button-green-3-flower",
+   "color": "green",
+   "holes": 3,
+   "shape": "flower",
+   "label": "зелёная пуговица, цветок, три дырочки"
+  },
+  {
+   "id": "button-green-3-heart",
+   "color": "green",
+   "holes": 3,
+   "shape": "heart",
+   "label": "зелёная пуговица, сердечко, три дырочки"
+  },
+  {
+   "id": "button-green-4-circle",
+   "color": "green",
+   "holes": 4,
+   "shape": "circle",
+   "label": "зелёная пуговица, круглая, четыре дырочки"
+  },
+  {
+   "id": "button-green-4-square",
+   "color": "green",
+   "holes": 4,
+   "shape": "square",
+   "label": "зелёная пуговица, квадратная, четыре дырочки"
+  },
+  {
+   "id": "button-green-4-flower",
+   "color": "green",
+   "holes": 4,
+   "shape": "flower",
+   "label": "зелёная пуговица, цветок, четыре дырочки"
+  },
+  {
+   "id": "button-green-4-heart",
+   "color": "green",
+   "holes": 4,
+   "shape": "heart",
+   "label": "зелёная пуговица, сердечко, четыре дырочки"
+  }
+ ],
+ "streets": {
+  "pirog": {
+   "icon": "street-pirogovaya.svg",
+   "shapes": [
+    "circle",
+    "flower"
+   ],
+   "label": "Пироговая улица — соты"
+  },
+  "park": {
+   "icon": "street-parkovaya.svg",
+   "shapes": [
+    "square",
+    "heart"
+   ],
+   "label": "Парковая улица — листик"
+  }
+ },
+ "envelope": {
+  "file": "envelope.svg",
+  "sealed": "envelope-sealed.svg",
+  "addressBox": {
+   "x": 150,
+   "y": 104,
+   "w": 72,
+   "h": 40
+  }
+ }
+}

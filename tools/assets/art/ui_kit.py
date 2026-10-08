@@ -89,6 +89,26 @@ ICONS = {
     "lock": f'<rect x="24" y="44" width="48" height="36" rx="8" fill="{HONEY}" {S}/><path d="M34 44V32a14 14 0 0 1 28 0v12" fill="none" {S}/>',
     "turn-device": f'<rect x="14" y="30" width="68" height="44" rx="8" fill="{CREAM}" {S}/><circle cx="72" cy="52" r="3" fill="{INK}"/>'
                    f'<path d="M30 20c8-8 26-8 34 2" fill="none" {S}/><path d="M64 10v12H52" fill="none" {S}/>',
+    # Silent form of sound clues (Q31): тихо/громко, высоко/низко, коротко/длинно, ровно/неровно.
+    "sound-quiet": f'<path d="M22 40h12l16-12v40L34 56H22z" fill="{SAGE}" {S}/><path d="M62 42c3 3 3 9 0 12" fill="none" {S}/>',
+    "sound-medium": f'<path d="M18 40h12l16-12v40L30 56H18z" fill="{HONEY}" {S}/><path d="M58 40c4 4 4 12 0 16M66 34c7 7 7 21 0 28" fill="none" {S}/>',
+    "sound-loud": f'<path d="M14 40h12l16-12v40L26 56H14z" fill="{ROSE}" {S}/><path d="M54 40c4 4 4 12 0 16M62 34c7 7 7 21 0 28M70 28c10 10 10 30 0 40" fill="none" {S}/>',
+    "pitch-high": f'<path d="M14 76h68" stroke="{SAGE_D}" stroke-width="4" stroke-linecap="round"/><path d="M48 66V22" {S}/><path d="M34 36l14-14 14 14" fill="none" {S}/>'
+                  f'<circle cx="48" cy="18" r="6" fill="{HONEY}" {S}/>',
+    "pitch-middle": f'<path d="M14 76h68" stroke="{SAGE_D}" stroke-width="4" stroke-linecap="round"/><circle cx="48" cy="48" r="10" fill="{HONEY}" {S}/>',
+    "pitch-low": f'<path d="M14 76h68" stroke="{SAGE_D}" stroke-width="4" stroke-linecap="round"/><path d="M48 22v38" {S}/><path d="M34 46l14 14 14-14" fill="none" {S}/>'
+                 f'<circle cx="48" cy="66" r="6" fill="{HONEY}" {S}/>',
+    "length-short": f'<rect x="36" y="38" width="24" height="20" rx="10" fill="{HONEY}" {S}/>',
+    "length-long": f'<rect x="12" y="38" width="72" height="20" rx="10" fill="{HONEY}" {S}/>',
+    "rhythm-steady": "".join(f'<rect x="{14 + i * 18}" y="34" width="10" height="28" rx="5" fill="{SAGE}" {S}/>' for i in range(4)),
+    "rhythm-uneven": "".join(f'<rect x="{x}" y="{48 - h / 2}" width="10" height="{h}" rx="5" fill="{ROSE}" {S}/>'
+                             for x, h in ((12, 20), (30, 40), (56, 14), (74, 30))),
+    # «Азбука огоньков»: точка и чёрточка, огонёк выключен и включён.
+    "signal-dot": f'<circle cx="48" cy="48" r="16" fill="{HONEY}" {S}/>',
+    "signal-dash": f'<rect x="12" y="34" width="72" height="28" rx="14" fill="{HONEY}" {S}/>',
+    "lantern-off": f'<path d="M38 16h20l4 8H34z" fill="{HONEY_D}" {S}/><rect x="28" y="24" width="40" height="48" rx="16" fill="{CREAM}" {S}/><path d="M32 80h32" {S}/>',
+    "lantern-on": f'<circle cx="48" cy="48" r="44" fill="{HONEY}" opacity="0.35"/><path d="M38 16h20l4 8H34z" fill="{HONEY_D}" {S}/>'
+                  f'<rect x="28" y="24" width="40" height="48" rx="16" fill="{HONEY}" {S}/><circle cx="48" cy="46" r="9" fill="{WHITE}"/><path d="M32 80h32" {S}/>',
 }
 
 STICKERS = {
