@@ -1,0 +1,33 @@
+{
+ "format": "aegis-rig/1",
+ "id": "acc.badge.pie-found",
+ "revision": "1",
+ "atlases": [
+  "acc.badge.pie-found.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -52.0,
+  "y": -64.5,
+  "width": 104,
+  "height": 129
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 52.0,
+    "y": 64.5
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "frame": "acc.badge.pie-found.atlas#body.rest"
+  }
+ ]
+}

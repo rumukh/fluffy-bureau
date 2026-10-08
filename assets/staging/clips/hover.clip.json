@@ -1,0 +1,49 @@
+{
+ "format": "aegis-clip/1",
+ "id": "hover",
+ "duration": 1.6,
+ "loop": true,
+ "blend": "additive",
+ "tracks": [
+  {
+   "part": "body",
+   "property": "y",
+   "keys": [
+    {
+     "t": 0,
+     "v": 0,
+     "ease": "easeInOutSine"
+    },
+    {
+     "t": 0.8,
+     "v": -14,
+     "ease": "easeInOutSine"
+    },
+    {
+     "t": 1.6,
+     "v": 0
+    }
+   ]
+  },
+  {
+   "part": "body",
+   "property": "rotation",
+   "keys": [
+    {
+     "t": 0,
+     "v": -1.5,
+     "ease": "easeInOutSine"
+    },
+    {
+     "t": 0.8,
+     "v": 1.5,
+     "ease": "easeInOutSine"
+    },
+    {
+     "t": 1.6,
+     "v": -1.5
+    }
+   ]
+  }
+ ]
+}

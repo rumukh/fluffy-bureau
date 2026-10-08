@@ -10,10 +10,10 @@
   "y": 0
  },
  "bounds": {
-  "x": -241.8,
-  "y": -837.6,
-  "width": 424.2,
-  "height": 837.6
+  "x": -227.29,
+  "y": -787.34,
+  "width": 398.75,
+  "height": 787.34
  },
  "parts": [
   {
@@ -30,7 +30,11 @@
    "variants": {
     "rest": "tyopa.atlas#body.rest"
    },
-   "variant": "rest"
+   "variant": "rest",
+   "scale": {
+    "x": 0.94,
+    "y": 0.94
+   }
   },
   {
    "id": "head",
@@ -61,7 +65,8 @@
    "variants": {
     "open": "tyopa.atlas#eyes.open",
     "half": "tyopa.atlas#eyes.half",
-    "closed": "tyopa.atlas#eyes.closed"
+    "closed": "tyopa.atlas#eyes.closed",
+    "happy": "tyopa.atlas#eyes.happy"
    },
    "variant": "open"
   },
@@ -125,6 +130,19 @@
   },
   "worried": {
    "brows": "worried"
+  },
+  "happy": {
+   "eyes": "happy"
+  }
+ },
+ "emotes": {
+  "joy": {
+   "expression": "happy",
+   "clip": "cheer"
+  },
+  "nod": {
+   "expression": "neutral",
+   "clip": "nod"
   }
  }
 }

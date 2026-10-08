@@ -27,7 +27,8 @@
    ],
    "variants": [
     "half",
-    "closed"
+    "closed",
+    "happy"
    ]
   },
   "mouth": {
@@ -63,5 +64,6 @@
    ]
   }
  },
- "bodyVariants": {}
+ "bodyVariants": {},
+ "scale": 0.86
 }

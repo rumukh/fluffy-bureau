@@ -61,7 +61,8 @@
    "variants": {
     "open": "khvosts.atlas#eyes.open",
     "half": "khvosts.atlas#eyes.half",
-    "closed": "khvosts.atlas#eyes.closed"
+    "closed": "khvosts.atlas#eyes.closed",
+    "happy": "khvosts.atlas#eyes.happy"
    },
    "variant": "open"
   },
@@ -125,6 +126,19 @@
   },
   "worried": {
    "brows": "worried"
+  },
+  "happy": {
+   "eyes": "happy"
+  }
+ },
+ "emotes": {
+  "joy": {
+   "expression": "happy",
+   "clip": "cheer"
+  },
+  "nod": {
+   "expression": "neutral",
+   "clip": "nod"
   }
  }
 }

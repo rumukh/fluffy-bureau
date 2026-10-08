@@ -1,0 +1,33 @@
+{
+ "format": "aegis-rig/1",
+ "id": "prop.pie-baked",
+ "revision": "1",
+ "atlases": [
+  "prop.pie-baked.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -170.0,
+  "y": -315.5,
+  "width": 340,
+  "height": 316
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 170.0,
+    "y": 315.5
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "frame": "prop.pie-baked.atlas#body.rest"
+  }
+ ]
+}

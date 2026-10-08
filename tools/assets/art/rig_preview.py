@@ -17,7 +17,8 @@ def frame(ref):
     f = aj["frames"][fid]
     return im.crop((f["x"], f["y"], f["x"] + f["w"], f["y"] + f["h"]))
 
-b = rig["bounds"]
+s = (rig["parts"][0].get("scale") or {"x": 1})["x"]
+b = {k: v / s for k, v in rig["bounds"].items()}  # preview draws unscaled; rest scale is a runtime transform
 canvas = Image.new("RGBA", (int(b["width"]) + 40, int(b["height"]) + 40), (255, 255, 255, 255))
 ox, oy = -b["x"] + 20, -b["y"] + 20
 parts = {p["id"]: p for p in rig["parts"]}

@@ -1,0 +1,68 @@
+{
+ "format": "aegis-clip/1",
+ "id": "box-open",
+ "duration": 1.0,
+ "loop": false,
+ "blend": "override",
+ "tracks": [
+  {
+   "part": "body",
+   "property": "rotation",
+   "keys": [
+    {
+     "t": 0,
+     "v": 0,
+     "ease": "easeInOutSine"
+    },
+    {
+     "t": 0.15,
+     "v": -4
+    },
+    {
+     "t": 0.3,
+     "v": 4
+    },
+    {
+     "t": 0.45,
+     "v": 0
+    }
+   ]
+  },
+  {
+   "part": "box",
+   "property": "variant",
+   "keys": [
+    {
+     "t": 0,
+     "v": "closed",
+     "ease": "step"
+    },
+    {
+     "t": 0.45,
+     "v": "open",
+     "ease": "step"
+    }
+   ]
+  },
+  {
+   "part": "body",
+   "property": "scaleY",
+   "keys": [
+    {
+     "t": 0.45,
+     "v": 0.94,
+     "ease": "easeOutBack"
+    },
+    {
+     "t": 0.7,
+     "v": 1.03,
+     "ease": "easeInOutSine"
+    },
+    {
+     "t": 1.0,
+     "v": 1
+    }
+   ]
+  }
+ ]
+}

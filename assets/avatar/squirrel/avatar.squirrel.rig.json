@@ -10,10 +10,10 @@
   "y": 0
  },
  "bounds": {
-  "x": -198.6,
-  "y": -846.0,
-  "width": 501.0,
-  "height": 846.0
+  "x": -142.99,
+  "y": -609.12,
+  "width": 360.72,
+  "height": 609.12
  },
  "parts": [
   {
@@ -30,7 +30,11 @@
    "variants": {
     "rest": "avatar.squirrel.atlas#body.rest"
    },
-   "variant": "rest"
+   "variant": "rest",
+   "scale": {
+    "x": 0.72,
+    "y": 0.72
+   }
   },
   {
    "id": "head",
@@ -146,6 +150,16 @@
   },
   "happy": {
    "eyes": "happy"
+  }
+ },
+ "emotes": {
+  "joy": {
+   "expression": "happy",
+   "clip": "cheer"
+  },
+  "nod": {
+   "expression": "neutral",
+   "clip": "nod"
   }
  },
  "slots": {

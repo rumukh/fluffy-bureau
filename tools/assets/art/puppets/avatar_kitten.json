@@ -1,83 +1,84 @@
 {
-  "id": "avatar.kitten",
-  "dir": "avatar_kitten",
-  "base": "puppets/avatar_kitten/base.png",
-  "creature": "young kitten child",
-  "editCrop": [
-    237,
-    200,
-    512
-  ],
-  "neck": {
-    "y": 612,
-    "overlap": 18,
-    "pivot": [
-      512,
-      620
+ "id": "avatar.kitten",
+ "dir": "avatar_kitten",
+ "base": "puppets/avatar_kitten/base.png",
+ "creature": "young kitten child",
+ "editCrop": [
+  237,
+  200,
+  512
+ ],
+ "neck": {
+  "y": 612,
+  "overlap": 18,
+  "pivot": [
+   512,
+   620
+  ]
+ },
+ "features": {
+  "eyes": {
+   "ellipses": [
+    [
+     512,
+     431,
+     190,
+     62
     ]
+   ],
+   "variants": [
+    "half",
+    "closed",
+    "happy"
+   ]
   },
-  "features": {
-    "eyes": {
-      "ellipses": [
-        [
-          512,
-          431,
-          190,
-          62
-        ]
-      ],
-      "variants": [
-        "half",
-        "closed",
-        "happy"
-      ]
-    },
-    "brows": {
-      "ellipses": [
-        [
-          514,
-          310,
-          160,
-          22
-        ]
-      ],
-      "variants": [
-        "up",
-        "worried"
-      ]
-    },
-    "mouth": {
-      "ellipses": [
-        [
-          512,
-          540,
-          85,
-          30
-        ]
-      ],
-      "variants": [
-        "A",
-        "B",
-        "C",
-        "D",
-        "E",
-        "F"
-      ]
-    }
+  "brows": {
+   "ellipses": [
+    [
+     514,
+     310,
+     160,
+     22
+    ]
+   ],
+   "variants": [
+    "up",
+    "worried"
+   ]
   },
-  "avatar": {
-    "scarf": {
-      "y": [
-        562,
-        1090
-      ],
-      "x": [
-        262,
-        762
-      ],
-      "satMax": 0.24,
-      "valMin": 0.55
-    }
-  },
-  "bodyVariants": {}
+  "mouth": {
+   "ellipses": [
+    [
+     512,
+     540,
+     85,
+     30
+    ]
+   ],
+   "variants": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+   ]
+  }
+ },
+ "avatar": {
+  "scarf": {
+   "y": [
+    562,
+    1090
+   ],
+   "x": [
+    262,
+    762
+   ],
+   "satMax": 0.24,
+   "valMin": 0.55
+  }
+ },
+ "bodyVariants": {},
+ "scale": 0.72
 }
