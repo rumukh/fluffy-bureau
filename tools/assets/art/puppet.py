@@ -281,14 +281,17 @@ def assemble(cfg: dict, out_dir: Path, scale: float) -> None:
     # Rig in logical px == base px * scale; atlas scale maps atlas px back to logical px 1:1 here,
     # so rig coordinates are in base pixels multiplied by `scale` (logical = atlas px).
     f = lambda v: round(v * scale, 2)
-    feet_y = union[3]
+    # Root on the bottom pixel row (not its outer edge) so the body pivot stays inside the frame (AEG-ANIM-0012).
+    feet_y = union[3] - 1
     root = (W / 2, feet_y)
     pivot_head = cfg["neck"]["pivot"]
     hx, hy = origin_of["head"]
     bx, by = origin_of["body.rest"]
     body_pivot = (root[0] - bx, root[1] - by)
+    bw, bh = round((union[2] - union[0]) * scale), round((union[3] - union[1]) * scale)
     parts = [{
-        "id": "body", "pivot": {"x": f(body_pivot[0]), "y": f(body_pivot[1])}, "position": {"x": 0, "y": 0}, "z": 10,
+        "id": "body", "pivot": {"x": min(f(body_pivot[0]), bw - 0.5), "y": min(f(body_pivot[1]), bh - 0.5)},
+        "position": {"x": 0, "y": 0}, "z": 10,
         "variants": {v: f"{atlas_id}#body.{v}" for v in body_imgs}, "variant": "rest"}]
     parts.append({"id": "head", "parent": "body", "frame": f"{atlas_id}#head",
                   "pivot": {"x": f(pivot_head[0] - hx), "y": f(pivot_head[1] - hy)},

@@ -221,7 +221,7 @@
    "durationMs": null,
    "format": "json",
    "bytes": 2652,
-   "sha256": "8c40df5dc7cfd1a58b6c7df1228cd2447b7bd2325346d89013498b5f38afe3e8",
+   "sha256": "9c04676cefbd678a8496c5286f783f691c9cbe54469ffb3b6c6f7ff6aeea376b",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:4a63c63c68b32d2e; prompt tools/assets/art/prompts/puppets/avatar_fox_base.txt sha256:2ce4985cf0cd0447; references style_office_v1-c2.png",
@@ -392,7 +392,7 @@
    "durationMs": null,
    "format": "json",
    "bytes": 2712,
-   "sha256": "32103bc26b91cd73e154690c33219b1541fdafcb743ef2dc3b42677f09386402",
+   "sha256": "1bc0026a8629fc07a2547df474dfa801887d170bfd58d7f93e66e765edd5b4f8",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:4c23dc904e7ffbbf; prompt tools/assets/art/prompts/puppets/avatar_kitten_base.txt sha256:ebd169fbd9e2da47; references style_office_v1-c2.png",
@@ -487,7 +487,7 @@
    "durationMs": null,
    "format": "json",
    "bytes": 2692,
-   "sha256": "94e4eaaa458ee8aaf0e8dd8e2bbe6ac94d0b3dd689ec461aadc7b201dbd0803e",
+   "sha256": "ea9acdfb474014a452fd4f78ef48ce803449a93c458a3d512cd6f98ed1e0b489",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:59732523a71e0c38; prompt tools/assets/art/prompts/puppets/avatar_mouse_base.txt sha256:d838acc924c0b90c; references style_office_v1-c2.png",
@@ -582,7 +582,7 @@
    "durationMs": null,
    "format": "json",
    "bytes": 2692,
-   "sha256": "590e842ca0e1f9970a5bfc4d1eab06ee88f60419189a361342cddad98653a754",
+   "sha256": "1bf0ea9f84f18f5aecdbf3ceb596aa186c430d3394a925612718d2ef74af5170",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:c9d3bc1f459cc53a; prompt tools/assets/art/prompts/puppets/avatar_puppy_base.txt sha256:80e2f9fef422d0fe; references style_office_v1-c2.png",
@@ -677,7 +677,7 @@
    "durationMs": null,
    "format": "json",
    "bytes": 2752,
-   "sha256": "90625d8feb8d554cfc6bdb9456f7eea185604228f63a08b72298a35d724a0ad6",
+   "sha256": "a3a6484961e6146272162a35018740b852e25ecf5490318f363776ba4a565884",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:65513394ba1ac9eb; prompt tools/assets/art/prompts/puppets/avatar_squirrel_base.txt sha256:230241ca89a92fe6; references style_office_v1-c2.png",
@@ -1076,7 +1076,7 @@
    "durationMs": null,
    "format": "json",
    "bytes": 2041,
-   "sha256": "1fe9794c9502e7066e6d4037f6695c64e12b1fb1c31ff1b9909a2bdf1e1e92ba",
+   "sha256": "c359ac40262e75755a111c8681c243e4f5731830ab099ef880be16a2b5156d0f",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:a29cc8fb2f40fadd; prompt tools/assets/art/prompts/puppets/fitilyok_base.txt sha256:0d987461ffa6a91f; references sheet_fitilyok-c1.png, style_office_v1-c2.png",
@@ -1152,7 +1152,7 @@
    "durationMs": null,
    "format": "json",
    "bytes": 1575,
-   "sha256": "6c7dbb7a659e6f91c837d0a29e4f2fc0b4cd027858ac85aa9f4d53b618a306b7",
+   "sha256": "70ae585e3e97a950d879664fca6cfc4661a80883197d2f715b39a51afc2ab7d6",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:9e4224ef0f615192; prompt tools/assets/art/prompts/puppets/kartofan_base.txt sha256:4865896e26216e11; references sheet_kartofan-c1.png, style_office_v1-c2.png",
@@ -1228,7 +1228,7 @@
    "durationMs": null,
    "format": "json",
    "bytes": 2023,
-   "sha256": "c85d83e34cd9bdb6aa3ddb09e1cf279412eec3cd798a40d0a54742e6aa84020a",
+   "sha256": "ad0ed7288e5d25a09c8cb4b98b7a3c1b9bcae00e6521f87a1e893619f2300935",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:07b81b8295885b45; prompt tools/assets/art/prompts/puppets/khvosts_base.txt sha256:ae2b08c750ae74fe; references sheet_khvosts-c1.png, style_office_v1-c2.png",
@@ -1304,7 +1304,7 @@
    "durationMs": null,
    "format": "json",
    "bytes": 1987,
-   "sha256": "09357f350bfabe60f240c463f55b35466d09e1267824ab8de0ec67a001d6a4c4",
+   "sha256": "d1bb18dd52cc2321f68dbe4300ffa56ae780f6de71cdede86a6cf3dd5d56f303",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:e487c36fef82b8ad; prompt tools/assets/art/prompts/puppets/mouse_base.txt sha256:dff6723c4a458a28; references sheet_shurshiki-c1.png, style_office_v1-c2.png",
@@ -1380,7 +1380,7 @@
    "durationMs": null,
    "format": "json",
    "bytes": 2006,
-   "sha256": "f9931937c8debb00151cde5c3ebe9ed5594f7a5bbf0ac6d46862db183322bf6b",
+   "sha256": "c8cdc5b3661558c43276d07247595a5f9fcafef6c8502d0e583723f1aab9e65c",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:74edfad28c8a4351; prompt tools/assets/art/prompts/puppets/mouse2_base.txt sha256:64bf6ed9c894c228; references sheet_shurshiki-c1.png, style_office_v1-c2.png",
@@ -1456,7 +1456,7 @@
    "durationMs": null,
    "format": "json",
    "bytes": 2021,
-   "sha256": "3e2f7900f97e9d657ff307683b23fb9df80d914cc1bd3742fae9b48bb883cafb",
+   "sha256": "63af8647b5eb5bced45c7f3c2cc56d4f731c1104402273b6eeef7f4e8ee76551",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:a4810057ff84c5dc; prompt tools/assets/art/prompts/puppets/pudding_base.txt sha256:3b44a91b65b51eca; references sheet_puding-c1.png, style_office_v1-c2.png",
@@ -1532,7 +1532,7 @@
    "durationMs": null,
    "format": "json",
    "bytes": 1549,
-   "sha256": "543b082f4903a2268389ee7c6a9c9d9d5d5041f22d4c49e8cd51dae08964664b",
+   "sha256": "6ce6a8a44b9c159fec0159407928de4f3e0645ab14050a2d38f06c04fbe84e1b",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:d1d54e2bce597dcf; prompt tools/assets/art/prompts/puppets/stella_base.txt sha256:0779d15899ac89aa; references sheet_stella-c1.png, style_office_v1-c2.png",
@@ -1608,7 +1608,7 @@
    "durationMs": null,
    "format": "json",
    "bytes": 1987,
-   "sha256": "46a8bab02a6a2ba8e1471881033f35f8486a34436f9336453f97fe17d5c42563",
+   "sha256": "e40dacc4b640af993ca37e2167139137fb772ff79cc98e0ea89c070583560dbe",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:d89e4f20acacc9f0; prompt tools/assets/art/prompts/puppets/tyopa_base.txt sha256:8f1978a179414742; references sheet_tyopa-c1.png, style_office_v1-c2.png",
@@ -1684,7 +1684,7 @@
    "durationMs": null,
    "format": "json",
    "bytes": 2020,
-   "sha256": "310774cbf21747f9a3231766aac185398991f5bb67c3337045ec9e2bd874e0ca",
+   "sha256": "7f7b3a83c79130bb307d181d109bff8be9113a48da646c64897aa9b66103370f",
    "provenance": {
     "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality high)",
     "source": "master base.png sha256:0468e2ead92b80cd; prompt tools/assets/art/prompts/puppets/watsony_base.txt sha256:24b8bfffc92601c7; references sheet_vatsoni-c1.png, style_office_v1-c2.png",
