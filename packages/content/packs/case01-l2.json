@@ -2656,8 +2656,7 @@
     {
      "t": "dir",
      "id": "C1-5-D01",
-     "text": "Следы ведут к сараю Картофана.",
-     "background": "bg.shed-exterior"
+     "text": "Следы ведут к сараю Картофана."
     },
     {
      "t": "dir",
@@ -5290,5 +5289,5 @@
   }
  ],
  "reserved": [],
- "revision": "f19cc2ecedda9fb00ecd71e0866241879f822a417492c3d2a068e4bf2f0206de"
+ "revision": "81b858b6cde10f11a398de8a2143e5fc58ea136d3d344faa23e0b994b237d844"
 }

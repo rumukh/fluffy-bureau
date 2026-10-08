@@ -86,7 +86,7 @@ export const level2: VariantSource = {
       steps: [
         skill('tracks', [L('C1-5-01')]),
         minigame('c1l2-tracks'),
-        dir('C1-5-D01', 'Следы ведут к сараю Картофана.', 'bg.shed-exterior'),
+        dir('C1-5-D01', 'Следы ведут к сараю Картофана.'),
         dir('C1-5-D02', 'Игрок нажимает на окно. Окно сарая крупно: у коробки мэра в крышке окошко, в нём виден пирог.', 'bg.shed-window'),
         ...seq('C1-5-', 5, 7),
         reveal('c1-tracks'),
