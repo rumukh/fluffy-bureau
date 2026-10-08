@@ -5,14 +5,56 @@ import p1 from '../packs/prologue.json' with { type: 'json' };
 import p2 from '../packs/case01-l1.json' with { type: 'json' };
 import p3 from '../packs/case01-l2.json' with { type: 'json' };
 import p4 from '../packs/case01-l3.json' with { type: 'json' };
+import p5 from '../packs/case02-l1.json' with { type: 'json' };
+import p6 from '../packs/case02-l2.json' with { type: 'json' };
+import p7 from '../packs/case02-l3.json' with { type: 'json' };
+import p8 from '../packs/case03-l1.json' with { type: 'json' };
+import p9 from '../packs/case03-l2.json' with { type: 'json' };
+import p10 from '../packs/case03-l3.json' with { type: 'json' };
+import p11 from '../packs/case04-l1.json' with { type: 'json' };
+import p12 from '../packs/case04-l2.json' with { type: 'json' };
+import p13 from '../packs/case04-l3.json' with { type: 'json' };
+import p14 from '../packs/case05-l1.json' with { type: 'json' };
+import p15 from '../packs/case05-l2.json' with { type: 'json' };
+import p16 from '../packs/case05-l3.json' with { type: 'json' };
+import p17 from '../packs/case06-l1.json' with { type: 'json' };
+import p18 from '../packs/case06-l2.json' with { type: 'json' };
+import p19 from '../packs/case06-l3.json' with { type: 'json' };
+import p20 from '../packs/case07-l1.json' with { type: 'json' };
+import p21 from '../packs/case07-l2.json' with { type: 'json' };
+import p22 from '../packs/case07-l3.json' with { type: 'json' };
+import p23 from '../packs/case08-l1.json' with { type: 'json' };
+import p24 from '../packs/case08-l2.json' with { type: 'json' };
+import p25 from '../packs/case08-l3.json' with { type: 'json' };
 
 export const PACK_IDS = ["shared","prologue","case01-l1","case01-l2","case01-l3"] as const;
 /** Preparatory packs (cases 2–8): validated, not for production before «дальше». */
-export const PREVIEW_PACK_IDS = [] as const;
+export const PREVIEW_PACK_IDS = ["case02-l1","case02-l2","case02-l3","case03-l1","case03-l2","case03-l3","case04-l1","case04-l2","case04-l3","case05-l1","case05-l2","case05-l3","case06-l1","case06-l2","case06-l3","case07-l1","case07-l2","case07-l3","case08-l1","case08-l2","case08-l3"] as const;
 export const packs: Readonly<Record<string, ContentPack>> = {
   'shared': p0 as unknown as ContentPack,
   'prologue': p1 as unknown as ContentPack,
   'case01-l1': p2 as unknown as ContentPack,
   'case01-l2': p3 as unknown as ContentPack,
   'case01-l3': p4 as unknown as ContentPack,
+  'case02-l1': p5 as unknown as ContentPack,
+  'case02-l2': p6 as unknown as ContentPack,
+  'case02-l3': p7 as unknown as ContentPack,
+  'case03-l1': p8 as unknown as ContentPack,
+  'case03-l2': p9 as unknown as ContentPack,
+  'case03-l3': p10 as unknown as ContentPack,
+  'case04-l1': p11 as unknown as ContentPack,
+  'case04-l2': p12 as unknown as ContentPack,
+  'case04-l3': p13 as unknown as ContentPack,
+  'case05-l1': p14 as unknown as ContentPack,
+  'case05-l2': p15 as unknown as ContentPack,
+  'case05-l3': p16 as unknown as ContentPack,
+  'case06-l1': p17 as unknown as ContentPack,
+  'case06-l2': p18 as unknown as ContentPack,
+  'case06-l3': p19 as unknown as ContentPack,
+  'case07-l1': p20 as unknown as ContentPack,
+  'case07-l2': p21 as unknown as ContentPack,
+  'case07-l3': p22 as unknown as ContentPack,
+  'case08-l1': p23 as unknown as ContentPack,
+  'case08-l2': p24 as unknown as ContentPack,
+  'case08-l3': p25 as unknown as ContentPack,
 };

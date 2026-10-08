@@ -1,0 +1,3439 @@
+{
+ "format": "fluffy-content-pack",
+ "schema": 1,
+ "id": "case05-l1",
+ "kind": "case",
+ "title": "C5-TITLE",
+ "case": {
+  "number": 5,
+  "level": 1
+ },
+ "requires": [
+  "shared"
+ ],
+ "start": "C5-0",
+ "lines": [
+  {
+   "id": "C5-TITLE",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Скрип в Тихой норе",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-0-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Я живу напротив библиотеки. Каждую ночь — скрип!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C5-0-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Скрип-скрип. Я третью ночь не сплю.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-0-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "А ключ от библиотеки только у меня!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C5-0-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Скрип в Тихой норе? Вот это загадка.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-0-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Идём вечером. Скрипит ведь ночью.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-1-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Говорят, это Фитилёк. У окон ночью мерцает свет.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-1-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "А может, крот Картофан роет ход под полом?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-1-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Или пол просто старый. Сам скрипит!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C5-1-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Три догадки. Проверим каждую.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-1-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Гипотеза — догадка, которую ещё надо проверить.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-1-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "У мэра три гипотезы. Запишем все в Блокнот.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-1-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Кто скрипит? Где? Что тут случилось?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-TUT-KLUBKI-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Вот три волшебных клубка.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-TUT-KLUBKI-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Потянешь нитку — я подскажу, куда идти.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-2-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Ой! Эта полка была сломана. Я сам видел.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-2-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Кто её починил? Я никого не звал!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C5-2-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Серая Тень! Снова ночью починила вещь.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-2-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "И снова оставила знак. Смотри, на полке пёрышко.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-2-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Серое пёрышко. Запиши в Тайные заметки.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-2-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Серых птиц в городе много. Голуби, воробьи…",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C5-2-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Не будем гадать. Тайну Тени разгадаем потом.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-2-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Теперь у нас две заметки. Ромашка и пёрышко.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-2-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Осмотреть читальный зал",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-2-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Послушать скрип",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-2-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Спросить у Фитилька",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-6-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Расставить книги",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-3-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Возьми лупу. Найди три странные мелочи.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-3-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Пыльцы нет — значит, светлячок сам не приходил.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-3-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Только его фонарик. Подарок кому-то.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-3-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Скрипит здесь, в зале. Не в подвале, не на чердаке.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-3-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Новая улика! Записала… шёпотом, тут же библиотека.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-4-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Я записал скрип ракушкой. Слушайте!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "SK-sound-waves",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Услышь разницу",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-4-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Сравни ночной звук с образцами.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-SOUND-VIS",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Смотри на волны: коротко, длинно, высоко.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-4-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Рытья не слышно. Крот тут ни при чём.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-4-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "И одна доска так не скрипит. Это шаги.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-4-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Гипотеза мэра про старый пол не подтвердилась.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-4-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Ещё одна улика! Записала… очень тихо.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-5-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "fitilyok",
+   "text": "Я всю ночь зажигаю фонари на улице.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-5-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "fitilyok",
+   "text": "А фонарик я подарил. Кому — не скажу. Обещал!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C5-5-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Записала: Фитилёк хранит чей-то секрет.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-quiet-shelf",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Тихая полка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-6-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Книги перепутались. Расставим по алфавиту?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-6-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Смотри на первую букву. А — в начало.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-6-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Сомневаешься — пропой алфавит про себя.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-6-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Тетрадка! „Журнал Ночной читальни“.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-6-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Тут записи: „Вторник — Колобок. Читали вслух шёпотом“.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-6-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "А вместо подписей — отпечатки мышиных лапок.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-6-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Вот и проверена наша гипотеза. Тут читают ночью!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C5-6-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Есть улика! Записала… по алфавиту.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-7-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Улики собраны. Какая у тебя версия?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-7-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Выбери: кто, где и что случилось.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-8-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Шуршики? Выходите. Мы не сердимся.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-8-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Это мы скрипели. Мы читаем по ночам.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-8-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Днём тут шумно. А ночью тихо-тихо.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-8-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Мы хотели спросить мэра. Но стеснялись.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-8-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Он большой и важный. А мы маленькие.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-8-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Простите, что приходили без спроса. И мэр не спал.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-8-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Мышата! Я не сержусь. Я тоже люблю книжки.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-8-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "В следующий раз просто спросите. Я добрый.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-8-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "А можно нам читать ночью? Совсем тихо?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-8-10",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Можно! Откроем Ночную библиотеку. Для всех!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C5-8-11",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Разберём наши ложные следы.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-8-12",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Фонарик Фитилька — подарок мышатам. Сам он был на улице.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-8-13",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Под полом никто не рыл. Картофан роет только в огороде.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-8-14",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "А старый пол скрипит долго. Тут были шажки.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-8-15",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Твоя версия подтвердилась, {имя}! Гипотеза проверена.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-8-16",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Элементарно, пушинка! Дело раскрыто!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "SK-night-rules",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Правила",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-9-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Ночной библиотеке нужны правила. Выбери три добрых.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-9-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Чтобы всем было хорошо. И соседям тоже!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C5-9-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Записала правила. Красиво, по алфавиту!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C5-9-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Теперь и я буду спать. И читать иногда.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-9-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Спасибо, {имя}! Приходи к нам читать.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-10-01",
+   "rev": 1,
+   "kind": "fact",
+   "speaker": "narrator",
+   "text": "У мышей есть песни. Почти все звуки слишком высокие для нас.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C5-10-02",
+   "rev": 1,
+   "kind": "fact",
+   "speaker": "narrator",
+   "text": "Одна из древних библиотек хранила глиняные таблички. Ей больше 2600 лет.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C5-10-03",
+   "rev": 1,
+   "kind": "fact",
+   "speaker": "narrator",
+   "text": "В русском алфавите 33 буквы.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C5-10-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Записала в Энциклопедию. На букву „Б“ — библиотека!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C5-11-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Пятое дело раскрыто, {имя}!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C5-11-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Держи значок-лапку „Тихая нора“.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-11-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Две заметки… Кто же эта Серая Тень?",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C5-11-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Терпение, пушинка. Сыщик умеет ждать.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-AX-who",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Кто?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-AX-where",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Где скрипит?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-AX-reading",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Читальный зал",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-AX-basement",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Подвал под полом",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-AX-attic",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Чердак",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-AX-what",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Что случилось?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-AX-night-reading",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Тайная ночная читальня",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-AX-mole-tunnel",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Крот роет ход",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-AX-old-floor",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Старый пол скрипит сам",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-CL-search",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Находки за стеллажом",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-CL-sound",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Запись ночного скрипа",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-CL-shelf",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Журнал Ночной читальни",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-7-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Версия не подтвердилась! Зато вспомним кое-что.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-7-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Пыльцы в зале нет. Был только его фонарик.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-7-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Рытья не слышно. Слышны шажки и писк.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-7-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Подушечки и следы — в читальном зале.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-7-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Одна доска скрипит долго. А тут быстрые шажки.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-7-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Отличная попытка! Запишем и подумаем.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-3-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Фонарик-светлячок. На бирке: „Подарок от Фитилька“.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-NB-who-mice",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Журнал подписан мышиными лапками.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C5-NB-who-fitilyok",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Пыльцы нет. Был только фонарик Фитилька.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C5-NB-who-kartofan",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Рытья нет. Слышны шажки и писк.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C5-NB-where-reading",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Подушечки и следы — в читальном зале.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C5-NB-where-basement",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Находки лежат в зале, не в подвале.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C5-NB-where-attic",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Находки лежат в зале, не на чердаке.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C5-NB-what-reading",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Журнал прямо называет Ночную читальню.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C5-NB-what-mole",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Рытья нет. Это не кротовый ход.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C5-NB-what-floor",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Доска скрипит долго. Тут были шажки.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C5-H-01",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Осмотри читальный зал. Загляни за дальний стеллаж.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C5-H-02",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Мэр записал скрип. Послушай ракушку.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C5-H-03",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Книги на нижней полке перепутаны. Расставь их.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C5-H-06",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Теперь пригласи героев на разговор в Блокноте.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C5-H-04",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Перечитай Блокнот. Где ещё стоит вопрос?",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C5-R-01",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "watsony",
+   "text": "Есть ли в пыли пыльца? Светлячки её оставляют.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C5-R-02",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "watsony",
+   "text": "Один долгий скрип или много коротких?",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C5-R-03",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "watsony",
+   "text": "Сначала книга на „А“, потом на „Ё“.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C5-R-04",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "watsony",
+   "text": "Все улики есть. Осталась версия в Блокноте!",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C5-3-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Подушечки из напёрстков",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-3-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Подушечки из напёрстков! Кто-то тут сидит.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-3-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Фонарик-светлячок",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-3-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Крошечные следы",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-3-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Крошечные следы. А пыльцы нет.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-SOUND-Q1",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "На волне много коротких всплесков?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-SOUND-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Короткие шажки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-4-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Скрип-скрип-скрип. Это шажки, маленькие и быстрые.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-SOUND-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Глухое рытьё",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-4-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Послушай: звук один долгий или много коротких?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-SOUND-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Долгий скрип доски",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-SOUND-Q2",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Какой тонкий знак виден на волне?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-SOUND-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Тонкий писк",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-4-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Тонкий писк. Кто-то тихонько разговаривает.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-SOUND-B05",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Свист ветра",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-SOUND-B06",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Звон ложки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-BOOK-Q1",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Какая книга первая?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-BOOK-AZ",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Азбука",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-BOOK-YO",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Ёжик в тумане",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-6-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Какая буква раньше в алфавите? Сравни.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-BOOK-KO",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Колобок",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-BOOK-Q2",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Какая книга следующая?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-BOOK-RE",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Репка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-BOOK-TE",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Теремок",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-BOOK-Q4",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Какая книга последняя?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-RULE-Q1",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Выбери доброе правило.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-RULE-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Говорим шёпотом",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-RULE-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Пищим погромче",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-9-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Ой, тогда мэр опять не уснёт!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C5-RULE-B05",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Берём книги без спроса",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-9-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Нет-нет! Теперь мы спрашиваем.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-RULE-Q2",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Выбери ещё одно правило.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-RULE-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Ставим книги на место",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-RULE-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Гасим фонарик",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-RULE-Q3",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "И последнее правило.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "GL-hypothesis-DEF",
+   "rev": 1,
+   "kind": "glossary",
+   "speaker": "narrator",
+   "text": "Гипотеза — догадка, которую ещё надо проверить.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "GL-hypothesis",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Гипотеза",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c5-badge",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Значок-лапка «Тихая нора»",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c5-sticker-1",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Стикер «Тихая нора», одна звёздочка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c5-decor-shelf",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Маленькая книжная полка для Конторы",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c5-activity",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Карточка «Домашняя библиотека»",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-COL-secret-feather",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Серое пёрышко",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C5-TITLE",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Домашняя библиотека",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C5-01",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Выбери маленькую стопку домашних книг.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C5-02",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Найди первую букву на каждой обложке.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C5-03",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Поставь книги по алфавиту.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C5-04",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Если буквы совпали, сравни следующую.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C5-S01",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Не бери книги с высоких полок без взрослого.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C5-L-01",
+   "rev": 1,
+   "kind": "comfort",
+   "speaker": "watsony",
+   "text": "Тут тихо и уютно. Скрип — это просто чьи-то шажки.",
+   "voiced": true,
+   "delivery": "warm"
+  }
+ ],
+ "speakers": [],
+ "skills": [
+  {
+   "id": "quiet-shelf",
+   "title": "SK-quiet-shelf"
+  },
+  {
+   "id": "sound-waves",
+   "title": "SK-sound-waves"
+  },
+  {
+   "id": "night-rules",
+   "title": "SK-night-rules"
+  }
+ ],
+ "scenes": [
+  {
+   "id": "C5-0",
+   "title": "Контора: сонный мэр",
+   "location": "office",
+   "cast": [
+    "pudding",
+    "khvosts"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "line",
+     "line": "C5-0-01"
+    },
+    {
+     "t": "line",
+     "line": "C5-0-02"
+    },
+    {
+     "t": "line",
+     "line": "C5-0-03"
+    },
+    {
+     "t": "line",
+     "line": "C5-0-04"
+    },
+    {
+     "t": "line",
+     "line": "C5-0-05"
+    },
+    {
+     "t": "goto",
+     "scene": "C5-1"
+    }
+   ]
+  },
+  {
+   "id": "C5-1",
+   "title": "Вход в библиотеку",
+   "location": "library-entrance",
+   "cast": [
+    "pudding",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "dir",
+     "id": "C5-1-D01",
+     "text": "Вечер. Пудинг отпирает тяжёлую дверь библиотеки."
+    },
+    {
+     "t": "line",
+     "line": "C5-1-01"
+    },
+    {
+     "t": "line",
+     "line": "C5-1-02"
+    },
+    {
+     "t": "line",
+     "line": "C5-1-03"
+    },
+    {
+     "t": "line",
+     "line": "C5-1-04"
+    },
+    {
+     "t": "line",
+     "line": "C5-1-05"
+    },
+    {
+     "t": "line",
+     "line": "C5-1-06"
+    },
+    {
+     "t": "line",
+     "line": "C5-1-07"
+    },
+    {
+     "t": "skill",
+     "skill": "notebook",
+     "first": [
+      {
+       "t": "dir",
+       "id": "C5-1-D02",
+       "text": "Блокнот раскрывается: три колонки, по три строки."
+      }
+     ],
+     "known": [
+      {
+       "t": "dir",
+       "id": "C5-1-D02",
+       "text": "Блокнот раскрывается: три колонки, по три строки."
+      }
+     ]
+    },
+    {
+     "t": "skill",
+     "skill": "klubki",
+     "first": [
+      {
+       "t": "line",
+       "line": "C5-TUT-KLUBKI-01"
+      },
+      {
+       "t": "line",
+       "line": "C5-TUT-KLUBKI-02"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C5-TUT-KLUBKI-01"
+      },
+      {
+       "t": "line",
+       "line": "C5-TUT-KLUBKI-02"
+      }
+     ]
+    },
+    {
+     "t": "goto",
+     "scene": "C5-2"
+    }
+   ]
+  },
+  {
+   "id": "C5-2",
+   "title": "Холл: полка и Тайная заметка",
+   "location": "library-hall",
+   "cast": [
+    "pudding",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "cutscene",
+   "steps": [
+    {
+     "t": "dir",
+     "id": "C5-2-D01",
+     "text": "Холл библиотеки. Высокая полка починена; на верхней доске лежит серое пёрышко."
+    },
+    {
+     "t": "line",
+     "line": "C5-2-01"
+    },
+    {
+     "t": "line",
+     "line": "C5-2-02"
+    },
+    {
+     "t": "line",
+     "line": "C5-2-03"
+    },
+    {
+     "t": "line",
+     "line": "C5-2-04"
+    },
+    {
+     "t": "dir",
+     "id": "C5-2-D02",
+     "text": "Игрок нажимает на пёрышко. Оно ложится на страницу «Тайные заметки»."
+    },
+    {
+     "t": "line",
+     "line": "C5-2-05"
+    },
+    {
+     "t": "line",
+     "line": "C5-2-06"
+    },
+    {
+     "t": "line",
+     "line": "C5-2-07"
+    },
+    {
+     "t": "line",
+     "line": "C5-2-08"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c5-secret-note"
+    },
+    {
+     "t": "goto",
+     "scene": "C5-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C5-HUB",
+   "title": "Библиотека: выбор",
+   "location": "library-hall",
+   "cast": [
+    "pudding",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "hub",
+   "steps": [
+    {
+     "t": "if",
+     "when": {
+      "all": [
+       {
+        "clue": "c5-search"
+       },
+       {
+        "clue": "c5-sound"
+       },
+       {
+        "clue": "c5-shelf"
+       },
+       {
+        "not": {
+         "visited": "C5-7"
+        }
+       }
+      ]
+     },
+     "then": [
+      {
+       "t": "goto",
+       "scene": "C5-7"
+      }
+     ],
+     "else": []
+    },
+    {
+     "t": "menu",
+     "id": "C5-M",
+     "prompt": null,
+     "pageSize": 3,
+     "options": [
+      {
+       "id": "search",
+       "label": "C5-2-B01",
+       "to": "C5-3",
+       "when": null,
+       "hideWhen": {
+        "visited": "C5-3"
+       },
+       "optional": false
+      },
+      {
+       "id": "sound",
+       "label": "C5-2-B02",
+       "to": "C5-4",
+       "when": null,
+       "hideWhen": {
+        "visited": "C5-4"
+       },
+       "optional": false
+      },
+      {
+       "id": "fitilyok",
+       "label": "C5-2-B03",
+       "to": "C5-5",
+       "when": null,
+       "hideWhen": {
+        "visited": "C5-5"
+       },
+       "optional": true
+      },
+      {
+       "id": "shelf",
+       "label": "C5-6-B01",
+       "to": "C5-6",
+       "when": {
+        "clue": "c5-search"
+       },
+       "hideWhen": {
+        "visited": "C5-6"
+       },
+       "optional": false
+      }
+     ],
+     "back": null
+    }
+   ]
+  },
+  {
+   "id": "C5-3",
+   "title": "Читальный зал: «Лупа»",
+   "location": "reading-room",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "magnifier",
+     "first": [
+      {
+       "t": "line",
+       "line": "C5-3-01"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C5-3-01"
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c5l1-search"
+    },
+    {
+     "t": "line",
+     "line": "C5-3-05"
+    },
+    {
+     "t": "line",
+     "line": "C5-3-06"
+    },
+    {
+     "t": "line",
+     "line": "C5-3-07"
+    },
+    {
+     "t": "line",
+     "line": "C5-3-08"
+    },
+    {
+     "t": "clue",
+     "clue": "c5-search"
+    },
+    {
+     "t": "goto",
+     "scene": "C5-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C5-4",
+   "title": "«Услышь разницу»",
+   "location": "reading-room",
+   "cast": [
+    "pudding",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "line",
+     "line": "C5-4-01"
+    },
+    {
+     "t": "skill",
+     "skill": "sound-waves",
+     "first": [
+      {
+       "t": "line",
+       "line": "C5-4-02"
+      },
+      {
+       "t": "line",
+       "line": "C5-SOUND-VIS"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C5-4-02"
+      },
+      {
+       "t": "line",
+       "line": "C5-SOUND-VIS"
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c5l1-sound"
+    },
+    {
+     "t": "line",
+     "line": "C5-4-06"
+    },
+    {
+     "t": "line",
+     "line": "C5-4-07"
+    },
+    {
+     "t": "line",
+     "line": "C5-4-08"
+    },
+    {
+     "t": "line",
+     "line": "C5-4-09"
+    },
+    {
+     "t": "clue",
+     "clue": "c5-sound"
+    },
+    {
+     "t": "goto",
+     "scene": "C5-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C5-5",
+   "title": "Фитилёк",
+   "location": "library-window",
+   "cast": [
+    "fitilyok",
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "line",
+     "line": "C5-5-01"
+    },
+    {
+     "t": "line",
+     "line": "C5-5-02"
+    },
+    {
+     "t": "line",
+     "line": "C5-5-03"
+    },
+    {
+     "t": "goto",
+     "scene": "C5-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C5-6",
+   "title": "«Тихая полка»",
+   "location": "reading-room",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "quiet-shelf",
+     "first": [
+      {
+       "t": "line",
+       "line": "C5-6-01"
+      },
+      {
+       "t": "line",
+       "line": "C5-6-02"
+      },
+      {
+       "t": "line",
+       "line": "C5-6-03"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C5-6-01"
+      },
+      {
+       "t": "line",
+       "line": "C5-6-02"
+      },
+      {
+       "t": "line",
+       "line": "C5-6-03"
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c5l1-shelf"
+    },
+    {
+     "t": "line",
+     "line": "C5-6-05"
+    },
+    {
+     "t": "line",
+     "line": "C5-6-06"
+    },
+    {
+     "t": "line",
+     "line": "C5-6-07"
+    },
+    {
+     "t": "line",
+     "line": "C5-6-08"
+    },
+    {
+     "t": "line",
+     "line": "C5-6-09"
+    },
+    {
+     "t": "clue",
+     "clue": "c5-shelf"
+    },
+    {
+     "t": "goto",
+     "scene": "C5-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C5-7",
+   "title": "Версия",
+   "location": "reading-room",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "line",
+     "line": "C5-7-01"
+    },
+    {
+     "t": "line",
+     "line": "C5-7-02"
+    },
+    {
+     "t": "goto",
+     "scene": "C5-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C5-8",
+   "title": "Дальний стеллаж: доброе разрешение",
+   "location": "reading-room",
+   "cast": [
+    "mouse",
+    "pudding",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "cutscene",
+   "steps": [
+    {
+     "t": "dir",
+     "id": "C5-8-D01",
+     "text": "Хвостс тихо стучит по стеллажу. Из-за книг выглядывают мышата в пижамах."
+    },
+    {
+     "t": "line",
+     "line": "C5-8-01"
+    },
+    {
+     "t": "line",
+     "line": "C5-8-02"
+    },
+    {
+     "t": "line",
+     "line": "C5-8-03"
+    },
+    {
+     "t": "line",
+     "line": "C5-8-04"
+    },
+    {
+     "t": "line",
+     "line": "C5-8-05"
+    },
+    {
+     "t": "line",
+     "line": "C5-8-06"
+    },
+    {
+     "t": "line",
+     "line": "C5-8-07"
+    },
+    {
+     "t": "line",
+     "line": "C5-8-08"
+    },
+    {
+     "t": "line",
+     "line": "C5-8-09"
+    },
+    {
+     "t": "line",
+     "line": "C5-8-10"
+    },
+    {
+     "t": "line",
+     "line": "C5-8-11"
+    },
+    {
+     "t": "line",
+     "line": "C5-8-12"
+    },
+    {
+     "t": "line",
+     "line": "C5-8-13"
+    },
+    {
+     "t": "line",
+     "line": "C5-8-14"
+    },
+    {
+     "t": "line",
+     "line": "C5-8-15"
+    },
+    {
+     "t": "line",
+     "line": "C5-8-16"
+    },
+    {
+     "t": "goto",
+     "scene": "C5-9"
+    }
+   ]
+  },
+  {
+   "id": "C5-9",
+   "title": "Правила Ночной библиотеки",
+   "location": "reading-room",
+   "cast": [
+    "mouse",
+    "pudding",
+    "watsony"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "night-rules",
+     "first": [
+      {
+       "t": "line",
+       "line": "C5-9-01"
+      },
+      {
+       "t": "line",
+       "line": "C5-9-02"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C5-9-01"
+      },
+      {
+       "t": "line",
+       "line": "C5-9-02"
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c5l1-rules"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c5-heart-rules"
+    },
+    {
+     "t": "line",
+     "line": "C5-9-05"
+    },
+    {
+     "t": "dir",
+     "id": "C5-9-D01",
+     "text": "Мышата вешают табличку «Ночная библиотека». Фитилёк подсвечивает её с улицы."
+    },
+    {
+     "t": "line",
+     "line": "C5-9-06"
+    },
+    {
+     "t": "line",
+     "line": "C5-9-07"
+    },
+    {
+     "t": "goto",
+     "scene": "C5-10"
+    }
+   ]
+  },
+  {
+   "id": "C5-10",
+   "title": "«А ты знал?»",
+   "location": "night-library",
+   "cast": [
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "encyclopedia",
+     "first": [
+      {
+       "t": "dir",
+       "id": "C5-10-D01",
+       "text": "Три карточки «Это правда» складываются в Энциклопедию."
+      }
+     ],
+     "known": [
+      {
+       "t": "dir",
+       "id": "C5-10-D01",
+       "text": "Три карточки «Это правда» складываются в Энциклопедию."
+      }
+     ]
+    },
+    {
+     "t": "line",
+     "line": "C5-10-01"
+    },
+    {
+     "t": "line",
+     "line": "C5-10-02"
+    },
+    {
+     "t": "line",
+     "line": "C5-10-03"
+    },
+    {
+     "t": "line",
+     "line": "C5-10-04"
+    },
+    {
+     "t": "goto",
+     "scene": "C5-11"
+    }
+   ]
+  },
+  {
+   "id": "C5-11",
+   "title": "Награда",
+   "location": "office",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "cutscene",
+   "steps": [
+    {
+     "t": "line",
+     "line": "C5-11-01"
+    },
+    {
+     "t": "line",
+     "line": "C5-11-02"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c5-badge"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c5-buttons-l1"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c5-sticker-l1"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c5-decor-shelf"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c5-activity"
+    },
+    {
+     "t": "dir",
+     "id": "C5-11-D01",
+     "text": "Новое слово в «Словарике сыщика»: гипотеза."
+    },
+    {
+     "t": "line",
+     "line": "C5-11-03"
+    },
+    {
+     "t": "line",
+     "line": "C5-11-04"
+    },
+    {
+     "t": "end"
+    }
+   ]
+  }
+ ],
+ "logic": {
+  "axes": [
+   {
+    "id": "who",
+    "title": "C5-AX-who",
+    "values": [
+     {
+      "id": "mice",
+      "label": "NM-mouse"
+     },
+     {
+      "id": "fitilyok",
+      "label": "NM-fitilyok"
+     },
+     {
+      "id": "kartofan",
+      "label": "NM-kartofan"
+     }
+    ]
+   },
+   {
+    "id": "where",
+    "title": "C5-AX-where",
+    "values": [
+     {
+      "id": "reading",
+      "label": "C5-AX-reading"
+     },
+     {
+      "id": "basement",
+      "label": "C5-AX-basement"
+     },
+     {
+      "id": "attic",
+      "label": "C5-AX-attic"
+     }
+    ]
+   },
+   {
+    "id": "what",
+    "title": "C5-AX-what",
+    "values": [
+     {
+      "id": "night-reading",
+      "label": "C5-AX-night-reading"
+     },
+     {
+      "id": "mole-tunnel",
+      "label": "C5-AX-mole-tunnel"
+     },
+     {
+      "id": "old-floor",
+      "label": "C5-AX-old-floor"
+     }
+    ]
+   }
+  ],
+  "intended": {
+   "who": "mice",
+   "where": "reading",
+   "what": "night-reading"
+  },
+  "clues": [
+   {
+    "id": "c5-search",
+    "title": "C5-CL-search",
+    "required": true,
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "eq",
+       "axis": "where",
+       "value": "reading"
+      },
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "fitilyok"
+      }
+     ]
+    },
+    "requires": [],
+    "source": "C5-3",
+    "summary": "Подушечки, подаренный фонарик и следы без пыльцы находятся за дальним стеллажом."
+   },
+   {
+    "id": "c5-sound",
+    "title": "C5-CL-sound",
+    "required": true,
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "kartofan"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "mole-tunnel"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "old-floor"
+      }
+     ]
+    },
+    "requires": [],
+    "source": "C5-4",
+    "summary": "На записи слышны быстрые шажки и писк; рытья и долгого скрипа доски нет."
+   },
+   {
+    "id": "c5-shelf",
+    "title": "C5-CL-shelf",
+    "required": true,
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "eq",
+       "axis": "who",
+       "value": "mice"
+      },
+      {
+       "op": "eq",
+       "axis": "what",
+       "value": "night-reading"
+      }
+     ]
+    },
+    "requires": [
+     "c5-search"
+    ],
+    "source": "C5-6",
+    "summary": "Журнал Ночной читальни подписан мышиными лапками."
+   }
+  ],
+  "version": {
+   "button": "UI-hud.version",
+   "available": {
+    "visited": "C5-7"
+   },
+   "onSolved": "C5-8"
+  },
+  "wrongVersion": {
+   "intro": [
+    {
+     "line": "C5-7-03",
+     "when": null
+    }
+   ],
+   "byValue": [
+    {
+     "axis": "who",
+     "value": "fitilyok",
+     "clues": [
+      "c5-search"
+     ],
+     "lines": [
+      {
+       "line": "C5-7-04",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "who",
+     "value": "kartofan",
+     "clues": [
+      "c5-sound"
+     ],
+     "lines": [
+      {
+       "line": "C5-7-05",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "where",
+     "value": "basement",
+     "clues": [
+      "c5-search"
+     ],
+     "lines": [
+      {
+       "line": "C5-7-06",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "where",
+     "value": "attic",
+     "clues": [
+      "c5-search"
+     ],
+     "lines": [
+      {
+       "line": "C5-7-06",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "what",
+     "value": "mole-tunnel",
+     "clues": [
+      "c5-sound"
+     ],
+     "lines": [
+      {
+       "line": "C5-7-05",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "what",
+     "value": "old-floor",
+     "clues": [
+      "c5-sound"
+     ],
+     "lines": [
+      {
+       "line": "C5-7-07",
+       "when": null
+      }
+     ]
+    }
+   ],
+   "outro": [
+    {
+     "line": "C5-7-08",
+     "when": null
+    }
+   ]
+  },
+  "redHerrings": [
+   {
+    "id": "rh-c5-fitilyok",
+    "summary": "Фонарик Фитилька похож на след светлячка; это подарок мышатам.",
+    "presentedBy": [
+     "C5-1-01",
+     "C5-3-03",
+     "C5-5-02"
+    ],
+    "explainedBy": [
+     "C5-8-12"
+    ]
+   },
+   {
+    "id": "rh-c5-kartofan",
+    "summary": "Мэр предполагает кротовый ход; рытья нет.",
+    "presentedBy": [
+     "C5-1-02"
+    ],
+    "explainedBy": [
+     "C5-8-13"
+    ]
+   },
+   {
+    "id": "rh-c5-old-floor",
+    "summary": "Старый пол мог бы скрипеть сам, но звук похож на шажки.",
+    "presentedBy": [
+     "C5-1-03"
+    ],
+    "explainedBy": [
+     "C5-8-14"
+    ]
+   }
+  ]
+ },
+ "deduction": {
+  "schema": 1,
+  "id": "case05-l1",
+  "axes": [
+   {
+    "id": "who",
+    "values": [
+     "mice",
+     "fitilyok",
+     "kartofan"
+    ]
+   },
+   {
+    "id": "where",
+    "values": [
+     "reading",
+     "basement",
+     "attic"
+    ]
+   },
+   {
+    "id": "what",
+    "values": [
+     "night-reading",
+     "mole-tunnel",
+     "old-floor"
+    ]
+   }
+  ],
+  "compatibility": null,
+  "intended": {
+   "who": "mice",
+   "where": "reading",
+   "what": "night-reading"
+  },
+  "clues": [
+   {
+    "id": "c5-search",
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "eq",
+       "axis": "where",
+       "value": "reading"
+      },
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "fitilyok"
+      }
+     ]
+    },
+    "requires": [],
+    "requiresAnswer": false,
+    "explanationKey": "C5-CL-search"
+   },
+   {
+    "id": "c5-sound",
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "kartofan"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "mole-tunnel"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "old-floor"
+      }
+     ]
+    },
+    "requires": [],
+    "requiresAnswer": false,
+    "explanationKey": "C5-CL-sound"
+   },
+   {
+    "id": "c5-shelf",
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "eq",
+       "axis": "who",
+       "value": "mice"
+      },
+      {
+       "op": "eq",
+       "axis": "what",
+       "value": "night-reading"
+      }
+     ]
+    },
+    "requires": [
+     "c5-search"
+    ],
+    "requiresAnswer": false,
+    "explanationKey": "C5-CL-shelf"
+   }
+  ],
+  "redHerrings": [
+   {
+    "id": "rh-c5-fitilyok",
+    "explanationKey": "C5-8-12"
+   },
+   {
+    "id": "rh-c5-kartofan",
+    "explanationKey": "C5-8-13"
+   },
+   {
+    "id": "rh-c5-old-floor",
+    "explanationKey": "C5-8-14"
+   }
+  ],
+  "maxCandidates": 27
+ },
+ "notebookHelp": {
+  "mode": "suggest",
+  "marks": [
+   {
+    "axis": "who",
+    "value": "mice",
+    "mark": "confirmed",
+    "clues": [
+     "c5-shelf"
+    ],
+    "line": "C5-NB-who-mice"
+   },
+   {
+    "axis": "who",
+    "value": "fitilyok",
+    "mark": "excluded",
+    "clues": [
+     "c5-search"
+    ],
+    "line": "C5-NB-who-fitilyok"
+   },
+   {
+    "axis": "who",
+    "value": "kartofan",
+    "mark": "excluded",
+    "clues": [
+     "c5-sound"
+    ],
+    "line": "C5-NB-who-kartofan"
+   },
+   {
+    "axis": "where",
+    "value": "reading",
+    "mark": "confirmed",
+    "clues": [
+     "c5-search"
+    ],
+    "line": "C5-NB-where-reading"
+   },
+   {
+    "axis": "where",
+    "value": "basement",
+    "mark": "excluded",
+    "clues": [
+     "c5-search"
+    ],
+    "line": "C5-NB-where-basement"
+   },
+   {
+    "axis": "where",
+    "value": "attic",
+    "mark": "excluded",
+    "clues": [
+     "c5-search"
+    ],
+    "line": "C5-NB-where-attic"
+   },
+   {
+    "axis": "what",
+    "value": "night-reading",
+    "mark": "confirmed",
+    "clues": [
+     "c5-shelf"
+    ],
+    "line": "C5-NB-what-reading"
+   },
+   {
+    "axis": "what",
+    "value": "mole-tunnel",
+    "mark": "excluded",
+    "clues": [
+     "c5-sound"
+    ],
+    "line": "C5-NB-what-mole"
+   },
+   {
+    "axis": "what",
+    "value": "old-floor",
+    "mark": "excluded",
+    "clues": [
+     "c5-sound"
+    ],
+    "line": "C5-NB-what-floor"
+   }
+  ],
+  "pointers": [],
+  "nothing": "UI-notebook.nothing"
+ },
+ "hints": {
+  "klubok": {
+   "speaker": "khvosts",
+   "precision": "exact",
+   "allowance": 3,
+   "rules": [
+    {
+     "id": "C5-H-01",
+     "when": {
+      "not": {
+       "clue": "c5-search"
+      }
+     },
+     "cites": []
+    },
+    {
+     "id": "C5-H-02",
+     "when": {
+      "all": [
+       {
+        "clue": "c5-search"
+       },
+       {
+        "not": {
+         "clue": "c5-sound"
+        }
+       }
+      ]
+     },
+     "cites": [
+      "c5-search"
+     ]
+    },
+    {
+     "id": "C5-H-03",
+     "when": {
+      "all": [
+       {
+        "clue": "c5-search"
+       },
+       {
+        "not": {
+         "clue": "c5-shelf"
+        }
+       }
+      ]
+     },
+     "cites": [
+      "c5-search"
+     ]
+    },
+    {
+     "id": "C5-H-06",
+     "when": {
+      "visited": "C5-7"
+     },
+     "cites": [
+      "c5-search",
+      "c5-sound",
+      "c5-shelf"
+     ]
+    }
+   ],
+   "review": "C5-H-04",
+   "exhausted": "UI-hint.klubokEmptyShell"
+  },
+  "shell": {
+   "speaker": "watsony",
+   "precision": "exact",
+   "allowance": null,
+   "rules": [
+    {
+     "id": "C5-R-01",
+     "when": {
+      "not": {
+       "clue": "c5-search"
+      }
+     },
+     "cites": []
+    },
+    {
+     "id": "C5-R-02",
+     "when": {
+      "all": [
+       {
+        "clue": "c5-search"
+       },
+       {
+        "not": {
+         "clue": "c5-sound"
+        }
+       }
+      ]
+     },
+     "cites": [
+      "c5-search"
+     ]
+    },
+    {
+     "id": "C5-R-03",
+     "when": {
+      "all": [
+       {
+        "clue": "c5-search"
+       },
+       {
+        "not": {
+         "clue": "c5-shelf"
+        }
+       }
+      ]
+     },
+     "cites": [
+      "c5-search"
+     ]
+    },
+    {
+     "id": "C5-R-04",
+     "when": {
+      "visited": "C5-7"
+     },
+     "cites": [
+      "c5-search",
+      "c5-sound",
+      "c5-shelf"
+     ]
+    }
+   ],
+   "review": "C5-R-04",
+   "exhausted": null
+  }
+ },
+ "minigames": [
+  {
+   "id": "c5l1-search",
+   "skill": "magnifier",
+   "config": {
+    "kind": "magnifier",
+    "targets": [
+     {
+      "id": "thimbles",
+      "label": "C5-3-B01",
+      "required": true,
+      "reply": [
+       "C5-3-02"
+      ]
+     },
+     {
+      "id": "lantern",
+      "label": "C5-3-B02",
+      "required": true,
+      "reply": [
+       "C5-3-03"
+      ]
+     },
+     {
+      "id": "tiny-tracks",
+      "label": "C5-3-B03",
+      "required": true,
+      "reply": [
+       "C5-3-04"
+      ]
+     }
+    ],
+    "afterFirst": [],
+    "afterFirstSkill": null,
+    "assistAfterMisses": 3
+   }
+  },
+  {
+   "id": "c5l1-sound",
+   "skill": "sound-waves",
+   "config": {
+    "kind": "staged",
+    "mechanic": "sound-waves",
+    "description": "Беззвучное сравнение волн: длинный/короткий, высокий/низкий, частый/редкий.",
+    "lines": [
+     "C5-4-04"
+    ],
+    "steps": [
+     {
+      "id": "steps",
+      "prompt": "C5-SOUND-Q1",
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "steps",
+        "label": "C5-SOUND-B01",
+        "correct": true,
+        "reply": [
+         "C5-4-03"
+        ]
+       },
+       {
+        "id": "dig",
+        "label": "C5-SOUND-B02",
+        "correct": false,
+        "reply": [
+         "C5-4-04"
+        ]
+       },
+       {
+        "id": "board",
+        "label": "C5-SOUND-B03",
+        "correct": false,
+        "reply": [
+         "C5-4-04"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "squeak",
+      "prompt": "C5-SOUND-Q2",
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "squeak",
+        "label": "C5-SOUND-B04",
+        "correct": true,
+        "reply": [
+         "C5-4-05"
+        ]
+       },
+       {
+        "id": "wind",
+        "label": "C5-SOUND-B05",
+        "correct": false,
+        "reply": [
+         "C5-4-04"
+        ]
+       },
+       {
+        "id": "spoon",
+        "label": "C5-SOUND-B06",
+        "correct": false,
+        "reply": [
+         "C5-4-04"
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "c5l1-shelf",
+   "skill": "quiet-shelf",
+   "config": {
+    "kind": "staged",
+    "mechanic": "quiet-shelf",
+    "description": "Выбор следующей книги по алфавиту, не больше трёх карточек на шаг.",
+    "lines": [
+     "C5-6-04"
+    ],
+    "steps": [
+     {
+      "id": "first",
+      "prompt": "C5-BOOK-Q1",
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "az",
+        "label": "C5-BOOK-AZ",
+        "correct": true,
+        "reply": []
+       },
+       {
+        "id": "yo",
+        "label": "C5-BOOK-YO",
+        "correct": false,
+        "reply": [
+         "C5-6-04"
+        ]
+       },
+       {
+        "id": "ko",
+        "label": "C5-BOOK-KO",
+        "correct": false,
+        "reply": [
+         "C5-6-04"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "second",
+      "prompt": "C5-BOOK-Q2",
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "yo",
+        "label": "C5-BOOK-YO",
+        "correct": true,
+        "reply": []
+       },
+       {
+        "id": "re",
+        "label": "C5-BOOK-RE",
+        "correct": false,
+        "reply": [
+         "C5-6-04"
+        ]
+       },
+       {
+        "id": "te",
+        "label": "C5-BOOK-TE",
+        "correct": false,
+        "reply": [
+         "C5-6-04"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "last",
+      "prompt": "C5-BOOK-Q4",
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "ko",
+        "label": "C5-BOOK-KO",
+        "correct": false,
+        "reply": [
+         "C5-6-04"
+        ]
+       },
+       {
+        "id": "re",
+        "label": "C5-BOOK-RE",
+        "correct": false,
+        "reply": [
+         "C5-6-04"
+        ]
+       },
+       {
+        "id": "te",
+        "label": "C5-BOOK-TE",
+        "correct": true,
+        "reply": []
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "c5l1-rules",
+   "skill": "night-rules",
+   "config": {
+    "kind": "staged",
+    "mechanic": "night-rules",
+    "description": "Выбор добрых правил Ночной библиотеки.",
+    "lines": [],
+    "steps": [
+     {
+      "id": "r1",
+      "prompt": "C5-RULE-Q1",
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "whisper",
+        "label": "C5-RULE-B01",
+        "correct": true,
+        "reply": []
+       },
+       {
+        "id": "loud",
+        "label": "C5-RULE-B04",
+        "correct": false,
+        "reply": [
+         "C5-9-03"
+        ]
+       },
+       {
+        "id": "ask",
+        "label": "C5-RULE-B05",
+        "correct": false,
+        "reply": [
+         "C5-9-04"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "r2",
+      "prompt": "C5-RULE-Q2",
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "books",
+        "label": "C5-RULE-B02",
+        "correct": true,
+        "reply": []
+       },
+       {
+        "id": "lantern",
+        "label": "C5-RULE-B03",
+        "correct": true,
+        "reply": []
+       },
+       {
+        "id": "loud",
+        "label": "C5-RULE-B04",
+        "correct": false,
+        "reply": [
+         "C5-9-03"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "r3",
+      "prompt": "C5-RULE-Q3",
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "lantern",
+        "label": "C5-RULE-B03",
+        "correct": true,
+        "reply": []
+       },
+       {
+        "id": "whisper",
+        "label": "C5-RULE-B01",
+        "correct": true,
+        "reply": []
+       },
+       {
+        "id": "ask",
+        "label": "C5-RULE-B05",
+        "correct": false,
+        "reply": [
+         "C5-9-04"
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "facts": [
+  {
+   "id": "fact-c5-mouse-songs",
+   "line": "C5-10-01"
+  },
+  {
+   "id": "fact-c5-ashurbanipal",
+   "line": "C5-10-02"
+  },
+  {
+   "id": "fact-c5-alphabet",
+   "line": "C5-10-03"
+  }
+ ],
+ "glossary": [
+  {
+   "id": "hypothesis",
+   "word": "гипотеза",
+   "definition": "GL-hypothesis-DEF",
+   "label": "GL-hypothesis",
+   "forms": [
+    "гипотеза",
+    "гипотезы",
+    "гипотезу",
+    "гипотезой",
+    "гипотезою",
+    "гипотезе",
+    "гипотез",
+    "гипотезам",
+    "гипотезами",
+    "гипотезах"
+   ]
+  }
+ ],
+ "rewards": [
+  {
+   "id": "rw-c5-secret-note",
+   "kind": "sticker",
+   "label": "C5-COL-secret-feather",
+   "amount": 1,
+   "claimKey": "case05:secret-note:feather"
+  },
+  {
+   "id": "rw-c5-heart-rules",
+   "kind": "hearts",
+   "label": "RW-heart",
+   "amount": 1,
+   "claimKey": "case05:heart:rules"
+  },
+  {
+   "id": "rw-c5-badge",
+   "kind": "badge",
+   "label": "RW-c5-badge",
+   "amount": 1,
+   "claimKey": "case05:badge"
+  },
+  {
+   "id": "rw-c5-buttons-l1",
+   "kind": "buttons",
+   "label": "RW-buttons-10",
+   "amount": 10,
+   "claimKey": "case05:l1:buttons"
+  },
+  {
+   "id": "rw-c5-sticker-l1",
+   "kind": "sticker",
+   "label": "RW-c5-sticker-1",
+   "amount": 1,
+   "claimKey": "case05:l1:sticker"
+  },
+  {
+   "id": "rw-c5-decor-shelf",
+   "kind": "decor",
+   "label": "RW-c5-decor-shelf",
+   "amount": 1,
+   "claimKey": "case05:decor:shelf"
+  },
+  {
+   "id": "rw-c5-activity",
+   "kind": "activity",
+   "label": "RW-c5-activity",
+   "amount": 1,
+   "claimKey": "case05:activity:library"
+  }
+ ],
+ "collections": [
+  {
+   "id": "c5-secret-feather",
+   "collection": "secret-notes",
+   "label": "C5-COL-secret-feather",
+   "line": "C5-2-05"
+  }
+ ],
+ "activities": [
+  {
+   "id": "act-c5-library",
+   "title": "ACT-C5-TITLE",
+   "steps": [
+    {
+     "line": "ACT-C5-01",
+     "adultOnly": false
+    },
+    {
+     "line": "ACT-C5-02",
+     "adultOnly": false
+    },
+    {
+     "line": "ACT-C5-03",
+     "adultOnly": false
+    },
+    {
+     "line": "ACT-C5-04",
+     "adultOnly": false
+    }
+   ],
+   "safety": [
+    "ACT-C5-S01"
+   ],
+   "allergens": []
+  }
+ ],
+ "comfort": [
+  {
+   "scene": "*",
+   "line": "C5-L-01"
+  }
+ ],
+ "cutscenes": [],
+ "plannedCutscenes": [
+  {
+   "id": "cs-c5-secret-note",
+   "scene": "C5-2",
+   "summary": "Починенная высокая полка и серое пёрышко в Тайных заметках."
+  },
+  {
+   "id": "cs-c5-mice",
+   "scene": "C5-8",
+   "summary": "Мышата Шуршики выходят из-за дальнего стеллажа и просят разрешения."
+  },
+  {
+   "id": "cs-c5-rules",
+   "scene": "C5-9",
+   "summary": "Мэр, мышата и Ватсони рисуют правила Ночной библиотеки."
+  },
+  {
+   "id": "cs-c5-reward",
+   "scene": "C5-11",
+   "summary": "Вручение значка-лапки «Тихая нора» и книжной полки для Конторы."
+  }
+ ],
+ "reserved": [],
+ "revision": "da3e6543a6cb5101942d797f75a79e619984b410e87fcfaf1a99667d90f16315"
+}

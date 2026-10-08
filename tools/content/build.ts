@@ -22,7 +22,7 @@ const files = new Map<string, string>();
 const json = (v: unknown) => `${JSON.stringify(v, null, 1)}\n`;
 const stage1Ids = new Set(['shared', ...stage1.flatMap((c) => c.variants.map((v) => v.pack))]);
 for (const p of result.packs) files.set(`packages/content/packs/${p.id}.json`, json(p));
-const s1manifest = { ...result.manifest, packs: Object.fromEntries(Object.entries(result.manifest.packs).filter(([k]) => stage1Ids.has(k))), entries: result.manifest.entries.filter((e) => e.packs.some((p) => stage1Ids.has(p))) };
+const s1manifest = { ...result.manifest, packs: Object.fromEntries(Object.entries(result.manifest.packs).filter(([k]) => stage1Ids.has(k))), entries: result.manifest.entries.filter((e) => e.packs.some((p) => stage1Ids.has(p))).map((e) => ({ ...e, packs: e.packs.filter((p) => stage1Ids.has(p)) })) };
 files.set('packages/content/voice-manifest.json', json(s1manifest));
 if (withStage2) files.set('packages/content/voice-manifest.stage2-preview.json', json({ ...result.manifest, entries: result.manifest.entries.filter((e) => !e.packs.every((p) => stage1Ids.has(p))) }));
 const packIds = result.packs.map((p) => p.id);

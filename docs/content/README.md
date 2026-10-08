@@ -6,6 +6,7 @@
 - [VALIDATION_REPORT.md](VALIDATION_REPORT.md) — отчёт проверки (генерируется).
 - [scripts/](scripts/) — явный сценарий каждой версии для PM (генерируется).
 - [FACT_SOURCES.md](FACT_SOURCES.md) — проверка фактов и источники (T18).
+- [C2_REPORT.md](C2_REPORT.md) — дела 2–8: нормализация и проверка (подготовка Этапа 2).
 
 Сборка: `node tools/content/build.ts` (из корня). Проверка, что выходные файлы актуальны:
 `node tools/content/build.ts --check`. Тесты валидатора: `npx vitest run tools/content`.

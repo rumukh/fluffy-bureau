@@ -427,6 +427,8 @@ export interface ContentPack {
   activities: ActivityCard[];
   comfort: ComfortLine[];
   cutscenes: Cutscene[];
+  /** Editorial plan for cutscenes not yet authored (preview packs only); never played. */
+  plannedCutscenes: { id: string; scene: SceneId; summary: string }[];
   /** Lines owned by systems not modelled by the step language yet (family mode, …); still validated and voiced. */
   reserved: { lines: LineId[]; reason: string }[];
 }

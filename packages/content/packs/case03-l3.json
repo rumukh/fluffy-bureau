@@ -1,0 +1,4945 @@
+{
+ "format": "fluffy-content-pack",
+ "schema": 1,
+ "id": "case03-l3",
+ "kind": "case",
+ "title": "C3-TITLE",
+ "case": {
+  "number": 3,
+  "level": 3
+ },
+ "requires": [
+  "shared"
+ ],
+ "start": "C3-0",
+ "lines": [
+  {
+   "id": "C3-TITLE",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Тень в Медовом маяке",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-0-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Уже вечер. Наш ночной стажёр скоро проснётся.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-0-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Это Пухлик, совёнок. Днём он спит, ночью дежурит.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-0-03",
+   "rev": 2,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Вы ещё не знакомы, {имя}.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-0-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "У Медового маяка кто-то бродит!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-0-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Наверху мигает свет. И что-то шуршит.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-0-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Все говорят: это призрак!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-0-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Призрак? Я сыщик много лет. Призраков не встречал.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-0-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "А вот загадки встречал часто. Идём проверим!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-0-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Возьмём фонари. И лампу смелости, на всякий случай.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-1-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Смотрите! Опять мигает. На самом верху!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-1-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Каждую ночь мигает. И шуршит!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-1-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Говорят, светлячок Фитилёк балуется. Он же светится.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-1-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "А я видела сороку у пруда. Шуршит крыльями!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-1-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Подождём с выводами. Сначала соберём улики.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L2-1-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "А ключ от маяка только у Дамки!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-L2-1-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Ключ у меня. Но ночью я дома!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-L2-1-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Проверим. Улики скажут лучше нас.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L3-1-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "А Тёпа вечером варил мыло на берегу.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L3-1-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Пузыри над прудом так и блестели!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-1-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Если станет неуютно — помнишь про лампу?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-1-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Кто мигает? Где? Что тут случилось?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-1-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Может, фонарь сломался. Может, кто-то тренируется.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L2-1-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Или Дамка что-то чинит по ночам.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-1-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "А может, призрак!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-1-10",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Тогда и его запишем. Проверим всё честно.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-1-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Послушать ночные звуки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-1-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Подойти к двери маяка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-1-B07",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Расспросить мышат",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-1-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Подняться наверх",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-1-B05",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Осмотреть лестницу",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-1-B06",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Журнал смотрителя",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-1-B08",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Прочитать мигание",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-sound-diff",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Услышь разницу",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-2-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Ракушка-записушка слышала ночь. Послушаем!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-2-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Сравни ночной звук с образцами. Какой похож?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L2-2-02",
+   "rev": 2,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Это только звук. Проверим инструменты.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-2-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "А взмахов крыльев не слышно. Совсем.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-2-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Кто-то летает тихо-тихо. Интересно…",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C3-2-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "И призраки книг не листают.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-2-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Новая улика! Записала шёпотом.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-3-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Сейчас открою. Ключ у меня, я смотритель.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-3-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Ой! Моё весло. Вчера оно было сломано.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-3-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "А теперь целое! И ромашка привязана.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-3-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Кто-то ночью починил весло. И ничего не сказал.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-3-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Это Серая Тень! Она чинит вещи по ночам.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-3-06",
+   "rev": 2,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Кто это — пока секрет. Добрая тайна города.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-secret-notes",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Тайные заметки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-3-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Понюхай ромашку, {имя}. Чем пахнет?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-3-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Запах ромашки. Запиши в Тайные заметки.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-3-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Тайну Тени мы разгадаем потом. Сейчас — маяк.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L2-3-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Наверху всё заперто. И окно я закрыла!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-L3-4-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Мы ночью рисовали, как мигает. Вот!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-L3-4-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Мигало пять раз. Точно-точно!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-L3-4-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Посчитаем вместе? Тут три огонька.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L3-4-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Ой… Мы считали вдвоём и сбились. Три!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-L3-4-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Спасибо, что поправили себя.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L3-4-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "А рисунок пригодится. Найдём, что он значит.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-5-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Отсюда и мигает свет. Возьми лупу!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-L2-4-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Тут пять мелочей. Найди все!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-5-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Фонарь исправный. Я его сама проверяю.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L3-5-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Мигают отсюда. А зачем — пока загадка.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-5-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Есть улика! Записала… с первого урока.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L2-4-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "А вот журнал смотрителя. Дамка всё записывает.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-6-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "В пыли следы! Сравни их с карточками.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-6-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Сова… Тихий полёт, ночная работа…",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C3-6-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Есть улика! Записала… и почему-то зевнула.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-read-blink",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Прочитай мигание",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L3-7-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Сравним рисунок мышат с уроками в книге.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L3-7-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Точка — короткий огонёк. Чёрточка — длинный.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L3-7-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Урок первый: „Привет“! Кто-то учит азбуку.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L3-7-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Сломанный фонарь словами не мигает.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L3-7-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Есть улика! Записала… точка, точка, чёрточка.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L2-6-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Листки журнала рассыпались. Сложим их по порядку.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L2-6-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Смотри на часы на каждом листке.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L2-6-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Снова лента времени! Смотри на стрелки.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L2-6-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "В девять мигало. А Дамка была дома.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L2-6-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Дверь заперта с семи. Кто-то влетел в окно!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-L3-8-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "А котёл Тёпы погас ещё до мигания.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L2-6-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Ещё одна улика! Записала по часам.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-7-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Улики собраны. Теперь — дедукция!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-7-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Дедукция — когда из улик шаг за шагом выводишь правду.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-7-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Выбери: кто, где и что случилось.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-8-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Пухлик? Выходи, мы не сердимся.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-8-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Это я мигал. И шуршал.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-8-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Я учу азбуку огоньков. По ночам.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-8-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Хотел выучить и удивить вас.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-8-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Не думал, что все испугаются. Простите!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-8-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Учиться — дело хорошее, Пухлик.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-8-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Но о тайных уроках лучше говорить друзьям.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-8-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Я скажу всем. Прямо сейчас!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-8-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Разберём наши ложные следы.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-8-10",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Фитилёк светится. Но он всю ночь зажигал фонари.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-8-11",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Стелла шуршит крыльями. А тут шуршали страницы.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L2-8-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Ключ у Дамки. Но Пухлик влетал в окно.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L2-8-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "А я думала, что закрыла окно. Буду проверять!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-L3-10-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Пузыри Тёпы блестели вечером. А мигало ночью.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L3-10-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "text": "Мои пузыри только блестят. Мигать не умеют!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-8-12",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "А призрак — это шорох и мигание. Без призрака.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-8-13",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Твоя дедукция сработала, {имя}! Версия подтвердилась.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-8-14",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Элементарно, пушинка! Дело раскрыто!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-8-15",
+   "rev": 2,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Ты из бюро? Здравствуй, {имя}!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-8-16",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Я дежурю ночью. А ты — днём!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-9-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Давай вместе передадим городу привет!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-9-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Короткий огонёк — точка. Длинный — чёрточка.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-9-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Повтори за мной. Тяни шнурок!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-L3-11-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "А теперь придумай свой сигнал для города!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "SK-light-code",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Азбука огоньков",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L3-11-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Красиво! Это будет твой сигнал, {имя}.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L3-11-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Увижу его с маяка — помашу крылом.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-9-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Получилось! Город машет в ответ!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-9-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Так вот какой у нас „призрак“! Совсем не страшный.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-9-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Пухлик, научишь и нас мигать?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-9-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Конечно! Приходите вечером. Только тихо.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-10-01",
+   "rev": 1,
+   "kind": "fact",
+   "speaker": "narrator",
+   "text": "Светлячки светятся холодным светом. Он почти не греет.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C3-10-02",
+   "rev": 2,
+   "kind": "fact",
+   "speaker": "narrator",
+   "text": "Многие летучие мыши „видят ушами“. Они слушают эхо писка.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C3-10-03",
+   "rev": 1,
+   "kind": "fact",
+   "speaker": "narrator",
+   "text": "Совы летают почти бесшумно. Им помогают мягкие перья.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C3-10-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Записала в Энциклопедию. Очень-очень тихо.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-11-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Третье дело раскрыто, {имя}!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-11-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Держи значок-лапку „Огонёк маяка“.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-11-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "А весло Дамки… Кто же эта Серая Тень?",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C3-11-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Всему своё время, пушинка. Заметка записана.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-AX-who",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Кто?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-AX-pukhlik",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Совёнок Пухлик",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-AX-fitilyok",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Светлячок Фитилёк",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-AX-stella",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Сорока Стелла",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-AX-damka",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Бобёрша Дамка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-AX-tyopa",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Енот Тёпа",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-AX-where",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Где мигает свет?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-AX-top",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Наверху маяка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-AX-shed",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Лодочный сарай",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-AX-reeds",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Камыши у берега",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-AX-pier",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Фонарь на причале",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-AX-cauldron",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Мыльный котёл",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-AX-what",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Что случилось?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-AX-training",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Тренировка сигналов",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-AX-broken",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Фонарь сломался",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-AX-ghost",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Бродит призрак",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-AX-repair",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Ночной ремонт",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-CL-l2-sounds",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Капли вместо молотка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-CL-l3-room",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Закрытая книга",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-CL-tracks",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Совиные следы",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-CL-l3-log",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Время в журнале",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-CL-blink",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Урок «Привет»",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-CL-mice",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Рисунок мышат",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-COL-secret-note",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Тайная заметка: запах ромашки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-7-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Версия не подтвердилась! Зато вспомним кое-что.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-7-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Светлячок оставляет пыльцу, а на лестнице — следы.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-7-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "У сороки три пальца вперёд. А тут два.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L2-7-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Когда мигало, Дамка была дома. Так в журнале.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L3-9-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "На лестнице совиные следы, а не енотовые.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-7-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Мигает на самом верху. Сарай-то внизу.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-7-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Шнурок от заслонки — наверху, в фонарной комнате.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L2-7-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Шнурок от заслонки — наверху, а не на причале.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L3-9-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Котёл погас в полдевятого. Мигало позже.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L3-9-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Мигание — это урок „Привет“. Фонарь так не умеет.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-7-10",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Призраки книг не листают. А тут листали.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L2-7-03",
+   "rev": 2,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Инструменты в пыли. Журнал подтверждает: ремонта не было.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-7-11",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Отличная попытка! Запишем и подумаем.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-NB-01",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Следы совы указывают на Пухлика.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C3-NB-02",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Это не Фитилёк: на лестнице следы.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C3-NB-03",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Это не Стелла: пальцев впереди два.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C3-NB-10",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Журнал оставил Дамку дома.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C3-NB-14",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Следы не енотовые.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C3-NB-04",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Свет идёт с верхушки маяка.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C3-NB-05",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Шнурок наверху, значит не сарай.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C3-NB-06",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Комната наверху, не камыши.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C3-NB-11",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Шнурок наверху, а не на причале.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C3-NB-13",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Котёл погас раньше мигания.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C3-NB-15",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Рисунок совпал с уроком «Привет».",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C3-NB-16",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Сломанный фонарь уроки не показывает.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C3-NB-09",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Призрак не листает книги.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C3-NB-12",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Пыль и журнал исключают ремонт.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C3-L3-NB-01",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Вернись к ночному шороху.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C3-L3-NB-02",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Вернись к фонарной комнате.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C3-L3-NB-03",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Вернись к следам на лестнице.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C3-L3-NB-04",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Вернись к журналу смотрителя.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C3-L3-NB-06",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Вернись к уроку «Привет».",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C3-L3-H-01",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Начни с ракушки-записушки. Слушай, где ровнее.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C3-L3-H-02",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Мышата что-то нарисовали. Поговори с ними.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C3-L3-H-03",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Книга наверху поможет прочитать рисунок мышат.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C3-L3-H-04",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Журнал смотрителя помнит, кто когда ушёл.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C3-L3-H-05",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "На лестнице пыльно. Сравни следы.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C3-L3-H-06",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Перечитай Блокнот. Где ещё стоит вопрос?",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C3-2-Q01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Какой шорох похож?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-2-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Шелест страниц",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-2-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Шелест страниц! Кто-то листает книгу.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-2-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Шум камыша",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L3-2-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Страницы и камыш похожи. Слушай, где ровнее.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-2-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Послушай ещё раз. Шорох ровный или порывами?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-2-B09",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Шорох крыльев",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-2-Q02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Какой щелчок похож?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-2-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Щелчок заслонки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-2-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Щёлк — заслонка фонаря! Свет кто-то закрывает.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-2-B05",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Скрип двери",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-2-B06",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Стук дятла",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-2-Q03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Что стучало тихо?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-2-B07",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Стук молотка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-2-B08",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Капли с крыши",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L2-2-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Это капли с крыши. Молотка не слышно.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-5-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Шнурок заслонки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-5-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Потянешь шнурок — заслонка закроет свет.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-5-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Значит, мигает не сам фонарь. Им мигают!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-5-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Капли воска",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-5-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Капли воска. Кто-то читал тут при свечке.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-5-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Открытое окно",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L2-4-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Окно открыто! Сюда можно влететь.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L2-4-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Ой… Значит, я его не закрыла. Ошиблась!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-5-B05",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Пыльные инструменты",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L2-4-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Инструменты в пыли. Ими давно не работали.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-5-B06",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Закрытая книга",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L3-5-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Книга закрыта. „Азбука огоньков“. Возьмём с собой.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-6-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "След сороки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-6-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "У сороки три пальца вперёд. А тут два.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-6-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "След светлячка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-6-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Светлячок оставляет пыльцу, а не следы.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-6-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "След совы",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-6-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Два вперёд, два назад! Так ходит сова.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-6-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "След бобра",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L2-5-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "У бобра широкие лапы с перепонками. Тут не так.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-6-B05",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "След енота",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L3-6-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "У енота лапка как ладошка. Пять пальчиков.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L3-7-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Привет",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L3-7-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Друзья",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L3-7-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Сверь по одному огоньку. Слева направо.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L3-7-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Ночь",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L2-6-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "19:00 — маяк заперт",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L2-6-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "20:00 — фонари зажглись",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L3-8-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "20:30 — котёл погас",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L2-6-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "21:00 — наверху мигает",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L2-6-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "22:00 — Дамка дома",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L2-6-W01",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "khvosts",
+   "text": "Почти. Самое раннее время ставь первым.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C3-9-Q01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Повтори «Привет».",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-9-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Короткий огонёк",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-9-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Длинный огонёк",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-9-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Почти! Посмотри на полоску ещё раз.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-9-Q02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Повтори «Друзья».",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-9-Q03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Повтори «Спокойной ночи».",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-9-Q04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Повтори «Маяк».",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L3-11-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Собрать свой сигнал",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L3-11-N01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Любой тёплый ритм подойдёт.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "GL-deduction-DEF",
+   "rev": 1,
+   "kind": "glossary",
+   "speaker": "narrator",
+   "text": "Дедукция — вывод правды шаг за шагом.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "GL-deduction",
+   "rev": 1,
+   "kind": "glossary",
+   "speaker": "narrator",
+   "text": "Дедукция",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "RW-c3-badge",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Значок-лапка «Огонёк маяка»",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c3-sticker-3",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Стикер «Огонёк маяка», три звёздочки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c3-decor-lamp",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Светлячковый фонарь для Конторы",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c3-activity",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Карточка «Понюхай и угадай»",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c3-title",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Звание: Ночной помощник",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-COL-secret-note-L",
+   "rev": 1,
+   "kind": "glossary",
+   "speaker": "narrator",
+   "text": "У весла Дамки пахнет ромашкой.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "ACT-C3-TITLE",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Понюхай и угадай",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C3-01",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Попроси взрослого приготовить три чашки.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C3-02",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "В одну положите ромашку.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C3-03",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Во вторую положите мяту.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C3-04",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "В третью положите корицу.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C3-05",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Закрой глаза и понюхай осторожно.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C3-06",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Назови запах и проверь карточку.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C3-S01",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Не пробуй травы на вкус.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C3-S02",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Если запах неприятен, сразу отодвинь чашку.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C3-S03",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Аллергии проверяет взрослый.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L-01",
+   "rev": 1,
+   "kind": "comfort",
+   "speaker": "watsony",
+   "text": "Смотри: это просто вечер у пруда. Все свои.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C3-L-02",
+   "rev": 1,
+   "kind": "comfort",
+   "speaker": "watsony",
+   "text": "Тут тепло и светло. Видишь огоньки города?",
+   "voiced": true,
+   "delivery": "warm"
+  }
+ ],
+ "speakers": [],
+ "skills": [
+  {
+   "id": "sound-diff",
+   "title": "SK-sound-diff"
+  },
+  {
+   "id": "secret-notes",
+   "title": "SK-secret-notes"
+  },
+  {
+   "id": "light-code",
+   "title": "SK-light-code"
+  },
+  {
+   "id": "read-blink",
+   "title": "SK-read-blink"
+  }
+ ],
+ "scenes": [
+  {
+   "id": "C3-0",
+   "title": "Контора: вечерний гость",
+   "location": "office-evening",
+   "cast": [
+    "khvosts",
+    "watsony",
+    "mouse"
+   ],
+   "presentation": "cutscene",
+   "steps": [
+    {
+     "t": "dir",
+     "id": "C3-0-D01",
+     "text": "Контора вечером: в окне горит тёплый фонарь-светлячок."
+    },
+    {
+     "t": "line",
+     "line": "C3-0-01"
+    },
+    {
+     "t": "line",
+     "line": "C3-0-02"
+    },
+    {
+     "t": "line",
+     "line": "C3-0-03"
+    },
+    {
+     "t": "dir",
+     "id": "C3-0-D02",
+     "text": "Входят мышата Шуршики, держась за лапки."
+    },
+    {
+     "t": "line",
+     "line": "C3-0-04"
+    },
+    {
+     "t": "line",
+     "line": "C3-0-05"
+    },
+    {
+     "t": "line",
+     "line": "C3-0-06"
+    },
+    {
+     "t": "line",
+     "line": "C3-0-07"
+    },
+    {
+     "t": "line",
+     "line": "C3-0-08"
+    },
+    {
+     "t": "line",
+     "line": "C3-0-09"
+    },
+    {
+     "t": "skill",
+     "skill": "map",
+     "first": [
+      {
+       "t": "dir",
+       "id": "C3-0-D03",
+       "text": "На карте открывается точка «Медовый пруд и маяк»."
+      }
+     ],
+     "known": [
+      {
+       "t": "dir",
+       "id": "C3-0-D03",
+       "text": "На карте открывается точка «Медовый пруд и маяк»."
+      }
+     ]
+    },
+    {
+     "t": "goto",
+     "scene": "C3-L3-1"
+    }
+   ]
+  },
+  {
+   "id": "C3-L3-1",
+   "title": "Берег Медового пруда",
+   "location": "honey-pond",
+   "cast": [
+    "pudding",
+    "damka",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "line",
+     "line": "C3-1-01"
+    },
+    {
+     "t": "line",
+     "line": "C3-1-02"
+    },
+    {
+     "t": "line",
+     "line": "C3-1-03"
+    },
+    {
+     "t": "line",
+     "line": "C3-1-04"
+    },
+    {
+     "t": "line",
+     "line": "C3-1-05"
+    },
+    {
+     "t": "line",
+     "line": "C3-L2-1-01"
+    },
+    {
+     "t": "line",
+     "line": "C3-L2-1-02"
+    },
+    {
+     "t": "line",
+     "line": "C3-L2-1-03"
+    },
+    {
+     "t": "line",
+     "line": "C3-L3-1-01"
+    },
+    {
+     "t": "line",
+     "line": "C3-L3-1-02"
+    },
+    {
+     "t": "skill",
+     "skill": "lamp",
+     "first": [
+      {
+       "t": "line",
+       "line": "C3-1-06"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C3-1-06"
+      }
+     ]
+    },
+    {
+     "t": "line",
+     "line": "C3-1-07"
+    },
+    {
+     "t": "line",
+     "line": "C3-1-08"
+    },
+    {
+     "t": "line",
+     "line": "C3-L2-1-04"
+    },
+    {
+     "t": "line",
+     "line": "C3-1-09"
+    },
+    {
+     "t": "line",
+     "line": "C3-1-10"
+    },
+    {
+     "t": "goto",
+     "scene": "C3-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C3-HUB",
+   "title": "Медовый пруд: выбор",
+   "location": "honey-pond",
+   "cast": [
+    "khvosts",
+    "watsony",
+    "pudding",
+    "damka",
+    "mouse"
+   ],
+   "presentation": "hub",
+   "steps": [
+    {
+     "t": "if",
+     "when": {
+      "all": [
+       {
+        "clue": "c3-l3-sounds"
+       },
+       {
+        "clue": "c3-l3-room"
+       },
+       {
+        "clue": "c3-tracks"
+       },
+       {
+        "clue": "c3-l3-log"
+       },
+       {
+        "clue": "c3-blink"
+       },
+       {
+        "not": {
+         "visited": "C3-L3-9"
+        }
+       }
+      ]
+     },
+     "then": [
+      {
+       "t": "goto",
+       "scene": "C3-L3-9"
+      }
+     ],
+     "else": []
+    },
+    {
+     "t": "menu",
+     "id": "C3-L3-M",
+     "prompt": null,
+     "pageSize": 3,
+     "options": [
+      {
+       "id": "sounds",
+       "label": "C3-1-B01",
+       "to": "C3-L3-2",
+       "when": null,
+       "hideWhen": {
+        "clue": "c3-l3-sounds"
+       },
+       "optional": false
+      },
+      {
+       "id": "door",
+       "label": "C3-1-B02",
+       "to": "C3-3",
+       "when": {
+        "clue": "c3-l3-sounds"
+       },
+       "hideWhen": {
+        "visited": "C3-3"
+       },
+       "optional": false
+      },
+      {
+       "id": "mice",
+       "label": "C3-1-B07",
+       "to": "C3-L3-4",
+       "when": null,
+       "hideWhen": {
+        "visited": "C3-L3-4"
+       },
+       "optional": false
+      },
+      {
+       "id": "room",
+       "label": "C3-1-B04",
+       "to": "C3-L3-5",
+       "when": {
+        "visited": "C3-3"
+       },
+       "hideWhen": {
+        "clue": "c3-l3-room"
+       },
+       "optional": false
+      },
+      {
+       "id": "tracks",
+       "label": "C3-1-B05",
+       "to": "C3-L3-6",
+       "when": {
+        "visited": "C3-3"
+       },
+       "hideWhen": {
+        "clue": "c3-tracks"
+       },
+       "optional": false
+      },
+      {
+       "id": "log",
+       "label": "C3-1-B06",
+       "to": "C3-L3-8",
+       "when": {
+        "clue": "c3-l3-room"
+       },
+       "hideWhen": {
+        "clue": "c3-l3-log"
+       },
+       "optional": false
+      },
+      {
+       "id": "blink",
+       "label": "C3-1-B08",
+       "to": "C3-L3-7",
+       "when": {
+        "all": [
+         {
+          "visited": "C3-L3-4"
+         },
+         {
+          "clue": "c3-l3-room"
+         }
+        ]
+       },
+       "hideWhen": {
+        "clue": "c3-blink"
+       },
+       "optional": false
+      }
+     ],
+     "back": null
+    }
+   ]
+  },
+  {
+   "id": "C3-L3-2",
+   "title": "Услышь разницу: похожие образцы",
+   "location": "pond-bank",
+   "cast": [
+    "khvosts",
+    "watsony",
+    "mouse"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "sound-diff",
+     "first": [
+      {
+       "t": "line",
+       "line": "C3-2-01"
+      },
+      {
+       "t": "line",
+       "line": "C3-2-02"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C3-2-01"
+      },
+      {
+       "t": "line",
+       "line": "C3-2-02"
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c3l3-sound"
+    },
+    {
+     "t": "line",
+     "line": "C3-L2-2-02"
+    },
+    {
+     "t": "line",
+     "line": "C3-2-06"
+    },
+    {
+     "t": "line",
+     "line": "C3-2-07"
+    },
+    {
+     "t": "line",
+     "line": "C3-2-08"
+    },
+    {
+     "t": "line",
+     "line": "C3-2-09"
+    },
+    {
+     "t": "clue",
+     "clue": "c3-l3-sounds"
+    },
+    {
+     "t": "goto",
+     "scene": "C3-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C3-3",
+   "title": "Дверь маяка и Тайная заметка",
+   "location": "lighthouse-door",
+   "cast": [
+    "damka",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "line",
+     "line": "C3-3-01"
+    },
+    {
+     "t": "line",
+     "line": "C3-3-02"
+    },
+    {
+     "t": "line",
+     "line": "C3-3-03"
+    },
+    {
+     "t": "line",
+     "line": "C3-3-04"
+    },
+    {
+     "t": "line",
+     "line": "C3-3-05"
+    },
+    {
+     "t": "line",
+     "line": "C3-3-06"
+    },
+    {
+     "t": "skill",
+     "skill": "secret-notes",
+     "first": [
+      {
+       "t": "dir",
+       "id": "C3-3-D01",
+       "text": "В Блокноте открывается страница «Тайные заметки»."
+      }
+     ],
+     "known": [
+      {
+       "t": "dir",
+       "id": "C3-3-D01",
+       "text": "В Блокноте открывается страница «Тайные заметки»."
+      }
+     ]
+    },
+    {
+     "t": "line",
+     "line": "C3-3-07"
+    },
+    {
+     "t": "dir",
+     "id": "C3-3-D02",
+     "text": "Игрок нажимает на ромашку; значок запаха ложится на страницу."
+    },
+    {
+     "t": "line",
+     "line": "C3-3-08"
+    },
+    {
+     "t": "clue",
+     "clue": "c3-secret-note"
+    },
+    {
+     "t": "line",
+     "line": "C3-3-09"
+    },
+    {
+     "t": "line",
+     "line": "C3-L2-3-01"
+    },
+    {
+     "t": "goto",
+     "scene": "C3-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C3-L3-4",
+   "title": "Мышата",
+   "location": "pond-bank",
+   "cast": [
+    "mouse",
+    "khvosts"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "line",
+     "line": "C3-L3-4-01"
+    },
+    {
+     "t": "line",
+     "line": "C3-L3-4-02"
+    },
+    {
+     "t": "line",
+     "line": "C3-L3-4-03"
+    },
+    {
+     "t": "line",
+     "line": "C3-L3-4-04"
+    },
+    {
+     "t": "line",
+     "line": "C3-L3-4-05"
+    },
+    {
+     "t": "line",
+     "line": "C3-L3-4-06"
+    },
+    {
+     "t": "clue",
+     "clue": "c3-mice"
+    },
+    {
+     "t": "goto",
+     "scene": "C3-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C3-L3-5",
+   "title": "Лупа наверху",
+   "location": "lighthouse-room",
+   "cast": [
+    "khvosts",
+    "watsony",
+    "damka"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "magnifier",
+     "first": [
+      {
+       "t": "line",
+       "line": "C3-5-01"
+      },
+      {
+       "t": "line",
+       "line": "C3-L2-4-01"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C3-5-01"
+      },
+      {
+       "t": "line",
+       "line": "C3-L2-4-01"
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c3l3-magnifier"
+    },
+    {
+     "t": "line",
+     "line": "C3-5-06"
+    },
+    {
+     "t": "line",
+     "line": "C3-L3-5-02"
+    },
+    {
+     "t": "line",
+     "line": "C3-5-08"
+    },
+    {
+     "t": "line",
+     "line": "C3-L2-4-05"
+    },
+    {
+     "t": "clue",
+     "clue": "c3-l3-room"
+    },
+    {
+     "t": "goto",
+     "scene": "C3-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C3-L3-6",
+   "title": "Кто наследил?",
+   "location": "lighthouse-stairs",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "tracks",
+     "first": [
+      {
+       "t": "line",
+       "line": "C3-6-01"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C3-6-01"
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c3l3-tracks"
+    },
+    {
+     "t": "line",
+     "line": "C3-6-05"
+    },
+    {
+     "t": "line",
+     "line": "C3-6-06"
+    },
+    {
+     "t": "clue",
+     "clue": "c3-tracks"
+    },
+    {
+     "t": "goto",
+     "scene": "C3-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C3-L3-7",
+   "title": "Прочитай мигание",
+   "location": "lighthouse-room",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "read-blink",
+     "first": [
+      {
+       "t": "line",
+       "line": "C3-L3-7-01"
+      },
+      {
+       "t": "line",
+       "line": "C3-L3-7-02"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C3-L3-7-01"
+      },
+      {
+       "t": "line",
+       "line": "C3-L3-7-02"
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c3l3-blink"
+    },
+    {
+     "t": "line",
+     "line": "C3-L3-7-04"
+    },
+    {
+     "t": "line",
+     "line": "C3-L3-7-05"
+    },
+    {
+     "t": "line",
+     "line": "C3-L3-7-06"
+    },
+    {
+     "t": "clue",
+     "clue": "c3-blink"
+    },
+    {
+     "t": "goto",
+     "scene": "C3-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C3-L3-8",
+   "title": "Лента времени",
+   "location": "lighthouse-room",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "timeline",
+     "first": [
+      {
+       "t": "line",
+       "line": "C3-L2-6-01"
+      },
+      {
+       "t": "line",
+       "line": "C3-L2-6-02"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C3-L2-6-03"
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c3l3-timeline"
+    },
+    {
+     "t": "line",
+     "line": "C3-L2-6-04"
+    },
+    {
+     "t": "line",
+     "line": "C3-L2-6-05"
+    },
+    {
+     "t": "line",
+     "line": "C3-L3-8-01"
+    },
+    {
+     "t": "line",
+     "line": "C3-L2-6-06"
+    },
+    {
+     "t": "clue",
+     "clue": "c3-l3-log"
+    },
+    {
+     "t": "goto",
+     "scene": "C3-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C3-L3-9",
+   "title": "Версия: «Приглашу на разговор»",
+   "location": "lighthouse-room",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "version",
+     "first": [
+      {
+       "t": "line",
+       "line": "C3-7-01"
+      },
+      {
+       "t": "line",
+       "line": "C3-7-02"
+      },
+      {
+       "t": "line",
+       "line": "C3-7-03"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C3-7-01"
+      },
+      {
+       "t": "line",
+       "line": "C3-7-02"
+      },
+      {
+       "t": "line",
+       "line": "C3-7-03"
+      }
+     ]
+    },
+    {
+     "t": "goto",
+     "scene": "C3-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C3-L3-10",
+   "title": "Разрешение",
+   "location": "lighthouse-room",
+   "cast": [
+    "khvosts",
+    "watsony",
+    "pukhlik",
+    "damka",
+    "tyopa"
+   ],
+   "presentation": "cutscene",
+   "steps": [
+    {
+     "t": "line",
+     "line": "C3-8-01"
+    },
+    {
+     "t": "line",
+     "line": "C3-8-02"
+    },
+    {
+     "t": "line",
+     "line": "C3-8-03"
+    },
+    {
+     "t": "line",
+     "line": "C3-8-04"
+    },
+    {
+     "t": "line",
+     "line": "C3-8-05"
+    },
+    {
+     "t": "line",
+     "line": "C3-8-06"
+    },
+    {
+     "t": "line",
+     "line": "C3-8-07"
+    },
+    {
+     "t": "line",
+     "line": "C3-8-08"
+    },
+    {
+     "t": "line",
+     "line": "C3-8-09"
+    },
+    {
+     "t": "line",
+     "line": "C3-8-10"
+    },
+    {
+     "t": "line",
+     "line": "C3-8-11"
+    },
+    {
+     "t": "line",
+     "line": "C3-L2-8-01"
+    },
+    {
+     "t": "line",
+     "line": "C3-L2-8-02"
+    },
+    {
+     "t": "line",
+     "line": "C3-L3-10-01"
+    },
+    {
+     "t": "line",
+     "line": "C3-L3-10-02"
+    },
+    {
+     "t": "line",
+     "line": "C3-8-12"
+    },
+    {
+     "t": "line",
+     "line": "C3-8-13"
+    },
+    {
+     "t": "line",
+     "line": "C3-8-14"
+    },
+    {
+     "t": "line",
+     "line": "C3-8-15"
+    },
+    {
+     "t": "line",
+     "line": "C3-8-16"
+    },
+    {
+     "t": "goto",
+     "scene": "C3-L3-11"
+    }
+   ]
+  },
+  {
+   "id": "C3-L3-11",
+   "title": "Азбука огоньков: свой привет",
+   "location": "lighthouse-room",
+   "cast": [
+    "pukhlik",
+    "pudding",
+    "mouse"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "line",
+     "line": "C3-9-01"
+    },
+    {
+     "t": "line",
+     "line": "C3-9-02"
+    },
+    {
+     "t": "line",
+     "line": "C3-9-03"
+    },
+    {
+     "t": "line",
+     "line": "C3-L3-11-01"
+    },
+    {
+     "t": "skill",
+     "skill": "light-code",
+     "first": [
+      {
+       "t": "dir",
+       "id": "C3-L3-11-D01",
+       "text": "Пухлик показывает игровой ритм точками и чёрточками."
+      }
+     ],
+     "known": [
+      {
+       "t": "dir",
+       "id": "C3-L3-11-D01",
+       "text": "Пухлик показывает игровой ритм точками и чёрточками."
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c3l3-light"
+    },
+    {
+     "t": "line",
+     "line": "C3-L3-11-02"
+    },
+    {
+     "t": "line",
+     "line": "C3-L3-11-03"
+    },
+    {
+     "t": "line",
+     "line": "C3-9-05"
+    },
+    {
+     "t": "line",
+     "line": "C3-9-06"
+    },
+    {
+     "t": "line",
+     "line": "C3-9-07"
+    },
+    {
+     "t": "line",
+     "line": "C3-9-08"
+    },
+    {
+     "t": "goto",
+     "scene": "C3-10"
+    }
+   ]
+  },
+  {
+   "id": "C3-10",
+   "title": "«А ты знал?»",
+   "location": "lighthouse-room",
+   "cast": [
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "encyclopedia",
+     "first": [
+      {
+       "t": "dir",
+       "id": "C3-10-D01",
+       "text": "Карточки фактов складываются в Энциклопедию."
+      }
+     ],
+     "known": [
+      {
+       "t": "dir",
+       "id": "C3-10-D01",
+       "text": "Карточки фактов складываются в Энциклопедию."
+      }
+     ]
+    },
+    {
+     "t": "line",
+     "line": "C3-10-01"
+    },
+    {
+     "t": "line",
+     "line": "C3-10-02"
+    },
+    {
+     "t": "line",
+     "line": "C3-10-03"
+    },
+    {
+     "t": "line",
+     "line": "C3-10-04"
+    },
+    {
+     "t": "goto",
+     "scene": "C3-11"
+    }
+   ]
+  },
+  {
+   "id": "C3-11",
+   "title": "Награда",
+   "location": "office",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "cutscene",
+   "steps": [
+    {
+     "t": "line",
+     "line": "C3-11-01"
+    },
+    {
+     "t": "line",
+     "line": "C3-11-02"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c3-badge"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c3-buttons-l3"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c3-sticker-l3"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c3-decor-lamp"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c3-activity"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c3-title"
+    },
+    {
+     "t": "dir",
+     "id": "C3-11-D01",
+     "text": "Новое слово в Словарике: дедукция. Тайная заметка: запах ромашки."
+    },
+    {
+     "t": "line",
+     "line": "C3-11-03"
+    },
+    {
+     "t": "line",
+     "line": "C3-11-04"
+    },
+    {
+     "t": "await",
+     "action": "office.place"
+    },
+    {
+     "t": "end"
+    }
+   ]
+  }
+ ],
+ "logic": {
+  "axes": [
+   {
+    "id": "who",
+    "title": "C3-AX-who",
+    "values": [
+     {
+      "id": "pukhlik",
+      "label": "C3-AX-pukhlik"
+     },
+     {
+      "id": "fitilyok",
+      "label": "C3-AX-fitilyok"
+     },
+     {
+      "id": "stella",
+      "label": "C3-AX-stella"
+     },
+     {
+      "id": "damka",
+      "label": "C3-AX-damka"
+     },
+     {
+      "id": "tyopa",
+      "label": "C3-AX-tyopa"
+     }
+    ]
+   },
+   {
+    "id": "where",
+    "title": "C3-AX-where",
+    "values": [
+     {
+      "id": "top",
+      "label": "C3-AX-top"
+     },
+     {
+      "id": "shed",
+      "label": "C3-AX-shed"
+     },
+     {
+      "id": "reeds",
+      "label": "C3-AX-reeds"
+     },
+     {
+      "id": "pier",
+      "label": "C3-AX-pier"
+     },
+     {
+      "id": "cauldron",
+      "label": "C3-AX-cauldron"
+     }
+    ]
+   },
+   {
+    "id": "what",
+    "title": "C3-AX-what",
+    "values": [
+     {
+      "id": "training",
+      "label": "C3-AX-training"
+     },
+     {
+      "id": "broken",
+      "label": "C3-AX-broken"
+     },
+     {
+      "id": "ghost",
+      "label": "C3-AX-ghost"
+     },
+     {
+      "id": "repair",
+      "label": "C3-AX-repair"
+     }
+    ]
+   }
+  ],
+  "intended": {
+   "who": "pukhlik",
+   "where": "top",
+   "what": "training"
+  },
+  "clues": [
+   {
+    "id": "c3-l3-sounds",
+    "title": "C3-CL-l2-sounds",
+    "required": true,
+    "predicate": {
+     "op": "ne",
+     "axis": "what",
+     "value": "ghost"
+    },
+    "requires": [],
+    "source": "C3-L3-2",
+    "summary": "Запись слышит страницы, заслонку и капли; молоток не доказывает ремонт."
+   },
+   {
+    "id": "c3-l3-room",
+    "title": "C3-CL-l3-room",
+    "required": true,
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "eq",
+       "axis": "where",
+       "value": "top"
+      },
+      {
+       "op": "ne",
+       "axis": "where",
+       "value": "cauldron"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "broken"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "repair"
+      }
+     ]
+    },
+    "requires": [
+     "c3-secret-note"
+    ],
+    "source": "C3-L3-5",
+    "summary": "Комната наверху, окно, шнурок и пыльные инструменты; книга закрыта."
+   },
+   {
+    "id": "c3-tracks",
+    "title": "C3-CL-tracks",
+    "required": true,
+    "predicate": {
+     "op": "eq",
+     "axis": "who",
+     "value": "pukhlik"
+    },
+    "requires": [
+     "c3-secret-note"
+    ],
+    "source": "C3-L3-6",
+    "summary": "Следы совы исключают остальных жителей."
+   },
+   {
+    "id": "c3-l3-log",
+    "title": "C3-CL-l3-log",
+    "required": true,
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "damka"
+      },
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "tyopa"
+      },
+      {
+       "op": "ne",
+       "axis": "where",
+       "value": "cauldron"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "repair"
+      }
+     ]
+    },
+    "requires": [
+     "c3-l3-room"
+    ],
+    "source": "C3-L3-8",
+    "summary": "Журнал показывает, что котёл погас раньше, Дамка дома, ремонта не было."
+   },
+   {
+    "id": "c3-blink",
+    "title": "C3-CL-blink",
+    "required": true,
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "eq",
+       "axis": "what",
+       "value": "training"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "broken"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "ghost"
+      }
+     ]
+    },
+    "requires": [
+     "c3-l3-room"
+    ],
+    "source": "C3-L3-7",
+    "summary": "Рисунок мышат совпал с уроком «Привет»."
+   },
+   {
+    "id": "c3-mice",
+    "title": "C3-CL-mice",
+    "required": false,
+    "predicate": {
+     "op": "in",
+     "axis": "what",
+     "values": [
+      "training",
+      "broken",
+      "ghost",
+      "repair"
+     ]
+    },
+    "requires": [],
+    "source": "C3-L3-4",
+    "summary": "Мышата исправили ошибку: огоньков было три."
+   },
+   {
+    "id": "c3-secret-note",
+    "title": "C3-COL-secret-note",
+    "required": false,
+    "predicate": {
+     "op": "in",
+     "axis": "what",
+     "values": [
+      "training",
+      "broken",
+      "ghost",
+      "repair"
+     ]
+    },
+    "requires": [],
+    "source": "C3-3",
+    "summary": "Первая Тайная заметка: запах ромашки у весла Дамки."
+   }
+  ],
+  "version": {
+   "button": "UI-hud.version",
+   "available": {
+    "visited": "C3-L3-9"
+   },
+   "onSolved": "C3-L3-10"
+  },
+  "wrongVersion": {
+   "intro": [
+    {
+     "line": "C3-7-04",
+     "when": null
+    }
+   ],
+   "byValue": [
+    {
+     "axis": "who",
+     "value": "fitilyok",
+     "clues": [
+      "c3-tracks"
+     ],
+     "lines": [
+      {
+       "line": "C3-7-05",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "who",
+     "value": "stella",
+     "clues": [
+      "c3-tracks"
+     ],
+     "lines": [
+      {
+       "line": "C3-7-06",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "who",
+     "value": "damka",
+     "clues": [
+      "c3-l3-log"
+     ],
+     "lines": [
+      {
+       "line": "C3-L2-7-01",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "who",
+     "value": "tyopa",
+     "clues": [
+      "c3-tracks"
+     ],
+     "lines": [
+      {
+       "line": "C3-L3-9-01",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "where",
+     "value": "shed",
+     "clues": [
+      "c3-l3-room"
+     ],
+     "lines": [
+      {
+       "line": "C3-7-07",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "where",
+     "value": "reeds",
+     "clues": [
+      "c3-l3-room"
+     ],
+     "lines": [
+      {
+       "line": "C3-7-08",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "where",
+     "value": "pier",
+     "clues": [
+      "c3-l3-room"
+     ],
+     "lines": [
+      {
+       "line": "C3-L2-7-02",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "where",
+     "value": "cauldron",
+     "clues": [
+      "c3-l3-log"
+     ],
+     "lines": [
+      {
+       "line": "C3-L3-9-02",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "what",
+     "value": "broken",
+     "clues": [
+      "c3-blink"
+     ],
+     "lines": [
+      {
+       "line": "C3-L3-9-03",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "what",
+     "value": "ghost",
+     "clues": [
+      "c3-l3-sounds"
+     ],
+     "lines": [
+      {
+       "line": "C3-7-10",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "what",
+     "value": "repair",
+     "clues": [
+      "c3-l3-room",
+      "c3-l3-log"
+     ],
+     "lines": [
+      {
+       "line": "C3-L2-7-03",
+       "when": null
+      }
+     ]
+    }
+   ],
+   "outro": [
+    {
+     "line": "C3-7-11",
+     "when": null
+    }
+   ]
+  },
+  "redHerrings": [
+   {
+    "id": "rh-c3-ghost",
+    "summary": "Жители назвали шорох и мигание призраком.",
+    "presentedBy": [
+     "C3-0-06",
+     "C3-1-09"
+    ],
+    "explainedBy": [
+     "C3-8-12",
+     "C3-9-06"
+    ]
+   },
+   {
+    "id": "rh-c3-fitilyok",
+    "summary": "Фитилёк светится, но зажигал фонари на улице.",
+    "presentedBy": [
+     "C3-1-03"
+    ],
+    "explainedBy": [
+     "C3-8-10"
+    ]
+   },
+   {
+    "id": "rh-c3-stella",
+    "summary": "Стелла шуршит крыльями, но ночью шуршали страницы.",
+    "presentedBy": [
+     "C3-1-04"
+    ],
+    "explainedBy": [
+     "C3-8-11"
+    ]
+   },
+   {
+    "id": "rh-c3-damka-key",
+    "summary": "Ключ у Дамки, но Пухлик влетел через окно.",
+    "presentedBy": [
+     "C3-L2-1-01"
+    ],
+    "explainedBy": [
+     "C3-L2-8-01",
+     "C3-L2-8-02"
+    ]
+   },
+   {
+    "id": "rh-c3-tyopa-bubbles",
+    "summary": "Пузыри Тёпы блестели вечером, но не мигали ночью.",
+    "presentedBy": [
+     "C3-L3-1-01",
+     "C3-L3-1-02"
+    ],
+    "explainedBy": [
+     "C3-L3-10-01",
+     "C3-L3-10-02"
+    ]
+   }
+  ]
+ },
+ "deduction": {
+  "schema": 1,
+  "id": "case03-l3",
+  "axes": [
+   {
+    "id": "who",
+    "values": [
+     "pukhlik",
+     "fitilyok",
+     "stella",
+     "damka",
+     "tyopa"
+    ]
+   },
+   {
+    "id": "where",
+    "values": [
+     "top",
+     "shed",
+     "reeds",
+     "pier",
+     "cauldron"
+    ]
+   },
+   {
+    "id": "what",
+    "values": [
+     "training",
+     "broken",
+     "ghost",
+     "repair"
+    ]
+   }
+  ],
+  "compatibility": null,
+  "intended": {
+   "who": "pukhlik",
+   "where": "top",
+   "what": "training"
+  },
+  "clues": [
+   {
+    "id": "c3-l3-sounds",
+    "predicate": {
+     "op": "ne",
+     "axis": "what",
+     "value": "ghost"
+    },
+    "requires": [],
+    "requiresAnswer": false,
+    "explanationKey": "C3-CL-l2-sounds"
+   },
+   {
+    "id": "c3-l3-room",
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "eq",
+       "axis": "where",
+       "value": "top"
+      },
+      {
+       "op": "ne",
+       "axis": "where",
+       "value": "cauldron"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "broken"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "repair"
+      }
+     ]
+    },
+    "requires": [],
+    "requiresAnswer": false,
+    "explanationKey": "C3-CL-l3-room"
+   },
+   {
+    "id": "c3-tracks",
+    "predicate": {
+     "op": "eq",
+     "axis": "who",
+     "value": "pukhlik"
+    },
+    "requires": [],
+    "requiresAnswer": false,
+    "explanationKey": "C3-CL-tracks"
+   },
+   {
+    "id": "c3-l3-log",
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "damka"
+      },
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "tyopa"
+      },
+      {
+       "op": "ne",
+       "axis": "where",
+       "value": "cauldron"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "repair"
+      }
+     ]
+    },
+    "requires": [
+     "c3-l3-room"
+    ],
+    "requiresAnswer": false,
+    "explanationKey": "C3-CL-l3-log"
+   },
+   {
+    "id": "c3-blink",
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "eq",
+       "axis": "what",
+       "value": "training"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "broken"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "ghost"
+      }
+     ]
+    },
+    "requires": [
+     "c3-l3-room"
+    ],
+    "requiresAnswer": false,
+    "explanationKey": "C3-CL-blink"
+   }
+  ],
+  "redHerrings": [
+   {
+    "id": "rh-c3-ghost",
+    "explanationKey": "C3-8-12"
+   },
+   {
+    "id": "rh-c3-fitilyok",
+    "explanationKey": "C3-8-10"
+   },
+   {
+    "id": "rh-c3-stella",
+    "explanationKey": "C3-8-11"
+   },
+   {
+    "id": "rh-c3-damka-key",
+    "explanationKey": "C3-L2-8-01"
+   },
+   {
+    "id": "rh-c3-tyopa-bubbles",
+    "explanationKey": "C3-L3-10-01"
+   }
+  ],
+  "maxCandidates": 100
+ },
+ "notebookHelp": {
+  "mode": "point",
+  "marks": [
+   {
+    "axis": "who",
+    "value": "pukhlik",
+    "mark": "confirmed",
+    "clues": [
+     "c3-tracks"
+    ],
+    "line": "C3-NB-01"
+   },
+   {
+    "axis": "who",
+    "value": "fitilyok",
+    "mark": "excluded",
+    "clues": [
+     "c3-tracks"
+    ],
+    "line": "C3-NB-02"
+   },
+   {
+    "axis": "who",
+    "value": "stella",
+    "mark": "excluded",
+    "clues": [
+     "c3-tracks"
+    ],
+    "line": "C3-NB-03"
+   },
+   {
+    "axis": "who",
+    "value": "damka",
+    "mark": "excluded",
+    "clues": [
+     "c3-l3-log"
+    ],
+    "line": "C3-NB-10"
+   },
+   {
+    "axis": "who",
+    "value": "tyopa",
+    "mark": "excluded",
+    "clues": [
+     "c3-tracks"
+    ],
+    "line": "C3-NB-14"
+   },
+   {
+    "axis": "where",
+    "value": "top",
+    "mark": "confirmed",
+    "clues": [
+     "c3-l3-room"
+    ],
+    "line": "C3-NB-04"
+   },
+   {
+    "axis": "where",
+    "value": "shed",
+    "mark": "excluded",
+    "clues": [
+     "c3-l3-room"
+    ],
+    "line": "C3-NB-05"
+   },
+   {
+    "axis": "where",
+    "value": "reeds",
+    "mark": "excluded",
+    "clues": [
+     "c3-l3-room"
+    ],
+    "line": "C3-NB-06"
+   },
+   {
+    "axis": "where",
+    "value": "pier",
+    "mark": "excluded",
+    "clues": [
+     "c3-l3-room"
+    ],
+    "line": "C3-NB-11"
+   },
+   {
+    "axis": "where",
+    "value": "cauldron",
+    "mark": "excluded",
+    "clues": [
+     "c3-l3-log"
+    ],
+    "line": "C3-NB-13"
+   },
+   {
+    "axis": "what",
+    "value": "training",
+    "mark": "confirmed",
+    "clues": [
+     "c3-blink"
+    ],
+    "line": "C3-NB-15"
+   },
+   {
+    "axis": "what",
+    "value": "broken",
+    "mark": "excluded",
+    "clues": [
+     "c3-blink"
+    ],
+    "line": "C3-NB-16"
+   },
+   {
+    "axis": "what",
+    "value": "ghost",
+    "mark": "excluded",
+    "clues": [
+     "c3-l3-sounds"
+    ],
+    "line": "C3-NB-09"
+   },
+   {
+    "axis": "what",
+    "value": "repair",
+    "mark": "excluded",
+    "clues": [
+     "c3-l3-room",
+     "c3-l3-log"
+    ],
+    "line": "C3-NB-12"
+   }
+  ],
+  "pointers": [
+   {
+    "clue": "c3-l3-sounds",
+    "line": "C3-L3-NB-01"
+   },
+   {
+    "clue": "c3-l3-room",
+    "line": "C3-L3-NB-02"
+   },
+   {
+    "clue": "c3-tracks",
+    "line": "C3-L3-NB-03"
+   },
+   {
+    "clue": "c3-l3-log",
+    "line": "C3-L3-NB-04"
+   },
+   {
+    "clue": "c3-blink",
+    "line": "C3-L3-NB-06"
+   }
+  ],
+  "nothing": "UI-notebook.nothing"
+ },
+ "hints": {
+  "klubok": {
+   "speaker": "khvosts",
+   "precision": "exact",
+   "allowance": 3,
+   "rules": [
+    {
+     "id": "C3-L3-H-01",
+     "when": {
+      "not": {
+       "clue": "c3-l3-sounds"
+      }
+     },
+     "cites": []
+    },
+    {
+     "id": "C3-L3-H-02",
+     "when": {
+      "not": {
+       "visited": "C3-L3-4"
+      }
+     },
+     "cites": []
+    },
+    {
+     "id": "C3-L3-H-03",
+     "when": {
+      "not": {
+       "clue": "c3-blink"
+      }
+     },
+     "cites": []
+    },
+    {
+     "id": "C3-L3-H-04",
+     "when": {
+      "not": {
+       "clue": "c3-l3-log"
+      }
+     },
+     "cites": []
+    },
+    {
+     "id": "C3-L3-H-05",
+     "when": {
+      "not": {
+       "clue": "c3-tracks"
+      }
+     },
+     "cites": []
+    }
+   ],
+   "review": "C3-L3-H-06",
+   "exhausted": "UI-hint.klubokEmpty"
+  },
+  "shell": null
+ },
+ "minigames": [
+  {
+   "id": "c3l3-sound",
+   "skill": "sound-diff",
+   "config": {
+    "kind": "staged",
+    "mechanic": "Услышь разницу",
+    "description": "Ночной звук сравнивается с образцами. Без звука показаны волны ритма и иконки тихо-громко, высоко-низко, коротко-длинно.",
+    "steps": [
+     {
+      "id": "rustle",
+      "prompt": "C3-2-Q01",
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "pages",
+        "label": "C3-2-B01",
+        "correct": true,
+        "reply": [
+         "C3-2-03"
+        ]
+       },
+       {
+        "id": "reeds",
+        "label": "C3-2-B02",
+        "correct": false,
+        "reply": [
+         "C3-L3-2-01",
+         "C3-2-04"
+        ]
+       },
+       {
+        "id": "wings",
+        "label": "C3-2-B09",
+        "correct": false,
+        "reply": [
+         "C3-2-04"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "click",
+      "prompt": "C3-2-Q02",
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "shutter",
+        "label": "C3-2-B04",
+        "correct": true,
+        "reply": [
+         "C3-2-05"
+        ]
+       },
+       {
+        "id": "door",
+        "label": "C3-2-B05",
+        "correct": false,
+        "reply": [
+         "C3-2-04"
+        ]
+       },
+       {
+        "id": "woodpecker",
+        "label": "C3-2-B06",
+        "correct": false,
+        "reply": [
+         "C3-2-04"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "knock",
+      "prompt": "C3-2-Q03",
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "hammer",
+        "label": "C3-2-B07",
+        "correct": false,
+        "reply": [
+         "C3-2-04"
+        ]
+       },
+       {
+        "id": "drops",
+        "label": "C3-2-B08",
+        "correct": true,
+        "reply": [
+         "C3-L2-2-01"
+        ]
+       },
+       {
+        "id": "shutter",
+        "label": "C3-2-B04",
+        "correct": false,
+        "reply": [
+         "C3-2-04"
+        ]
+       }
+      ]
+     }
+    ],
+    "lines": []
+   }
+  },
+  {
+   "id": "c3l3-magnifier",
+   "skill": "magnifier",
+   "config": {
+    "kind": "magnifier",
+    "targets": [
+     {
+      "id": "cord",
+      "label": "C3-5-B01",
+      "required": true,
+      "reply": [
+       "C3-5-02",
+       "C3-5-03"
+      ]
+     },
+     {
+      "id": "wax",
+      "label": "C3-5-B03",
+      "required": true,
+      "reply": [
+       "C3-5-05"
+      ]
+     },
+     {
+      "id": "window",
+      "label": "C3-5-B04",
+      "required": true,
+      "reply": [
+       "C3-L2-4-02",
+       "C3-L2-4-03"
+      ]
+     },
+     {
+      "id": "tools",
+      "label": "C3-5-B05",
+      "required": true,
+      "reply": [
+       "C3-L2-4-04"
+      ]
+     },
+     {
+      "id": "closed-book",
+      "label": "C3-5-B06",
+      "required": true,
+      "reply": [
+       "C3-L3-5-01"
+      ]
+     }
+    ],
+    "afterFirst": [],
+    "afterFirstSkill": null,
+    "assistAfterMisses": 3
+   }
+  },
+  {
+   "id": "c3l3-tracks",
+   "skill": "tracks",
+   "config": {
+    "kind": "tracks",
+    "steps": [
+     {
+      "id": "owl1",
+      "prompt": null,
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "magpie",
+        "label": "C3-6-B01",
+        "correct": false,
+        "reply": [
+         "C3-6-02"
+        ]
+       },
+       {
+        "id": "firefly",
+        "label": "C3-6-B02",
+        "correct": false,
+        "reply": [
+         "C3-6-03"
+        ]
+       },
+       {
+        "id": "owl",
+        "label": "C3-6-B03",
+        "correct": true,
+        "reply": [
+         "C3-6-04"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "owl2",
+      "prompt": null,
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "beaver",
+        "label": "C3-6-B04",
+        "correct": false,
+        "reply": [
+         "C3-L2-5-01"
+        ]
+       },
+       {
+        "id": "raccoon",
+        "label": "C3-6-B05",
+        "correct": false,
+        "reply": [
+         "C3-L3-6-01"
+        ]
+       },
+       {
+        "id": "owl",
+        "label": "C3-6-B03",
+        "correct": true,
+        "reply": [
+         "C3-6-04"
+        ]
+       }
+      ]
+     }
+    ],
+    "question": null
+   }
+  },
+  {
+   "id": "c3l3-blink",
+   "skill": "read-blink",
+   "config": {
+    "kind": "staged",
+    "mechanic": "Прочитай мигание",
+    "description": "Игрок сверяет рисунок мышат с игровыми уроками книги слева направо.",
+    "steps": [
+     {
+      "id": "lesson",
+      "prompt": null,
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "hello",
+        "label": "C3-L3-7-B01",
+        "correct": true,
+        "reply": []
+       },
+       {
+        "id": "friends",
+        "label": "C3-L3-7-B02",
+        "correct": false,
+        "reply": [
+         "C3-L3-7-03"
+        ]
+       },
+       {
+        "id": "night",
+        "label": "C3-L3-7-B03",
+        "correct": false,
+        "reply": [
+         "C3-L3-7-03"
+        ]
+       }
+      ]
+     }
+    ],
+    "lines": []
+   }
+  },
+  {
+   "id": "c3l3-timeline",
+   "skill": "timeline",
+   "config": {
+    "kind": "timeline",
+    "items": [
+     {
+      "id": "t19",
+      "time": "19:00",
+      "label": "C3-L2-6-B01"
+     },
+     {
+      "id": "t20",
+      "time": "20:00",
+      "label": "C3-L2-6-B02"
+     },
+     {
+      "id": "t2030",
+      "time": "20:30",
+      "label": "C3-L3-8-B01"
+     },
+     {
+      "id": "t21",
+      "time": "21:00",
+      "label": "C3-L2-6-B03"
+     },
+     {
+      "id": "t22",
+      "time": "22:00",
+      "label": "C3-L2-6-B04"
+     }
+    ],
+    "solution": [
+     "t19",
+     "t20",
+     "t2030",
+     "t21",
+     "t22"
+    ],
+    "wrong": [
+     "C3-L2-6-W01"
+    ]
+   }
+  },
+  {
+   "id": "c3l3-light",
+   "skill": "light-code",
+   "config": {
+    "kind": "staged",
+    "mechanic": "Азбука огоньков",
+    "description": "Игровые световые ритмы: точка — короткий огонёк, чёрточка — длинный. Это не азбука Морзе.",
+    "steps": [
+     {
+      "id": "hello",
+      "prompt": "C3-9-Q01",
+      "pageSize": 2,
+      "options": [
+       {
+        "id": "short",
+        "label": "C3-9-B01",
+        "correct": true,
+        "reply": []
+       },
+       {
+        "id": "long",
+        "label": "C3-9-B02",
+        "correct": false,
+        "reply": [
+         "C3-9-04"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "friends",
+      "prompt": "C3-9-Q02",
+      "pageSize": 2,
+      "options": [
+       {
+        "id": "long",
+        "label": "C3-9-B02",
+        "correct": true,
+        "reply": []
+       },
+       {
+        "id": "short",
+        "label": "C3-9-B01",
+        "correct": false,
+        "reply": [
+         "C3-9-04"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "night",
+      "prompt": "C3-9-Q03",
+      "pageSize": 2,
+      "options": [
+       {
+        "id": "long",
+        "label": "C3-9-B02",
+        "correct": true,
+        "reply": []
+       },
+       {
+        "id": "short",
+        "label": "C3-9-B01",
+        "correct": false,
+        "reply": [
+         "C3-9-04"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "lighthouse",
+      "prompt": "C3-9-Q04",
+      "pageSize": 2,
+      "options": [
+       {
+        "id": "long",
+        "label": "C3-9-B02",
+        "correct": true,
+        "reply": []
+       },
+       {
+        "id": "short",
+        "label": "C3-9-B01",
+        "correct": false,
+        "reply": [
+         "C3-9-04"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "own",
+      "prompt": "C3-L3-11-B01",
+      "pageSize": 2,
+      "options": [
+       {
+        "id": "short",
+        "label": "C3-9-B01",
+        "correct": true,
+        "reply": [
+         "C3-L3-11-N01"
+        ]
+       },
+       {
+        "id": "long",
+        "label": "C3-9-B02",
+        "correct": true,
+        "reply": [
+         "C3-L3-11-N01"
+        ]
+       }
+      ]
+     }
+    ],
+    "lines": []
+   }
+  }
+ ],
+ "facts": [
+  {
+   "id": "fact-c3-fireflies",
+   "line": "C3-10-01"
+  },
+  {
+   "id": "fact-c3-bats",
+   "line": "C3-10-02"
+  },
+  {
+   "id": "fact-c3-owls",
+   "line": "C3-10-03"
+  }
+ ],
+ "glossary": [
+  {
+   "id": "deduction",
+   "word": "дедукция",
+   "definition": "GL-deduction-DEF",
+   "label": "GL-deduction",
+   "forms": [
+    "дедукция",
+    "дедукции",
+    "дедукцию",
+    "дедукцией",
+    "дедукциею"
+   ]
+  }
+ ],
+ "rewards": [
+  {
+   "id": "rw-c3-badge",
+   "kind": "badge",
+   "label": "RW-c3-badge",
+   "amount": 1,
+   "claimKey": "case03:badge"
+  },
+  {
+   "id": "rw-c3-buttons-l3",
+   "kind": "buttons",
+   "label": "RW-buttons-20",
+   "amount": 20,
+   "claimKey": "case03:l3:buttons"
+  },
+  {
+   "id": "rw-c3-sticker-l3",
+   "kind": "sticker",
+   "label": "RW-c3-sticker-3",
+   "amount": 1,
+   "claimKey": "case03:l3:sticker"
+  },
+  {
+   "id": "rw-c3-decor-lamp",
+   "kind": "decor",
+   "label": "RW-c3-decor-lamp",
+   "amount": 1,
+   "claimKey": "case03:decor:lamp"
+  },
+  {
+   "id": "rw-c3-activity",
+   "kind": "activity",
+   "label": "RW-c3-activity",
+   "amount": 1,
+   "claimKey": "case03:activity:smells"
+  },
+  {
+   "id": "rw-c3-title",
+   "kind": "title",
+   "label": "RW-c3-title",
+   "amount": 1,
+   "claimKey": "case03:title:night-helper"
+  }
+ ],
+ "collections": [
+  {
+   "id": "c3-chamomile-note",
+   "collection": "secret-notes",
+   "label": "C3-COL-secret-note",
+   "line": "C3-COL-secret-note-L"
+  }
+ ],
+ "activities": [
+  {
+   "id": "act-c3-smells",
+   "title": "ACT-C3-TITLE",
+   "steps": [
+    {
+     "line": "ACT-C3-01",
+     "adultOnly": true
+    },
+    {
+     "line": "ACT-C3-02",
+     "adultOnly": false
+    },
+    {
+     "line": "ACT-C3-03",
+     "adultOnly": false
+    },
+    {
+     "line": "ACT-C3-04",
+     "adultOnly": false
+    },
+    {
+     "line": "ACT-C3-05",
+     "adultOnly": false
+    },
+    {
+     "line": "ACT-C3-06",
+     "adultOnly": false
+    }
+   ],
+   "safety": [
+    "ACT-C3-S01",
+    "ACT-C3-S02",
+    "ACT-C3-S03"
+   ],
+   "allergens": [
+    "ромашка",
+    "мята",
+    "корица"
+   ]
+  }
+ ],
+ "comfort": [
+  {
+   "scene": "C3-1",
+   "line": "C3-L-01"
+  },
+  {
+   "scene": "C3-5",
+   "line": "C3-L-02"
+  },
+  {
+   "scene": "C3-L2-4",
+   "line": "C3-L-02"
+  },
+  {
+   "scene": "C3-L3-5",
+   "line": "C3-L-02"
+  }
+ ],
+ "cutscenes": [],
+ "plannedCutscenes": [
+  {
+   "id": "cs-c3-intro",
+   "scene": "C3-0",
+   "summary": "Вечером мышата сообщают о мигании на маяке; команда идёт к Медовому пруду."
+  },
+  {
+   "id": "cs-c3-note",
+   "scene": "C3-3",
+   "summary": "У починенного весла Дамки найдена ромашка; первая Тайная заметка попадает в Блокнот."
+  },
+  {
+   "id": "cs-c3-reveal",
+   "scene": "C3-L3-8",
+   "summary": "Пухлик признаётся, что по ночам учил игровые сигналы огоньков."
+  },
+  {
+   "id": "cs-c3-reward",
+   "scene": "C3-11",
+   "summary": "Хвостс вручает значок «Огонёк маяка», а Ватсони вспоминает тайну Серой Тени."
+  }
+ ],
+ "reserved": [],
+ "revision": "563fa7a00a707f7f2e5ad85d1079b4390e68bfccea3e5fd42fa777e30248e028"
+}

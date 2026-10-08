@@ -92,6 +92,11 @@ export function checkCutscenes(
     walk(sc.steps);
   }
   for (const [id, scenes] of used) if (!v.cutscenes.some((c) => c.id === id)) err('REF-CUTSCENE', scenes.join(','), `unknown cutscene ${id}`);
+  for (const p of v.plannedCutscenes ?? []) {
+    if (used.has(p.id)) err('CUTSCENE-PLANNED', p.id, 'a planned cutscene has no document and cannot be played');
+    if (v.cutscenes.some((c) => c.id === p.id)) err('ID-DUPLICATE', p.id, 'cutscene is both planned and authored');
+    if (!v.scenes.some((s) => s.id === p.scene)) err('REF-SCENE', p.id, `planned cutscene names unknown scene ${p.scene}`);
+  }
 
   for (const c of v.cutscenes as Cutscene[]) {
     const where = `cutscene ${c.id}`;

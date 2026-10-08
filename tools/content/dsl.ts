@@ -150,6 +150,11 @@ export const cl = (line: string, cond: Cond | null = null): CondLine => ({ line,
 
 export const scene = (s: Scene): Scene => s;
 
+/** Re-points planned cutscenes at this variant's scene IDs (levels 2–3 rename level 1 scenes). */
+export function retarget<T extends { scene: string }>(plans: T[], map: Record<string, string>): T[] {
+  return plans.map((p) => (map[p.scene] ? { ...p, scene: map[p.scene]! } : p));
+}
+
 // ---------------------------------------------------------------- sources
 
 export interface SharedSource {
@@ -180,6 +185,8 @@ export interface VariantSource {
   activities: ActivityCard[];
   comfort: ComfortLine[];
   cutscenes: Cutscene[];
+  /** Cutscenes planned in the script but not yet authored as engine documents (preview cases). Never played. */
+  plannedCutscenes?: { id: string; scene: string; summary: string }[];
   /** Editorial notes on structural (non-text) normalization decisions. */
   decisions: { id: string; text: string; ref: string }[];
   /** Lines used by systems the step language does not model yet (family mode, …). */
