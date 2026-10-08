@@ -3875,12 +3875,12 @@
       "op": "enter",
       "actor": "nest",
       "from": {
-       "x": 1540,
-       "y": 620
+       "x": 1850,
+       "y": 340
       },
       "to": {
-       "x": 1540,
-       "y": 620
+       "x": 1850,
+       "y": 340
       },
       "duration": 0.1,
       "walk": false
@@ -3940,7 +3940,7 @@
       "from": "right",
       "to": {
        "x": 1510,
-       "y": 950
+       "y": 1150
       },
       "duration": 1.1,
       "walk": false
@@ -4416,7 +4416,7 @@
       "actor": "khvosts",
       "from": "right",
       "to": {
-       "x": 1520,
+       "x": 1800,
        "y": 1450
       },
       "duration": 1,
@@ -4449,12 +4449,12 @@
       "op": "enter",
       "actor": "badge",
       "from": {
-       "x": 1180,
-       "y": 880
+       "x": 1080,
+       "y": 860
       },
       "to": {
-       "x": 1180,
-       "y": 880
+       "x": 1080,
+       "y": 860
       },
       "duration": 0.1,
       "walk": false
@@ -4473,8 +4473,8 @@
       "op": "effect",
       "effect": "sparkles",
       "at": {
-       "x": 1180,
-       "y": 880
+       "x": 1080,
+       "y": 860
       },
       "duration": 1.5,
       "wait": false
@@ -4488,12 +4488,12 @@
       "op": "enter",
       "actor": "sticker",
       "from": {
-       "x": 1380,
-       "y": 880
+       "x": 1480,
+       "y": 860
       },
       "to": {
-       "x": 1380,
-       "y": 880
+       "x": 1480,
+       "y": 860
       },
       "duration": 0.1,
       "walk": false
@@ -4513,15 +4513,40 @@
       "id": "reward.poster"
      },
      {
+      "op": "camera",
+      "preset": "wide",
+      "cut": true
+     },
+     {
+      "op": "exit",
+      "actor": "badge",
+      "to": {
+       "x": 1080,
+       "y": 860
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "exit",
+      "actor": "sticker",
+      "to": {
+       "x": 1480,
+       "y": 860
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
       "op": "enter",
       "actor": "poster",
       "from": {
        "x": 1280,
-       "y": 620
+       "y": 720
       },
       "to": {
        "x": 1280,
-       "y": 620
+       "y": 720
       },
       "duration": 0.1,
       "walk": false
@@ -4561,5 +4586,5 @@
  ],
  "cozy": null,
  "reserved": [],
- "revision": "a5251924b0176408e5233d5879ff51d7eb4dc7093e129043c2815fb8becfb768"
+ "revision": "875b6cf28be4ed59ba1c4166c4af83693c234a7e4180e579dc9dc1ec8184597a"
 }

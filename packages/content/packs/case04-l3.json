@@ -5331,12 +5331,12 @@
       "op": "enter",
       "actor": "jars",
       "from": {
-       "x": 1460,
-       "y": 1320
+       "x": 1280,
+       "y": 1050
       },
       "to": {
-       "x": 1460,
-       "y": 1320
+       "x": 1280,
+       "y": 1050
       },
       "duration": 0.1,
       "walk": false
@@ -5406,7 +5406,7 @@
       "actor": "pukhlik",
       "from": "right",
       "to": {
-       "x": 2180,
+       "x": 2050,
        "y": 950
       },
       "duration": 1,
@@ -5904,7 +5904,7 @@
       "actor": "khvosts",
       "from": "right",
       "to": {
-       "x": 1540,
+       "x": 1800,
        "y": 1450
       },
       "duration": 1,
@@ -5931,12 +5931,12 @@
       "op": "enter",
       "actor": "badge",
       "from": {
-       "x": 1240,
-       "y": 920
+       "x": 1080,
+       "y": 860
       },
       "to": {
-       "x": 1240,
-       "y": 920
+       "x": 1080,
+       "y": 860
       },
       "duration": 0.1,
       "walk": false
@@ -5955,8 +5955,8 @@
       "op": "effect",
       "effect": "sparkles",
       "at": {
-       "x": 1240,
-       "y": 920
+       "x": 1080,
+       "y": 860
       },
       "duration": 1.5,
       "wait": false
@@ -5970,12 +5970,12 @@
       "op": "enter",
       "actor": "sticker",
       "from": {
-       "x": 1450,
-       "y": 940
+       "x": 1480,
+       "y": 860
       },
       "to": {
-       "x": 1450,
-       "y": 940
+       "x": 1480,
+       "y": 860
       },
       "duration": 0.1,
       "walk": false
@@ -5991,15 +5991,35 @@
       "line": "C4-10-03"
      },
      {
+      "op": "exit",
+      "actor": "badge",
+      "to": {
+       "x": 1080,
+       "y": 860
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "exit",
+      "actor": "sticker",
+      "to": {
+       "x": 1480,
+       "y": 860
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
       "op": "enter",
       "actor": "jar",
       "from": {
-       "x": 1760,
-       "y": 1180
+       "x": 1240,
+       "y": 1450
       },
       "to": {
-       "x": 1760,
-       "y": 1180
+       "x": 1240,
+       "y": 1450
       },
       "duration": 0.1,
       "walk": false
@@ -6061,5 +6081,5 @@
    "reason": "названия новых механик и старые подписи выбора сохраняются для систем каталога"
   }
  ],
- "revision": "2a267f569780d0d02dc660defb6e7d5175e007cdb38154afe2276ba2bddeded4"
+ "revision": "92b7fd32e363fcac95ec1a3664d807f8fc00b4067e42dd7307a28215949aaa3e"
 }

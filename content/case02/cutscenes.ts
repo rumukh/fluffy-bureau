@@ -60,8 +60,8 @@ const oakCastBase = {
 
 const oakOpening = (): Step[] => [
   background('bg.old-oak'), music('heartfelt'), cut('wide'),
-  ...appear('nest', 1540, 620), enter('khvosts', 'left', 520), enter('watsony', 'left', 760), enter('player', 'left', 1000), enter('pudding', 'right', 1810),
-  { op: 'enter', actor: 'stella', from: 'right', to: at(1510, FLY), duration: 1.1, walk: false }, clip('stella', 'hover', false), join(),
+  ...appear('nest', 1850, 340), enter('khvosts', 'left', 520), enter('watsony', 'left', 760), enter('player', 'left', 1000), enter('pudding', 'right', 1810),
+  { op: 'enter', actor: 'stella', from: 'right', to: at(1510, 1150), duration: 1.1, walk: false }, clip('stella', 'hover', false), join(),
   marker('oak.arrive'), expr('stella', 'worried'), line('stella', 'C2-7-01'),
   expr('khvosts', 'happy'), line('khvosts', 'C2-7-02'),
   camera('close-right'), ...lines('stella', 'C2-7-03', 'C2-7-04', 'C2-7-05', 'C2-7-06', 'C2-7-07'),
@@ -107,8 +107,8 @@ export const rewardCutscene = (level: 1 | 2 | 3): Cutscene => {
     khvosts: rig('khvosts'), watsony: rig('watsony'), player: avatar,
     badge: rig('prop.badge-letters-saved'), sticker: rig(`prop.sticker-letters-${level}`), poster: rig('prop.c2-cipher-poster'),
   }, [
-    background('bg.office'), music('celebration-baking'), cut('wide'), enter('watsony', 'left', 560), enter('player', 'left', 900), enter('khvosts', 'right', 1520), join(),
-    marker('reward.badge'), expr('khvosts', 'happy'), line('khvosts', 'C2-10-01'), camera('close-center'), ...appear('badge', 1180, 880), sfx('reward'), effect('sparkles', 1180, 880), line('khvosts', 'C2-10-02'),
-    ...appear('sticker', 1380, 880), line('khvosts', 'C2-10-03'), marker('reward.poster'), ...appear('poster', 1280, 620), line('watsony', 'C2-10-04'), emote('player', 'joy'), marker('reward.end'),
+    background('bg.office'), music('celebration-baking'), cut('wide'), enter('watsony', 'left', 560), enter('player', 'left', 900), enter('khvosts', 'right', 1800), join(),
+    marker('reward.badge'), expr('khvosts', 'happy'), line('khvosts', 'C2-10-01'), camera('close-center'), ...appear('badge', 1080, 860), sfx('reward'), effect('sparkles', 1080, 860), line('khvosts', 'C2-10-02'),
+    ...appear('sticker', 1480, 860), line('khvosts', 'C2-10-03'), marker('reward.poster'), cut('wide'), { op: 'exit', actor: 'badge', to: at(1080, 860), duration: 0.1, walk: false }, { op: 'exit', actor: 'sticker', to: at(1480, 860), duration: 0.1, walk: false }, ...appear('poster', 1280, 720), line('watsony', 'C2-10-04'), emote('player', 'joy'), marker('reward.end'),
   ]) };
 };
