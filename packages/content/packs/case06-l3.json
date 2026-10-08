@@ -1836,7 +1836,7 @@
    "rev": 1,
    "kind": "glossary",
    "speaker": "narrator",
-   "text": "Ориентир — заметная вещь для поиска дороги.",
+   "text": "Ориентир — заметная вещь, по которой находят дорогу.",
    "voiced": true,
    "delivery": "warm"
   },
@@ -2903,6 +2903,10 @@
     {
      "t": "minigame",
      "minigame": "c6l3-alley"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c6-heart-finale-l3"
     },
     {
      "t": "line",
@@ -4456,6 +4460,13 @@
    "label": "RW-c6-activity",
    "amount": 1,
    "claimKey": "case06:activity:compass"
+  },
+  {
+   "id": "rw-c6-heart-finale-l3",
+   "kind": "hearts",
+   "label": "RW-heart",
+   "amount": 1,
+   "claimKey": "case06:l3:heart:finale"
   }
  ],
  "collections": [
@@ -4546,6 +4557,8 @@
    "summary": "Хвостс вручает значок «Золотой Жёлудь» и звание «Детектив»."
   }
  ],
+ "notebookPages": [],
+ "cozy": null,
  "reserved": [],
- "revision": "165175b2bbce482729bdcb0c61177206ffe49d4f20078bed9ab867acb29a55ca"
+ "revision": "ef581fb8b8670eee35b85ecca3c5f8b2413650e4b6fd1d637b1a7b361d5c6de1"
 }

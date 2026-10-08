@@ -1,5 +1,5 @@
 // Case 4 «Варенье из глубокого погреба»: three explicit variants.
-import type { CaseSource } from '../../tools/content/dsl.ts';
+import { finaleHeart, finaleHearts, type CaseSource } from '../../tools/content/dsl.ts';
 import { rewards } from './common.ts';
 import { level1 } from './l1.ts';
 import { level2 } from './l2.ts';
@@ -10,13 +10,13 @@ import { linesPm } from './lines-pm.ts';
 export const case04: CaseSource = {
   id: 'case04',
   lines: [...linesPm, ...linesNew],
-  variants: [level1, level2, level3],
+  variants: [finaleHeart(level1, 4, 1), finaleHeart(level2, 4, 2), finaleHeart(level3, 4, 3)],
   skills: [
     { id: 'dream-keeper', title: 'SK-dream-keeper' },
     { id: 'equal-share', title: 'SK-equal-share' },
     { id: 'cart-match', title: 'SK-cart-match' },
   ],
-  rewards,
+  rewards: [...rewards, ...finaleHearts(4)],
   genderReview: [
     { id: 'C4-L3-3-04', rev: 1, reason: 'Картофан говорит о себе («поправил себя»), не обращается к игроку.' },
     { id: 'C4-5-04', rev: 1, reason: '«ещё один» относится к сну, не к игроку.' },

@@ -1,9 +1,10 @@
 import type { VariantSource } from '../../tools/content/dsl.ts';
 import {
-  activity, and, baseRewards, cl, collections, commonComfort, commonCutscenes, eq, facts, factsScene, fitilyokScene, finalLightScene, glossary,
+  act, activity, and, baseRewards, cl, collections, commonComfort, eq, facts, factsScene, fitilyokScene, finalLightScene, glossary,
   goto, has, HUB, intended, introOffice, L, lightGame, menu, minigame, mopt, ne, not, opt, redHerringsBase, reveal, rewardScene,
-  secretNote, seq, skill, soundGame, versionScene, where, what, who, dir,
+  sceneProps, secretNote, secretNotesPage, seq, skill, soundGame, versionScene, where, what, who, dir, cutscene,
 } from './common.ts';
+import { intro, note, reveal as revealCutscene, reward as rewardCutscene } from './cutscenes.ts';
 
 const anyWhat = { op: 'in' as const, axis: 'what', values: ['training', 'broken', 'ghost'] };
 
@@ -14,11 +15,15 @@ export const level1: VariantSource = {
   case: { number: 3, level: 1 },
   start: 'C3-0',
   scenes: [
-    { id: 'C3-0', title: 'Контора: вечерний гость', location: 'office-evening', cast: ['khvosts', 'watsony', 'mouse'], presentation: 'cutscene', steps: [...introOffice(), goto('C3-1')] },
+    { id: 'C3-0', title: 'Контора: вечерний гость', location: 'office-evening', cast: ['khvosts', 'watsony', 'mouse'], presentation: 'cutscene', props: sceneProps.map, steps: [cutscene('c3.intro.l1'), ...introOffice(), goto('C3-1')] },
     {
       id: 'C3-1', title: 'Берег Медового пруда', location: 'honey-pond', cast: ['pudding', 'damka', 'khvosts', 'watsony'], presentation: 'dialogue',
       steps: [
-        dir('C3-1-D01', 'Сумерки с тёплыми фонарями; наверху маяка мигает огонёк.'),
+        dir('C3-1-D01', 'Сумерки с тёплыми фонарями; наверху маяка мигает огонёк.', null, [
+          act.effect('glow', 1680, 520, 1.5),
+          act.pose('pudding', { expression: 'worried', clip: 'look-around' }),
+          act.pose('damka', { expression: 'worried', face: 'left' }),
+        ]),
         ...seq('C3-1-', 1, 5),
         skill('lamp', [L('C3-1-06')]),
         skill('notebook', seq('C3-1-', 7, 10)),
@@ -48,7 +53,7 @@ export const level1: VariantSource = {
         goto(HUB),
       ],
     },
-    secretNote(),
+    secretNote('c3.note.l1'),
     fitilyokScene(),
     {
       id: 'C3-5', title: 'Фонарная комната: Лупа', location: 'lighthouse-room', cast: ['khvosts', 'watsony', 'damka'], presentation: 'minigame',
@@ -61,11 +66,11 @@ export const level1: VariantSource = {
     versionScene('C3-7'),
     {
       id: 'C3-8', title: 'Доброе разрешение', location: 'lighthouse-room', cast: ['khvosts', 'watsony', 'pukhlik', 'damka'], presentation: 'cutscene',
-      steps: [...seq('C3-8-', 1, 16), goto('C3-9')],
+      steps: [cutscene('c3.reveal.l1'), goto('C3-9')],
     },
     finalLightScene('C3-9', 1, 'c3l1-light'),
     factsScene(),
-    rewardScene(1),
+    rewardScene(1, 'c3.reward.l1'),
   ],
   logic: {
     axes: [
@@ -161,10 +166,12 @@ export const level1: VariantSource = {
   collections,
   activities: [activity],
   comfort: commonComfort,
-  cutscenes: [], plannedCutscenes: commonCutscenes,
+  cutscenes: [intro(1, 'C3-1'), note(1), revealCutscene(1, 'C3-8'), rewardCutscene(1)],
+  notebookPages: [secretNotesPage],
   decisions: [
     { id: 'C3L1-D1', text: 'C3-3 сделана обязательным шлюзом перед осмотром маяка и следов, чтобы Тайная заметка не пропускалась.', ref: 'D06, Q21' },
     { id: 'C3L1-D2', text: '«Услышь разницу» описана как staged-механика с визуальными волнами и иконками характера звука.', ref: 'Q31, R09' },
     { id: 'C3L1-D3', text: '«Азбука огоньков» хранится как игровой staged-ритм, не Морзе.', ref: 'D21' },
+    { id: 'C3L1-T25', text: 'Ролики T25: вступление, тайная заметка, разрешение и награда. Игровые эффекты остаются шагами после роликов.', ref: 'T25' },
   ],
 };

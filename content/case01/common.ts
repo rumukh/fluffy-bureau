@@ -1,7 +1,7 @@
 // Building blocks shared by the three case 1 variants. Each variant still compiles to an
 // explicit, self-contained pack: these helpers only avoid retyping identical data.
 import {
-  cl, cutscene, dir, goto, Ls, reward, seq, skill, wait, type VariantSource,
+  act, cl, cutscene, dir, goto, Ls, reward, seq, skill, wait, type VariantSource,
 } from '../../tools/content/dsl.ts';
 import type { ChoiceOption, Fact, GlossaryEntry, Predicate, Step } from '../../packages/content/src/schema.ts';
 
@@ -71,9 +71,9 @@ export const activity: VariantSource['activities'][number] = {
 
 /** Intro C1-1-01…C1-1-07 (all levels). */
 export const intro = (): Step[] => [
-  dir('C1-1-D01', 'Пироговая улица. У пекарни стоит мэр-хомяк Пудинг. Рядом пустая скамейка.'),
+  dir('C1-1-D01', 'Пироговая улица. У пекарни стоит мэр-хомяк Пудинг. Рядом пустая скамейка.', null, [act.pose('pudding', { expression: 'worried', clip: 'look-around' })]),
   ...seq('C1-1-', 1, 7),
-  dir('C1-1-D02', 'Хвостс пускает пузыри.'),
+  dir('C1-1-D02', 'Хвостс пускает пузыри.', null, [act.effect('bubbles', 1300, 650, 2.5), act.sfx('bubbles', 0.5)]),
 ];
 
 export const klubkiTutorial = (): Step => skill('klubki', Ls('C1-1-19', 'C1-1-20'));
@@ -85,7 +85,7 @@ export const versionScene = (id: string, hub: string): VariantSource['scenes'][n
 
 export const factsScene = (): VariantSource['scenes'][number] => ({
   id: 'C1-9', title: '«А ты знал?»', location: 'bakery', cast: ['watsony'], presentation: 'dialogue',
-  steps: [skill('encyclopedia', [dir('C1-9-D01', 'Карточки в рамочке «Это правда» складываются в Энциклопедию.')]), ...seq('C1-9-', 1, 4)],
+  steps: [skill('encyclopedia', [dir('C1-9-D01', 'Карточки в рамочке «Это правда» складываются в Энциклопедию.', null, [act.effect('sparkles', 1280, 800, 1.5), act.sfx('sticker-check', 0.6)])]), ...seq('C1-9-', 1, 4)],
 });
 
 export const rewardScene = (level: 1 | 2 | 3, next: Step[]): VariantSource['scenes'][number] => ({
@@ -94,7 +94,7 @@ export const rewardScene = (level: 1 | 2 | 3, next: Step[]): VariantSource['scen
     cutscene(`c1.reward.l${level}`),
     reward('rw-c1-badge'), reward(`rw-c1-buttons-l${level}`), reward(`rw-c1-sticker-l${level}`),
     reward('rw-c1-decor-basket'), reward('rw-c1-activity'),
-    dir('C1-10-D01', 'Новые слова в «Словарике сыщика»: улика, свидетель, версия.'),
+    dir('C1-10-D01', 'Новые слова в «Словарике сыщика»: улика, свидетель, версия.', null, [act.sfx('page-turn', 0.6)]),
     skill('cozy-day', [...Ls('C1-10-03', 'C1-10-04'), wait('office.place')]),
     ...next,
   ],

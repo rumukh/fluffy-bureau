@@ -1,0 +1,991 @@
+{
+ "format": "fluffy-content-pack",
+ "schema": 1,
+ "id": "cozy",
+ "kind": "cozy",
+ "title": null,
+ "case": null,
+ "requires": [
+  "shared"
+ ],
+ "start": null,
+ "lines": [
+  {
+   "id": "CZ-pudding-INV",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Чаепитие? Обожаю! Я принесу семечки.",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "CZ-pudding-S1-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Знаешь, почему у меня такие щёки?",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-pudding-S1-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Хомяки носят запасы в щеках. Очень удобно!",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-pudding-S1-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Однажды я принёс так целую горсть подсолнуха.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-pudding-S1-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Потом чихнул, и семечки разлетелись по площади!",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-pudding-S1-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "С тех пор на площади растут подсолнухи.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-tyopa-INV",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "text": "Иду! Возьму кусочек черничного мыла в подарок.",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "CZ-tyopa-S1-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "text": "Мыло я варю с детства. Бабушка научила.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-tyopa-S1-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "text": "Сначала у меня выходили одни пузыри.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-tyopa-S1-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "text": "Пузыри улетали прямо в окна соседей.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-tyopa-S1-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "text": "Соседи не сердились. Говорили: пахнет праздником!",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-fitilyok-INV",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "fitilyok",
+   "text": "Чай вечером? Я посвечу над столом!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "CZ-fitilyok-S1-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "fitilyok",
+   "text": "Я зажигаю фонари на Пироговой улице.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-fitilyok-S1-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "fitilyok",
+   "text": "Каждый вечер облетаю все до одного.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-fitilyok-S1-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "fitilyok",
+   "text": "Один фонарь всегда гаснет раньше всех.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-fitilyok-S1-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "fitilyok",
+   "text": "Я зову его Соней. Он просто рано ложится.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-kartofan-INV",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "text": "Иду! Принесу свежей морковки к чаю.",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "CZ-kartofan-S1-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "text": "Я сажаю огород на ощупь и по запаху.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-kartofan-S1-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "text": "Морковь пахнет сладко, а укроп — свежо.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-kartofan-S1-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "text": "Однажды я посадил тюльпаны вместо лука.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-kartofan-S1-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "text": "Весной весь огород расцвёл. Было очень красиво!",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-stella-INV",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "text": "Чай? Лечу! Захвачу свежую газету.",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "CZ-stella-S1-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "text": "Я знаю каждый почтовый ящик в Пушистино.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-stella-S1-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "text": "Самое трудное письмо пришло без адреса.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-stella-S1-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "text": "На конверте был только рисунок: дом с красной крышей.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-stella-S1-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "text": "Я облетела весь город и нашла этот дом!",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-mouse-INV",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Нам можно на чай? Мы тихонько!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "CZ-mouse-S1-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Нас в семье очень много мышат.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-mouse-S1-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Мы спим в одной большой кровати.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-mouse-S1-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Кто ворочается, тот рассказывает сказку.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-mouse-S1-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "text": "Поэтому сказки у нас каждую ночь!",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-damka-INV",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "С удовольствием! Только сначала проверю маяк.",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "CZ-damka-S1-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Медовый маяк построила ещё моя прабабушка.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-damka-S1-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Бобры умеют строить из веток и ила.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-damka-S1-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "А я научилась ещё и чинить фонари.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-damka-S1-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Свет маяка видно с самого дальнего берега.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-pukhlik-INV",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Чай? Только вечерний. Днём я сплю.",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "CZ-pukhlik-S1-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Я учусь дежурить ночью, как настоящий сыщик.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-pukhlik-S1-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Ночью город тихий, а звёзды яркие.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-pukhlik-S1-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Я считаю огоньки в окнах. Так не хочется спать.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-pukhlik-S1-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Гаснет огонёк — я шепчу: спокойной ночи.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "SHOP-hat-acorn",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Шапочка-жёлудь",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SHOP-hat-flower",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Шляпка с цветком",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SHOP-hat-beret",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Берет художника",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SHOP-hat-detective",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Шапка сыщика",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SHOP-scarf-stripes",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Шарф в полоску",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SHOP-scarf-dots",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Шарф в горошек",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SHOP-scarf-hearts",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Шарф с сердечками",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SHOP-scarf-stars",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Шарф со звёздочками",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SHOP-decor-geranium",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Горшок с геранью",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SHOP-decor-firefly-lamp",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Фонарик-светлячок",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SHOP-decor-rug",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Коврик-ромашка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SHOP-decor-trophy-shelf",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Полочка для наград",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "DS-shelf",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "На полку",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "DS-window",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "На окно",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "DS-table",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "На стол",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "DS-floor",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "На пол",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "DS-wall",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "На стену",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RANK-intern",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Стажёр",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RANK-intern-MSG",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Каждый сыщик начинает со стажёра.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "RANK-helper",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Помощник сыщика",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RANK-helper-MSG",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Помощник сыщика! Ты уже читаешь шифры.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "RW-c2-title-helper",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Звание: Помощник сыщика",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RANK-junior",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Младший детектив",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RANK-junior-MSG",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Младший детектив! Даже взрослых проверяешь честно.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "RW-c4-title-junior",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Звание: Младший детектив",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "CZ-INTRO",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Уютный денёк! Отдохнём и украсим Контору?",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-BOUGHT",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Отличный выбор! Записала в покупки.",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "CZ-RETURNED",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Вернули. Всё снова в копилке.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-NOT-ENOUGH",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Пока не хватает. Раскроем ещё одно дело?",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "CZ-TEA-THANKS",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Чудесный чай! Спасибо за компанию.",
+   "voiced": true,
+   "delivery": "warm"
+  }
+ ],
+ "speakers": [],
+ "skills": [],
+ "scenes": [],
+ "logic": null,
+ "deduction": null,
+ "notebookHelp": null,
+ "hints": null,
+ "minigames": [],
+ "facts": [],
+ "glossary": [],
+ "rewards": [],
+ "collections": [],
+ "activities": [],
+ "comfort": [],
+ "cutscenes": [],
+ "plannedCutscenes": [],
+ "notebookPages": [],
+ "cozy": {
+  "residents": [
+   {
+    "speaker": "pudding",
+    "unlockAfter": 1,
+    "invite": "CZ-pudding-INV",
+    "stories": [
+     [
+      "CZ-pudding-S1-01",
+      "CZ-pudding-S1-02",
+      "CZ-pudding-S1-03",
+      "CZ-pudding-S1-04",
+      "CZ-pudding-S1-05"
+     ]
+    ],
+    "teaPrice": 2
+   },
+   {
+    "speaker": "tyopa",
+    "unlockAfter": 1,
+    "invite": "CZ-tyopa-INV",
+    "stories": [
+     [
+      "CZ-tyopa-S1-01",
+      "CZ-tyopa-S1-02",
+      "CZ-tyopa-S1-03",
+      "CZ-tyopa-S1-04"
+     ]
+    ],
+    "teaPrice": 2
+   },
+   {
+    "speaker": "fitilyok",
+    "unlockAfter": 1,
+    "invite": "CZ-fitilyok-INV",
+    "stories": [
+     [
+      "CZ-fitilyok-S1-01",
+      "CZ-fitilyok-S1-02",
+      "CZ-fitilyok-S1-03",
+      "CZ-fitilyok-S1-04"
+     ]
+    ],
+    "teaPrice": 2
+   },
+   {
+    "speaker": "kartofan",
+    "unlockAfter": 1,
+    "invite": "CZ-kartofan-INV",
+    "stories": [
+     [
+      "CZ-kartofan-S1-01",
+      "CZ-kartofan-S1-02",
+      "CZ-kartofan-S1-03",
+      "CZ-kartofan-S1-04"
+     ]
+    ],
+    "teaPrice": 2
+   },
+   {
+    "speaker": "stella",
+    "unlockAfter": 2,
+    "invite": "CZ-stella-INV",
+    "stories": [
+     [
+      "CZ-stella-S1-01",
+      "CZ-stella-S1-02",
+      "CZ-stella-S1-03",
+      "CZ-stella-S1-04"
+     ]
+    ],
+    "teaPrice": 2
+   },
+   {
+    "speaker": "mouse",
+    "unlockAfter": 2,
+    "invite": "CZ-mouse-INV",
+    "stories": [
+     [
+      "CZ-mouse-S1-01",
+      "CZ-mouse-S1-02",
+      "CZ-mouse-S1-03",
+      "CZ-mouse-S1-04"
+     ]
+    ],
+    "teaPrice": 2
+   },
+   {
+    "speaker": "damka",
+    "unlockAfter": 3,
+    "invite": "CZ-damka-INV",
+    "stories": [
+     [
+      "CZ-damka-S1-01",
+      "CZ-damka-S1-02",
+      "CZ-damka-S1-03",
+      "CZ-damka-S1-04"
+     ]
+    ],
+    "teaPrice": 2
+   },
+   {
+    "speaker": "pukhlik",
+    "unlockAfter": 3,
+    "invite": "CZ-pukhlik-INV",
+    "stories": [
+     [
+      "CZ-pukhlik-S1-01",
+      "CZ-pukhlik-S1-02",
+      "CZ-pukhlik-S1-03",
+      "CZ-pukhlik-S1-04"
+     ]
+    ],
+    "teaPrice": 2
+   }
+  ],
+  "shop": [
+   {
+    "id": "hat-acorn",
+    "kind": "hat",
+    "label": "SHOP-hat-acorn",
+    "asset": "acc.hat.acorn",
+    "price": {
+     "currency": "buttons",
+     "amount": 8
+    },
+    "unlockAfter": 0
+   },
+   {
+    "id": "hat-flower",
+    "kind": "hat",
+    "label": "SHOP-hat-flower",
+    "asset": "acc.hat.flower",
+    "price": {
+     "currency": "buttons",
+     "amount": 10
+    },
+    "unlockAfter": 1
+   },
+   {
+    "id": "hat-beret",
+    "kind": "hat",
+    "label": "SHOP-hat-beret",
+    "asset": "acc.hat.beret",
+    "price": {
+     "currency": "buttons",
+     "amount": 12
+    },
+    "unlockAfter": 2
+   },
+   {
+    "id": "hat-detective",
+    "kind": "hat",
+    "label": "SHOP-hat-detective",
+    "asset": "acc.hat.detective",
+    "price": {
+     "currency": "buttons",
+     "amount": 20
+    },
+    "unlockAfter": 4
+   },
+   {
+    "id": "scarf-stripes",
+    "kind": "scarf-pattern",
+    "label": "SHOP-scarf-stripes",
+    "asset": "scarf.pattern.stripes",
+    "price": {
+     "currency": "buttons",
+     "amount": 8
+    },
+    "unlockAfter": 0
+   },
+   {
+    "id": "scarf-dots",
+    "kind": "scarf-pattern",
+    "label": "SHOP-scarf-dots",
+    "asset": "scarf.pattern.dots",
+    "price": {
+     "currency": "buttons",
+     "amount": 9
+    },
+    "unlockAfter": 1
+   },
+   {
+    "id": "scarf-hearts",
+    "kind": "scarf-pattern",
+    "label": "SHOP-scarf-hearts",
+    "asset": "scarf.pattern.hearts",
+    "price": {
+     "currency": "buttons",
+     "amount": 10
+    },
+    "unlockAfter": 2
+   },
+   {
+    "id": "scarf-stars",
+    "kind": "scarf-pattern",
+    "label": "SHOP-scarf-stars",
+    "asset": "scarf.pattern.stars",
+    "price": {
+     "currency": "buttons",
+     "amount": 13
+    },
+    "unlockAfter": 3
+   },
+   {
+    "id": "decor-geranium",
+    "kind": "decor",
+    "label": "SHOP-decor-geranium",
+    "asset": "decor.geranium",
+    "price": {
+     "currency": "hearts",
+     "amount": 3
+    },
+    "unlockAfter": 1
+   },
+   {
+    "id": "decor-firefly-lamp",
+    "kind": "decor",
+    "label": "SHOP-decor-firefly-lamp",
+    "asset": "decor.firefly-lamp",
+    "price": {
+     "currency": "hearts",
+     "amount": 3
+    },
+    "unlockAfter": 1
+   },
+   {
+    "id": "decor-rug",
+    "kind": "decor",
+    "label": "SHOP-decor-rug",
+    "asset": "decor.rug-daisy",
+    "price": {
+     "currency": "hearts",
+     "amount": 4
+    },
+    "unlockAfter": 2
+   },
+   {
+    "id": "decor-trophy-shelf",
+    "kind": "decor",
+    "label": "SHOP-decor-trophy-shelf",
+    "asset": "decor.trophy-shelf",
+    "price": {
+     "currency": "hearts",
+     "amount": 5
+    },
+    "unlockAfter": 4
+   }
+  ],
+  "decorSlots": [
+   {
+    "id": "shelf",
+    "label": "DS-shelf"
+   },
+   {
+    "id": "window",
+    "label": "DS-window"
+   },
+   {
+    "id": "table",
+    "label": "DS-table"
+   },
+   {
+    "id": "floor",
+    "label": "DS-floor"
+   },
+   {
+    "id": "wall",
+    "label": "DS-wall"
+   }
+  ],
+  "ranks": [
+   {
+    "id": "intern",
+    "label": "RANK-intern",
+    "afterCase": 0,
+    "message": [
+     "RANK-intern-MSG"
+    ],
+    "reward": "rw-prologue-title"
+   },
+   {
+    "id": "helper",
+    "label": "RANK-helper",
+    "afterCase": 2,
+    "message": [
+     "RANK-helper-MSG"
+    ],
+    "reward": "rw-c2-title-helper"
+   },
+   {
+    "id": "junior",
+    "label": "RANK-junior",
+    "afterCase": 4,
+    "message": [
+     "RANK-junior-MSG"
+    ],
+    "reward": "rw-c4-title-junior"
+   }
+  ],
+  "lines": {
+   "intro": [
+    "CZ-INTRO"
+   ],
+   "bought": [
+    "CZ-BOUGHT"
+   ],
+   "returned": [
+    "CZ-RETURNED"
+   ],
+   "notEnough": [
+    "CZ-NOT-ENOUGH"
+   ],
+   "teaThanks": [
+    "CZ-TEA-THANKS"
+   ]
+  }
+ },
+ "reserved": [],
+ "revision": "131d8265c65c7e38f48c83160686b6ce11cfd64973f743f7d1cb8340adc28cc4"
+}

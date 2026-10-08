@@ -2825,6 +2825,10 @@
      "minigame": "c7l2-repair"
     },
     {
+     "t": "reward",
+     "reward": "rw-c7-heart-finale-l2"
+    },
+    {
      "t": "line",
      "line": "C7-9-11"
     },
@@ -4279,6 +4283,13 @@
    "label": "RW-c7-activity",
    "amount": 1,
    "claimKey": "case07:activity:dam"
+  },
+  {
+   "id": "rw-c7-heart-finale-l2",
+   "kind": "hearts",
+   "label": "RW-heart",
+   "amount": 1,
+   "claimKey": "case07:l2:heart:finale"
   }
  ],
  "collections": [
@@ -4377,6 +4388,8 @@
    "summary": "Вручение значка «Водяной салют» и модели шлюза для Конторы."
   }
  ],
+ "notebookPages": [],
+ "cozy": null,
  "reserved": [],
- "revision": "1006fb05a9ebce814abbc04adc1b27e0190123f3add48b2d62cf6063d91d022d"
+ "revision": "b4fa29fb38190b4af69e1167c9400ad56a726ba2152f75dbb15116a004cf71e8"
 }

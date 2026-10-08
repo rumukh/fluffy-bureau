@@ -1,5 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import { sharedSource, stage1 } from '../../../content/index.ts';
+import { case01 } from '../../../content/case01/index.ts';
+import { prologue } from '../../../content/prologue/index.ts';
+import { shared as sharedSource } from '../../../content/shared/index.ts';
+
+const stage1 = [prologue, case01];
 import { genderReview } from '../../../content/shared/gender-review.ts';
 import type { AuthoredLine, CaseSource, SharedSource, VariantSource } from '../dsl.ts';
 import { build } from '../compile.ts';
@@ -124,7 +128,7 @@ describe('content build', () => {
     });
     it('fails on unknown assets and engine-invalid references', () => {
       const c = codes((s) => { const d = shed(s); (d.steps as unknown[]).unshift({ op: 'background', asset: 'bg.nowhere' }, { op: 'camera', preset: 'dolly' }); });
-      expect(c).toContain('CUTSCENE-ASSET');
+      expect(c).toContain('ASSET');
       expect(c.some((x) => x.startsWith('E:'))).toBe(true);
     });
     it('fails on an unknown or nested stage background', () => {

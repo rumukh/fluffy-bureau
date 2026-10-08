@@ -3168,6 +3168,10 @@
      "minigame": "c8l3-oath"
     },
     {
+     "t": "reward",
+     "reward": "rw-c8-heart-finale-l3"
+    },
+    {
      "t": "line",
      "line": "C8-9-02"
     },
@@ -4824,6 +4828,13 @@
    "label": "RW-heart",
    "amount": 1,
    "claimKey": "case08:heart:team"
+  },
+  {
+   "id": "rw-c8-heart-finale-l3",
+   "kind": "hearts",
+   "label": "RW-heart",
+   "amount": 1,
+   "claimKey": "case08:l3:heart:finale"
   }
  ],
  "collections": [
@@ -4942,6 +4953,8 @@
    "summary": "Площадь показывает результаты всех дел и световой сигнал игрока."
   }
  ],
+ "notebookPages": [],
+ "cozy": null,
  "reserved": [],
- "revision": "2f6856858d5cf37bd6ee11d09bea4fa018187a1109bd56bc5c90695be950bb17"
+ "revision": "b2e03447c3c3a2cff04a8da5f4363cd83777bb54097735c549377379a82d72e4"
 }

@@ -1,10 +1,10 @@
-import { retarget } from '../../tools/content/dsl.ts';
 import type { VariantSource } from '../../tools/content/dsl.ts';
 import {
-  activity, and, baseRewards, cl, collections, commonComfort, commonCutscenes, eq, facts, factsScene, finalLightScene,
+  activity, and, baseRewards, cl, collections, commonComfort, cutscene, eq, facts, factsScene, finalLightScene,
   glossary, goto, has, HUB, intended, introOffice, L, lightGame, menu, minigame, mopt, ne, not, opt, redHerringsBase, reveal, rewardScene,
-  secretNote, seq, skill, soundGame, versionScene, where, what, who,
+  sceneProps, secretNote, secretNotesPage, seq, skill, soundGame, versionScene, where, what, who,
 } from './common.ts';
+import { intro, note, reveal as revealCutscene, reward as rewardCutscene } from './cutscenes.ts';
 
 const anyWhat = { op: 'in' as const, axis: 'what', values: ['training', 'broken', 'ghost', 'repair'] };
 
@@ -15,7 +15,7 @@ export const level3: VariantSource = {
   case: { number: 3, level: 3 },
   start: 'C3-0',
   scenes: [
-    { id: 'C3-0', title: 'Контора: вечерний гость', location: 'office-evening', cast: ['khvosts', 'watsony', 'mouse'], presentation: 'cutscene', steps: [...introOffice(), goto('C3-L3-1')] },
+    { id: 'C3-0', title: 'Контора: вечерний гость', location: 'office-evening', cast: ['khvosts', 'watsony', 'mouse'], presentation: 'cutscene', props: sceneProps.map, steps: [cutscene('c3.intro.l3'), ...introOffice(), goto('C3-L3-1')] },
     { id: 'C3-L3-1', title: 'Берег Медового пруда', location: 'honey-pond', cast: ['pudding', 'damka', 'khvosts', 'watsony'], presentation: 'dialogue', steps: [...seq('C3-1-', 1, 5), ...seq('C3-L2-1-', 1, 3), ...seq('C3-L3-1-', 1, 2), skill('lamp', [L('C3-1-06')]), ...seq('C3-1-', 7, 8), L('C3-L2-1-04'), ...seq('C3-1-', 9, 10), goto(HUB)] },
     {
       id: HUB, title: 'Медовый пруд: выбор', location: 'honey-pond', cast: ['khvosts', 'watsony', 'pudding', 'damka', 'mouse'], presentation: 'hub',
@@ -33,17 +33,17 @@ export const level3: VariantSource = {
       ],
     },
     { id: 'C3-L3-2', title: 'Услышь разницу: похожие образцы', location: 'pond-bank', cast: ['khvosts', 'watsony', 'mouse'], presentation: 'minigame', steps: [skill('sound-diff', [L('C3-2-01'), L('C3-2-02')]), minigame('c3l3-sound'), L('C3-L2-2-02'), ...seq('C3-2-', 6, 9), reveal('c3-l3-sounds'), goto(HUB)] },
-    secretNote([L('C3-L2-3-01')]),
+    secretNote('c3.note.l3', [L('C3-L2-3-01')]),
     { id: 'C3-L3-4', title: 'Мышата', location: 'pond-bank', cast: ['mouse', 'khvosts'], presentation: 'dialogue', steps: [...seq('C3-L3-4-', 1, 6), reveal('c3-mice'), goto(HUB)] },
     { id: 'C3-L3-5', title: 'Лупа наверху', location: 'lighthouse-room', cast: ['khvosts', 'watsony', 'damka'], presentation: 'minigame', steps: [skill('magnifier', [L('C3-5-01'), L('C3-L2-4-01')]), minigame('c3l3-magnifier'), L('C3-5-06'), L('C3-L3-5-02'), L('C3-5-08'), L('C3-L2-4-05'), reveal('c3-l3-room'), goto(HUB)] },
     { id: 'C3-L3-6', title: 'Кто наследил?', location: 'lighthouse-stairs', cast: ['khvosts', 'watsony'], presentation: 'minigame', steps: [skill('tracks', [L('C3-6-01')]), minigame('c3l3-tracks'), ...seq('C3-6-', 5, 6), reveal('c3-tracks'), goto(HUB)] },
     { id: 'C3-L3-7', title: 'Прочитай мигание', location: 'lighthouse-room', cast: ['khvosts', 'watsony'], presentation: 'minigame', steps: [skill('read-blink', seq('C3-L3-7-', 1, 2)), minigame('c3l3-blink'), ...seq('C3-L3-7-', 4, 6), reveal('c3-blink'), goto(HUB)] },
     { id: 'C3-L3-8', title: 'Лента времени', location: 'lighthouse-room', cast: ['khvosts', 'watsony'], presentation: 'minigame', steps: [skill('timeline', [L('C3-L2-6-01'), L('C3-L2-6-02')], [L('C3-L2-6-03')]), minigame('c3l3-timeline'), L('C3-L2-6-04'), L('C3-L2-6-05'), L('C3-L3-8-01'), L('C3-L2-6-06'), reveal('c3-l3-log'), goto(HUB)] },
     versionScene('C3-L3-9'),
-    { id: 'C3-L3-10', title: 'Разрешение', location: 'lighthouse-room', cast: ['khvosts', 'watsony', 'pukhlik', 'damka', 'tyopa'], presentation: 'cutscene', steps: [...seq('C3-8-', 1, 11), ...seq('C3-L2-8-', 1, 2), ...seq('C3-L3-10-', 1, 2), ...seq('C3-8-', 12, 16), goto('C3-L3-11')] },
+    { id: 'C3-L3-10', title: 'Разрешение', location: 'lighthouse-room', cast: ['khvosts', 'watsony', 'pukhlik', 'damka', 'tyopa'], presentation: 'cutscene', steps: [cutscene('c3.reveal.l3'), goto('C3-L3-11')] },
     finalLightScene('C3-L3-11', 3, 'c3l3-light'),
     factsScene(),
-    rewardScene(3),
+    rewardScene(3, 'c3.reward.l3'),
   ],
   logic: {
     axes: [
@@ -132,9 +132,11 @@ export const level3: VariantSource = {
       { id: 'owl1', prompt: null, pageSize: 3, options: [opt('magpie', 'C3-6-B01', false, 'C3-6-02'), opt('firefly', 'C3-6-B02', false, 'C3-6-03'), opt('owl', 'C3-6-B03', true, 'C3-6-04')] },
       { id: 'owl2', prompt: null, pageSize: 3, options: [opt('beaver', 'C3-6-B04', false, 'C3-L2-5-01'), opt('raccoon', 'C3-6-B05', false, 'C3-L3-6-01'), opt('owl', 'C3-6-B03', true, 'C3-6-04')] },
     ], question: null } },
-    { id: 'c3l3-blink', skill: 'read-blink', config: { kind: 'staged', mechanic: 'Прочитай мигание', description: 'Игрок сверяет рисунок мышат с игровыми уроками книги слева направо.', steps: [
-      { id: 'lesson', prompt: null, pageSize: 3, options: [opt('hello', 'C3-L3-7-B01', true), opt('friends', 'C3-L3-7-B02', false, 'C3-L3-7-03'), opt('night', 'C3-L3-7-B03', false, 'C3-L3-7-03')] },
-    ], lines: [] } },
+    { id: 'c3l3-blink', skill: 'read-blink', config: { kind: 'read-blink', drawing: ['dot', 'dot', 'dash'], lessons: [
+      { ...opt('hello', 'C3-L3-7-B01', true), pattern: ['dot', 'dot', 'dash'] },
+      { ...opt('friends', 'C3-L3-7-B02', false, 'C3-L3-7-03'), pattern: ['dash', 'dot', 'dash'] },
+      { ...opt('night', 'C3-L3-7-B03', false, 'C3-L3-7-03'), pattern: ['dash', 'dash'] },
+    ], wrong: ['C3-L3-7-03'] } },
     { id: 'c3l3-timeline', skill: 'timeline', config: { kind: 'timeline', items: [
       { id: 't19', time: '19:00', label: 'C3-L2-6-B01' },
       { id: 't20', time: '20:00', label: 'C3-L2-6-B02' },
@@ -144,9 +146,12 @@ export const level3: VariantSource = {
     ], solution: ['t19', 't20', 't2030', 't21', 't22'], wrong: ['C3-L2-6-W01'] } },
     lightGame('c3l3-light', 3),
   ],
-  facts, glossary, rewards: baseRewards(3), collections, activities: [activity], comfort: commonComfort, cutscenes: [], plannedCutscenes: retarget(commonCutscenes, { "C3-8": "C3-L3-8" }),
+  facts, glossary, rewards: baseRewards(3), collections, activities: [activity], comfort: commonComfort,
+  cutscenes: [intro(3, 'C3-L3-1'), note(3), revealCutscene(3, 'C3-L3-10'), rewardCutscene(3)],
+  notebookPages: [secretNotesPage],
   decisions: [
-    { id: 'C3L3-D1', text: 'Свой световой сигнал смоделирован staged-выбором, потому что await для поля профиля ещё нет.', ref: 'D22' },
+    { id: 'C3L3-D1', text: 'Свой световой сигнал смоделирован полем own в light-signals: ребёнок собирает 3–5 огоньков.', ref: 'D22' },
     { id: 'C3L3-D2', text: 'Рисунок мышат — добросовестная ошибка; сам рисунок нужен только для У5.', ref: 'D04' },
+    { id: 'C3L3-T25', text: 'Ролики T25: вступление, тайная заметка, разрешение и награда. Игровые эффекты остаются шагами после роликов.', ref: 'T25' },
   ],
 };

@@ -509,24 +509,6 @@
    "delivery": "neutral"
   },
   {
-   "id": "C4-5-09",
-   "rev": 1,
-   "kind": "dialogue",
-   "speaker": "khvosts",
-   "text": "Кладовка в нашей Конторе? Там только старые зонты…",
-   "voiced": true,
-   "delivery": "thinking"
-  },
-  {
-   "id": "C4-5-10",
-   "rev": 1,
-   "kind": "dialogue",
-   "speaker": "watsony",
-   "text": "Есть улика! Записала… сонную.",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
    "id": "C4-6-01",
    "rev": 1,
    "kind": "dialogue",
@@ -730,33 +712,6 @@
    "kind": "label",
    "speaker": "narrator",
    "text": "Раздели поровну",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
-   "id": "C4-8-01",
-   "rev": 1,
-   "kind": "dialogue",
-   "speaker": "pudding",
-   "text": "Большое чаепитие! Варенья хватит всем.",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
-   "id": "C4-8-02",
-   "rev": 1,
-   "kind": "dialogue",
-   "speaker": "watsony",
-   "text": "Раздели банки поровну на столы.",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
-   "id": "C4-L2-8-01",
-   "rev": 1,
-   "kind": "dialogue",
-   "speaker": "watsony",
-   "text": "Одной банки хватает на две розетки. Посчитаем?",
    "voiced": true,
    "delivery": "neutral"
   },
@@ -1463,110 +1418,11 @@
    "delivery": "neutral"
   },
   {
-   "id": "C4-5-B01",
-   "rev": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "text": "Кладовка Конторы",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
-   "id": "C4-5-05",
-   "rev": 1,
-   "kind": "dialogue",
-   "speaker": "pukhlik",
-   "text": "Да! Дверка под лестницей в Конторе.",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
-   "id": "C4-5-B02",
-   "rev": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "text": "Норка Шуршиков",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
-   "id": "C4-5-06",
-   "rev": 1,
-   "kind": "dialogue",
-   "speaker": "pukhlik",
-   "text": "Не совсем. Вот ещё сон.",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
-   "id": "C4-5-B03",
-   "rev": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "text": "За бочкой",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
-   "id": "C4-L2-5-B01",
-   "rev": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "text": "Чердак мэрии",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
    "id": "C4-5-N02",
    "rev": 1,
    "kind": "label",
    "speaker": "pukhlik",
    "text": "Выбери, что случилось с банками.",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
-   "id": "C4-5-B04",
-   "rev": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "text": "Тайный запас",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
-   "id": "C4-5-07",
-   "rev": 1,
-   "kind": "dialogue",
-   "speaker": "pukhlik",
-   "text": "Да! Банки ждут праздника.",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
-   "id": "C4-5-B05",
-   "rev": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "text": "Съели",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
-   "id": "C4-5-B06",
-   "rev": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "text": "Разбили",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
-   "id": "C4-L2-5-B02",
-   "rev": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "text": "Раздали гостям",
    "voiced": true,
    "delivery": "neutral"
   },
@@ -1580,13 +1436,60 @@
    "delivery": "neutral"
   },
   {
-   "id": "C4-5-B07",
+   "id": "C4-5-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Кладовка в нашей Конторе? Там только старые зонты…",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C4-5-10",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Есть улика! Записала… сонную.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-5-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Да! Дверка под лестницей в Конторе.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-5-DC01",
    "rev": 1,
    "kind": "label",
    "speaker": "narrator",
-   "text": "Шерлок Хвостс",
+   "text": "Зонты в углу.",
+   "voiced": true,
+   "delivery": "neutral",
+   "private": true
+  },
+  {
+   "id": "C4-5-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Да! Банки ждут праздника.",
    "voiced": true,
    "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-5-DC04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Бантик.",
+   "voiced": true,
+   "delivery": "neutral",
+   "private": true
   },
   {
    "id": "C4-5-08",
@@ -1598,38 +1501,270 @@
    "delivery": "thinking"
   },
   {
-   "id": "C4-5-B08",
+   "id": "C4-L2-5-DC07",
    "rev": 1,
    "kind": "label",
    "speaker": "narrator",
-   "text": "Мэр Пудинг",
+   "text": "Мыльный пузырь.",
+   "voiced": true,
+   "delivery": "neutral",
+   "private": true
+  },
+  {
+   "id": "C4-L2-5-DC02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Узкая дверка.",
+   "voiced": true,
+   "delivery": "neutral",
+   "private": true
+  },
+  {
+   "id": "C4-L2-5-DC03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Ступеньки над головой.",
+   "voiced": true,
+   "delivery": "neutral",
+   "private": true
+  },
+  {
+   "id": "C4-5-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Не совсем. Вот ещё сон.",
    "voiced": true,
    "delivery": "neutral"
   },
   {
-   "id": "C4-5-B09",
+   "id": "C4-L2-5-DC05",
    "rev": 1,
    "kind": "label",
    "speaker": "narrator",
-   "text": "Мышата Шуршики",
+   "text": "Флажок юбилея.",
+   "voiced": true,
+   "delivery": "neutral",
+   "private": true
+  },
+  {
+   "id": "C4-L2-5-DC06",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Записка с восклицательным знаком.",
+   "voiced": true,
+   "delivery": "neutral",
+   "private": true
+  },
+  {
+   "id": "C4-L2-5-DC08",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Шляпа сыщика.",
+   "voiced": true,
+   "delivery": "neutral",
+   "private": true
+  },
+  {
+   "id": "C4-L2-5-DC09",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Полоски на мордочке.",
+   "voiced": true,
+   "delivery": "neutral",
+   "private": true
+  },
+  {
+   "id": "C4-F-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Сегодня мой фонарь снов будет у вас.",
    "voiced": true,
    "delivery": "neutral"
   },
   {
-   "id": "C4-L2-5-B03",
+   "id": "C4-F-02",
    "rev": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "text": "Доктор Ватсони",
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Хранитель знает разгадку. Остальные — не подглядывайте!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C4-F-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Хранитель, выбери сон. Без прямых слов!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C4-F-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Можно задать один вопрос. Хранитель ответит да или нет.",
    "voiced": true,
    "delivery": "neutral"
   },
   {
-   "id": "C4-8-B03",
+   "id": "C4-F-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Вы угадали вместе! Победа общая.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-F-Q01",
    "rev": 1,
    "kind": "label",
    "speaker": "narrator",
-   "text": "Три банки",
+   "text": "Это про место?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-F-Q02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Это в Конторе?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-F-Q03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Это связано с праздником?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-F-P01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Мама",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-F-P02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Папа",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-F-P03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Бабушка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-F-P04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Дедушка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-F-P05",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Брат",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-F-P06",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Сестра",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-F-P07",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Друг",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-F-T01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Добрый сновидец",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-F-T02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Лучший вопрос",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-F-T03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Зоркий глаз",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-F-T04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Тёплое сердце",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-8-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Большое чаепитие! Варенья хватит всем.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-8-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Раздели банки поровну на столы.",
    "voiced": true,
    "delivery": "neutral"
   },
@@ -1643,11 +1778,11 @@
    "delivery": "neutral"
   },
   {
-   "id": "C4-8-B02",
+   "id": "C4-L2-8-01",
    "rev": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "text": "Четыре банки",
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Одной банки хватает на две розетки. Посчитаем?",
    "voiced": true,
    "delivery": "neutral"
   },
@@ -1661,20 +1796,38 @@
    "delivery": "neutral"
   },
   {
-   "id": "C4-8-B01",
+   "id": "C4-8-ITEM-jar",
    "rev": 1,
    "kind": "label",
    "speaker": "narrator",
-   "text": "Три стола",
+   "text": "Банка варенья",
    "voiced": true,
    "delivery": "neutral"
   },
   {
-   "id": "C4-L2-8-B01",
+   "id": "C4-8-GROUP-table",
    "rev": 1,
    "kind": "label",
    "speaker": "narrator",
-   "text": "Три банки открыть",
+   "text": "Стол",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-8-ITEM-spoon",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Ложка варенья",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-8-GROUP-guest",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Гость",
    "voiced": true,
    "delivery": "neutral"
   },
@@ -1683,7 +1836,7 @@
    "rev": 1,
    "kind": "glossary",
    "speaker": "narrator",
-   "text": "Подозреваемый — тот, кого проверяют без обвинения.",
+   "text": "Подозреваемый — того проверяют, но вина не доказана.",
    "voiced": true,
    "delivery": "warm"
   },
@@ -1814,56 +1967,173 @@
    "delivery": "warm"
   },
   {
-   "id": "C4-F-01",
-   "rev": 1,
-   "kind": "dialogue",
-   "speaker": "pukhlik",
-   "text": "Сегодня мой фонарь снов будет у вас.",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
-   "id": "C4-F-02",
-   "rev": 1,
-   "kind": "dialogue",
-   "speaker": "pukhlik",
-   "text": "Хранитель знает разгадку. Остальные — не подглядывайте!",
-   "voiced": true,
-   "delivery": "cheerful"
-  },
-  {
-   "id": "C4-F-03",
-   "rev": 1,
-   "kind": "dialogue",
-   "speaker": "pukhlik",
-   "text": "Хранитель, выбери сон. Без прямых слов!",
-   "voiced": true,
-   "delivery": "cheerful"
-  },
-  {
-   "id": "C4-F-04",
-   "rev": 1,
-   "kind": "dialogue",
-   "speaker": "pukhlik",
-   "text": "Можно задать один вопрос. Хранитель ответит да или нет.",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
-   "id": "C4-F-05",
-   "rev": 1,
-   "kind": "dialogue",
-   "speaker": "pukhlik",
-   "text": "Вы угадали вместе! Победа общая.",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
    "id": "C4-0-B01",
    "rev": 1,
    "kind": "label",
    "speaker": "narrator",
    "text": "Погреб мэрии",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-5-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Кладовка Конторы",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-5-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Норка Шуршиков",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-5-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "За бочкой",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-5-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Чердак мэрии",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-5-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Тайный запас",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-5-B05",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Съели",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-5-B06",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Разбили",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-5-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Раздали гостям",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-5-B07",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Шерлок Хвостс",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-5-B08",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Мэр Пудинг",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-5-B09",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Мышата Шуршики",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-5-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Доктор Ватсони",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L3-5-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Крот Картофан",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-8-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Три стола",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-8-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Четыре банки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-8-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Три банки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L2-8-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Три банки открыть",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C4-L3-10-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Четыре банки осталось",
    "voiced": true,
    "delivery": "neutral"
   }
@@ -1892,25 +2162,8 @@
    "presentation": "cutscene",
    "steps": [
     {
-     "t": "dir",
-     "id": "C4-0-D01",
-     "text": "Контора. Мэр Пудинг в отчаянии держит пустую баночку."
-    },
-    {
-     "t": "line",
-     "line": "C4-0-01"
-    },
-    {
-     "t": "line",
-     "line": "C4-0-02"
-    },
-    {
-     "t": "line",
-     "line": "C4-0-03"
-    },
-    {
-     "t": "line",
-     "line": "C4-0-04"
+     "t": "cutscene",
+     "cutscene": "c4.office.l2"
     },
     {
      "t": "skill",
@@ -1919,7 +2172,23 @@
       {
        "t": "dir",
        "id": "C4-0-D02",
-       "text": "На карте активна точка «Погреб мэрии»."
+       "text": "На карте активна точка «Погреб мэрии».",
+       "actions": [
+        {
+         "op": "sfx",
+         "asset": "sfx.page-turn",
+         "gain": 0.8
+        },
+        {
+         "op": "effect",
+         "effect": "glow",
+         "at": {
+          "x": 1280,
+          "y": 760
+         },
+         "duration": 1.2
+        }
+       ]
       }
      ],
      "known": []
@@ -1942,40 +2211,8 @@
    "presentation": "dialogue",
    "steps": [
     {
-     "t": "line",
-     "line": "C4-1-01"
-    },
-    {
-     "t": "line",
-     "line": "C4-1-02"
-    },
-    {
-     "t": "line",
-     "line": "C4-1-03"
-    },
-    {
-     "t": "line",
-     "line": "C4-1-04"
-    },
-    {
-     "t": "line",
-     "line": "C4-1-05"
-    },
-    {
-     "t": "line",
-     "line": "C4-1-06"
-    },
-    {
-     "t": "line",
-     "line": "C4-L2-1-01"
-    },
-    {
-     "t": "line",
-     "line": "C4-L2-1-02"
-    },
-    {
-     "t": "line",
-     "line": "C4-L2-1-03"
+     "t": "cutscene",
+     "cutscene": "c4.cellar.l2"
     },
     {
      "t": "skill",
@@ -1984,7 +2221,18 @@
       {
        "t": "dir",
        "id": "C4-L2-1-D01",
-       "text": "Блокнот раскрывается: четыре строки в каждой колонке."
+       "text": "Блокнот раскрывается: четыре строки в каждой колонке.",
+       "actions": [
+        {
+         "op": "sfx",
+         "asset": "sfx.page-turn"
+        },
+        {
+         "op": "pose",
+         "actor": "khvosts",
+         "clip": "present"
+        }
+       ]
       },
       {
        "t": "line",
@@ -1995,7 +2243,18 @@
       {
        "t": "dir",
        "id": "C4-L2-1-D01",
-       "text": "Блокнот раскрывается: четыре строки в каждой колонке."
+       "text": "Блокнот раскрывается: четыре строки в каждой колонке.",
+       "actions": [
+        {
+         "op": "sfx",
+         "asset": "sfx.page-turn"
+        },
+        {
+         "op": "pose",
+         "actor": "khvosts",
+         "clip": "present"
+        }
+       ]
       },
       {
        "t": "line",
@@ -2416,14 +2675,6 @@
      "minigame": "c4l2-dreams"
     },
     {
-     "t": "line",
-     "line": "C4-5-09"
-    },
-    {
-     "t": "line",
-     "line": "C4-5-10"
-    },
-    {
      "t": "clue",
      "clue": "c4-dreams"
     },
@@ -2478,89 +2729,8 @@
    "presentation": "cutscene",
    "steps": [
     {
-     "t": "dir",
-     "id": "C4-7-D01",
-     "text": "Контора. Под лестницей маленькая дверка; внутри двенадцать банок с бантиками."
-    },
-    {
-     "t": "line",
-     "line": "C4-7-01"
-    },
-    {
-     "t": "line",
-     "line": "C4-7-02"
-    },
-    {
-     "t": "line",
-     "line": "C4-7-03"
-    },
-    {
-     "t": "line",
-     "line": "C4-7-04"
-    },
-    {
-     "t": "line",
-     "line": "C4-7-05"
-    },
-    {
-     "t": "line",
-     "line": "C4-7-06"
-    },
-    {
-     "t": "line",
-     "line": "C4-7-07"
-    },
-    {
-     "t": "line",
-     "line": "C4-7-08"
-    },
-    {
-     "t": "line",
-     "line": "C4-7-09"
-    },
-    {
-     "t": "line",
-     "line": "C4-7-10"
-    },
-    {
-     "t": "line",
-     "line": "C4-7-11"
-    },
-    {
-     "t": "line",
-     "line": "C4-7-12"
-    },
-    {
-     "t": "line",
-     "line": "C4-L2-7-01"
-    },
-    {
-     "t": "line",
-     "line": "C4-L2-7-02"
-    },
-    {
-     "t": "line",
-     "line": "C4-L2-7-03"
-    },
-    {
-     "t": "line",
-     "line": "C4-7-13"
-    },
-    {
-     "t": "line",
-     "line": "C4-7-14"
-    },
-    {
-     "t": "line",
-     "line": "C4-7-15"
-    },
-    {
-     "t": "line",
-     "line": "C4-7-16"
-    },
-    {
-     "t": "line",
-     "line": "C4-7-17"
+     "t": "cutscene",
+     "cutscene": "c4.pantry.l2"
     },
     {
      "t": "goto",
@@ -2571,7 +2741,7 @@
   {
    "id": "C4-L2-8",
    "title": "Большое чаепитие",
-   "location": "town-square",
+   "location": "tea-square",
    "cast": [
     "pudding",
     "mouse",
@@ -2584,46 +2754,20 @@
     {
      "t": "skill",
      "skill": "equal-share",
-     "first": [
-      {
-       "t": "line",
-       "line": "C4-8-01"
-      },
-      {
-       "t": "line",
-       "line": "C4-8-02"
-      }
-     ],
-     "known": [
-      {
-       "t": "line",
-       "line": "C4-8-01"
-      },
-      {
-       "t": "line",
-       "line": "C4-8-02"
-      }
-     ]
-    },
-    {
-     "t": "line",
-     "line": "C4-L2-8-01"
+     "first": [],
+     "known": []
     },
     {
      "t": "minigame",
      "minigame": "c4l2-tea"
     },
     {
-     "t": "line",
-     "line": "C4-8-05"
+     "t": "reward",
+     "reward": "rw-c4-heart-finale-l2"
     },
     {
-     "t": "line",
-     "line": "C4-8-06"
-    },
-    {
-     "t": "line",
-     "line": "C4-8-07"
+     "t": "cutscene",
+     "cutscene": "c4.tea.l2"
     },
     {
      "t": "goto",
@@ -2634,7 +2778,7 @@
   {
    "id": "C4-9",
    "title": "«А ты знал?»",
-   "location": "town-square",
+   "location": "tea-square",
    "cast": [
     "khvosts",
     "watsony"
@@ -2648,7 +2792,23 @@
       {
        "t": "dir",
        "id": "C4-9-D01",
-       "text": "Три карточки фактов складываются в Энциклопедию."
+       "text": "Три карточки фактов складываются в Энциклопедию.",
+       "actions": [
+        {
+         "op": "sfx",
+         "asset": "sfx.page-turn",
+         "gain": 0.8
+        },
+        {
+         "op": "effect",
+         "effect": "sparkles",
+         "at": {
+          "x": 1280,
+          "y": 900
+         },
+         "duration": 1.4
+        }
+       ]
       }
      ],
      "known": []
@@ -2684,22 +2844,13 @@
     "watsony"
    ],
    "presentation": "cutscene",
+   "props": {
+    "jar": "prop.jam-jar-c4"
+   },
    "steps": [
     {
-     "t": "line",
-     "line": "C4-10-01"
-    },
-    {
-     "t": "line",
-     "line": "C4-10-02"
-    },
-    {
-     "t": "line",
-     "line": "C4-10-03"
-    },
-    {
-     "t": "line",
-     "line": "C4-10-04"
+     "t": "cutscene",
+     "cutscene": "c4.reward.l2"
     },
     {
      "t": "reward",
@@ -2728,7 +2879,37 @@
     {
      "t": "dir",
      "id": "C4-10-D01",
-     "text": "Новое слово в словарике: подозреваемый. Банка варенья ставится в Конторе."
+     "text": "Новое слово в словарике: подозреваемый. Банка варенья ставится в Конторе.",
+     "actions": [
+      {
+       "op": "enter",
+       "actor": "jar",
+       "from": {
+        "x": 1760,
+        "y": 1180
+       },
+       "to": {
+        "x": 1760,
+        "y": 1180
+       },
+       "duration": 0.1,
+       "walk": false
+      },
+      {
+       "op": "pose",
+       "actor": "jar",
+       "clip": "present"
+      },
+      {
+       "op": "effect",
+       "effect": "sparkles",
+       "at": {
+        "x": 1760,
+        "y": 1050
+       },
+       "duration": 1.4
+      }
+     ]
     },
     {
      "t": "skill",
@@ -3700,203 +3881,267 @@
    "id": "c4l2-dreams",
    "skill": "dream-keeper",
    "config": {
-    "kind": "staged",
-    "mechanic": "dream-keeper",
-    "description": "Пухлик показывает по три мягкие карты-сна.",
-    "steps": [
+    "kind": "dream-keeper",
+    "intro": [
+     "C4-5-N01",
+     "C4-5-N02",
+     "C4-5-N03"
+    ],
+    "rounds": [
      {
       "id": "where",
-      "prompt": "C4-5-N01",
-      "pageSize": 3,
-      "options": [
+      "axis": "where",
+      "answer": "office-pantry",
+      "correct": [
+       "C4-5-05"
+      ],
+      "wrong": [
+       "C4-5-06"
+      ],
+      "cards": [
        {
-        "id": "office",
-        "label": "C4-5-B01",
-        "correct": true,
-        "reply": [
-         "C4-5-05"
-        ]
+        "id": "umbrellas-corner",
+        "label": "C4-L2-5-DC01",
+        "image": "dream.c4.l2.umbrellas-corner",
+        "facts": {
+         "place": true,
+         "office": true,
+         "holiday": false
+        }
        },
        {
-        "id": "mouse",
-        "label": "C4-5-B02",
-        "correct": false,
-        "reply": [
-         "C4-5-06"
-        ]
+        "id": "narrow-door",
+        "label": "C4-L2-5-DC02",
+        "image": "dream.c4.l2.narrow-door",
+        "facts": {
+         "place": true,
+         "office": true,
+         "holiday": false
+        }
        },
        {
-        "id": "barrel",
-        "label": "C4-5-B03",
-        "correct": false,
-        "reply": [
-         "C4-5-06"
-        ]
-       },
-       {
-        "id": "attic",
-        "label": "C4-L2-5-B01",
-        "correct": false,
-        "reply": [
-         "C4-5-06"
-        ]
+        "id": "stairs-overhead",
+        "label": "C4-L2-5-DC03",
+        "image": "dream.c4.l2.stairs-overhead",
+        "facts": {
+         "place": true,
+         "office": true,
+         "holiday": false
+        }
        }
       ]
      },
      {
       "id": "what",
-      "prompt": "C4-5-N02",
-      "pageSize": 3,
-      "options": [
+      "axis": "what",
+      "answer": "secret-stock",
+      "correct": [
+       "C4-5-07"
+      ],
+      "wrong": [
+       "C4-5-06"
+      ],
+      "cards": [
        {
-        "id": "stock",
-        "label": "C4-5-B04",
-        "correct": true,
-        "reply": [
-         "C4-5-07"
-        ]
+        "id": "ribbon",
+        "label": "C4-L2-5-DC04",
+        "image": "dream.c4.l2.ribbon",
+        "facts": {
+         "place": false,
+         "office": false,
+         "holiday": true
+        }
        },
        {
-        "id": "eaten",
-        "label": "C4-5-B05",
-        "correct": false,
-        "reply": [
-         "C4-5-06"
-        ]
+        "id": "jubilee-flag",
+        "label": "C4-L2-5-DC05",
+        "image": "dream.c4.l2.jubilee-flag",
+        "facts": {
+         "place": false,
+         "office": false,
+         "holiday": true
+        }
        },
        {
-        "id": "broken",
-        "label": "C4-5-B06",
-        "correct": false,
-        "reply": [
-         "C4-5-06"
-        ]
-       },
-       {
-        "id": "shared",
-        "label": "C4-L2-5-B02",
-        "correct": false,
-        "reply": [
-         "C4-5-06"
-        ]
+        "id": "exclamation-note",
+        "label": "C4-L2-5-DC06",
+        "image": "dream.c4.l2.exclamation-note",
+        "facts": {
+         "place": false,
+         "office": false,
+         "holiday": false
+        }
        }
       ]
      },
      {
       "id": "who",
-      "prompt": "C4-5-N03",
-      "pageSize": 3,
-      "options": [
+      "axis": "who",
+      "answer": "khvosts",
+      "correct": [
+       "C4-5-08"
+      ],
+      "wrong": [
+       "C4-5-06"
+      ],
+      "cards": [
        {
-        "id": "khvosts",
-        "label": "C4-5-B07",
-        "correct": true,
-        "reply": [
-         "C4-5-08"
-        ]
+        "id": "bubble",
+        "label": "C4-L2-5-DC07",
+        "image": "dream.c4.l2.bubble",
+        "facts": {
+         "place": false,
+         "office": false,
+         "holiday": false
+        }
        },
        {
-        "id": "pudding",
-        "label": "C4-5-B08",
-        "correct": false,
-        "reply": [
-         "C4-5-06"
-        ]
+        "id": "detective-hat",
+        "label": "C4-L2-5-DC08",
+        "image": "dream.c4.l2.detective-hat",
+        "facts": {
+         "place": false,
+         "office": false,
+         "holiday": false
+        }
        },
        {
-        "id": "mouse",
-        "label": "C4-5-B09",
-        "correct": false,
-        "reply": [
-         "C4-5-06"
-        ]
-       },
-       {
-        "id": "watsony",
-        "label": "C4-L2-5-B03",
-        "correct": false,
-        "reply": [
-         "C4-5-06"
-        ]
+        "id": "muzzle-stripes",
+        "label": "C4-L2-5-DC09",
+        "image": "dream.c4.l2.muzzle-stripes",
+        "facts": {
+         "place": false,
+         "office": false,
+         "holiday": false
+        }
        }
       ]
      }
     ],
-    "lines": []
+    "after": [
+     "C4-5-09",
+     "C4-5-10"
+    ],
+    "family": {
+     "intro": [
+      "C4-F-01",
+      "C4-F-02"
+     ],
+     "keeperPick": [
+      "C4-F-03"
+     ],
+     "ask": [
+      "C4-F-04"
+     ],
+     "win": [
+      "C4-F-05"
+     ],
+     "players": [
+      {
+       "id": "mama",
+       "label": "C4-F-P01"
+      },
+      {
+       "id": "papa",
+       "label": "C4-F-P02"
+      },
+      {
+       "id": "grandma",
+       "label": "C4-F-P03"
+      },
+      {
+       "id": "grandpa",
+       "label": "C4-F-P04"
+      },
+      {
+       "id": "brother",
+       "label": "C4-F-P05"
+      },
+      {
+       "id": "sister",
+       "label": "C4-F-P06"
+      },
+      {
+       "id": "friend",
+       "label": "C4-F-P07"
+      }
+     ],
+     "questions": [
+      {
+       "id": "place",
+       "label": "C4-F-Q01"
+      },
+      {
+       "id": "office",
+       "label": "C4-F-Q02"
+      },
+      {
+       "id": "holiday",
+       "label": "C4-F-Q03"
+      }
+     ],
+     "titles": [
+      {
+       "id": "kind-dreamer",
+       "label": "C4-F-T01",
+       "for": "keeper"
+      },
+      {
+       "id": "best-question",
+       "label": "C4-F-T02",
+       "for": "asker"
+      },
+      {
+       "id": "sharp-eye",
+       "label": "C4-F-T03",
+       "for": "guesser"
+      },
+      {
+       "id": "warm-heart",
+       "label": "C4-F-T04",
+       "for": "guesser"
+      }
+     ]
+    }
    }
   },
   {
    "id": "c4l2-tea",
    "skill": "equal-share",
    "config": {
-    "kind": "staged",
-    "mechanic": "equal-share",
-    "description": "Разделить банки и посчитать розетки.",
-    "steps": [
+    "kind": "equal-share",
+    "intro": [
+     "C4-8-01"
+    ],
+    "tasks": [
      {
       "id": "tables",
       "prompt": "C4-8-02",
-      "pageSize": 3,
-      "options": [
-       {
-        "id": "four-tables",
-        "label": "C4-8-B03",
-        "correct": true,
-        "reply": [
-         "C4-8-04"
-        ]
-       },
-       {
-        "id": "three-tables",
-        "label": "C4-8-B02",
-        "correct": false,
-        "reply": [
-         "C4-8-03"
-        ]
-       },
-       {
-        "id": "wrong",
-        "label": "C4-8-B01",
-        "correct": false,
-        "reply": [
-         "C4-8-03"
-        ]
-       }
+      "items": 12,
+      "groups": 3,
+      "reserve": 0,
+      "itemLabel": "C4-8-ITEM-jar",
+      "groupLabel": "C4-8-GROUP-table",
+      "correct": [
+       "C4-8-04"
       ]
      },
      {
-      "id": "open",
+      "id": "guests",
       "prompt": "C4-L2-8-01",
-      "pageSize": 3,
-      "options": [
-       {
-        "id": "three-jars",
-        "label": "C4-L2-8-B01",
-        "correct": true,
-        "reply": [
-         "C4-8-04"
-        ]
-       },
-       {
-        "id": "four-jars",
-        "label": "C4-8-B02",
-        "correct": false,
-        "reply": [
-         "C4-8-03"
-        ]
-       },
-       {
-        "id": "one",
-        "label": "C4-8-B01",
-        "correct": false,
-        "reply": [
-         "C4-8-03"
-        ]
-       }
+      "items": 6,
+      "groups": 6,
+      "reserve": 0,
+      "itemLabel": "C4-8-ITEM-spoon",
+      "groupLabel": "C4-8-GROUP-guest",
+      "correct": [
+       "C4-8-04"
       ]
      }
     ],
-    "lines": []
+    "uneven": [
+     "C4-8-03"
+    ]
    }
   }
  ],
@@ -3974,6 +4219,13 @@
    "label": "RW-c4-activity",
    "amount": 1,
    "claimKey": "case04:activity:sugar-berries"
+  },
+  {
+   "id": "rw-c4-heart-finale-l2",
+   "kind": "hearts",
+   "label": "RW-heart",
+   "amount": 1,
+   "claimKey": "case04:l2:heart:finale"
   }
  ],
  "collections": [],
@@ -4014,51 +4266,1133 @@
    "line": "C4-L-01"
   }
  ],
- "cutscenes": [],
- "plannedCutscenes": [
+ "cutscenes": [
   {
-   "id": "cs-c4-office",
+   "id": "c4.office.l2",
    "scene": "C4-0",
-   "summary": "Мэр сообщает о пропаже варенья; Хвостс смутно вспоминает что-то."
+   "summary": "Мэр приносит пустую банку и сообщает о пропаже варенья; Хвостс зовёт в погреб.",
+   "document": {
+    "format": "aegis-cutscene/1",
+    "id": "c4.office.l2",
+    "revision": "1",
+    "advance": "input",
+    "cast": {
+     "pudding": {
+      "rig": "pudding"
+     },
+     "khvosts": {
+      "rig": "khvosts"
+     },
+     "watsony": {
+      "rig": "watsony"
+     },
+     "player": {
+      "role": "avatar"
+     },
+     "jar": {
+      "rig": "prop.empty-jam-jar"
+     }
+    },
+    "steps": [
+     {
+      "op": "background",
+      "asset": "bg.office",
+      "transition": {
+       "type": "cut"
+      }
+     },
+     {
+      "op": "music",
+      "asset": "music.title-office",
+      "fade": 1.2,
+      "comfort": {
+       "asset": "music.title-office-warm"
+      }
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "cut": true
+     },
+     {
+      "op": "enter",
+      "actor": "watsony",
+      "from": "left",
+      "to": {
+       "x": 520,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "player",
+      "from": "left",
+      "to": {
+       "x": 860,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "khvosts",
+      "from": "right",
+      "to": {
+       "x": 1400,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "pudding",
+      "from": "right",
+      "to": {
+       "x": 1780,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "join"
+     },
+     {
+      "op": "enter",
+      "actor": "jar",
+      "from": {
+       "x": 1700,
+       "y": 1130
+      },
+      "to": {
+       "x": 1700,
+       "y": 1130
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "jar",
+      "clip": "present"
+     },
+     {
+      "op": "pose",
+      "actor": "pudding",
+      "expression": "worried"
+     },
+     {
+      "op": "marker",
+      "id": "office.arrive"
+     },
+     {
+      "op": "line",
+      "actor": "pudding",
+      "line": "C4-0-01"
+     },
+     {
+      "op": "line",
+      "actor": "pudding",
+      "line": "C4-0-02"
+     },
+     {
+      "op": "pose",
+      "actor": "khvosts",
+      "expression": "surprised"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C4-0-03"
+     },
+     {
+      "op": "pose",
+      "actor": "khvosts",
+      "clip": "look-around",
+      "wait": true
+     },
+     {
+      "op": "pose",
+      "actor": "khvosts",
+      "expression": "happy"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C4-0-04"
+     },
+     {
+      "op": "emote",
+      "actor": "player",
+      "emote": "nod"
+     },
+     {
+      "op": "marker",
+      "id": "office.end"
+     }
+    ]
+   }
   },
   {
-   "id": "cs-c4-cellar",
+   "id": "c4.cellar.l2",
    "scene": "C4-L2-1",
-   "summary": "Освещённый погреб: пустые полки, липкие лапки мэра, Хвостс вписывает себя в подозреваемые."
+   "summary": "В погребе видны пустые полки; мэр подозревает мышат, а Хвостс честно добавляет себя.",
+   "document": {
+    "format": "aegis-cutscene/1",
+    "id": "c4.cellar.l2",
+    "revision": "1",
+    "advance": "input",
+    "cast": {
+     "pudding": {
+      "rig": "pudding"
+     },
+     "khvosts": {
+      "rig": "khvosts"
+     },
+     "watsony": {
+      "rig": "watsony"
+     },
+     "player": {
+      "role": "avatar"
+     }
+    },
+    "steps": [
+     {
+      "op": "background",
+      "asset": "bg.mayor-cellar",
+      "transition": {
+       "type": "cut"
+      }
+     },
+     {
+      "op": "music",
+      "asset": "music.title-office",
+      "fade": 1.2,
+      "comfort": {
+       "asset": "music.title-office-warm"
+      }
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "cut": true
+     },
+     {
+      "op": "enter",
+      "actor": "pudding",
+      "from": "left",
+      "to": {
+       "x": 520,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "watsony",
+      "from": "left",
+      "to": {
+       "x": 820,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "player",
+      "from": "left",
+      "to": {
+       "x": 1120,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "khvosts",
+      "from": "right",
+      "to": {
+       "x": 1660,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "join"
+     },
+     {
+      "op": "effect",
+      "effect": "fireflies",
+      "at": {
+       "x": 1280,
+       "y": 720
+      },
+      "duration": 4,
+      "wait": false
+     },
+     {
+      "op": "marker",
+      "id": "cellar.empty"
+     },
+     {
+      "op": "line",
+      "actor": "pudding",
+      "line": "C4-1-01"
+     },
+     {
+      "op": "line",
+      "actor": "pudding",
+      "line": "C4-1-02"
+     },
+     {
+      "op": "pose",
+      "actor": "watsony",
+      "expression": "surprised"
+     },
+     {
+      "op": "line",
+      "actor": "watsony",
+      "line": "C4-1-03"
+     },
+     {
+      "op": "pose",
+      "actor": "pudding",
+      "expression": "worried"
+     },
+     {
+      "op": "line",
+      "actor": "pudding",
+      "line": "C4-1-04"
+     },
+     {
+      "op": "camera",
+      "preset": "close-center",
+      "duration": 1,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "pose",
+      "actor": "khvosts",
+      "expression": "happy"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C4-1-05"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C4-1-06"
+     },
+     {
+      "op": "line",
+      "actor": "pudding",
+      "line": "C4-L2-1-01"
+     },
+     {
+      "op": "line",
+      "actor": "watsony",
+      "line": "C4-L2-1-02"
+     },
+     {
+      "op": "line",
+      "actor": "watsony",
+      "line": "C4-L2-1-03"
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "duration": 1,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "marker",
+      "id": "cellar.end"
+     }
+    ]
+   }
   },
   {
-   "id": "cs-c4-pantry",
+   "id": "c4.pantry.l2",
    "scene": "C4-L2-7",
-   "summary": "В кладовке Конторы находятся банки и записка Хвостса; он извиняется."
+   "summary": "В кладовке находятся банки и записка Хвостса; он признаёт ошибку и разбирает ложные следы.",
+   "document": {
+    "format": "aegis-cutscene/1",
+    "id": "c4.pantry.l2",
+    "revision": "1",
+    "advance": "input",
+    "cast": {
+     "pudding": {
+      "rig": "pudding"
+     },
+     "mouse": {
+      "rig": "mouse"
+     },
+     "pukhlik": {
+      "rig": "pukhlik"
+     },
+     "khvosts": {
+      "rig": "khvosts"
+     },
+     "watsony": {
+      "rig": "watsony"
+     },
+     "player": {
+      "role": "avatar"
+     },
+     "jars": {
+      "rig": "prop.jam-jars-c4"
+     },
+     "note": {
+      "rig": "prop.note-khvosts"
+     }
+    },
+    "steps": [
+     {
+      "op": "background",
+      "asset": "bg.office-pantry",
+      "transition": {
+       "type": "cut"
+      }
+     },
+     {
+      "op": "music",
+      "asset": "music.heartfelt",
+      "fade": 1.2,
+      "comfort": {
+       "asset": "music.heartfelt-warm"
+      }
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "cut": true
+     },
+     {
+      "op": "enter",
+      "actor": "jars",
+      "from": {
+       "x": 1280,
+       "y": 1050
+      },
+      "to": {
+       "x": 1280,
+       "y": 1050
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "jars",
+      "clip": "present"
+     },
+     {
+      "op": "enter",
+      "actor": "watsony",
+      "from": "left",
+      "to": {
+       "x": 420,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "player",
+      "from": "left",
+      "to": {
+       "x": 700,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "khvosts",
+      "from": "left",
+      "to": {
+       "x": 980,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "pudding",
+      "from": "right",
+      "to": {
+       "x": 1680,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "mouse",
+      "from": "right",
+      "to": {
+       "x": 1980,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "pukhlik",
+      "from": "right",
+      "to": {
+       "x": 2050,
+       "y": 950
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "join"
+     },
+     {
+      "op": "pose",
+      "actor": "pukhlik",
+      "clip": "hover",
+      "wait": false
+     },
+     {
+      "op": "marker",
+      "id": "pantry.found"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C4-7-01"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C4-7-02"
+     },
+     {
+      "op": "enter",
+      "actor": "note",
+      "from": {
+       "x": 1260,
+       "y": 960
+      },
+      "to": {
+       "x": 1260,
+       "y": 960
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "note",
+      "clip": "present"
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.page-turn",
+      "gain": 0.8
+     },
+     {
+      "op": "pose",
+      "actor": "khvosts",
+      "expression": "worried"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C4-7-03"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C4-7-04"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C4-7-05"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C4-7-06"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C4-7-07"
+     },
+     {
+      "op": "pose",
+      "actor": "pudding",
+      "expression": "happy"
+     },
+     {
+      "op": "line",
+      "actor": "pudding",
+      "line": "C4-7-08"
+     },
+     {
+      "op": "pose",
+      "actor": "mouse",
+      "expression": "happy"
+     },
+     {
+      "op": "line",
+      "actor": "mouse",
+      "line": "C4-7-09"
+     },
+     {
+      "op": "marker",
+      "id": "pantry.herrings"
+     },
+     {
+      "op": "camera",
+      "preset": "close-center",
+      "duration": 1,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C4-7-10"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C4-7-11"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C4-7-12"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C4-L2-7-01"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C4-L2-7-02"
+     },
+     {
+      "op": "line",
+      "actor": "watsony",
+      "line": "C4-L2-7-03"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C4-7-13"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C4-7-14"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C4-7-15"
+     },
+     {
+      "op": "line",
+      "actor": "pukhlik",
+      "line": "C4-7-16"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C4-7-17"
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "duration": 1,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "effect",
+      "effect": "sparkles",
+      "at": {
+       "x": 1280,
+       "y": 820
+      },
+      "duration": 2,
+      "wait": false
+     },
+     {
+      "op": "emote",
+      "actor": "player",
+      "emote": "joy"
+     },
+     {
+      "op": "marker",
+      "id": "pantry.end"
+     }
+    ]
+   }
   },
   {
-   "id": "cs-c4-tea",
+   "id": "c4.tea.l2",
    "scene": "C4-L2-8",
-   "summary": "Большое чаепитие на площади; варенье делят поровну."
+   "summary": "После дележа варенья герои празднуют честность и благодарят игрока.",
+   "document": {
+    "format": "aegis-cutscene/1",
+    "id": "c4.tea.l2",
+    "revision": "1",
+    "advance": "input",
+    "cast": {
+     "pudding": {
+      "rig": "pudding"
+     },
+     "mouse": {
+      "rig": "mouse"
+     },
+     "pukhlik": {
+      "rig": "pukhlik"
+     },
+     "khvosts": {
+      "rig": "khvosts"
+     },
+     "watsony": {
+      "rig": "watsony"
+     },
+     "player": {
+      "role": "avatar"
+     },
+     "table": {
+      "rig": "prop.tea-table-c4"
+     }
+    },
+    "steps": [
+     {
+      "op": "background",
+      "asset": "bg.town-square-tea",
+      "transition": {
+       "type": "cut"
+      }
+     },
+     {
+      "op": "music",
+      "asset": "music.celebration-baking",
+      "fade": 1.2,
+      "comfort": {
+       "asset": "music.celebration-baking-warm"
+      }
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "cut": true
+     },
+     {
+      "op": "enter",
+      "actor": "table",
+      "from": {
+       "x": 1280,
+       "y": 1320
+      },
+      "to": {
+       "x": 1280,
+       "y": 1320
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "table",
+      "clip": "present"
+     },
+     {
+      "op": "enter",
+      "actor": "pudding",
+      "from": "left",
+      "to": {
+       "x": 470,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "watsony",
+      "from": "left",
+      "to": {
+       "x": 760,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "player",
+      "from": "left",
+      "to": {
+       "x": 1030,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "khvosts",
+      "from": "right",
+      "to": {
+       "x": 1540,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "mouse",
+      "from": "right",
+      "to": {
+       "x": 1840,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "pukhlik",
+      "from": "right",
+      "to": {
+       "x": 2100,
+       "y": 950
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "join"
+     },
+     {
+      "op": "pose",
+      "actor": "pukhlik",
+      "clip": "hover",
+      "wait": false
+     },
+     {
+      "op": "marker",
+      "id": "tea.toast"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C4-8-05"
+     },
+     {
+      "op": "line",
+      "actor": "watsony",
+      "line": "C4-8-06"
+     },
+     {
+      "op": "line",
+      "actor": "pudding",
+      "line": "C4-8-07"
+     },
+     {
+      "op": "effect",
+      "effect": "confetti",
+      "at": {
+       "x": 1280,
+       "y": 700
+      },
+      "duration": 2,
+      "wait": false
+     },
+     {
+      "op": "emote",
+      "actor": "player",
+      "emote": "joy"
+     },
+     {
+      "op": "marker",
+      "id": "tea.end"
+     }
+    ]
+   }
   },
   {
-   "id": "cs-c4-reward",
+   "id": "c4.reward.l2",
    "scene": "C4-10",
-   "summary": "Награда «Честное варенье», банка для Конторы и звание «Младший детектив»."
+   "summary": "Награда за четвёртое дело: значок, звание и банка варенья для Конторы.",
+   "document": {
+    "format": "aegis-cutscene/1",
+    "id": "c4.reward.l2",
+    "revision": "1",
+    "advance": "input",
+    "cast": {
+     "khvosts": {
+      "rig": "khvosts"
+     },
+     "watsony": {
+      "rig": "watsony"
+     },
+     "player": {
+      "role": "avatar"
+     },
+     "badge": {
+      "rig": "prop.badge-jam-c4"
+     },
+     "sticker": {
+      "rig": "prop.sticker-jam-c4-2"
+     },
+     "jar": {
+      "rig": "prop.jam-jar-c4"
+     }
+    },
+    "steps": [
+     {
+      "op": "background",
+      "asset": "bg.office",
+      "transition": {
+       "type": "cut"
+      }
+     },
+     {
+      "op": "music",
+      "asset": "music.celebration-baking",
+      "fade": 1.2,
+      "comfort": {
+       "asset": "music.celebration-baking-warm"
+      }
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "cut": true
+     },
+     {
+      "op": "enter",
+      "actor": "watsony",
+      "from": "left",
+      "to": {
+       "x": 520,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "player",
+      "from": "left",
+      "to": {
+       "x": 880,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "khvosts",
+      "from": "right",
+      "to": {
+       "x": 1800,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "join"
+     },
+     {
+      "op": "marker",
+      "id": "reward.badge"
+     },
+     {
+      "op": "pose",
+      "actor": "khvosts",
+      "expression": "happy"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C4-10-01"
+     },
+     {
+      "op": "enter",
+      "actor": "badge",
+      "from": {
+       "x": 1080,
+       "y": 860
+      },
+      "to": {
+       "x": 1080,
+       "y": 860
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "badge",
+      "clip": "present"
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.reward",
+      "gain": 0.8
+     },
+     {
+      "op": "effect",
+      "effect": "sparkles",
+      "at": {
+       "x": 1080,
+       "y": 860
+      },
+      "duration": 1.5,
+      "wait": false
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C4-10-02"
+     },
+     {
+      "op": "enter",
+      "actor": "sticker",
+      "from": {
+       "x": 1480,
+       "y": 860
+      },
+      "to": {
+       "x": 1480,
+       "y": 860
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "sticker",
+      "clip": "present"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C4-10-03"
+     },
+     {
+      "op": "exit",
+      "actor": "badge",
+      "to": {
+       "x": 1080,
+       "y": 860
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "exit",
+      "actor": "sticker",
+      "to": {
+       "x": 1480,
+       "y": 860
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "enter",
+      "actor": "jar",
+      "from": {
+       "x": 1240,
+       "y": 1450
+      },
+      "to": {
+       "x": 1240,
+       "y": 1450
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "jar",
+      "clip": "present"
+     },
+     {
+      "op": "pose",
+      "actor": "watsony",
+      "expression": "happy"
+     },
+     {
+      "op": "line",
+      "actor": "watsony",
+      "line": "C4-10-04"
+     },
+     {
+      "op": "emote",
+      "actor": "player",
+      "emote": "joy"
+     },
+     {
+      "op": "marker",
+      "id": "reward.end"
+     }
+    ]
+   }
   }
  ],
+ "plannedCutscenes": [],
+ "notebookPages": [],
+ "cozy": null,
  "reserved": [
   {
    "lines": [
-    "C4-F-01",
-    "C4-F-02",
-    "C4-F-03",
-    "C4-F-04",
-    "C4-F-05"
+    "C4-0-B01",
+    "C4-5-B01",
+    "C4-5-B02",
+    "C4-5-B03",
+    "C4-L2-5-B01",
+    "C4-5-B04",
+    "C4-5-B05",
+    "C4-5-B06",
+    "C4-L2-5-B02",
+    "C4-5-B07",
+    "C4-5-B08",
+    "C4-5-B09",
+    "C4-L2-5-B03",
+    "C4-L3-5-B02",
+    "C4-8-B01",
+    "C4-8-B02",
+    "C4-8-B03",
+    "C4-L2-8-B01",
+    "C4-L3-10-B01"
    ],
-   "reason": "семейный «Хранитель снов», Q34 handoff"
-  },
-  {
-   "lines": [
-    "C4-0-B01"
-   ],
-   "reason": "названия новых механик и точки карты используются системами каталога"
+   "reason": "названия новых механик и старые подписи выбора сохраняются для систем каталога"
   }
  ],
- "revision": "320bec687a51c0cc7d14ed946466de10cc43b2c40a1e060d0ac91b0f01696be0"
+ "revision": "1f63c7ef7c23fe215d3e440bb0ec9151eb524a21398b7b7dad0081deb7e9ca33"
 }

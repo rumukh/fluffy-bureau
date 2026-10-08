@@ -1,6 +1,6 @@
 // Shared pack: speakers, skills (mechanics), child-facing interface labels (R06),
 // pronunciation lexicon, and the reward catalog (T11).
-import { added, lines, type SharedSource } from '../../tools/content/dsl.ts';
+import { added, finaleHearts, lines, type SharedSource } from '../../tools/content/dsl.ts';
 
 const R06 = 'R06';
 const ui = (reason = 'Подпись интерфейса получает стабильный ID и озвучку') => added(reason, R06);
@@ -111,7 +111,35 @@ const uiLines = lines('shared/ui', 'label', [
   ['UI-hint.shellRing', 'narrator', 'Звоним Ватсони…', ui()],
   ['UI-case.complete', 'narrator', 'Дело раскрыто!', ui()],
   ['UI-cutscene.skip', 'narrator', 'Пропустить ролик', ui('Кнопка ролика (T25)')],
-  ['UI-cutscene.replay', 'narrator', 'Смотреть сначала', ui('Кнопка ролика (T25)')],  // Skill titles
+  ['UI-cutscene.replay', 'narrator', 'Смотреть сначала', ui('Кнопка ролика (T25)')],
+  ['UI-family.solo', 'narrator', 'Играем одни', ui('Выбор режима дела 4 (T31)')],
+  ['UI-family.family', 'narrator', 'Играем семьёй', ui('Выбор режима дела 4 (T31)')],
+  ['UI-family.howMany', 'narrator', 'Сколько игроков?', ui('Семейный режим (T31)')],
+  ['UI-family.chooseKeeper', 'narrator', 'Кто будет Хранителем?', ui('Семейный режим (T31)')],
+  ['UI-family.passKeeper', 'narrator', 'Передай устройство Хранителю', ui('Экран передачи хода (Q34, T31)')],
+  ['UI-family.passOthers', 'narrator', 'Передай устройство остальным', ui('Экран передачи хода (Q34, T31)')],
+  ['UI-family.itIsMe', 'narrator', 'Это я', ui('Экран передачи хода (Q34)')],
+  ['UI-family.ready', 'narrator', 'Запомнено, прячем', ui('Хранитель скрывает карту; без рода (D05)')],
+  ['UI-family.hide', 'narrator', 'Спрятать', ui('Семейный режим (T31)')],
+  ['UI-family.ask', 'narrator', 'Задать вопрос', ui('Семейный режим (T31)')],
+  ['UI-family.guess', 'narrator', 'Выбрать ответ', ui('Семейный режим (T31)')],
+  ['UI-family.yes', 'narrator', 'Да', ui('Ответ на вопрос (T31)')],
+  ['UI-family.no', 'narrator', 'Нет', ui('Ответ на вопрос (T31)')],
+  ['UI-family.win', 'narrator', 'Победа общая!', ui('Финал семейного режима (Q36)')],
+  ['UI-notebook.secretNotes', 'narrator', 'Тайные заметки', ui('Страница Блокнота (T26, D06)')],
+  ['UI-notebook.cipherPoster', 'narrator', 'Почтовый шифр Пушистино', ui('Страница Блокнота (T26)')],
+  ['UI-cozy.title', 'narrator', 'Уютный денёк', ui('Экран Конторы (T12, D23)')],
+  ['UI-cozy.shop', 'narrator', 'Лавка', ui('Магазин (T29)')],
+  ['UI-cozy.buy', 'narrator', 'Купить', ui('Магазин (T29)')],
+  ['UI-cozy.return', 'narrator', 'Вернуть', ui('Магазин: возврат покупки (Q40)')],
+  ['UI-cozy.owned', 'narrator', 'Уже твоё', ui('Магазин (T29)')],
+  ['UI-cozy.wear', 'narrator', 'Надеть', ui('Магазин (T29)')],
+  ['UI-cozy.place', 'narrator', 'Поставить', ui('Украшения Конторы (T29)')],
+  ['UI-cozy.tea', 'narrator', 'Позвать на чай', ui('Чаепитие с жителем (T28)')],
+  ['UI-cozy.hats', 'narrator', 'Шапки', ui('Раздел магазина (T29)')],
+  ['UI-cozy.scarves', 'narrator', 'Шарфы', ui('Раздел магазина (T29)')],
+  ['UI-cozy.decor', 'narrator', 'Украшения', ui('Раздел магазина (T29)')],
+  ['UI-rank.new', 'narrator', 'Новое звание!', ui('Звания (D12)')],  // Skill titles
   ['SK-inspect', 'narrator', 'Осмотр', ui()],
   ['SK-replay', 'narrator', 'Ушко: повтор', ui()],
   ['SK-lamp', 'narrator', 'Лампа смелости', ui()],
@@ -202,6 +230,9 @@ export const shared: SharedSource = {
     { id: 'rw-prologue-title', kind: 'title', label: 'RW-title-intern', amount: 1, claimKey: 'prologue:title' },
     { id: 'rw-prologue-buttons', kind: 'buttons', label: 'RW-buttons-5', amount: 5, claimKey: 'prologue:buttons' },
     { id: 'rw-c1-heart-tyopa', kind: 'hearts', label: 'RW-heart', amount: 1, claimKey: 'case01:heart:tyopa' },
+    { id: 'rw-c1-heart-tyopa-l2', kind: 'hearts', label: 'RW-heart', amount: 1, claimKey: 'case01:l2:heart:tyopa' },
+    { id: 'rw-c1-heart-tyopa-l3', kind: 'hearts', label: 'RW-heart', amount: 1, claimKey: 'case01:l3:heart:tyopa' },
+    ...finaleHearts(1),
     { id: 'rw-c1-badge', kind: 'badge', label: 'RW-c1-badge', amount: 1, claimKey: 'case01:badge' },
     { id: 'rw-c1-buttons-l1', kind: 'buttons', label: 'RW-buttons-10', amount: 10, claimKey: 'case01:l1:buttons' },
     { id: 'rw-c1-buttons-l2', kind: 'buttons', label: 'RW-buttons-15', amount: 15, claimKey: 'case01:l2:buttons' },

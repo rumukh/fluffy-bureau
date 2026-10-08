@@ -1,5 +1,5 @@
-import type { ActivityCard, Fact, GlossaryEntry, Predicate, Reward, Step } from '../../packages/content/src/schema.ts';
-import { dir, L, Ls, reward, seq, skill, wait, type VariantSource } from '../../tools/content/dsl.ts';
+import type { ActivityCard, Fact, GlossaryEntry, NotebookPage, Predicate, Reward, Step } from '../../packages/content/src/schema.ts';
+import { act, cutscene, dir, L, Ls, reward, seq, skill, wait, type VariantSource } from '../../tools/content/dsl.ts';
 
 export const who = {
   stella: { id: 'stella', label: 'NM-stella' },
@@ -40,6 +40,8 @@ export const glossary: GlossaryEntry[] = [
 ];
 export const rewards: Reward[] = [
   { id: 'rw-c2-heart-mice', kind: 'hearts', label: 'RW-heart', amount: 1, claimKey: 'case02:heart:mice' },
+  { id: 'rw-c2-heart-mice-l2', kind: 'hearts', label: 'RW-heart', amount: 1, claimKey: 'case02:l2:heart:mice' },
+  { id: 'rw-c2-heart-mice-l3', kind: 'hearts', label: 'RW-heart', amount: 1, claimKey: 'case02:l3:heart:mice' },
   { id: 'rw-c2-badge', kind: 'badge', label: 'RW-c2-badge', amount: 1, claimKey: 'case02:badge' },
   { id: 'rw-c2-buttons-l1', kind: 'buttons', label: 'RW-buttons-10', amount: 10, claimKey: 'case02:l1:buttons' },
   { id: 'rw-c2-buttons-l2', kind: 'buttons', label: 'RW-buttons-15', amount: 15, claimKey: 'case02:l2:buttons' },
@@ -63,18 +65,19 @@ export const activityCard: ActivityCard = {
 };
 
 export const intro0 = (): Step[] => [
-  dir('C2-0-D01', 'Контора. Почтовый жук не прилетел. В дверь стучит мэр Пудинг.'),
+  dir('C2-0-D01', 'Контора. Почтовый жук не прилетел. В дверь стучит мэр Пудинг.', null, [act.pose('khvosts', { expression: 'worried' }), act.pose('watsony', { expression: 'worried' }), act.sfx('letter-chime', 0.5)]),
   ...seq('C2-0-', 1, 4),
-  skill('map', [dir('C2-0-D02', 'На карте Пушистино активна точка «Почта».'), L('C2-0-B01')]),
+  skill('map', [dir('C2-0-D02', 'На карте Пушистино активна точка «Почта».', null, [act.effect('glow', 1280, 760, 1.2)]), L('C2-0-B01')]),
 ];
+export const mapIntro = (): Step => skill('map', [dir('C2-0-D02', 'На карте Пушистино активна точка «Почта».', null, [act.effect('glow', 1280, 760, 1.2)]), L('C2-0-B01')]);
 export const intro1base = (): Step[] => [
-  dir('C2-1-D01', 'Крыльцо почты на Пироговой улице. Вокруг листья и ветки.'),
+  dir('C2-1-D01', 'Крыльцо почты на Пироговой улице. Вокруг листья и ветки.', null, [act.pose('pudding', { expression: 'worried' }), act.effect('fireflies', 1900, 850, 1.2)]),
   ...seq('C2-1-', 1, 5),
-  dir('C2-1-D02', 'Хвостс пускает пузыри.'),
+  dir('C2-1-D02', 'Хвостс пускает пузыри.', null, [act.pose('khvosts', { clip: 'nod' }), act.sfx('bubbles', 0.4), act.effect('bubbles', 1180, 650, 1.5)]),
   ...seq('C2-1-', 6, 9),
 ];
 export const notebookIntro = (dirId: string): Step[] => [
-  skill('notebook', [dir(dirId, 'Блокнот раскрывается на три колонки дела.'), L('C2-1-10')]),
+  skill('notebook', [dir(dirId, 'Блокнот раскрывается на три колонки дела.', null, [act.sfx('page-turn', 0.5), act.emote('player', 'nod')]), L('C2-1-10')]),
 ];
 export const klubkiIntro = (): Step => skill('klubki', Ls('C1-1-19', 'C1-1-20'), []);
 
@@ -84,25 +87,27 @@ export const versionScene = (id: string, hub: string): VariantSource['scenes'][n
 });
 
 export const resolutionSteps = (extra: Step[], next: string): Step[] => [
-  dir('C2-7-D01', 'Парк Старого Дуба. Высоко видно гнездо Стеллы с крышей из веточек.'),
+  dir('C2-7-D01', 'Парк Старого Дуба. Высоко видно гнездо Стеллы с крышей из веточек.', null, [act.pose('stella', { clip: 'hover', expression: 'worried' }), act.effect('glow', 1540, 620, 1.2)]),
   ...seq('C2-7-', 1, 18),
   ...extra,
   { t: 'goto', scene: next },
 ];
 export const factsScene = (next: string): VariantSource['scenes'][number] => ({
   id: 'C2-9', title: '«А ты знал?»', location: 'town-square', cast: ['watsony'], presentation: 'dialogue',
-  steps: [skill('encyclopedia', [dir('C2-9-D01', 'Карточки фактов складываются в Энциклопедию.')]), ...seq('C2-9-', 1, 4), { t: 'goto', scene: next }],
+  steps: [skill('encyclopedia', [dir('C2-9-D01', 'Карточки фактов складываются в Энциклопедию.', null, [act.sfx('page-turn', 0.5), act.effect('sparkles', 1280, 760, 1.2)])]), ...seq('C2-9-', 1, 4), { t: 'goto', scene: next }],
 });
 export const rewardScene = (level: 1 | 2 | 3): VariantSource['scenes'][number] => ({
   id: 'C2-10', title: 'Награда', location: 'office', cast: ['khvosts', 'watsony'], presentation: 'cutscene',
   steps: [
-    ...seq('C2-10-', 1, 4),
+    cutscene(`c2.reward.l${level}`),
     reward('rw-c2-badge'), reward(`rw-c2-buttons-l${level}`), reward(`rw-c2-sticker-l${level}`), reward('rw-c2-title-helper'), reward('rw-c2-decor-poster'), reward('rw-c2-activity'),
-    dir('C2-10-D01', 'Новые слова в словарике: алиби, мотив. Плакат шифра появляется в Конторе.'),
+    dir('C2-10-D01', 'Новые слова в словарике: алиби, мотив. Плакат шифра появляется в Конторе.', null, [act.effect('sparkles', 1280, 620, 1.2)]),
     skill('cozy-day', [wait('office.place')], []),
     { t: 'end' },
   ],
 });
+export const cipherPosterPage = (cipher: string): NotebookPage => ({ id: `case02-${cipher}-poster`, kind: 'cipher-poster', title: 'UI-notebook.cipherPoster', unlock: 'rw-c2-decor-poster', cipher });
+
 export const commonCutscenes: NonNullable<VariantSource['plannedCutscenes']> = [
   { id: 'cs-c2-office', scene: 'C2-0', summary: 'Почтовый жук не прилетает; мэр сообщает о пропаже писем.' },
   { id: 'cs-c2-oak', scene: 'C2-7', summary: 'Стелла показывает сухие письма в гнезде и объясняет, что спасла их от дождя.' },

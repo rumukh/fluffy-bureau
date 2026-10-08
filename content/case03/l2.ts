@@ -1,10 +1,10 @@
-import { retarget } from '../../tools/content/dsl.ts';
 import type { VariantSource } from '../../tools/content/dsl.ts';
 import {
-  activity, and, baseRewards, cl, collections, commonComfort, commonCutscenes, eq, facts, factsScene, finalLightScene, fitilyokScene,
+  activity, and, baseRewards, cl, collections, commonComfort, cutscene, eq, facts, factsScene, finalLightScene, fitilyokScene,
   glossary, goto, has, HUB, intended, introOffice, L, lightGame, menu, minigame, mopt, ne, not, opt, redHerringsBase, reveal, rewardScene,
-  secretNote, seq, skill, soundGame, versionScene, where, what, who,
+  sceneProps, secretNote, secretNotesPage, seq, skill, soundGame, versionScene, where, what, who,
 } from './common.ts';
+import { intro, note, reveal as revealCutscene, reward as rewardCutscene } from './cutscenes.ts';
 
 const anyWhat = { op: 'in' as const, axis: 'what', values: ['training', 'broken', 'ghost', 'repair'] };
 
@@ -15,7 +15,7 @@ export const level2: VariantSource = {
   case: { number: 3, level: 2 },
   start: 'C3-0',
   scenes: [
-    { id: 'C3-0', title: 'Контора: вечерний гость', location: 'office-evening', cast: ['khvosts', 'watsony', 'mouse'], presentation: 'cutscene', steps: [...introOffice(), goto('C3-L2-1')] },
+    { id: 'C3-0', title: 'Контора: вечерний гость', location: 'office-evening', cast: ['khvosts', 'watsony', 'mouse'], presentation: 'cutscene', props: sceneProps.map, steps: [cutscene('c3.intro.l2'), ...introOffice(), goto('C3-L2-1')] },
     {
       id: 'C3-L2-1', title: 'Берег Медового пруда', location: 'honey-pond', cast: ['pudding', 'damka', 'khvosts', 'watsony'], presentation: 'dialogue',
       steps: [...seq('C3-1-', 1, 5), ...seq('C3-L2-1-', 1, 3), skill('lamp', [L('C3-1-06')]), ...seq('C3-1-', 7, 8), L('C3-L2-1-04'), ...seq('C3-1-', 9, 10), goto(HUB)],
@@ -38,7 +38,7 @@ export const level2: VariantSource = {
       id: 'C3-L2-2', title: 'Услышь разницу: три раунда', location: 'pond-bank', cast: ['khvosts', 'watsony', 'mouse'], presentation: 'minigame',
       steps: [skill('sound-diff', [L('C3-2-01'), L('C3-2-02')]), minigame('c3l2-sound'), L('C3-L2-2-02'), ...seq('C3-2-', 6, 9), reveal('c3-l2-sounds'), goto(HUB)],
     },
-    secretNote([L('C3-L2-3-01')]),
+    secretNote('c3.note.l2', [L('C3-L2-3-01')]),
     fitilyokScene(),
     {
       id: 'C3-L2-4', title: 'Лупа наверху', location: 'lighthouse-room', cast: ['khvosts', 'watsony', 'damka'], presentation: 'minigame',
@@ -53,10 +53,10 @@ export const level2: VariantSource = {
       steps: [skill('timeline', [L('C3-L2-6-01'), L('C3-L2-6-02')], [L('C3-L2-6-03')]), minigame('c3l2-timeline'), ...seq('C3-L2-6-', 4, 6), reveal('c3-log'), goto(HUB)],
     },
     versionScene('C3-L2-7'),
-    { id: 'C3-L2-8', title: 'Разрешение', location: 'lighthouse-room', cast: ['khvosts', 'watsony', 'pukhlik', 'damka'], presentation: 'cutscene', steps: [...seq('C3-8-', 1, 11), ...seq('C3-L2-8-', 1, 2), ...seq('C3-8-', 12, 16), goto('C3-L2-9')] },
+    { id: 'C3-L2-8', title: 'Разрешение', location: 'lighthouse-room', cast: ['khvosts', 'watsony', 'pukhlik', 'damka'], presentation: 'cutscene', steps: [cutscene('c3.reveal.l2'), goto('C3-L2-9')] },
     finalLightScene('C3-L2-9', 2, 'c3l2-light'),
     factsScene(),
-    rewardScene(2),
+    rewardScene(2, 'c3.reward.l2'),
   ],
   logic: {
     axes: [
@@ -145,9 +145,12 @@ export const level2: VariantSource = {
     ], solution: ['t19', 't20', 't21', 't22'], wrong: ['C3-L2-6-W01'] } },
     lightGame('c3l2-light', 2),
   ],
-  facts, glossary, rewards: baseRewards(2), collections, activities: [activity], comfort: commonComfort, cutscenes: [], plannedCutscenes: retarget(commonCutscenes, { "C3-8": "C3-L2-8" }),
+  facts, glossary, rewards: baseRewards(2), collections, activities: [activity], comfort: commonComfort,
+  cutscenes: [intro(2, 'C3-L2-1'), note(2), revealCutscene(2, 'C3-L2-8'), rewardCutscene(2)],
+  notebookPages: [secretNotesPage],
   decisions: [
     { id: 'C3L2-D1', text: 'Фраза про отсутствие молотка не исключает ремонт; ремонт исключают пыльные инструменты и журнал смотрителя.', ref: 'R03' },
     { id: 'C3L2-D2', text: 'Ошибка Дамки про закрытое окно оставлена добросовестной и исправляется в осмотре.', ref: 'D04' },
+    { id: 'C3L2-T25', text: 'Ролики T25: вступление, тайная заметка, разрешение и награда. Игровые эффекты остаются шагами после роликов.', ref: 'T25' },
   ],
 };

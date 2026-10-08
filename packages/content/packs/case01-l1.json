@@ -1662,7 +1662,15 @@
     {
      "t": "dir",
      "id": "C1-1-D01",
-     "text": "Пироговая улица. У пекарни стоит мэр-хомяк Пудинг. Рядом пустая скамейка."
+     "text": "Пироговая улица. У пекарни стоит мэр-хомяк Пудинг. Рядом пустая скамейка.",
+     "actions": [
+      {
+       "op": "pose",
+       "actor": "pudding",
+       "expression": "worried",
+       "clip": "look-around"
+      }
+     ]
     },
     {
      "t": "line",
@@ -1695,7 +1703,23 @@
     {
      "t": "dir",
      "id": "C1-1-D02",
-     "text": "Хвостс пускает пузыри."
+     "text": "Хвостс пускает пузыри.",
+     "actions": [
+      {
+       "op": "effect",
+       "effect": "bubbles",
+       "at": {
+        "x": 1300,
+        "y": 650
+       },
+       "duration": 2.5
+      },
+      {
+       "op": "sfx",
+       "asset": "sfx.bubbles",
+       "gain": 0.5
+      }
+     ]
     },
     {
      "t": "line",
@@ -1732,7 +1756,14 @@
       {
        "t": "dir",
        "id": "C1-1-D03",
-       "text": "Блокнот раскрывается на три колонки."
+       "text": "Блокнот раскрывается на три колонки.",
+       "actions": [
+        {
+         "op": "sfx",
+         "asset": "sfx.page-turn",
+         "gain": 0.6
+        }
+       ]
       },
       {
        "t": "line",
@@ -1747,7 +1778,14 @@
       {
        "t": "dir",
        "id": "C1-1-D03",
-       "text": "Блокнот раскрывается на три колонки."
+       "text": "Блокнот раскрывается на три колонки.",
+       "actions": [
+        {
+         "op": "sfx",
+         "asset": "sfx.page-turn",
+         "gain": 0.6
+        }
+       ]
       },
       {
        "t": "line",
@@ -1922,7 +1960,14 @@
     {
      "t": "dir",
      "id": "C1-2-D01",
-     "text": "Игрок открывает коробку."
+     "text": "Игрок открывает коробку.",
+     "actions": [
+      {
+       "op": "sfx",
+       "asset": "sfx.pick-up",
+       "gain": 0.6
+      }
+     ]
     },
     {
      "t": "line",
@@ -1961,7 +2006,20 @@
     {
      "t": "dir",
      "id": "C1-3-D01",
-     "text": "Тёпа сидит у котла и прячет синие лапы за спину. Рядом светлячок Фитилёк."
+     "text": "Тёпа сидит у котла и прячет синие лапы за спину. Рядом светлячок Фитилёк.",
+     "actions": [
+      {
+       "op": "pose",
+       "actor": "tyopa",
+       "expression": "worried",
+       "clip": "shrug-shy"
+      },
+      {
+       "op": "pose",
+       "actor": "fitilyok",
+       "clip": "hover"
+      }
+     ]
     },
     {
      "t": "line",
@@ -2071,7 +2129,20 @@
     {
      "t": "dir",
      "id": "C1-4-D01",
-     "text": "Пудинг высыпает семечки в ладошку и смущённо собирает обратно."
+     "text": "Пудинг высыпает семечки в ладошку и смущённо собирает обратно.",
+     "actions": [
+      {
+       "op": "pose",
+       "actor": "pudding",
+       "expression": "surprised",
+       "clip": "shrug-shy"
+      },
+      {
+       "op": "sfx",
+       "asset": "sfx.pick-up",
+       "gain": 0.5
+      }
+     ]
     },
     {
      "t": "line",
@@ -2124,13 +2195,33 @@
     {
      "t": "dir",
      "id": "C1-5-D01",
-     "text": "Следы ведут к сараю Картофана."
+     "text": "Следы ведут к сараю Картофана. Окно сарая мягко светится.",
+     "background": "bg.shed-exterior",
+     "actions": [
+      {
+       "op": "sfx",
+       "asset": "sfx.footsteps",
+       "gain": 0.5
+      }
+     ]
+    },
+    {
+     "t": "await",
+     "action": "hotspot",
+     "hotspot": "window"
     },
     {
      "t": "dir",
      "id": "C1-5-D02",
-     "text": "Игрок нажимает на окно. Окно сарая крупно: у коробки мэра в крышке окошко, в нём виден пирог.",
-     "background": "bg.shed-window"
+     "text": "Окно сарая крупно: у коробки мэра в крышке окошко, в нём виден пирог.",
+     "background": "bg.shed-window",
+     "actions": [
+      {
+       "op": "sfx",
+       "asset": "sfx.magnifier-find",
+       "gain": 0.6
+      }
+     ]
     },
     {
      "t": "line",
@@ -2269,6 +2360,10 @@
      "minigame": "c1l1-baker"
     },
     {
+     "t": "reward",
+     "reward": "rw-c1-heart-finale-l1"
+    },
+    {
      "t": "cutscene",
      "cutscene": "c1.oven.l1"
     },
@@ -2294,14 +2389,46 @@
       {
        "t": "dir",
        "id": "C1-9-D01",
-       "text": "Карточки в рамочке «Это правда» складываются в Энциклопедию."
+       "text": "Карточки в рамочке «Это правда» складываются в Энциклопедию.",
+       "actions": [
+        {
+         "op": "effect",
+         "effect": "sparkles",
+         "at": {
+          "x": 1280,
+          "y": 800
+         },
+         "duration": 1.5
+        },
+        {
+         "op": "sfx",
+         "asset": "sfx.sticker-check",
+         "gain": 0.6
+        }
+       ]
       }
      ],
      "known": [
       {
        "t": "dir",
        "id": "C1-9-D01",
-       "text": "Карточки в рамочке «Это правда» складываются в Энциклопедию."
+       "text": "Карточки в рамочке «Это правда» складываются в Энциклопедию.",
+       "actions": [
+        {
+         "op": "effect",
+         "effect": "sparkles",
+         "at": {
+          "x": 1280,
+          "y": 800
+         },
+         "duration": 1.5
+        },
+        {
+         "op": "sfx",
+         "asset": "sfx.sticker-check",
+         "gain": 0.6
+        }
+       ]
       }
      ]
     },
@@ -2364,7 +2491,14 @@
     {
      "t": "dir",
      "id": "C1-10-D01",
-     "text": "Новые слова в «Словарике сыщика»: улика, свидетель, версия."
+     "text": "Новые слова в «Словарике сыщика»: улика, свидетель, версия.",
+     "actions": [
+      {
+       "op": "sfx",
+       "asset": "sfx.page-turn",
+       "gain": 0.6
+      }
+     ]
     },
     {
      "t": "skill",
@@ -3314,6 +3448,13 @@
    "label": "RW-heart",
    "amount": 1,
    "claimKey": "case01:heart:tyopa"
+  },
+  {
+   "id": "rw-c1-heart-finale-l1",
+   "kind": "hearts",
+   "label": "RW-heart",
+   "amount": 1,
+   "claimKey": "case01:l1:heart:finale"
   },
   {
    "id": "rw-c1-badge",
@@ -4379,6 +4520,8 @@
   }
  ],
  "plannedCutscenes": [],
+ "notebookPages": [],
+ "cozy": null,
  "reserved": [],
- "revision": "b70df46d77d6db9fd7bb8232ca8e76cc3a680858a32deb779c5fc0835c4d706c"
+ "revision": "2ced628118374c010099d62ecb5f9fd4038256bd1c028539d3b7df971fe01526"
 }

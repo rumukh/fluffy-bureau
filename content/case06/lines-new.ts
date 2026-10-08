@@ -68,7 +68,7 @@ export const linesNew = lines('case06/new', 'dialogue', [
   ['C6-CL-route', 'narrator', 'Маршрут от фонтана', lbl('Название улики')],
   ['C6-CL-cipher', 'narrator', 'Шифр «КОРНИ»', lbl('Название улики')],
   ['GL-orientir', 'narrator', 'Ориентир', lbl('Слово словарика')],
-  ['GL-orientir-DEF', 'narrator', 'Ориентир — заметная вещь для поиска дороги.', added('Карточка словарика по делу 6', 'D11', { kind: 'glossary' })],
+  ['GL-orientir-DEF', 'narrator', 'Ориентир — заметная вещь, по которой находят дорогу.', added('Карточка словарика по делу 6', 'D11', { kind: 'glossary' })],
   ['SK-compass-route', 'narrator', 'Маршрут по компасу', lbl('Название механики')],
   ['SK-compass-directions', 'narrator', 'Стороны света', lbl('Название механики')],
   ['C6-NB-01', 'watsony', 'Серая печать ведёт к Серой Тени.', note('Объяснение ✔ Серая Тень')],

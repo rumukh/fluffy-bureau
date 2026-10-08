@@ -1,5 +1,6 @@
+import type { Reward } from '../../packages/content/src/schema.ts';
 // Case 5 (C2, preparatory). Three explicit variants; see content/case01 for the model.
-import type { CaseSource } from '../../tools/content/dsl.ts';
+import { finaleHeart, finaleHearts, type CaseSource } from '../../tools/content/dsl.ts';
 import { level1 } from './l1.ts';
 import { level2 } from './l2.ts';
 import { level3 } from './l3.ts';
@@ -14,7 +15,7 @@ export const case05: CaseSource = {
     { id: 'sound-waves', title: 'SK-sound-waves' },
     { id: 'night-rules', title: 'SK-night-rules' },
   ],
-  rewards: [
+  rewards: [...([
     { id: 'rw-c5-secret-note', kind: 'sticker', label: 'C5-COL-secret-feather', amount: 1, claimKey: 'case05:secret-note:feather' },
     { id: 'rw-c5-heart-rules', kind: 'hearts', label: 'RW-heart', amount: 1, claimKey: 'case05:heart:rules' },
     { id: 'rw-c5-badge', kind: 'badge', label: 'RW-c5-badge', amount: 1, claimKey: 'case05:badge' },
@@ -26,8 +27,8 @@ export const case05: CaseSource = {
     { id: 'rw-c5-sticker-l3', kind: 'sticker', label: 'RW-c5-sticker-3', amount: 1, claimKey: 'case05:l3:sticker' },
     { id: 'rw-c5-decor-shelf', kind: 'decor', label: 'RW-c5-decor-shelf', amount: 1, claimKey: 'case05:decor:shelf' },
     { id: 'rw-c5-activity', kind: 'activity', label: 'RW-c5-activity', amount: 1, claimKey: 'case05:activity:library' },
-  ],
-  variants: [level1, level2, level3],
+  ] satisfies Reward[]), ...finaleHearts(5)],
+  variants: [finaleHeart(level1, 5, 1), finaleHeart(level2, 5, 2), finaleHeart(level3, 5, 3)],
   genderReview: [
     { id: 'C5-L2-4-06', rev: 1, reason: 'Вежливое обращение к мэру Пудингу, не к игроку.' },
     { id: 'C5-8-15', rev: 1, reason: 'Слово «подтвердилась» относится к версии, не к игроку.' },

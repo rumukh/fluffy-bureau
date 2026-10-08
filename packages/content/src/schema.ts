@@ -47,6 +47,8 @@ export interface Line {
   tts?: string;
   /** Spoken? false only for parent-corner text (Q29). */
   voiced: boolean;
+  /** Private family-mode content (T31): never shown or voiced outside its owner's screen. */
+  private?: boolean;
   /** Delivery for SSML prosody (A). */
   delivery: Delivery;
   /** Free-text context/emotion note for voice production. */
@@ -80,12 +82,13 @@ export type Cond =
 
 export type Step =
   | { t: 'line'; line: LineId }
-  /** Stage direction / animation cue. Not child-facing text; never voiced. */
   /**
-   * Stage direction / animation cue. Optional ackground (A asset ID): from this step on, until the
-   * scene ends or another dir sets one, the stage shows that background. Only at the scene's top level.
+   * Stage direction / animation cue. Not child-facing text; never voiced. Optional background (A asset
+   * ID): from this step on, until the scene ends or another dir sets one, the stage shows that
+   * background (top-level steps only). Optional actions (U10) play when the cursor reaches the dir;
+   * they never block and never change game state.
    */
-  | { t: 'dir'; id: string; text: string; background?: string }
+  | { t: 'dir'; id: string; text: string; background?: string; actions?: StageAction[] }
   /** First-encounter tutorial ([НАВЫК]). `first` plays when the profile lacks the skill, else `known`. Afterwards the skill is learned. */
   | { t: 'skill'; skill: SkillId; first: Step[]; known: Step[] }
   | { t: 'minigame'; minigame: string }
@@ -101,10 +104,24 @@ export type Step =
   | { t: 'if'; when: Cond; then: Step[]; else: Step[] }
   /** Decision screen. Options whose `when` fails or `hideWhen` holds are not shown. */
   | { t: 'menu'; id: string; prompt: LineId | null; pageSize: number; options: MenuOption[]; back: SceneId | null }
-  /** Wait until the player performs a taught interaction. */
-  | { t: 'await'; action: AwaitAction }
+  /** Wait until the player performs a taught interaction. `hotspot` names the hotspot for action "hotspot" (U11). */
+  | { t: 'await'; action: AwaitAction; hotspot?: string }
   | { t: 'goto'; scene: SceneId }
   | { t: 'end' };
+
+/**
+ * Presentation-only stage action on a stage direction (U10): a subset of the engine's cutscene ops
+ * (aegis-cutscene/1). Actors are the scene's cast speaker IDs, "player" (the avatar) or prop keys of
+ * `Scene.props`. Never blocking.
+ */
+export type StageAction =
+  | { op: 'pose'; actor: string; expression?: string; clip?: string; face?: 'left' | 'right' }
+  | { op: 'emote'; actor: string; emote: string }
+  | { op: 'sfx'; asset: string; gain?: number }
+  | { op: 'effect'; effect: string; at?: { x: number; y: number }; duration?: number }
+  | { op: 'move'; actor: string; to: { x: number; y: number }; duration?: number }
+  | { op: 'enter'; actor: string; from: 'left' | 'right' | { x: number; y: number }; to: { x: number; y: number }; duration?: number; walk?: boolean }
+  | { op: 'exit'; actor: string; to: 'left' | 'right' | { x: number; y: number }; duration?: number; walk?: boolean };
 
 /** Blocking interaction: the runtime shows the matching UI and continues when the child does it. */
 export type AwaitAction =
@@ -116,7 +133,9 @@ export type AwaitAction =
   | 'replay'
   | 'notebook.open'
   | 'pause'
-  | 'office.place';
+  | 'office.place'
+  /** Tap a named hotspot of the current background (U11, e.g. the shed window). */
+  | 'hotspot';
 
 export interface MenuOption {
   id: string;
@@ -138,6 +157,8 @@ export interface Scene {
   presentation: Presentation;
   /** Default background (A asset ID), overriding the location's default. */
   background?: string;
+  /** Props that stage-direction actions may use (key → A prop rig ID), U10. */
+  props?: Record<string, string>;
   steps: Step[];
 }
 
@@ -324,6 +345,182 @@ export type MinigameConfig =
       tooMuch: LineId[];
       tooLittle: LineId[];
     }
+  | CipherConfig
+  | PostmanConfig
+  | SoundMatchConfig
+  | LightSignalsConfig
+  | ReadBlinkConfig
+  | DreamKeeperConfig
+  | EqualShareConfig
+  | CompareConfig;
+
+/** Choice step shared by tracks, compare and staged. */
+export interface ChoiceStep {
+  id: string;
+  prompt: LineId | null;
+  pageSize: number;
+  options: ChoiceOption[];
+}
+
+export type ButtonShape = 'circle' | 'square' | 'flower' | 'heart';
+
+/** One cell of the postal button cipher (D17, R01: colour is never the only cue). */
+export interface CipherGlyph {
+  id: string;
+  letter: string;
+  colour: string; // colour name (also an A art key)
+  holes: number; // 1–4
+  shape: ButtonShape;
+  /** Spoken cell label, e.g. «Синяя круглая пуговица, две дырочки — Д». */
+  label: LineId;
+}
+
+/** «Шифр на пуговицах» (case 2; later 6 and 8). Each slot offers ≤3 letters; solved letters stay. */
+export interface CipherConfig {
+  kind: 'cipher';
+  table: CipherGlyph[];
+  words: {
+    id: string;
+    /** The word, for validation: the slots' letters must spell it. */
+    answer: string;
+    slots: { glyph: string; options: string[] }[];
+    solved: LineId[];
+  }[];
+  wrong: LineId[];
+  /** Played before the first word (e.g. «пуговицы-двойняшки» on level 3). */
+  intro: LineId[];
+}
+
+/** «Почтальон» (case 2 finale): house number = sum of the letter's button holes; on level 3 the street comes from the button's icon. */
+export interface PostmanConfig {
+  kind: 'postman';
+  /** Cipher table the buttons come from (minigame ID of a `cipher` in the same pack). */
+  cipher: string;
+  streets: { id: string; label: LineId; icon: 'honeycomb' | 'leaf' }[] | null;
+  /** Which button shape stands for which street (level 3). */
+  streetByShape: Partial<Record<ButtonShape, string>> | null;
+  letters: {
+    id: string;
+    label: LineId;
+    buttons: string[];
+    street: string | null;
+    streetOptions: string[] | null;
+    house: number;
+    houseOptions: number[];
+  }[];
+  houseLabels: { number: number; label: LineId }[];
+  intro: LineId[];
+  wrongStreet: LineId[];
+  wrongHouse: LineId[];
+  correct: LineId[];
+}
+
+/**
+ * Sound sample: an ID in A's assets/sound-clues/index.json, which is the single source for the audio
+ * and its silent visual form (wave, loudness, pitch, length, rhythm; Q31). A guarantees the night
+ * card matches the correct option and differs from every distractor.
+ */
+export type Sample = string;
+
+/** «Услышь разницу» (case 3; later 5 and 8). The target never shows its source name. */
+export interface SoundMatchConfig {
+  kind: 'sound-match';
+  intro: LineId[];
+  rounds: {
+    id: string;
+    target: Sample;
+    options: (ChoiceOption & { sample: Sample })[];
+    wrong: LineId[];
+  }[];
+  after: LineId[];
+}
+
+export type LightPattern = ('dot' | 'dash')[];
+
+/** «Азбука огоньков» (case 3 finale; game signals, not Morse, D21). `own` (level 3) is the D22 profile signal. */
+export interface LightSignalsConfig {
+  kind: 'light-signals';
+  intro: LineId[];
+  signals: { id: string; label: LineId; pattern: LightPattern; correct: LineId[] }[];
+  wrong: LineId[];
+  own: { min: number; max: number; prompt: LineId[]; done: LineId[] } | null;
+}
+
+/** «Прочитай мигание» (case 3, level 3): match the mice's drawing to a lesson of the book. */
+export interface ReadBlinkConfig {
+  kind: 'read-blink';
+  drawing: LightPattern;
+  lessons: (ChoiceOption & { pattern: LightPattern })[];
+  wrong: LineId[];
+}
+
+export interface DreamCard {
+  id: string;
+  /** Spoken description of the dream picture (never names the answer, Q33). Its line is `private`. */
+  label: LineId;
+  /** A art asset ID of the dream card. */
+  image: string;
+  /** Truthful answer to each family yes/no question (T31): the game answers, the Keeper never has to. */
+  facts: Record<string, boolean>;
+}
+
+/**
+ * «Хранитель снов» (case 4, D16). Solo: Пухлик shows the cards of a round in order; the child picks the
+ * axis value in the notebook (paged by 3); a wrong pick shows the next card. Family (T31): the Keeper
+ * picks 1 of the round's first 3 cards; the others may ask one yes/no question per round, answered
+ * from the chosen card's `facts`. Card faces and their lines are never shown or voiced outside the
+ * Keeper's own screen.
+ */
+export interface DreamKeeperConfig {
+  kind: 'dream-keeper';
+  intro: LineId[];
+  rounds: {
+    id: string;
+    axis: string;
+    answer: string;
+    cards: DreamCard[];
+    correct: LineId[];
+    wrong: LineId[];
+  }[];
+  after: LineId[];
+  family: {
+    intro: LineId[];
+    keeperPick: LineId[];
+    ask: LineId[];
+    win: LineId[];
+    /** Fixed player names (no typing); the child is the current profile. */
+    players: { id: string; label: LineId }[];
+    questions: { id: string; label: LineId }[];
+    /** Contribution titles (Q36): one per player, no ranking. */
+    titles: { id: string; label: LineId; for: 'keeper' | 'asker' | 'guesser' }[];
+  };
+}
+
+/** «Раздели поровну» (case 4 finale). Tap or drag with an alternative; no timer. */
+export interface EqualShareConfig {
+  kind: 'equal-share';
+  intro: LineId[];
+  tasks: {
+    id: string;
+    prompt: LineId;
+    items: number;
+    groups: number;
+    /** Items deliberately kept aside (level 3 «запас»). */
+    reserve: number;
+    itemLabel: LineId;
+    groupLabel: LineId;
+    correct: LineId[];
+  }[];
+  uneven: LineId[];
+}
+
+/** «Чья тележка?» and similar side-by-side comparisons. */
+export interface CompareConfig {
+  kind: 'compare';
+  subject: { label: LineId; image: string };
+  steps: ChoiceStep[];
+  question: Question | null;
+}
 
 /** Closing question: wrong options reply and stay; the correct option completes. */
 export interface Question {
@@ -406,7 +603,7 @@ export interface ContentPack {
   id: PackId;
   /** sha256 of the canonical pack body. */
   revision: string;
-  kind: 'shared' | 'prologue' | 'case';
+  kind: 'shared' | 'prologue' | 'case' | 'cozy';
   title: LineId | null;
   case: { number: number; level: 1 | 2 | 3 } | null;
   requires: PackId[];
@@ -429,8 +626,52 @@ export interface ContentPack {
   cutscenes: Cutscene[];
   /** Editorial plan for cutscenes not yet authored (preview packs only); never played. */
   plannedCutscenes: { id: string; scene: SceneId; summary: string }[];
+  /** Notebook pages this pack unlocks (T26): «Тайные заметки», the postal cipher poster. */
+  notebookPages: NotebookPage[];
+  /** Cozy day (kind "cozy" only): residents' stories, shop, decor slots, ranks (T28, T29, D12). */
+  cozy: CozyDay | null;
   /** Lines owned by systems not modelled by the step language yet (family mode, …); still validated and voiced. */
   reserved: { lines: LineId[]; reason: string }[];
+}
+
+/** A notebook page that persists across cases once unlocked (T26). */
+export interface NotebookPage {
+  id: string;
+  kind: 'secret-notes' | 'cipher-poster' | 'symbol-cards';
+  title: LineId;
+  /** Unlocked when this reward is granted. */
+  unlock: string;
+  /** cipher-poster: the `cipher` minigame whose table it shows. */
+  cipher: string | null;
+}
+
+/** «Уютный денёк» (D23, T12, T28, T29) and ranks (D12). */
+export interface CozyDay {
+  residents: {
+    speaker: SpeakerId;
+    /** Available after this case is solved at any level (0 = after the prologue). */
+    unlockAfter: number;
+    invite: LineId;
+    /** Tea-party stories, each 3–5 lines (T28). One tea plays the next untold story, then they repeat. */
+    stories: LineId[][];
+    /** Hearts spent on the tea party (T11). */
+    teaPrice: number;
+  }[];
+  shop: ShopItem[];
+  decorSlots: { id: string; label: LineId }[];
+  ranks: { id: string; label: LineId; afterCase: number; message: LineId[]; reward: string | null }[];
+  lines: { intro: LineId[]; bought: LineId[]; returned: LineId[]; notEnough: LineId[]; teaThanks: LineId[] };
+}
+
+export interface ShopItem {
+  id: string;
+  kind: 'hat' | 'scarf-pattern' | 'decor';
+  label: LineId;
+  /** A asset or accessory rig ID. */
+  asset: string;
+  price: { currency: 'buttons' | 'hearts'; amount: number };
+  /** Available after this case is solved at any level. */
+  unlockAfter: number;
 }
 
 // ---------------------------------------------------------------- voice manifest

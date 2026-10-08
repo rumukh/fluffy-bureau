@@ -3088,6 +3088,10 @@
     },
     {
      "t": "reward",
+     "reward": "rw-c5-heart-finale-l3"
+    },
+    {
+     "t": "reward",
      "reward": "rw-c5-heart-rules"
     },
     {
@@ -4744,6 +4748,13 @@
    "label": "RW-c5-activity",
    "amount": 1,
    "claimKey": "case05:activity:library"
+  },
+  {
+   "id": "rw-c5-heart-finale-l3",
+   "kind": "hearts",
+   "label": "RW-heart",
+   "amount": 1,
+   "claimKey": "case05:l3:heart:finale"
   }
  ],
  "collections": [
@@ -4811,6 +4822,8 @@
    "summary": "Вручение значка-лапки «Тихая нора» и книжной полки для Конторы."
   }
  ],
+ "notebookPages": [],
+ "cozy": null,
  "reserved": [],
- "revision": "8fc828e769972f1672aea283a923f05cc61534b431cfb921ffe329023f6ae6c6"
+ "revision": "ba4880a346b7160bd1344caa75064004476f21501bfcedb3916d86fec2328e1c"
 }
