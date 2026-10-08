@@ -79,7 +79,7 @@ export function pantryCutscene(id: string, scene: string, level: 1 | 2 | 3): Cut
       expr('pudding', 'happy'), line('pudding', 'C4-7-08'), expr('mouse', 'happy'), line('mouse', 'C4-7-09'),
       marker('pantry.herrings'), camera('close-center'), ...lines('khvosts', 'C4-7-10', 'C4-7-11', 'C4-7-12'),
       ...(level >= 2 ? [...lines('khvosts', 'C4-L2-7-01', 'C4-L2-7-02'), line('watsony', 'C4-L2-7-03')] : []),
-      ...(level === 3 ? [enter('kartofan', 'right', 2050), join(), line('khvosts', 'C4-L3-9-01'), line('khvosts', 'C4-L3-9-02'), line('kartofan', 'C4-L3-9-03')] : []),
+      ...(level === 3 ? [enter('kartofan', 'right', 1960), join(), line('khvosts', 'C4-L3-9-01'), line('khvosts', 'C4-L3-9-02'), line('kartofan', 'C4-L3-9-03')] : []),
       ...lines('khvosts', 'C4-7-13', 'C4-7-14', 'C4-7-15'), line('pukhlik', 'C4-7-16'), line('khvosts', 'C4-7-17'),
       camera('wide'), effect('sparkles', 1280, 820, 2), emote('player', 'joy'), marker('pantry.end'),
     ]),
