@@ -128,6 +128,7 @@ const uiLines = lines('shared/ui', 'label', [
   ['UI-family.win', 'narrator', 'Победа общая!', ui('Финал семейного режима (Q36)')],
   ['UI-notebook.secretNotes', 'narrator', 'Тайные заметки', ui('Страница Блокнота (T26, D06)')],
   ['UI-notebook.cipherPoster', 'narrator', 'Почтовый шифр Пушистино', ui('Страница Блокнота (T26)')],
+  ['UI-offline.caseLater', 'narrator', 'Это дело ещё скачивается. Оно откроется, когда появится интернет.', ui('Выбор дела без сети, пока картинки и голоса не скачались (v0.2.1)')],
   ['UI-cozy.title', 'narrator', 'Уютный денёк', ui('Экран Конторы (T12, D23)')],
   ['UI-cozy.shop', 'narrator', 'Лавка', ui('Магазин (T29)')],
   ['UI-cozy.buy', 'narrator', 'Купить', ui('Магазин (T29)')],

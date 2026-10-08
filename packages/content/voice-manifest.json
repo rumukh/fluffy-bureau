@@ -2,7 +2,7 @@
  "format": "fluffy-voice-manifest",
  "schema": 1,
  "packs": {
-  "shared": "358fb1bac80c8a26279e16922f620d278936888054c9885c38379e330b328d82",
+  "shared": "81922e224bcad432377aef4affb93db33faa7d55f5d6531b15fcba918d1f2fc1",
   "prologue": "3f1e1d9ee3dd3da923da680fe7d714d8739319a3305df2ebf90f775fd2323c7a",
   "case01-l1": "2ced628118374c010099d62ecb5f9fd4038256bd1c028539d3b7df971fe01526",
   "case01-l2": "762c7f927ec8e72bada48d741ade2e3dd145257d9750d07a3a310a3e3fa16ea5",
@@ -2007,6 +2007,21 @@
      "hint": "Пуши́стино"
     }
    ],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
+   "id": "UI-offline.caseLater",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Это дело ещё скачивается. Оно откроется, когда появится интернет.",
+   "ttsText": "Это дело ещё скачивается. Оно откроется, когда появится интернет.",
+   "ttsHash": "8abd59e5c108d4f898765973aabe36714247965bb972904cc25817253b9e89f4",
+   "pronunciation": [],
    "delivery": "neutral",
    "note": "",
    "packs": [
