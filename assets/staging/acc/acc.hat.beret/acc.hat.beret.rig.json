@@ -1,0 +1,33 @@
+{
+ "format": "aegis-rig/1",
+ "id": "acc.hat.beret",
+ "revision": "1",
+ "atlases": [
+  "acc.hat.beret.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -150.0,
+  "y": -190.4,
+  "width": 300,
+  "height": 224
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 150.0,
+    "y": 190.4
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "frame": "acc.hat.beret.atlas#body.rest"
+  }
+ ]
+}

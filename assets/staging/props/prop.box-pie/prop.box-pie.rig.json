@@ -1,0 +1,51 @@
+{
+ "format": "aegis-rig/1",
+ "id": "prop.box-pie",
+ "revision": "1",
+ "atlases": [
+  "prop.box-pie.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -170.0,
+  "y": -356.5,
+  "width": 340,
+  "height": 357
+ },
+ "parts": [
+  {
+   "id": "body",
+   "frame": "prop.box-pie.atlas#body.anchor",
+   "pivot": {
+    "x": 2,
+    "y": 2
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10
+  },
+  {
+   "id": "box",
+   "pivot": {
+    "x": 170.0,
+    "y": 356.5
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 11,
+   "variants": {
+    "closed": "prop.box-pie.atlas#box.closed",
+    "open": "prop.box-pie.atlas#box.open"
+   },
+   "variant": "closed",
+   "parent": "body"
+  }
+ ]
+}

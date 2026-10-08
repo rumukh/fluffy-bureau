@@ -1,0 +1,37 @@
+{
+ "format": "aegis-clip/1",
+ "id": "wobble",
+ "duration": 0.6,
+ "loop": false,
+ "blend": "override",
+ "tracks": [
+  {
+   "part": "body",
+   "property": "rotation",
+   "keys": [
+    {
+     "t": 0,
+     "v": 0,
+     "ease": "easeInOutSine"
+    },
+    {
+     "t": 0.15,
+     "v": -5
+    },
+    {
+     "t": 0.3,
+     "v": 5
+    },
+    {
+     "t": 0.45,
+     "v": -2,
+     "ease": "easeInOutSine"
+    },
+    {
+     "t": 0.6,
+     "v": 0
+    }
+   ]
+  }
+ ]
+}

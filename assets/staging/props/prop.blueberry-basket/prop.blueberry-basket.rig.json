@@ -1,0 +1,33 @@
+{
+ "format": "aegis-rig/1",
+ "id": "prop.blueberry-basket",
+ "revision": "1",
+ "atlases": [
+  "prop.blueberry-basket.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -150.0,
+  "y": -290.5,
+  "width": 300,
+  "height": 291
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 150.0,
+    "y": 290.5
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "frame": "prop.blueberry-basket.atlas#body.rest"
+  }
+ ]
+}

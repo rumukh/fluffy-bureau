@@ -10,10 +10,10 @@
   "y": 0
  },
  "bounds": {
-  "x": -270.0,
-  "y": -830.4,
-  "width": 539.4,
-  "height": 830.4
+  "x": -232.2,
+  "y": -714.14,
+  "width": 463.88,
+  "height": 714.14
  },
  "parts": [
   {
@@ -30,7 +30,11 @@
    "variants": {
     "rest": "pudding.atlas#body.rest"
    },
-   "variant": "rest"
+   "variant": "rest",
+   "scale": {
+    "x": 0.86,
+    "y": 0.86
+   }
   },
   {
    "id": "head",
@@ -61,7 +65,8 @@
    "variants": {
     "open": "pudding.atlas#eyes.open",
     "half": "pudding.atlas#eyes.half",
-    "closed": "pudding.atlas#eyes.closed"
+    "closed": "pudding.atlas#eyes.closed",
+    "happy": "pudding.atlas#eyes.happy"
    },
    "variant": "open"
   },
@@ -125,6 +130,19 @@
   },
   "worried": {
    "brows": "worried"
+  },
+  "happy": {
+   "eyes": "happy"
+  }
+ },
+ "emotes": {
+  "joy": {
+   "expression": "happy",
+   "clip": "cheer"
+  },
+  "nod": {
+   "expression": "neutral",
+   "clip": "nod"
   }
  }
 }

@@ -33,8 +33,16 @@
    ],
    "variants": [
     "half",
-    "closed"
-   ]
+    "closed",
+    "happy",
+    "wide",
+    "worried"
+   ],
+   "phrases": {
+    "happy": "both eyes closed in happy upward curved arcs, smiling eyes",
+    "wide": "both eyes opened wide and round in gentle surprise, bright highlights",
+    "worried": "both eyes looking slightly up with the upper lids tilted at the inner corners, a gentle worried, apologetic look"
+   }
   },
   "mouth": {
    "ellipses": [
@@ -63,5 +71,20 @@
    }
   }
  },
- "bodyVariants": {}
+ "bodyVariants": {},
+ "expressions": {
+  "neutral": {
+   "eyes": "open"
+  },
+  "surprised": {
+   "eyes": "wide"
+  },
+  "worried": {
+   "eyes": "worried"
+  },
+  "happy": {
+   "eyes": "happy"
+  }
+ },
+ "scale": 0.8
 }

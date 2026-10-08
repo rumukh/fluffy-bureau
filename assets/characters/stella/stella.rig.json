@@ -10,10 +10,10 @@
   "y": 0
  },
  "bounds": {
-  "x": -208.8,
-  "y": -868.2,
-  "width": 418.2,
-  "height": 868.2
+  "x": -167.04,
+  "y": -694.56,
+  "width": 334.56,
+  "height": 694.56
  },
  "parts": [
   {
@@ -30,7 +30,11 @@
    "variants": {
     "rest": "stella.atlas#body.rest"
    },
-   "variant": "rest"
+   "variant": "rest",
+   "scale": {
+    "x": 0.8,
+    "y": 0.8
+   }
   },
   {
    "id": "head",
@@ -61,7 +65,10 @@
    "variants": {
     "open": "stella.atlas#eyes.open",
     "half": "stella.atlas#eyes.half",
-    "closed": "stella.atlas#eyes.closed"
+    "closed": "stella.atlas#eyes.closed",
+    "happy": "stella.atlas#eyes.happy",
+    "wide": "stella.atlas#eyes.wide",
+    "worried": "stella.atlas#eyes.worried"
    },
    "variant": "open"
   },
@@ -98,6 +105,25 @@
  "expressions": {
   "neutral": {
    "eyes": "open"
+  },
+  "surprised": {
+   "eyes": "wide"
+  },
+  "worried": {
+   "eyes": "worried"
+  },
+  "happy": {
+   "eyes": "happy"
+  }
+ },
+ "emotes": {
+  "joy": {
+   "expression": "happy",
+   "clip": "cheer"
+  },
+  "nod": {
+   "expression": "neutral",
+   "clip": "nod"
   }
  }
 }

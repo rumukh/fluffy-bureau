@@ -1,0 +1,93 @@
+{
+ "format": "aegis-clip/1",
+ "id": "cheer",
+ "duration": 0.8,
+ "loop": false,
+ "blend": "override",
+ "tracks": [
+  {
+   "part": "body",
+   "property": "y",
+   "keys": [
+    {
+     "t": 0,
+     "v": 0,
+     "ease": "easeOutQuad"
+    },
+    {
+     "t": 0.3,
+     "v": -42,
+     "ease": "easeInQuad"
+    },
+    {
+     "t": 0.55,
+     "v": 0,
+     "ease": "easeOutSine"
+    },
+    {
+     "t": 0.65,
+     "v": 4,
+     "ease": "easeOutSine"
+    },
+    {
+     "t": 0.8,
+     "v": 0
+    }
+   ]
+  },
+  {
+   "part": "body",
+   "property": "scaleY",
+   "keys": [
+    {
+     "t": 0,
+     "v": 1
+    },
+    {
+     "t": 0.08,
+     "v": 0.95,
+     "ease": "easeOutQuad"
+    },
+    {
+     "t": 0.3,
+     "v": 1.03,
+     "ease": "easeInQuad"
+    },
+    {
+     "t": 0.58,
+     "v": 0.96,
+     "ease": "easeOutSine"
+    },
+    {
+     "t": 0.8,
+     "v": 1
+    }
+   ]
+  },
+  {
+   "part": "head",
+   "property": "rotation",
+   "keys": [
+    {
+     "t": 0,
+     "v": 0,
+     "ease": "easeInOutSine"
+    },
+    {
+     "t": 0.3,
+     "v": -6,
+     "ease": "easeInOutSine"
+    },
+    {
+     "t": 0.6,
+     "v": 4,
+     "ease": "easeInOutSine"
+    },
+    {
+     "t": 0.8,
+     "v": 0
+    }
+   ]
+  }
+ ]
+}

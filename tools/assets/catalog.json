@@ -421,6 +421,34 @@
     }
    },
    "notes": "Level 3: the Shurshiki mouse door at the bakery foundation."
+  },
+  "bg.intro-town": {
+   "master": "backgrounds/intro-town-c1.png",
+   "pack": "prologue",
+   "location": "intro",
+   "hotspots": {},
+   "notes": "T25 wordless intro: Pushistino at sunset preparing for the jubilee. Keep the sky above y=560 for title.card."
+  },
+  "bg.intro-bureau": {
+   "master": "backgrounds/intro-bureau-c1.png",
+   "pack": "prologue",
+   "location": "intro",
+   "hotspots": {
+    "window": {
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0
+    }
+   },
+   "notes": "T25 intro: bureau front with the emblem sign; bubbles float from the round window."
+  },
+  "bg.bakery-oven": {
+   "master": "backgrounds/bakery-oven-c1.png",
+   "pack": "case01",
+   "location": "bakery",
+   "hotspots": {},
+   "notes": "T25 optional C1-8 moment: pie baking in the honey-caramel oven."
   }
  },
  "props": {
@@ -975,6 +1003,14 @@
    "size": 320,
    "dir": "avatar/hats",
    "notes": "Hat layer; attach at the avatar rig's hat slot, centred, bottom edge on the slot point."
+  },
+  "ui.title-card": {
+   "master": "props/title-card-c1.png",
+   "pack": "prologue",
+   "kind": "ui",
+   "size": 1400,
+   "dir": "ui/art",
+   "notes": "Game title lettering on a banner for the intro (T25)."
   }
  },
  "puppets": {
