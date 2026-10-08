@@ -110,13 +110,13 @@ Documents follow `aegis-cutscene/1` (engine `docs/api/animation.md` §9, SDK 711
 | `p3.letter` | prologue | P3 | yes |
 | `c1.shed.l1` / `.l2` / `.l3` | case01-l1 / l2 / l3 | C1-7 / L2-8 / L3-9 | yes |
 | `c1.oven.l1` / `.l2` / `.l3` | case01-l1 / l2 / l3 | C1-8 / L2-9 / L3-10 | yes |
-| `c1.reward.l1` / `.l2` / `.l3` | case01-l1 / l2 / l3 (sticker clip `stars-<level>`) | C1-10 | yes |
+| `c1.reward.l1` / `.l2` / `.l3` | case01-l1 / l2 / l3 (sticker rig `prop.sticker-pie-<level>`) | C1-10 | yes |
 
 - `line` steps name this pack's line IDs; the narration pack is the content pack. Only existing
   script lines are spoken (no new text). `advance` is `"input"`: after each line the player presses
   «Дальше»; motion without speech runs on its own.
 - `cast` keys equal speaker IDs and use the rig with the same ID; the player is `{ role: "avatar" }`.
-  Props are puppets (`prop.*`, A). Backgrounds, music (`music.*`, comfort `music.*-warm`) and sfx
+  Props are puppets (`prop.*`, A). States that must persist use single-state rigs (`prop.box-pie-closed` swapped for `prop.box-pie-open`, `prop.sticker-pie-N`): a clip's variant change reverts when the clip ends. Backgrounds, music (`music.*`, comfort `music.*-warm`) and sfx
   (`sfx.*`) are A's asset IDs.
 - Camera presets and effects are fixed in `packages/content/src/stage.ts` (`CAMERA_PRESETS`,
   `EFFECTS`); G registers exactly these on the stage.

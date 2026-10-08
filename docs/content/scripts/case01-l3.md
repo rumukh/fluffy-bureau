@@ -2,7 +2,7 @@
 
 > Сгенерировано `node tools/content/build.ts` из `content/`. Не редактировать вручную.
 
-Ревизия пакета: `df8faf5e94fbfd90`. Старт: `L3-1`.
+Ревизия пакета: `5f802d7c12ba7598`. Старт: `L3-1`.
 
 ## Логика
 
@@ -297,7 +297,7 @@
 Место: `shed` · герои: Картофан, Мэр Пудинг, Тёпа, Стелла, Мышонок Шуршик, Фитилёк, Шерлок Хвостс, Доктор Ватсони · подача: cutscene
 
 - 🎬 **Ролик** `c1.shed.l3`: Разговор в сарае (сложность 3): разбор пера, маковых крошек и мышиного следа; мэр извиняется перед Тёпой, Стеллой и мышатами; мышата просят пирога — рецепт удваивается.
-  - состав: kartofan = kartofan, khvosts = khvosts, watsony = watsony, pudding = pudding, tyopa = tyopa, fitilyok = fitilyok, player = аватар игрока, box = prop.box-pie, stella = stella, mouse = mouse; после каждой реплики — «Дальше»
+  - состав: kartofan = kartofan, khvosts = khvosts, watsony = watsony, pudding = pudding, tyopa = tyopa, fitilyok = fitilyok, player = аватар игрока, box = prop.box-pie-closed, boxOpen = prop.box-pie-open, stella = stella, mouse = mouse; после каждой реплики — «Дальше»
   - _фон `bg.shed-interior`_
   - _музыка `music.heartfelt`_
   - _камера wide_
@@ -327,7 +327,9 @@
   - `C1-7-07` **Мэр Пудинг:** «Ничего, Картофан. Ты же не нарочно.»
   - ◆ метка `shed.box`
   - _камера close-right_
-  - _box: движение box-open_
+  - _box: движение wobble_
+  - _уходит box_
+  - _входит boxOpen_
   - _звук `sfx.pick-up`_
   - _pudding: лицо surprised_
   - _kartofan: движение shrug-shy_
@@ -440,7 +442,7 @@
 Место: `office` · герои: Шерлок Хвостс, Доктор Ватсони · подача: cutscene
 
 - 🎬 **Ролик** `c1.reward.l3`: Награда в Конторе: значок-лапка «Пирог найден», стикер в альбом (звёздочки по сложности), корзинка черники. Сами награды выдаются шагами после ролика.
-  - состав: khvosts = khvosts, watsony = watsony, player = аватар игрока, badge = prop.badge-pie-found, sticker = prop.sticker-pie, basket = prop.blueberry-basket; после каждой реплики — «Дальше»
+  - состав: khvosts = khvosts, watsony = watsony, player = аватар игрока, badge = prop.badge-pie-found, sticker = prop.sticker-pie-3, basket = prop.blueberry-basket; после каждой реплики — «Дальше»
   - _фон `bg.office`_
   - _музыка `music.celebration-baking`_
   - _камера wide_
@@ -463,7 +465,6 @@
   - ◆ метка `reward.sticker`
   - _входит sticker_
   - _sticker: движение present_
-  - _sticker: движение stars-3_
   - _звук `sfx.sticker-check`_
   - _входит basket_
   - _basket: движение present_
