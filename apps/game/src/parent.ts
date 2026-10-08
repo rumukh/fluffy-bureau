@@ -177,7 +177,7 @@ export function renderParentCorner(app: App, close: () => HTMLElement): HTMLElem
                   storage: app.storage,
                   profileId: profile.id,
                   library: app.library,
-                  engineRevision: '711ec456e242',
+                  engineRevision: '17ed4bebd329',
                 },
                 await file.text(),
               );

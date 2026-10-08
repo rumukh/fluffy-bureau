@@ -1,7 +1,7 @@
 # Fluffy Bureau runtime architecture (Stage 1)
 
 **Owner:** workstream G. **Status:** Stage 1 implementation, 2026-10-08.
-**Engine:** AEGIS SDK artifact set `711ec456e242` from workstream E (see `vendor/aegis/README.md`).
+**Engine:** AEGIS SDK artifact set `17ed4bebd329` from workstream E (see `vendor/aegis/README.md`).
 
 ```mermaid
 flowchart LR

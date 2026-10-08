@@ -2,7 +2,7 @@
 
 **Compiled by:** workstream G, 2026-10-08. **Scope:** prologue «Первый день стажёра» and case 1
 «Пирог, которого не было», levels 1–3 (T01). **Build:** `rumukh-fluffy-game-runtime`, AEGIS SDK
-`711ec456e242` (E's artifact set with the 2D stage), content from C (`rumukh-fluffy-content-and-logic`, eb6b971), art and audio from A
+`17ed4bebd329` (E's artifact set with the 2D stage), content from C (`rumukh-fluffy-content-and-logic`, eb6b971), art and audio from A
 (`rumukh-fluffy-art-and-audio`, e403de8: 1,253 assets with provenance, 531 voice lines with mouth cues,
 12 music loops, 30 sound effects).
 

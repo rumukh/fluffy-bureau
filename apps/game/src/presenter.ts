@@ -279,8 +279,17 @@ export class StagePresenter implements Presenter {
   readonly fallback: StaticPresenter;
   private readonly effectDefinitions: Record<string, EffectDefinition> = EFFECTS;
   private failed = false;
-  private speaking: StagePuppet | null = null;
-  private reporter = 0;
+  private stopSpeechWatch: (() => void) | null = null;
+
+  /** Mirrors the speaking puppet's lip-sync mode on the (aria-hidden) stage element for acceptance checks. */
+  private watchSpeech(puppet: StagePuppet): void {
+    this.stopSpeechWatch?.();
+    const report = (speech: { mode: string; synchronized: boolean }) => {
+      this.element.dataset.speech = `${speech.mode}${speech.synchronized ? ':synchronized' : ''}`;
+    };
+    report(puppet.speech());
+    this.stopSpeechWatch = puppet.onSpeech(report);
+  }
   /** Resolves when the current scene's puppets are on stage. */
   private ready: Promise<void> = Promise.resolve();
 
@@ -310,12 +319,6 @@ export class StagePresenter implements Presenter {
         sfx: (asset) => voice.effect(asset.replace(/^sfx\./, '')),
       },
     });
-    // Expose the lip-sync mode on the (aria-hidden) stage element for acceptance checks.
-    this.reporter = window.setInterval(() => {
-      const speech = this.speaking?.speech();
-      const mode = speech ? `${speech.mode}${speech.synchronized ? ':synchronized' : ''}` : 'rest';
-      if (this.element.dataset.speech !== mode) this.element.dataset.speech = mode;
-    }, 100);
   }
 
   private async ensure(documents: string[], images: string[]): Promise<boolean> {
@@ -431,7 +434,7 @@ export class StagePresenter implements Presenter {
     const puppet = this.puppets.get(speaker);
     if (puppet && !this.failed) {
       for (const other of this.puppets.values()) if (other !== puppet) other.silence();
-      this.speaking = puppet;
+      this.watchSpeech(puppet);
       await puppet.speak({ packId, lineId }, { unheard: 'subtle' });
       return;
     }
@@ -569,7 +572,7 @@ export class StagePresenter implements Presenter {
   }
 
   dispose(): void {
-    window.clearInterval(this.reporter);
+    this.stopSpeechWatch?.();
     void this.stage.dispose();
     this.element.remove();
   }

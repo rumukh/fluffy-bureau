@@ -1,8 +1,8 @@
 {
   "format": "aegis-sdk-build/1",
-  "revision": "711ec456e2425585fd63ac0ee043f0fcfeae0a6b",
+  "revision": "17ed4bebd329994d41aba3077926f080a15cc790",
   "workingTree": "clean",
-  "sourceDigest": "e24d64e705d74bf2d91c478e060a258cb59f6588dd9ab16885b3bef8ec8ece0c",
+  "sourceDigest": "1aa7062366d08df30073e6b67d674b3f31fdfea9a18c231f5a27d7f72d7dffa1",
   "sourceFiles": [
     {
       "path": "LICENSE",
@@ -170,7 +170,7 @@
     },
     {
       "path": "packages/browser/src/stage/stage.ts",
-      "sha256": "a2eacc6e7df7a6b00b0e1c323e74bdf61c00439917e6de97bf81a572f99fa27f"
+      "sha256": "89bb393fbaff29579ff58f1f3323049efad842185ba538b787df979c0c34bac2"
     },
     {
       "path": "packages/browser/src/stage/webgl.ts",
@@ -470,7 +470,7 @@
     },
     {
       "path": "packages/runtime/src/host.ts",
-      "sha256": "078f74200e97fb13ecadab2b3765e14decd5e5c2dd308dba94f7726a4e594b8a"
+      "sha256": "4f31537926e7c7b003eadf286c13ec0a8d0b2a678978908a3b63f00e38a3b63b"
     },
     {
       "path": "packages/runtime/src/index.ts",
@@ -510,7 +510,7 @@
     },
     {
       "path": "packages/runtime/test/host.test.ts",
-      "sha256": "b19176ddc7492d1395a67413f72544d3b0bff124f977a120721c072cb22dcfd8"
+      "sha256": "72d326294068f8cdae1328df0d716758a4d14e5c1812058126b74f83f90b80fe"
     },
     {
       "path": "packages/runtime/tsconfig.json",
@@ -538,35 +538,35 @@
     "npm": "11.8.0",
     "typescript": "5.9.3"
   },
-  "version": "0.0.0-local.r711ec456e242.de24d64e705d74bf2",
+  "version": "0.0.0-local.r17ed4bebd329.d1aa7062366d08df3",
   "packages": [
     {
       "name": "@aegis/core",
-      "version": "0.0.0-local.r711ec456e242.de24d64e705d74bf2",
-      "file": "aegis-core-0.0.0-local.r711ec456e242.de24d64e705d74bf2.tgz",
-      "sha256": "83bce1634c9cb9cca0c0f1411a5dfb9fe474492af4ca3bb81af28d9d1b7df583",
-      "integrity": "sha512-lcn8xtTH+uYeCBrM7OquzUvN7RKlAbmggLLtjgXJxqp7jiPqIbQLPsxN5Y0hLBziLhwNapmD0e/tL2NwSMKcLQ=="
+      "version": "0.0.0-local.r17ed4bebd329.d1aa7062366d08df3",
+      "file": "aegis-core-0.0.0-local.r17ed4bebd329.d1aa7062366d08df3.tgz",
+      "sha256": "7f845bfa5d0a7d22593fd287e3a5e3d45f5aa232cc78f195414e858273d47e77",
+      "integrity": "sha512-dO4enfE2FjqU4JgYrvhC8LWXot/ynIfmqHQpRGRZ5imq4xf0KJV/bHa4m70Ze0gaQaOgZLu6IpPBz0mG7lLcug=="
     },
     {
       "name": "@aegis/runtime",
-      "version": "0.0.0-local.r711ec456e242.de24d64e705d74bf2",
-      "file": "aegis-runtime-0.0.0-local.r711ec456e242.de24d64e705d74bf2.tgz",
-      "sha256": "042a955c48cd9e163b5cdcc7a205bd2046b856bbe6cc885cfd2f067ab6f366f4",
-      "integrity": "sha512-CU1k/42Y3AT3uqvASAuxeZBh51s5QanXZB1ctXc2WAbUSdIsUPYcV2crVrg0bVsBKSOx8bxYrh4VlagJ0yUzTw=="
+      "version": "0.0.0-local.r17ed4bebd329.d1aa7062366d08df3",
+      "file": "aegis-runtime-0.0.0-local.r17ed4bebd329.d1aa7062366d08df3.tgz",
+      "sha256": "a9430c90a1987d16d5b3c7ce58ab0adf682dac907954d580148cd8fb1b059d23",
+      "integrity": "sha512-8GbLFUEC3mqJo6IO7UfB8JjEd6ZUVo9qTHNWGYw1nIrJmsiByo0Hd4I0yXLVRuICwmkmuGs1m+NIrPpY+Vbw4Q=="
     },
     {
       "name": "@aegis/narrative",
-      "version": "0.0.0-local.r711ec456e242.de24d64e705d74bf2",
-      "file": "aegis-narrative-0.0.0-local.r711ec456e242.de24d64e705d74bf2.tgz",
-      "sha256": "57ebc3eff1539f2b6dbe4267d36c76d5073f6b58d96966babe1a021686c2859c",
-      "integrity": "sha512-RHAirue/iTcRox5fE0n34jlUO4swYmaxREvmBMjAEiDJZhuSGBhcV7x0TZEQdo9E23xGHKefZ0aO9cxcIxbb1A=="
+      "version": "0.0.0-local.r17ed4bebd329.d1aa7062366d08df3",
+      "file": "aegis-narrative-0.0.0-local.r17ed4bebd329.d1aa7062366d08df3.tgz",
+      "sha256": "b60ec136174a55659d088e2bd1b31b24a69ae9f0cea2158aed3698d061c9377d",
+      "integrity": "sha512-fG7qsZTolHK+iQNX5Fl7zjtk6oVVzvynEhMt000t9m79Mx3G1sNR+ApUfxDWDoUyD916cB1Iz0ywcBsFJlyI3w=="
     },
     {
       "name": "@aegis/browser",
-      "version": "0.0.0-local.r711ec456e242.de24d64e705d74bf2",
-      "file": "aegis-browser-0.0.0-local.r711ec456e242.de24d64e705d74bf2.tgz",
-      "sha256": "73eefadd35b554e389992cb9baab57c164864a63a630b4610fa71f18b49eb41b",
-      "integrity": "sha512-fwyFe/YRdPvPcHEWBLUVdDtPUpurWFs/ynsK4rSIle3Klnx8nvDuSrF5qPnwT47nNn8N8K2FidN+pVEIBq9qug=="
+      "version": "0.0.0-local.r17ed4bebd329.d1aa7062366d08df3",
+      "file": "aegis-browser-0.0.0-local.r17ed4bebd329.d1aa7062366d08df3.tgz",
+      "sha256": "aae2eea8781b4b232eabd60ce548182c48a4f921a1bb47a650b4ad1923c4e2fc",
+      "integrity": "sha512-bATquWjFcm6UI8+DxgoTBFgamxH8/labxVUuHi6motp5wPNoMzt5ElwAW/Kin15rmH+XY2xAoHp9nlakFXo/ig=="
     }
   ]
 }

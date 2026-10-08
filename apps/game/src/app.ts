@@ -252,7 +252,7 @@ export class App {
       storage: this.storage,
       profileId,
       library: this.library,
-      engineRevision: '711ec456e242',
+      engineRevision: '17ed4bebd329',
     });
     if (result.kind === 'recovery') {
       this.recovery = result;

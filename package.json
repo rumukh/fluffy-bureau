@@ -39,9 +39,9 @@
     "vitest": "^4.1.0"
   },
   "dependencies": {
-    "@aegis/browser": "file:vendor/aegis/711ec456e242/aegis-browser-0.0.0-local.r711ec456e242.de24d64e705d74bf2.tgz",
-    "@aegis/core": "file:vendor/aegis/711ec456e242/aegis-core-0.0.0-local.r711ec456e242.de24d64e705d74bf2.tgz",
-    "@aegis/narrative": "file:vendor/aegis/711ec456e242/aegis-narrative-0.0.0-local.r711ec456e242.de24d64e705d74bf2.tgz",
-    "@aegis/runtime": "file:vendor/aegis/711ec456e242/aegis-runtime-0.0.0-local.r711ec456e242.de24d64e705d74bf2.tgz"
+    "@aegis/browser": "file:vendor/aegis/17ed4bebd329/aegis-browser-0.0.0-local.r17ed4bebd329.d1aa7062366d08df3.tgz",
+    "@aegis/core": "file:vendor/aegis/17ed4bebd329/aegis-core-0.0.0-local.r17ed4bebd329.d1aa7062366d08df3.tgz",
+    "@aegis/narrative": "file:vendor/aegis/17ed4bebd329/aegis-narrative-0.0.0-local.r17ed4bebd329.d1aa7062366d08df3.tgz",
+    "@aegis/runtime": "file:vendor/aegis/17ed4bebd329/aegis-runtime-0.0.0-local.r17ed4bebd329.d1aa7062366d08df3.tgz"
   }
 }

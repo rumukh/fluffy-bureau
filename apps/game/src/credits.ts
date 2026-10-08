@@ -6,7 +6,7 @@ export const CREDITS: { name: string; detail: string }[] = [
   },
   {
     name: 'Движок AEGIS',
-    detail: '@aegis/core, runtime, narrative, browser; лицензия MIT; версия 711ec456e242.',
+    detail: '@aegis/core, runtime, narrative, browser; лицензия MIT; версия 17ed4bebd329.',
   },
   { name: 'Шрифт Nunito', detail: 'Vernon Adams и соавторы; SIL Open Font License 1.1.' },
   {
