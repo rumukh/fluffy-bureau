@@ -65,6 +65,7 @@ describe('profile sessions', () => {
     for (const [i, id] of ids.entries()) {
       const session = await open(storage, id);
       requireValue(await session.dispatch({ type: 'start', pack: 'prologue' }));
+      requireValue(await session.dispatch({ type: 'cutscene', outcome: 'skipped' }));
       while (session.game.host.getView().run?.step?.kind === 'line')
         requireValue(await session.dispatch({ type: 'next' }));
       requireValue(await session.dispatch({ type: 'avatar.species', value: 'mouse' }));
@@ -92,8 +93,8 @@ describe('profile sessions', () => {
     await seed.dispose();
     const a = await open(storage, 'p-aaaa');
     const b = await open(storage, 'p-aaaa');
-    await run(a, [{ type: 'next' }]);
-    const outcome = await b.dispatch({ type: 'next' });
+    await run(a, [{ type: 'cutscene', outcome: 'skipped' }]);
+    const outcome = await b.dispatch({ type: 'cutscene', outcome: 'skipped' });
     expect(outcome.ok).toBe(false);
     expect(b.saves.status().status).toBe('conflict');
     const reopened = await open(storage, 'p-aaaa');
@@ -133,7 +134,10 @@ describe('profile sessions', () => {
   it('offers recovery instead of a new game when the record is corrupt', async () => {
     const storage = new MemorySaveStorage();
     const first = await open(storage, 'p-aaaa');
-    await run(first, [{ type: 'start', pack: 'prologue' }]);
+    await run(first, [
+      { type: 'start', pack: 'prologue' },
+      { type: 'cutscene', outcome: 'skipped' },
+    ]);
     while (first.game.host.getView().run?.step?.kind === 'line')
       await run(first, [{ type: 'next' }]);
     await run(first, [{ type: 'avatar.species', value: 'mouse' }]);

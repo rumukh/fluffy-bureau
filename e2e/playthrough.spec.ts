@@ -4,7 +4,9 @@ import { Player } from './player.js';
 const ORIGIN = 'http://127.0.0.1';
 
 test.describe('Stage 1 playthrough', () => {
-  test('keyboard only: prologue and case 1 level 1, no outbound requests', async ({ page }) => {
+  test('keyboard only: prologue and case 1 level 1 with every cutscene watched, no outbound requests', async ({
+    page,
+  }) => {
     test.setTimeout(600_000);
     const outbound: string[] = [];
     page.on('request', (request) => {
@@ -12,7 +14,8 @@ test.describe('Stage 1 playthrough', () => {
         outbound.push(request.url());
     });
     await page.goto('./');
-    const player = new Player(page, 'keyboard');
+    // Keyboard run watches every cutscene to the end (intro, P3, shed, oven, reward).
+    const player = new Player(page, 'keyboard', true);
     await player.createProfile();
     await player.playToEnd('prologue');
     await expect(page.locator('.case-end')).toBeVisible();

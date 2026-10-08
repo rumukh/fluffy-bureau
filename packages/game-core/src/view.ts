@@ -268,7 +268,7 @@ function projectRun(state: ProfileState, rules: GameRules, contentIndex: Content
         stepView = { kind: 'await', action: step.action };
         break;
       case 'cutscene': {
-        const entry = (index.pack.cutscenes as { id: string; document?: Json }[]).find(
+        const entry = (index.pack.cutscenes as unknown as { id: string; document?: Json }[]).find(
           (c) => c.id === step.cutscene,
         );
         if (!entry?.document) throw new Error(`Cutscene ${step.cutscene} has no document`);

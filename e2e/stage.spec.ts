@@ -9,6 +9,7 @@ test('puppets lip-sync recorded lines from cue tracks on the AEGIS stage', async
   await page.goto('./');
   const player = new Player(page);
   await player.createProfile();
+  await player.activate(player.key('cutscene-skip'));
   const stage = page.locator('.stage-live');
   await expect(stage.locator('canvas')).toHaveCount(1);
   // The first line is spoken by Watsony's puppet: the mouth follows the narration clock.

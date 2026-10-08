@@ -309,6 +309,8 @@ export class StagePresenter implements Presenter {
       reducedMotion: 'system',
       comfort: { brightness: 1.12, warmth: 0.6 },
       maxDevicePixelRatio: 2,
+      // Cutscenes may hold a background, a comfort variant, the cast, props and particles at once.
+      memoryBudgetBytes: 128 * 1024 * 1024,
       // Camera framings and particle effects named by C's cutscene documents (T25 contract).
       cameraPresets: CAMERA_PRESETS,
       effects: this.effectDefinitions,
@@ -321,12 +323,34 @@ export class StagePresenter implements Presenter {
     });
   }
 
+  /** Loaded plain images (backgrounds, props); released when a scene no longer shows them. */
+  private loadedImages = new Set<string>();
+
   private async ensure(documents: string[], images: string[]): Promise<boolean> {
+    // Free backgrounds and props the next scene does not use: each 2560×1600 background owns
+    // 16 MiB decoded and would otherwise exhaust the stage budget scene by scene.
+    const keep = new Set(images);
+    const stale = [...this.loadedImages].filter((id) => !keep.has(id));
+    if (stale.length) {
+      this.stage.release({ images: stale });
+      for (const id of stale) {
+        this.loadedImages.delete(id);
+        this.loaded.delete(id);
+      }
+    }
+    for (const id of images) this.loadedImages.add(id);
     const docs = documents.filter((id) => !this.loaded.has(id));
     const imgs = images.filter((id) => !this.loaded.has(id));
     if (!docs.length && !imgs.length) return true;
     const result = await this.stage.load({ documents: docs, images: imgs });
-    if (!result.ok) return false;
+    if (!result.ok) {
+      // Visible to developers and acceptance tests only (aria-hidden), never to the child.
+      this.element.dataset.loadError = result.diagnostics
+        .slice(0, 5)
+        .map((d) => `${d.code}:${d.source ?? ''}:${d.path}`)
+        .join(' ');
+      return false;
+    }
     for (const id of [...docs, ...imgs]) this.loaded.add(id);
     return true;
   }
@@ -395,7 +419,6 @@ export class StagePresenter implements Presenter {
         id: member.id,
         rig: docs.rigId,
         at: { x: CAST_X[index % CAST_X.length]!, y: STAGE_FLOOR },
-        scale: 1.25,
         facing: 'left',
         behaviours: { breathe: {}, blink: {} },
       });
@@ -407,7 +430,6 @@ export class StagePresenter implements Presenter {
         rig: avatarDocs.rigId,
         tints: { scarf: SCARF_COLORS[scene.avatar.scarf] },
         at: { x: 520, y: STAGE_FLOOR },
-        scale: 1.15,
         facing: 'right',
         behaviours: { breathe: {}, blink: {} },
       });

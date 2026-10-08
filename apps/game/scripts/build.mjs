@@ -17,20 +17,18 @@ let out = join(appRoot, 'dist');
 let base = '/';
 let replace = true;
 let allowFixture = false;
-let testCutscene = false;
 for (let i = 0; i < args.length; i++) {
   if (args[i] === '--out') {
     out = resolve(args[++i]);
     replace = false;
   } else if (args[i] === '--base') base = args[++i];
   else if (args[i] === '--fixture-content') allowFixture = true;
-  else if (args[i] === '--test-cutscene') testCutscene = true;
   else throw new Error(`Unknown option ${args[i]}`);
 }
 if (replace) rmSync(out, { recursive: true, force: true });
 else assertFresh(out);
 copyStatic(out);
-const content = await writeContent(out, { allowFixture, testCutscene });
+const content = await writeContent(out, { allowFixture });
 writeAssets(out);
 const result = await build(
   bundleOptions(out, { minify: true, sourcemap: false, define: { FLUFFY_DEV: 'false' } }),

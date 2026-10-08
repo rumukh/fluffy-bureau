@@ -115,47 +115,7 @@ async function fixturePacks() {
  * Writes compiled content packs (from @fluffy/content) into their offline packs plus
  * content/index.json. Without C's packs, llowFixture uses the rule-test fixture (dev only).
  */
-/**
- * Test-only: inserts a small cutscene into the prologue (before P3's first reward) so the
- * browser suite can exercise E's cutscene player before C's T25 documents land.
- */
-function injectTestCutscene(packs) {
-  const prologue = packs.find((p) => p.id === 'prologue');
-  if (!prologue) return;
-  const p3 = prologue.scenes.find((s) => s.id === 'P3');
-  const at = p3.steps.findIndex((s) => s.t === 'reward');
-  p3.steps.splice(at, 0, { t: 'cutscene', cutscene: 'test-letter' });
-  const lines = ['P3-05', 'P3-06', 'P3-07'].filter((id) => prologue.lines.some((l) => l.id === id));
-  prologue.cutscenes = [
-    ...prologue.cutscenes.filter((c) => c.id !== 'test-letter'),
-    {
-      id: 'test-letter',
-      scene: 'P3',
-      summary: 'E2E test cutscene',
-      document: {
-        format: 'aegis-cutscene/1',
-        id: 'test-letter',
-        revision: '1',
-        advance: 'input',
-        cast: { khvosts: { rig: 'khvosts' }, player: { role: 'avatar' } },
-        steps: [
-          { op: 'background', asset: 'bg.office' },
-          { op: 'enter', actor: 'khvosts', from: 'left', to: { x: 1500, y: 1500 }, duration: 1 },
-          { op: 'enter', actor: 'player', from: 'right', to: { x: 800, y: 1500 }, duration: 1 },
-          { op: 'camera', preset: 'close-center', duration: 1 },
-          { op: 'marker', id: 'arrived' },
-          ...lines.map((line) => ({ op: 'line', actor: 'khvosts', line })),
-          { op: 'marker', id: 'read' },
-          { op: 'effect', effect: 'sparkles', at: { x: 1280, y: 900 }, duration: 1 },
-          { op: 'transition', type: 'fade', duration: 0.6 },
-        ],
-      },
-    },
-  ];
-  prologue.revision = `${prologue.revision.slice(0, 40)}-e2e-cutscene`;
-}
-
-export async function writeContent(out, { allowFixture, testCutscene = false }) {
+export async function writeContent(out, { allowFixture }) {
   let packs;
   if (existsSync(CONTENT_PACKS_DIR)) {
     // Only the production pack list (PACK_IDS); preview packs for later stages are excluded.
@@ -170,7 +130,6 @@ export async function writeContent(out, { allowFixture, testCutscene = false }) 
     if (!allowFixture) throw new Error('No content packs in packages/content/packs');
     packs = await fixturePacks();
   }
-  if (testCutscene) injectTestCutscene(packs);
   const entries = [];
   for (const pack of packs.sort((a, b) => a.id.localeCompare(b.id))) {
     const offline = offlinePackForContent(pack.id);

@@ -13,6 +13,10 @@ async function play(actions: GameAction[]) {
 async function skipLines(game: ReturnType<typeof newGame>) {
   for (let i = 0; i < 200; i++) {
     const run = game.host.getView().run!;
+    if (run.step?.kind === 'cutscene' && !run.queue) {
+      requireValue(await game.host.dispatch({ type: 'cutscene', outcome: 'completed' }));
+      continue;
+    }
     if (!run.queue && run.step?.kind !== 'line') return run;
     requireValue(await game.host.dispatch({ type: 'next' }));
   }

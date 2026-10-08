@@ -29,6 +29,8 @@ export class Player {
   constructor(
     readonly page: Page,
     readonly mode: InputMode = 'mouse',
+    /** Watch cutscenes line by line («Дальше»); otherwise they are skipped («Пропустить ролик»). */
+    readonly watchCutscenes = false,
   ) {}
 
   async activate(target: Locator): Promise<void> {
@@ -82,8 +84,12 @@ export class Player {
       if (await page.locator('.case-end').count()) return;
       const next = this.key('next');
       if ((await this.stepKind()) === 'cutscene') {
-        if (await next.isEnabled().catch(() => false)) await this.activate(next);
-        else await page.waitForTimeout(200);
+        if (!this.watchCutscenes) {
+          const skip = this.key('cutscene-skip');
+          if (await skip.isVisible().catch(() => false)) await this.activate(skip);
+          else await page.waitForTimeout(200);
+        } else if (await next.isEnabled().catch(() => false)) await this.activate(next);
+        else await page.waitForTimeout(250);
         continue;
       }
       if (await next.isVisible().catch(() => false)) {
