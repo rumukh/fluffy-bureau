@@ -42,7 +42,7 @@ line ID is looked up in the case pack first, then in `shared`.
 | Step | Runtime behaviour |
 |---|---|
 | `line` | Show and narrate the line. |
-| `dir` | Stage direction / animation cue (`id` stable). Never shown as dialogue, never voiced. Optional `background` (A's `bg.*` ID): from this step on, until the scene ends or another `dir` sets one, the stage shows that background. Only at the scene's top level, so the runtime can take the latest one at or before the cursor (restart-safe). |
+| `dir` | Stage direction / animation cue (`id` stable). Never shown as dialogue, never voiced. Optional `background` (A's `bg.*` ID): from this step on, until the scene ends or another `dir` sets one, the stage shows that background (top-level steps only). Optional `actions` (U10): a subset of the engine's cutscene ops (`pose`, `emote`, `sfx`, `effect`, `move`, `enter`, `exit`) on the scene's cast, `player` or `Scene.props` keys; they play when the cursor reaches the step, never block and never change game state (after a restore only the end placement applies). |
 | `skill` | `[НАВЫК]`: play `first` when the profile lacks the skill, else `known`; then mark it learned (profile-level). |
 | `minigame` | Run the minigame; continue when complete. |
 | `cutscene` | Play `cutscenes[id].document` on the stage (T25). Blocking; completes when finished or skipped. Rewards, clues and flags are never inside a cutscene: they follow as ordinary steps, so skip, replay and restore never re-apply them. |
@@ -51,7 +51,7 @@ line ID is looked up in the case pack first, then in `shared`.
 | `reward` | Grant once per `claimKey`. |
 | `if` | Evaluate `when` and run `then` or `else`. |
 | `menu` | Decision screen. Show options whose `when` holds (or is `null`) and whose `hideWhen` does not hold; at most `pageSize` (≤ 3) per page. `back` is the service «Назад» target (not counted as an option). Selecting goes to `to`. In a `hub` scene with `location: "map"` the menu is the town map. |
-| `await` | Block until the child performs `avatar.species`, `avatar.name`, `avatar.scarf`, `lamp.on`, `lamp.off`, `replay`, `notebook.open`, `pause` or `office.place`. |
+| `await` | Block until the child performs `avatar.species`, `avatar.name`, `avatar.scarf`, `lamp.on`, `lamp.off`, `replay`, `notebook.open`, `pause`, `office.place`, or `hotspot` (U11: tap the named `hotspot` of the background shown at that point). |
 | `goto` | Continue in another scene. |
 | `end` | Pack complete. |
 
@@ -98,6 +98,35 @@ propose the first and speak its `line`; never place it. `point`: for the first s
 | `timeline` | `items[]` (`time`, `label`), `solution[]`, `wrong[]` | aegis `ordering`. |
 | `scent-pairs` | `fields[]` of `cards[]` (`pair`), `mismatch[]`, `question` | aegis `matching`; no timer. |
 | `baker` | `measures[]` (`units` = eighths of a cup), `steps[]` (`prompt`, `target`, `ideal`, `afterWrong`), `tooMuch[]`, `tooLittle[]` | Sum > target: `tooMuch` (+`afterWrong`), undo the pick. Pick outside `ideal` with sum < target: `tooLittle` (+`afterWrong`). Sum = target: next step. |
+
+### Stage 2 minigame kinds (T26, U12)
+
+Types: `packages/content/src/schema.ts`; checks: `tools/content/kinds.ts`. Every choice set has ≤3 options (Q11).
+
+| `kind` | Mechanic | Data | Checks |
+|---|---|---|---|
+| `cipher` | «Шифр на пуговицах» (case 2) | `table` of glyphs (`letter`, `colour`, `holes`, `shape`, `label`), `words` of `slots` (≤3 letter options each), `intro`, `wrong` | glyphs unique; never differ only by colour (R01, D17); slots spell the word |
+| `postman` | «Почтальон» (case 2) | `cipher` (minigame ID), `letters` (buttons → house = sum of holes; level 3 `street` via `streetByShape`), `houseLabels`, `streets` | sums and streets match the cipher table |
+| `sound-match` | «Услышь разницу» (case 3) | rounds with `target` and option `sample` = IDs in A's `assets/sound-clues/index.json` (which carries the silent visual forms, Q31) | one match per round; IDs exist (pending until A delivers) |
+| `light-signals` | «Азбука огоньков» (case 3) | `signals` (`pattern` of dot/dash), `own` (level 3: the D22 profile signal, any rhythm of `min`–`max` lights) | patterns distinct, 2–6 lights |
+| `read-blink` | «Прочитай мигание» (case 3, level 3) | `drawing`, `lessons` | exactly one lesson matches, and it is the correct one |
+| `dream-keeper` | «Хранитель снов» (case 4, D16, T31) | `rounds` (axis, answer, ≥3 `cards` with `label` (private line), `image`, `facts` per question), `family` (`players`, `questions`, `titles` for keeper/asker/guesser, intro/keeperPick/ask/win lines) | no card names the answer (Q33, stem match); every card answers every question; card lines are `private` (never voiced or shown outside the Keeper's screen) |
+| `equal-share` | «Раздели поровну» (case 4) | `tasks` (`items`, `groups`, `reserve`, labels) | `(items − reserve)` divides by `groups` |
+| `compare` | «Чья тележка?» (case 4, level 3) | `subject` (`label`, `image`), `steps` like tracks, `question` | one correct option per step |
+
+`staged` (generic placeholder) is allowed only in preview packs (cases 5–8).
+
+### Notebook pages, cozy day, ranks
+
+- `notebookPages`: `{ id, kind: secret-notes | cipher-poster | symbol-cards, title, unlock (reward ID granted in the pack), cipher (cipher-poster only) }`.
+- Pack `cozy` (kind `cozy`, field `cozy`): `residents` (`speaker`, `unlockAfter`, `invite`, `stories` of 3–5 lines, `teaPrice` 2 hearts; one tea plays the next untold story), `shop` (hats, scarf patterns: 5–25 buttons; decor: 3–8 hearts; `unlockAfter`), `decorSlots`, `ranks` (`label`, `afterCase`, `message`, title `reward`), reaction `lines`. Economy check: level 1 earnings through the last unlocking case cover about half of the cosmetics, levels 1+2 cover all (T11).
+
+### Pack tiers and asset requests
+
+- `PACK_IDS`: released (Stage 1); every referenced asset must exist.
+- `PRODUCTION_PACK_IDS`: Stage 2 (cases 2–4, `cozy`); assets A has not delivered are listed in `docs/content/ASSET_REQUESTS.md` and reported as `ASSET-PENDING` warnings; G shows placeholders.
+- `PREVIEW_PACK_IDS`: cases 5–8; not produced before the next «дальше».
+- Voice: `voice-manifest.json` covers released + production packs (A records these); `voice-manifest.stage2-preview.json` covers preview packs.
 
 ## Cutscenes (T25)
 
