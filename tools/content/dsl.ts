@@ -14,6 +14,8 @@ import type {
   Delivery,
   Fact,
   GlossaryEntry,
+  CozyDay,
+  NotebookPage,
   Hints,
   LineKind,
   MenuOption,
@@ -24,6 +26,7 @@ import type {
   Skill,
   Speaker,
   Step,
+  StageAction,
 } from '../../packages/content/src/schema.ts';
 
 // ---------------------------------------------------------------- lines
@@ -43,6 +46,7 @@ export interface LineOpts {
   note?: string;
   tts?: string;
   voiced?: boolean;
+  private?: boolean;
   /** One entry per revision step, oldest first. */
   changes?: Change[];
 }
@@ -59,6 +63,7 @@ export interface AuthoredLine {
   note?: string;
   tts?: string;
   voiced: boolean;
+  private?: boolean;
   changes: Change[];
   origin: string; // source module, for diagnostics
 }
@@ -84,6 +89,7 @@ export function lines(origin: string, defaultKind: LineKind, rows: LineTuple[]):
       delivery: o.delivery ?? defaultDelivery(kind, text),
       ...(o.note ? { note: o.note } : {}),
       ...(o.tts ? { tts: o.tts } : {}),
+      ...(o.private ? { private: true } : {}),
       voiced: o.voiced ?? true,
       changes,
       origin,
@@ -111,7 +117,17 @@ export function seq(prefix: string, from: number, to: number): Step[] {
   return out;
 }
 export const Ls = (...ids: string[]): Step[] => ids.map(L);
-export const dir = (id: string, text: string, background?: string): Step => ({ t: 'dir', id, text, ...(background ? { background } : {}) });
+export const dir = (id: string, text: string, background?: string | null, actions?: StageAction[]): Step => ({ t: 'dir', id, text, ...(background ? { background } : {}), ...(actions?.length ? { actions } : {}) });
+/** Stage-direction action shorthands (U10). */
+export const act = {
+  pose: (actor: string, o: { clip?: string; expression?: string; face?: 'left' | 'right' }): StageAction => ({ op: 'pose', actor, ...o }),
+  emote: (actor: string, emote: string): StageAction => ({ op: 'emote', actor, emote }),
+  sfx: (name: string, gain = 0.8): StageAction => ({ op: 'sfx', asset: `sfx.${name}`, gain }),
+  effect: (effect: string, x: number, y: number, duration = 1.5): StageAction => ({ op: 'effect', effect, at: { x, y }, duration }),
+  show: (actor: string, x: number, y: number): StageAction => ({ op: 'enter', actor, from: { x, y }, to: { x, y }, duration: 0.1, walk: false }),
+  hide: (actor: string, x: number, y: number): StageAction => ({ op: 'exit', actor, to: { x, y }, duration: 0.1, walk: false }),
+  move: (actor: string, x: number, y = 1450, duration = 0.8): StageAction => ({ op: 'move', actor, to: { x, y }, duration }),
+};
 export const skill = (id: string, first: Step[], known: Step[] = first): Step => ({ t: 'skill', skill: id, first, known });
 export const minigame = (id: string): Step => ({ t: 'minigame', minigame: id });
 export const cutscene = (id: string): Step => ({ t: 'cutscene', cutscene: id });
@@ -122,6 +138,8 @@ export const when = (cond: Cond, then: Step[], otherwise: Step[] = []): Step => 
 export const goto = (scene: string): Step => ({ t: 'goto', scene });
 export const end = (): Step => ({ t: 'end' });
 export const wait = (action: AwaitAction): Step => ({ t: 'await', action });
+/** U11: wait until the child taps a hotspot of the current background. */
+export const tap = (hotspot: string): Step => ({ t: 'await', action: 'hotspot', hotspot });
 export function menu(id: string, prompt: string | null, options: MenuOption[], o: { pageSize?: number; back?: string } = {}): Step {
   return { t: 'menu', id, prompt, pageSize: o.pageSize ?? 3, options, back: o.back ?? null };
 }
@@ -185,6 +203,8 @@ export interface VariantSource {
   activities: ActivityCard[];
   comfort: ComfortLine[];
   cutscenes: Cutscene[];
+  /** Notebook pages unlocked by this variant (T26). */
+  notebookPages?: NotebookPage[];
   /** Cutscenes planned in the script but not yet authored as engine documents (preview cases). Never played. */
   plannedCutscenes?: { id: string; scene: string; summary: string }[];
   /** Editorial notes on structural (non-text) normalization decisions. */
@@ -206,3 +226,11 @@ export interface CaseSource {
 }
 
 export type { Axis };
+
+/** The cozy-day pack source (T28, T29, D12). */
+export interface CozySource {
+  id: 'cozy';
+  lines: AuthoredLine[];
+  cozy: CozyDay;
+  rewards: Reward[];
+}

@@ -1,11 +1,11 @@
 // Cutscene checks (T25): E's headless validator from the vendored SDK plus Fluffy rules.
 import { readdirSync, readFileSync, statSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
-import { validateCutscene, type CutsceneFile, type RigFile } from '@aegis/browser/animation';
+import type { CutsceneFile, RigFile } from '@aegis/browser/animation';
 import type { Cutscene } from '../../packages/content/src/schema.ts';
-import { CAMERA_PRESET_IDS, EFFECTS } from '../../packages/content/src/stage.ts';
 import type { AuthoredLine, VariantSource } from './dsl.ts';
 import type { Issue } from './flow.ts';
+import { AssetLedger, checkAssetId, validateEngineDocument, type AssetTier } from './staging.ts';
 
 const ASSETS = join(import.meta.dirname, '..', '..', 'assets');
 /** Cutscenes allowed without the player's avatar (T25: only the wordless intro). */
@@ -76,10 +76,12 @@ export function checkCutscenes(
   lineIndex: Map<string, AuthoredLine>,
   packLineIds: Set<string>,
   issues: Issue[],
+  tier: AssetTier = 'strict',
+  ledger: AssetLedger = new AssetLedger(),
 ): void {
   const err = (code: string, where: string, message: string) => issues.push({ level: 'error', code, where: `${v.pack}: ${where}`, message });
   const assets = loadAnimationAssets();
-  if (!assets.available && v.cutscenes.length) err('CUTSCENE-ASSETS', 'assets/manifest.json', 'asset manifest not found; cutscenes cannot be validated');
+  if (!assets.available && v.cutscenes.length && tier === 'strict') err('CUTSCENE-ASSETS', 'assets/manifest.json', 'asset manifest not found; cutscenes cannot be validated');
   const voiced = new Set([...packLineIds].filter((id) => lineIndex.get(id)?.voiced));
   const ids = new Set<string>();
   const used = new Map<string, string[]>();
@@ -124,6 +126,7 @@ export function checkCutscenes(
       if (!line) { err('CUTSCENE-LINE', where, `unknown line ID ${l.line}`); continue; }
       if (!voiced.has(l.line)) err('CUTSCENE-LINE', where, `line ${l.line} is not a voiced line of this pack`);
       if (line.kind !== 'dialogue') err('CUTSCENE-LINE', where, `line ${l.line} is ${line.kind}, not dialogue`);
+      if (line.private) err('CUTSCENE-LINE', where, `line ${l.line} is private family-mode content (T31)`);
       if (l.advance && l.advance !== 'input') err('CUTSCENE-ADVANCE', where, `line ${l.line} must wait for «Дальше»`);
       const speaker = line.speaker === 'narrator' ? undefined : line.speaker;
       if (l.actor !== speaker) err('CUTSCENE-SPEAKER', where, `line ${l.line} is spoken by ${line.speaker} but actor is ${l.actor ?? 'narrator'}`);
@@ -141,26 +144,13 @@ export function checkCutscenes(
     const backgrounds = new Set<string>();
     for (const s of d.steps) if (s.op === 'background') for (const a of [s.asset, s.comfort?.['asset']]) if (typeof a === 'string') backgrounds.add(a);
     if (backgrounds.size > MAX_BACKGROUNDS) err('CUTSCENE-BUDGET', where, `${backgrounds.size} distinct backgrounds (max ${MAX_BACKGROUNDS}: G loads them together under a 128 MiB image budget)`);
-    if (assets.available) {
-      for (const s of d.steps) {
-        const refs: unknown[] = [];
-        if (s.op === 'background' || s.op === 'music' || s.op === 'atmosphere' || s.op === 'sfx') refs.push(s.asset, s.comfort?.['asset']);
-        for (const a of refs) if (typeof a === 'string' && !assets.assetIds.has(a)) err('CUTSCENE-ASSET', where, `unknown asset ${a}`);
-      }
-      for (const [k, e] of Object.entries(d.cast)) if (e.rig && !assets.rigs.has(e.rig)) err('CUTSCENE-RIG', where, `cast ${k}: unknown rig ${e.rig}`);
+    for (const s of d.steps) {
+      const refs: unknown[] = [];
+      if (s.op === 'background' || s.op === 'music' || s.op === 'atmosphere' || s.op === 'sfx') refs.push(s.asset, s.comfort?.['asset']);
+      const kind = s.op === 'background' ? 'background' : s.op === 'music' ? 'music' : s.op === 'sfx' ? 'sfx' : 'other';
+      for (const a of refs) if (typeof a === 'string') checkAssetId(a, kind, v.pack, where, tier, ledger, issues);
     }
 
-    // E's validator (SDK 711ec45)
-    const result = validateCutscene(d, {
-      source: `${v.pack}/${c.id}`,
-      rigs: assets.rigs,
-      clips: assets.clips,
-      lines: voiced,
-      cameraPresets: new Set(CAMERA_PRESET_IDS),
-      effects: new Set(EFFECTS),
-    });
-    for (const x of result.diagnostics) {
-      issues.push({ level: x.severity === 'error' ? 'error' : 'warning', code: `E:${x.code}`, where: `${v.pack}: ${where} ${x.path}`, message: x.message });
-    }
-  }
+    // E's validator (SDK): missing rigs, clips, expressions and emotes follow the asset tier.
+    validateEngineDocument(d, v.pack, where, tier, ledger, issues, voiced);  }
 }

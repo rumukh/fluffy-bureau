@@ -26,10 +26,14 @@ import p22 from '../packs/case07-l3.json' with { type: 'json' };
 import p23 from '../packs/case08-l1.json' with { type: 'json' };
 import p24 from '../packs/case08-l2.json' with { type: 'json' };
 import p25 from '../packs/case08-l3.json' with { type: 'json' };
+import p26 from '../packs/cozy.json' with { type: 'json' };
 
+/** Released packs (Stage 1). */
 export const PACK_IDS = ["shared","prologue","case01-l1","case01-l2","case01-l3"] as const;
-/** Preparatory packs (cases 2–8): validated, not for production before «дальше». */
-export const PREVIEW_PACK_IDS = ["case02-l1","case02-l2","case02-l3","case03-l1","case03-l2","case03-l3","case04-l1","case04-l2","case04-l3","case05-l1","case05-l2","case05-l3","case06-l1","case06-l2","case06-l3","case07-l1","case07-l2","case07-l3","case08-l1","case08-l2","case08-l3"] as const;
+/** Stage 2 production packs (cases 2–4, cozy day): integrated and recorded during Stage 2. */
+export const PRODUCTION_PACK_IDS = ["case02-l1","case02-l2","case02-l3","case03-l1","case03-l2","case03-l3","case04-l1","case04-l2","case04-l3","cozy"] as const;
+/** Preparatory packs (cases 5–8): validated, not for production before «дальше». */
+export const PREVIEW_PACK_IDS = ["case05-l1","case05-l2","case05-l3","case06-l1","case06-l2","case06-l3","case07-l1","case07-l2","case07-l3","case08-l1","case08-l2","case08-l3"] as const;
 export const packs: Readonly<Record<string, ContentPack>> = {
   'shared': p0 as unknown as ContentPack,
   'prologue': p1 as unknown as ContentPack,
@@ -57,4 +61,5 @@ export const packs: Readonly<Record<string, ContentPack>> = {
   'case08-l1': p23 as unknown as ContentPack,
   'case08-l2': p24 as unknown as ContentPack,
   'case08-l3': p25 as unknown as ContentPack,
+  'cozy': p26 as unknown as ContentPack,
 };

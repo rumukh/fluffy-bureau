@@ -3434,6 +3434,8 @@
    "summary": "Вручение значка-лапки «Тихая нора» и книжной полки для Конторы."
   }
  ],
+ "notebookPages": [],
+ "cozy": null,
  "reserved": [],
- "revision": "da3e6543a6cb5101942d797f75a79e619984b410e87fcfaf1a99667d90f16315"
+ "revision": "c40300f1a922bd822d956062a8d229d638176b8f8e180f4b7c721be9651deca9"
 }

@@ -1,0 +1,45 @@
+{
+ "format": "fluffy-content-pack",
+ "schema": 1,
+ "id": "cozy",
+ "kind": "cozy",
+ "title": null,
+ "case": null,
+ "requires": [
+  "shared"
+ ],
+ "start": null,
+ "lines": [],
+ "speakers": [],
+ "skills": [],
+ "scenes": [],
+ "logic": null,
+ "deduction": null,
+ "notebookHelp": null,
+ "hints": null,
+ "minigames": [],
+ "facts": [],
+ "glossary": [],
+ "rewards": [],
+ "collections": [],
+ "activities": [],
+ "comfort": [],
+ "cutscenes": [],
+ "plannedCutscenes": [],
+ "notebookPages": [],
+ "cozy": {
+  "residents": [],
+  "shop": [],
+  "decorSlots": [],
+  "ranks": [],
+  "lines": {
+   "intro": [],
+   "bought": [],
+   "returned": [],
+   "notEnough": [],
+   "teaThanks": []
+  }
+ },
+ "reserved": [],
+ "revision": "3fee0ea5e1b61a842af9e1c3def4bd926b0fef5f396103f125859f99bd83f2a7"
+}

@@ -2,6 +2,7 @@
 // fresh profile and for a veteran profile (all mechanics already learned).
 import type { CaseLogic, HintChannel, Scene, Step } from '../../packages/content/src/schema.ts';
 import type { VariantSource } from './dsl.ts';
+import { kindLines } from './kinds.ts';
 import { condRefs, evalCond, type RunState } from './logic.ts';
 import { norm, tokenize } from './text.ts';
 
@@ -140,6 +141,8 @@ export function exploreFlow(
           if (c.kind === 'timeline') maybe.push(...c.wrong);
           if (c.kind === 'staged') { c.steps.forEach((st) => { if (st.prompt) sure.push(st.prompt); opts(st.options); }); maybe.push(...c.lines); }
           if (c.kind === 'baker') { c.steps.forEach((st) => { sure.push(st.prompt); maybe.push(...st.afterWrong); }); maybe.push(...c.tooMuch, ...c.tooLittle); }
+          const extra = kindLines(c);
+          if (extra) { sure.push(...extra.sure); maybe.push(...extra.maybe); }
           sure.forEach((id) => playLine(w, id));
           // Optional replies may present a red herring (never count as teaching or as an explanation).
           for (const id of maybe) {

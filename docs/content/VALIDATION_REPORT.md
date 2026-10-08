@@ -2,7 +2,7 @@
 
 > Сгенерировано `node tools/content/build.ts` из `content/`. Не редактировать вручную.
 
-**Итог:** ✅ ошибок нет; предупреждений: 0.
+**Итог:** ❌ ошибок: 20; предупреждений: 0.
 
 ## Что проверяется (сборка падает при ошибке)
 
@@ -77,7 +77,26 @@
 
 ## Ошибки
 
-Нет.
+- `STAGED` case02-l1: c2l1-cipher: production packs need a dedicated minigame kind, not the generic placeholder (U12)
+- `STAGED` case02-l1: c2l1-postal: production packs need a dedicated minigame kind, not the generic placeholder (U12)
+- `STAGED` case02-l2: c2l2-cipher: production packs need a dedicated minigame kind, not the generic placeholder (U12)
+- `STAGED` case02-l2: c2l2-postal: production packs need a dedicated minigame kind, not the generic placeholder (U12)
+- `STAGED` case02-l3: c2l3-cipher: production packs need a dedicated minigame kind, not the generic placeholder (U12)
+- `STAGED` case02-l3: c2l3-postal: production packs need a dedicated minigame kind, not the generic placeholder (U12)
+- `STAGED` case03-l1: c3l1-sound: production packs need a dedicated minigame kind, not the generic placeholder (U12)
+- `STAGED` case03-l1: c3l1-light: production packs need a dedicated minigame kind, not the generic placeholder (U12)
+- `STAGED` case03-l2: c3l2-sound: production packs need a dedicated minigame kind, not the generic placeholder (U12)
+- `STAGED` case03-l2: c3l2-light: production packs need a dedicated minigame kind, not the generic placeholder (U12)
+- `STAGED` case03-l3: c3l3-sound: production packs need a dedicated minigame kind, not the generic placeholder (U12)
+- `STAGED` case03-l3: c3l3-blink: production packs need a dedicated minigame kind, not the generic placeholder (U12)
+- `STAGED` case03-l3: c3l3-light: production packs need a dedicated minigame kind, not the generic placeholder (U12)
+- `STAGED` case04-l1: c4l1-dreams: production packs need a dedicated minigame kind, not the generic placeholder (U12)
+- `STAGED` case04-l1: c4l1-tea: production packs need a dedicated minigame kind, not the generic placeholder (U12)
+- `STAGED` case04-l2: c4l2-dreams: production packs need a dedicated minigame kind, not the generic placeholder (U12)
+- `STAGED` case04-l2: c4l2-tea: production packs need a dedicated minigame kind, not the generic placeholder (U12)
+- `STAGED` case04-l3: c4l3-cart: production packs need a dedicated minigame kind, not the generic placeholder (U12)
+- `STAGED` case04-l3: c4l3-dreams: production packs need a dedicated minigame kind, not the generic placeholder (U12)
+- `STAGED` case04-l3: c4l3-tea: production packs need a dedicated minigame kind, not the generic placeholder (U12)
 
 ## Предупреждения
 

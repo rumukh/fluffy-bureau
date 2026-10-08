@@ -1593,6 +1593,8 @@
  "comfort": [],
  "cutscenes": [],
  "plannedCutscenes": [],
+ "notebookPages": [],
+ "cozy": null,
  "reserved": [],
- "revision": "0c5022b43122993501aafbe0ac4a6769762c3bf5f51089b9ac7ad68581648b44"
+ "revision": "7dddc0632698175fac54008d07e37346b9b5be146957ef1090fbf081b464600c"
 }

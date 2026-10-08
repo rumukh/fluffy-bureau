@@ -1,5 +1,5 @@
 // Human-readable outputs: explicit per-variant scripts for PM review, change log, validation report.
-import type { Cond, ContentPack, Step } from '../../packages/content/src/schema.ts';
+import type { Cond, ContentPack, StageAction, Step } from '../../packages/content/src/schema.ts';
 import type { BuildResult } from './compile.ts';
 import type { VariantSource } from './dsl.ts';
 import { sentences, tokenize } from './text.ts';
@@ -45,8 +45,12 @@ export function renderVariant(r: BuildResult, v: VariantSource, pack: ContentPac
     for (const s of list) {
       switch (s.t) {
         case 'line': out.push(`${indent}- ${say(s.line)}`); break;
-        case 'dir': out.push(`${indent}- _[${s.id}] ${s.text}_`); break;
-        case 'await': out.push(`${indent}- ⏸ ждём действия игрока: \`${s.action}\``); break;
+        case 'dir': {
+          out.push(`${indent}- _[${s.id}] ${s.text}_${s.background ? ` · фон \`${s.background}\`` : ''}`);
+          for (const a of s.actions ?? []) out.push(`${indent}  - ▸ ${describeAction(a)}`);
+          break;
+        }
+        case 'await': out.push(`${indent}- ⏸ ждём действия игрока: \`${s.action}\`${s.hotspot ? ` (нажать «${s.hotspot}»)` : ''}`); break;
         case 'clue': out.push(`${indent}- 🔎 **Улика:** \`${s.clue}\` ${txt(L.clues.find((c) => c.id === s.clue)!.title)}`); break;
         case 'set': out.push(`${indent}- флаг \`${s.flag}\``); break;
         case 'reward': {
@@ -129,6 +133,45 @@ export function renderVariant(r: BuildResult, v: VariantSource, pack: ContentPac
             c.fields.forEach((f) => out.push(`${ii}- поле ${txt(f.label)}: ${[...new Set(f.cards.map((x) => txt(x.label)))].join(', ')} (по две карточки)`));
             c.mismatch.forEach((x) => out.push(`${ii}- не пара: ${say(x)}`));
             if (c.question) { out.push(`${ii}- Вопрос: ${say(c.question.prompt)}`); opts(c.question.options); }
+          } else if (c.kind === 'cipher') {
+            out.push(`${ii}- таблица: ${c.table.map((g) => `${g.letter} = ${g.colour}, ${g.shape}, ${g.holes} дыр.`).join('; ')}`);
+            c.intro.forEach((x) => out.push(`${ii}- ${say(x)}`));
+            c.words.forEach((w) => { out.push(`${ii}- слово «${w.answer}»: ${w.slots.map((sl) => sl.options.map((o) => c.table.find((g) => g.id === o)?.letter).join('/')).join(' · ')}`); w.solved.forEach((x) => out.push(`${ii}  - ${say(x)}`)); });
+            c.wrong.forEach((x) => out.push(`${ii}- неверная буква: ${say(x)}`));
+          } else if (c.kind === 'postman') {
+            c.intro.forEach((x) => out.push(`${ii}- ${say(x)}`));
+            c.letters.forEach((x) => out.push(`${ii}- ${say(x.label)}: пуговицы ${x.buttons.join('+')} → домик ${x.house}${x.street ? `, улица ${x.street}` : ''} (варианты ${x.houseOptions.join('/')})`));
+            [...c.wrongStreet, ...c.wrongHouse].forEach((x) => out.push(`${ii}- ошибка: ${say(x)}`));
+            c.correct.forEach((x) => out.push(`${ii}- верно: ${say(x)}`));
+          } else if (c.kind === 'sound-match') {
+            c.intro.forEach((x) => out.push(`${ii}- ${say(x)}`));
+            c.rounds.forEach((rd) => { out.push(`${ii}- раунд \`${rd.id}\`: ночной звук \`${rd.target}\` (беззвучная форма — карточка-волна A)`); opts(rd.options); rd.wrong.forEach((x) => out.push(`${ii}  - неверно: ${say(x)}`)); });
+            c.after.forEach((x) => out.push(`${ii}- ${say(x)}`));
+          } else if (c.kind === 'light-signals') {
+            c.intro.forEach((x) => out.push(`${ii}- ${say(x)}`));
+            c.signals.forEach((sg) => { out.push(`${ii}- ${say(sg.label)}: ${sg.pattern.map((p) => (p === 'dot' ? '•' : '—')).join(' ')}`); sg.correct.forEach((x) => out.push(`${ii}  - ${say(x)}`)); });
+            c.wrong.forEach((x) => out.push(`${ii}- неверно: ${say(x)}`));
+            if (c.own) { out.push(`${ii}- свой сигнал: ${c.own.min}–${c.own.max} огоньков, принимается любой (D22)`); [...c.own.prompt, ...c.own.done].forEach((x) => out.push(`${ii}  - ${say(x)}`)); }
+          } else if (c.kind === 'read-blink') {
+            out.push(`${ii}- рисунок: ${c.drawing.map((p) => (p === 'dot' ? '•' : '—')).join(' ')}`);
+            c.lessons.forEach((l) => { out.push(`${ii}- ${l.correct ? '✔' : '✖'} ${say(l.label)} ${l.pattern.map((p) => (p === 'dot' ? '•' : '—')).join(' ')}`); l.reply.forEach((x) => out.push(`${ii}  - ${say(x)}`)); });
+            c.wrong.forEach((x) => out.push(`${ii}- неверно: ${say(x)}`));
+          } else if (c.kind === 'dream-keeper') {
+            c.intro.forEach((x) => out.push(`${ii}- ${say(x)}`));
+            c.rounds.forEach((rd) => { out.push(`${ii}- раунд «${rd.axis}» → \`${rd.answer}\`:`); rd.cards.forEach((cd, n) => out.push(`${ii}  - сон ${n + 1} 🔒: ${say(cd.label)} (\`${cd.image}\`)`)); rd.correct.forEach((x) => out.push(`${ii}  - верно: ${say(x)}`)); rd.wrong.forEach((x) => out.push(`${ii}  - неверно: ${say(x)}`)); });
+            c.after.forEach((x) => out.push(`${ii}- ${say(x)}`));
+            out.push(`${ii}- семейный режим (T31): ${[...c.family.intro, ...c.family.keeperPick, ...c.family.ask, ...c.family.win].map(say).join(' · ')}`);
+            out.push(`${ii}  - игроки: ${c.family.players.map((p) => txt(p.label)).join(', ')}`);
+            out.push(`${ii}  - вопросы: ${c.family.questions.map((q) => txt(q.label)).join(' · ')}`);
+            out.push(`${ii}  - звания: ${c.family.titles.map((x) => `${txt(x.label)} (${x.for})`).join(', ')}`);
+          } else if (c.kind === 'equal-share') {
+            c.intro.forEach((x) => out.push(`${ii}- ${say(x)}`));
+            c.tasks.forEach((tk) => { out.push(`${ii}- ${say(tk.prompt)}: ${tk.items} × ${txt(tk.itemLabel)} на ${tk.groups} × ${txt(tk.groupLabel)}${tk.reserve ? `, запас ${tk.reserve}` : ''}`); tk.correct.forEach((x) => out.push(`${ii}  - ${say(x)}`)); });
+            c.uneven.forEach((x) => out.push(`${ii}- неровно: ${say(x)}`));
+          } else if (c.kind === 'compare') {
+            out.push(`${ii}- сравниваем: ${say(c.subject.label)} (\`${c.subject.image}\`)`);
+            c.steps.forEach((st) => { out.push(`${ii}- шаг \`${st.id}\`${st.prompt ? `: ${say(st.prompt)}` : ''}`); opts(st.options); });
+            if (c.question) { out.push(`${ii}- Вопрос: ${say(c.question.prompt)}`); opts(c.question.options); }
           } else if (c.kind === 'staged') {
             out.push(`${ii}- механика «${c.mechanic}»: ${c.description}`);
             c.steps.forEach((st) => { out.push(`${ii}- Шаг \`${st.id}\`${st.prompt ? `: ${say(st.prompt)}` : ''}`); opts(st.options); });
@@ -204,6 +247,11 @@ export function renderVariant(r: BuildResult, v: VariantSource, pack: ContentPac
     v.cutscenes.forEach((c) => out.push(`- \`${c.id}\` в сцене \`${c.scene}\`: ${c.summary}`));
     out.push('');
   }
+  if (v.notebookPages?.length) {
+    out.push('## Страницы Блокнота', '');
+    v.notebookPages.forEach((p) => out.push(`- \`${p.id}\` (${p.kind}): ${say(p.title)}; открывается наградой \`${p.unlock}\``));
+    out.push('');
+  }
   if (v.reserved?.length) {
     out.push('## Строки для систем следующих этапов', '');
     for (const r of v.reserved) { out.push(`- ${r.reason}:`); r.lines.forEach((x) => out.push(`  - ${say(x)}`)); }
@@ -272,5 +320,35 @@ export function renderReport(r: BuildResult): string {
   out.push(`Манифест озвучки: ${r.manifest.entries.length} записей, из них уникальных записей для студии: ${r.manifest.entries.filter((e) => !('sameAudioAs' in e)).length}.`, '');
   out.push('## Ошибки', '', ...(errors.length ? errors.map((i) => `- \`${i.code}\` ${i.where}: ${i.message}`) : ['Нет.']), '');
   out.push('## Предупреждения', '', ...(warnings.length ? warnings.map((i) => `- \`${i.code}\` ${i.where}: ${i.message}`) : ['Нет.']), '');
+  return out.join('\n');
+}
+
+function describeAction(a: StageAction): string {
+  switch (a.op) {
+    case 'pose': return `${a.actor}: ${[a.expression && `лицо ${a.expression}`, a.clip && `движение ${a.clip}`, a.face && `смотрит ${a.face === 'left' ? 'влево' : 'вправо'}`].filter(Boolean).join(', ')}`;
+    case 'emote': return `${a.actor}: эмоция ${a.emote}`;
+    case 'sfx': return `звук \`${a.asset}\``;
+    case 'effect': return `эффект ${a.effect}`;
+    case 'move': return `${a.actor} идёт к ${a.to.x},${a.to.y}`;
+    case 'enter': return `появляется ${a.actor}`;
+    case 'exit': return `исчезает ${a.actor}`;
+  }
+}
+
+export function renderAssetRequests(r: BuildResult): string {
+  const out = ['# Запросы ассетов для Этапа 2 (C → A)', '', GENERATED, '',
+    'Ассеты, на которые ссылаются производственные пакеты Этапа 2 (дела 2–4, «Уютный денёк»), но которых ещё нет в `assets/`. Пока список не пуст, сборка показывает их как ожидаемые; после поставки A проверка становится строгой.', ''];
+  if (!r.assetRequests.length) { out.push('Все ассеты на месте.'); return out.join('\n'); }
+  const kinds = [...new Set(r.assetRequests.map((x) => x.kind))].sort();
+  for (const k of kinds) {
+    out.push(`## ${k}`, '', '| ID | Пакеты | Где |', '|---|---|---|');
+    const byId = new Map<string, { packs: Set<string>; where: Set<string> }>();
+    for (const x of r.assetRequests.filter((y) => y.kind === k)) {
+      const e = byId.get(x.id) ?? { packs: new Set(), where: new Set() };
+      e.packs.add(x.pack); e.where.add(x.where); byId.set(x.id, e);
+    }
+    for (const [id, e] of [...byId].sort()) out.push(`| \`${id}\` | ${[...e.packs].join(', ')} | ${[...e.where].slice(0, 6).join('; ')}${e.where.size > 6 ? ' …' : ''} |`);
+    out.push('');
+  }
   return out.join('\n');
 }

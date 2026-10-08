@@ -124,7 +124,7 @@ describe('content build', () => {
     });
     it('fails on unknown assets and engine-invalid references', () => {
       const c = codes((s) => { const d = shed(s); (d.steps as unknown[]).unshift({ op: 'background', asset: 'bg.nowhere' }, { op: 'camera', preset: 'dolly' }); });
-      expect(c).toContain('CUTSCENE-ASSET');
+      expect(c).toContain('ASSET');
       expect(c.some((x) => x.startsWith('E:'))).toBe(true);
     });
     it('fails on an unknown or nested stage background', () => {
