@@ -230,6 +230,8 @@ export const shared: SharedSource = {
     { id: 'rw-prologue-title', kind: 'title', label: 'RW-title-intern', amount: 1, claimKey: 'prologue:title' },
     { id: 'rw-prologue-buttons', kind: 'buttons', label: 'RW-buttons-5', amount: 5, claimKey: 'prologue:buttons' },
     { id: 'rw-c1-heart-tyopa', kind: 'hearts', label: 'RW-heart', amount: 1, claimKey: 'case01:heart:tyopa' },
+    { id: 'rw-c1-heart-tyopa-l2', kind: 'hearts', label: 'RW-heart', amount: 1, claimKey: 'case01:l2:heart:tyopa' },
+    { id: 'rw-c1-heart-tyopa-l3', kind: 'hearts', label: 'RW-heart', amount: 1, claimKey: 'case01:l3:heart:tyopa' },
     { id: 'rw-c1-badge', kind: 'badge', label: 'RW-c1-badge', amount: 1, claimKey: 'case01:badge' },
     { id: 'rw-c1-buttons-l1', kind: 'buttons', label: 'RW-buttons-10', amount: 10, claimKey: 'case01:l1:buttons' },
     { id: 'rw-c1-buttons-l2', kind: 'buttons', label: 'RW-buttons-15', amount: 15, claimKey: 'case01:l2:buttons' },

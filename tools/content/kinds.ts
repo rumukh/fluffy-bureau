@@ -192,10 +192,12 @@ export function checkKind(
         if (!answer) { err(`round ${r.id}: answer ${r.answer} is not a value of ${r.axis}`); continue; }
         if (r.cards.length < 3) err(`round ${r.id}: at least 3 cards (family Keeper picks 1 of 3, T31)`);
         // Q33: no card names the answer directly.
-        const banned = new Set(tokenize(answer.label).map(norm).filter((w) => !STOP.has(w) && w.length > 2));
+        // Compare stems so inflected forms («кладовке» / «кладовка») still count.
+        const stem = (w: string) => (w.length > 4 ? w.slice(0, Math.max(4, w.length - 2)) : w);
+        const banned = new Set(tokenize(answer.label).map(norm).filter((w) => !STOP.has(w) && w.length > 2).map(stem));
         for (const card of r.cards) {
           const words = tokenize(labelText(card.label) ?? '').map(norm);
-          const hit = words.find((w) => banned.has(w));
+          const hit = words.find((w) => banned.has(stem(w)));
           if (hit) err(`round ${r.id}: card ${card.id} names the answer («${hit}», Q33)`);
         }
       }

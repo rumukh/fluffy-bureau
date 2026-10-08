@@ -1,5 +1,5 @@
 // Case 1, level 3 (5×5×4). SCRIPT_CASE01_LEVELS23_RU.md, L3-1…L3-10, expanded explicitly (R04).
-import { all, cl, cutscene, dir, end, goto, has, L, Ls, menu, minigame, not, opt as mopt, reveal, reward, seq, skill, when, type VariantSource } from '../../tools/content/dsl.ts';
+import { act, all, cl, cutscene, dir, end, goto, has, L, Ls, menu, minigame, not, opt as mopt, reveal, reward, seq, skill, tap, when, type VariantSource } from '../../tools/content/dsl.ts';
 import {
   activity, and, bakerMeasures, eq, facts, factsScene, glossary, intended, intro, klubkiTutorial, ne, noConstraint, opt,
   rewardScene, versionScene, what, where, who,
@@ -24,7 +24,7 @@ export const level3: VariantSource = {
         L('L3-1-01'), L('L3-1-02'),
         ...seq('C1-1-', 8, 12),
         L('L3-1-03'), L('L3-1-04'), L('C1-1-14'),
-        skill('notebook', [dir('L3-1-D01', 'Блокнот раскрывается: три колонки, до пяти строк.'), ...seq('C1-1-', 15, 16)]),
+        skill('notebook', [dir('L3-1-D01', 'Блокнот раскрывается: три колонки, до пяти строк.', null, [act.sfx('page-turn', 0.6)]), ...seq('C1-1-', 15, 16)]),
         L('L2-1-04'), L('L2-1-05'),
         klubkiTutorial(),
         goto(HUB),
@@ -45,16 +45,16 @@ export const level3: VariantSource = {
     },
     {
       id: 'L3-2', title: 'Скамейка: «Лупа»', location: 'bench', cast: ['khvosts', 'watsony'], presentation: 'minigame',
-      steps: [skill('magnifier', [L('L3-2-01')]), minigame('c1l3-lupa'), dir('C1-2-D01', 'Игрок открывает коробку.'), ...seq('C1-2-', 5, 7), reveal('c1-lupa'), goto(HUB)],
+      steps: [skill('magnifier', [L('L3-2-01')]), minigame('c1l3-lupa'), dir('C1-2-D01', 'Игрок открывает коробку.', null, [act.sfx('pick-up', 0.6)]), ...seq('C1-2-', 5, 7), reveal('c1-lupa'), goto(HUB)],
     },
     {
       id: 'L3-3', title: 'Мыловарня: «Чашка какао», три раунда', location: 'soap-workshop', cast: ['tyopa', 'fitilyok', 'khvosts', 'watsony'], presentation: 'minigame',
       steps: [
-        dir('C1-3-D01', 'Тёпа сидит у котла и прячет синие лапы за спину. Рядом светлячок Фитилёк.'),
+        dir('C1-3-D01', 'Тёпа сидит у котла и прячет синие лапы за спину. Рядом светлячок Фитилёк.', null, [act.pose('tyopa', { expression: 'worried', clip: 'shrug-shy' }), act.pose('fitilyok', { clip: 'hover' })]),
         L('C1-3-01'), L('C1-3-02'),
         skill('cocoa', [L('C1-3-03')]),
         minigame('c1l3-cocoa'),
-        reward('rw-c1-heart-tyopa'),
+        reward('rw-c1-heart-tyopa-l3'),
         ...seq('C1-3-', 12, 22),
         reveal('c1-cocoa'),
         goto(HUB),
@@ -74,17 +74,17 @@ export const level3: VariantSource = {
     },
     {
       id: 'L3-4S', title: 'Стелла', location: 'post-box', cast: ['stella', 'khvosts', 'watsony'], presentation: 'dialogue',
-      steps: [dir('L2-4-D01', 'Стелла сидит на почтовом ящике с большой сумкой.'), ...Ls('L2-4-01', 'L2-4-02', 'L3-4-01', 'L2-4-08'), goto('L3-4')],
+      steps: [dir('L2-4-D01', 'Стелла сидит на почтовом ящике с большой сумкой.', null, [act.pose('stella', { face: 'left', clip: 'nod' })]), ...Ls('L2-4-01', 'L2-4-02', 'L3-4-01', 'L2-4-08'), goto('L3-4')],
     },
     {
       id: 'L3-4M', title: 'Мышата Шуршики', location: 'mouse-hole', cast: ['mouse', 'khvosts', 'watsony'], presentation: 'dialogue',
-      steps: [dir('L3-4-D01', 'Мышата Шуршики выглядывают из норки у пекарни.'), ...seq('L3-4-', 2, 4), goto('L3-4')],
+      steps: [dir('L3-4-D01', 'Мышата Шуршики выглядывают из норки у пекарни.', null, [act.pose('mouse', { clip: 'look-around' })]), ...seq('L3-4-', 2, 4), goto('L3-4')],
     },
     {
       id: 'L3-4P', title: 'Мэр: щёки и время', location: 'pirogovaya-street', cast: ['pudding', 'khvosts', 'watsony'], presentation: 'dialogue',
       steps: [
         L('C1-4-01'), L('C1-4-02'),
-        dir('C1-4-D01', 'Пудинг высыпает семечки в ладошку и смущённо собирает обратно.'),
+        dir('C1-4-D01', 'Пудинг высыпает семечки в ладошку и смущённо собирает обратно.', null, [act.pose('pudding', { expression: 'surprised', clip: 'shrug-shy' }), act.sfx('pick-up', 0.5)]),
         L('C1-4-03'), L('C1-4-04'), reveal('c1-mayor'),
         ...seq('L3-4-', 5, 7),
         when(has.visited('L3-6'), [L('L3-4-08')]),
@@ -98,7 +98,7 @@ export const level3: VariantSource = {
     {
       id: 'L3-6', title: '«Лента времени»: пять карточек', location: 'bakery-clock', cast: ['khvosts', 'watsony'], presentation: 'minigame',
       steps: [
-        dir('L2-6-D01', 'Часы на пекарне — заводные, с окошками. После каждого удара в окошке остаётся картинка.'),
+        dir('L2-6-D01', 'Часы на пекарне — заводные, с окошками. После каждого удара в окошке остаётся картинка.', null, [act.effect('sparkles', 760, 360, 1.5), act.sfx('sparkle', 0.4)]),
         skill('timeline', seq('L2-6-', 1, 3), [L('L3-6-01')]),
         minigame('c1l3-timeline'),
         ...Ls('L2-6-05', 'L2-6-06', 'L3-6-02', 'L2-6-07'),
@@ -110,10 +110,12 @@ export const level3: VariantSource = {
     {
       id: 'L3-7', title: '«Пары запахов»', location: 'garden-and-shed', cast: ['khvosts', 'watsony'], presentation: 'minigame',
       steps: [
-        dir('L3-7-D01', 'У огорода и у сарая лежат перевёрнутые карточки-запахи. Огород и сарай — явно разные места.'),
+        dir('L3-7-D01', 'У огорода и у сарая лежат перевёрнутые карточки-запахи. Огород и сарай — явно разные места.', null, [act.sfx('card-flip', 0.6)]),
         skill('scent-pairs', seq('L3-7-', 1, 2)),
         minigame('c1l3-scents'),
-        dir('L3-7-D02', 'Щёлка в стене сарая крупно: коробка мэра, в окошке крышки виден пирог.', 'bg.shed-window'),
+        dir('L3-7-D03', 'Стена сарая мягко светится: в ней щёлка.', null, [act.effect('sparkles', 1700, 800, 1.5)]),
+        tap('shed'),
+        dir('L3-7-D02', 'Щёлка в стене сарая крупно: коробка мэра, в окошке крышки виден пирог.', 'bg.shed-window', [act.sfx('magnifier-find', 0.6)]),
         ...seq('L3-7-', 7, 9),
         reveal('c1-scents'),
         goto(HUB),
@@ -309,12 +311,13 @@ export const level3: VariantSource = {
   ],
   facts,
   glossary,
-  rewards: ['rw-c1-heart-tyopa', 'rw-c1-badge', 'rw-c1-buttons-l3', 'rw-c1-sticker-l3', 'rw-c1-decor-basket', 'rw-c1-activity'],
+  rewards: ['rw-c1-heart-tyopa-l3', 'rw-c1-badge', 'rw-c1-buttons-l3', 'rw-c1-sticker-l3', 'rw-c1-decor-basket', 'rw-c1-activity'],
   collections: [],
   activities: [activity],
   comfort: [],
   cutscenes: [shedL3, oven(3, 'L3-10'), rewardCutscene(3)],
   decisions: [
+    { id: 'C1L3-HEART', text: 'Сердечко доброты за утешение Тёпы выдаётся один раз на каждой сложности (как пуговки, Q38); на сложности 1 ключ прежний (case01:heart:tyopa), сохранения совместимы.', ref: 'T11, Q38' },
     { id: 'C1L3-T25', text: 'Ролики T25: разговор в сарае (L3-9, c1.shed.l3), пирог в печи (L3-10, c1.oven.l3) и награда (C1-10, c1.reward.l3). Реплики звучат в ролике в прежнем порядке; ремарки сцен заменены постановкой ролика; награды, «Уютный денёк» и переходы — шаги после ролика.', ref: 'T25' },
     { id: 'C1L3-D1', text: 'Реплика L2-8-02 убрана: на сложности 3 Стелла ничего не видела (L3-4-01).', ref: 'R04' },
     { id: 'C1L3-D2', text: '«Чашка какао» на сложности 3 начинается с C1-3-01…C1-3-03 (вводная механики), как на сложностях 1–2.', ref: 'R09, R04' },
