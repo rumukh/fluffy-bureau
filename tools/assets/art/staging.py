@@ -278,8 +278,57 @@ ACCESSORIES = {
 }
 
 
+AVATAR_SPECIES = ("kitten", "fox", "mouse", "squirrel", "puppy")
+SCARF_PATTERNS = ("stripes", "dots", "hearts", "stars")
+
+
+def write_scarf_patterns() -> dict[str, list[str]]:
+    """acc.scarf.<pattern>.<species>: a light motif clipped to that species' scarf frame (T29 shop).
+
+    The overlay has the scarf frame's size and pivot and attaches to the avatar slot `scarfPattern`
+    (parent `scarf`, z 16), so it sits exactly on the tinted scarf. It keeps its own cream colour,
+    shaded by the scarf's folds, with a faint shadow so it reads on light tints too.
+    """
+    import numpy as np  # noqa: PLC0415
+    from raster_kit import pattern  # noqa: PLC0415
+
+    sources: dict[str, list[str]] = {}
+    for sp in AVATAR_SPECIES:
+        d = REPO / "assets/avatar" / sp
+        rig = json.loads((d / f"avatar.{sp}.rig.json").read_text(encoding="utf-8"))
+        fr = json.loads((d / f"avatar.{sp}.atlas.json").read_text(encoding="utf-8"))["frames"]["scarf"]
+        scarf = Image.open(d / f"avatar.{sp}.atlas.webp").convert("RGBA").crop(
+            (fr["x"], fr["y"], fr["x"] + fr["w"], fr["y"] + fr["h"]))
+        pivot = next(p for p in rig["parts"] if p["id"] == "scarf")["pivot"]
+        s = np.asarray(scarf, dtype=np.float32) / 255
+        lum = s[..., :3] @ np.array([0.299, 0.587, 0.114], dtype=np.float32)
+        ref = np.percentile(lum[s[..., 3] > 0.5], 90) if (s[..., 3] > 0.5).any() else 1.0
+        shade = np.clip(lum / max(ref, 1e-3), 0.62, 1.0)[..., None]
+        for k in SCARF_PATTERNS:
+            tile = pattern(k).resize((112, 112), Image.LANCZOS)
+            motif = Image.new("RGBA", scarf.size, (0, 0, 0, 0))
+            for y in range(0, scarf.height, tile.height):
+                for x in range(0, scarf.width, tile.width):
+                    motif.paste(tile, (x, y), tile)
+            m = np.asarray(motif, dtype=np.float32) / 255
+            shadow = np.roll(m[..., 3], (2, 1), axis=(0, 1)) * (1 - m[..., 3]) * 0.28
+            a = (m[..., 3] + shadow) * s[..., 3]
+            rgb = np.where(m[..., 3:4] > 0, m[..., :3] * shade, np.float32(0.35) * shade)
+            out = np.dstack([rgb, a])
+            im = Image.fromarray((np.clip(out, 0, 1) * 255 + 0.5).astype(np.uint8), "RGBA")
+            rid = f"acc.scarf.{k}.{sp}"
+            od = OUT / "acc" / rid
+            puppet(rid, {"rest": im}, "rest", od, "center")
+            r = json.loads((od / f"{rid}.rig.json").read_text(encoding="utf-8"))
+            r["parts"][0]["pivot"] = dict(pivot)
+            r["bounds"] = {"x": -pivot["x"], "y": -pivot["y"], "width": im.width, "height": im.height}
+            dump(od / f"{rid}.rig.json", r)
+            sources[rid] = [f"puppets/avatar_{sp}/base.png", f"tools/assets/art/raster_kit.py pattern({k}) clipped to the scarf frame"]
+    return sources
+
+
 def write_accessories() -> dict[str, list[str]]:
-    sources = {}
+    sources = write_scarf_patterns()
     for rid, (rel, w, pivot) in ACCESSORIES.items():
         im = fit(trimmed(pick(rel)), width=w)
         d = OUT / "acc" / rid

@@ -1,0 +1,16 @@
+{
+ "format": "aegis-atlas/1",
+ "id": "acc.scarf.stars.mouse.atlas",
+ "image": "acc.scarf.stars.mouse.atlas.webp",
+ "width": 256,
+ "height": 256,
+ "scale": 1,
+ "frames": {
+  "body.rest": {
+   "x": 2,
+   "y": 2,
+   "w": 165,
+   "h": 203
+  }
+ }
+}

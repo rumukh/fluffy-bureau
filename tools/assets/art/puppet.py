@@ -387,6 +387,9 @@ def assemble(cfg: dict, out_dir: Path, scale: float) -> None:
         hcol = alpha.crop((pivot_head[0] - 30, 0, pivot_head[0] + 30, ny)).point(lambda v: 255 if v > 128 else 0)
         top_y = hcol.getbbox()[1]
         cfg.setdefault("slots", {})["hat"] = {"parent": "head", "position": {"x": 0, "y": f(top_y + 40 - pivot_head[1])}, "z": 40}
+        # Pattern overlay (T29 shop): acc.scarf.<pattern>.<species> shares the scarf frame and pivot,
+        # so it attaches at the scarf pivot just above the tinted scarf.
+        cfg["slots"]["scarfPattern"] = {"parent": "scarf", "position": {"x": 0, "y": 0}, "z": 16}
         cfg.setdefault("tints", {})["scarf"] = {"default": "#c8553d"}
         cfg.setdefault("anchors", {})["badge"] = {"part": "scarf", "x": f(sw * 0.5), "y": f(sh * 0.45)}
     ps = puppet_scale

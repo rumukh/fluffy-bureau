@@ -330,6 +330,8 @@ def main() -> None:
         assets += build_staging()
     if "kits" in groups:
         assets += build_vector_kits()
+    fresh = {x["id"] for x in assets[len(keep):]}
+    assets = [x for x in assets[:len(keep)] if x["id"] not in fresh] + assets[len(keep):]
     assets.sort(key=lambda x: x["id"])
     ids = {x["id"] for x in assets}
     characters = {c: {"base": f"char.{c}.base.webp", "rig": f"char.{c}.{c}.rig.json", "atlas": f"char.{c}.{c}.atlas.json", "atlasImage": f"char.{c}.{c}.atlas.webp"}

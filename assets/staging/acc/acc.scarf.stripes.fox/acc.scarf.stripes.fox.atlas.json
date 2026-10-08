@@ -1,0 +1,16 @@
+{
+ "format": "aegis-atlas/1",
+ "id": "acc.scarf.stripes.fox.atlas",
+ "image": "acc.scarf.stripes.fox.atlas.webp",
+ "width": 256,
+ "height": 256,
+ "scale": 1,
+ "frames": {
+  "body.rest": {
+   "x": 2,
+   "y": 2,
+   "w": 179,
+   "h": 206
+  }
+ }
+}
