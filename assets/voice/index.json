@@ -17219,17 +17219,17 @@
    "ttsHash": "1c14c923a90b73f25c5a27f69fd6c11792a90e8818461eca91b24584eeb16a72",
    "speaker": "khvosts",
    "voice": "ru-RU-DmitryNeural",
-   "key": "ad79816195",
+   "key": "3c9001e2d0",
    "pack": "case03",
-   "file": "case03/C3-H-02.ad79816195.mp3",
-   "cues": "case03/C3-H-02.ad79816195.cues.json",
-   "durationMs": 4153,
+   "file": "case03/C3-H-02.3c9001e2d0.mp3",
+   "cues": "case03/C3-H-02.3c9001e2d0.cues.json",
+   "durationMs": 4180,
    "lufs": -18.3,
    "provenance": {
     "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
     "voice": "ru-RU-DmitryNeural",
     "region": "swedencentral",
-    "createdAt": "2026-10-08T13:42:23+00:00",
+    "createdAt": "2026-10-08T16:57:07+00:00",
     "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
     "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
    },
@@ -37615,6 +37615,31 @@
    },
    "qa": {
     "heard": "Контора.",
+    "match": true
+   }
+  },
+  "UI-offline.caseLater": {
+   "id": "UI-offline.caseLater",
+   "revision": 1,
+   "ttsHash": "8abd59e5c108d4f898765973aabe36714247965bb972904cc25817253b9e89f4",
+   "speaker": "narrator",
+   "voice": "ru-RU-SvetlanaNeural",
+   "key": "856d259146",
+   "pack": "shell",
+   "file": "shell/UI-offline.caseLater.856d259146.mp3",
+   "cues": "shell/UI-offline.caseLater.856d259146.cues.json",
+   "durationMs": 6139,
+   "lufs": -18.4,
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "ru-RU-SvetlanaNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-08T21:06:23+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X."
+   },
+   "qa": {
+    "heard": "Это дело еще скачивается.Оно откроется, когда появится интернет.",
     "match": true
    }
   },

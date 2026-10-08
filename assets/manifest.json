@@ -35332,6 +35332,27 @@
    }
   },
   {
+   "id": "cues.UI-offline.caseLater",
+   "path": "voice/shell/UI-offline.caseLater.856d259146.cues.json",
+   "pack": "shell",
+   "kind": "cues",
+   "width": null,
+   "height": null,
+   "durationMs": 6139,
+   "format": "json",
+   "bytes": 1853,
+   "sha256": "1e77443c55c7b10089f1c230880a82e34e14bdea1625f73359a061b3a82fe3f0",
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "ru-RU-SvetlanaNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-08T21:06:23+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X.",
+    "source": "line UI-offline.caseLater rev 1 ttsHash 8abd59e5c108d4f8"
+   }
+  },
+  {
    "id": "cues.UI-parent.enter",
    "path": "voice/shell/UI-parent.enter.c2a33e7392.cues.json",
    "pack": "shell",
@@ -74148,6 +74169,27 @@
    }
   },
   {
+   "id": "voice.UI-offline.caseLater",
+   "path": "voice/shell/UI-offline.caseLater.856d259146.mp3",
+   "pack": "shell",
+   "kind": "voice",
+   "width": null,
+   "height": null,
+   "durationMs": 6139,
+   "format": "mp3",
+   "bytes": 74022,
+   "sha256": "c48a1685a5da2fca2572533c1462233d5de9a09360526b6358cc3369eac120fb",
+   "provenance": {
+    "tool": "Azure AI Speech neural TTS (REST/SDK 1.51) via tools/assets/voice/synth.py",
+    "voice": "ru-RU-SvetlanaNeural",
+    "region": "swedencentral",
+    "createdAt": "2026-10-08T21:06:23+00:00",
+    "licence": "Generated with Azure AI Speech prebuilt neural voice under the owner's Azure subscription; commercial use per Microsoft Product Terms. No third-party copyright.",
+    "notes": "Mouth cues from Azure viseme events mapped to Rhubarb A-H,X.",
+    "source": "line UI-offline.caseLater rev 1 ttsHash 8abd59e5c108d4f8"
+   }
+  },
+  {
    "id": "voice.UI-parent.enter",
    "path": "voice/shell/UI-parent.enter.c2a33e7392.mp3",
    "pack": "shell",
@@ -80854,7 +80896,7 @@
   "C3-L2-H-02": {
    "asset": "voice.C3-H-02",
    "cues": "cues.C3-H-02",
-   "durationMs": 4153,
+   "durationMs": 4180,
    "revision": 1,
    "ttsHash": "1c14c923a90b73f25c5a27f69fd6c11792a90e8818461eca91b24584eeb16a72"
   },
@@ -86548,6 +86590,13 @@
    "durationMs": 705,
    "revision": 1,
    "ttsHash": "494a80aca7246626f6916839d1be71ebdbb7f754ed7ba2bca875c651a565d84d"
+  },
+  "UI-offline.caseLater": {
+   "asset": "voice.UI-offline.caseLater",
+   "cues": "cues.UI-offline.caseLater",
+   "durationMs": 6139,
+   "revision": 1,
+   "ttsHash": "8abd59e5c108d4f898765973aabe36714247965bb972904cc25817253b9e89f4"
   },
   "UI-parent.enter": {
    "asset": "voice.UI-parent.enter",
