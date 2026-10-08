@@ -12,7 +12,8 @@ test('offline: install, close mid-minigame, cold start with the network gone, re
   browserName,
 }) => {
   const browserType = playwright[browserName];
-  test.setTimeout(240_000);
+  // The full release (cases 1–4) is ~110 MB: installing it in WebKit can take several minutes.
+  test.setTimeout(600_000);
 
   const profile = mkdtempSync(join(tmpdir(), `fluffy-offline-${browserName}-`));
   // An OS-assigned free port, so parallel runs on one machine never collide.
@@ -34,7 +35,7 @@ test('offline: install, close mid-minigame, cold start with the network gone, re
             const registration = await navigator.serviceWorker.getRegistration();
             return registration?.active?.state ?? 'none';
           }),
-        { timeout: 120_000, intervals: [500] },
+        { timeout: 360_000, intervals: [500] },
       )
       .toBe('activated');
     // Restart the browser: the next launch is controlled by the installed worker.

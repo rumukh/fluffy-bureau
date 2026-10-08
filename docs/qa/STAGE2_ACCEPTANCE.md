@@ -3,8 +3,8 @@
 **Compiled by:** workstream G, 2026-10-08. **Scope:** T26 — cases 2–4 at three levels with their
 new minigames, notebook pages, the family «Хранитель снов» (T31), the basic «Уютный денёк» (shop with
 returns, decorations, tea party with residents' stories; T28, T29), ranks (D12), stage-direction
-actions (U10) and the «нажми на окно» beat (U11). **Build:** `npm run build -- --production`
-(PRODUCTION_PACK_IDS; the published site keeps only released packs until v0.2.0, T30). AEGIS SDK
+actions (U10) and the «нажми на окно» beat (U11). **Build:** the release build — C moved cases 2–4 and
+`cozy` into `PACK_IDS` for v0.2.0 (adfa8ef), so `npm run build:pages` ships cases 1–4 (T30). AEGIS SDK
 `17ed4bebd329`; content from C (PR #8, `rumukh-fluffy-content-stage2` at 031d2c2); art and audio
 from A (PR #11, 979e896: Дамка and Пухлик puppets, case 2–4 backgrounds, props, dream cards, cipher
 kit, sound clues, shop items with scarf-pattern overlays, music, 1,453 voice recordings with mouth cues).
@@ -104,13 +104,43 @@ sessions, content tools); production build; **50/50 E2E tests** (25 Chromium + 2
 The same suite also passed 50/50 on A's d0d62be. One earlier WebKit offline run hit a
 skip-button race (the intro ended on its own mid-click); the player now tolerates it.
 
+## Offline install metrics (release layout, `/fluffy-bureau/`)
+
+Measured with `FLUFFY_E2E_METRICS=1 FLUFFY_E2E_BASE=/fluffy-bureau/ npx playwright test
+e2e/install-metrics.spec.ts` after `npm run build:pages` (Windows, local loopback server, 2 runs each):
+
+| Pack | Files | MB |
+|---|---|---|
+| shell | 1,160 | 24.7 |
+| prologue | 165 | 4.2 |
+| case01 | 1,045 | 25.4 |
+| case02 | 963 | 16.6 |
+| case03 | 861 | 17.1 |
+| case04 | 928 | 21.8 |
+| cozy | 17 | 0.8 |
+| **Total** | **5,139** | **110.7** |
+
+| Browser | Requests | Title screen | Offline-ready (all packs, worker active) |
+|---|---|---|---|
+| Chromium | ~5,174 | 3–5 s | 24–28 s |
+| WebKit (Windows port) | ~5,175 | 1.5–2 s | 89–91 s (149 s measured by the coordinator under load) |
+
+E2E budgets: the install/activation poll is 360 s and the update wait is 360 s, about 2.4× the worst
+observed. The game is playable online from the title screen; offline readiness is what takes long.
+v0.2.1 will make the shell, prologue and case 1 offline-ready first and install the other cases in the
+background (fewer requests: e.g. one cue bundle per pack).
+
 ## Known gaps and follow-ups
 
 1. **Scarf patterns** are drawn by A's overlays (`acc.scarf.<pattern>.<species>` in the avatar's
    `scarfPattern` slot, untinted above the tinted scarf); hats in the `hat` slot. Both are asserted on
    E's stage in `office.spec.ts`.
 2. Music follows the new locations (dusk and lighthouse, dreams, tea party, town map).
-3. Stage 2 packs ship to players only at v0.2.0: the release build still uses `PACK_IDS` until C
-   moves cases 2–4 there (T30).
-4. Family mode needs a real family session (T15) to judge the handoff wording and timing.
-5. Human playtest and device checks (T15) remain pending, as for Stage 1.
+3. The release is now ~110 MB offline (prologue, cases 1–4, cozy). Installing it takes minutes in
+   WebKit on Windows (the E2E install waits were raised to 6 min). On iPadOS, check the storage
+   estimate and the install time on the real device (T15).
+4. The update check no longer drops a request that arrives while a check or install is running.
+   With the larger release this made the update test flaky, and it would have delayed a real update
+   by up to 30 minutes. The update spec passed 3× in Chromium and 2× in WebKit under `/fluffy-bureau/`.
+5. Family mode needs a real family session (T15) to judge the handoff wording and timing.
+6. Human playtest and device checks (T15) remain pending, as for Stage 1.

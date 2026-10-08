@@ -8,7 +8,7 @@ test('every URL, the manifest, icons and the worker scope stay under the base pa
   page,
   baseURL,
 }) => {
-  test.setTimeout(180_000);
+  test.setTimeout(480_000);
   const root = new URL(baseURL!);
   expect(root.pathname).toBe(BASE);
   const outside: string[] = [];
@@ -33,7 +33,7 @@ test('every URL, the manifest, icons and the worker scope stay under the base pa
           const registration = await navigator.serviceWorker.getRegistration();
           return registration?.active ? registration.scope : null;
         }),
-      { timeout: 120_000, intervals: [500] },
+      { timeout: 360_000, intervals: [500] },
     )
     .toBe(root.href);
 

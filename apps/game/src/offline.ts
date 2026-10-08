@@ -28,6 +28,7 @@ export class Offline {
   private store: OfflinePackStore | null = null;
   private listeners = new Set<(status: OfflineStatus) => void>();
   private busy = false;
+  private again = false;
   status: OfflineStatus = { state: 'checking' };
 
   constructor(
@@ -103,9 +104,14 @@ export class Offline {
    * never reloaded; the new worker waits and takes over on the next launch. Quiet on failure.
    */
   async update(): Promise<void> {
-    if (!this.store || !navigator.onLine || this.busy) return;
+    if (!this.store || !navigator.onLine) return;
+    // A request while a check is running is remembered, never dropped (the next periodic check
+    // would otherwise be half an hour away).
+    if (this.busy || this.status.state === 'installing') {
+      this.again = true;
+      return;
+    }
     if (this.status.state === 'ready' && this.status.update === 'installed-next-launch') return;
-    if (this.status.state === 'installing') return;
     this.busy = true;
     try {
       const index = await this.fetchJson<OfflineIndex>('offline/index.json');
@@ -114,6 +120,10 @@ export class Offline {
       // Offline or a partial publish: try again later.
     } finally {
       this.busy = false;
+      if (this.again) {
+        this.again = false;
+        void this.update();
+      }
     }
   }
 
@@ -150,6 +160,12 @@ export class Offline {
     } catch (error) {
       this.set({ state: 'failed', reason: error instanceof Error ? error.message : String(error) });
       throw error;
+    } finally {
+      // An update check that arrived during this install runs now.
+      if (this.again && !this.busy) {
+        this.again = false;
+        void this.update();
+      }
     }
   }
 }
