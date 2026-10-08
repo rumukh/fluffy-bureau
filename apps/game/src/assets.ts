@@ -35,6 +35,8 @@ export interface AssetManifest {
   >;
   music: Record<string, string>;
   sfx: Record<string, string>;
+  /** Mouth-cue bundles (`fluffy-cue-bundle/1`), one per offline pack; `voice[id].cues` names one. */
+  cueBundles?: string[];
   /** Sound clues (Q31) by sample ID: silent-form wave and icons; the audio is sfx `clue.<id>`. */
   soundClues?: Record<string, SoundClue>;
   /** Files referenced by name inside documents (atlas images). */
@@ -228,10 +230,48 @@ export class Assets {
   }
 
   /** Resolves an asset ID (or a file name used inside documents, or `cues:<lineId>`) to a URL. */
+  private readonly cueTracks = new Map<string, unknown>();
+  private readonly cueUrls = new Map<string, string>();
+
+  /**
+   * Loads the per-pack mouth-cue bundles (one request each). A bundle of a case not installed yet
+   * is skipped while offline; its lines then speak with the neutral talk loop.
+   */
+  async loadCues(): Promise<void> {
+    await Promise.all(
+      (this.manifest.cueBundles ?? []).map(async (path) => {
+        try {
+          const response = await fetch(this.url(path));
+          if (!response.ok) return;
+          const bundle = (await response.json()) as { tracks?: Record<string, unknown> };
+          for (const [id, track] of Object.entries(bundle.tracks ?? {}))
+            this.cueTracks.set(id, track);
+        } catch {
+          // Offline and not installed yet.
+        }
+      }),
+    );
+  }
+
+  hasCues(lineId: string): boolean {
+    return this.cueTracks.has(lineId);
+  }
+
   resolve(id: string): string {
     if (id.startsWith('cues:')) {
-      const cues = this.manifest.voice[id.slice(5)]?.cues;
-      if (cues) return this.url(cues);
+      const lineId = id.slice(5);
+      const track = this.cueTracks.get(lineId);
+      if (track) {
+        // Served from memory: a local blob, never a network request.
+        let url = this.cueUrls.get(lineId);
+        if (!url) {
+          url = URL.createObjectURL(
+            new Blob([JSON.stringify(track)], { type: 'application/json' }),
+          );
+          this.cueUrls.set(lineId, url);
+        }
+        return url;
+      }
     }
     const asset = this.manifest.assets[id]?.url ?? this.manifest.files[id];
     if (!asset) throw new Error(`Unknown asset ${id}`);

@@ -174,8 +174,14 @@ mark finds, misses, cards, lamp, hearts and buttons.
 The build emits **incremental offline packs**: `shell` (code, styles, fonts, licences, shared content),
 `prologue`, `case01` (later `case02`…). Each has a digest-checked resource graph
 (`dist/offline/<pack>.json`); `dist/offline/index.json` lists the build. On first online start the app
-installs every pack (all-or-nothing per pack) and registers the bundled worker, which pins exact
-revisions, denies outbound requests, never skips waiting and never reloads a running case.
+installs the **core** packs (`shell`, `prologue`, `case01`; all-or-nothing per pack, 8 parallel
+requests) and registers the bundled worker, then installs the later cases in the background. The
+worker pins exact revisions, refuses to install before the core is stored, never skips waiting and
+never reloads a running case. While online it streams same-origin media of a case not stored yet;
+it never contacts other origins. Content packs (text, rules) are in `shell`, so every profile opens
+offline. Mouth cues are one bundle per pack, served to the stage from memory (`blob:`). The parent
+corner lists each pack's offline state, and offline the case picker holds back cases still downloading.
+The last known pack index is kept on the device for offline status.
 
 **Updates (Q43).** The app looks for a newer `offline/index.json` at launch, whenever the device comes
 back online and every 30 minutes. A newer build's changed packs are installed side by side (unchanged

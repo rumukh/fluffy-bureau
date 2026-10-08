@@ -76,7 +76,8 @@ test('offline: install, close mid-minigame, cold start with the network gone, re
     const outbound: string[] = [];
     page = context.pages()[0] ?? (await context.newPage());
     page.on('request', (request) => {
-      if (!request.url().startsWith(origin) && !request.url().startsWith('data:'))
+      // `blob:` = mouth cues served from memory, never the network.
+      if (!request.url().startsWith(origin) && !/^(data|blob):/.test(request.url()))
         outbound.push(request.url());
     });
     await page.goto(origin);

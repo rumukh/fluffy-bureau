@@ -87,6 +87,16 @@ export function renderParentGate(app: App, close: () => HTMLElement): HTMLElemen
   );
 }
 
+const PACK_NAMES: Record<string, string> = {
+  shell: 'Основа игры',
+  prologue: 'Пролог',
+  case01: 'Дело 1',
+  case02: 'Дело 2',
+  case03: 'Дело 3',
+  case04: 'Дело 4',
+  cozy: 'Уютный денёк',
+};
+
 export function renderParentCorner(app: App, close: () => HTMLElement): HTMLElement {
   const device = app.device;
   const section = (title: string, ...children: (Node | null)[]) =>
@@ -223,7 +233,9 @@ export function renderParentCorner(app: App, close: () => HTMLElement): HTMLElem
     offline.state === 'ready'
       ? offline.update === 'installed-next-launch'
         ? 'Новая версия скачана. Она включится при следующем запуске игры.'
-        : 'Игра установлена и работает без интернета.'
+        : offline.background
+          ? 'Пролог и первое дело работают без интернета. Остальные дела докачиваются.'
+          : 'Игра установлена и работает без интернета.'
       : offline.state === 'installing'
         ? `Устанавливаем… (${offline.done} из ${offline.total})`
         : offline.state === 'unsupported'
@@ -282,6 +294,27 @@ export function renderParentCorner(app: App, close: () => HTMLElement): HTMLElem
     section(
       'Работа без интернета',
       h('p', { dataset: { testid: 'offline-status' } }, offlineText),
+      app.offline.packs.length
+        ? h(
+            'ul',
+            { class: 'offline-packs', dataset: { testid: 'offline-packs' } },
+            ...app.offline.packs.map((pack) => {
+              const stored = app.offline.installed.has(pack.id);
+              const downloading = offline.state === 'ready' && offline.background?.pack === pack.id;
+              return h(
+                'li',
+                {
+                  dataset: {
+                    pack: pack.id,
+                    state: stored ? 'stored' : downloading ? 'downloading' : 'waiting',
+                  },
+                },
+                `${PACK_NAMES[pack.id] ?? pack.id} (${Math.max(1, Math.round(pack.bytes / 2 ** 20))} МБ): `,
+                stored ? 'без интернета ✔' : downloading ? 'скачивается…' : 'ждёт интернета',
+              );
+            }),
+          )
+        : null,
       button({ label: 'Установить или проверить обновление', key: 'pc-install' }, async () => {
         say('Проверяем установку…');
         try {

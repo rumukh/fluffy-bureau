@@ -41,7 +41,7 @@ export class Voice {
           caption: line.text,
           speaker: line.speaker,
           // Lip-sync track, resolved by the stage through Assets.resolve('cues:<id>').
-          ...(this.assets.voice(line.id)?.cues ? { cues: `cues:${line.id}` } : {}),
+          ...(this.assets.hasCues(line.id) ? { cues: `cues:${line.id}` } : {}),
         })),
       });
       for (const line of lines)

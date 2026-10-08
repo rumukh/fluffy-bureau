@@ -112,6 +112,7 @@ export const UI_TEXT: Record<string, string> = {
   'case.continue': 'Продолжить дело',
   'rank.intern': 'Стажёр',
   'rank.new': 'Новое звание!',
+  'offline.caseLater': 'Это дело ещё скачивается. Оно откроется, когда будет интернет.',
   'notebook.ownSignal': 'Мой сигнал:',
   'notebook.nothing': 'Пока нечего вписать.',
   'notebook.pages': 'Страницы блокнота',

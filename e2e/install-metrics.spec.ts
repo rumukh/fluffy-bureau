@@ -8,7 +8,10 @@ import { join } from 'node:path';
 import { serveStatic } from '../apps/game/scripts/preview.mjs';
 import { BASE } from './env.js';
 
-test('offline install: time to offline-ready', async ({ playwright, browserName }) => {
+test('offline install: time to core and to all cases offline', async ({
+  playwright,
+  browserName,
+}) => {
   test.skip(!process.env.FLUFFY_E2E_METRICS, 'measurement only: FLUFFY_E2E_METRICS=1');
   test.setTimeout(600_000);
   const index = JSON.parse(readFileSync('apps/game/dist/offline/index.json', 'utf8')) as {
@@ -38,7 +41,13 @@ test('offline install: time to offline-ready', async ({ playwright, browserName 
         { timeout: 540_000, intervals: [500] },
       )
       .toBe('activated');
+    // Core ready: the worker activates once the shell, the prologue and case 1 are stored.
     const ready = (Date.now() - started) / 1000;
+    // Complete: the later cases have finished in the background.
+    await expect(page.locator('html')).toHaveAttribute('data-offline', 'ready:none', {
+      timeout: 540_000,
+    });
+    const complete = (Date.now() - started) / 1000;
     await context.close();
     const result = {
       browser: browserName,
@@ -52,7 +61,8 @@ test('offline install: time to offline-ready', async ({ playwright, browserName 
       mb: +(index.packs.reduce((n, p) => n + p.bytes, 0) / 2 ** 20).toFixed(1),
       requests,
       secondsToTitle: +interactive.toFixed(1),
-      secondsToOfflineReady: +ready.toFixed(1),
+      secondsToCoreOffline: +ready.toFixed(1),
+      secondsToAllCasesOffline: +complete.toFixed(1),
     };
     mkdirSync('test-results', { recursive: true });
     writeFileSync(`test-results/install-${browserName}.json`, JSON.stringify(result, null, 1));

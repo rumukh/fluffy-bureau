@@ -90,10 +90,13 @@ export const bundleOptions = (out, extra = {}) => ({
 
 const CONTENT_PACKS_DIR = join(repoRoot, 'packages', 'content', 'packs');
 
+/**
+ * Content packs (rules, text) always ship in `shell`: they are small, and a profile must open
+ * offline even when a later case's media pack is still downloading. Media stays per case.
+ */
 export function offlinePackForContent(id) {
-  if (id === 'shared') return 'shell';
-  const match = /^(case\d\d)-l[123]$/.exec(id);
-  return match ? match[1] : id;
+  void id;
+  return 'shell';
 }
 
 async function fixturePacks() {
@@ -177,9 +180,14 @@ export function writeAssets(out) {
         asset.pack === 'shell'
           ? `assets/${asset.path}`
           : `packs/${asset.pack}/assets/${asset.path}`;
-      mkdirSync(dirname(join(out, target)), { recursive: true });
-      cpSync(source, join(out, target));
+      // A's Rhubarb cue files are only converted (below), never shipped: one bundle per pack instead.
+      if (asset.kind !== 'cues') {
+        mkdirSync(dirname(join(out, target)), { recursive: true });
+        cpSync(source, join(out, target));
+      }
       index.assets[asset.id] = {
+        source,
+        pack: asset.pack,
         url: target,
         kind: asset.kind,
         width: asset.width,
@@ -231,26 +239,43 @@ export function writeAssets(out) {
         scarfMask: url(entry.scarfMask, `avatar ${id}`),
         puppet: puppet(entry, `avatar ${id}`),
       };
-    // Mouth cues: A ships Rhubarb JSON; E's stage reads `aegis-cues/1`, converted here.
+    // Mouth cues: A ships Rhubarb JSON; E's stage reads `aegis-cues/1`, converted here and bundled
+    // per offline pack (one request per pack instead of one per line; the game serves each track
+    // to the stage from memory).
+    const bundles = new Map();
     for (const [id, entry] of Object.entries(manifest.voice ?? {})) {
-      let cues = null;
+      let bundle = null;
       if (entry.cues) {
-        const source = url(entry.cues, `cues ${id}`);
-        const rhubarb = JSON.parse(readFileSync(join(out, source), 'utf8'));
+        const cueAsset = index.assets[entry.cues];
+        if (!cueAsset) throw new Error(`cues ${id} refers to unknown asset ${entry.cues}`);
+        const rhubarb = JSON.parse(readFileSync(cueAsset.source, 'utf8'));
         const track = importRhubarb(rhubarb, {
           line: id,
           revision: String(entry.revision ?? 1),
           duration: (entry.durationMs ?? 0) / 1000 || undefined,
         });
-        cues = source.replace(/(\.cues)?\.json$/, '.aegis-cues.json');
-        writeFileSync(join(out, cues), JSON.stringify(track));
+        const pack = cueAsset.pack ?? 'shell';
+        bundle =
+          pack === 'shell'
+            ? 'assets/voice/cues.bundle.json'
+            : `packs/${pack}/assets/voice/cues.bundle.json`;
+        if (!bundles.has(bundle)) bundles.set(bundle, {});
+        bundles.get(bundle)[id] = track;
       }
       index.voice[id] = {
         url: url(entry.asset, `voice ${id}`),
-        cues,
+        cues: bundle,
         durationMs: entry.durationMs ?? 0,
       };
     }
+    for (const [path, tracks] of bundles) {
+      mkdirSync(dirname(join(out, path)), { recursive: true });
+      writeFileSync(join(out, path), JSON.stringify({ format: 'fluffy-cue-bundle/1', tracks }));
+    }
+    index.cueBundles = [...bundles.keys()].sort();
+    // Converted: the Rhubarb sources are not part of the site.
+    for (const [id, entry] of Object.entries(index.assets))
+      if (entry.kind === 'cues') delete index.assets[id];
     // Animation documents by their own ID (rigs, atlases, clips), so cutscenes can load what they
     // name: rig -> its atlases, clip/atlas -> itself. Atlas images are mapped by file name.
     for (const asset of manifest.assets) {
@@ -320,6 +345,11 @@ export function writeAssets(out) {
       }
     }
   }
+  // Build-only fields (local source paths) never reach the published index.
+  for (const entry of Object.values(index.assets)) {
+    delete entry.source;
+    delete entry.pack;
+  }
   mkdirSync(join(out, 'assets'), { recursive: true });
   writeFileSync(join(out, 'assets', 'index.json'), JSON.stringify(index) + '\n');
   return index;
@@ -375,11 +405,13 @@ declare const self: ServiceWorkerGlobalScope;
 const store = new OfflinePackStore({ namespace: 'fluffy-bureau', baseUrl: self.registration.scope });
 const packs = ${JSON.stringify(packs.map(({ id, revision }) => ({ id, revision })))};
 // The browser may fetch a newer worker.js on its own before the game has downloaded that build's
-// packs. Refuse to install until every pinned pack is present, so the current build stays in charge.
+// packs. Refuse to install until the core packs (shell, prologue, case 1) are present, so the
+// current build stays in charge; later cases install in the background.
+const core = ['shell', 'prologue', 'case01'];
 self.addEventListener('install', (event) => {
   event.waitUntil(
     store.list().then((installed) => {
-      const missing = packs.filter((p) => !installed.some((i) => i.id === p.id && i.revision === p.revision));
+      const missing = packs.filter((p) => core.includes(p.id) && !installed.some((i) => i.id === p.id && i.revision === p.revision));
       if (missing.length) throw new Error('Packs not installed: ' + missing.map((p) => p.id).join(', '));
     }),
   );
@@ -387,6 +419,9 @@ self.addEventListener('install', (event) => {
 attachOfflineWorker(self, store, {
   packs,
   shell: 'index.html',
+  // Media of a case still downloading streams from this same site while online (same-origin only;
+  // other origins are refused by the handler).
+  allowNetwork: true,
   onError() {
     void self.clients.matchAll().then((clients) => {
       for (const client of clients) client.postMessage({ type: 'fluffy-offline-error' });
