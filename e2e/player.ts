@@ -91,16 +91,29 @@ export class Player {
             .getAttribute('data-cutscene')
             .catch(() => null);
           if (id && (await skip.isVisible().catch(() => false))) {
-            await this.activate(skip);
-            // Skipping may wait for the cutscene to finish loading: wait for it to end.
-            await page.waitForFunction(
-              (current) =>
-                (document.querySelector('#app .dialogue.cutscene') as HTMLElement | null)?.dataset
-                  .cutscene !== current,
-              id,
-              { timeout: 30_000 },
+            // A short cutscene (the wordless intro) may end on its own mid-click: the loop
+            // re-reads the screen, so a detached skip button is not an error.
+            const ended = await this.activate(skip).then(
+              () => false,
+              async () =>
+                (await page
+                  .locator('#app .dialogue.cutscene')
+                  .getAttribute('data-cutscene')
+                  .catch(() => null)) !== id,
             );
-          } else await page.waitForTimeout(200);
+            if (ended) continue;
+            // Skipping may wait for the cutscene to finish loading: wait for it to end.
+            await page
+              .waitForFunction(
+                (current) =>
+                  (document.querySelector('#app .dialogue.cutscene') as HTMLElement | null)?.dataset
+                    .cutscene !== current,
+                id,
+                { timeout: 500 },
+              )
+              .catch(() => {});
+          } else if (await next.isEnabled().catch(() => false)) await this.activate(next);
+          else await page.waitForTimeout(200);
         } else if (await next.isEnabled().catch(() => false)) await this.activate(next);
         else await page.waitForTimeout(250);
         continue;
@@ -162,6 +175,13 @@ export class Player {
       await this.activate(this.key('await-notebook'));
       return this.activate(this.key('overlay-close'));
     }
+    if (await this.key('await-tap').count()) {
+      if (this.mode !== 'keyboard') {
+        const hotspot = page.locator('#app [data-key^="hs-"]:visible').first();
+        if (await hotspot.count()) return this.activate(hotspot);
+      }
+      return this.activate(this.key('await-tap'));
+    }
     if (await this.key('await-pause').count()) {
       await this.activate(this.key('await-pause'));
       return this.activate(this.key('p-continue'));
@@ -197,7 +217,11 @@ export class Player {
         const options = (
           config.rounds as unknown as { options: { id: string; correct: boolean }[] }[]
         )[round - 1]!.options;
-        await this.activate(this.key(`mg-${options.find((o) => o.correct)!.id}`));
+        {
+          const target = this.key(`mg-${options.find((o) => o.correct)!.id}`);
+          if (await target.count()) await this.activate(target);
+          else await this.activate(page.locator('#app [data-key$="-more"]').first());
+        }
         return;
       }
       case 'tracks':
@@ -213,8 +237,15 @@ export class Player {
           for (const step of steps) {
             const correct = step.options.find((o) => o.correct)!;
             const target = this.key(`mg-${correct.id}`);
-            if (await target.count()) {
+            if ((await target.count()) && (await target.isEnabled().catch(() => false))) {
               await this.activate(target);
+              return;
+            }
+          }
+          {
+            const more = page.locator('#app [data-key$="-more"]').first();
+            if (await more.count()) {
+              await this.activate(more);
               return;
             }
           }
@@ -244,6 +275,118 @@ export class Player {
         }
         await this.activate(this.key('timeline-submit'));
         return;
+      }
+      case 'cipher': {
+        const word = Number((await page.locator('#app .minigame').getAttribute('data-word')) ?? 0);
+        const slot = Number((await page.locator('#app .minigame').getAttribute('data-slot')) ?? 0);
+        const words = config.words as unknown as { slots: { glyph: string }[] }[];
+        await this.activate(this.key(`mg-${words[word]!.slots[slot]!.glyph}`));
+        return;
+      }
+      case 'postman': {
+        const letters = config.letters as unknown as {
+          street: string | null;
+          streetOptions: string[] | null;
+          house: number;
+        }[];
+        const box = page.locator('#app .minigame');
+        const index = Number((await box.getAttribute('data-letter')) ?? 0);
+        const phase = (await box.getAttribute('data-phase')) ?? 'house';
+        const letter = letters[index]!;
+        if (phase === 'street' && letter.streetOptions)
+          return this.activate(this.key(`street-${letter.street}`));
+        return this.activate(this.key(`house-${letter.house}`));
+      }
+      case 'sound-match': {
+        const round = Number(
+          ((await page.locator('#app .minigame .progress').textContent()) ?? '1').match(
+            /(\d+)/,
+          )![1],
+        );
+        const rounds = config.rounds as unknown as {
+          options: { id: string; correct: boolean }[];
+        }[];
+        {
+          // Listening is separate from choosing (Q31): listen to the night sound first.
+          const listen = this.key('listen-sound-target');
+          if (await listen.isVisible().catch(() => false)) await this.activate(listen);
+          const target = this.key(`mg-${rounds[round - 1]!.options.find((o) => o.correct)!.id}`);
+          if (await target.count()) await this.activate(target);
+          else await this.activate(page.locator('#app [data-key$="-more"]').first());
+        }
+        return;
+      }
+      case 'light-signals': {
+        const box = page.locator('#app .minigame');
+        const phase = (await box.getAttribute('data-phase')) ?? 'signals';
+        const input = await page.locator('#app .light-pattern span').count();
+        if (phase === 'own') {
+          const own = config.own as { min: number; max: number };
+          const rhythm = ['dot', 'dash', 'dot'].slice(0, Math.max(own.min, 3));
+          if (input < rhythm.length) return this.activate(this.key(`signal-${rhythm[input]}`));
+          return this.activate(this.key('signal-send'));
+        }
+        const signal = Number((await box.getAttribute('data-signal')) ?? 0);
+        const signals = config.signals as unknown as { pattern: ('dot' | 'dash')[] }[];
+        const pattern = signals[signal]!.pattern;
+        if (input < pattern.length) return this.activate(this.key(`signal-${pattern[input]}`));
+        return this.activate(this.key('signal-send'));
+      }
+      case 'read-blink': {
+        const lessons = config.lessons as unknown as { id: string; correct: boolean }[];
+        const target = this.key(`mg-${lessons.find((o) => o.correct)!.id}`);
+        if (await target.count()) await this.activate(target);
+        else await this.activate(page.locator('#app [data-key$="-more"]').first());
+        return;
+      }
+      case 'dream-keeper': {
+        const mode = (await page.locator('#app .minigame').textContent()) ?? '';
+        if (await this.key('dream-solo').count()) return this.activate(this.key('dream-solo'));
+        const round = Number(
+          (await page.locator('#app .minigame').getAttribute('data-round')) ?? 0,
+        );
+        const rounds = config.rounds as unknown as { answer: string }[];
+        if (await this.key(`dream-value-${rounds[round]!.answer}`).count())
+          return this.activate(this.key(`dream-value-${rounds[round]!.answer}`));
+        const more = this.key('dream-axis-more');
+        if (await more.count()) return this.activate(more);
+        throw new Error(`No dream answer on screen: ${mode.slice(0, 80)}`);
+      }
+      case 'equal-share': {
+        const taskIndex = Number(
+          (await page.locator('#app .minigame').getAttribute('data-task')) ?? 0,
+        );
+        const task = (
+          config.tasks as unknown as { items: number; reserve: number; groups: number }[]
+        )[taskIndex]!;
+        const target = (task.items - task.reserve) / task.groups;
+        const counts = await page
+          .locator('#app .share-group > p')
+          .evaluateAll((nodes) =>
+            nodes.map((node) => Number(((node.textContent ?? '').match(/(\d+)/) ?? ['0', '0'])[1])),
+          );
+        const index = counts.findIndex((count) => count < target);
+        if (index >= 0) return this.activate(this.key(`share-add-${index}`));
+        return this.activate(this.key('share-check'));
+      }
+      case 'compare': {
+        type Step = { options: { id: string; correct: boolean }[] };
+        const question = config.question as Step | null | undefined;
+        const steps: Step[] = [
+          ...(config.steps as unknown as Step[]),
+          ...(question ? [question] : []),
+        ];
+        for (const step of steps) {
+          const correct = step.options.find((o) => o.correct)!;
+          const target = this.key(`mg-${correct.id}`);
+          if ((await target.count()) && (await target.isEnabled().catch(() => false))) {
+            await this.activate(target);
+            return;
+          }
+        }
+        const more = page.locator('#app [data-key$="-more"]').first();
+        if (await more.count()) return this.activate(more);
+        throw new Error('No compare answer on screen');
       }
       case 'baker': {
         const steps = config.steps as unknown as {

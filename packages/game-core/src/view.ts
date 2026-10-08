@@ -9,11 +9,14 @@ import {
   type FluffyPack,
   type PackIndex,
   type Scene,
+  type Step,
 } from './content.js';
+import type { StageAction } from '@fluffy/content';
 import { currentStep, evaluate, visibleOptions, type AwaitAction } from './interpreter.js';
 import { minigameDefinition } from './minigames.js';
 import { rankOf, type Avatar, type ProfileState, type QueueSource } from './state.js';
 import { isUnlocked, SHARED_PACK, type GameRules } from './rules.js';
+import { canAfford, isOnSale, newRank, rankFor, residentsAvailable } from './cozy.js';
 
 type Json = null | boolean | number | string | Json[] | { [key: string]: Json };
 
@@ -47,7 +50,7 @@ export type StepView =
       revision: number;
       view: Json;
     }
-  | { kind: 'await'; action: AwaitAction }
+  | { kind: 'await'; action: AwaitAction; hotspot: string | null }
   | {
       kind: 'cutscene';
       id: string;
@@ -69,14 +72,21 @@ export interface RunView {
   caseId: string;
   level: 1 | 2 | 3 | null;
   ended: boolean;
-  scene: { id: string; location: string; cast: string[]; presentation: string };
+  scene: {
+    id: string;
+    location: string;
+    cast: string[];
+    presentation: string;
+    /** Prop keys for stage-direction actions (U10). */
+    props: Record<string, string>;
+  };
   /**
    * Background asset for this moment: the latest `dir.background` at or before the cursor in this
    * scene, else `scene.background`, else null (the location's default).
    */
   background: string | null;
   /** Stage directions since the last blocking step: stable ID and editorial text (presentation cues). */
-  stage: { id: string; text: string }[];
+  stage: { id: string; text: string; actions: readonly StageAction[] }[];
   queue: { line: LineView; source: QueueSource; remaining: number } | null;
   step: StepView | null;
   notebook: NotebookView | null;
@@ -121,6 +131,49 @@ export interface GameView {
   }[];
   packs: PackView[];
   run: RunView | null;
+  /** D12 rank from the cozy pack (Stage 2), else null (the UI falls back to `rank`). */
+  rankLine: LineView | null;
+  /** A reached rank not yet announced: shown once in the office. */
+  newRank: { id: string; label: LineView; message: LineView[] } | null;
+  /** Notebook pages unlocked so far (T26). */
+  notebookPages: NotebookPageView[];
+  /** The child's own light signal (D22). */
+  signal: ('dot' | 'dash')[] | null;
+  pattern: string | null;
+  cozy: CozyView | null;
+}
+
+export type NotebookPageView =
+  | { id: string; kind: 'cipher-poster'; title: LineView; table: CipherCellView[] }
+  | { id: string; kind: 'secret-notes' | 'symbol-cards'; title: LineView };
+
+export interface CipherCellView {
+  id: string;
+  letter: string;
+  colour: string;
+  holes: number;
+  shape: string;
+  label: LineView;
+}
+
+export interface CozyView {
+  /** A line playing in the office (tea story, shop reply), with how many follow. */
+  office: { line: LineView; remaining: number } | null;
+  intro: LineView[];
+  shop: {
+    id: string;
+    kind: 'hat' | 'scarf-pattern' | 'decor';
+    label: LineView;
+    asset: string;
+    price: { currency: 'buttons' | 'hearts'; amount: number };
+    onSale: boolean;
+    owned: boolean;
+    affordable: boolean;
+    worn: boolean;
+    placed: string | null;
+  }[];
+  residents: { speaker: string; name: string; price: number; affordable: boolean; told: number }[];
+  decorSlots: { id: string; label: LineView }[];
 }
 
 export function substituteName(text: string, name: string): string {
@@ -215,6 +268,74 @@ export function projectProfile(
         };
       }),
     run: state.run ? projectRun(state, rules, contentIndex) : null,
+    ...projectStage2(state, rules, contentIndex, findLine),
+  };
+}
+
+function projectStage2(
+  state: ProfileState,
+  rules: GameRules,
+  contentIndex: ContentIndex,
+  findLine: (id: string) => LineView,
+): Pick<GameView, 'rankLine' | 'newRank' | 'notebookPages' | 'signal' | 'pattern' | 'cozy'> {
+  const packs = contentIndex.packs.map((ref) => rules.library.get(ref).pack);
+  const cozyPack = rules.cozy(contentIndex)?.pack;
+  const cozy = cozyPack?.cozy ?? null;
+  const rank = rankFor(state, cozy);
+  const fresh = newRank(state, cozy);
+  const pages = new Map<string, NotebookPageView>();
+  for (const pack of packs)
+    for (const page of pack.notebookPages ?? []) {
+      if (pages.has(page.id) || !state.rewards.includes(page.unlock)) continue;
+      const title = findLine(page.title);
+      if (page.kind === 'cipher-poster') {
+        const config = pack.minigames.find((m) => m.id === page.cipher)?.config;
+        const table = config?.kind === 'cipher' ? config.table : [];
+        pages.set(page.id, {
+          id: page.id,
+          kind: 'cipher-poster',
+          title,
+          table: table.map((g) => ({ ...g, label: findLine(g.label) })),
+        });
+      } else pages.set(page.id, { id: page.id, kind: page.kind, title });
+    }
+  const speakers = packs.flatMap((p) => p.speakers);
+  return {
+    rankLine: rank ? findLine(rank.label) : null,
+    newRank: fresh
+      ? { id: fresh.id, label: findLine(fresh.label), message: fresh.message.map(findLine) }
+      : null,
+    notebookPages: [...pages.values()],
+    signal: state.signal ? [...state.signal] : null,
+    pattern: state.pattern,
+    cozy: cozy
+      ? {
+          office: state.office.length
+            ? { line: findLine(state.office[0]!), remaining: state.office.length - 1 }
+            : null,
+          intro: cozy.lines.intro.map(findLine),
+          shop: cozy.shop.map((item) => ({
+            id: item.id,
+            kind: item.kind,
+            label: findLine(item.label),
+            asset: item.asset,
+            price: { ...item.price },
+            onSale: isOnSale(state, item),
+            owned: state.owned.includes(item.id),
+            affordable: canAfford(state, item),
+            worn: state.avatar.hat === item.id || state.pattern === item.id,
+            placed: state.decor.find((d) => d.item === item.id)?.slot ?? null,
+          })),
+          residents: residentsAvailable(state, cozy).map((r) => ({
+            speaker: r.speaker,
+            name: speakers.find((s) => s.id === r.speaker)?.name ?? r.speaker,
+            price: r.teaPrice,
+            affordable: state.hearts >= r.teaPrice,
+            told: state.teas.find((t) => t.speaker === r.speaker)?.told ?? 0,
+          })),
+          decorSlots: cozy.decorSlots.map((s) => ({ id: s.id, label: findLine(s.label) })),
+        }
+      : null,
   };
 }
 
@@ -271,7 +392,7 @@ function projectRun(state: ProfileState, rules: GameRules, contentIndex: Content
         break;
       }
       case 'await':
-        stepView = { kind: 'await', action: step.action };
+        stepView = { kind: 'await', action: step.action, hotspot: step.hotspot ?? null };
         break;
       case 'cutscene': {
         const entry = (index.pack.cutscenes as unknown as { id: string; document?: Json }[]).find(
@@ -331,9 +452,14 @@ function projectRun(state: ProfileState, rules: GameRules, contentIndex: Content
       location: scene.location,
       cast: [...scene.cast],
       presentation: scene.presentation,
+      props: { ...(scene.props ?? {}) },
     },
     background: backgroundAt(scene, run.cursor),
-    stage: run.stage.map((id) => ({ id, text: dirText(index, id) })),
+    stage: run.stage.map((id) => ({
+      id,
+      text: dirText(index, id),
+      actions: dirActions(index, id),
+    })),
     queue: head
       ? { line: line(head.line), source: head.source, remaining: run.queue.length }
       : null,
@@ -360,24 +486,30 @@ function projectRun(state: ProfileState, rules: GameRules, contentIndex: Content
   };
 }
 
-const dirTexts = new WeakMap<object, Map<string, string>>();
-function dirText(index: PackIndex, id: string): string {
-  let map = dirTexts.get(index.pack);
+type DirStep = Extract<Step, { t: 'dir' }>;
+const dirSteps = new WeakMap<object, Map<string, DirStep>>();
+function dirStep(index: PackIndex, id: string): DirStep | undefined {
+  let map = dirSteps.get(index.pack);
   if (!map) {
-    map = new Map();
-    const walk = (steps: readonly unknown[]) => {
-      for (const step of steps as { t: string; id?: string; text?: string }[]) {
-        if (step.t === 'dir' && step.id) map!.set(step.id, step.text ?? '');
-        for (const key of ['then', 'else', 'first', 'known'] as const) {
-          const nested = (step as Record<string, unknown>)[key];
-          if (Array.isArray(nested)) walk(nested);
-        }
+    const found = new Map<string, DirStep>();
+    const walk = (steps: readonly Step[]) => {
+      for (const step of steps) {
+        if (step.t === 'dir') found.set(step.id, step);
+        if (step.t === 'if') walk([...step.then, ...step.else]);
+        if (step.t === 'skill') walk([...step.first, ...step.known]);
       }
     };
     for (const scene of index.pack.scenes) walk(scene.steps);
-    dirTexts.set(index.pack, map);
+    dirSteps.set(index.pack, found);
+    map = found;
   }
-  return map.get(id) ?? '';
+  return map.get(id);
+}
+function dirText(index: PackIndex, id: string): string {
+  return dirStep(index, id)?.text ?? '';
+}
+function dirActions(index: PackIndex, id: string): readonly StageAction[] {
+  return dirStep(index, id)?.actions ?? [];
 }
 
 /**

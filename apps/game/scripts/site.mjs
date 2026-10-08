@@ -115,12 +115,15 @@ async function fixturePacks() {
  * Writes compiled content packs (from @fluffy/content) into their offline packs plus
  * content/index.json. Without C's packs, llowFixture uses the rule-test fixture (dev only).
  */
-export async function writeContent(out, { allowFixture }) {
+export async function writeContent(out, { allowFixture, production = false }) {
   let packs;
   if (existsSync(CONTENT_PACKS_DIR)) {
-    // Only the production pack list (PACK_IDS); preview packs for later stages are excluded.
+    // Released packs (PACK_IDS) only, unless `production` adds the stage in production
+    // (PRODUCTION_PACK_IDS; T30: unreleased cases never reach the published site). Preview packs never.
     const list = readFileSync(join(repoRoot, 'packages', 'content', 'src', 'packs.ts'), 'utf8');
-    const ids = JSON.parse(/PACK_IDS = (\[[^\]]*\])/.exec(list)?.[1] ?? '[]');
+    const listed = (name) =>
+      JSON.parse(new RegExp(`\\b${name} = (\\[[^\\]]*\\])`).exec(list)?.[1] ?? '[]');
+    const ids = [...listed('PACK_IDS'), ...(production ? listed('PRODUCTION_PACK_IDS') : [])];
     packs = readdirSync(CONTENT_PACKS_DIR)
       .filter((name) => ids.includes(name.replace(/\.json$/, '')))
       .map((name) => JSON.parse(readFileSync(join(CONTENT_PACKS_DIR, name), 'utf8')))
@@ -161,6 +164,7 @@ export function writeAssets(out) {
     sfx: {},
     files: {},
     documents: {},
+    soundClues: {},
   };
   if (existsSync(manifestPath)) {
     const manifest = JSON.parse(readFileSync(manifestPath, 'utf8'));
@@ -209,7 +213,12 @@ export function writeAssets(out) {
       const atlas = JSON.parse(readFileSync(join(out, index.assets[entry.atlas].url), 'utf8'));
       // Atlases name their image by file name; map it to the shipped asset.
       index.files[atlas.image] = index.assets[entry.atlasImage].url;
-      return { rigId: rig.id, documents: [entry.atlas, entry.rig] };
+      return {
+        rigId: rig.id,
+        documents: [entry.atlas, entry.rig],
+        // Accessory slots (hat, scarf pattern, …) the rig offers, for the shop's worn items.
+        slots: Object.keys(rig.slots ?? {}),
+      };
     };
     for (const [id, entry] of Object.entries(manifest.characters ?? {}))
       index.characters[id] = {
@@ -293,6 +302,23 @@ export function writeAssets(out) {
     for (const kind of ['music', 'sfx'])
       for (const [name, id] of Object.entries(manifest[kind] ?? {}))
         index[kind][name] = url(id, `${kind} ${name}`);
+    // Sound clues (Q31): A's index is the single source for the audio and its silent form. Each
+    // sample plays as sound effect `clue.<id>`; the wave and icons come along for the silent card.
+    const cluesPath = join(repoRoot, 'assets', 'sound-clues', 'index.json');
+    if (existsSync(cluesPath)) {
+      const clues = JSON.parse(readFileSync(cluesPath, 'utf8'));
+      for (const [id, sample] of Object.entries(clues.samples ?? {})) {
+        const audio = index.assets[`sound-clue.${id}`]?.url;
+        if (!audio) continue;
+        index.sfx[`clue.${id}`] = audio;
+        index.soundClues[id] = {
+          wave: index.assets[`sound-clue.${id}.wave`]?.url ?? null,
+          night: Boolean(sample.night),
+          icons: sample.icons ?? null,
+          rhythm: sample.rhythm ?? null,
+        };
+      }
+    }
   }
   mkdirSync(join(out, 'assets'), { recursive: true });
   writeFileSync(join(out, 'assets', 'index.json'), JSON.stringify(index) + '\n');

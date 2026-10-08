@@ -28,7 +28,7 @@ const ctx = await context(
           build.onEnd(async (result) => {
             if (result.errors.length) return;
             copyStatic(out);
-            await writeContent(out, { allowFixture: true });
+            await writeContent(out, { allowFixture: true, production: true });
             writeAssets(out);
             await finalizeSite(out, { base: '/', minify: false, channel: 'dev' });
             console.log('rebuilt');

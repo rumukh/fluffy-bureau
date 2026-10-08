@@ -35,6 +35,8 @@ export interface AssetManifest {
   >;
   music: Record<string, string>;
   sfx: Record<string, string>;
+  /** Sound clues (Q31) by sample ID: silent-form wave and icons; the audio is sfx `clue.<id>`. */
+  soundClues?: Record<string, SoundClue>;
   /** Files referenced by name inside documents (atlas images). */
   files: Record<string, string>;
   /** Animation documents by document ID: asset ID, format and (for rigs) atlas IDs. */
@@ -44,6 +46,8 @@ export interface AssetManifest {
 export interface PuppetDocuments {
   rigId: string;
   documents: string[];
+  /** Accessory slots the rig offers (avatar: hat, scarf pattern). */
+  slots?: string[];
 }
 
 export const EMPTY_MANIFEST: AssetManifest = {
@@ -58,6 +62,17 @@ export const EMPTY_MANIFEST: AssetManifest = {
   files: {},
   documents: {},
 };
+
+export interface SoundClue {
+  wave: string | null;
+  night: boolean;
+  icons: {
+    loud: 'quiet' | 'medium' | 'loud';
+    pitch: 'low' | 'middle' | 'high';
+    length: 'short' | 'long';
+  } | null;
+  rhythm: 'steady' | 'uneven' | 'continuous' | null;
+}
 
 export const LOGICAL = { width: 2560, height: 1600 } as const;
 export const SAFE = { x: 230, y: 80, width: 2100, height: 1440 } as const;
@@ -196,6 +211,16 @@ export class Assets {
     return all;
   }
 
+  /** A named hotspot of a background (U11), falling back to the location's backgrounds. */
+  backgroundHotspot(
+    background: string | null,
+    location: string,
+    id: string,
+  ): HotspotRect | undefined {
+    const own = background ? this.manifest.backgrounds[background]?.hotspots?.[id] : undefined;
+    return own ?? this.hotspots(location)[id];
+  }
+
   /** Hotspot for a menu option: exact ID, else a key that extends it (pirogovaya → pirogovaya-street). */
   hotspotFor(location: string, id: string): HotspotRect | undefined {
     const spots = this.hotspots(location);
@@ -255,6 +280,19 @@ export class Assets {
 
   avatarPuppet(species: string): PuppetDocuments | null {
     return this.manifest.avatar[species]?.puppet ?? null;
+  }
+
+  /**
+   * The accessory drawing a shop scarf pattern on one species. Null (nothing drawn) until A's
+   * overlays exist.
+   */
+  scarfPattern(species: string, asset: string): { slot: string; rig: string } | null {
+    // A's contract: shop `scarf.pattern.<name>` → rig `acc.scarf.<name>.<species>` in the avatar's
+    // `scarfPattern` slot (above the tinted scarf, own colours, never tinted).
+    const name = asset.split('.').pop() ?? asset;
+    const slot = this.avatarPuppet(species)?.slots?.find((s) => s === 'scarfPattern');
+    const rig = `acc.scarf.${name}.${species}`;
+    return slot && this.manifest.documents[rig] ? { slot, rig } : null;
   }
 
   music(name: string): string | null {

@@ -47,7 +47,12 @@ import {
   type AwaitAction,
   type Effects,
 } from './interpreter.js';
-import { createFluffyMinigames, lastFeedback, minigameDefinition } from './minigames.js';
+import {
+  createFluffyMinigames,
+  initialFeedback,
+  lastFeedback,
+  minigameDefinition,
+} from './minigames.js';
 import {
   DEFAULT_NAME,
   SCARVES,
@@ -62,10 +67,12 @@ import {
   type Species,
 } from './state.js';
 import { projectProfile, type GameView } from './view.js';
+import { buy, canAfford, itemOf, newRank, refund, seeRank, tea, wear } from './cozy.js';
 
 export const GAME_ID = 'fluffy-bureau';
 export const STATE_VERSION = 1;
 export const SHARED_PACK = 'shared';
+export const COZY_PACK = 'cozy';
 
 export type Mark = 'confirmed' | 'excluded' | 'unknown';
 
@@ -85,6 +92,13 @@ export type GameAction =
   | { type: 'version'; selection: Record<string, string> }
   | { type: 'lamp'; on: boolean }
   | { type: 'await'; action: AwaitAction }
+  | { type: 'tap'; hotspot: string }
+  | { type: 'buy'; item: string }
+  | { type: 'refund'; item: string }
+  | { type: 'wear'; item: string; on: boolean }
+  | { type: 'tea'; speaker: string }
+  | { type: 'office-next' }
+  | { type: 'rank-seen'; rank: string }
   | { type: 'decor'; item: string; slot: string }
   | { type: 'leave' }
   | { type: 'cutscene'; outcome: 'completed' | 'skipped' }
@@ -146,6 +160,13 @@ const actionSchema: Schema<GameAction> = schema.union(
       schema.literal('office.place'),
     ),
   }),
+  schema.object({ type: schema.literal('tap'), hotspot: id }),
+  schema.object({ type: schema.literal('buy'), item: id }),
+  schema.object({ type: schema.literal('refund'), item: id }),
+  schema.object({ type: schema.literal('wear'), item: id, on: schema.boolean }),
+  schema.object({ type: schema.literal('tea'), speaker: id }),
+  schema.object({ type: schema.literal('office-next') }),
+  schema.object({ type: schema.literal('rank-seen'), rank: id }),
   schema.object({ type: schema.literal('decor'), item: id, slot: id }),
   schema.object({ type: schema.literal('leave') }),
   schema.object({
@@ -165,6 +186,8 @@ export interface GameRules {
   registration: ContentRegistration<ContentIndex>;
   pack(index: ContentIndex, packId: string): PackIndex;
   shared(index: ContentIndex): PackIndex | undefined;
+  /** The «Уютный денёк» pack (Stage 2), if this build carries it. */
+  cozy(index: ContentIndex): PackIndex | undefined;
 }
 
 export function createRules(library: PackLibrary): GameRules {
@@ -194,6 +217,8 @@ export function createRules(library: PackLibrary): GameRules {
     pack: find,
     shared: (index) =>
       index.packs.some((p) => p.id === SHARED_PACK) ? find(index, SHARED_PACK) : undefined,
+    cozy: (index) =>
+      index.packs.some((p) => p.id === COZY_PACK) ? find(index, COZY_PACK) : undefined,
   };
 }
 
@@ -245,6 +270,25 @@ export function parseProfile(value: unknown, rules: GameRules, index: ContentInd
     return { item: d.item, slot: d.slot };
   });
   if (typeof value.lamp !== 'boolean') throw new Error('Bad lamp');
+  // Stage 2 fields: absent in Stage 1 saves (v0.1.0), which stay valid without migration.
+  const full: Record<string, unknown> = {
+    ...{ owned: [], pattern: null, teas: [], signal: null, ranksSeen: [], office: [] },
+    ...value,
+  };
+  if (full.pattern !== null && typeof full.pattern !== 'string') throw new Error('Bad pattern');
+  if (!Array.isArray(full.teas)) throw new Error('Bad teas');
+  const teas = full.teas.map((t) => {
+    if (!isRecord(t) || typeof t.speaker !== 'string' || typeof t.told !== 'number')
+      throw new Error('Bad teas');
+    return { speaker: t.speaker, told: t.told };
+  });
+  const signal =
+    full.signal === null
+      ? null
+      : stringList(full.signal, 8).map((s) => {
+          if (s !== 'dot' && s !== 'dash') throw new Error('Bad signal');
+          return s;
+        });
   const profile: ProfileState = {
     ...base,
     avatar: {
@@ -264,11 +308,17 @@ export function parseProfile(value: unknown, rules: GameRules, index: ContentInd
     collections: stringList(value.collections),
     completed: stringList(value.completed),
     lamp: value.lamp,
+    owned: stringList(full.owned),
+    pattern: full.pattern as string | null,
+    teas,
+    signal,
+    ranksSeen: stringList(full.ranksSeen),
+    office: stringList(full.office, 64),
     runs: count(value.runs),
     run: value.run === null ? null : parseRun(value.run, rules, index),
   };
   const keys = Object.keys(base).sort().join();
-  if (Object.keys(value).sort().join() !== keys) throw new Error('Unexpected profile fields');
+  if (Object.keys(full).sort().join() !== keys) throw new Error('Unexpected profile fields');
   return profile;
 }
 
@@ -423,6 +473,13 @@ export function createGameAdapter(
     },
   });
 
+  const requireCozy = (context: Ctx) => {
+    if (context.state.run) throw new Error('The cozy day is in the office, not during a case');
+    const cozy = rules.cozy(context.content.data as ContentIndex)?.pack.cozy;
+    if (!cozy) throw new Error('No cozy day in this build');
+    return cozy;
+  };
+
   const requireRun = (context: Ctx) => {
     const run = context.state.run;
     if (!run) throw new Error('No case is running');
@@ -446,6 +503,7 @@ export function createGameAdapter(
       `r${runs}:${run.pack}:${game.id}:${run.minigameCount}`,
       rules.registry,
     );
+    for (const line of initialFeedback(game.config)) run.queue.push({ line, source: 'feedback' });
   };
 
   const ensureNotebook = (run: RunState, index: PackIndex) => {
@@ -583,6 +641,12 @@ export function createGameAdapter(
       }
       if (next.status === 'completed' && next.result) {
         if (!context.claim(next.result.id)) throw new Error('Minigame result already consumed');
+        // D22: the child's own light signal (case 3, level 3) belongs to the profile.
+        const own = (next.progress as { own?: unknown }).own;
+        if (game.config.kind === 'light-signals' && Array.isArray(own) && own.length)
+          context.state.signal = own.filter(
+            (s): s is 'dot' | 'dash' => s === 'dot' || s === 'dash',
+          );
         run.flags.push(`minigame:${game.id}`);
         run.minigame = null;
         advance(context, run, index);
@@ -734,15 +798,68 @@ export function createGameAdapter(
       if (
         action.action.startsWith('avatar.') ||
         action.action.startsWith('lamp.') ||
-        action.action === 'office.place'
+        action.action === 'office.place' ||
+        action.action === 'hotspot'
       )
         throw new Error('This step is completed by its own command');
       resolveAwait(context, action.action, true);
     },
+    // U11: the child taps the named hotspot of the current background (e.g. the shed window).
+    tap: (context, action: { hotspot: string }) => {
+      const { run, index } = requireRun(context);
+      requireIdle(run);
+      const step = selectStep(currentStep(index, run), 'await');
+      if (step.action !== 'hotspot' || step.hotspot !== action.hotspot)
+        throw new Error('Nothing is waiting for this hotspot');
+      advance(context, run, index);
+    },
+    // «Уютный денёк» (T28, T29, D12): only in the office, never during a case.
+    buy: (context, action: { item: string }) => {
+      const cozy = requireCozy(context);
+      const profile = context.state;
+      const item = itemOf(cozy, action.item);
+      if (!canAfford(profile, item)) {
+        profile.office = [...cozy.lines.notEnough];
+        return;
+      }
+      buy(profile, cozy, action.item);
+      profile.office = [...cozy.lines.bought];
+    },
+    refund: (context, action: { item: string }) => {
+      const cozy = requireCozy(context);
+      refund(context.state, cozy, action.item);
+      context.state.office = [...cozy.lines.returned];
+    },
+    wear: (context, action: { item: string; on: boolean }) => {
+      wear(context.state, requireCozy(context), action.item, action.on);
+    },
+    tea: (context, action: { speaker: string }) => {
+      const cozy = requireCozy(context);
+      const profile = context.state;
+      const resident = cozy.residents.find((r) => r.speaker === action.speaker);
+      if (resident && profile.hearts < resident.teaPrice) {
+        profile.office = [...cozy.lines.notEnough];
+        return;
+      }
+      profile.office = tea(profile, cozy, action.speaker);
+    },
+    'office-next': (context) => {
+      if (!context.state.office.length) throw new Error('Nothing is playing');
+      context.state.office = context.state.office.slice(1);
+    },
+    'rank-seen': (context, action: { rank: string }) => {
+      const cozy = rules.cozy(context.content.data as ContentIndex)?.pack.cozy ?? null;
+      const rank = newRank(context.state, cozy);
+      if (!rank || rank.id !== action.rank || !cozy) throw new Error('No new rank');
+      seeRank(context.state, cozy, rank.id);
+    },
     decor: (context, action: { item: string; slot: string }) => {
       const profile = context.state;
-      if (!profile.rewards.includes(action.item)) throw new Error('Decoration not owned');
-      if (!(OFFICE_SLOTS as readonly string[]).includes(action.slot)) throw new Error('No slot');
+      if (!profile.rewards.includes(action.item) && !profile.owned.includes(action.item))
+        throw new Error('Decoration not owned');
+      const cozy = rules.cozy(context.content.data as ContentIndex)?.pack.cozy;
+      const slots = cozy ? cozy.decorSlots.map((s) => s.id) : [...OFFICE_SLOTS];
+      if (!slots.includes(action.slot)) throw new Error('No slot');
       profile.decor = profile.decor.filter((d) => d.item !== action.item && d.slot !== action.slot);
       profile.decor.push({ item: action.item, slot: action.slot });
       resolveAwait(context, 'office.place');
@@ -825,7 +942,12 @@ export function isUnlocked(profile: ProfileState, packId: string, index: Content
   if (!index.packs.some((p) => p.id === packId) || packId === SHARED_PACK) return false;
   if (packId === 'prologue') return true;
   const { caseId } = caseOfPack(packId);
-  if (caseId === 'case01') return profile.completed.includes('prologue');
+  const caseNumber = Number(/^case(\d\d)$/.exec(caseId)?.[1] ?? 0);
+  if (caseNumber === 1) return profile.completed.includes('prologue');
+  if (caseNumber >= 2 && caseNumber <= 4)
+    return [1, 2, 3].some((level) =>
+      profile.completed.includes(`case${String(caseNumber - 1).padStart(2, '0')}-l${level}`),
+    );
   return false;
 }
 

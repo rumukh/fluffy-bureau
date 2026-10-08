@@ -1,10 +1,12 @@
 // Game screen: stage, HUD, dialogue, choices, map hub, minigames, version check and notebook.
+import { renderOfficeTalk } from './cozy-ui.js';
 import type { GameView, LineView, RunView, StepView } from '@fluffy/game-core';
 import { OFFICE_SLOTS, SCARVES, SPECIES, isValidName } from '@fluffy/game-core';
 import type { App } from './app.js';
 import { rewardIcon } from './app.js';
 import { fallbackHotspots, LOGICAL, SCARF_COLORS, type HotspotRect } from './assets.js';
 import { append, button, focusFirst, h } from './dom.js';
+import { renderStage2Minigame } from './minigames-stage2.js';
 
 type Json = Record<string, unknown>;
 
@@ -40,9 +42,19 @@ function renderRest(app: App): HTMLElement {
 const MUSIC_BY_LOCATION: Record<string, string> = {
   office: 'title-office',
   'office-desk': 'title-office',
-  map: 'gentle-mystery',
   shed: 'heartfelt',
   bakery: 'celebration-baking',
+  map: 'town-map',
+  // Stage 2 (A's loops): dusk and the lighthouse, dreams, the tea party.
+  'honey-pond': 'dusk-lighthouse',
+  'pond-bank': 'dusk-lighthouse',
+  'pond-night': 'dusk-lighthouse',
+  'lighthouse-door': 'dusk-lighthouse',
+  'lighthouse-room': 'dusk-lighthouse',
+  'lighthouse-stairs': 'dusk-lighthouse',
+  'dream-mist': 'dreams',
+  'office-evening': 'heartfelt',
+  'tea-square': 'tea-party',
 };
 
 function playMusic(app: App, location: string, lamp: boolean): void {
@@ -57,6 +69,25 @@ function rewardSounds(app: App, view: GameView): void {
   app.ui.wallet = { buttons: view.buttons, hearts: view.hearts };
 }
 
+/** The avatar as the stage draws it, with the worn shop hat (an `acc.hat.*` rig, T29). */
+export function stageAvatar(view: GameView) {
+  const asset = (id: string | null) =>
+    view.cozy?.shop.find((item) => item.id === id)?.asset ?? null;
+  return {
+    species: view.avatar.species,
+    scarf: view.avatar.scarf,
+    name: view.avatar.name,
+    hat: asset(view.avatar.hat),
+    pattern: asset(view.pattern),
+  };
+}
+
+function slotLabel(app: App, view: GameView, slot: string): string {
+  return (
+    view.cozy?.decorSlots.find((s) => s.id === slot)?.label.text ?? t(app, `office.slot.${slot}`)
+  );
+}
+
 function renderOffice(app: App, view: GameView): HTMLElement {
   const presenter = app.presenter!;
   playMusic(app, 'office', view.lamp);
@@ -65,18 +96,25 @@ function renderOffice(app: App, view: GameView): HTMLElement {
     location: 'office',
     title: t(app, 'office.title'),
     cast: [],
-    avatar: { species: view.avatar.species, scarf: view.avatar.scarf, name: view.avatar.name },
+    avatar: stageAvatar(view),
     stage: [],
     comfort: view.lamp,
     reducedMotion: app.reducedMotion(),
     level: null,
   });
-  const decorItems = view.rewards.filter((r) => r.kind === 'decor');
+  // Decorations: case rewards plus shop purchases (T29); slots from the cozy pack when present.
+  const decorItems = [
+    ...view.rewards.filter((r) => r.kind === 'decor'),
+    ...(view.cozy?.shop ?? [])
+      .filter((item) => item.kind === 'decor' && item.owned)
+      .map((item) => ({ id: item.id, kind: 'decor', label: item.label })),
+  ];
+  const slotIds = view.cozy?.decorSlots.map((s) => s.id) ?? [...OFFICE_SLOTS];
   const unplaced = decorItems.filter((item) => !view.decor.some((d) => d.item === item.id));
   const slots = h(
     'div',
     { class: 'office-slots' },
-    ...OFFICE_SLOTS.map((slot) => {
+    ...slotIds.map((slot) => {
       const placed = view.decor.find((d) => d.slot === slot);
       const item = placed ? decorItems.find((r) => r.id === placed.item) : undefined;
       const pending = unplaced[0];
@@ -93,13 +131,13 @@ function renderOffice(app: App, view: GameView): HTMLElement {
           : pending
             ? button(
                 {
-                  label: `${t(app, 'office.place')}: ${t(app, `office.slot.${slot}`)}`,
+                  label: `${t(app, 'office.place')}: ${slotLabel(app, view, slot)}`,
                   key: `slot-${slot}`,
                   icon: '＋',
                 },
                 () => app.act({ type: 'decor', item: pending.id, slot }),
               )
-            : h('span', { class: 'empty-slot' }, t(app, `office.slot.${slot}`)),
+            : h('span', { class: 'empty-slot' }, slotLabel(app, view, slot)),
       );
     }),
   );
@@ -122,7 +160,18 @@ function renderOffice(app: App, view: GameView): HTMLElement {
     button({ label: t(app, 'pause.album'), key: 'office-album', icon: '⭐' }, () =>
       app.setOverlay('album'),
     ),
+    view.cozy && view.packs.some((p) => p.id === 'prologue' && p.completed)
+      ? button({ label: t(app, 'cozy.title'), key: 'office-cozy', icon: '🫖' }, () =>
+          app.setOverlay('cozy'),
+        )
+      : null,
+    view.notebookPages.length
+      ? button({ label: t(app, 'notebook.pages'), key: 'office-pages', icon: '📒' }, () =>
+          app.setOverlay('pages'),
+        )
+      : null,
   );
+  const talk = renderOfficeTalk(app, view);
   const node = h(
     'section',
     { class: 'game office' },
@@ -139,12 +188,12 @@ function renderOffice(app: App, view: GameView): HTMLElement {
       h(
         'p',
         { class: 'wallet' },
-        `${view.avatar.name} · ${t(app, view.rank)} · 🔘 ${view.buttons} · 💗 ${view.hearts}`,
+        `${view.avatar.name} · ${view.rankLine?.text ?? t(app, view.rank)} · 🔘 ${view.buttons} · 💗 ${view.hearts}`,
       ),
-      actions,
+      talk ?? actions,
     ),
   );
-  app.narrate('office', null);
+  if (!talk) app.narrate('office', null);
   queueMicrotask(() => {
     if (!document.activeElement || document.activeElement === document.body)
       focusFirst(node, '.primary');
@@ -163,8 +212,10 @@ function renderRun(app: App, view: GameView, run: RunView): HTMLElement {
     location: run.scene.location,
     title: run.scene.location,
     cast,
-    avatar: { species: view.avatar.species, scarf: view.avatar.scarf, name: view.avatar.name },
+    avatar: stageAvatar(view),
     stage: run.stage,
+    sceneId: run.scene.id,
+    props: run.scene.props,
     comfort: view.lamp,
     reducedMotion: app.reducedMotion(),
     level: run.level,
@@ -208,7 +259,9 @@ function renderRun(app: App, view: GameView, run: RunView): HTMLElement {
         spoken = minigamePrompt(app, step);
         break;
       case 'await':
-        panel.append(renderAwait(app, view, step.action));
+        if (step.action === 'hotspot' && step.hotspot)
+          panel.append(renderTapAwait(app, run, step.hotspot, overlayLayer));
+        else panel.append(renderAwait(app, view, step.action));
         break;
       case 'end':
         panel.append(renderEnd(app, view, run));
@@ -633,7 +686,7 @@ function renderAwait(app: App, view: GameView, action: string): HTMLElement {
           ...OFFICE_SLOTS.map((slot, index) => {
             const node = button(
               {
-                label: `${t(app, 'office.place')}: ${t(app, `office.slot.${slot}`)}`,
+                label: `${t(app, 'office.place')}: ${slotLabel(app, view, slot)}`,
                 key: `slot-${slot}`,
                 icon: '＋',
               },
@@ -658,6 +711,39 @@ function renderAwait(app: App, view: GameView, action: string): HTMLElement {
         ),
       );
   }
+}
+
+/**
+ * U11: «нажми на окно». The hotspot glows on the stage; the same action is a plain button in the
+ * panel (keyboard, screen readers, or a background without that rectangle).
+ */
+function renderTapAwait(
+  app: App,
+  run: RunView,
+  hotspot: string,
+  stageLayer: HTMLElement,
+): HTMLElement {
+  const label = t(app, `hotspot.${hotspot}`);
+  const tap = () => app.act({ type: 'tap', hotspot });
+  const rect = app.assets.backgroundHotspot(run.background, run.scene.location, hotspot);
+  if (rect)
+    stageLayer.append(
+      positioned(
+        button(
+          {
+            label,
+            key: `hs-${hotspot}`,
+            class: 'hotspot glow',
+            content: h('span', { class: 'label' }, label),
+          },
+          tap,
+        ),
+        rect,
+      ),
+    );
+  const primary = button({ label, key: 'await-tap', class: 'primary', icon: '👆' }, tap);
+  primary.dataset.primary = '';
+  return h('div', { class: 'await tap' }, primary);
 }
 
 // ---------------------------------------------------------------- end of a case
@@ -801,6 +887,12 @@ function renderMinigame(app: App, step: Extract<StepView, { kind: 'minigame' }>)
     case 'cocoa':
     case 'tracks': {
       const options = v.options as { id: string; label: string; tried?: boolean; off?: boolean }[];
+      const pageSize = Math.max(1, Math.min(3, Number(v.pageSize ?? 3)));
+      const pageKey = `mg-page-${step.id}-${step.game}-${String(v.step ?? v.round ?? 0)}`;
+      const maxPage = Math.max(0, Math.ceil(options.length / pageSize) - 1);
+      const page = Math.min(Math.max(0, Number(app.ui[pageKey] ?? 0)), maxPage);
+      app.ui[pageKey] = page;
+      const shown = options.slice(page * pageSize, page * pageSize + pageSize);
       if (step.game === 'cocoa')
         container.append(
           h('p', { class: 'progress' }, `☕ ${Number(v.round) + 1} / ${Number(v.rounds)}`),
@@ -810,7 +902,7 @@ function renderMinigame(app: App, step: Extract<StepView, { kind: 'minigame' }>)
         h(
           'div',
           { class: 'choices' },
-          ...options.map((option, index) => {
+          ...shown.map((option, index) => {
             const node = button(
               {
                 label: text(option.label),
@@ -828,6 +920,12 @@ function renderMinigame(app: App, step: Extract<StepView, { kind: 'minigame' }>)
               app.earButton(label(option.label), `ear-${option.id}`),
             );
           }),
+          options.length > pageSize
+            ? button({ label: t(app, 'hud.more'), key: `${pageKey}-more`, icon: '…' }, () => {
+                app.ui[pageKey] = (page + 1) % (maxPage + 1);
+                app.render();
+              })
+            : null,
         ),
       );
       break;
@@ -995,6 +1093,8 @@ function renderMinigame(app: App, step: Extract<StepView, { kind: 'minigame' }>)
       );
       break;
     }
+    default:
+      return renderStage2Minigame(app, step) ?? container;
   }
   return container;
 }
@@ -1224,7 +1324,9 @@ function renderCutscene(
     key: state.key,
     document: step.document as never,
     packId: run.pack,
-    avatar: { species: view.avatar.species, scarf: view.avatar.scarf },
+    avatar: (({ species, scarf, hat, pattern }) => ({ species, scarf, hat, pattern }))(
+      stageAvatar(view),
+    ),
     from: step.marker,
     onEvent: (event) => {
       if (app.ui.cutscene !== state) return;

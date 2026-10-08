@@ -26,6 +26,7 @@ import type { FluffyPack, GameAction, GameView, LineView, PackLibrary } from '@f
 import { Assets } from './assets.js';
 import { Voice } from './audio.js';
 import { button, focusFirst, h, setErrorSink } from './dom.js';
+import { renderCozy, renderPages } from './cozy-ui.js';
 import { createLabels, type Label, type LabelLookup } from './labels.js';
 import { Offline } from './offline.js';
 import { avatarFigure, createPresenter, type Presenter } from './presenter.js';
@@ -47,6 +48,8 @@ export type Overlay =
   | 'pause'
   | 'settings'
   | 'notebook'
+  | 'cozy'
+  | 'pages'
   | 'encyclopedia'
   | 'glossary'
   | 'album'
@@ -440,7 +443,8 @@ export class App {
     const host = this.session?.game.host;
     if (overlay && !this.overlay) {
       this.focusBookmark = rememberFocus(document);
-      if (overlay !== 'notebook') {
+      // The notebook and the cozy day act on the game, so they don't pause it.
+      if (overlay !== 'notebook' && overlay !== 'cozy') {
         host?.pause('user');
         this.voice.pause();
         this.presenter?.setPaused(true);
@@ -878,6 +882,10 @@ export class App {
         return { title: 'Родительский уголок', node: renderParentCorner(this, close) };
       case 'notebook':
         return { title: t('hud.notebook'), node: renderNotebook(this, close) };
+      case 'cozy':
+        return { title: t('cozy.title'), node: renderCozy(this, close) };
+      case 'pages':
+        return { title: t('notebook.pages'), node: renderPages(this, close) };
     }
   }
 
@@ -1005,19 +1013,48 @@ export class App {
     const t = (key: string) => this.labels(key).text;
     const view = this.view();
     const selected = Number(this.ui.level ?? 1) as 1 | 2 | 3;
-    const case01 = view?.packs.filter((p) => p.caseId === 'case01') ?? [];
-    const unlocked = case01.some((p) => p.unlocked);
+    const cases = [
+      ...new Set((view?.packs ?? []).map((p) => p.caseId).filter((id) => id !== 'prologue')),
+    ];
+    const selectedCase =
+      typeof this.ui.caseId === 'string' && cases.includes(this.ui.caseId)
+        ? this.ui.caseId
+        : (cases.find((id) => (view?.packs ?? []).some((p) => p.caseId === id && p.unlocked)) ??
+          'case01');
+    const levels = view?.packs.filter((p) => p.caseId === selectedCase) ?? [];
+    const unlocked = levels.some((p) => p.unlocked);
+    const title = levels[0]?.title?.text ?? t(`case.${selectedCase}`);
     return h(
       'div',
       { class: 'cases' },
       close(),
       h('h2', null, t('difficulty.title')),
-      h('p', { class: 'case-title' }, t('case.case01')),
+      h(
+        'div',
+        { class: 'choices case-tabs', role: 'tablist' },
+        ...cases.map((caseId) => {
+          const casePacks = view?.packs.filter((p) => p.caseId === caseId) ?? [];
+          const label = casePacks[0]?.title?.text ?? t(`case.${caseId}`);
+          return button(
+            {
+              label,
+              key: `case-${caseId}`,
+              pressed: selectedCase === caseId,
+              disabled: !casePacks.some((p) => p.unlocked),
+            },
+            () => {
+              this.ui.caseId = caseId;
+              this.render();
+            },
+          );
+        }),
+      ),
+      h('p', { class: 'case-title' }, title),
       h(
         'div',
         { class: 'choices', role: 'radiogroup', 'aria-label': t('difficulty.title') },
         ...([1, 2, 3] as const).map((level) => {
-          const pack = case01.find((p) => p.level === level);
+          const pack = levels.find((p) => p.level === level);
           return button(
             {
               label: `${t(`difficulty.${level}`)}. ${t(`difficulty.${level}.desc`)}`,
@@ -1043,7 +1080,7 @@ export class App {
         { label: t('difficulty.start'), key: 'case-start', class: 'primary', disabled: !unlocked },
         async () => {
           await this.setOverlay(null);
-          await this.act({ type: 'start', pack: `case01-l${selected}` });
+          await this.act({ type: 'start', pack: `${selectedCase}-l${selected}` });
         },
       ),
     );

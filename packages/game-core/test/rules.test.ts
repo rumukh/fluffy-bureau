@@ -44,10 +44,10 @@ describe('rules', () => {
   it('prologue: avatar input, name substitution and the never-auto-advancing flow', async () => {
     const game = await play([{ type: 'start', pack: 'prologue' }]);
     let run = await skipLines(game);
-    expect(run.step).toEqual({ kind: 'await', action: 'avatar.species' });
+    expect(run.step).toEqual({ kind: 'await', action: 'avatar.species', hotspot: null });
     requireValue(await game.host.dispatch({ type: 'avatar.species', value: 'fox' }));
     run = await skipLines(game);
-    expect(run.step).toEqual({ kind: 'await', action: 'avatar.name' });
+    expect(run.step).toEqual({ kind: 'await', action: 'avatar.name', hotspot: null });
     expect((await game.host.dispatch({ type: 'avatar.name', value: 'Ася Петрова' })).ok).toBe(
       false,
     );
