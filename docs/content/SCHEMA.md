@@ -10,7 +10,7 @@
 | `content/` | Authored sources (TypeScript, type-checked). Never edited by other workstreams. |
 | `tools/content/build.ts` | Compiler + validator. `node tools/content/build.ts` writes outputs; `--check` also fails when committed outputs are stale. Exit code 1 on any validation error. |
 | `packages/content/packs/<id>.json` | Compiled packs: `shared`, `prologue`, `case01-l1`, `case01-l2`, `case01-l3`; preparatory `case02-l1` … `case08-l3` (C2) once added. |
-| `packages/content/src/index.ts` | `@fluffy/content`: types, `packs`, `PACK_IDS` (Stage 1), `PREVIEW_PACK_IDS` (C2, not for production before «дальше»). |
+| `packages/content/src/index.ts` | `@fluffy/content`: types, `packs`, `PACK_IDS` (released: Stage 1 and Stage 2), `PRODUCTION_PACK_IDS` (the Stage 2 part of `PACK_IDS`), `PREVIEW_PACK_IDS` (cases 5–8, not for production before «дальше»). |
 | `packages/content/voice-manifest.json` | Voice and label manifest for Stage 1 (A). |
 | `docs/content/scripts/<pack>.md` | Explicit per-variant scripts for PM review (generated). |
 | `docs/content/CHANGELOG_RU.md` | Every textual change: before → after, reason, R/T/D reference (generated from sources). |
@@ -123,8 +123,8 @@ Types: `packages/content/src/schema.ts`; checks: `tools/content/kinds.ts`. Every
 
 ### Pack tiers and asset requests
 
-- `PACK_IDS`: released (Stage 1); every referenced asset must exist.
-- `PRODUCTION_PACK_IDS`: Stage 2 (cases 2–4, `cozy`); assets A has not delivered are listed in `docs/content/ASSET_REQUESTS.md` and reported as `ASSET-PENDING` warnings; G shows placeholders.
+- `PACK_IDS`: released and shipped by the release build (T30): Stage 1 and Stage 2 (cases 2–4, `cozy`) since v0.2.0; every referenced asset must exist.
+- `PRODUCTION_PACK_IDS`: the Stage 2 packs (cases 2–4, `cozy`), a subset of `PACK_IDS`. They are strict now that A has delivered every asset. While a stage is in production, `PRODUCTION_STRICT = false` in `tools/content/build.ts` lists undelivered assets in `docs/content/ASSET_REQUESTS.md` as `ASSET-PENDING` warnings, and G shows placeholders.
 - `PREVIEW_PACK_IDS`: cases 5–8; not produced before the next «дальше».
 - Voice: `voice-manifest.json` covers released + production packs (A records these); `voice-manifest.stage2-preview.json` covers preview packs.
 
