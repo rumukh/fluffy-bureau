@@ -256,6 +256,9 @@ def main():
                 report.append({"id": e["id"], "want": e["ttsText"], "heard": r.get("display", "")})
         index["lines"][e["id"]] = rec
         print(f"[{n}/{len(entries)}] {e['id']} {voice} {dur:.2f}s {lufs:.1f} LUFS", flush=True)
+        if n % 50 == 0:  # checkpoint so an interrupted run resumes without re-encoding
+            index_path.parent.mkdir(parents=True, exist_ok=True)
+            index_path.write_text(json.dumps(index, ensure_ascii=False, indent=1), encoding="utf-8", newline="\n")
     for e in same:
         src = index["lines"].get(e["sameAudioAs"])
         if not src:

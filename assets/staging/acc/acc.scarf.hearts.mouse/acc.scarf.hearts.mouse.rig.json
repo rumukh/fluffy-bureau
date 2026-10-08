@@ -1,0 +1,33 @@
+{
+ "format": "aegis-rig/1",
+ "id": "acc.scarf.hearts.mouse",
+ "revision": "1",
+ "atlases": [
+  "acc.scarf.hearts.mouse.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -82.5,
+  "y": -40.68,
+  "width": 165,
+  "height": 203
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 82.5,
+    "y": 40.68
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "frame": "acc.scarf.hearts.mouse.atlas#body.rest"
+  }
+ ]
+}

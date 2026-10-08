@@ -1,0 +1,33 @@
+{
+ "format": "aegis-rig/1",
+ "id": "acc.hat.top",
+ "revision": "1",
+ "atlases": [
+  "acc.hat.top.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -150.0,
+  "y": -191.2,
+  "width": 300,
+  "height": 225
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 150.0,
+    "y": 191.2
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "frame": "acc.hat.top.atlas#body.rest"
+  }
+ ]
+}

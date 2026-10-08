@@ -126,3 +126,58 @@ G регистрирует эффекты по кадрам атласа:
 node <aegis-engine>\packages\browser\bin\aegis-animation.mjs validate `
   assets\characters assets\avatar assets\staging <папка с роликами>
 ```
+
+
+## 10. Этап 2 (дела 2–4)
+
+### Актёры
+
+| Rig ID | Кто | Рост в сцене, px | Выражения |
+|---|---|---|---|
+| `damka` | бобриха Дамка, инженер и смотритель маяка | ≈ 690 | neutral, surprised, worried, happy |
+| `pukhlik` | совёнок Пухлик, ночной стажёр | ≈ 370 | то же |
+
+Части и клипы те же, что у остальных (`body`, `head`, `eyes`, `brows`, `mouth`; `nod`, `cheer`,
+`bow`, `shrug-shy`, `look-around`). Пухлик невысокий: ставьте его на пол (y ≈ 1450) или на
+предмет; для полёта подходит `hover`.
+
+### Пропы (ID из ASSET_REQUESTS C)
+
+| Rig ID | Что | Опорная точка |
+|---|---|---|
+| `prop.badge-letters-saved`, `prop.badge-beacon`, `prop.badge-jam-c4` | значки дел 2, 3, 4 | центр |
+| `prop.sticker-letters-1..3`, `prop.sticker-beacon-1..3`, `prop.sticker-jam-c4-1..3` | стикеры в альбом с 1–3 ★ | центр |
+| `prop.c2-cipher-poster` | плакат шифра (буквы и кнопки) | центр |
+| `prop.c2-dry-letters`, `prop.c2-letter-garland`, `prop.c2-magpie-nest` | сухие письма, гирлянда писем (ширина 1600), гнездо Стеллы | низ / центр / низ |
+| `prop.chamomile-note`, `prop.note-khvosts` | записка с ромашкой, записка Хвостса | центр |
+| `prop.firefly-lamp`, `prop.firefly-lantern` | лампа-звёздочка, фонарь светлячков | низ |
+| `prop.light-code-book`, `prop.light-signal-strip` | книга «Азбука огоньков», полоса сигналов | центр |
+| `prop.map-honey-lighthouse` | маяк для карты | низ |
+| `prop.paddle-repaired` | починенное весло | центр |
+| `prop.fact-cards-c3` | карточки фактов (светлячок, летучая мышь, сова) | центр |
+| `prop.empty-jam-jar`, `prop.jam-jar-c4`, `prop.jam-jars-c4` | пустая банка, банка с бантом, двенадцать банок | низ |
+| `prop.notebook-secret-notes` | тетрадь секретных записей | центр |
+| `prop.tea-table-c4` | длинный стол чаепития с самоваром (ширина 1500) | низ |
+
+### Фоны
+
+| ID | Локация | Для чего |
+|---|---|---|
+| `bg.post-office` | post-office | хаб дела 2: доска с пуговицами слева, часы, круглое окно |
+| `bg.post-porch`, `bg.post-clock` | post-porch, post-clock | крыльцо после ветра (лупа), почтовые часы |
+| `bg.library-door` | library-door | библиотека «Тихая нора» и дверка Шуршиков |
+| `bg.old-oak` | old-oak | гнездо высоко справа (x ≈ 1680–2020, y ≈ 40–340), дупло внизу у корней (x ≈ 1520–1780) |
+| `bg.town-square` | town-square | Выставка писем под дубом (дело 2) |
+| `bg.lamp-booth` | lamp-booth | будка фонарщика на рассвете |
+| `bg.office-evening`, `bg.office-diary` | office-evening, office-diary | Контора вечером, стол Ватсони вечером |
+| `bg.honey-pond`, `bg.pond-bank`, `bg.pond-night` | honey-pond, pond-bank, pond-night | пруд в сумерках с маяком (маяк x ≈ 1420–1560), берег, ночь для «Азбуки огоньков» |
+| `bg.lighthouse-door`, `bg.lighthouse-room`, `bg.lighthouse-stairs` | одноимённые | дверь и лодка, комната фонаря, нижние ступени |
+| `bg.mayor-cellar`, `bg.mayor-cellar-shelves`, `bg.cellar-steps`, `bg.mayor-cellar-entrance` | одноимённые | погреб мэра, полка с банками, ступени, вход в погреб |
+| `bg.mayor-yard-carts` | mayor-yard-carts | двор ратуши с мягкой землёй |
+| `bg.office-pantry` | office-pantry | кладовка Конторы с двенадцатью банками |
+| `bg.town-square-tea` | tea-square | площадь с длинным столом (дело 4) |
+| `bg.dream-mist` | dream-mist | туманный фон для карточек снов |
+
+### Музыка
+
+`music.dusk-lighthouse` (дело 3), `music.dreams` и `music.tea-party` (дело 4), у каждой есть `-warm`.

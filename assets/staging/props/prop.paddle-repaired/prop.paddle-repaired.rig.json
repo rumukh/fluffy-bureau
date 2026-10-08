@@ -1,0 +1,33 @@
+{
+ "format": "aegis-rig/1",
+ "id": "prop.paddle-repaired",
+ "revision": "1",
+ "atlases": [
+  "prop.paddle-repaired.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -260.0,
+  "y": -270.0,
+  "width": 520,
+  "height": 540
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 260.0,
+    "y": 270.0
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "frame": "prop.paddle-repaired.atlas#body.rest"
+  }
+ ]
+}

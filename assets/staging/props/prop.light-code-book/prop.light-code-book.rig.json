@@ -1,0 +1,33 @@
+{
+ "format": "aegis-rig/1",
+ "id": "prop.light-code-book",
+ "revision": "1",
+ "atlases": [
+  "prop.light-code-book.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -210.0,
+  "y": -132.5,
+  "width": 420,
+  "height": 265
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 210.0,
+    "y": 132.5
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "frame": "prop.light-code-book.atlas#body.rest"
+  }
+ ]
+}

@@ -1,0 +1,16 @@
+{
+ "format": "aegis-atlas/1",
+ "id": "prop.tea-table-c4.atlas",
+ "image": "prop.tea-table-c4.atlas.webp",
+ "width": 2048,
+ "height": 2048,
+ "scale": 1,
+ "frames": {
+  "body.rest": {
+   "x": 2,
+   "y": 2,
+   "w": 1500,
+   "h": 1193
+  }
+ }
+}

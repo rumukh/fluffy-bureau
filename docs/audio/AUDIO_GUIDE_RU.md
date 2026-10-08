@@ -1,6 +1,6 @@
 # Звук «Пушистого бюро»: голоса, музыка, эффекты
 
-**Версия:** 1, 8 октября 2026 года. **Ответственный:** workstream A.
+**Версия:** 2, 9 октября 2026 года (Этап 2: дела 2–4). **Ответственный:** workstream A.
 **Основа:** T06, T08, T19, Q22, Q28–Q31, план 5.4.
 
 ## 1. Голоса
@@ -10,7 +10,9 @@
   `ttsText`, `delivery`, `speaker`. `{имя}` уже заменено на «пушинка» (Q28).
 - Ударения: подсказки C (`lexicon.hint`) переводятся в МФА в
   `tools/assets/voice/lexicon.json` и подставляются тегом `<phoneme>`. Все выбранные
-  голоса прошли «часовую» проверку: МФА действительно читается.
+  голоса прошли «часовую» проверку: МФА действительно читается. МФА задаётся только для
+  имён и редких слов: для обычных слов (например, «Медовый») он портит произношение, и
+  голоса сами ставят ударение верно. Исключение — «маяк»: без подсказки и со слитной МФА он звучит как «мейк» или «майк», поэтому в словаре МФА со слоговой границей (`mɐ.ˈja.kʲɪ`).
 - Роли и настройки голоса: `tools/assets/voice/casting.json`; проба —
   `docs/audio/AUDITION_RU.md`.
 
@@ -25,6 +27,8 @@
 | Стелла | es-ES-XimenaMultilingualNeural | +8 % / +8 % |
 | Фитилёк | en-US-FableTurboMultilingualNeural | +16 % / +6 % |
 | Мышата | zh-CN-XiaoyouMultilingualNeural | +6 % / +4 % |
+| Дамка (Этап 2) | en-GB-AdaMultilingualNeural | 0 % / 0 % |
+| Пухлик (Этап 2) | en-US-CoraMultilingualNeural | +14 % / −4 % |
 
 `delivery` из манифеста добавляет сдвиг высоты и темпа (`casting.json`, раздел
 `delivery`): например, `sad` — ниже и медленнее, `shy` — тише.
@@ -44,7 +48,7 @@
 - `assets/voice/index.json` — по каждой реплике: `id`, `revision`, `ttsHash`,
   `speaker`, `voice`, `file`, `cues`, `durationMs`, `lufs`, `provenance`. Реплики с
   `sameAudioAs` ссылаются на тот же файл.
-- `<pack>` — офлайн-пакет: `shell` (общий интерфейс), `prologue`, `case01`.
+- `<pack>` — офлайн-пакет: `shell` (общий интерфейс), `prologue`, `case01`–`case04`.
 - Громкость: −18 LUFS, пик не выше −1,5 dBTP.
 
 ### Проверка
@@ -63,7 +67,7 @@ C:\AI\SpeechProduction\.venv\Scripts\python.exe tools\assets\voice\synth.py `
 
 ## 2. Музыка
 
-Шесть бесшовных петель и шесть тёплых вариантов для «Лампы смелости»
+Девять бесшовных петель (шесть с Этапа 1 и три с Этапа 2) и девять тёплых вариантов для «Лампы смелости»
 (`assets/music/*.mp3`, `assets/music/index.json`). Сочиняются программно
 (`tools/assets/audio/music.py`): пиццикато (Карплус–Стронг), деревянный ксилофон,
 челеста, мягкое пианино, пэд и низкое «урчание». Локальный ACE-Step в момент работы
@@ -78,6 +82,11 @@ C:\AI\SpeechProduction\.venv\Scripts\python.exe tools\assets\voice\synth.py `
 | `gentle-mystery` | задумчивые места, загадка (не страшно) | 72 |
 | `heartfelt` | «Чашка какао», извинения, финальные слова | 66 |
 | `celebration-baking` | «Пекарь», награда | 116 |
+| `dusk-lighthouse` | сумерки у Медового пруда, маяк (дело 3) | 76 |
+| `dreams` | сны, «Угадай сон» (дело 4) | 64 |
+| `tea-party` | Большое чаепитие (дело 4) | 108 |
+
+На Этапе 2 ACE-Step снова был занят другой задачей, и петли опять сочинены программно.
 
 - Тёплый вариант (`-warm`): на 6 % медленнее, без ярких обертонов и щелчков, больше
   пэда и «урчания». G переключает петли плавным перекрёстным затуханием.
@@ -111,3 +120,20 @@ C:\AI\SpeechProduction\.venv\Scripts\python.exe tools\assets\voice\synth.py `
 
 **Без звука (T19):** каждый звук-подсказка имеет визуальный двойник (искорка,
 подсветка, анимация) — это делает G. В деле №1 нет улик, которые слышны только ухом.
+
+## 4. Звуки-улики (дело 3, «Ракушка-записушка»; Q31, T19)
+
+`tools/assets/audio/sound_clues.py` синтезирует 13 звуков (CC0), ID согласованы с C:
+`door-creak`, `hammer-knock`, `lamp-shutter`, `magpie-wings`, `night-click`, `night-drops`,
+`night-rustle`, `pages`, `reeds-rustle`, `roof-drops`, `wind-reeds`, `wing-rustle`, `woodpecker`.
+
+Каждый звук имеет беззвучную форму (договорено с G): в `assets/sound-clues/index.json` есть
+`file` (MP3), `wave` (SVG-волна), `label` (подпись), `night`, `envelope` (96 значений
+громкости для анимации), `icons` (`loud`: quiet/medium/loud, `pitch`: low/middle/high,
+`length`: short/long), `rhythm` (steady/uneven) и `lufs`. Значки вычислены из самого звука
+(громкость по LUFS, высота по спектральному центроиду), поэтому ребёнок без звука сравнивает
+те же признаки, что и на слух. Значки — в UI-ките (`icon.sound-*`, `icon.pitch-*`,
+`icon.length-*`, `icon.rhythm-*`).
+
+Для «Азбуки огоньков» есть `icon.signal-dot`, `icon.signal-dash`, `icon.lantern-on/off` и
+полоса сигналов `light-signal-strip`; звука там нет, всё видно глазами.

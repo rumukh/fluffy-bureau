@@ -1,0 +1,16 @@
+{
+ "format": "aegis-atlas/1",
+ "id": "acc.hat.top.atlas",
+ "image": "acc.hat.top.atlas.webp",
+ "width": 512,
+ "height": 256,
+ "scale": 1,
+ "frames": {
+  "body.rest": {
+   "x": 2,
+   "y": 2,
+   "w": 300,
+   "h": 225
+  }
+ }
+}
