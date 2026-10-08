@@ -5,8 +5,9 @@ new minigames, notebook pages, the family «Хранитель снов» (T31),
 returns, decorations, tea party with residents' stories; T28, T29), ranks (D12), stage-direction
 actions (U10) and the «нажми на окно» beat (U11). **Build:** `npm run build -- --production`
 (PRODUCTION_PACK_IDS; the published site keeps only released packs until v0.2.0, T30). AEGIS SDK
-`17ed4bebd329`; content from C (`rumukh-fluffy-content-stage2`); art and audio from A (Stage 1 set plus
-the Stage 2 batches as they land).
+`17ed4bebd329`; content from C (PR #8, `rumukh-fluffy-content-stage2` at 031d2c2); art and audio
+from A (PR #11, 979e896: Дамка and Пухлик puppets, case 2–4 backgrounds, props, dream cards, cipher
+kit, sound clues, shop items with scarf-pattern overlays, music, 1,453 voice recordings with mouth cues).
 
 ## Verdict
 
@@ -14,12 +15,12 @@ the Stage 2 batches as they land).
 |---|---|
 | Rules, minigames, saves, privacy, accessibility (automated) | **Technically ready** — evidence below |
 | Cases 2–4 content (C) | **Integrated** — 9 variants trace end to end |
-| Case 2–4 art, voices, music (A) | **Partly integrated** — A's case 2 cipher kit (69 button pictures) and case 3 sound clues with silent forms (13 samples, waves, icons) are in; the rest (dream cards, new backgrounds and puppets, case 2–4 voices, music) shows neutral placeholders and text. Content check: 193 pending asset IDs (`docs/content/ASSET_REQUESTS.md`) |
+| Case 2–4 art, voices, music (A) | **Integrated** — every requested asset is in: content check reports **0 pending assets** |
 | Family mode with real players (T31) and child playtest (T15) | **Pending the family** |
 | Physical iPad / Android tablet | **Pending the family** |
 
-Stage 2 is **technically complete** in the runtime and **blocked** on A's remaining Stage 2 assets and
-the human checks.
+Stage 2 is **technically complete** with all content, art and voices, and is blocked only on the
+human checks (family session, child playtest, devices), as Stage 1 was.
 
 ## How to reproduce
 
@@ -97,20 +98,19 @@ inside a scene (`dir.background`), so the shed-window close-up only appeared wit
 
 ## Last full run
 
-2026-10-08, Windows, Node 25.6.0: content check 0 errors (193 pending assets); **122 unit tests**
-(Stage 1 and Stage 2 traces, cozy rules, sessions, content tools); production build; **50 E2E tests**
-(25 Chromium + 25 WebKit, 33.9 min). One WebKit offline run hit a skip-button race (the intro ended
-on its own mid-click); the player now tolerates it and the spec passes. After merging A's ce40ba4,
-the Stage 2 and office specs were re-run in both browsers (10/10).
+2026-10-08, Windows, Node 25.6.0, final tree (C 031d2c2, A 979e896): `npm run verify` — content check
+0 errors, **0 pending assets**, 0 stale; **122 unit tests** (Stage 1 and Stage 2 traces, cozy rules,
+sessions, content tools); production build; **50/50 E2E tests** (25 Chromium + 25 WebKit, 38.7 min).
+The same suite also passed 50/50 on A's d0d62be. One earlier WebKit offline run hit a
+skip-button race (the intro ended on its own mid-click); the player now tolerates it.
 
 ## Known gaps and follow-ups
 
-1. **A's Stage 2 assets** are partly pending. Missing ones are shown as placeholders: dream cards
-   show a neutral card with the text, missing voices show text with the «только текст» note, and
-   unknown backgrounds use the location fallback. Count: C's `docs/content/ASSET_REQUESTS.md`.
-2. **Scarf patterns** (shop) are owned, worn and returned in the rules, but the stage can't show
-   them: the avatar rig has only a scarf tint. A pattern variant from A (or E support for a tinted
-   pattern overlay) is needed. Hats are drawn (`acc.hat.*` in the avatar's hat slot).
-3. Tea-party music (`tea-square`) uses the bakery celebration loop until A's loop lands.
+1. **Scarf patterns** are drawn by A's overlays (`acc.scarf.<pattern>.<species>` in the avatar's
+   `scarfPattern` slot, untinted above the tinted scarf); hats in the `hat` slot. Both are asserted on
+   E's stage in `office.spec.ts`.
+2. Music follows the new locations (dusk and lighthouse, dreams, tea party, town map).
+3. Stage 2 packs ship to players only at v0.2.0: the release build still uses `PACK_IDS` until C
+   moves cases 2–4 there (T30).
 4. Family mode needs a real family session (T15) to judge the handoff wording and timing.
 5. Human playtest and device checks (T15) remain pending, as for Stage 1.
