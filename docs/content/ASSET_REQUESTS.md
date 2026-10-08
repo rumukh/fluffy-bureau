@@ -4,24 +4,6 @@
 
 Ассеты, на которые ссылаются производственные пакеты Этапа 2 (дела 2–4, «Уютный денёк»), но которых ещё нет в `assets/`. Пока список не пуст, сборка показывает их как ожидаемые; после поставки A проверка становится строгой.
 
-## audio
-
-| ID | Пакеты | Где |
-|---|---|---|
-| `door-creak` | case03-l1, case03-l2, case03-l3 | c3l1-sound; c3l2-sound; c3l3-sound |
-| `hammer-knock` | case03-l2, case03-l3 | c3l2-sound; c3l3-sound |
-| `lamp-shutter` | case03-l1, case03-l2, case03-l3 | c3l1-sound; c3l2-sound; c3l3-sound |
-| `magpie-wings` | case03-l1, case03-l2 | c3l1-sound; c3l2-sound |
-| `night-click` | case03-l1, case03-l2, case03-l3 | c3l1-sound; c3l2-sound; c3l3-sound |
-| `night-drops` | case03-l2, case03-l3 | c3l2-sound; c3l3-sound |
-| `night-rustle` | case03-l1, case03-l2, case03-l3 | c3l1-sound; c3l2-sound; c3l3-sound |
-| `pages` | case03-l1, case03-l2, case03-l3 | c3l1-sound; c3l2-sound; c3l3-sound |
-| `reeds-rustle` | case03-l3 | c3l3-sound |
-| `roof-drops` | case03-l2, case03-l3 | c3l2-sound; c3l3-sound |
-| `wind-reeds` | case03-l1, case03-l2 | c3l1-sound; c3l2-sound |
-| `wing-rustle` | case03-l3 | c3l3-sound |
-| `woodpecker` | case03-l1, case03-l2, case03-l3 | c3l1-sound; c3l2-sound; c3l3-sound |
-
 ## background
 
 | ID | Пакеты | Где |
