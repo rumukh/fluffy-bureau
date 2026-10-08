@@ -168,6 +168,51 @@ def scarf_mask_of(base: Image.Image, spec: dict, folder: Path) -> Image.Image:
     img = ImageChops.multiply(img, base.getchannel("A").point(lambda v: 255 if v > 0 else 0))
     return img.filter(ImageFilter.GaussianBlur(0.8))
 
+def skyline_pack(sizes: dict[str, tuple[int, int]], width: int) -> dict[str, tuple[int, int]]:
+    """Bottom-left skyline packing; sizes include padding. Returns top-left positions."""
+    sky = [(0, width, 0)]  # segments (x, w, y)
+    out = {}
+    for key in sorted(sizes, key=lambda k: (-sizes[k][1], -sizes[k][0])):
+        w, h = sizes[key]
+        best = None
+        for i in range(len(sky)):
+            x = sky[i][0]
+            if x + w > width:
+                break
+            y, span, j = 0, 0, i
+            while span < w:
+                y = max(y, sky[j][2])
+                span += sky[j][1]
+                j += 1
+                if j == len(sky) and span < w:
+                    break
+            if span < w:
+                continue
+            if best is None or (y, x) < (best[0], best[1]):
+                best = (y, x)
+        y, x = best
+        out[key] = (x, y)
+        new = []
+        for sx, sw, sy in sky:
+            if sx + sw <= x or sx >= x + w:
+                new.append((sx, sw, sy))
+                continue
+            if sx < x:
+                new.append((sx, x - sx, sy))
+            if sx + sw > x + w:
+                new.append((x + w, sx + sw - x - w, sy))
+        new.append((x, w, y + h))
+        new.sort()
+        merged = []
+        for seg in new:
+            if merged and merged[-1][2] == seg[2] and merged[-1][0] + merged[-1][1] == seg[0]:
+                merged[-1] = (merged[-1][0], merged[-1][1] + seg[1], seg[2])
+            else:
+                merged.append(seg)
+        sky = merged
+    return out
+
+
 def bbox_of(ellipses, pad=4):
     return (int(min(e[0] - e[2] for e in ellipses) - pad), int(min(e[1] - e[3] for e in ellipses) - pad),
             int(max(e[0] + e[2] for e in ellipses) + pad), int(max(e[1] + e[3] for e in ellipses) + pad))
@@ -249,21 +294,20 @@ def assemble(cfg: dict, out_dir: Path, scale: float) -> None:
         if feat == "mouth" and "A" not in sources:
             raise ValueError("mouth needs A")
 
-    # Pack atlas (simple shelf packer, 2 px padding, no rotation).
+    # Pack atlas (skyline bottom-left, 2 px padding, no rotation); try several widths, keep the smallest area.
     scaled = {k: (v.resize((max(1, round(v.width * scale)), max(1, round(v.height * scale))), Image.LANCZOS) if scale != 1 else v)
               for k, v in frames.items()}
-    atlas_w = 2048
-    order = sorted(scaled, key=lambda k: -scaled[k].height)
-    pos, cx, cy, row_h = {}, 2, 2, 0
-    for k in order:
-        im = scaled[k]
-        if cx + im.width + 2 > atlas_w:
-            cx, cy, row_h = 2, cy + row_h + 4, 0
-        pos[k] = (cx, cy)
-        cx += im.width + 4
-        row_h = max(row_h, im.height)
-    atlas_h = cy + row_h + 2
-    atlas_h = 1 << (atlas_h - 1).bit_length()
+    best = None
+    for atlas_w in (512, 640, 768, 896, 1024, 1152, 1280, 1536, 2048):
+        if max(im.width for im in scaled.values()) + 4 > atlas_w:
+            continue
+        packed = skyline_pack({k: (im.width + 4, im.height + 4) for k, im in scaled.items()}, atlas_w)
+        h = max(y + scaled[k].height + 4 for k, (x, y) in packed.items())
+        h = (h + 3) // 4 * 4
+        if best is None or atlas_w * h < best[0] * best[1]:
+            best = (atlas_w, h, packed)
+    atlas_w, atlas_h, packed = best
+    pos = {k: (x + 2, y + 2) for k, (x, y) in packed.items()}
     if atlas_h > 4096:
         raise ValueError(f"atlas too tall: {atlas_h}")
     atlas = Image.new("RGBA", (atlas_w, atlas_h), (0, 0, 0, 0))

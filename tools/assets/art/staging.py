@@ -216,6 +216,17 @@ def write_props() -> dict[str, list[str]]:
     puppet("prop.sticker-pie", {"1": stars(sticker, 1), "2": stars(sticker, 2), "3": stars(sticker, 3)}, "1",
            OUT / "props" / "prop.sticker-pie", "center", "stars")
     sources["prop.sticker-pie"] = ["props/sticker-pie.png"]
+    # Single-state rigs for cutscene swaps: a cutscene `pose` clip reverts its variant when it ends, so
+    # a persistent state change is an exit/enter of the matching rig at the same point.
+    for n in (1, 2, 3):
+        rid = f"prop.sticker-pie-{n}"
+        puppet(rid, {"rest": stars(sticker, n)}, "rest", OUT / "props" / rid, "center")
+        sources[rid] = ["props/sticker-pie.png"]
+    closed = fit(trimmed(pick("props/pie-box-closed.png")), width=320)
+    opened = fit(trimmed(pick("props/box-pie-open.png")), width=340)
+    for rid, im in (("prop.box-pie-closed", closed), ("prop.box-pie-open", opened)):
+        puppet(rid, {"rest": im}, "rest", OUT / "props" / rid, "bottom")
+        sources[rid] = ["props/pie-box-closed.png" if rid.endswith("closed") else "props/box-pie-open.png"]
     return sources
 
 

@@ -63,9 +63,11 @@
 | `prop.postal-beetle` | заводной почтовый жук с письмом | центр |
 | `prop.letter` | письмо мэра с печатью | центр |
 | `prop.badge-intern` | значок стажёра | центр |
-| `prop.box-pie` | коробка мэра: `closed` → `open` клипом `box-open`; в окошке крышки виден пирог (R03) | низ |
+| `prop.box-pie` | коробка мэра: `closed` → `open` клипом `box-open`; в окошке крышки виден пирог (R03). Клип возвращает вариант после конца, поэтому для «открыли и оставили» берите пару ниже | низ |
+| `prop.box-pie-closed`, `prop.box-pie-open` | те же состояния отдельными ригами: `exit` закрытой и `enter` открытой в той же точке | низ |
 | `prop.badge-pie-found` | значок-лапка «Пирог найден» | центр |
-| `prop.sticker-pie` | стикер в альбом, ★ / ★★ / ★★★ клипами `stars-N` | центр |
+| `prop.sticker-pie-1`, `-2`, `-3` | стикер в альбом с ★, ★★, ★★★ (рекомендуется) | центр |
+| `prop.sticker-pie` | тот же стикер, звёзды клипами `stars-N` (вариант держится только во время клипа) | центр |
 | `prop.blueberry-basket` | корзинка черники для Конторы | низ |
 | `prop.pie-baked` | готовый пирог | низ |
 | `prop.garland-100` | гирлянда «100» к юбилею | центр |
@@ -111,7 +113,13 @@ G регистрирует эффекты по кадрам атласа:
 - **Звуки:** `sfx.postal-beetle`, `sfx.letter-chime`, `sfx.bubbles`, `sfx.sparkle`,
   `sfx.reward`, `sfx.heart`, `sfx.oven`, `sfx.page-turn`, `sfx.footsteps`.
 
-## 8. Проверка
+## 8. Проверка в предпросмотре E
+
+`tools/assets/art/preview_manifest.py <папка роликов> <папка вывода>` собирает папку для лаборатории анимации E. Затем `npm run preview:labs -- --dir out\labs --consumer <папка вывода>` и адрес `/animation-lab/?manifest=../consumer/manifest.json`. `tools/assets/art/record_cutscene.mjs` проигрывает ролик, нажимает «Дальше» и сохраняет кадры.
+
+Таблица эффектов для `createStage({ effects })` — в `preview_manifest.py` (`bubbles`, `sparkles`, `fireflies`, `confetti`, `steam`, `glow`, `hearts`).
+
+## 9. Проверка валидатором
 
 ```powershell
 node <aegis-engine>\packages\browser\bin\aegis-animation.mjs validate `
