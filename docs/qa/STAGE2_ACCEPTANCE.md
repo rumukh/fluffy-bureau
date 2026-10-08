@@ -104,6 +104,32 @@ sessions, content tools); production build; **50/50 E2E tests** (25 Chromium + 2
 The same suite also passed 50/50 on A's d0d62be. One earlier WebKit offline run hit a
 skip-button race (the intro ended on its own mid-click); the player now tolerates it.
 
+## Offline install metrics (release layout, `/fluffy-bureau/`)
+
+Measured with `FLUFFY_E2E_METRICS=1 FLUFFY_E2E_BASE=/fluffy-bureau/ npx playwright test
+e2e/install-metrics.spec.ts` after `npm run build:pages` (Windows, local loopback server, 2 runs each):
+
+| Pack | Files | MB |
+|---|---|---|
+| shell | 1,160 | 24.7 |
+| prologue | 165 | 4.2 |
+| case01 | 1,045 | 25.4 |
+| case02 | 963 | 16.6 |
+| case03 | 861 | 17.1 |
+| case04 | 928 | 21.8 |
+| cozy | 17 | 0.8 |
+| **Total** | **5,139** | **110.7** |
+
+| Browser | Requests | Title screen | Offline-ready (all packs, worker active) |
+|---|---|---|---|
+| Chromium | ~5,174 | 3–5 s | 24–28 s |
+| WebKit (Windows port) | ~5,175 | 1.5–2 s | 89–91 s (149 s measured by the coordinator under load) |
+
+E2E budgets: the install/activation poll is 360 s and the update wait is 360 s, about 2.4× the worst
+observed. The game is playable online from the title screen; offline readiness is what takes long.
+v0.2.1 will make the shell, prologue and case 1 offline-ready first and install the other cases in the
+background (fewer requests: e.g. one cue bundle per pack).
+
 ## Known gaps and follow-ups
 
 1. **Scarf patterns** are drawn by A's overlays (`acc.scarf.<pattern>.<species>` in the avatar's

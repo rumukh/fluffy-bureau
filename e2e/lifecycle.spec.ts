@@ -145,7 +145,9 @@ test('update: build B installs beside A without interrupting the case and takes 
       'data-offline',
       'ready:installed-next-launch',
       {
-        timeout: 180_000,
+        // B's changed packs install in the background: measured 24–28 s (Chromium) and 89–149 s
+        // (WebKit, Windows) for the whole release; budget with headroom for a loaded machine.
+        timeout: 360_000,
       },
     );
     await expect
