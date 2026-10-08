@@ -14,7 +14,7 @@ the Stage 2 batches as they land).
 |---|---|
 | Rules, minigames, saves, privacy, accessibility (automated) | **Technically ready** — evidence below |
 | Cases 2–4 content (C) | **Integrated** — 9 variants trace end to end |
-| Case 2–4 art, voices, music (A) | **Partly pending** — runtime shows neutral placeholders and text for missing assets (C's `docs/content/ASSET_REQUESTS.md`); see gaps |
+| Case 2–4 art, voices, music (A) | **Partly integrated** — A's case 2 cipher kit (69 button pictures) and case 3 sound clues with silent forms (13 samples, waves, icons) are in; the rest (dream cards, new backgrounds and puppets, case 2–4 voices, music) shows neutral placeholders and text. Content check: 193 pending asset IDs (`docs/content/ASSET_REQUESTS.md`) |
 | Family mode with real players (T31) and child playtest (T15) | **Pending the family** |
 | Physical iPad / Android tablet | **Pending the family** |
 
@@ -56,7 +56,7 @@ npm run dev             # http://127.0.0.1:4321/ — dev build with the Stage 2 
 |---|---|---|---|
 | `cipher` | 2 | `{option}` per slot | solved letters stay; shape + holes + colour name + letter (R01) |
 | `postman` | 2 finale | `{street}`, `{house}` | house = sum of holes; level 3 street by shape icon |
-| `sound-match` | 3 | `{option}` | samples by A's IDs; silent form from A's index (Q31); target never named |
+| `sound-match` | 3 | `{option}` | samples by A's IDs; «Послушать» separate from «Это он»; silent form = A's wave + loudness/pitch/length/rhythm icons with text (Q31); target never named |
 | `light-signals` | 3 finale | `{symbol}`, `{erase}`, `{send}` | level 3 own signal (D22) |
 | `read-blink` | 3 L3 | `{option}` | |
 | `dream-keeper` | 4 | `{mode}`, `{value}` / family `{keeper}`, `{pick}`, `{ask}`, `{guess}` | solo with Пухлик; family 2–4 players |
@@ -93,6 +93,15 @@ inside a scene (`dir.background`), so the shed-window close-up only appeared wit
 - The shop has no real money and nothing random (T29). Prices follow T11. «Не хватает» is a gentle
   line and nothing is taken.
 - Still no telemetry, outbound requests or debug globals (Stage 1 checks run on the production build).
+- Cipher glyphs show A's button picture plus the colour name, shape and hole count as text (R01).
+
+## Last full run
+
+2026-10-08, Windows, Node 25.6.0: content check 0 errors (193 pending assets); **122 unit tests**
+(Stage 1 and Stage 2 traces, cozy rules, sessions, content tools); production build; **50 E2E tests**
+(25 Chromium + 25 WebKit, 33.9 min). One WebKit offline run hit a skip-button race (the intro ended
+on its own mid-click); the player now tolerates it and the spec passes. After merging A's ce40ba4,
+the Stage 2 and office specs were re-run in both browsers (10/10).
 
 ## Known gaps and follow-ups
 

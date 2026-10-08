@@ -1,3 +1,4 @@
+import { glyphArt, glyphDescription } from './glyph.js';
 import type { LineView, RunView, StepView } from '@fluffy/game-core';
 import type { App } from './app.js';
 import { append, button, h } from './dom.js';
@@ -69,15 +70,10 @@ function glyphNode(app: App, glyph: Glyph, revealed = true): HTMLElement {
   return h(
     'span',
     { class: `glyph glyph-${glyph.shape}`, 'aria-label': label },
-    h('span', { class: 'glyph-shape', 'aria-hidden': 'true' }, shapeIcon(glyph.shape)),
-    h('span', { class: 'glyph-holes', 'aria-hidden': 'true' }, '●'.repeat(glyph.holes)),
-    h('span', { class: 'glyph-colour' }, glyph.colour),
+    glyphArt(app, glyph),
+    h('span', { class: 'glyph-colour' }, glyphDescription(glyph)),
     h('span', { class: 'glyph-letter' }, revealed ? glyph.letter : '·'),
   );
-}
-
-function shapeIcon(shape: string): string {
-  return shape === 'square' ? '■' : shape === 'flower' ? '✿' : shape === 'heart' ? '♥' : '●';
 }
 
 function patternText(pattern: readonly unknown[]): string {
@@ -318,53 +314,67 @@ function renderPostman(
   void step;
 }
 
-const SOUND_META: Record<
-  string,
-  { loudness: string; pitch: string; length: string; rhythm: string }
-> = {
-  pages: { loudness: 'тихо', pitch: 'шуршит', length: 'коротко', rhythm: 'ровно' },
-  'wind-reeds': { loudness: 'средне', pitch: 'шелест', length: 'долго', rhythm: 'волнами' },
-  'reeds-rustle': { loudness: 'средне', pitch: 'шелест', length: 'долго', rhythm: 'волнами' },
-  'magpie-wings': { loudness: 'громче', pitch: 'взмах', length: 'коротко', rhythm: 'хлоп-хлоп' },
-  'wing-rustle': { loudness: 'громче', pitch: 'взмах', length: 'коротко', rhythm: 'хлоп-хлоп' },
-  'lamp-shutter': { loudness: 'щёлк', pitch: 'высоко', length: 'коротко', rhythm: 'один щелчок' },
-  'door-creak': { loudness: 'тихо', pitch: 'низко', length: 'долго', rhythm: 'тянется' },
-  woodpecker: { loudness: 'громко', pitch: 'сухо', length: 'коротко', rhythm: 'тук-тук' },
-  'hammer-knock': { loudness: 'громко', pitch: 'низко', length: 'коротко', rhythm: 'бум-бум' },
-  'roof-drops': { loudness: 'тихо', pitch: 'капли', length: 'долго', rhythm: 'кап-кап' },
-};
+const LOUD = { quiet: 'тихо', medium: 'средне', loud: 'громко' } as const;
+const PITCH = { low: 'низко', middle: 'средне', high: 'высоко' } as const;
+const LENGTH = { short: 'коротко', long: 'долго' } as const;
+const RHYTHM = { steady: 'ровно', uneven: 'неровно', continuous: 'без перерыва' } as const;
 
+/**
+ * A sound card (Q31). Listening and choosing are separate buttons, so the child can listen as often
+ * as needed. The silent form — A's wave and icons with text — is always shown; the night card never
+ * names its source.
+ */
 function soundCard(
   app: App,
   sample: string,
-  label: string,
+  label: string | null,
   key: string,
   choose?: () => void | Promise<unknown>,
-): HTMLButtonElement {
-  const meta = SOUND_META[sample];
-  return button(
+): HTMLElement {
+  const clue = app.assets.manifest.soundClues?.[sample];
+  const icon = (id: string, caption: string) => {
+    const url = app.assets.manifest.assets[`ui.icons.${id}`]?.url;
+    return h(
+      'span',
+      { class: 'sound-trait' },
+      url ? h('img', { src: app.assets.url(url), alt: '', 'aria-hidden': 'true' }) : null,
+      h('span', null, caption),
+    );
+  };
+  const traits = clue?.icons
+    ? [
+        icon(`sound-${clue.icons.loud}`, LOUD[clue.icons.loud]),
+        icon(`pitch-${clue.icons.pitch}`, PITCH[clue.icons.pitch]),
+        icon(`length-${clue.icons.length}`, LENGTH[clue.icons.length]),
+        clue.rhythm ? icon(`rhythm-${clue.rhythm}`, RHYTHM[clue.rhythm]) : null,
+      ]
+    : [h('span', { class: 'sound-trait' }, 'Звуковая карточка')];
+  const listen = button(
     {
-      label,
-      key,
-      class: 'sound-card choice',
-      content: h(
-        'span',
-        { class: 'sound-body' },
-        h('span', { class: 'sound-icon', 'aria-hidden': 'true' }, '♪'),
-        h('span', { class: 'label' }, label),
-        h(
-          'span',
-          { class: 'sound-meta' },
-          meta
-            ? `Громкость: ${meta.loudness}. Высота: ${meta.pitch}. Длина: ${meta.length}. Ритм: ${meta.rhythm}.`
-            : 'Звуковая карточка без описания.',
-        ),
-      ),
+      label: label ? `Послушать: ${label}` : 'Послушать ночной звук',
+      key: `listen-${key}`,
+      icon: '👂',
+      class: 'listen',
     },
-    () => {
-      app.voice.effect(sample);
-      return choose?.();
-    },
+    () => app.voice.effect(`clue.${sample}`),
+  );
+  const pick = choose
+    ? button({ label: `Это он: ${label ?? ''}`.trim(), key, class: 'choice', icon: '✔' }, choose)
+    : null;
+  return h(
+    'div',
+    { class: `sound-card ${choose ? 'option' : 'target'}`, dataset: { sample } },
+    clue?.wave
+      ? h('img', {
+          class: 'sound-wave',
+          src: app.assets.url(clue.wave),
+          alt: '',
+          'aria-hidden': 'true',
+        })
+      : h('div', { class: 'sound-wave placeholder', 'aria-hidden': 'true' }, '〰'),
+    label ? h('p', { class: 'label' }, label) : null,
+    h('p', { class: 'sound-traits' }, ...traits),
+    h('div', { class: 'sound-actions' }, listen, pick),
   );
 }
 
@@ -373,11 +383,7 @@ function renderSoundMatch(app: App, step: MinigameStep, v: Json, container: HTML
   append(
     container,
     h('p', { class: 'progress' }, `👂 ${Number(v.round) + 1} / ${Number(v.rounds)}`),
-    h(
-      'div',
-      { class: 'sound-target' },
-      soundCard(app, String(v.target), 'Послушать ночной звук', 'sound-target'),
-    ),
+    h('div', { class: 'sound-target' }, soundCard(app, String(v.target), null, 'sound-target')),
     h(
       'div',
       { class: 'choices sound-options' },
@@ -385,7 +391,8 @@ function renderSoundMatch(app: App, step: MinigameStep, v: Json, container: HTML
         const node = soundCard(app, option.sample, text(app, option.label), `mg-${option.id}`, () =>
           move(app, { option: option.id }),
         );
-        if (index === 0) node.dataset.primary = '';
+        const pick = node.querySelector<HTMLElement>(`[data-key="mg-${option.id}"]`);
+        if (index === 0 && pick) pick.dataset.primary = '';
         if (option.tried) node.classList.add('tried');
         return node;
       }),

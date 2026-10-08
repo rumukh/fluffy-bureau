@@ -307,6 +307,9 @@ export class Player {
           options: { id: string; correct: boolean }[];
         }[];
         {
+          // Listening is separate from choosing (Q31): listen to the night sound first.
+          const listen = this.key('listen-sound-target');
+          if (await listen.isVisible().catch(() => false)) await this.activate(listen);
           const target = this.key(`mg-${rounds[round - 1]!.options.find((o) => o.correct)!.id}`);
           if (await target.count()) await this.activate(target);
           else await this.activate(page.locator('#app [data-key$="-more"]').first());

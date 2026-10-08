@@ -35,6 +35,8 @@ export interface AssetManifest {
   >;
   music: Record<string, string>;
   sfx: Record<string, string>;
+  /** Sound clues (Q31) by sample ID: silent-form wave and icons; the audio is sfx `clue.<id>`. */
+  soundClues?: Record<string, SoundClue>;
   /** Files referenced by name inside documents (atlas images). */
   files: Record<string, string>;
   /** Animation documents by document ID: asset ID, format and (for rigs) atlas IDs. */
@@ -58,6 +60,17 @@ export const EMPTY_MANIFEST: AssetManifest = {
   files: {},
   documents: {},
 };
+
+export interface SoundClue {
+  wave: string | null;
+  night: boolean;
+  icons: {
+    loud: 'quiet' | 'medium' | 'loud';
+    pitch: 'low' | 'middle' | 'high';
+    length: 'short' | 'long';
+  } | null;
+  rhythm: 'steady' | 'uneven' | 'continuous' | null;
+}
 
 export const LOGICAL = { width: 2560, height: 1600 } as const;
 export const SAFE = { x: 230, y: 80, width: 2100, height: 1440 } as const;

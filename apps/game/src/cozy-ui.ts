@@ -3,20 +3,13 @@
 import type { CozyView, GameView, LineView, NotebookPageView } from '@fluffy/game-core';
 import type { App } from './app.js';
 import { button, h } from './dom.js';
+import { glyphArt, glyphDescription } from './glyph.js';
 
 const PAGE = 3;
 
 function t(app: App, key: string): string {
   return app.labels(key).text;
 }
-
-const SHAPES: Record<string, string> = { circle: '●', square: '■', flower: '✿', heart: '♥' };
-const COLOURS: Record<string, string> = {
-  honey: '#e9b44c',
-  blue: '#6d9bd1',
-  rose: '#e58fa6',
-  green: '#7fb685',
-};
 
 /** A dot or a dash as a symbol with a text alternative (never colour or timing only). */
 export function patternNode(pattern: readonly ('dot' | 'dash')[]): HTMLElement {
@@ -241,7 +234,10 @@ export function renderCozy(app: App, close: () => HTMLElement): HTMLElement {
   );
 }
 
-function cipherPoster(page: Extract<NotebookPageView, { kind: 'cipher-poster' }>): HTMLElement {
+function cipherPoster(
+  app: App,
+  page: Extract<NotebookPageView, { kind: 'cipher-poster' }>,
+): HTMLElement {
   return h(
     'ul',
     { class: 'cipher-table' },
@@ -249,16 +245,8 @@ function cipherPoster(page: Extract<NotebookPageView, { kind: 'cipher-poster' }>
       h(
         'li',
         { class: `glyph shape-${cell.shape}`, 'aria-label': cell.label.text },
-        h(
-          'span',
-          {
-            class: 'glyph-button',
-            style: `--glyph: ${COLOURS[cell.colour] ?? '#ccc'}`,
-            'aria-hidden': 'true',
-          },
-          h('span', { class: 'glyph-shape' }, SHAPES[cell.shape] ?? '●'),
-          h('span', { class: 'glyph-holes' }, '∘'.repeat(cell.holes)),
-        ),
+        glyphArt(app, cell),
+        h('span', { class: 'glyph-colour' }, glyphDescription(cell)),
         h('span', { class: 'glyph-letter' }, cell.letter),
       ),
     ),
@@ -296,7 +284,7 @@ export function renderPages(app: App, close: () => HTMLElement): HTMLElement {
           { class: `page page-${current.kind}`, dataset: { page: current.id } },
           h('h3', null, current.title.text),
           current.kind === 'cipher-poster'
-            ? cipherPoster(current)
+            ? cipherPoster(app, current)
             : current.kind === 'secret-notes' && view?.signal
               ? h(
                   'p',

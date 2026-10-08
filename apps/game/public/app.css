@@ -1144,3 +1144,71 @@
   font-size: 1.4rem;
   font-weight: 700;
 }
+
+/* Sound clue cards (Q31, G) */
+.sound-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.6rem;
+  border-radius: 1rem;
+  background: var(--paper, #fffaf0);
+}
+.sound-card.tried {
+  opacity: 0.7;
+}
+.sound-wave {
+  width: 100%;
+  max-width: 392px;
+  height: auto;
+}
+.sound-traits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0;
+}
+.sound-trait {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.sound-trait img {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.sound-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Cipher button art (G) */
+.glyph-art {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+.glyph-art.fallback {
+  display: inline-grid;
+  place-items: center;
+  font-size: 2rem;
+  position: relative;
+}
+.glyph-colour {
+  font-size: 0.85rem;
+}
+
+/* Cipher button art (G) */
+.glyph-art {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+.glyph-art.fallback {
+  display: inline-grid;
+  place-items: center;
+  font-size: 2rem;
+  position: relative;
+}
+.glyph-colour {
+  font-size: 0.85rem;
+}
