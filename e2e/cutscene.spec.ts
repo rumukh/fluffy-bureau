@@ -27,7 +27,9 @@ test('the wordless intro plays first, binds no avatar and can be skipped', async
   await expect(stage).toHaveAttribute('data-cutscene', 'intro', { timeout: 20_000 });
   await expect(stage).toHaveAttribute('data-cutscene-avatar', 'none');
   await player.activate(player.key('cutscene-skip'));
-  await expect(page.locator('.game.run')).not.toHaveAttribute('data-step', 'cutscene');
+  await expect(page.locator('.game.run')).not.toHaveAttribute('data-step', 'cutscene', {
+    timeout: 30_000,
+  });
 });
 
 test('captions wait for «Дальше»; pause, replay and skip; avatar bound; no extra rewards', async ({

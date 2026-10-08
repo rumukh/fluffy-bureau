@@ -86,8 +86,21 @@ export class Player {
       if ((await this.stepKind()) === 'cutscene') {
         if (!this.watchCutscenes) {
           const skip = this.key('cutscene-skip');
-          if (await skip.isVisible().catch(() => false)) await this.activate(skip);
-          else await page.waitForTimeout(200);
+          const id = await page
+            .locator('#app .dialogue.cutscene')
+            .getAttribute('data-cutscene')
+            .catch(() => null);
+          if (id && (await skip.isVisible().catch(() => false))) {
+            await this.activate(skip);
+            // Skipping may wait for the cutscene to finish loading: wait for it to end.
+            await page.waitForFunction(
+              (current) =>
+                (document.querySelector('#app .dialogue.cutscene') as HTMLElement | null)?.dataset
+                  .cutscene !== current,
+              id,
+              { timeout: 30_000 },
+            );
+          } else await page.waitForTimeout(200);
         } else if (await next.isEnabled().catch(() => false)) await this.activate(next);
         else await page.waitForTimeout(250);
         continue;

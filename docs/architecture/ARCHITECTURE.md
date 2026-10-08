@@ -154,9 +154,12 @@ A's Rhubarb cue files are converted to `aegis-cues/1` at build time with E's `im
 each line as a caption and waits for «Дальше», and offers pause (HUD), «Смотреть сначала» and
 «Пропустить ролик». Reached markers are committed (`cutscene-marker`); after a restore the cutscene
 restarts from the last marker. Completion or skipping is committed with the `cutscene` command;
-gameplay effects are ordinary steps after the cutscene, so nothing is granted twice. Registered for C's
-documents: camera presets `close-left`, `close-center`, `close-right`, `sky` (plus built-in `wide`) and
-effects `bubbles`, `sparkles`, `steam` (one-frame atlases generated from A's effect images). Cutscene
+gameplay effects are ordinary steps after the cutscene, so nothing is granted twice. Camera presets and effect
+names come from `@fluffy/content` (`CAMERA_PRESETS`, `EFFECTS`); frames and tuning are A's `fx.atlas`
+table (`apps/game/src/stage-config.ts`). The build indexes every animation document by its own ID, so a
+cutscene loads its cast rigs (characters, avatar, `prop.*`), all clips, the effect atlas and its
+backgrounds; backgrounds no longer shown are released (128 MiB decoded budget). Presentation callbacks
+(markers, completion) are dispatched without binding to the on-screen revision; child input always is. Cutscene
 music and SFX go through the game's audio pack. Without the stage, a text-only player walks the lines.
 Music follows the location and switches to A's `-warm` variant under the comfort lamp; sound effects
 mark finds, misses, cards, lamp, hearts and buttons.
