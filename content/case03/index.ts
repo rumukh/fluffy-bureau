@@ -27,7 +27,6 @@ export const case03: CaseSource = {
     { id: 'rw-c3-sticker-l3', kind: 'sticker', label: 'RW-c3-sticker-3', amount: 1, claimKey: 'case03:l3:sticker' },
     { id: 'rw-c3-decor-lamp', kind: 'decor', label: 'RW-c3-decor-lamp', amount: 1, claimKey: 'case03:decor:lamp' },
     { id: 'rw-c3-activity', kind: 'activity', label: 'RW-c3-activity', amount: 1, claimKey: 'case03:activity:smells' },
-    { id: 'rw-c3-title', kind: 'title', label: 'RW-c3-title', amount: 1, claimKey: 'case03:title:night-helper' },
   ],
   genderReview: [
     { id: 'C3-L3-4-05', rev: 1, reason: '«себя» относится к мышатам, не к игроку.' },

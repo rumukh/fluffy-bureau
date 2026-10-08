@@ -107,9 +107,9 @@ export const linesNew = lines('case02/new', 'label', [
   ['C2-L3-NB-05', 'watsony', 'Вернись к запахам у дуба.', notebook('Указатель Блокнота для сложности 3')],
 
   ['GL-alibi', 'narrator', 'Алиби', label('Слово словарика')],
-  ['GL-alibi-DEF', 'narrator', 'Алиби — где ты был, когда всё случилось.', added('Карточка словарика из сценария', 'D11', { kind: 'glossary' })],
+  ['GL-alibi-DEF', 'narrator', 'Алиби — это где ты был, когда всё случилось.', added('Карточка словарика из сценария', 'D11', { kind: 'glossary' })],
   ['GL-motive', 'narrator', 'Мотив', label('Слово словарика')],
-  ['GL-motive-DEF', 'narrator', 'Мотив — причина, почему кто-то так сделал.', added('Карточка словарика из сценария', 'D11', { kind: 'glossary' })],
+  ['GL-motive-DEF', 'narrator', 'Мотив — это причина, почему кто-то так сделал.', added('Карточка словарика из сценария', 'D11', { kind: 'glossary' })],
 
   ['RW-c2-badge', 'narrator', 'Значок-лапка «Письма спасены»', reward()],
   ['RW-c2-sticker-1', 'narrator', 'Стикер «Письма спасены», одна звёздочка', reward()],

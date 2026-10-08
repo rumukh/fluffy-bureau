@@ -1836,7 +1836,7 @@
    "rev": 1,
    "kind": "glossary",
    "speaker": "narrator",
-   "text": "Ориентир — заметная вещь для поиска дороги.",
+   "text": "Ориентир — заметная вещь, по которой находят дорогу.",
    "voiced": true,
    "delivery": "warm"
   },
@@ -4549,5 +4549,5 @@
  "notebookPages": [],
  "cozy": null,
  "reserved": [],
- "revision": "f9e4a1114e6db430581efeee38ed015bb342ec04300d04479479fbb603bf19f5"
+ "revision": "56fd45dd9def9af4fbfa6e89dcebe40c5b85fe889f3656f670cc0d3e5f037d69"
 }

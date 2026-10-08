@@ -109,7 +109,7 @@ export const linesNew = lines('case03/new', 'dialogue', [
   ['C3-L3-NB-06', 'watsony', 'Вернись к уроку «Привет».', nb('Указатель Блокнота сложности 3')],
 
   ['GL-deduction', 'narrator', 'Дедукция', added('Слово словарика дела 3', 'D11', { kind: 'glossary' })],
-  ['GL-deduction-DEF', 'narrator', 'Дедукция — вывод правды шаг за шагом.', added('Определение словарика дела 3', 'D11', { kind: 'glossary' })],
+  ['GL-deduction-DEF', 'narrator', 'Дедукция — когда из улик шаг за шагом выводишь правду.', added('Определение словарика дела 3', 'D11', { kind: 'glossary' })],
   ['C3-COL-secret-note', 'narrator', 'Тайная заметка: запах ромашки', label('Название предмета коллекции')],
   ['C3-COL-secret-note-L', 'narrator', 'У весла Дамки пахнет ромашкой.', added('Карточка тайной заметки', 'D06', { kind: 'glossary' })],
 
@@ -120,7 +120,6 @@ export const linesNew = lines('case03/new', 'dialogue', [
   ['RW-c3-sticker-3', 'narrator', 'Стикер «Огонёк маяка», три звёздочки', reward()],
   ['RW-c3-decor-lamp', 'narrator', 'Светлячковый фонарь для Конторы', reward()],
   ['RW-c3-activity', 'narrator', 'Карточка «Понюхай и угадай»', reward()],
-  ['RW-c3-title', 'narrator', 'Звание: Ночной помощник', reward('Звание дела по D12')],
 
   ['ACT-C3-TITLE', 'narrator', 'Понюхай и угадай', activity()],
   ['ACT-C3-01', 'narrator', 'Попроси взрослого приготовить три чашки.', activity()],

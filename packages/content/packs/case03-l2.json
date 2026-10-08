@@ -1818,7 +1818,7 @@
    "rev": 1,
    "kind": "glossary",
    "speaker": "narrator",
-   "text": "Дедукция — вывод правды шаг за шагом.",
+   "text": "Дедукция — когда из улик шаг за шагом выводишь правду.",
    "voiced": true,
    "delivery": "warm"
   },
@@ -1873,15 +1873,6 @@
    "kind": "reward",
    "speaker": "narrator",
    "text": "Карточка «Понюхай и угадай»",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
-   "id": "RW-c3-title",
-   "rev": 1,
-   "kind": "reward",
-   "speaker": "narrator",
-   "text": "Звание: Ночной помощник",
    "voiced": true,
    "delivery": "neutral"
   },
@@ -3105,10 +3096,6 @@
      "reward": "rw-c3-activity"
     },
     {
-     "t": "reward",
-     "reward": "rw-c3-title"
-    },
-    {
      "t": "await",
      "action": "office.place"
     },
@@ -4246,13 +4233,6 @@
    "label": "RW-c3-activity",
    "amount": 1,
    "claimKey": "case03:activity:smells"
-  },
-  {
-   "id": "rw-c3-title",
-   "kind": "title",
-   "label": "RW-c3-title",
-   "amount": 1,
-   "claimKey": "case03:title:night-helper"
   }
  ],
  "collections": [
@@ -5287,5 +5267,5 @@
  ],
  "cozy": null,
  "reserved": [],
- "revision": "8412cecea657166ce4913115f6a8ddeb6fffd8eaaf4e46a62565053ba336d5f7"
+ "revision": "3d95e5939f6e9a944f5e106e298ec9412d20aca7215492077720428b0d47417d"
 }

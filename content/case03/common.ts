@@ -157,7 +157,6 @@ export const rewardScene = (level: 1 | 2 | 3, cutsceneId: string): VariantSource
     reward(`rw-c3-sticker-l${level}`),
     reward('rw-c3-decor-lamp'),
     reward('rw-c3-activity'),
-    reward('rw-c3-title'),
     wait('office.place'),
     end(),
   ],
@@ -170,7 +169,6 @@ export const baseRewards = (level: 1 | 2 | 3) => [
   `rw-c3-sticker-l${level}`,
   'rw-c3-decor-lamp',
   'rw-c3-activity',
-  'rw-c3-title',
 ];
 
 export const redHerringsBase: VariantSource['logic']['redHerrings'] = [

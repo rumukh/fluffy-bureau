@@ -1467,7 +1467,7 @@
    "rev": 1,
    "kind": "glossary",
    "speaker": "narrator",
-   "text": "Алиби — где ты был, когда всё случилось.",
+   "text": "Алиби — это где ты был, когда всё случилось.",
    "voiced": true,
    "delivery": "warm"
   },
@@ -1485,7 +1485,7 @@
    "rev": 1,
    "kind": "glossary",
    "speaker": "narrator",
-   "text": "Мотив — причина, почему кто-то так сделал.",
+   "text": "Мотив — это причина, почему кто-то так сделал.",
    "voiced": true,
    "delivery": "warm"
   },
@@ -4550,5 +4550,5 @@
  ],
  "cozy": null,
  "reserved": [],
- "revision": "96619d3e2933ecdc3d08602fea559f0eec5b69ae0396c30e9ba0517c6b50b7aa"
+ "revision": "227c7077d7b8b8ff545dcc712892335cfee1ebdfb849ee322d3d5fe59a5b670f"
 }
