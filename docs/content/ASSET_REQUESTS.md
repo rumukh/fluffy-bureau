@@ -32,7 +32,8 @@
 | `bg.office-evening` | case03-l1, case03-l2, case03-l3 | cutscene c3.intro.l1; cutscene c3.intro.l2; cutscene c3.intro.l3 |
 | `bg.office-pantry` | case04-l1, case04-l2, case04-l3 | cutscene c4.pantry.l1; cutscene c4.pantry.l2; cutscene c4.pantry.l3 |
 | `bg.old-oak` | case02-l1, case02-l2, case02-l3 | cutscene c2.oak.l1; cutscene c2.oak.l2; cutscene c2.oak.l3 |
-| `bg.town-square` | case02-l1, case02-l2, case02-l3, case04-l1, case04-l2, case04-l3 | cutscene c2.exhibition.l1; cutscene c2.exhibition.l2; cutscene c2.exhibition.l3; cutscene c4.tea.l1; cutscene c4.tea.l2; cutscene c4.tea.l3 |
+| `bg.town-square` | case02-l1, case02-l2, case02-l3 | cutscene c2.exhibition.l1; cutscene c2.exhibition.l2; cutscene c2.exhibition.l3 |
+| `bg.town-square-tea` | case04-l1, case04-l2, case04-l3 | cutscene c4.tea.l1; cutscene c4.tea.l2; cutscene c4.tea.l3 |
 
 ## image
 

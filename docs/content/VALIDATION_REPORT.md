@@ -206,7 +206,7 @@
 - `ASSET-PENDING` case04-l1: cutscene c4.pantry.l1: Unknown rig "pukhlik".
 - `ASSET-PENDING` case04-l1: cutscene c4.pantry.l1: Unknown rig "prop.jam-jars-c4".
 - `ASSET-PENDING` case04-l1: cutscene c4.pantry.l1: Unknown rig "prop.note-khvosts".
-- `ASSET-PENDING` case04-l1: cutscene c4.tea.l1: unknown asset bg.town-square
+- `ASSET-PENDING` case04-l1: cutscene c4.tea.l1: unknown asset bg.town-square-tea
 - `ASSET-PENDING` case04-l1: cutscene c4.tea.l1: Unknown rig "pukhlik".
 - `ASSET-PENDING` case04-l1: cutscene c4.tea.l1: Unknown rig "prop.tea-table-c4".
 - `ASSET-PENDING` case04-l1: cutscene c4.reward.l1: Unknown rig "prop.badge-jam-c4".
@@ -229,7 +229,7 @@
 - `ASSET-PENDING` case04-l2: cutscene c4.pantry.l2: Unknown rig "pukhlik".
 - `ASSET-PENDING` case04-l2: cutscene c4.pantry.l2: Unknown rig "prop.jam-jars-c4".
 - `ASSET-PENDING` case04-l2: cutscene c4.pantry.l2: Unknown rig "prop.note-khvosts".
-- `ASSET-PENDING` case04-l2: cutscene c4.tea.l2: unknown asset bg.town-square
+- `ASSET-PENDING` case04-l2: cutscene c4.tea.l2: unknown asset bg.town-square-tea
 - `ASSET-PENDING` case04-l2: cutscene c4.tea.l2: Unknown rig "pukhlik".
 - `ASSET-PENDING` case04-l2: cutscene c4.tea.l2: Unknown rig "prop.tea-table-c4".
 - `ASSET-PENDING` case04-l2: cutscene c4.reward.l2: Unknown rig "prop.badge-jam-c4".
@@ -251,7 +251,7 @@
 - `ASSET-PENDING` case04-l3: cutscene c4.pantry.l3: Unknown rig "pukhlik".
 - `ASSET-PENDING` case04-l3: cutscene c4.pantry.l3: Unknown rig "prop.jam-jars-c4".
 - `ASSET-PENDING` case04-l3: cutscene c4.pantry.l3: Unknown rig "prop.note-khvosts".
-- `ASSET-PENDING` case04-l3: cutscene c4.tea.l3: unknown asset bg.town-square
+- `ASSET-PENDING` case04-l3: cutscene c4.tea.l3: unknown asset bg.town-square-tea
 - `ASSET-PENDING` case04-l3: cutscene c4.tea.l3: Unknown rig "pukhlik".
 - `ASSET-PENDING` case04-l3: cutscene c4.tea.l3: Unknown rig "prop.tea-table-c4".
 - `ASSET-PENDING` case04-l3: cutscene c4.reward.l3: Unknown rig "prop.badge-jam-c4".

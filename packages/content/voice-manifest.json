@@ -13,9 +13,9 @@
   "case03-l1": "ab96786fe0e21030d364243c9ea89a9c9988370862b7c8145ee3489cbd3a96d1",
   "case03-l2": "6a7f65f897c521a67c183ae7ede28ad2af0519055a24ffa8bad243b62ee1b473",
   "case03-l3": "3c4f895b08af043c1c1a976e9279115805af44d004235fd55bb2ab76df00d935",
-  "case04-l1": "966380677f4af9b59b3ee753d92e014d9570bae78329ba9c7696862a332e5409",
-  "case04-l2": "9fe06352267d1daec877c0a5ed17a4f2ea6e1a1e9c25f0d5730faa383393d5df",
-  "case04-l3": "633644c9f14f027188c270e31ffac69237a39a2b72c0752d101c806dee2aedec",
+  "case04-l1": "04a9b3aa496116d5d6fa772ce1d64b1c22daec931a90a05ca3db0ddf19ed8aff",
+  "case04-l2": "a1d2d74dcccf2b463cbc1fdb39a95d74d05cb1f122ff3a2dc316db5cc799f005",
+  "case04-l3": "2a267f569780d0d02dc660defb6e7d5175e007cdb38154afe2276ba2bddeded4",
   "cozy": "131d8265c65c7e38f48c83160686b6ce11cfd64973f743f7d1cb8340adc28cc4"
  },
  "lexicon": [
@@ -25661,8 +25661,7 @@
    "note": "",
    "packs": [
     "cozy"
-   ],
-   "sameAudioAs": "C5-3-B02"
+   ]
   },
   {
    "id": "SHOP-decor-rug",
