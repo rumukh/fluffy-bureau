@@ -179,6 +179,7 @@ interface ChoiceStepsState {
 interface ChoiceStep {
   id: string;
   prompt: string | null;
+  pageSize?: number;
   options: { id: string; label: string; correct: boolean; reply: string[] }[];
 }
 function tracksSteps(config: Config<'tracks'>): ChoiceStep[] {
@@ -224,6 +225,7 @@ const tracks: MinigameAdapter<Config<'tracks'>, ChoiceStepsState, { option: stri
       steps: steps.length,
       question: step?.id === 'question' && Boolean(config.question),
       prompt: step?.prompt ?? null,
+      pageSize: 'pageSize' in (step ?? {}) ? Math.min(3, Number(step?.pageSize ?? 3)) : 3,
       options: (step?.options ?? []).map((o) => ({
         id: o.id,
         label: o.label,
@@ -1270,6 +1272,7 @@ const compare: MinigameAdapter<Config<'compare'>, ChoiceStepsState, { option: st
       steps: steps.length,
       question: step?.id === 'question' && Boolean(config.question),
       prompt: step?.prompt ?? null,
+      pageSize: 'pageSize' in (step ?? {}) ? Math.min(3, Number(step?.pageSize ?? 3)) : 3,
       options: (step?.options ?? []).map((o) => ({
         id: o.id,
         label: o.label,

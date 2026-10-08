@@ -927,3 +927,220 @@
   height: 100%;
   display: block;
 }
+
+/* ---------- Stage 2 minigames: cipher, post, sound, signals, dreams, sharing */
+.minigame-stage2 {
+  display: grid;
+  gap: 0.8em;
+}
+.glyph {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  gap: 0.1em 0.35em;
+  align-items: center;
+  justify-items: center;
+  padding: 0.25em 0.45em;
+  border: 2px solid #7a4e2d;
+  border-radius: 0.7em;
+  background: #fffaf0;
+  min-width: 4.2em;
+}
+.glyph-shape {
+  font-size: 1.35em;
+}
+.glyph-holes {
+  letter-spacing: 0.08em;
+  font-size: 0.75em;
+}
+.glyph-colour {
+  grid-column: 1 / -1;
+  font-size: 0.75em;
+}
+.glyph-letter {
+  grid-column: 1 / -1;
+  font-size: 1.35em;
+  font-weight: 900;
+}
+.glyph-heart .glyph-shape {
+  color: #b04b63;
+}
+.glyph-flower .glyph-shape {
+  color: #9b6fc0;
+}
+.glyph-square .glyph-shape {
+  color: #3c6f9e;
+}
+.cipher-words,
+.post-buttons,
+.sound-options,
+.share-groups,
+.dream-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em;
+  justify-content: center;
+}
+.cipher-word {
+  display: flex;
+  gap: 0.25em;
+  padding: 0.4em;
+  border-radius: 1em;
+  background: rgba(255, 250, 240, 0.82);
+}
+.cipher-word.current {
+  outline: 3px solid var(--honey-deep);
+}
+.cipher-slot.active {
+  transform: translateY(-0.15em);
+}
+.glyph-choice {
+  border-radius: 1em;
+  padding: 0.25em;
+}
+.light-pattern {
+  display: inline-flex;
+  gap: 0.35em;
+  font-size: 1.7em;
+  justify-content: center;
+  min-height: 1.6em;
+}
+.signal-controls,
+.family-players,
+.family-answers,
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em;
+  justify-content: center;
+}
+.lantern.static {
+  font-size: 3em;
+  text-align: center;
+}
+.sound-card {
+  border-radius: 1.2em;
+  min-width: min(100%, 12em);
+}
+.sound-body {
+  display: grid;
+  gap: 0.2em;
+  justify-items: center;
+}
+.sound-icon {
+  font-size: 2em;
+}
+.sound-meta {
+  font-size: 0.78em;
+  font-weight: 700;
+  max-width: 18em;
+}
+.compare-subject,
+.dream-card,
+.share-group {
+  display: grid;
+  gap: 0.35em;
+  justify-items: center;
+  padding: 0.6em;
+  border: 3px solid #d7b77c;
+  border-radius: 1em;
+  background: rgba(255, 250, 240, 0.9);
+}
+.compare-subject img,
+.dream-card img {
+  max-width: min(16em, 80vw);
+  max-height: 10em;
+  object-fit: contain;
+  border-radius: 0.6em;
+}
+.dream-card-button {
+  border-radius: 1.2em;
+  padding: 0.2em;
+}
+.placeholder {
+  min-width: 7em;
+  min-height: 5em;
+  display: grid;
+  place-items: center;
+  border-radius: 0.8em;
+  background: #efe1c2;
+  font-size: 2em;
+}
+.share-group h3,
+.dream-card figcaption {
+  margin: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .lantern,
+  .cipher-slot.active {
+    animation: none;
+    transform: none;
+  }
+}
+/* ---------------------------------------------------------------- Stage 2: cozy day, pages, ranks (G) */
+.cozy .cozy-list .cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+}
+.cozy-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 1rem;
+  background: var(--paper, #fffaf0);
+  box-shadow: 0 1px 0 rgb(0 0 0 / 0.08);
+}
+.cozy-card.owned {
+  outline: 3px solid #7fb685;
+}
+.cozy-name {
+  font-weight: 700;
+  margin: 0;
+}
+.cozy-price {
+  margin: 0;
+}
+.rank-news h2 {
+  margin-top: 0;
+}
+.signal-pattern {
+  display: inline-flex;
+  gap: 0.4em;
+  font-size: 1.4em;
+  vertical-align: middle;
+}
+.cipher-table {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+}
+.cipher-table .glyph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.glyph-button {
+  display: inline-grid;
+  place-items: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  color: var(--glyph);
+  font-size: 2rem;
+  position: relative;
+}
+.glyph-holes {
+  position: absolute;
+  font-size: 0.9rem;
+  color: #3b2f2a;
+  letter-spacing: 0.1em;
+}
+.glyph-letter {
+  font-size: 1.4rem;
+  font-weight: 700;
+}

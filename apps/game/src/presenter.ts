@@ -23,7 +23,8 @@ export interface StageScene {
   location: string;
   title: string;
   cast: { id: string; name: string }[];
-  avatar: { species: Species | null; scarf: Scarf | null; name: string };
+  /** `hat`: an `acc.hat.*` accessory rig worn in the avatar's hat slot (T29). */
+  avatar: { species: Species | null; scarf: Scarf | null; name: string; hat?: string | null };
   /** Stage-direction IDs since the last blocking step (e.g. bubbles). */
   stage: { id: string; text: string; actions?: readonly StageAction[] }[];
   comfort: boolean;
@@ -60,7 +61,7 @@ export interface CutsceneRequest {
   key: string;
   document: CutsceneFile;
   packId: string;
-  avatar: { species: Species | null; scarf: Scarf | null };
+  avatar: { species: Species | null; scarf: Scarf | null; hat?: string | null };
   from: string | null;
   onEvent(event: CutsceneUiEvent): void;
 }
@@ -394,6 +395,7 @@ export class StagePresenter implements Presenter {
             s.cast.map((c) => c.id),
             s.avatar.species,
             s.avatar.scarf,
+            s.avatar.hat ?? null,
             s.background ?? null,
           ])
         : '';
@@ -525,8 +527,9 @@ export class StagePresenter implements Presenter {
     const layers = scene.background ? [] : this.assets.rawLayers(scene.location, scene.level);
     const castDocs = scene.cast.map((c) => this.assets.puppet(c.id));
     const avatarDocs = scene.avatar.species ? this.assets.avatarPuppet(scene.avatar.species) : null;
+    const hatDocs = scene.avatar.hat ? this.assets.rigDocuments(scene.avatar.hat) : [];
     const ok = await this.ensure(
-      [...castDocs, avatarDocs].flatMap((d) => d?.documents ?? []),
+      [...[...castDocs, avatarDocs].flatMap((d) => d?.documents ?? []), ...hatDocs],
       [...(background ? [background] : []), ...layers.map((l) => l.asset)],
     ).catch(() => false);
     if (generation !== this.generation) return;
@@ -538,6 +541,7 @@ export class StagePresenter implements Presenter {
     }
     this.stage.clearScene();
     this.puppets.clear();
+    this.element.dataset.background = background;
     this.stage.setBackground(background, {
       type: scene.reducedMotion ? 'cut' : 'crossfade',
       duration: 0.5,
@@ -568,6 +572,8 @@ export class StagePresenter implements Presenter {
         id: 'avatar',
         rig: avatarDocs.rigId,
         tints: { scarf: SCARF_COLORS[scene.avatar.scarf] },
+        accessories:
+          scene.avatar.hat && hatDocs.length ? [{ slot: 'hat', rig: scene.avatar.hat }] : [],
         at: { x: 520, y: STAGE_FLOOR },
         facing: 'right',
         behaviours: { breathe: {}, blink: {} },
@@ -645,6 +651,8 @@ export class StagePresenter implements Presenter {
     const species = request.avatar.species;
     const avatarDocs = species ? this.assets.avatarPuppet(species) : null;
     if (avatarDocs) docs.push(...avatarDocs.documents);
+    const hat = request.avatar.hat ?? null;
+    if (hat) docs.push(...this.assets.rigDocuments(hat));
     const images = [
       ...new Set(
         document.steps.flatMap((step) => {
@@ -678,7 +686,11 @@ export class StagePresenter implements Presenter {
       packId: request.packId,
       avatar:
         avatarDocs && request.avatar.scarf
-          ? { rig: avatarDocs.rigId, tints: { scarf: SCARF_COLORS[request.avatar.scarf] } }
+          ? {
+              rig: avatarDocs.rigId,
+              tints: { scarf: SCARF_COLORS[request.avatar.scarf] },
+              accessories: hat ? [{ slot: 'hat', rig: hat }] : [],
+            }
           : undefined,
       onEvent: (event) => {
         if (event.type === 'line')
