@@ -46,6 +46,16 @@ describe('cozy day', () => {
     }
   });
 
+  it('not enough buttons: a gentle line, nothing taken', async () => {
+    const game = await cozyGame([]);
+    const before = game.host.getView();
+    const result = await game.host.dispatch({ type: 'buy', item: 'hat-acorn' });
+    expect(result.ok).toBe(true);
+    const after = game.host.getView();
+    expect(after.cozy!.office?.line.id).toBe('CZ-NOT-ENOUGH');
+    expect(after.buttons).toBe(before.buttons);
+  });
+
   it('decor from the shop goes on an office slot and leaves it when returned', async () => {
     // Decor costs 3–8 hearts (T11): earned across levels of case 1.
     const game = await cozyGame(['case01-l1', 'case01-l2', 'case01-l3']);

@@ -24,7 +24,9 @@ export function patternNode(pattern: readonly ('dot' | 'dash')[]): HTMLElement {
   return h(
     'span',
     { class: 'signal-pattern', role: 'img', 'aria-label': words },
-    ...pattern.map((s) => h('span', { class: `signal-${s}`, 'aria-hidden': 'true' }, s === 'dot' ? '●' : '▬')),
+    ...pattern.map((s) =>
+      h('span', { class: `signal-${s}`, 'aria-hidden': 'true' }, s === 'dot' ? '●' : '▬'),
+    ),
   );
 }
 
@@ -77,7 +79,12 @@ export function renderOfficeTalk(app: App, view: GameView): HTMLElement | null {
       },
     );
     done.dataset.primary = '';
-    return h('div', { class: 'rank-news' }, h('h2', null, `${t(app, 'rank.new')} ${rank.label.text}`), done);
+    return h(
+      'div',
+      { class: 'rank-news' },
+      h('h2', null, `${t(app, 'rank.new')} ${rank.label.text}`),
+      done,
+    );
   }
   const talk = view.cozy?.office;
   if (!talk) return null;
@@ -117,9 +124,8 @@ export function renderCozy(app: App, close: () => HTMLElement): HTMLElement {
   if (!view || !cozy) return h('div', null, close());
   const tab = (app.ui.cozyTab as ShopTab | undefined) ?? 'hat';
   const closeAfter = async (action: Parameters<App['act']>[0]) => {
-    await app.act(action);
-    // Replies (bought, returned, not enough, tea stories) play in the office panel.
-    if (app.view()?.cozy?.office) await app.setOverlay(null);
+    // Buying, returning and tea always answer with lines, played in the office panel.
+    if (await app.act(action)) await app.setOverlay(null);
   };
   let body: HTMLElement;
   if (tab === 'tea') {
@@ -164,7 +170,11 @@ export function renderCozy(app: App, close: () => HTMLElement): HTMLElement {
           if (!item.owned)
             actions.push(
               button(
-                { label: `${t(app, 'cozy.buy')}: ${item.label.text} (${price(item)})`, key: `buy-${item.id}`, icon: '🛍' },
+                {
+                  label: `${t(app, 'cozy.buy')}: ${item.label.text} (${price(item)})`,
+                  key: `buy-${item.id}`,
+                  icon: '🛍',
+                },
                 () => closeAfter({ type: 'buy', item: item.id }),
               ),
             );
@@ -183,7 +193,11 @@ export function renderCozy(app: App, close: () => HTMLElement): HTMLElement {
               );
             actions.push(
               button(
-                { label: `${t(app, 'cozy.return')}: ${item.label.text} (+${price(item)})`, key: `return-${item.id}`, icon: '↩' },
+                {
+                  label: `${t(app, 'cozy.return')}: ${item.label.text} (+${price(item)})`,
+                  key: `return-${item.id}`,
+                  icon: '↩',
+                },
                 () => closeAfter({ type: 'refund', item: item.id }),
               ),
             );
@@ -210,7 +224,12 @@ export function renderCozy(app: App, close: () => HTMLElement): HTMLElement {
       { class: 'segmented', role: 'group', 'aria-label': t(app, 'cozy.shop') },
       ...TABS.map((entry) =>
         button(
-          { label: t(app, entry.label), key: `cozy-tab-${entry.id}`, pressed: tab === entry.id, icon: entry.icon },
+          {
+            label: t(app, entry.label),
+            key: `cozy-tab-${entry.id}`,
+            pressed: tab === entry.id,
+            icon: entry.icon,
+          },
           () => {
             app.ui.cozyTab = entry.id;
             app.render();
@@ -232,7 +251,11 @@ function cipherPoster(page: Extract<NotebookPageView, { kind: 'cipher-poster' }>
         { class: `glyph shape-${cell.shape}`, 'aria-label': cell.label.text },
         h(
           'span',
-          { class: 'glyph-button', style: `--glyph: ${COLOURS[cell.colour] ?? '#ccc'}`, 'aria-hidden': 'true' },
+          {
+            class: 'glyph-button',
+            style: `--glyph: ${COLOURS[cell.colour] ?? '#ccc'}`,
+            'aria-hidden': 'true',
+          },
           h('span', { class: 'glyph-shape' }, SHAPES[cell.shape] ?? '●'),
           h('span', { class: 'glyph-holes' }, '∘'.repeat(cell.holes)),
         ),
@@ -257,10 +280,13 @@ export function renderPages(app: App, close: () => HTMLElement): HTMLElement {
           'div',
           { class: 'segmented', role: 'group' },
           ...pages.map((page) =>
-            button({ label: page.title.text, key: `page-${page.id}`, pressed: page === current }, () => {
-              app.ui.notebookPage = page.id;
-              app.render();
-            }),
+            button(
+              { label: page.title.text, key: `page-${page.id}`, pressed: page === current },
+              () => {
+                app.ui.notebookPage = page.id;
+                app.render();
+              },
+            ),
           ),
         )
       : null,
@@ -272,7 +298,12 @@ export function renderPages(app: App, close: () => HTMLElement): HTMLElement {
           current.kind === 'cipher-poster'
             ? cipherPoster(current)
             : current.kind === 'secret-notes' && view?.signal
-              ? h('p', { class: 'own-signal' }, `${t(app, 'notebook.ownSignal')} `, patternNode(view.signal))
+              ? h(
+                  'p',
+                  { class: 'own-signal' },
+                  `${t(app, 'notebook.ownSignal')} `,
+                  patternNode(view.signal),
+                )
               : null,
         )
       : h('p', null, t(app, 'notebook.nothing')),

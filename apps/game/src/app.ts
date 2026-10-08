@@ -443,7 +443,8 @@ export class App {
     const host = this.session?.game.host;
     if (overlay && !this.overlay) {
       this.focusBookmark = rememberFocus(document);
-      if (overlay !== 'notebook') {
+      // The notebook and the cozy day act on the game, so they don't pause it.
+      if (overlay !== 'notebook' && overlay !== 'cozy') {
         host?.pause('user');
         this.voice.pause();
         this.presenter?.setPaused(true);

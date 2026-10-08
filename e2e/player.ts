@@ -91,7 +91,17 @@ export class Player {
             .getAttribute('data-cutscene')
             .catch(() => null);
           if (id && (await skip.isVisible().catch(() => false))) {
-            await this.activate(skip);
+            // A short cutscene (the wordless intro) may end on its own mid-click: the loop
+            // re-reads the screen, so a detached skip button is not an error.
+            const ended = await this.activate(skip).then(
+              () => false,
+              async () =>
+                (await page
+                  .locator('#app .dialogue.cutscene')
+                  .getAttribute('data-cutscene')
+                  .catch(() => null)) !== id,
+            );
+            if (ended) continue;
             // Skipping may wait for the cutscene to finish loading: wait for it to end.
             await page
               .waitForFunction(

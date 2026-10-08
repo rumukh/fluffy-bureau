@@ -45,6 +45,8 @@ const MUSIC_BY_LOCATION: Record<string, string> = {
   map: 'gentle-mystery',
   shed: 'heartfelt',
   bakery: 'celebration-baking',
+  // Case 4 tea party (until A's tea-party loop lands).
+  'tea-square': 'celebration-baking',
 };
 
 function playMusic(app: App, location: string, lamp: boolean): void {
