@@ -42,11 +42,19 @@ function renderRest(app: App): HTMLElement {
 const MUSIC_BY_LOCATION: Record<string, string> = {
   office: 'title-office',
   'office-desk': 'title-office',
-  map: 'gentle-mystery',
   shed: 'heartfelt',
   bakery: 'celebration-baking',
-  // Case 4 tea party (until A's tea-party loop lands).
-  'tea-square': 'celebration-baking',
+  map: 'town-map',
+  // Stage 2 (A's loops): dusk and the lighthouse, dreams, the tea party.
+  'honey-pond': 'dusk-lighthouse',
+  'pond-bank': 'dusk-lighthouse',
+  'pond-night': 'dusk-lighthouse',
+  'lighthouse-door': 'dusk-lighthouse',
+  'lighthouse-room': 'dusk-lighthouse',
+  'lighthouse-stairs': 'dusk-lighthouse',
+  'dream-mist': 'dreams',
+  'office-evening': 'heartfelt',
+  'tea-square': 'tea-party',
 };
 
 function playMusic(app: App, location: string, lamp: boolean): void {
