@@ -8,6 +8,7 @@ import {
   type ContentIndex,
   type FluffyPack,
   type PackIndex,
+  type Scene,
 } from './content.js';
 import { currentStep, evaluate, visibleOptions, type AwaitAction } from './interpreter.js';
 import { minigameDefinition } from './minigames.js';
@@ -379,25 +380,14 @@ function dirText(index: PackIndex, id: string): string {
   return map.get(id) ?? '';
 }
 
-type StagedStep = { t: string; background?: unknown; [key: string]: unknown };
-
-/** Latest `dir.background` on the path to the cursor (restart-safe: derived from position only). */
-function backgroundAt(
-  scene: { steps: readonly unknown[]; background?: unknown },
-  cursor: readonly { i: number; b: string | null }[],
-): string | null {
-  let found: string | null = typeof scene.background === 'string' ? scene.background : null;
-  let list = scene.steps as readonly StagedStep[];
-  for (const segment of cursor) {
-    for (let i = 0; i <= segment.i && i < list.length; i++) {
-      const step = list[i]!;
-      if (step.t === 'dir' && typeof step.background === 'string') found = step.background;
-    }
-    const current = list[segment.i];
-    if (!current || !segment.b) break;
-    const branch = current[segment.b];
-    if (!Array.isArray(branch)) break;
-    list = branch as StagedStep[];
-  }
+/**
+ * The latest `dir.background` at or before the cursor, else `scene.background`. C's validator keeps
+ * background directions at the scene's top level. Derived from the position alone, so a restored
+ * or restarted scene shows the same stage.
+ */
+function backgroundAt(scene: Scene, cursor: readonly { i: number }[]): string | null {
+  let found = scene.background ?? null;
+  for (const step of scene.steps.slice(0, (cursor[0]?.i ?? -1) + 1))
+    if (step.t === 'dir' && step.background) found = step.background;
   return found;
 }

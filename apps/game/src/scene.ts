@@ -5,7 +5,6 @@ import type { App } from './app.js';
 import { rewardIcon } from './app.js';
 import { fallbackHotspots, LOGICAL, SCARF_COLORS, type HotspotRect } from './assets.js';
 import { append, button, focusFirst, h } from './dom.js';
-import { BACKGROUND_BY_LINE } from './staging.js';
 
 type Json = Record<string, unknown>;
 
@@ -169,14 +168,8 @@ function renderRun(app: App, view: GameView, run: RunView): HTMLElement {
     comfort: view.lamp,
     reducedMotion: app.reducedMotion(),
     level: run.level,
-    // Content staging (C's `dir.background` / `scene.background`) wins; the line map is the interim
-    // fallback until the packs carry it.
-    background:
-      run.background ??
-      BACKGROUND_BY_LINE[
-        run.queue?.line.id ?? (run.step?.kind === 'line' ? run.step.line.id : '')
-      ] ??
-      null,
+    // C's staging: the latest `dir.background` in this scene, then `scene.background`.
+    background: run.background,
   });
   const step = run.step;
   // While searching with the magnifier the characters step back so every object is visible.

@@ -32,6 +32,29 @@ describe('scenario traces', () => {
     expect(result.view.buttons).toBe(5);
   });
 
+  it('stage backgrounds follow the content: the shed window close-up (R03)', async () => {
+    const seen = new Map<string, string | null>();
+    for (const pack of variants) {
+      const game = await withPrologue();
+      await autoplay(game.host, game.rules, pack, {
+        after: (_action, view) => {
+          const run = view.run;
+          const line =
+            run?.queue?.line.id ?? (run?.step?.kind === 'line' ? run.step.line.id : null);
+          if (run && line) seen.set(`${pack}:${line}`, run.background);
+        },
+      });
+    }
+    for (const pack of ['case01-l1', 'case01-l2']) {
+      expect(seen.get(`${pack}:C1-5-05`)).toBe('bg.shed-window');
+      expect(seen.get(`${pack}:C1-5-07`)).toBe('bg.shed-window');
+    }
+    expect(seen.get('case01-l3:L3-7-07')).toBe('bg.shed-window');
+    expect(seen.get('case01-l3:L3-7-08')).toBe('bg.shed-window');
+    // Scenes without directions keep the location's default.
+    expect(seen.get('case01-l1:C1-1-01')).toBeNull();
+  });
+
   for (const pack of variants) {
     describe(pack, () => {
       it('solution path completes with rewards, facts and glossary', async () => {

@@ -148,6 +148,11 @@ visibility changes add the `visibility` reason.
   grade and pause are forwarded to the stage. Hotspots stay DOM buttons in the same logical coordinates.
 - **`StaticPresenter`**: layered still images with CSS motion; the fallback when the stage cannot load.
 
+**Backgrounds** come from the content: the projection reports the latest `dir.background` at or
+before the cursor in the current scene (C keeps those at the scene's top level), else
+`scene.background`, else the location's default. It is derived from the position alone, so restore and
+restart show the same stage (for example the shed window close-up with the pie in the lid window).
+
 A's Rhubarb cue files are converted to `aegis-cues/1` at build time with E's `importRhubarb`.
 **Cutscenes (T25):** a `{t:'cutscene'}` step blocks the story; the UI plays the pack's
 `aegis-cutscene/1` document on E's player (`stage.cutscene`) with the avatar composition bound, shows
@@ -170,8 +175,15 @@ The build emits **incremental offline packs**: `shell` (code, styles, fonts, lic
 `prologue`, `case01` (later `case02`…). Each has a digest-checked resource graph
 (`dist/offline/<pack>.json`); `dist/offline/index.json` lists the build. On first online start the app
 installs every pack (all-or-nothing per pack) and registers the bundled worker, which pins exact
-revisions, denies outbound requests, never skips waiting and never reloads a running case. A newer build
-is installed side by side and takes over at the next launch; saves migrate as described in §4.
+revisions, denies outbound requests, never skips waiting and never reloads a running case.
+
+**Updates (Q43).** The app looks for a newer `offline/index.json` at launch, whenever the device comes
+back online and every 30 minutes. A newer build's changed packs are installed side by side (unchanged
+packs are shared by revision), then the registration is asked to `update()`. The new worker installs
+only if every pack it pins is already in the store (its `install` guard; the browser may fetch a new
+`worker.js` on its own), then waits: the running case continues on the old build, and the new build
+takes over at the next launch; saves migrate as described in §4. The parent corner shows «Новая версия
+скачана…»; the child sees nothing.
 
 ## 9. Privacy and release shell
 

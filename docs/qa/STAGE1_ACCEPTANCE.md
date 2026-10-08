@@ -45,7 +45,7 @@ passed (17 Chromium + 17 WebKit, serial, 12.1 min).
 | 5 | Exactly 3 facts, ≤ 3 glossary words | n/a | ✅ | ✅ | ✅ | C validator; traces assert 3 facts |
 | 6 | Culprit confesses and helps | n/a | ✅ | ✅ | ✅ | content (C1-7, C1-8); played in E2E |
 | 7 | Comfort lamp and autosave work | ✅ | ✅ | ✅ | ✅ | `a11y-saves.spec.ts`; checkpoint after every command |
-| 8 | Name and avatar used | ✅ | ✅ | ✅ | ✅ | `{имя}` in text, «пушинка» in voice (C/A); avatar with tinted scarf in every scene (static until E) |
+| 8 | Name and avatar used | ✅ | ✅ | ✅ | ✅ | `{имя}` in text, «пушинка» in voice (C/A); the avatar is a puppet on E's stage with the scarf tinted at runtime, in every scene and in the T25 cutscenes (P3, shed, oven, reward) |
 
 ## 2. Q44 observable signs
 
@@ -83,6 +83,7 @@ passed (17 Chromium + 17 WebKit, serial, 12.1 min).
 | Corrupt record → recovery, not a new game | `session.test.ts` (previous copy restored) |
 | Content update keeps progress | `session.test.ts` (migration to start of the same scene) |
 | Backup export/import | `session.test.ts`; parent-corner UI |
+| Break reminder (T16) | `lifecycle.spec.ts` with a test clock (Chromium, WebKit): off by default; a parent enables 15 min behind the gate; nothing at 14 min; after 15 min the reminder appears at the next safe point once «сохранено» is shown; no timer or countdown anywhere in the child's UI; «Ещё немного» dismisses it and play continues; the next reminder comes a full interval later; «Отдохнуть» shows the calm rest screen and «Продолжить» returns |
 
 ## 5. Accessibility
 
@@ -115,7 +116,7 @@ passed (17 Chromium + 17 WebKit, serial, 12.1 min).
 | Install, then cold start with the network blocked | `offline.spec.ts`: auto-install of `shell`, `prologue`, `case01` packs; browser closed; server stopped; offline relaunch resumes mid-minigame and completes the prologue (Chromium, WebKit) |
 | No outbound requests | keyboard playthrough and offline run record zero non-local requests; CSP `connect-src 'self'` |
 | No telemetry, links, debug globals | no analytics code; parent corner has no links (asserted); `window` has no game/aegis globals (asserted); `assertChildSafeView` on every release render |
-| Update does not restart an active case (Q43) | worker never skips waiting; new build takes over next launch; saves migrate | **not exercised end-to-end yet** |
+| Update does not restart an active case (Q43) | `lifecycle.spec.ts` (Chromium, WebKit): build A installed offline, a profile mid-«Лупа»; build B published on the same address; the game finds B when the device comes back online (also at launch and twice an hour), installs its changed packs in the background and leaves B's worker waiting; the page is not reloaded, still runs A and the minigame continues; next launch, offline: B is in charge and the minigame progress is intact. The test found and fixed three defects: no automatic update check, re-registering the worker did not look for the new script, and the browser could install B's worker before B's packs (now refused by the worker's install guard) |
 
 ## 8. Performance (T02: 60 fps target, 30 fps floor)
 
@@ -130,7 +131,7 @@ Animated scene with A's art (office background, three illustrated characters, bu
 With E's puppet stage Chromium stays near the 60 fps target with the CPU slowed 4× and is the asserted gate (≥ 30); with still images it measured 59–60. Playwright's
 WebKit on Windows renders without GPU compositing and is recorded only. To get there with real art the
 stage uses compositor-only motion (`will-change`), no box-shadow animation and three bubbles. The iPad
-number remains **pending a physical check (T15)**; E's puppet animation will need re-measurement.
+number remains **pending a physical check (T15)**. The figures above were re-measured with E's puppets on the stage (2026-10-08).
 
 ## 9. Browsers
 
@@ -139,9 +140,13 @@ Chrome on Android tablets, Edge (Chromium-based, expected equivalent), Firefox (
 
 ## Known gaps and follow-ups
 
-1. A's assets are integrated; three backgrounds share location `shed` and the runtime picks the
-   interior — per-scene selection waits for E's stage or a content field.
+1. Per-scene backgrounds come from the content (C's `scene.background` and `dir.background`): the
+   trail ends on the shed window close-up with the pie in the lid window (C1-5-05..07, L3-7-06..08,
+   unit-tested) and the conversations use the shed interior. At levels 1–2, `bg.shed-exterior` is set
+   by a direction followed immediately by the window close-up, so it is not on screen for a line;
+   reported to C.
 2. T25 cutscenes are integrated; the stage releases backgrounds between scenes and uses a 128 MiB decoded-image budget (A repacked atlases to ~2 MiB).
-3. Update flow and break reminder are implemented but not covered by E2E yet.
-4. Stage directions (`dir`) reach the presenter with their text; the static presenter only renders bubbles.
+3. Stage directions (`dir`) outside cutscenes reach the presenter with their text only; mapping them
+   to puppet emotes, poses and props needs a structured action field from C (follow-up for Stage 2).
+4. A new build is announced only in the parent corner («Новая версия скачана…»); the child sees nothing.
 5. Human playtest and device checks (T15), pie card bake (T10).
