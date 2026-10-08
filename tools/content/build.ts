@@ -3,9 +3,10 @@
 //   node tools/content/build.ts --check         also fail if committed outputs are stale
 //   node tools/content/build.ts --only case03   validate Stage 1 + one case; write only that case's packs and scripts
 //
-// Pack tiers: Stage 1 (released, PACK_IDS) is strict about assets. Stage 2 production packs
-// (PRODUCTION_PACK_IDS: cases 2–4 and cozy) report assets A has not delivered as requests
-// (docs/content/ASSET_REQUESTS.md). Preview packs (cases 5–8) skip asset checks.
+// Pack tiers: released packs (PACK_IDS: Stage 1 plus the Stage 2 production packs, i.e. cases 2–4 and cozy,
+// listed separately as PRODUCTION_PACK_IDS) are strict about assets: A has delivered all of them (v0.2.0).
+// Set PRODUCTION_STRICT to false to report undelivered production assets as requests
+// (docs/content/ASSET_REQUESTS.md) while a new stage is in production. Preview packs (cases 5–8) skip asset checks.
 import { mkdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { cozySource, preview, production, sharedSource, stage1 } from '../../content/index.ts';
@@ -24,7 +25,8 @@ if (only && !cases.some((c) => c.id === only)) throw new Error(`unknown case ${o
 
 const stage1Ids = new Set(['shared', ...stage1.flatMap((c) => c.variants.map((v) => v.pack))]);
 const productionIds = new Set(['cozy', ...production.flatMap((c) => c.variants.map((v) => v.pack))]);
-const tier = (pack: string): AssetTier => (stage1Ids.has(pack) ? 'strict' : productionIds.has(pack) ? 'pending' : 'skip');
+const PRODUCTION_STRICT = true;
+const tier = (pack: string): AssetTier => (stage1Ids.has(pack) ? 'strict' : productionIds.has(pack) ? (PRODUCTION_STRICT ? 'strict' : 'pending') : 'skip');
 
 const result = build(sharedSource, cases, genderReview, { tier, cozy: only ? null : cozySource });
 const files = new Map<string, string>();
@@ -47,9 +49,9 @@ files.set('packages/content/src/packs.ts', [
   "import type { ContentPack } from './schema.ts';",
   ...packIds.map((id, i) => `import p${i} from '../packs/${id}.json' with { type: 'json' };`),
   '',
-  '/** Released packs (Stage 1). */',
-  `export const PACK_IDS = ${JSON.stringify(packIds.filter((id) => stage1Ids.has(id)))} as const;`,
-  '/** Stage 2 production packs (cases 2–4, cozy day): integrated and recorded during Stage 2. */',
+  '/** Released packs shipped by the release build (T30): Stage 1 and Stage 2 (cases 2–4, cozy day). */',
+  `export const PACK_IDS = ${JSON.stringify(packIds.filter((id) => stage1Ids.has(id) || productionIds.has(id)))} as const;`,
+  '/** The Stage 2 part of PACK_IDS (cases 2–4, cozy day). */',
   `export const PRODUCTION_PACK_IDS = ${JSON.stringify(packIds.filter((id) => productionIds.has(id)))} as const;`,
   '/** Preparatory packs (cases 5–8): validated, not for production before «дальше». */',
   `export const PREVIEW_PACK_IDS = ${JSON.stringify(packIds.filter((id) => !stage1Ids.has(id) && !productionIds.has(id)))} as const;`,

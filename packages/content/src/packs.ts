@@ -28,9 +28,9 @@ import p24 from '../packs/case08-l2.json' with { type: 'json' };
 import p25 from '../packs/case08-l3.json' with { type: 'json' };
 import p26 from '../packs/cozy.json' with { type: 'json' };
 
-/** Released packs (Stage 1). */
-export const PACK_IDS = ["shared","prologue","case01-l1","case01-l2","case01-l3"] as const;
-/** Stage 2 production packs (cases 2–4, cozy day): integrated and recorded during Stage 2. */
+/** Released packs shipped by the release build (T30): Stage 1 and Stage 2 (cases 2–4, cozy day). */
+export const PACK_IDS = ["shared","prologue","case01-l1","case01-l2","case01-l3","case02-l1","case02-l2","case02-l3","case03-l1","case03-l2","case03-l3","case04-l1","case04-l2","case04-l3","cozy"] as const;
+/** The Stage 2 part of PACK_IDS (cases 2–4, cozy day). */
 export const PRODUCTION_PACK_IDS = ["case02-l1","case02-l2","case02-l3","case03-l1","case03-l2","case03-l3","case04-l1","case04-l2","case04-l3","cozy"] as const;
 /** Preparatory packs (cases 5–8): validated, not for production before «дальше». */
 export const PREVIEW_PACK_IDS = ["case05-l1","case05-l2","case05-l3","case06-l1","case06-l2","case06-l3","case07-l1","case07-l2","case07-l3","case08-l1","case08-l2","case08-l3"] as const;
