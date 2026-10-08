@@ -193,6 +193,33 @@ PROPS = {
     "prop.garland-100": ({"rest": ("props/garland-100-c2.png", 1400)}, "rest", "center"),
     "prop.bunting": ({"rest": ("props/bunting.png", 2200)}, "rest", "center"),
     "prop.title-card": ({"rest": ("props/title-card-c1.png", 1400)}, "rest", "center"),
+    # Stage 2 (cases 2-4), ids from C's ASSET_REQUESTS (e4f11fb).
+    "prop.badge-letters-saved": ({"rest": ("props/badge-letters-saved.png", 320)}, "rest", "center"),
+    "prop.badge-beacon": ({"rest": ("props/badge-lighthouse-light.png", 320)}, "rest", "center"),
+    "prop.badge-jam-c4": ({"rest": ("props/badge-honest-jam.png", 320)}, "rest", "center"),
+    "prop.c2-cipher-poster": ({"rest": ("props/cipher-poster.png", 560)}, "rest", "center"),
+    "prop.c2-dry-letters": ({"rest": ("props/dry-letters.png", 300)}, "rest", "bottom"),
+    "prop.c2-letter-garland": ({"rest": ("props/letter-garland.png", 1600)}, "rest", "center"),
+    "prop.c2-magpie-nest": ({"rest": ("props/place-nest.png", 420)}, "rest", "bottom"),
+    "prop.chamomile-note": ({"rest": ("props/chamomile-note.png", 160)}, "rest", "center"),
+    "prop.empty-jam-jar": ({"rest": ("props/empty-jam-jar.png", 200)}, "rest", "bottom"),
+    "prop.fact-cards-c3": ({"rest": ("props/fact-cards.png", 520)}, "rest", "center"),
+    "prop.firefly-lamp": ({"rest": ("props/decor-star-lamp.png", 260)}, "rest", "bottom"),
+    "prop.firefly-lantern": ({"rest": ("props/firefly-lantern.png", 220)}, "rest", "bottom"),
+    "prop.jam-jar-c4": ({"rest": ("props/jam-jar-bow.png", 220)}, "rest", "bottom"),
+    "prop.jam-jars-c4": ({"rest": ("props/jam-jars-group.png", 620)}, "rest", "bottom"),
+    "prop.light-code-book": ({"rest": ("props/book-open-bookmark.png", 420)}, "rest", "center"),
+    "prop.light-signal-strip": ({"rest": ("props/light-signal-strip.png", 1200)}, "rest", "center"),
+    "prop.map-honey-lighthouse": ({"rest": ("props/place-lighthouse.png", 260)}, "rest", "bottom"),
+    "prop.note-khvosts": ({"rest": ("props/note-khvosts.png", 220)}, "rest", "center"),
+    "prop.notebook-secret-notes": ({"rest": ("props/notebook-secret.png", 640)}, "rest", "center"),
+    "prop.paddle-repaired": ({"rest": ("props/paddle-repaired.png", 520)}, "rest", "center"),
+    "prop.tea-table-c4": ({"rest": ("props/tea-table-long.png", 1500)}, "rest", "bottom"),
+}
+STICKERS = {  # prop.<id>-1/2/3 with one to three stars under the sticker
+    "prop.sticker-letters": "props/sticker-letters.png",
+    "prop.sticker-beacon": "props/sticker-lighthouse.png",
+    "prop.sticker-jam-c4": "props/sticker-jam.png",
 }
 
 
@@ -227,6 +254,12 @@ def write_props() -> dict[str, list[str]]:
     for rid, im in (("prop.box-pie-closed", closed), ("prop.box-pie-open", opened)):
         puppet(rid, {"rest": im}, "rest", OUT / "props" / rid, "bottom")
         sources[rid] = ["props/pie-box-closed.png" if rid.endswith("closed") else "props/box-pie-open.png"]
+    for base_id, master in STICKERS.items():
+        st = fit(trimmed(pick(master)), width=300)
+        for n in (1, 2, 3):
+            rid = f"{base_id}-{n}"
+            puppet(rid, {"rest": stars(st, n)}, "rest", OUT / "props" / rid, "center")
+            sources[rid] = [master]
     return sources
 
 
@@ -238,11 +271,64 @@ ACCESSORIES = {
     "acc.hat.beret": ("props/hat-beret.png", 300, "brim"),
     "acc.hat.flower": ("props/hat-flower.png", 340, "brim"),
     "acc.hat.acorn": ("props/hat-acorn.png", 300, "brim"),
+    "acc.hat.bobble": ("props/hat-bobble.png", 300, "brim"),
+    "acc.hat.captain": ("props/hat-captain.png", 320, "brim"),
+    "acc.hat.flower-crown": ("props/hat-flower-crown.png", 320, "brim"),
+    "acc.hat.top": ("props/hat-top.png", 300, "brim"),
 }
 
 
+AVATAR_SPECIES = ("kitten", "fox", "mouse", "squirrel", "puppy")
+SCARF_PATTERNS = ("stripes", "dots", "hearts", "stars")
+
+
+def write_scarf_patterns() -> dict[str, list[str]]:
+    """acc.scarf.<pattern>.<species>: a light motif clipped to that species' scarf frame (T29 shop).
+
+    The overlay has the scarf frame's size and pivot and attaches to the avatar slot `scarfPattern`
+    (parent `scarf`, z 16), so it sits exactly on the tinted scarf. It keeps its own cream colour,
+    shaded by the scarf's folds, with a faint shadow so it reads on light tints too.
+    """
+    import numpy as np  # noqa: PLC0415
+    from raster_kit import pattern  # noqa: PLC0415
+
+    sources: dict[str, list[str]] = {}
+    for sp in AVATAR_SPECIES:
+        d = REPO / "assets/avatar" / sp
+        rig = json.loads((d / f"avatar.{sp}.rig.json").read_text(encoding="utf-8"))
+        fr = json.loads((d / f"avatar.{sp}.atlas.json").read_text(encoding="utf-8"))["frames"]["scarf"]
+        scarf = Image.open(d / f"avatar.{sp}.atlas.webp").convert("RGBA").crop(
+            (fr["x"], fr["y"], fr["x"] + fr["w"], fr["y"] + fr["h"]))
+        pivot = next(p for p in rig["parts"] if p["id"] == "scarf")["pivot"]
+        s = np.asarray(scarf, dtype=np.float32) / 255
+        lum = s[..., :3] @ np.array([0.299, 0.587, 0.114], dtype=np.float32)
+        ref = np.percentile(lum[s[..., 3] > 0.5], 90) if (s[..., 3] > 0.5).any() else 1.0
+        shade = np.clip(lum / max(ref, 1e-3), 0.62, 1.0)[..., None]
+        for k in SCARF_PATTERNS:
+            tile = pattern(k).resize((112, 112), Image.LANCZOS)
+            motif = Image.new("RGBA", scarf.size, (0, 0, 0, 0))
+            for y in range(0, scarf.height, tile.height):
+                for x in range(0, scarf.width, tile.width):
+                    motif.paste(tile, (x, y), tile)
+            m = np.asarray(motif, dtype=np.float32) / 255
+            shadow = np.roll(m[..., 3], (2, 1), axis=(0, 1)) * (1 - m[..., 3]) * 0.28
+            a = (m[..., 3] + shadow) * s[..., 3]
+            rgb = np.where(m[..., 3:4] > 0, m[..., :3] * shade, np.float32(0.35) * shade)
+            out = np.dstack([rgb, a])
+            im = Image.fromarray((np.clip(out, 0, 1) * 255 + 0.5).astype(np.uint8), "RGBA")
+            rid = f"acc.scarf.{k}.{sp}"
+            od = OUT / "acc" / rid
+            puppet(rid, {"rest": im}, "rest", od, "center")
+            r = json.loads((od / f"{rid}.rig.json").read_text(encoding="utf-8"))
+            r["parts"][0]["pivot"] = dict(pivot)
+            r["bounds"] = {"x": -pivot["x"], "y": -pivot["y"], "width": im.width, "height": im.height}
+            dump(od / f"{rid}.rig.json", r)
+            sources[rid] = [f"puppets/avatar_{sp}/base.png", f"tools/assets/art/raster_kit.py pattern({k}) clipped to the scarf frame"]
+    return sources
+
+
 def write_accessories() -> dict[str, list[str]]:
-    sources = {}
+    sources = write_scarf_patterns()
     for rid, (rel, w, pivot) in ACCESSORIES.items():
         im = fit(trimmed(pick(rel)), width=w)
         d = OUT / "acc" / rid

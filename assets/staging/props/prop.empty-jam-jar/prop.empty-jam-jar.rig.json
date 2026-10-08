@@ -1,0 +1,33 @@
+{
+ "format": "aegis-rig/1",
+ "id": "prop.empty-jam-jar",
+ "revision": "1",
+ "atlases": [
+  "prop.empty-jam-jar.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -100.0,
+  "y": -244.5,
+  "width": 200,
+  "height": 245
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 100.0,
+    "y": 244.5
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "frame": "prop.empty-jam-jar.atlas#body.rest"
+  }
+ ]
+}

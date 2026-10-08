@@ -1,0 +1,33 @@
+{
+ "format": "aegis-rig/1",
+ "id": "acc.scarf.stars.squirrel",
+ "revision": "1",
+ "atlases": [
+  "acc.scarf.stars.squirrel.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -103.5,
+  "y": -45.6,
+  "width": 207,
+  "height": 228
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 103.5,
+    "y": 45.6
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "frame": "acc.scarf.stars.squirrel.atlas#body.rest"
+  }
+ ]
+}

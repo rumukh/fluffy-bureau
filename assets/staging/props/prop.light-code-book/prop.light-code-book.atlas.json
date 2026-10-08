@@ -1,0 +1,16 @@
+{
+ "format": "aegis-atlas/1",
+ "id": "prop.light-code-book.atlas",
+ "image": "prop.light-code-book.atlas.webp",
+ "width": 512,
+ "height": 512,
+ "scale": 1,
+ "frames": {
+  "body.rest": {
+   "x": 2,
+   "y": 2,
+   "w": 420,
+   "h": 265
+  }
+ }
+}

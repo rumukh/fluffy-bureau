@@ -154,5 +154,83 @@
   "source": "score 'celebration-baking' seed 67 comfort-lamp variant",
   "createdAt": "2026-10-07T23:49:33+00:00",
   "notes": "Seamless loop; -23 LUFS integrated. MP3 encoder delay: use loopStart/loopEnd with decoded audio."
+ },
+ "dusk-lighthouse": {
+  "file": "dusk-lighthouse.mp3",
+  "durationMs": 50526,
+  "loopStart": 0,
+  "loopEnd": 50.5263,
+  "bpm": 76.0,
+  "pack": "case03",
+  "comfortVariantOf": null,
+  "tool": "tools/assets/audio/music.py (programmatic synthesis, numpy)",
+  "source": "score 'dusk-lighthouse' seed 71",
+  "createdAt": "2026-10-08T13:20:16+00:00",
+  "notes": "Seamless loop; -23 LUFS integrated. MP3 encoder delay: use loopStart/loopEnd with decoded audio."
+ },
+ "dusk-lighthouse-warm": {
+  "file": "dusk-lighthouse-warm.mp3",
+  "durationMs": 53751,
+  "loopStart": 0,
+  "loopEnd": 53.7514,
+  "bpm": 71.44,
+  "pack": "case03",
+  "comfortVariantOf": "dusk-lighthouse",
+  "tool": "tools/assets/audio/music.py (programmatic synthesis, numpy)",
+  "source": "score 'dusk-lighthouse' seed 71 comfort-lamp variant",
+  "createdAt": "2026-10-08T13:20:25+00:00",
+  "notes": "Seamless loop; -23 LUFS integrated. MP3 encoder delay: use loopStart/loopEnd with decoded audio."
+ },
+ "dreams": {
+  "file": "dreams.mp3",
+  "durationMs": 60000,
+  "loopStart": 0,
+  "loopEnd": 60.0,
+  "bpm": 64.0,
+  "pack": "case04",
+  "comfortVariantOf": null,
+  "tool": "tools/assets/audio/music.py (programmatic synthesis, numpy)",
+  "source": "score 'dreams' seed 83",
+  "createdAt": "2026-10-08T13:20:36+00:00",
+  "notes": "Seamless loop; -23 LUFS integrated. MP3 encoder delay: use loopStart/loopEnd with decoded audio."
+ },
+ "dreams-warm": {
+  "file": "dreams-warm.mp3",
+  "durationMs": 63830,
+  "loopStart": 0,
+  "loopEnd": 63.8298,
+  "bpm": 60.16,
+  "pack": "case04",
+  "comfortVariantOf": "dreams",
+  "tool": "tools/assets/audio/music.py (programmatic synthesis, numpy)",
+  "source": "score 'dreams' seed 83 comfort-lamp variant",
+  "createdAt": "2026-10-08T13:20:47+00:00",
+  "notes": "Seamless loop; -23 LUFS integrated. MP3 encoder delay: use loopStart/loopEnd with decoded audio."
+ },
+ "tea-party": {
+  "file": "tea-party.mp3",
+  "durationMs": 35556,
+  "loopStart": 0,
+  "loopEnd": 35.5556,
+  "bpm": 108.0,
+  "pack": "case04",
+  "comfortVariantOf": null,
+  "tool": "tools/assets/audio/music.py (programmatic synthesis, numpy)",
+  "source": "score 'tea-party' seed 97",
+  "createdAt": "2026-10-08T13:20:54+00:00",
+  "notes": "Seamless loop; -23 LUFS integrated. MP3 encoder delay: use loopStart/loopEnd with decoded audio."
+ },
+ "tea-party-warm": {
+  "file": "tea-party-warm.mp3",
+  "durationMs": 37825,
+  "loopStart": 0,
+  "loopEnd": 37.8251,
+  "bpm": 101.52,
+  "pack": "case04",
+  "comfortVariantOf": "tea-party",
+  "tool": "tools/assets/audio/music.py (programmatic synthesis, numpy)",
+  "source": "score 'tea-party' seed 97 comfort-lamp variant",
+  "createdAt": "2026-10-08T13:21:01+00:00",
+  "notes": "Seamless loop; -23 LUFS integrated. MP3 encoder delay: use loopStart/loopEnd with decoded audio."
  }
 }

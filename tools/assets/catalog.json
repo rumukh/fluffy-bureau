@@ -363,6 +363,12 @@
      "y": 60,
      "w": 690,
      "h": 520
+    },
+    "crack": {
+     "x": 1960,
+     "y": 220,
+     "w": 120,
+     "h": 340
     }
    },
    "notes": "Level 3: the garden (foreground beds) and the shed (behind the sage gate) read as two different places."
@@ -449,6 +455,546 @@
    "location": "bakery",
    "hotspots": {},
    "notes": "T25 optional C1-8 moment: pie baking in the honey-caramel oven."
+  },
+  "bg.post-office": {
+   "master": "backgrounds/bg-post-office-c1.png",
+   "pack": "case02",
+   "location": "post-office",
+   "hotspots": {
+    "cipher": {
+     "x": 150,
+     "y": 70,
+     "w": 340,
+     "h": 560
+    },
+    "clock": {
+     "x": 560,
+     "y": 150,
+     "w": 180,
+     "h": 300
+    },
+    "fitilyok": {
+     "x": 490,
+     "y": 420,
+     "w": 220,
+     "h": 250
+    },
+    "porch": {
+     "x": 1560,
+     "y": 100,
+     "w": 600,
+     "h": 520
+    },
+    "mice": {
+     "x": 260,
+     "y": 880,
+     "w": 300,
+     "h": 240
+    },
+    "mayor": {
+     "x": 1600,
+     "y": 760,
+     "w": 180,
+     "h": 200
+    }
+   },
+   "notes": "Post office interior with the button chart on the wall (cipher hub)."
+  },
+  "bg.post-porch": {
+   "master": "backgrounds/post-porch-c1.png",
+   "pack": "case02",
+   "location": "post-porch",
+   "hotspots": {
+    "umbrella": {
+     "x": 260,
+     "y": 1120,
+     "w": 300,
+     "h": 260
+    },
+    "feather": {
+     "x": 1250,
+     "y": 1250,
+     "w": 240,
+     "h": 140
+    },
+    "note": {
+     "x": 900,
+     "y": 820,
+     "w": 220,
+     "h": 140
+    },
+    "paper": {
+     "x": 1700,
+     "y": 1180,
+     "w": 260,
+     "h": 180
+    },
+    "pollen": {
+     "x": 560,
+     "y": 760,
+     "w": 240,
+     "h": 160
+    }
+   },
+   "notes": "Windblown post office porch (magnifier).",
+   "layers": [
+    {
+     "asset": "minigame.umbrella-inverted",
+     "target": "umbrella",
+     "x": 260,
+     "y": 1120,
+     "w": 300,
+     "h": 260
+    },
+    {
+     "asset": "minigame.feather",
+     "target": "feather",
+     "x": 1250,
+     "y": 1250,
+     "w": 240,
+     "h": 140
+    },
+    {
+     "asset": "minigame.note-blank",
+     "target": "note",
+     "x": 900,
+     "y": 820,
+     "w": 220,
+     "h": 140
+    },
+    {
+     "asset": "minigame.newspaper-scrap",
+     "target": "paper",
+     "x": 1700,
+     "y": 1180,
+     "w": 260,
+     "h": 180,
+     "levels": [
+      2,
+      3
+     ]
+    },
+    {
+     "asset": "minigame.pollen",
+     "target": "pollen",
+     "x": 560,
+     "y": 760,
+     "w": 240,
+     "h": 160,
+     "levels": [
+      3
+     ]
+    }
+   ]
+  },
+  "bg.post-clock": {
+   "master": "backgrounds/bg-post-clock-c1.png",
+   "pack": "case02",
+   "location": "post-clock",
+   "hotspots": {},
+   "notes": "Post office clock (timeline, L2-L3)."
+  },
+  "bg.library-door": {
+   "master": "backgrounds/library-entrance-c1.png",
+   "pack": "case02",
+   "location": "library-door",
+   "hotspots": {},
+   "notes": "Quiet Burrow library door and the Shurshik mouse door with paper bunting."
+  },
+  "bg.old-oak": {
+   "master": "backgrounds/old-oak-c1.png",
+   "pack": "case02",
+   "location": "old-oak",
+   "hotspots": {
+    "nest": {
+     "x": 1680,
+     "y": 40,
+     "w": 340,
+     "h": 300
+    },
+    "hollow": {
+     "x": 1520,
+     "y": 680,
+     "w": 260,
+     "h": 280
+    }
+   },
+   "notes": "Old Oak: nest high in the crown, hollow low among the roots (two clearly different places)."
+  },
+  "bg.town-square": {
+   "master": "backgrounds/letters-exhibition-c1.png",
+   "pack": "case02",
+   "location": "town-square",
+   "hotspots": {},
+   "notes": "Town square dressed for the Exhibition of Letters (case 2)."
+  },
+  "bg.lamp-booth": {
+   "master": "backgrounds/lamp-booth-c1.png",
+   "pack": "case02",
+   "location": "lamp-booth",
+   "hotspots": {},
+   "notes": "Firefly-lantern keeper's booth at dawn (L3)."
+  },
+  "bg.office-evening": {
+   "master": "backgrounds/office-evening-c1.png",
+   "pack": "case03",
+   "location": "office-evening",
+   "hotspots": {},
+   "notes": "The Office at dusk, warm lamps."
+  },
+  "bg.honey-pond": {
+   "master": "backgrounds/pond-shore-dusk-c1.png",
+   "pack": "case03",
+   "location": "honey-pond",
+   "hotspots": {
+    "room": {
+     "x": 1420,
+     "y": 50,
+     "w": 140,
+     "h": 200
+    },
+    "door": {
+     "x": 1400,
+     "y": 250,
+     "w": 320,
+     "h": 250
+    },
+    "sounds": {
+     "x": 2180,
+     "y": 680,
+     "w": 150,
+     "h": 320
+    },
+    "fitilyok": {
+     "x": 460,
+     "y": 160,
+     "w": 120,
+     "h": 200
+    },
+    "tracks": {
+     "x": 500,
+     "y": 760,
+     "w": 580,
+     "h": 240
+    },
+    "log": {
+     "x": 2160,
+     "y": 440,
+     "w": 170,
+     "h": 200
+    },
+    "mice": {
+     "x": 560,
+     "y": 1200,
+     "w": 400,
+     "h": 200
+    },
+    "blink": {
+     "x": 1100,
+     "y": 640,
+     "w": 100,
+     "h": 120
+    }
+   },
+   "notes": "Honey Pond at dusk, lighthouse across the water (hub)."
+  },
+  "bg.pond-bank": {
+   "master": "backgrounds/pond-shore-dusk-c2.png",
+   "pack": "case03",
+   "location": "pond-bank",
+   "hotspots": {},
+   "notes": "Pond bank where the mice play the recording shell."
+  },
+  "bg.lighthouse-door": {
+   "master": "backgrounds/lighthouse-door-c1.png",
+   "pack": "case03",
+   "location": "lighthouse-door",
+   "hotspots": {
+    "paddle": {
+     "x": 360,
+     "y": 740,
+     "w": 520,
+     "h": 220
+    }
+   },
+   "notes": "Lighthouse door and Damka's boat with the patched oar and the chamomile."
+  },
+  "bg.lighthouse-room": {
+   "master": "backgrounds/lantern-room-c1.png",
+   "pack": "case03",
+   "location": "lighthouse-room",
+   "hotspots": {
+    "cord": {
+     "x": 1520,
+     "y": 570,
+     "w": 120,
+     "h": 300
+    },
+    "book": {
+     "x": 250,
+     "y": 650,
+     "w": 280,
+     "h": 150
+    },
+    "wax": {
+     "x": 1700,
+     "y": 960,
+     "w": 220,
+     "h": 110
+    },
+    "window": {
+     "x": 340,
+     "y": 220,
+     "w": 360,
+     "h": 420
+    },
+    "tools": {
+     "x": 1880,
+     "y": 1130,
+     "w": 260,
+     "h": 200
+    },
+    "closed-book": {
+     "x": 250,
+     "y": 650,
+     "w": 280,
+     "h": 150
+    }
+   },
+   "notes": "Lantern room at the top of the lighthouse (magnifier, timeline, signals).",
+   "layers": [
+    {
+     "asset": "minigame.shutter-cord",
+     "target": "cord",
+     "x": 1520,
+     "y": 570,
+     "w": 120,
+     "h": 300
+    },
+    {
+     "asset": "minigame.book-open-bookmark",
+     "target": "book",
+     "x": 250,
+     "y": 650,
+     "w": 280,
+     "h": 150,
+     "levels": [
+      1,
+      2
+     ]
+    },
+    {
+     "asset": "minigame.book-closed",
+     "target": "closed-book",
+     "x": 250,
+     "y": 650,
+     "w": 280,
+     "h": 150,
+     "levels": [
+      3
+     ]
+    },
+    {
+     "asset": "minigame.wax-drops",
+     "target": "wax",
+     "x": 1700,
+     "y": 960,
+     "w": 220,
+     "h": 110
+    },
+    {
+     "asset": "minigame.toolbox-dusty",
+     "target": "tools",
+     "x": 1880,
+     "y": 1130,
+     "w": 260,
+     "h": 200,
+     "levels": [
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  "bg.lighthouse-stairs": {
+   "master": "backgrounds/lighthouse-stairs-c1.png",
+   "pack": "case03",
+   "location": "lighthouse-stairs",
+   "hotspots": {},
+   "notes": "Dusty lower steps of the lighthouse stairs (tracks)."
+  },
+  "bg.pond-night": {
+   "master": "backgrounds/pond-shore-night-c1.png",
+   "pack": "case03",
+   "location": "pond-night",
+   "hotspots": {},
+   "notes": "Pond shore at night for the «Азбука огоньков» finale."
+  },
+  "bg.mayor-cellar": {
+   "master": "backgrounds/cellar-c1.png",
+   "pack": "case04",
+   "location": "mayor-cellar",
+   "hotspots": {
+    "shelves": {
+     "x": 940,
+     "y": 360,
+     "w": 420,
+     "h": 600
+    },
+    "mayor": {
+     "x": 1760,
+     "y": 640,
+     "w": 240,
+     "h": 320
+    },
+    "tracks": {
+     "x": 360,
+     "y": 860,
+     "w": 480,
+     "h": 260
+    },
+    "dreams": {
+     "x": 2060,
+     "y": 20,
+     "w": 140,
+     "h": 200
+    },
+    "diary": {
+     "x": 2060,
+     "y": 860,
+     "w": 260,
+     "h": 240
+    },
+    "kartofan": {
+     "x": 1600,
+     "y": 740,
+     "w": 200,
+     "h": 200
+    },
+    "cart": {
+     "x": 160,
+     "y": 1180,
+     "w": 240,
+     "h": 320
+    }
+   },
+   "notes": "Town hall jam cellar, lit on every step (hub, dreams)."
+  },
+  "bg.mayor-cellar-shelves": {
+   "master": "backgrounds/bg-mayor-cellar-shelves-c1.png",
+   "pack": "case04",
+   "location": "mayor-cellar-shelves",
+   "hotspots": {
+    "jar-circles": {
+     "x": 960,
+     "y": 620,
+     "w": 640,
+     "h": 200
+    },
+    "clean-floor": {
+     "x": 700,
+     "y": 1290,
+     "w": 520,
+     "h": 180
+    },
+    "cart-track": {
+     "x": 1350,
+     "y": 1290,
+     "w": 520,
+     "h": 180
+    },
+    "patch": {
+     "x": 1900,
+     "y": 1300,
+     "w": 200,
+     "h": 150
+    },
+    "soil": {
+     "x": 460,
+     "y": 1300,
+     "w": 220,
+     "h": 150
+    }
+   },
+   "notes": "Jam shelf close-up (magnifier).",
+   "layers": [
+    {
+     "asset": "minigame.jar-circles",
+     "target": "jar-circles",
+     "x": 960,
+     "y": 620,
+     "w": 640,
+     "h": 200
+    },
+    {
+     "asset": "minigame.track-narrow-star",
+     "target": "cart-track",
+     "x": 1350,
+     "y": 1290,
+     "w": 520,
+     "h": 180
+    },
+    {
+     "asset": "minigame.soil-clumps",
+     "target": "soil",
+     "x": 460,
+     "y": 1300,
+     "w": 220,
+     "h": 150,
+     "levels": [
+      3
+     ]
+    }
+   ]
+  },
+  "bg.cellar-steps": {
+   "master": "backgrounds/bg-cellar-steps-c1.png",
+   "pack": "case04",
+   "location": "cellar-steps",
+   "hotspots": {},
+   "notes": "Dusty bottom steps of the cellar (tracks)."
+  },
+  "bg.office-pantry": {
+   "master": "backgrounds/office-pantry-c1.png",
+   "pack": "case04",
+   "location": "office-pantry",
+   "hotspots": {},
+   "notes": "Pantry under the Office stairs with twelve jars and a note."
+  },
+  "bg.office-diary": {
+   "master": "backgrounds/office-evening-c2.png",
+   "pack": "case04",
+   "location": "office-diary",
+   "hotspots": {},
+   "notes": "Watsoni's desk in the evening (diary timeline)."
+  },
+  "bg.mayor-yard-carts": {
+   "master": "backgrounds/townhall-front-c1.png",
+   "pack": "case04",
+   "location": "mayor-yard-carts",
+   "hotspots": {},
+   "notes": "Town hall yard with soft earth for wheel tracks (L3 whose cart)."
+  },
+  "bg.town-square-tea": {
+   "master": "backgrounds/tea-square-c1.png",
+   "pack": "case04",
+   "location": "tea-square",
+   "hotspots": {},
+   "notes": "Town square laid for the Big Tea Party (case 4)."
+  },
+  "bg.dream-mist": {
+   "master": "backgrounds/dream-mist-c1.png",
+   "pack": "case04",
+   "location": "dream-mist",
+   "hotspots": {},
+   "notes": "Misty lantern backdrop for dream cards."
+  },
+  "bg.mayor-cellar-entrance": {
+   "master": "backgrounds/townhall-front-c2.png",
+   "pack": "case04",
+   "location": "mayor-cellar-entrance",
+   "hotspots": {},
+   "notes": "Town hall with the little cellar door at the right (Kartofan at the entrance, L3)."
   }
  },
  "props": {
@@ -1011,6 +1557,1023 @@
    "size": 1400,
    "dir": "ui/art",
    "notes": "Game title lettering on a banner for the intro (T25)."
+  },
+  "dream.c4.l1.door-stairs": {
+   "master": "cards/dream-door-stairs.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 768,
+   "dir": "case04/dreams",
+   "file": "l1.door-stairs",
+   "opaque": true,
+   "notes": "Private dream card (D16, T31)."
+  },
+  "dream.c4.l1.magnifier-sign": {
+   "master": "cards/dream-magnifier-sign.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 768,
+   "dir": "case04/dreams",
+   "file": "l1.magnifier-sign",
+   "opaque": true,
+   "notes": "Private dream card (D16, T31)."
+  },
+  "dream.c4.l1.old-umbrellas": {
+   "master": "cards/dream-old-umbrellas.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 768,
+   "dir": "case04/dreams",
+   "file": "l1.old-umbrellas",
+   "opaque": true,
+   "notes": "Private dream card (D16, T31)."
+  },
+  "dream.c4.l1.jars-ribbons": {
+   "master": "cards/dream-jars-bows.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 768,
+   "dir": "case04/dreams",
+   "file": "l1.jars-ribbons",
+   "opaque": true,
+   "notes": "Private dream card (D16, T31)."
+  },
+  "dream.c4.l1.jubilee-flag": {
+   "master": "cards/dream-jubilee-flag.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 768,
+   "dir": "case04/dreams",
+   "file": "l1.jubilee-flag",
+   "opaque": true,
+   "notes": "Private dream card (D16, T31)."
+  },
+  "dream.c4.l1.exclamation-note": {
+   "master": "cards/dream-note-exclaim.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 768,
+   "dir": "case04/dreams",
+   "file": "l1.exclamation-note",
+   "opaque": true,
+   "notes": "Private dream card (D16, T31)."
+  },
+  "dream.c4.l1.soap-bubbles": {
+   "master": "cards/dream-bubbles.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 768,
+   "dir": "case04/dreams",
+   "file": "l1.soap-bubbles",
+   "opaque": true,
+   "notes": "Private dream card (D16, T31)."
+  },
+  "dream.c4.l1.muzzle-stripes": {
+   "master": "cards/dream-stripes.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 768,
+   "dir": "case04/dreams",
+   "file": "l1.muzzle-stripes",
+   "opaque": true,
+   "notes": "Private dream card (D16, T31)."
+  },
+  "dream.c4.l1.detective-hat": {
+   "master": "cards/dream-detective-hat.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 768,
+   "dir": "case04/dreams",
+   "file": "l1.detective-hat",
+   "opaque": true,
+   "notes": "Private dream card (D16, T31)."
+  },
+  "dream.c4.l2.umbrellas-corner": {
+   "master": "cards/dream-old-umbrellas.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 768,
+   "dir": "case04/dreams",
+   "file": "l2.umbrellas-corner",
+   "opaque": true,
+   "notes": "Private dream card (D16, T31)."
+  },
+  "dream.c4.l2.narrow-door": {
+   "master": "cards/dream-narrow-door.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 768,
+   "dir": "case04/dreams",
+   "file": "l2.narrow-door",
+   "opaque": true,
+   "notes": "Private dream card (D16, T31)."
+  },
+  "dream.c4.l2.stairs-overhead": {
+   "master": "cards/dream-stairs-overhead.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 768,
+   "dir": "case04/dreams",
+   "file": "l2.stairs-overhead",
+   "opaque": true,
+   "notes": "Private dream card (D16, T31)."
+  },
+  "dream.c4.l2.ribbon": {
+   "master": "cards/dream-ribbon.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 768,
+   "dir": "case04/dreams",
+   "file": "l2.ribbon",
+   "opaque": true,
+   "notes": "Private dream card (D16, T31)."
+  },
+  "dream.c4.l2.jubilee-flag": {
+   "master": "cards/dream-jubilee-flag.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 768,
+   "dir": "case04/dreams",
+   "file": "l2.jubilee-flag",
+   "opaque": true,
+   "notes": "Private dream card (D16, T31)."
+  },
+  "dream.c4.l2.exclamation-note": {
+   "master": "cards/dream-note-exclaim.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 768,
+   "dir": "case04/dreams",
+   "file": "l2.exclamation-note",
+   "opaque": true,
+   "notes": "Private dream card (D16, T31)."
+  },
+  "dream.c4.l2.bubble": {
+   "master": "cards/dream-bubble.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 768,
+   "dir": "case04/dreams",
+   "file": "l2.bubble",
+   "opaque": true,
+   "notes": "Private dream card (D16, T31)."
+  },
+  "dream.c4.l2.detective-hat": {
+   "master": "cards/dream-detective-hat.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 768,
+   "dir": "case04/dreams",
+   "file": "l2.detective-hat",
+   "opaque": true,
+   "notes": "Private dream card (D16, T31)."
+  },
+  "dream.c4.l2.muzzle-stripes": {
+   "master": "cards/dream-stripes.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 768,
+   "dir": "case04/dreams",
+   "file": "l2.muzzle-stripes",
+   "opaque": true,
+   "notes": "Private dream card (D16, T31)."
+  },
+  "dream.c4.l3.umbrella-smell": {
+   "master": "cards/dream-umbrella-smell.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 768,
+   "dir": "case04/dreams",
+   "file": "l3.umbrella-smell",
+   "opaque": true,
+   "notes": "Private dream card (D16, T31)."
+  },
+  "dream.c4.l3.mouse-door": {
+   "master": "cards/dream-mouse-door.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 768,
+   "dir": "case04/dreams",
+   "file": "l3.mouse-door",
+   "opaque": true,
+   "notes": "Private dream card (D16, T31)."
+  },
+  "dream.c4.l3.creaking-stairs": {
+   "master": "cards/dream-creaking-stairs.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 768,
+   "dir": "case04/dreams",
+   "file": "l3.creaking-stairs",
+   "opaque": true,
+   "notes": "Private dream card (D16, T31)."
+  },
+  "dream.c4.l3.tied-ribbon": {
+   "master": "cards/dream-tied-ribbon.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 768,
+   "dir": "case04/dreams",
+   "file": "l3.tied-ribbon",
+   "opaque": true,
+   "notes": "Private dream card (D16, T31)."
+  },
+  "dream.c4.l3.circled-calendar": {
+   "master": "cards/dream-circled-calendar.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 768,
+   "dir": "case04/dreams",
+   "file": "l3.circled-calendar",
+   "opaque": true,
+   "notes": "Private dream card (D16, T31)."
+  },
+  "dream.c4.l3.hush-finger": {
+   "master": "cards/dream-hush-finger.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 768,
+   "dir": "case04/dreams",
+   "file": "l3.hush-finger",
+   "opaque": true,
+   "notes": "Private dream card (D16, T31)."
+  },
+  "dream.c4.l3.bubble": {
+   "master": "cards/dream-bubble.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 768,
+   "dir": "case04/dreams",
+   "file": "l3.bubble",
+   "opaque": true,
+   "notes": "Private dream card (D16, T31)."
+  },
+  "dream.c4.l3.magnifier": {
+   "master": "cards/dream-magnifier.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 768,
+   "dir": "case04/dreams",
+   "file": "l3.magnifier",
+   "opaque": true,
+   "notes": "Private dream card (D16, T31)."
+  },
+  "dream.c4.l3.office-key": {
+   "master": "cards/dream-office-key.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 768,
+   "dir": "case04/dreams",
+   "file": "l3.office-key",
+   "opaque": true,
+   "notes": "Private dream card (D16, T31)."
+  },
+  "minigame.umbrella-inverted": {
+   "master": "props/umbrella-inverted.png",
+   "pack": "case02",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.note-blank": {
+   "master": "props/note-blank.png",
+   "pack": "case02",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.newspaper-scrap": {
+   "master": "props/newspaper-scrap.png",
+   "pack": "case02",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.pollen": {
+   "master": "props/pollen.png",
+   "pack": "case02",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.smell-nuts": {
+   "master": "props/smell-nuts.png",
+   "pack": "case02",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.smell-seeds": {
+   "master": "props/smell-seeds.png",
+   "pack": "case02",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.smell-leaves": {
+   "master": "props/smell-leaves.png",
+   "pack": "case02",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.smell-honey-wax": {
+   "master": "props/smell-honey-wax.png",
+   "pack": "case02",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.smell-twigs": {
+   "master": "props/smell-twigs.png",
+   "pack": "case02",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.place-library": {
+   "master": "props/place-library.png",
+   "pack": "case02",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.place-office": {
+   "master": "props/place-office.png",
+   "pack": "case02",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.place-townhall": {
+   "master": "props/place-townhall.png",
+   "pack": "case02",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.place-lodge": {
+   "master": "props/place-lodge.png",
+   "pack": "case02",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.place-burrow": {
+   "master": "props/place-burrow.png",
+   "pack": "case02",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.place-booth": {
+   "master": "props/place-booth.png",
+   "pack": "case02",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.place-nest": {
+   "master": "props/place-nest.png",
+   "pack": "case02",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.place-lighthouse": {
+   "master": "props/place-lighthouse.png",
+   "pack": "case02",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.tl2-0730": {
+   "master": "cards/tl2-0730.png",
+   "pack": "case02",
+   "kind": "minigame",
+   "size": 640,
+   "dir": "props",
+   "notes": "",
+   "opaque": true
+  },
+  "minigame.tl2-0800": {
+   "master": "cards/tl2-0800.png",
+   "pack": "case02",
+   "kind": "minigame",
+   "size": 640,
+   "dir": "props",
+   "notes": "",
+   "opaque": true
+  },
+  "minigame.tl2-0830": {
+   "master": "cards/tl2-0830.png",
+   "pack": "case02",
+   "kind": "minigame",
+   "size": 640,
+   "dir": "props",
+   "notes": "",
+   "opaque": true
+  },
+  "minigame.tl2-0900": {
+   "master": "cards/tl2-0900.png",
+   "pack": "case02",
+   "kind": "minigame",
+   "size": 640,
+   "dir": "props",
+   "notes": "",
+   "opaque": true
+  },
+  "minigame.tl2-0930": {
+   "master": "cards/tl2-0930.png",
+   "pack": "case02",
+   "kind": "minigame",
+   "size": 640,
+   "dir": "props",
+   "notes": "",
+   "opaque": true
+  },
+  "minigame.shutter-cord": {
+   "master": "props/shutter-cord.png",
+   "pack": "case03",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.book-open-bookmark": {
+   "master": "props/book-open-bookmark.png",
+   "pack": "case03",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.book-closed": {
+   "master": "props/book-closed.png",
+   "pack": "case03",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.wax-drops": {
+   "master": "props/wax-drops.png",
+   "pack": "case03",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.toolbox-dusty": {
+   "master": "props/toolbox-dusty.png",
+   "pack": "case03",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.logbook": {
+   "master": "props/logbook.png",
+   "pack": "case03",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.shell-recorder": {
+   "master": "props/shell-recorder.png",
+   "pack": "case03",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.mice-drawing": {
+   "master": "props/mice-drawing.png",
+   "pack": "case03",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.fp-owl": {
+   "master": "props/fp-owl.png",
+   "pack": "case03",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.fp-firefly": {
+   "master": "props/fp-firefly.png",
+   "pack": "case03",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.fp-beaver": {
+   "master": "props/fp-beaver.png",
+   "pack": "case03",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.log3-1900": {
+   "master": "cards/log3-1900.png",
+   "pack": "case03",
+   "kind": "minigame",
+   "size": 640,
+   "dir": "props",
+   "notes": "",
+   "opaque": true
+  },
+  "minigame.log3-2000": {
+   "master": "cards/log3-2000.png",
+   "pack": "case03",
+   "kind": "minigame",
+   "size": 640,
+   "dir": "props",
+   "notes": "",
+   "opaque": true
+  },
+  "minigame.log3-2030": {
+   "master": "cards/log3-2030.png",
+   "pack": "case03",
+   "kind": "minigame",
+   "size": 640,
+   "dir": "props",
+   "notes": "",
+   "opaque": true
+  },
+  "minigame.log3-2100": {
+   "master": "cards/log3-2100.png",
+   "pack": "case03",
+   "kind": "minigame",
+   "size": 640,
+   "dir": "props",
+   "notes": "",
+   "opaque": true
+  },
+  "minigame.log3-2200": {
+   "master": "cards/log3-2200.png",
+   "pack": "case03",
+   "kind": "minigame",
+   "size": 640,
+   "dir": "props",
+   "notes": "",
+   "opaque": true
+  },
+  "minigame.jar-circles": {
+   "master": "props/jar-circles.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.cart-office": {
+   "master": "props/cart-office.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.cart-kartofan": {
+   "master": "props/cart-kartofan.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.jam-jar-bow": {
+   "master": "props/jam-jar-bow.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.jam-rosette": {
+   "master": "props/jam-rosette.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.tea-table": {
+   "master": "props/tea-table.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.samovar": {
+   "master": "props/samovar.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.diary-good-deeds": {
+   "master": "props/diary-good-deeds.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.fp-badger": {
+   "master": "props/fp-badger.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.fp-hedgehog": {
+   "master": "props/fp-hedgehog.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.track-narrow-star": {
+   "master": "props/track-narrow-star.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 640,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.track-wide": {
+   "master": "props/track-wide.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 640,
+   "dir": "props",
+   "notes": ""
+  },
+  "minigame.diary4-count": {
+   "master": "cards/diary4-count.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 640,
+   "dir": "props",
+   "notes": "",
+   "opaque": true
+  },
+  "minigame.diary4-mayor": {
+   "master": "cards/diary4-mayor.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 640,
+   "dir": "props",
+   "notes": "",
+   "opaque": true
+  },
+  "minigame.diary4-cart": {
+   "master": "cards/diary4-cart.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 640,
+   "dir": "props",
+   "notes": "",
+   "opaque": true
+  },
+  "minigame.diary4-knit": {
+   "master": "cards/diary4-knit.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 640,
+   "dir": "props",
+   "notes": "",
+   "opaque": true
+  },
+  "minigame.diary4-potato": {
+   "master": "cards/diary4-potato.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 640,
+   "dir": "props",
+   "notes": "",
+   "opaque": true
+  },
+  "compare.c4.cart-track": {
+   "master": "props/track-narrow-star.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 640,
+   "dir": "props",
+   "notes": ""
+  },
+  "reward.badge-letters-saved": {
+   "master": "props/badge-letters-saved.png",
+   "pack": "case02",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "reward.badge-lighthouse-light": {
+   "master": "props/badge-lighthouse-light.png",
+   "pack": "case03",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "reward.badge-honest-jam": {
+   "master": "props/badge-honest-jam.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "reward.sticker-letters": {
+   "master": "props/sticker-letters.png",
+   "pack": "case02",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "reward.sticker-lighthouse": {
+   "master": "props/sticker-lighthouse.png",
+   "pack": "case03",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "reward.sticker-jam": {
+   "master": "props/sticker-jam.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "reward.rank-assistant": {
+   "master": "props/rank-assistant.png",
+   "pack": "case02",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "reward.rank-junior": {
+   "master": "props/rank-junior.png",
+   "pack": "case04",
+   "kind": "minigame",
+   "size": 512,
+   "dir": "props",
+   "notes": ""
+  },
+  "reward.cipher-poster": {
+   "master": "props/cipher-poster.png",
+   "pack": "case02",
+   "kind": "minigame",
+   "size": 1200,
+   "dir": "props",
+   "notes": ""
+  },
+  "decor.geranium": {
+   "master": "props/decor-geranium.png",
+   "pack": "cozy",
+   "kind": "ui",
+   "size": 512,
+   "dir": "cozy/decor",
+   "notes": "",
+   "file": "geranium"
+  },
+  "decor.firefly-lamp": {
+   "master": "props/decor-star-lamp.png",
+   "pack": "cozy",
+   "kind": "ui",
+   "size": 512,
+   "dir": "cozy/decor",
+   "notes": "",
+   "file": "firefly-lamp"
+  },
+  "decor.rug-daisy": {
+   "master": "props/rug-daisy.png",
+   "pack": "cozy",
+   "kind": "ui",
+   "size": 512,
+   "dir": "cozy/decor",
+   "notes": "",
+   "file": "rug-daisy"
+  },
+  "decor.trophy-shelf": {
+   "master": "props/trophy-shelf.png",
+   "pack": "cozy",
+   "kind": "ui",
+   "size": 512,
+   "dir": "cozy/decor",
+   "notes": "",
+   "file": "trophy-shelf"
+  },
+  "decor.lantern-garland": {
+   "master": "props/decor-lantern-garland.png",
+   "pack": "cozy",
+   "kind": "ui",
+   "size": 512,
+   "dir": "cozy/decor",
+   "notes": "",
+   "file": "lantern-garland"
+  },
+  "decor.town-painting": {
+   "master": "props/decor-town-painting.png",
+   "pack": "cozy",
+   "kind": "ui",
+   "size": 512,
+   "dir": "cozy/decor",
+   "notes": "",
+   "file": "town-painting"
+  },
+  "decor.cuckoo-clock": {
+   "master": "props/decor-cuckoo-clock.png",
+   "pack": "cozy",
+   "kind": "ui",
+   "size": 512,
+   "dir": "cozy/decor",
+   "notes": "",
+   "file": "cuckoo-clock"
+  },
+  "decor.honey-shelf": {
+   "master": "props/decor-honey-shelf.png",
+   "pack": "cozy",
+   "kind": "ui",
+   "size": 512,
+   "dir": "cozy/decor",
+   "notes": "",
+   "file": "honey-shelf"
+  },
+  "decor.teaset": {
+   "master": "props/decor-teaset.png",
+   "pack": "cozy",
+   "kind": "ui",
+   "size": 512,
+   "dir": "cozy/decor",
+   "notes": "",
+   "file": "teaset"
+  },
+  "decor.armchair": {
+   "master": "props/decor-armchair.png",
+   "pack": "cozy",
+   "kind": "ui",
+   "size": 512,
+   "dir": "cozy/decor",
+   "notes": "",
+   "file": "armchair"
+  },
+  "decor.bookstack": {
+   "master": "props/decor-bookstack.png",
+   "pack": "cozy",
+   "kind": "ui",
+   "size": 512,
+   "dir": "cozy/decor",
+   "notes": "",
+   "file": "bookstack"
+  },
+  "decor.rug-patchwork": {
+   "master": "props/decor-rug.png",
+   "pack": "cozy",
+   "kind": "ui",
+   "size": 512,
+   "dir": "cozy/decor",
+   "notes": "",
+   "file": "rug-patchwork"
+  },
+  "scarf.pattern.stripes": {
+   "master": "props/scarf-pattern-stripes.png",
+   "pack": "shell",
+   "kind": "avatar-layer",
+   "size": 256,
+   "dir": "avatar/scarf-patterns",
+   "notes": "Tileable cream overlay drawn inside the scarf mask over the tint.",
+   "file": "stripes"
+  },
+  "scarf.pattern.stripes.swatch": {
+   "master": "props/scarf-pattern-stripes-swatch.png",
+   "pack": "cozy",
+   "kind": "ui",
+   "size": 256,
+   "dir": "cozy/swatches",
+   "notes": "",
+   "file": "stripes"
+  },
+  "scarf.pattern.dots": {
+   "master": "props/scarf-pattern-dots.png",
+   "pack": "shell",
+   "kind": "avatar-layer",
+   "size": 256,
+   "dir": "avatar/scarf-patterns",
+   "notes": "Tileable cream overlay drawn inside the scarf mask over the tint.",
+   "file": "dots"
+  },
+  "scarf.pattern.dots.swatch": {
+   "master": "props/scarf-pattern-dots-swatch.png",
+   "pack": "cozy",
+   "kind": "ui",
+   "size": 256,
+   "dir": "cozy/swatches",
+   "notes": "",
+   "file": "dots"
+  },
+  "scarf.pattern.hearts": {
+   "master": "props/scarf-pattern-hearts.png",
+   "pack": "shell",
+   "kind": "avatar-layer",
+   "size": 256,
+   "dir": "avatar/scarf-patterns",
+   "notes": "Tileable cream overlay drawn inside the scarf mask over the tint.",
+   "file": "hearts"
+  },
+  "scarf.pattern.hearts.swatch": {
+   "master": "props/scarf-pattern-hearts-swatch.png",
+   "pack": "cozy",
+   "kind": "ui",
+   "size": 256,
+   "dir": "cozy/swatches",
+   "notes": "",
+   "file": "hearts"
+  },
+  "scarf.pattern.stars": {
+   "master": "props/scarf-pattern-stars.png",
+   "pack": "shell",
+   "kind": "avatar-layer",
+   "size": 256,
+   "dir": "avatar/scarf-patterns",
+   "notes": "Tileable cream overlay drawn inside the scarf mask over the tint.",
+   "file": "stars"
+  },
+  "scarf.pattern.stars.swatch": {
+   "master": "props/scarf-pattern-stars-swatch.png",
+   "pack": "cozy",
+   "kind": "ui",
+   "size": 256,
+   "dir": "cozy/swatches",
+   "notes": "",
+   "file": "stars"
+  },
+  "avatar.hat-bobble": {
+   "master": "props/hat-bobble.png",
+   "pack": "shell",
+   "kind": "avatar-layer",
+   "size": 320,
+   "dir": "avatar/hats",
+   "notes": "Hat layer; attach at the avatar rig's hat slot."
+  },
+  "avatar.hat-captain": {
+   "master": "props/hat-captain.png",
+   "pack": "shell",
+   "kind": "avatar-layer",
+   "size": 320,
+   "dir": "avatar/hats",
+   "notes": "Hat layer; attach at the avatar rig's hat slot."
+  },
+  "avatar.hat-flower-crown": {
+   "master": "props/hat-flower-crown.png",
+   "pack": "shell",
+   "kind": "avatar-layer",
+   "size": 320,
+   "dir": "avatar/hats",
+   "notes": "Hat layer; attach at the avatar rig's hat slot."
+  },
+  "avatar.hat-top": {
+   "master": "props/hat-top.png",
+   "pack": "shell",
+   "kind": "avatar-layer",
+   "size": 320,
+   "dir": "avatar/hats",
+   "notes": "Hat layer; attach at the avatar rig's hat slot."
   }
  },
  "puppets": {
@@ -1096,6 +2659,18 @@
    "config": "avatar_puppy",
    "dir": "avatar",
    "name": "puppy",
+   "pack": "shell"
+  },
+  "char.damka": {
+   "config": "damka",
+   "dir": "characters",
+   "name": "damka",
+   "pack": "shell"
+  },
+  "char.pukhlik": {
+   "config": "pukhlik",
+   "dir": "characters",
+   "name": "pukhlik",
    "pack": "shell"
   }
  }

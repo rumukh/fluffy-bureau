@@ -1,0 +1,33 @@
+{
+ "format": "aegis-rig/1",
+ "id": "prop.c2-cipher-poster",
+ "revision": "1",
+ "atlases": [
+  "prop.c2-cipher-poster.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -280.0,
+  "y": -351.0,
+  "width": 560,
+  "height": 702
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 280.0,
+    "y": 351.0
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "frame": "prop.c2-cipher-poster.atlas#body.rest"
+  }
+ ]
+}
