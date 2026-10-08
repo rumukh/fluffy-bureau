@@ -62,7 +62,8 @@ export interface RunView {
   level: 1 | 2 | 3 | null;
   ended: boolean;
   scene: { id: string; location: string; cast: string[]; presentation: string };
-  stage: string[];
+  /** Stage directions since the last blocking step: stable ID and editorial text (presentation cues). */
+  stage: { id: string; text: string }[];
   queue: { line: LineView; source: QueueSource; remaining: number } | null;
   step: StepView | null;
   notebook: NotebookView | null;
@@ -305,7 +306,7 @@ function projectRun(state: ProfileState, rules: GameRules, contentIndex: Content
       cast: [...scene.cast],
       presentation: scene.presentation,
     },
-    stage: [...run.stage],
+    stage: run.stage.map((id) => ({ id, text: dirText(index, id) })),
     queue: head
       ? { line: line(head.line), source: head.source, remaining: run.queue.length }
       : null,
@@ -330,4 +331,24 @@ function projectRun(state: ProfileState, rules: GameRules, contentIndex: Content
     help: index.pack.notebookHelp?.mode ?? null,
     versionAttempts: run.versionAttempts,
   };
+}
+
+const dirTexts = new WeakMap<object, Map<string, string>>();
+function dirText(index: PackIndex, id: string): string {
+  let map = dirTexts.get(index.pack);
+  if (!map) {
+    map = new Map();
+    const walk = (steps: readonly unknown[]) => {
+      for (const step of steps as { t: string; id?: string; text?: string }[]) {
+        if (step.t === 'dir' && step.id) map!.set(step.id, step.text ?? '');
+        for (const key of ['then', 'else', 'first', 'known'] as const) {
+          const nested = (step as Record<string, unknown>)[key];
+          if (Array.isArray(nested)) walk(nested);
+        }
+      }
+    };
+    for (const scene of index.pack.scenes) walk(scene.steps);
+    dirTexts.set(index.pack, map);
+  }
+  return map.get(id) ?? '';
 }

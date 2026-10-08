@@ -11,7 +11,7 @@ export interface StageScene {
   cast: { id: string; name: string }[];
   avatar: { species: Species | null; scarf: Scarf | null; name: string };
   /** Stage-direction IDs since the last blocking step (e.g. bubbles). */
-  stage: string[];
+  stage: { id: string; text: string }[];
   comfort: boolean;
   reducedMotion: boolean;
 }
@@ -83,7 +83,10 @@ export class StaticPresenter implements Presenter {
       );
     }
     this.effects.replaceChildren();
-    if (scene.stage.some((id) => id.includes('bubble')) && !scene.reducedMotion) {
+    if (
+      scene.stage.some((cue) => /пузыр|bubble/i.test(cue.text + cue.id)) &&
+      !scene.reducedMotion
+    ) {
       for (let i = 0; i < 6; i++)
         this.effects.append(h('span', { class: 'bubble', style: `--i:${i}` }));
     }
