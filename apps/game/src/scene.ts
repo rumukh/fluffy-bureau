@@ -165,6 +165,8 @@ function renderRun(app: App, view: GameView, run: RunView): HTMLElement {
     cast,
     avatar: { species: view.avatar.species, scarf: view.avatar.scarf, name: view.avatar.name },
     stage: run.stage,
+    sceneId: run.scene.id,
+    props: run.scene.props,
     comfort: view.lamp,
     reducedMotion: app.reducedMotion(),
     level: run.level,
@@ -208,7 +210,9 @@ function renderRun(app: App, view: GameView, run: RunView): HTMLElement {
         spoken = minigamePrompt(app, step);
         break;
       case 'await':
-        panel.append(renderAwait(app, view, step.action));
+        if (step.action === 'hotspot' && step.hotspot)
+          panel.append(renderTapAwait(app, run, step.hotspot, overlayLayer));
+        else panel.append(renderAwait(app, view, step.action));
         break;
       case 'end':
         panel.append(renderEnd(app, view, run));
@@ -658,6 +662,39 @@ function renderAwait(app: App, view: GameView, action: string): HTMLElement {
         ),
       );
   }
+}
+
+/**
+ * U11: «нажми на окно». The hotspot glows on the stage; the same action is a plain button in the
+ * panel (keyboard, screen readers, or a background without that rectangle).
+ */
+function renderTapAwait(
+  app: App,
+  run: RunView,
+  hotspot: string,
+  stageLayer: HTMLElement,
+): HTMLElement {
+  const label = t(app, `hotspot.${hotspot}`);
+  const tap = () => app.act({ type: 'tap', hotspot });
+  const rect = app.assets.backgroundHotspot(run.background, run.scene.location, hotspot);
+  if (rect)
+    stageLayer.append(
+      positioned(
+        button(
+          {
+            label,
+            key: `hs-${hotspot}`,
+            class: 'hotspot glow',
+            content: h('span', { class: 'label' }, label),
+          },
+          tap,
+        ),
+        rect,
+      ),
+    );
+  const primary = button({ label, key: 'await-tap', class: 'primary', icon: '👆' }, tap);
+  primary.dataset.primary = '';
+  return h('div', { class: 'await tap' }, primary);
 }
 
 // ---------------------------------------------------------------- end of a case

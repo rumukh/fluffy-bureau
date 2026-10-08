@@ -84,6 +84,18 @@ export interface ProfileState {
   /** Pack IDs finished at least once (prologue, case01-l1, …). */
   completed: string[];
   lamp: boolean;
+  /** Shop items bought and not returned (T29). */
+  owned: string[];
+  /** Worn scarf pattern (shop item ID) or none. */
+  pattern: string | null;
+  /** Tea parties per resident: how many stories were told (T28). */
+  teas: { speaker: string; told: number }[];
+  /** The child's own light signal from case 3 level 3 (D22). */
+  signal: ('dot' | 'dash')[] | null;
+  /** Ranks already announced in the office (D12). */
+  ranksSeen: string[];
+  /** Lines playing in the office outside a case (tea stories, shop replies, rank news). */
+  office: string[];
   /** Number of case runs started; keeps minigame instance identities unique per profile. */
   runs: number;
   run: RunState | null;
@@ -104,6 +116,12 @@ export function initialProfile(): ProfileState {
     collections: [],
     completed: [],
     lamp: false,
+    owned: [],
+    pattern: null,
+    teas: [],
+    signal: null,
+    ranksSeen: [],
+    office: [],
     runs: 0,
     run: null,
   };

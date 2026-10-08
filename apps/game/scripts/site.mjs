@@ -115,12 +115,15 @@ async function fixturePacks() {
  * Writes compiled content packs (from @fluffy/content) into their offline packs plus
  * content/index.json. Without C's packs, llowFixture uses the rule-test fixture (dev only).
  */
-export async function writeContent(out, { allowFixture }) {
+export async function writeContent(out, { allowFixture, production = false }) {
   let packs;
   if (existsSync(CONTENT_PACKS_DIR)) {
-    // Only the production pack list (PACK_IDS); preview packs for later stages are excluded.
+    // Released packs (PACK_IDS) only, unless `production` adds the stage in production
+    // (PRODUCTION_PACK_IDS; T30: unreleased cases never reach the published site). Preview packs never.
     const list = readFileSync(join(repoRoot, 'packages', 'content', 'src', 'packs.ts'), 'utf8');
-    const ids = JSON.parse(/PACK_IDS = (\[[^\]]*\])/.exec(list)?.[1] ?? '[]');
+    const listed = (name) =>
+      JSON.parse(new RegExp(`\\b${name} = (\\[[^\\]]*\\])`).exec(list)?.[1] ?? '[]');
+    const ids = [...listed('PACK_IDS'), ...(production ? listed('PRODUCTION_PACK_IDS') : [])];
     packs = readdirSync(CONTENT_PACKS_DIR)
       .filter((name) => ids.includes(name.replace(/\.json$/, '')))
       .map((name) => JSON.parse(readFileSync(join(CONTENT_PACKS_DIR, name), 'utf8')))

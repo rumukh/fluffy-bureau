@@ -1,6 +1,7 @@
 // Presentation adapter boundary: StagePresenter on E's @aegis/browser/stage (puppets, lip-sync,
 // cutscenes), StaticPresenter (layered still images) as the fallback. No animation engine lives here.
 import type { Scarf, Species } from '@fluffy/game-core';
+import type { StageAction } from '@fluffy/content';
 import { h } from './dom.js';
 import {
   createStage,
@@ -15,12 +16,16 @@ import { SCARF_COLORS, type Assets } from './assets.js';
 import type { Voice } from './audio.js';
 
 export interface StageScene {
+  /** Content scene ID: stage-direction actions are tracked per scene. */
+  sceneId?: string;
+  /** Prop keys that stage-direction actions may use (key → prop rig ID, U10). */
+  props?: Record<string, string>;
   location: string;
   title: string;
   cast: { id: string; name: string }[];
   avatar: { species: Species | null; scarf: Scarf | null; name: string };
   /** Stage-direction IDs since the last blocking step (e.g. bubbles). */
-  stage: { id: string; text: string }[];
+  stage: { id: string; text: string; actions?: readonly StageAction[] }[];
   comfort: boolean;
   reducedMotion: boolean;
   /** Difficulty level of the case (background prop layers may depend on it). */
@@ -300,6 +305,12 @@ export class StagePresenter implements Presenter {
   }
   /** Resolves when the current scene's puppets are on stage. */
   private ready: Promise<void> = Promise.resolve();
+  /** Stage directions already acted in the current scene, and their actions (re-applied on rebuild). */
+  private directed: { scene: string | null; ids: Set<string>; actions: StageAction[] } = {
+    scene: null,
+    ids: new Set(),
+    actions: [],
+  };
 
   constructor(
     private readonly assets: Assets,
@@ -383,10 +394,130 @@ export class StagePresenter implements Presenter {
             s.cast.map((c) => c.id),
             s.avatar.species,
             s.avatar.scarf,
+            s.background ?? null,
           ])
         : '';
-    if (key(previous) === key(scene)) return;
-    this.ready = this.build(scene, ++this.generation).catch(() => {});
+    // U10: directions newly reached play in full; after a reload only their end state is applied
+    // (positions, entrances, exits), never transient sounds, effects or emotes.
+    const restoring = previous === null;
+    if (this.directed.scene !== (scene.sceneId ?? null))
+      this.directed = { scene: scene.sceneId ?? null, ids: new Set(), actions: [] };
+    const fresh = scene.stage.filter((d) => !this.directed.ids.has(d.id));
+    for (const d of fresh) this.directed.ids.add(d.id);
+    const actions = fresh.flatMap((d) => d.actions ?? []);
+    const rebuild = key(previous) !== key(scene);
+    if (rebuild) {
+      const before = [...this.directed.actions];
+      this.ready = this.build(scene, ++this.generation)
+        .then(() => this.act(before, true))
+        .catch(() => {});
+    }
+    this.directed.actions.push(...actions);
+    if (actions.length) {
+      const generation = this.generation;
+      void this.ready.then(() =>
+        generation === this.generation ? this.act(actions, restoring) : undefined,
+      );
+    }
+  }
+
+  /** Plays stage-direction actions on the live stage (U10). Unknown actors are skipped quietly. */
+  private async act(actions: readonly StageAction[], endStateOnly: boolean): Promise<void> {
+    if (this.failed || this.cutscene) return;
+    const reduced = this.current?.reducedMotion ?? false;
+    const duration = (d: number | undefined) => (endStateOnly || reduced ? 0 : (d ?? 0.6));
+    for (const action of actions) {
+      try {
+        switch (action.op) {
+          case 'sfx':
+            if (!endStateOnly) this.voice.effect(action.asset.replace(/^sfx\./, ''));
+            break;
+          case 'effect':
+            if (!endStateOnly && !reduced)
+              this.stage.effect(action.effect, action.at ?? { x: 1280, y: 900 }, action.duration);
+            break;
+          case 'emote':
+            if (!endStateOnly) this.actor(action.actor)?.emote(action.emote);
+            break;
+          case 'pose': {
+            const puppet = this.actor(action.actor);
+            if (!puppet) break;
+            if (action.face) puppet.face(action.face);
+            puppet.setExpression(action.expression);
+            if (action.clip && !endStateOnly) puppet.play(action.clip);
+            break;
+          }
+          case 'move': {
+            const puppet = this.actor(action.actor);
+            if (!puppet) break;
+            if (duration(action.duration) === 0) puppet.setPosition(action.to);
+            else puppet.moveTo(action.to, { duration: action.duration ?? 0.6 });
+            break;
+          }
+          case 'enter': {
+            const puppet = this.actor(action.actor) ?? (await this.spawnProp(action.actor));
+            if (!puppet) break;
+            const from =
+              action.from === 'left'
+                ? { x: -200, y: action.to.y }
+                : action.from === 'right'
+                  ? { x: 2760, y: action.to.y }
+                  : action.from;
+            puppet.setVisible(true);
+            if (duration(action.duration) === 0) puppet.setPosition(action.to);
+            else {
+              puppet.setPosition(from);
+              puppet.moveTo(action.to, { duration: action.duration ?? 0.8, walk: action.walk });
+            }
+            break;
+          }
+          case 'exit': {
+            const puppet = this.actor(action.actor);
+            if (!puppet) break;
+            if (duration(action.duration) === 0) puppet.setVisible(false);
+            else {
+              const to =
+                action.to === 'left'
+                  ? { x: -200, y: STAGE_FLOOR }
+                  : action.to === 'right'
+                    ? { x: 2760, y: STAGE_FLOOR }
+                    : action.to;
+              puppet.moveTo(to, { duration: action.duration ?? 0.8, walk: action.walk });
+              window.setTimeout(() => puppet.setVisible(false), (action.duration ?? 0.8) * 1000);
+            }
+            break;
+          }
+        }
+      } catch {
+        // A presentation cue never breaks the game.
+      }
+    }
+    this.element.dataset.directed = String(this.directed.ids.size);
+  }
+
+  private actor(id: string): StagePuppet | undefined {
+    return this.puppets.get(id === 'player' ? 'avatar' : id);
+  }
+
+  /** A prop of `Scene.props` comes on stage the first time a direction makes it enter. */
+  private async spawnProp(key: string): Promise<StagePuppet | undefined> {
+    const rig = this.current?.props?.[key];
+    if (!rig) return undefined;
+    const generation = this.generation;
+    if (!(await this.ensureDocuments(this.assets.rigDocuments(rig)))) return undefined;
+    if (generation !== this.generation) return undefined;
+    const puppet = this.stage.puppet({ id: key, rig, at: { x: 1280, y: STAGE_FLOOR } });
+    this.puppets.set(key, puppet);
+    return puppet;
+  }
+
+  private async ensureDocuments(documents: string[]): Promise<boolean> {
+    const docs = documents.filter((id) => !this.loaded.has(id));
+    if (!docs.length) return true;
+    const result = await this.stage.load({ documents: docs });
+    if (!result.ok) return false;
+    for (const id of docs) this.loaded.add(id);
+    return true;
   }
 
   private async build(scene: StageScene, generation: number): Promise<void> {

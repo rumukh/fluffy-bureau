@@ -1,4 +1,5 @@
-// Release build: node scripts/build.mjs [--out <dir>] [--base /path/]
+// Release build: node scripts/build.mjs [--out <dir>] [--base /path/] [--production]
+// --production also includes the stage in production (PRODUCTION_PACK_IDS); releases never do (T30).
 import { build } from 'esbuild';
 import { rmSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
@@ -18,6 +19,7 @@ let base = '/';
 let replace = true;
 let allowFixture = false;
 let label = '';
+let production = false;
 for (let i = 0; i < args.length; i++) {
   if (args[i] === '--out') {
     out = resolve(args[++i]);
@@ -26,13 +28,14 @@ for (let i = 0; i < args.length; i++) {
   else if (args[i] === '--fixture-content') allowFixture = true;
   // A release label (e.g. a date or "B" in update tests); it changes the shell pack's identity.
   else if (args[i] === '--label') label = args[++i];
+  else if (args[i] === '--production') production = true;
   else throw new Error(`Unknown option ${args[i]}`);
 }
 if (replace) rmSync(out, { recursive: true, force: true });
 else assertFresh(out);
 copyStatic(out);
 if (label) writeFileSync(join(out, 'release-label.txt'), `${label}\n`);
-const content = await writeContent(out, { allowFixture });
+const content = await writeContent(out, { allowFixture, production });
 writeAssets(out);
 const result = await build(
   bundleOptions(out, { minify: true, sourcemap: false, define: { FLUFFY_DEV: 'false' } }),

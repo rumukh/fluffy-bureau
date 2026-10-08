@@ -196,6 +196,16 @@ export class Assets {
     return all;
   }
 
+  /** A named hotspot of a background (U11), falling back to the location's backgrounds. */
+  backgroundHotspot(
+    background: string | null,
+    location: string,
+    id: string,
+  ): HotspotRect | undefined {
+    const own = background ? this.manifest.backgrounds[background]?.hotspots?.[id] : undefined;
+    return own ?? this.hotspots(location)[id];
+  }
+
   /** Hotspot for a menu option: exact ID, else a key that extends it (pirogovaya → pirogovaya-street). */
   hotspotFor(location: string, id: string): HotspotRect | undefined {
     const spots = this.hotspots(location);
