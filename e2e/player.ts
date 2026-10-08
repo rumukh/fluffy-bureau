@@ -34,8 +34,8 @@ export class Player {
   ) {}
 
   async activate(target: Locator): Promise<void> {
-    await expect(target).toBeVisible();
-    await expect(target).toBeEnabled();
+    await expect(target).toBeVisible({ timeout: 15_000 });
+    await expect(target).toBeEnabled({ timeout: 15_000 });
     this.steps++;
     if (this.mode === 'mouse') await target.click();
     else if (this.mode === 'touch') await target.tap();

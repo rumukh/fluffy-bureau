@@ -1240,16 +1240,19 @@ function renderCutscene(
           state.awaiting = true;
           break;
         case 'playing':
+          // Motion steps arrive many times per cutscene: re-render only when the state changes, so
+          // buttons are not rebuilt under the child's finger.
+          if (!state.awaiting) return;
           state.awaiting = false;
           break;
         case 'marker':
-          void app.act({ type: 'cutscene-marker', marker: event.id });
+          void app.act({ type: 'cutscene-marker', marker: event.id }, { bindToRendered: false });
           return;
         case 'completed':
         case 'skipped':
           if (state.finished) return;
           state.finished = true;
-          void app.act({ type: 'cutscene', outcome: event.type });
+          void app.act({ type: 'cutscene', outcome: event.type }, { bindToRendered: false });
           return;
       }
       app.render();

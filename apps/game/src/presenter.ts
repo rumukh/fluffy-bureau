@@ -268,6 +268,14 @@ const STAGE_FLOOR = 1520;
  * player's avatar with a runtime-tinted scarf), breathing and blinking, and lip-sync driven by the
  * narration clock from A's cue tracks. Falls back to still images if the stage cannot load.
  */
+interface CutsceneEntry {
+  key: string;
+  controller: CutsceneController | null;
+  fallback: CutsceneControls | null;
+  /** «Пропустить» pressed before the cutscene finished loading. */
+  skipRequested?: boolean;
+}
+
 export class StagePresenter implements Presenter {
   readonly element: HTMLElement;
   private readonly stage: Stage;
@@ -463,44 +471,35 @@ export class StagePresenter implements Presenter {
     await this.voice.controller.playLine(packId, lineId);
   }
 
-  private cutscene: {
-    key: string;
-    controller: CutsceneController | null;
-    fallback: CutsceneControls | null;
-  } | null = null;
+  private cutscene: CutsceneEntry | null = null;
+
+  /** Request keys whose cutscene already ended: never restarted by a re-render. */
+  private finishedKeys = new Set<string>();
 
   playCutscene(request: CutsceneRequest): CutsceneControls {
     if (this.cutscene?.key === request.key) return this.controlsFor(this.cutscene);
+    if (this.finishedKeys.has(request.key)) return { next() {}, skip() {}, replay() {} };
     this.cutscene?.controller?.dispose();
-    const entry: {
-      key: string;
-      controller: CutsceneController | null;
-      fallback: CutsceneControls | null;
-    } = { key: request.key, controller: null, fallback: null };
+    const entry: CutsceneEntry = { key: request.key, controller: null, fallback: null };
     this.cutscene = entry;
     void this.startCutscene(request, entry);
     return this.controlsFor(entry);
   }
 
-  private controlsFor(entry: {
-    controller: CutsceneController | null;
-    fallback: CutsceneControls | null;
-  }): CutsceneControls {
+  private controlsFor(entry: CutsceneEntry): CutsceneControls {
     return {
       next: () => (entry.controller ? void entry.controller.next() : entry.fallback?.next()),
-      skip: () => (entry.controller ? entry.controller.skip() : entry.fallback?.skip()),
+      // A skip pressed while the cutscene is still loading is honoured once it is ready.
+      skip: () => {
+        if (entry.controller) entry.controller.skip();
+        else if (entry.fallback) entry.fallback.skip();
+        else entry.skipRequested = true;
+      },
       replay: () => (entry.controller ? entry.controller.replay() : entry.fallback?.replay()),
     };
   }
 
-  private async startCutscene(
-    request: CutsceneRequest,
-    entry: {
-      key: string;
-      controller: CutsceneController | null;
-      fallback: CutsceneControls | null;
-    },
-  ): Promise<void> {
+  private async startCutscene(request: CutsceneRequest, entry: CutsceneEntry): Promise<void> {
     const document = request.document;
     const rigs = Object.values(document.cast)
       .map((cast) => (cast as { rig?: string }).rig)
@@ -530,6 +529,12 @@ export class StagePresenter implements Presenter {
       images,
     ).catch(() => false);
     if (this.cutscene !== entry) return;
+    if (entry.skipRequested) {
+      this.cutscene = null;
+      this.finishedKeys.add(entry.key);
+      request.onEvent({ type: 'skipped' });
+      return;
+    }
     if (!ok || this.failed) {
       entry.fallback = new LineCutscene(request);
       return;
@@ -551,6 +556,7 @@ export class StagePresenter implements Presenter {
         else if (event.type === 'marker') request.onEvent({ type: 'marker', id: event.id });
         else if (event.type === 'completed' || event.type === 'skipped') {
           if (this.cutscene === entry) this.cutscene = null;
+          this.finishedKeys.add(entry.key);
           request.onEvent({ type: event.type });
         } else if (event.type === 'step') request.onEvent({ type: 'playing' });
       },

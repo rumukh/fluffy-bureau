@@ -366,9 +366,12 @@ export class App {
   // ------------------------------------------------------------ commands
 
   /** Dispatch a game command bound to the revision the UI was rendered from. */
-  act(action: GameAction): Promise<boolean> {
+  act(action: GameAction, options: { bindToRendered?: boolean } = {}): Promise<boolean> {
     // Commands are serialized: a tap during a pending save waits instead of being dropped.
-    const rendered = this.session?.game.host.getStatus().revision;
+    // Child input is bound to the revision on screen; presentation callbacks (cutscene markers and
+    // completion) are not, because several may be queued before the first one commits.
+    const rendered =
+      options.bindToRendered === false ? undefined : this.session?.game.host.getStatus().revision;
     const run = this.actions.then(() => this.actNow(action, rendered));
     this.actions = run.catch(() => false);
     return run;
@@ -387,7 +390,7 @@ export class App {
       return false;
     }
     // Bound to the revision the child saw: a stale double tap is rejected, never applied twice.
-    const outcome = await session.dispatch(action, rendered ?? status.revision);
+    const outcome = await session.dispatch(action, rendered);
     if (!outcome.ok) {
       if (outcome.progress.accepted) this.saveStatus = 'failed';
       this.renderStatus();
