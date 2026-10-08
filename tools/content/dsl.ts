@@ -114,6 +114,7 @@ export const Ls = (...ids: string[]): Step[] => ids.map(L);
 export const dir = (id: string, text: string): Step => ({ t: 'dir', id, text });
 export const skill = (id: string, first: Step[], known: Step[] = first): Step => ({ t: 'skill', skill: id, first, known });
 export const minigame = (id: string): Step => ({ t: 'minigame', minigame: id });
+export const cutscene = (id: string): Step => ({ t: 'cutscene', cutscene: id });
 export const reveal = (clue: ClueId): Step => ({ t: 'clue', clue });
 export const set = (flag: string): Step => ({ t: 'set', flag });
 export const reward = (id: string): Step => ({ t: 'reward', reward: id });

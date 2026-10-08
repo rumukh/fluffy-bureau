@@ -510,6 +510,17 @@
    "presentation": "dialogue",
    "steps": [
     {
+     "t": "skill",
+     "skill": "intro",
+     "first": [
+      {
+       "t": "cutscene",
+       "cutscene": "intro"
+      }
+     ],
+     "known": []
+    },
+    {
      "t": "dir",
      "id": "P0-D01",
      "text": "Стол Ватсони в Конторе. Ватсони держит перо."
@@ -1052,21 +1063,8 @@
      ]
     },
     {
-     "t": "dir",
-     "id": "P3-D01",
-     "text": "Влетает почтовый жук с письмом. Звучит мягкий звон."
-    },
-    {
-     "t": "line",
-     "line": "P3-05"
-    },
-    {
-     "t": "line",
-     "line": "P3-06"
-    },
-    {
-     "t": "line",
-     "line": "P3-07"
+     "t": "cutscene",
+     "cutscene": "p3.letter"
     },
     {
      "t": "reward",
@@ -1459,16 +1457,481 @@
  "comfort": [],
  "cutscenes": [
   {
-   "id": "cs-p1-enter",
-   "scene": "P1",
-   "summary": "Хвостс входит в Контору в облаке мыльных пузырей."
+   "id": "intro",
+   "scene": "P0",
+   "summary": "Вступление без слов (≈26 с, только музыка): Пушистино на закате, флажки и гирлянда к юбилею, огоньки; название игры; вывеска бюро и пузыри Хвостса в круглом окне.",
+   "document": {
+    "format": "aegis-cutscene/1",
+    "id": "intro",
+    "revision": "1",
+    "advance": "input",
+    "cast": {
+     "title": {
+      "rig": "prop.title-card"
+     },
+     "garland": {
+      "rig": "prop.garland-100"
+     },
+     "bunting": {
+      "rig": "prop.bunting"
+     }
+    },
+    "steps": [
+     {
+      "op": "music",
+      "asset": "music.title-office",
+      "fade": 2,
+      "comfort": {
+       "asset": "music.title-office-warm"
+      }
+     },
+     {
+      "op": "background",
+      "asset": "bg.intro-town",
+      "transition": {
+       "type": "cut"
+      }
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "cut": true
+     },
+     {
+      "op": "marker",
+      "id": "intro.town"
+     },
+     {
+      "op": "effect",
+      "effect": "fireflies",
+      "at": {
+       "x": 640,
+       "y": 900
+      },
+      "duration": 8,
+      "wait": false
+     },
+     {
+      "op": "effect",
+      "effect": "fireflies",
+      "at": {
+       "x": 1900,
+       "y": 950
+      },
+      "duration": 8,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "bunting",
+      "from": {
+       "x": 1280,
+       "y": 330
+      },
+      "to": {
+       "x": 1280,
+       "y": 330
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "bunting",
+      "clip": "present"
+     },
+     {
+      "op": "camera",
+      "to": {
+       "x": 1280,
+       "y": 760,
+       "zoom": 1.08
+      },
+      "duration": 6,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "enter",
+      "actor": "garland",
+      "from": {
+       "x": 1280,
+       "y": 1180
+      },
+      "to": {
+       "x": 1280,
+       "y": 1180
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "garland",
+      "clip": "present"
+     },
+     {
+      "op": "effect",
+      "effect": "confetti",
+      "at": {
+       "x": 1280,
+       "y": 500
+      },
+      "duration": 3,
+      "wait": false
+     },
+     {
+      "op": "wait",
+      "seconds": 2
+     },
+     {
+      "op": "camera",
+      "preset": "sky",
+      "duration": 2.5,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "marker",
+      "id": "intro.title"
+     },
+     {
+      "op": "enter",
+      "actor": "title",
+      "from": {
+       "x": 1280,
+       "y": 420
+      },
+      "to": {
+       "x": 1280,
+       "y": 420
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "title",
+      "clip": "present"
+     },
+     {
+      "op": "effect",
+      "effect": "glow",
+      "at": {
+       "x": 1280,
+       "y": 420
+      },
+      "duration": 4,
+      "wait": false
+     },
+     {
+      "op": "wait",
+      "seconds": 4
+     },
+     {
+      "op": "transition",
+      "type": "crossfade",
+      "duration": 1.5
+     },
+     {
+      "op": "exit",
+      "actor": "title",
+      "to": {
+       "x": 1280,
+       "y": 420
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "exit",
+      "actor": "garland",
+      "to": {
+       "x": 1280,
+       "y": 1180
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "exit",
+      "actor": "bunting",
+      "to": {
+       "x": 1280,
+       "y": 330
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "background",
+      "asset": "bg.intro-bureau",
+      "transition": {
+       "type": "crossfade",
+       "duration": 1.5
+      }
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "cut": true
+     },
+     {
+      "op": "marker",
+      "id": "intro.bureau"
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.bubbles",
+      "gain": 0.5
+     },
+     {
+      "op": "effect",
+      "effect": "bubbles",
+      "at": {
+       "x": 520,
+       "y": 620
+      },
+      "duration": 5,
+      "wait": false
+     },
+     {
+      "op": "wait",
+      "seconds": 5
+     },
+     {
+      "op": "music",
+      "asset": null,
+      "fade": 2
+     },
+     {
+      "op": "transition",
+      "type": "fade",
+      "duration": 1.5,
+      "color": "#f3dca8"
+     },
+     {
+      "op": "marker",
+      "id": "intro.end"
+     }
+    ]
+   }
   },
   {
-   "id": "cs-p3-letter",
+   "id": "p3.letter",
    "scene": "P3",
-   "summary": "Почтовый жук влетает с письмом мэра; Хвостс вручает значок стажёра."
+   "summary": "Почтовый жук влетает с письмом мэра (мягкий звон); Хвостс читает о пропаже пирога и вручает значок стажёра.",
+   "document": {
+    "format": "aegis-cutscene/1",
+    "id": "p3.letter",
+    "revision": "1",
+    "advance": "input",
+    "cast": {
+     "khvosts": {
+      "rig": "khvosts"
+     },
+     "watsony": {
+      "rig": "watsony"
+     },
+     "player": {
+      "role": "avatar"
+     },
+     "beetle": {
+      "rig": "prop.postal-beetle"
+     },
+     "badge": {
+      "rig": "prop.badge-intern"
+     }
+    },
+    "steps": [
+     {
+      "op": "background",
+      "asset": "bg.office",
+      "transition": {
+       "type": "cut"
+      }
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "cut": true
+     },
+     {
+      "op": "enter",
+      "actor": "watsony",
+      "from": "left",
+      "to": {
+       "x": 600,
+       "y": 1450
+      },
+      "duration": 0.8,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "player",
+      "from": "left",
+      "to": {
+       "x": 1050,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "khvosts",
+      "from": "right",
+      "to": {
+       "x": 1700,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "join"
+     },
+     {
+      "op": "pose",
+      "actor": "khvosts",
+      "face": "left"
+     },
+     {
+      "op": "marker",
+      "id": "p3.letter.arrives"
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.postal-beetle",
+      "gain": 0.8
+     },
+     {
+      "op": "enter",
+      "actor": "beetle",
+      "from": "right",
+      "to": {
+       "x": 1420,
+       "y": 900
+      },
+      "duration": 1.8,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "beetle",
+      "clip": "flutter",
+      "wait": false
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.letter-chime",
+      "gain": 0.8
+     },
+     {
+      "op": "pose",
+      "actor": "khvosts",
+      "expression": "surprised"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "P3-05"
+     },
+     {
+      "op": "pose",
+      "actor": "watsony",
+      "expression": "worried"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "P3-06"
+     },
+     {
+      "op": "exit",
+      "actor": "beetle",
+      "to": "right",
+      "duration": 1.4,
+      "walk": false,
+      "wait": false
+     },
+     {
+      "op": "marker",
+      "id": "p3.badge"
+     },
+     {
+      "op": "pose",
+      "actor": "khvosts",
+      "expression": "happy"
+     },
+     {
+      "op": "pose",
+      "actor": "watsony",
+      "expression": "happy"
+     },
+     {
+      "op": "camera",
+      "preset": "close-center",
+      "duration": 1.2,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "enter",
+      "actor": "badge",
+      "from": {
+       "x": 1280,
+       "y": 950
+      },
+      "to": {
+       "x": 1280,
+       "y": 950
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "badge",
+      "clip": "present"
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.reward",
+      "gain": 0.8
+     },
+     {
+      "op": "effect",
+      "effect": "sparkles",
+      "at": {
+       "x": 1280,
+       "y": 950
+      },
+      "duration": 1.5,
+      "wait": false
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "P3-07"
+     },
+     {
+      "op": "emote",
+      "actor": "player",
+      "emote": "joy"
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "duration": 1.2,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "marker",
+      "id": "p3.end"
+     }
+    ]
+   }
   }
  ],
  "reserved": [],
- "revision": "d7f5f3c33cdd0ea1c487f34f672ff4194235cd8b81130709e72a083037153afd"
+ "revision": "5b3a8df47dc48dccee85d863c4cdf41f1028f93702947ab59f185fd0d7523008"
 }

@@ -6,6 +6,7 @@ import type {
 } from '../../packages/content/src/schema.ts';
 import { MANIFEST_FORMAT, NAME_PLACEHOLDER, NAME_TTS, PACK_FORMAT, PACK_SCHEMA } from '../../packages/content/src/schema.ts';
 import type { AuthoredLine, CaseSource, SharedSource, VariantSource } from './dsl.ts';
+import { checkCutscenes, cutsceneLines } from './cutscenes.ts';
 import { exploreFlow, restartSafety, type FlowReport, type Issue } from './flow.ts';
 import { proves, sameCandidate, solve } from './logic.ts';
 import { pmIndex } from './pm-import.ts';
@@ -61,6 +62,7 @@ export function variantRefs(v: VariantSource, rewardLabel: (id: string) => strin
       else if (s.t === 'skill') { walk(s.first); walk(s.known); }
       else if (s.t === 'if') { walk(s.then); walk(s.else); }
       else if (s.t === 'menu') { add(s.prompt); s.options.forEach((o) => add(o.label)); }
+      else if (s.t === 'cutscene') { const c = v.cutscenes.find((x) => x.id === s.cutscene); if (c?.document) cutsceneLines(c.document).forEach((l) => add(l.line)); }
     }
   };
   add(v.title);
@@ -246,6 +248,7 @@ export function build(shared: SharedSource, cases: CaseSource[], genderReview: G
         walk(s.steps);
       }
       restartSafety(v, issues);
+      checkCutscenes(v, lineIndex, new Set(refs), issues);
 
       // minigame choice limits
       for (const m of v.minigames) {

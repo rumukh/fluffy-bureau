@@ -1098,6 +1098,15 @@
    "delivery": "neutral"
   },
   {
+   "id": "SK-intro",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Вступление",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
    "id": "NM-khvosts",
    "rev": 1,
    "kind": "label",
@@ -1454,6 +1463,10 @@
   {
    "id": "scent-pairs",
    "title": "SK-scent-pairs"
+  },
+  {
+   "id": "intro",
+   "title": "SK-intro"
   }
  ],
  "scenes": [],
@@ -1562,5 +1575,5 @@
  "comfort": [],
  "cutscenes": [],
  "reserved": [],
- "revision": "fcbc9ebede0b3811e9f3497ab612ca13385623c75743a2323718cf2b01d49168"
+ "revision": "0d7204f5ed08db9a487dcfa5778492f2e431de50f3a0def9db43253cc1031aae"
 }

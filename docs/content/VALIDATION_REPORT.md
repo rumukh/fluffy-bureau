@@ -2,7 +2,7 @@
 
 > Сгенерировано `node tools/content/build.ts` из `content/`. Не редактировать вручную.
 
-**Итог:** ✅ ошибок нет; предупреждений: 0.
+**Итог:** ❌ ошибок: 129; предупреждений: 0.
 
 ## Что проверяется (сборка падает при ошибке)
 
@@ -32,13 +32,141 @@
 - case01-l2: «улика» 3, «свидетель» 3, «версия» 3
 - case01-l3: «улика» 3, «свидетель» 3, «версия» 3
 
-Всего строк: 531; предложений: 729; максимум слов: 8.
+Всего строк: 532; предложений: 730; максимум слов: 8.
 
-Манифест озвучки: 531 записей, из них уникальных записей для студии: 513.
+Манифест озвучки: 532 записей, из них уникальных записей для студии: 514.
 
 ## Ошибки
 
-Нет.
+- `CUTSCENE-ASSET` prologue: cutscene intro: unknown asset bg.intro-town
+- `CUTSCENE-ASSET` prologue: cutscene intro: unknown asset bg.intro-bureau
+- `CUTSCENE-RIG` prologue: cutscene intro: cast title: unknown rig prop.title-card
+- `CUTSCENE-RIG` prologue: cutscene intro: cast garland: unknown rig prop.garland-100
+- `CUTSCENE-RIG` prologue: cutscene intro: cast bunting: unknown rig prop.bunting
+- `E:AEG-ANIM-0051` prologue: cutscene intro $.cast.title.rig: Unknown rig "prop.title-card".
+- `E:AEG-ANIM-0051` prologue: cutscene intro $.cast.garland.rig: Unknown rig "prop.garland-100".
+- `E:AEG-ANIM-0051` prologue: cutscene intro $.cast.bunting.rig: Unknown rig "prop.bunting".
+- `E:AEG-ANIM-0051` prologue: cutscene intro $.steps[7].clip: Unknown clip "present".
+- `E:AEG-ANIM-0051` prologue: cutscene intro $.steps[10].clip: Unknown clip "present".
+- `E:AEG-ANIM-0051` prologue: cutscene intro $.steps[16].clip: Unknown clip "present".
+- `CUTSCENE-RIG` prologue: cutscene p3.letter: cast beetle: unknown rig prop.postal-beetle
+- `CUTSCENE-RIG` prologue: cutscene p3.letter: cast badge: unknown rig prop.badge-intern
+- `E:AEG-ANIM-0051` prologue: cutscene p3.letter $.cast.beetle.rig: Unknown rig "prop.postal-beetle".
+- `E:AEG-ANIM-0051` prologue: cutscene p3.letter $.cast.badge.rig: Unknown rig "prop.badge-intern".
+- `E:AEG-ANIM-0051` prologue: cutscene p3.letter $.steps[10].clip: Unknown clip "flutter".
+- `E:AEG-ANIM-0051` prologue: cutscene p3.letter $.steps[18].expression: Rig "khvosts" has no expression "happy".
+- `E:AEG-ANIM-0051` prologue: cutscene p3.letter $.steps[19].expression: Rig "watsony" has no expression "happy".
+- `E:AEG-ANIM-0051` prologue: cutscene p3.letter $.steps[22].clip: Unknown clip "present".
+- `CUTSCENE-RIG` case01-l1: cutscene c1.shed.l1: cast box: unknown rig prop.box-pie
+- `E:AEG-ANIM-0051` case01-l1: cutscene c1.shed.l1 $.cast.box.rig: Unknown rig "prop.box-pie".
+- `E:AEG-ANIM-0051` case01-l1: cutscene c1.shed.l1 $.steps[4].clip: Unknown clip "present".
+- `E:AEG-ANIM-0051` case01-l1: cutscene c1.shed.l1 $.steps[18].clip: Unknown clip "sniff".
+- `E:AEG-ANIM-0051` case01-l1: cutscene c1.shed.l1 $.steps[19].expression: Rig "kartofan" has no expression "surprised".
+- `E:AEG-ANIM-0051` case01-l1: cutscene c1.shed.l1 $.steps[21].expression: Rig "kartofan" has no expression "worried".
+- `E:AEG-ANIM-0051` case01-l1: cutscene c1.shed.l1 $.steps[24].clip: Unknown clip "bow".
+- `E:AEG-ANIM-0051` case01-l1: cutscene c1.shed.l1 $.steps[27].expression: Rig "pudding" has no expression "happy".
+- `E:AEG-ANIM-0051` case01-l1: cutscene c1.shed.l1 $.steps[31].clip: Unknown clip "box-open".
+- `E:AEG-ANIM-0051` case01-l1: cutscene c1.shed.l1 $.steps[34].clip: Unknown clip "shrug-shy".
+- `E:AEG-ANIM-0051` case01-l1: cutscene c1.shed.l1 $.steps[37].expression: Rig "kartofan" has no expression "happy".
+- `E:AEG-ANIM-0051` case01-l1: cutscene c1.shed.l1 $.steps[43].clip: Unknown clip "hover".
+- `E:AEG-ANIM-0051` case01-l1: cutscene c1.shed.l1 $.steps[52].emote: Rig "khvosts" has no emote "nod".
+- `E:AEG-ANIM-0051` case01-l1: cutscene c1.shed.l1 $.steps[56].emote: Rig "fitilyok" has no emote "joy".
+- `E:AEG-ANIM-0051` case01-l1: cutscene c1.shed.l1 $.steps[58].clip: Unknown clip "bow".
+- `E:AEG-ANIM-0051` case01-l1: cutscene c1.shed.l1 $.steps[61].expression: Rig "tyopa" has no expression "happy".
+- `E:AEG-ANIM-0051` case01-l1: cutscene c1.shed.l1 $.steps[64].expression: Rig "khvosts" has no expression "happy".
+- `CUTSCENE-ASSET` case01-l1: cutscene c1.oven: unknown asset bg.bakery-oven
+- `CUTSCENE-RIG` case01-l1: cutscene c1.oven: cast pie: unknown rig prop.pie-baked
+- `E:AEG-ANIM-0051` case01-l1: cutscene c1.oven $.cast.pie.rig: Unknown rig "prop.pie-baked".
+- `E:AEG-ANIM-0051` case01-l1: cutscene c1.oven $.steps[15].clip: Unknown clip "present".
+- `E:AEG-ANIM-0051` case01-l1: cutscene c1.oven $.steps[18].expression: Rig "tyopa" has no expression "happy".
+- `E:AEG-ANIM-0051` case01-l1: cutscene c1.oven $.steps[21].emote: Rig "pudding" has no emote "joy".
+- `CUTSCENE-RIG` case01-l1: cutscene c1.reward: cast badge: unknown rig prop.badge-pie-found
+- `CUTSCENE-RIG` case01-l1: cutscene c1.reward: cast sticker: unknown rig prop.sticker-pie
+- `CUTSCENE-RIG` case01-l1: cutscene c1.reward: cast basket: unknown rig prop.blueberry-basket
+- `E:AEG-ANIM-0051` case01-l1: cutscene c1.reward $.cast.badge.rig: Unknown rig "prop.badge-pie-found".
+- `E:AEG-ANIM-0051` case01-l1: cutscene c1.reward $.cast.sticker.rig: Unknown rig "prop.sticker-pie".
+- `E:AEG-ANIM-0051` case01-l1: cutscene c1.reward $.cast.basket.rig: Unknown rig "prop.blueberry-basket".
+- `E:AEG-ANIM-0051` case01-l1: cutscene c1.reward $.steps[9].expression: Rig "khvosts" has no expression "happy".
+- `E:AEG-ANIM-0051` case01-l1: cutscene c1.reward $.steps[14].clip: Unknown clip "present".
+- `E:AEG-ANIM-0051` case01-l1: cutscene c1.reward $.steps[22].clip: Unknown clip "present".
+- `E:AEG-ANIM-0051` case01-l1: cutscene c1.reward $.steps[23].clip: Unknown clip "stars-1".
+- `E:AEG-ANIM-0051` case01-l1: cutscene c1.reward $.steps[26].clip: Unknown clip "present".
+- `E:AEG-ANIM-0051` case01-l1: cutscene c1.reward $.steps[28].emote: Rig "watsony" has no emote "joy".
+- `CUTSCENE-RIG` case01-l2: cutscene c1.shed.l2: cast box: unknown rig prop.box-pie
+- `E:AEG-ANIM-0051` case01-l2: cutscene c1.shed.l2 $.cast.box.rig: Unknown rig "prop.box-pie".
+- `E:AEG-ANIM-0051` case01-l2: cutscene c1.shed.l2 $.steps[4].clip: Unknown clip "present".
+- `E:AEG-ANIM-0051` case01-l2: cutscene c1.shed.l2 $.steps[18].clip: Unknown clip "sniff".
+- `E:AEG-ANIM-0051` case01-l2: cutscene c1.shed.l2 $.steps[19].expression: Rig "kartofan" has no expression "surprised".
+- `E:AEG-ANIM-0051` case01-l2: cutscene c1.shed.l2 $.steps[21].expression: Rig "kartofan" has no expression "worried".
+- `E:AEG-ANIM-0051` case01-l2: cutscene c1.shed.l2 $.steps[24].clip: Unknown clip "bow".
+- `E:AEG-ANIM-0051` case01-l2: cutscene c1.shed.l2 $.steps[27].expression: Rig "pudding" has no expression "happy".
+- `E:AEG-ANIM-0051` case01-l2: cutscene c1.shed.l2 $.steps[31].clip: Unknown clip "box-open".
+- `E:AEG-ANIM-0051` case01-l2: cutscene c1.shed.l2 $.steps[34].clip: Unknown clip "shrug-shy".
+- `E:AEG-ANIM-0051` case01-l2: cutscene c1.shed.l2 $.steps[37].expression: Rig "kartofan" has no expression "happy".
+- `E:AEG-ANIM-0051` case01-l2: cutscene c1.shed.l2 $.steps[43].clip: Unknown clip "hover".
+- `E:AEG-ANIM-0051` case01-l2: cutscene c1.shed.l2 $.steps[50].clip: Unknown clip "hover".
+- `E:AEG-ANIM-0051` case01-l2: cutscene c1.shed.l2 $.steps[56].emote: Rig "khvosts" has no emote "nod".
+- `E:AEG-ANIM-0051` case01-l2: cutscene c1.shed.l2 $.steps[60].emote: Rig "fitilyok" has no emote "joy".
+- `E:AEG-ANIM-0051` case01-l2: cutscene c1.shed.l2 $.steps[62].clip: Unknown clip "bow".
+- `E:AEG-ANIM-0051` case01-l2: cutscene c1.shed.l2 $.steps[64].expression: Rig "stella" has no expression "happy".
+- `E:AEG-ANIM-0051` case01-l2: cutscene c1.shed.l2 $.steps[67].expression: Rig "tyopa" has no expression "happy".
+- `E:AEG-ANIM-0051` case01-l2: cutscene c1.shed.l2 $.steps[70].expression: Rig "khvosts" has no expression "happy".
+- `CUTSCENE-ASSET` case01-l2: cutscene c1.oven: unknown asset bg.bakery-oven
+- `CUTSCENE-RIG` case01-l2: cutscene c1.oven: cast pie: unknown rig prop.pie-baked
+- `E:AEG-ANIM-0051` case01-l2: cutscene c1.oven $.cast.pie.rig: Unknown rig "prop.pie-baked".
+- `E:AEG-ANIM-0051` case01-l2: cutscene c1.oven $.steps[15].clip: Unknown clip "present".
+- `E:AEG-ANIM-0051` case01-l2: cutscene c1.oven $.steps[18].expression: Rig "tyopa" has no expression "happy".
+- `E:AEG-ANIM-0051` case01-l2: cutscene c1.oven $.steps[21].emote: Rig "pudding" has no emote "joy".
+- `CUTSCENE-RIG` case01-l2: cutscene c1.reward: cast badge: unknown rig prop.badge-pie-found
+- `CUTSCENE-RIG` case01-l2: cutscene c1.reward: cast sticker: unknown rig prop.sticker-pie
+- `CUTSCENE-RIG` case01-l2: cutscene c1.reward: cast basket: unknown rig prop.blueberry-basket
+- `E:AEG-ANIM-0051` case01-l2: cutscene c1.reward $.cast.badge.rig: Unknown rig "prop.badge-pie-found".
+- `E:AEG-ANIM-0051` case01-l2: cutscene c1.reward $.cast.sticker.rig: Unknown rig "prop.sticker-pie".
+- `E:AEG-ANIM-0051` case01-l2: cutscene c1.reward $.cast.basket.rig: Unknown rig "prop.blueberry-basket".
+- `E:AEG-ANIM-0051` case01-l2: cutscene c1.reward $.steps[9].expression: Rig "khvosts" has no expression "happy".
+- `E:AEG-ANIM-0051` case01-l2: cutscene c1.reward $.steps[14].clip: Unknown clip "present".
+- `E:AEG-ANIM-0051` case01-l2: cutscene c1.reward $.steps[22].clip: Unknown clip "present".
+- `E:AEG-ANIM-0051` case01-l2: cutscene c1.reward $.steps[23].clip: Unknown clip "stars-2".
+- `E:AEG-ANIM-0051` case01-l2: cutscene c1.reward $.steps[26].clip: Unknown clip "present".
+- `E:AEG-ANIM-0051` case01-l2: cutscene c1.reward $.steps[28].emote: Rig "watsony" has no emote "joy".
+- `CUTSCENE-RIG` case01-l3: cutscene c1.shed.l3: cast box: unknown rig prop.box-pie
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.shed.l3 $.cast.box.rig: Unknown rig "prop.box-pie".
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.shed.l3 $.steps[4].clip: Unknown clip "present".
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.shed.l3 $.steps[18].clip: Unknown clip "sniff".
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.shed.l3 $.steps[19].expression: Rig "kartofan" has no expression "surprised".
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.shed.l3 $.steps[21].expression: Rig "kartofan" has no expression "worried".
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.shed.l3 $.steps[24].clip: Unknown clip "bow".
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.shed.l3 $.steps[27].expression: Rig "pudding" has no expression "happy".
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.shed.l3 $.steps[31].clip: Unknown clip "box-open".
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.shed.l3 $.steps[34].clip: Unknown clip "shrug-shy".
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.shed.l3 $.steps[37].expression: Rig "kartofan" has no expression "happy".
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.shed.l3 $.steps[43].clip: Unknown clip "hover".
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.shed.l3 $.steps[50].clip: Unknown clip "hover".
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.shed.l3 $.steps[58].emote: Rig "khvosts" has no emote "nod".
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.shed.l3 $.steps[62].emote: Rig "fitilyok" has no emote "joy".
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.shed.l3 $.steps[64].clip: Unknown clip "bow".
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.shed.l3 $.steps[66].expression: Rig "stella" has no expression "happy".
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.shed.l3 $.steps[69].clip: Unknown clip "shrug-shy".
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.shed.l3 $.steps[72].emote: Rig "pudding" has no emote "joy".
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.shed.l3 $.steps[75].expression: Rig "khvosts" has no expression "happy".
+- `CUTSCENE-ASSET` case01-l3: cutscene c1.oven: unknown asset bg.bakery-oven
+- `CUTSCENE-RIG` case01-l3: cutscene c1.oven: cast pie: unknown rig prop.pie-baked
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.oven $.cast.pie.rig: Unknown rig "prop.pie-baked".
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.oven $.steps[15].clip: Unknown clip "present".
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.oven $.steps[18].expression: Rig "tyopa" has no expression "happy".
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.oven $.steps[21].emote: Rig "pudding" has no emote "joy".
+- `CUTSCENE-RIG` case01-l3: cutscene c1.reward: cast badge: unknown rig prop.badge-pie-found
+- `CUTSCENE-RIG` case01-l3: cutscene c1.reward: cast sticker: unknown rig prop.sticker-pie
+- `CUTSCENE-RIG` case01-l3: cutscene c1.reward: cast basket: unknown rig prop.blueberry-basket
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.reward $.cast.badge.rig: Unknown rig "prop.badge-pie-found".
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.reward $.cast.sticker.rig: Unknown rig "prop.sticker-pie".
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.reward $.cast.basket.rig: Unknown rig "prop.blueberry-basket".
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.reward $.steps[9].expression: Rig "khvosts" has no expression "happy".
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.reward $.steps[14].clip: Unknown clip "present".
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.reward $.steps[22].clip: Unknown clip "present".
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.reward $.steps[23].clip: Unknown clip "stars-3".
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.reward $.steps[26].clip: Unknown clip "present".
+- `E:AEG-ANIM-0051` case01-l3: cutscene c1.reward $.steps[28].emote: Rig "watsony" has no emote "joy".
 
 ## Предупреждения
 
