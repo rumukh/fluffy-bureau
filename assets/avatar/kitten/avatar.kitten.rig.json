@@ -10,10 +10,10 @@
   "y": 0
  },
  "bounds": {
-  "x": -229.2,
-  "y": -826.8,
-  "width": 436.2,
-  "height": 826.8
+  "x": -165.02,
+  "y": -595.3,
+  "width": 314.06,
+  "height": 595.3
  },
  "parts": [
   {
@@ -30,7 +30,11 @@
    "variants": {
     "rest": "avatar.kitten.atlas#body.rest"
    },
-   "variant": "rest"
+   "variant": "rest",
+   "scale": {
+    "x": 0.72,
+    "y": 0.72
+   }
   },
   {
    "id": "head",
@@ -146,6 +150,16 @@
   },
   "happy": {
    "eyes": "happy"
+  }
+ },
+ "emotes": {
+  "joy": {
+   "expression": "happy",
+   "clip": "cheer"
+  },
+  "nod": {
+   "expression": "neutral",
+   "clip": "nod"
   }
  },
  "slots": {

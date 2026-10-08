@@ -34,7 +34,8 @@ line ID is looked up in the case pack first, then in `shared`.
 | `notebookHelp` | D03: `mode` `suggest` (levels 1–2, propose sticker + reason line) or `point` (level 3, pointer line per clue). `marks[]` cite the clues that prove each mark. |
 | `hints` | `klubok` (3 per run, exact) and `shell` (unlimited; exact on level 1, vague on level 2; `null` on level 3). |
 | `minigames[]` | `id`, `skill`, `config` by `kind` (below). |
-| `facts`, `glossary`, `rewards`, `collections`, `activities`, `comfort`, `cutscenes` | Catalogs. Rewards carry `claimKey` (once per profile, Q38/Q40). |
+| `cutscenes[]` | `{ id, scene, summary, document }`; `document` is E's `aegis-cutscene/1` (see Cutscenes below). |
+| `facts`, `glossary`, `rewards`, `collections`, `activities`, `comfort` | Catalogs. Rewards carry `claimKey` (once per profile, Q38/Q40). |
 
 ### Steps
 
@@ -44,6 +45,7 @@ line ID is looked up in the case pack first, then in `shared`.
 | `dir` | Stage direction / animation cue (`id` stable). Never shown as dialogue, never voiced. |
 | `skill` | `[НАВЫК]`: play `first` when the profile lacks the skill, else `known`; then mark it learned (profile-level). |
 | `minigame` | Run the minigame; continue when complete. |
+| `cutscene` | Play `cutscenes[id].document` on the stage (T25). Blocking; completes when finished or skipped. Rewards, clues and flags are never inside a cutscene: they follow as ordinary steps, so skip, replay and restore never re-apply them. |
 | `clue` | Reveal the clue in the notebook (idempotent). |
 | `set` | Set a case-run flag (idempotent). |
 | `reward` | Grant once per `claimKey`. |
@@ -96,6 +98,35 @@ propose the first and speak its `line`; never place it. `point`: for the first s
 | `timeline` | `items[]` (`time`, `label`), `solution[]`, `wrong[]` | aegis `ordering`. |
 | `scent-pairs` | `fields[]` of `cards[]` (`pair`), `mismatch[]`, `question` | aegis `matching`; no timer. |
 | `baker` | `measures[]` (`units` = eighths of a cup), `steps[]` (`prompt`, `target`, `ideal`, `afterWrong`), `tooMuch[]`, `tooLittle[]` | Sum > target: `tooMuch` (+`afterWrong`), undo the pick. Pick outside `ideal` with sum < target: `tooLittle` (+`afterWrong`). Sum = target: next step. |
+
+## Cutscenes (T25)
+
+Documents follow `aegis-cutscene/1` (engine `docs/api/animation.md` §9, SDK 711ec45). Sources:
+`content/cutscenes/index.ts`.
+
+| Cutscene | Pack | Played in | Avatar |
+|---|---|---|---|
+| `intro` | prologue | P0, profile-once skill `intro` | no (wordless, music only) |
+| `p3.letter` | prologue | P3 | yes |
+| `c1.shed.l1` / `.l2` / `.l3` | case01-l1 / l2 / l3 | C1-7 / L2-8 / L3-9 | yes |
+| `c1.oven.l1` / `.l2` / `.l3` | case01-l1 / l2 / l3 | C1-8 / L2-9 / L3-10 | yes |
+| `c1.reward.l1` / `.l2` / `.l3` | case01-l1 / l2 / l3 (sticker clip `stars-<level>`) | C1-10 | yes |
+
+- `line` steps name this pack's line IDs; the narration pack is the content pack. Only existing
+  script lines are spoken (no new text). `advance` is `"input"`: after each line the player presses
+  «Дальше»; motion without speech runs on its own.
+- `cast` keys equal speaker IDs and use the rig with the same ID; the player is `{ role: "avatar" }`.
+  Props are puppets (`prop.*`, A). Backgrounds, music (`music.*`, comfort `music.*-warm`) and sfx
+  (`sfx.*`) are A's asset IDs.
+- Camera presets and effects are fixed in `packages/content/src/stage.ts` (`CAMERA_PRESETS`,
+  `EFFECTS`); G registers exactly these on the stage.
+- Every document has markers after major beats (restore points).
+- The build validates every document with `validateCutscene` (rigs, clips, expressions, emotes,
+  captioned lines, presets, effects) and checks: the cutscene exists and is played in its declared
+  scene; exactly one avatar (none in the intro); every line ID exists, is voiced dialogue of this pack,
+  is spoken by its speaker, waits for input and is spoken once; markers exist and are unique; every
+  asset ID is in `assets/manifest.json`. The flow walker counts cutscene lines for glossary
+  repetitions and red-herring explanations.
 
 ## Voice and label manifest (C → A)
 

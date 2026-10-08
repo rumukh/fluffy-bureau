@@ -27,11 +27,17 @@
    ],
    "variants": [
     "half",
-    "closed"
+    "closed",
+    "happy",
+    "wide",
+    "worried"
    ],
    "phrases": {
     "half": "the tiny squinting eyes pressed almost completely shut, very thin curved lines",
-    "closed": "the tiny eyes fully closed, drawn as soft curved lines, peaceful blink"
+    "closed": "the tiny eyes fully closed, drawn as soft curved lines, peaceful blink",
+    "happy": "the tiny eyes closed in happy upward curved arcs, smiling eyes",
+    "wide": "the tiny eyes opened a little wider than usual in gentle surprise, two small round dark dots with tiny highlights",
+    "worried": "the tiny squinting eyes tilted with the inner ends raised, a gentle worried, apologetic look"
    }
   },
   "mouth": {
@@ -53,5 +59,20 @@
    ]
   }
  },
- "bodyVariants": {}
+ "bodyVariants": {},
+ "expressions": {
+  "neutral": {
+   "eyes": "open"
+  },
+  "surprised": {
+   "eyes": "wide"
+  },
+  "worried": {
+   "eyes": "worried"
+  },
+  "happy": {
+   "eyes": "happy"
+  }
+ },
+ "scale": 0.82
 }

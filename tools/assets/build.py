@@ -140,6 +140,33 @@ def build_puppets(cat: dict) -> list:
     return out
 
 
+def build_staging() -> list:
+    out = []
+    subprocess.run([sys.executable, str(HERE / "art/staging.py")], check=True, capture_output=True)
+    src = json.loads((MASTERS / "staging-sources.json").read_text(encoding="utf-8"))
+    own = {"tool": "tools/assets/art/staging.py", "source": "hand-authored keyframes", "createdAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+           "licence": LIC_OWN, "notes": "aegis-clip/1 motion for T25 cutscenes."}
+    for f in sorted((ASSETS / "staging/clips").glob("*.clip.json")):
+        out.append(entry(f"clip.{f.name.split('.')[0]}", f, "shell", "clip", own))
+    for group, kind in (("props", "prop-puppet"), ("acc", "avatar-layer"), ("fx", "effect")):
+        for d in sorted(p for p in (ASSETS / "staging" / group).iterdir()):
+            files = [d] if d.is_file() else sorted(d.iterdir())
+            rid = d.name if d.is_dir() else "fx.atlas"
+            masters = src["sources"].get(rid, [])
+            master = None
+            if masters:
+                m0 = MASTERS / masters[0]
+                master = m0 if m0.exists() else m0.with_name(m0.stem + "-c1.png")
+            prov = gen_provenance(master, f"Built by tools/assets/art/staging.py from {', '.join(masters)}.") if master else own
+            for f in files:
+                if f.suffix == ".webp":
+                    w, h = Image.open(f).size
+                    out.append(entry(f"{rid}:{f.name}" if group != "fx" else f"fx:{f.name}", f, "shell", kind, prov, w, h))
+                else:
+                    out.append(entry(f"{rid}:{f.name}" if group != "fx" else f"fx:{f.name}", f, "shell", kind, prov))
+    return out
+
+
 def build_ui() -> list:
     out = []
     prov = {"tool": "tools/assets/art/ui_kit.py (hand-authored SVG)", "source": "tools/assets/art/ui_kit.py",
@@ -238,9 +265,9 @@ def main() -> None:
         sys.exit(1 if check(json.loads(MANIFEST.read_text(encoding="utf-8"))) else 0)
     cat = json.loads((HERE / "catalog.json").read_text(encoding="utf-8"))
     old = json.loads(MANIFEST.read_text(encoding="utf-8")) if MANIFEST.exists() else {"assets": [], "backgrounds": {}}
-    groups = set(filter(None, a.only.split(","))) or {"backgrounds", "props", "puppets", "ui", "sfx", "music", "voice"}
+    groups = set(filter(None, a.only.split(","))) or {"backgrounds", "props", "puppets", "ui", "sfx", "music", "voice", "staging"}
     owners = {"backgrounds": ("bg/",), "props": ("props/", "avatar/hats/"), "puppets": ("characters/", "avatar/"),
-              "ui": ("ui/",), "sfx": ("sfx/",), "music": ("music/",), "voice": ("voice/",), "index": ()}
+              "ui": ("ui/",), "sfx": ("sfx/",), "music": ("music/",), "voice": ("voice/",), "staging": ("staging/",), "index": ()}
 
     def owned(path: str, g: str) -> bool:
         if g == "puppets" and path.startswith("avatar/hats/"):
@@ -268,6 +295,8 @@ def main() -> None:
         assets += build_music()
     if "voice" in groups:
         assets += build_voice()
+    if "staging" in groups:
+        assets += build_staging()
     assets.sort(key=lambda x: x["id"])
     ids = {x["id"] for x in assets}
     characters = {c: {"base": f"char.{c}.base.webp", "rig": f"char.{c}.{c}.rig.json", "atlas": f"char.{c}.{c}.atlas.json", "atlasImage": f"char.{c}.{c}.atlas.webp"}
@@ -286,8 +315,19 @@ def main() -> None:
                           "revision": r["revision"], "ttsHash": r.get("ttsHash")}
     music = {x["id"].split(".", 1)[1]: x["id"] for x in assets if x["kind"] == "music"}
     sfx = {x["id"].split(".", 1)[1]: x["id"] for x in assets if x["kind"] == "sfx"}
+    staging = {"rigs": {}, "clips": {}, "fx": {}}
+    for x in assets:
+        if x["path"].startswith("staging/clips/"):
+            staging["clips"][x["id"].split(".", 1)[1]] = x["id"]
+        elif x["path"].startswith(("staging/props/", "staging/acc/")):
+            rid, fname = x["id"].split(":", 1)
+            key = "rig" if fname.endswith(".rig.json") else "atlas" if fname.endswith(".atlas.json") else "atlasImage"
+            staging["rigs"].setdefault(rid, {})[key] = x["id"]
+        elif x["path"].startswith("staging/fx/"):
+            staging["fx"]["atlas" if x["id"].endswith(".json") else "atlasImage"] = x["id"]
     manifest = {"format": "fluffy-asset-manifest", "schema": 1, "assets": assets, "backgrounds": bgs,
-                "characters": characters, "avatar": avatar, "hats": hats, "voice": voice, "music": music, "sfx": sfx}
+                "characters": characters, "avatar": avatar, "hats": hats, "voice": voice, "music": music, "sfx": sfx,
+                "staging": staging}
     MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, indent=1) + "\n", encoding="utf-8", newline="\n")
     sys.exit(1 if check(manifest) else 0)
 

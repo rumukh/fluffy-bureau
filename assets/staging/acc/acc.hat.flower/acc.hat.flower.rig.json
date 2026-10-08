@@ -1,0 +1,33 @@
+{
+ "format": "aegis-rig/1",
+ "id": "acc.hat.flower",
+ "revision": "1",
+ "atlases": [
+  "acc.hat.flower.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -170.0,
+  "y": -189.5,
+  "width": 340,
+  "height": 223
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 170.0,
+    "y": 189.5
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "frame": "acc.hat.flower.atlas#body.rest"
+  }
+ ]
+}

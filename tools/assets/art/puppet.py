@@ -320,6 +320,18 @@ def assemble(cfg: dict, out_dir: Path, scale: float) -> None:
         roles[feat] = feat
     for k in [k for k in expressions if not expressions[k]]:
         del expressions[k]
+    if cfg.get("expressions"):
+        expressions = cfg["expressions"]
+    if "eyes" in cfg["features"] and "happy" in cfg["features"]["eyes"]["variants"]:
+        expressions.setdefault("happy", {"eyes": "happy"})
+    puppet_scale = cfg.get("scale", 1.0)
+    if puppet_scale != 1.0:
+        parts[0]["scale"] = {"x": puppet_scale, "y": puppet_scale}
+    if cfg.get("emotes"):
+        rig_emotes = cfg["emotes"]
+    else:
+        rig_emotes = {"joy": {"expression": "happy" if "happy" in expressions else "neutral", "clip": "cheer"},
+                      "nod": {"expression": "neutral", "clip": "nod"}}
     if "scarf" in frames:
         sx_, sy_ = origin_of["scarf"]
         sw, sh = frames["scarf"].size
@@ -333,13 +345,16 @@ def assemble(cfg: dict, out_dir: Path, scale: float) -> None:
         cfg.setdefault("slots", {})["hat"] = {"parent": "head", "position": {"x": 0, "y": f(top_y + 40 - pivot_head[1])}, "z": 40}
         cfg.setdefault("tints", {})["scarf"] = {"default": "#c8553d"}
         cfg.setdefault("anchors", {})["badge"] = {"part": "scarf", "x": f(sw * 0.5), "y": f(sh * 0.45)}
+    ps = puppet_scale
     rig = {"format": "aegis-rig/1", "id": cid, "revision": str(cfg.get("revision", 1)), "atlases": [atlas_id],
            "origin": {"x": 0, "y": 0},
-           "bounds": {"x": f(union[0] - root[0]), "y": f(min(hb[1], union[1]) - root[1]),
-                      "width": f(union[2] - union[0]), "height": f(feet_y - min(hb[1], union[1]))},
+           "bounds": {"x": round(f(union[0] - root[0]) * ps, 2), "y": round(f(min(hb[1], union[1]) - root[1]) * ps, 2),
+                      "width": round(f(union[2] - union[0]) * ps, 2), "height": round(f(feet_y - min(hb[1], union[1])) * ps, 2)},
            "parts": parts, "roles": roles}
     if expressions:
         rig["expressions"] = expressions
+    if cfg.get("withEmotes", True):
+        rig["emotes"] = rig_emotes
     for extra in ("slots", "tints", "anchors"):
         if extra in cfg:
             rig[extra] = cfg[extra]

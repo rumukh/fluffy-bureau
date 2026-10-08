@@ -10,10 +10,10 @@
   "y": 0
  },
  "bounds": {
-  "x": -244.8,
-  "y": -765.0,
-  "width": 448.2,
-  "height": 765.0
+  "x": -132.19,
+  "y": -413.1,
+  "width": 242.03,
+  "height": 413.1
  },
  "parts": [
   {
@@ -30,7 +30,11 @@
    "variants": {
     "rest": "mouse2.atlas#body.rest"
    },
-   "variant": "rest"
+   "variant": "rest",
+   "scale": {
+    "x": 0.54,
+    "y": 0.54
+   }
   },
   {
    "id": "head",
@@ -61,7 +65,8 @@
    "variants": {
     "open": "mouse2.atlas#eyes.open",
     "half": "mouse2.atlas#eyes.half",
-    "closed": "mouse2.atlas#eyes.closed"
+    "closed": "mouse2.atlas#eyes.closed",
+    "happy": "mouse2.atlas#eyes.happy"
    },
    "variant": "open"
   },
@@ -125,6 +130,19 @@
   },
   "worried": {
    "brows": "worried"
+  },
+  "happy": {
+   "eyes": "happy"
+  }
+ },
+ "emotes": {
+  "joy": {
+   "expression": "happy",
+   "clip": "cheer"
+  },
+  "nod": {
+   "expression": "neutral",
+   "clip": "nod"
   }
  }
 }

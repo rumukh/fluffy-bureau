@@ -10,10 +10,10 @@
   "y": 0
  },
  "bounds": {
-  "x": -226.8,
-  "y": -796.2,
-  "width": 455.4,
-  "height": 796.2
+  "x": -185.98,
+  "y": -652.88,
+  "width": 373.43,
+  "height": 652.88
  },
  "parts": [
   {
@@ -30,7 +30,11 @@
    "variants": {
     "rest": "kartofan.atlas#body.rest"
    },
-   "variant": "rest"
+   "variant": "rest",
+   "scale": {
+    "x": 0.82,
+    "y": 0.82
+   }
   },
   {
    "id": "head",
@@ -61,7 +65,10 @@
    "variants": {
     "open": "kartofan.atlas#eyes.open",
     "half": "kartofan.atlas#eyes.half",
-    "closed": "kartofan.atlas#eyes.closed"
+    "closed": "kartofan.atlas#eyes.closed",
+    "happy": "kartofan.atlas#eyes.happy",
+    "wide": "kartofan.atlas#eyes.wide",
+    "worried": "kartofan.atlas#eyes.worried"
    },
    "variant": "open"
   },
@@ -98,6 +105,25 @@
  "expressions": {
   "neutral": {
    "eyes": "open"
+  },
+  "surprised": {
+   "eyes": "wide"
+  },
+  "worried": {
+   "eyes": "worried"
+  },
+  "happy": {
+   "eyes": "happy"
+  }
+ },
+ "emotes": {
+  "joy": {
+   "expression": "happy",
+   "clip": "cheer"
+  },
+  "nod": {
+   "expression": "neutral",
+   "clip": "nod"
   }
  }
 }

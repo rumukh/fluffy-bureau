@@ -1,9 +1,10 @@
 // Case 1, level 1 (3×3×3). SCRIPT_PROLOGUE_CASE01_RU.md, C1-1…C1-10.
-import { all, cl, dir, end, goto, has, L, menu, minigame, not, opt as mopt, reveal, reward, seq, skill, when, type VariantSource } from '../../tools/content/dsl.ts';
+import { all, cl, cutscene, dir, end, goto, has, L, menu, minigame, not, opt as mopt, reveal, reward, seq, skill, when, type VariantSource } from '../../tools/content/dsl.ts';
 import {
-  activity, and, bakerMeasures, commonCutscenes, eq, facts, factsScene, glossary, intended, intro, klubkiTutorial, ne, noConstraint, opt, oven,
-  rewardScene, shedOpening, versionScene, what, where, who,
+  activity, and, bakerMeasures, eq, facts, factsScene, glossary, intended, intro, klubkiTutorial, ne, noConstraint, opt,
+  rewardScene, versionScene, what, where, who,
 } from './common.ts';
+import { oven, reward as rewardCutscene, shedL1 } from '../cutscenes/index.ts';
 
 const HUB = 'C1-HUB';
 
@@ -85,11 +86,11 @@ export const level1: VariantSource = {
     versionScene('C1-6', HUB),
     {
       id: 'C1-7', title: 'Разговор в сарае', location: 'shed', cast: ['kartofan', 'pudding', 'tyopa', 'fitilyok', 'khvosts', 'watsony'], presentation: 'cutscene',
-      steps: [...shedOpening(), ...seq('C1-7-', 12, 14), L('C1-7-14a'), L('C1-7-14b'), ...seq('C1-7-', 15, 17), goto('C1-8')],
+      steps: [cutscene('c1.shed.l1'), goto('C1-8')],
     },
     {
       id: 'C1-8', title: 'Финал: «Пекарь»', location: 'bakery', cast: ['pudding', 'kartofan', 'tyopa', 'fitilyok', 'khvosts', 'watsony'], presentation: 'minigame',
-      steps: [skill('baker', [L('C1-8-01')]), minigame('c1l1-baker'), oven(), L('C1-8-07'), L('C1-8-08'), goto('C1-9')],
+      steps: [skill('baker', [L('C1-8-01')]), minigame('c1l1-baker'), cutscene('c1.oven.l1'), goto('C1-9')],
     },
     { ...factsScene(), steps: [...factsScene().steps, goto('C1-10')] },
     rewardScene(1, [end()]),
@@ -219,8 +220,9 @@ export const level1: VariantSource = {
   collections: [],
   activities: [activity],
   comfort: [],
-  cutscenes: commonCutscenes,
+  cutscenes: [shedL1, oven(1, 'C1-8'), rewardCutscene(1)],
   decisions: [
+    { id: 'C1L1-T25', text: 'Ролики T25: разговор в сарае (C1-7, c1.shed.l1), пирог в печи (C1-8, c1.oven.l1) и награда (C1-10, c1.reward.l1). Реплики звучат в ролике в прежнем порядке; ремарки сцен заменены постановкой ролика; награды, «Уютный денёк» и переходы — шаги после ролика.', ref: 'T25' },
     { id: 'C1L1-D1', text: 'Варианты выбора на Пироговой улице исчезают после посещения; «Пойти по следам» появляется после «Лупы». На экране не больше трёх вариантов.', ref: 'Q11' },
     { id: 'C1L1-D2', text: 'Сцена C1-6 (вводная версии) звучит один раз, когда собраны У1–У3; затем кнопка «Приглашу на разговор» доступна в Блокноте.', ref: 'Q14' },
     { id: 'C1L1-D3', text: 'В «Помоги заполнить» ✔ «перепутал коробки» и ✖ «в щёки» предлагаются уже после У3: улика У3 их доказывает (сценарий предлагал только пять стикеров).', ref: 'D03, R03' },

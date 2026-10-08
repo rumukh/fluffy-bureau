@@ -10,10 +10,10 @@
   "y": 0
  },
  "bounds": {
-  "x": -208.2,
-  "y": -814.2,
-  "width": 414.0,
-  "height": 814.2
+  "x": -149.9,
+  "y": -586.22,
+  "width": 298.08,
+  "height": 586.22
  },
  "parts": [
   {
@@ -30,7 +30,11 @@
    "variants": {
     "rest": "avatar.puppy.atlas#body.rest"
    },
-   "variant": "rest"
+   "variant": "rest",
+   "scale": {
+    "x": 0.72,
+    "y": 0.72
+   }
   },
   {
    "id": "head",
@@ -146,6 +150,16 @@
   },
   "happy": {
    "eyes": "happy"
+  }
+ },
+ "emotes": {
+  "joy": {
+   "expression": "happy",
+   "clip": "cheer"
+  },
+  "nod": {
+   "expression": "neutral",
+   "clip": "nod"
   }
  },
  "slots": {

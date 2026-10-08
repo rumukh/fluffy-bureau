@@ -10,10 +10,10 @@
   "y": 0
  },
  "bounds": {
-  "x": -227.4,
-  "y": -785.4,
-  "width": 456.0,
-  "height": 785.4
+  "x": -191.02,
+  "y": -659.74,
+  "width": 383.04,
+  "height": 659.74
  },
  "parts": [
   {
@@ -30,7 +30,11 @@
    "variants": {
     "rest": "watsony.atlas#body.rest"
    },
-   "variant": "rest"
+   "variant": "rest",
+   "scale": {
+    "x": 0.84,
+    "y": 0.84
+   }
   },
   {
    "id": "head",
@@ -61,7 +65,8 @@
    "variants": {
     "open": "watsony.atlas#eyes.open",
     "half": "watsony.atlas#eyes.half",
-    "closed": "watsony.atlas#eyes.closed"
+    "closed": "watsony.atlas#eyes.closed",
+    "happy": "watsony.atlas#eyes.happy"
    },
    "variant": "open"
   },
@@ -125,6 +130,19 @@
   },
   "worried": {
    "brows": "worried"
+  },
+  "happy": {
+   "eyes": "happy"
+  }
+ },
+ "emotes": {
+  "joy": {
+   "expression": "happy",
+   "clip": "cheer"
+  },
+  "nod": {
+   "expression": "neutral",
+   "clip": "nod"
   }
  }
 }

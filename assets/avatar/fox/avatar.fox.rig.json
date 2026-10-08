@@ -10,10 +10,10 @@
   "y": 0
  },
  "bounds": {
-  "x": -262.2,
-  "y": -835.2,
-  "width": 443.4,
-  "height": 835.2
+  "x": -188.78,
+  "y": -601.34,
+  "width": 319.25,
+  "height": 601.34
  },
  "parts": [
   {
@@ -30,7 +30,11 @@
    "variants": {
     "rest": "avatar.fox.atlas#body.rest"
    },
-   "variant": "rest"
+   "variant": "rest",
+   "scale": {
+    "x": 0.72,
+    "y": 0.72
+   }
   },
   {
    "id": "head",
@@ -146,6 +150,16 @@
   },
   "happy": {
    "eyes": "happy"
+  }
+ },
+ "emotes": {
+  "joy": {
+   "expression": "happy",
+   "clip": "cheer"
+  },
+  "nod": {
+   "expression": "neutral",
+   "clip": "nod"
   }
  },
  "slots": {
