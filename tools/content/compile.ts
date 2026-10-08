@@ -5,9 +5,12 @@ import type {
   ContentPack, DeductionCase, Line, ManifestEntry, Step, VoiceManifest,
 } from '../../packages/content/src/schema.ts';
 import { MANIFEST_FORMAT, NAME_PLACEHOLDER, NAME_TTS, PACK_FORMAT, PACK_SCHEMA } from '../../packages/content/src/schema.ts';
-import type { AuthoredLine, CaseSource, SharedSource, VariantSource } from './dsl.ts';
+import type { AuthoredLine, CaseSource, CozySource, SharedSource, VariantSource } from './dsl.ts';
+import { checkCozy, cozyRefs } from './cozy.ts';
 import { checkBackgrounds, checkCutscenes, cutsceneLines } from './cutscenes.ts';
+import { AssetLedger, checkAssetId, checkHotspots, checkStageActions, locationBackground, missing, soundClueIds, type AssetRequest, type AssetTier } from './staging.ts';
 import { exploreFlow, restartSafety, type FlowReport, type Issue } from './flow.ts';
+import { checkKind, kindAssets, kindChoiceLists, kindRefs, kindSamples } from './kinds.ts';
 import { proves, sameCandidate, solve } from './logic.ts';
 import { pmIndex } from './pm-import.ts';
 import { genderFlags, sentences, tokenize } from './text.ts';
@@ -47,19 +50,27 @@ export interface BuildResult {
   flows: Map<string, FlowReport[]>;
   stats: Map<string, Record<string, number | string>>;
   lineIndex: Map<string, AuthoredLine>;
-  sources: { shared: SharedSource; cases: CaseSource[] };
+  sources: { shared: SharedSource; cases: CaseSource[]; cozy: CozySource | null };
+  /** Assets referenced by Stage 2 production packs that A has not delivered yet. */
+  assetRequests: AssetRequest[];
+}
+
+export interface BuildOptions {
+  /** Asset tier per pack: strict (released), pending (Stage 2 production), skip (preview). */
+  tier?: (pack: string) => AssetTier;
+  cozy?: CozySource | null;
 }
 
 export const sha256 = (s: string) => createHash('sha256').update(s).digest('hex');
 
 /** Every line ID referenced by a variant, in a stable order. */
-export function variantRefs(v: VariantSource, rewardLabel: (id: string) => string | undefined): string[] {
+export function variantRefs(v: VariantSource, rewardLabel: (id: string) => string | undefined, skillTitle: (id: string) => string | undefined = () => undefined): string[] {
   const out: string[] = [];
   const add = (id: string | null | undefined) => { if (id && !out.includes(id)) out.push(id); };
   const walk = (steps: Step[]) => {
     for (const s of steps) {
       if (s.t === 'line') add(s.line);
-      else if (s.t === 'skill') { walk(s.first); walk(s.known); }
+      else if (s.t === 'skill') { add(skillTitle(s.skill)); walk(s.first); walk(s.known); }
       else if (s.t === 'if') { walk(s.then); walk(s.else); }
       else if (s.t === 'menu') { add(s.prompt); s.options.forEach((o) => add(o.label)); }
       else if (s.t === 'cutscene') { const c = v.cutscenes.find((x) => x.id === s.cutscene); if (c?.document) cutsceneLines(c.document).forEach((l) => add(l.line)); }
@@ -76,6 +87,7 @@ export function variantRefs(v: VariantSource, rewardLabel: (id: string) => strin
   if (v.notebookHelp) { v.notebookHelp.marks.forEach((m) => add(m.line)); v.notebookHelp.pointers.forEach((p) => add(p.line)); add(v.notebookHelp.nothing); }
   for (const ch of [v.hints?.klubok, v.hints?.shell]) if (ch) { ch.rules.forEach((r) => add(r.id)); add(ch.review); add(ch.exhausted); }
   for (const m of v.minigames) {
+    add(skillTitle(m.skill));
     const c = m.config;
     switch (c.kind) {
       case 'magnifier': c.targets.forEach((t) => { add(t.label); t.reply.forEach(add); }); c.afterFirst.forEach(add); break;
@@ -91,8 +103,10 @@ export function variantRefs(v: VariantSource, rewardLabel: (id: string) => strin
         break;
       case 'staged': c.steps.forEach((st) => { add(st.prompt); st.options.forEach((o) => { add(o.label); o.reply.forEach(add); }); }); c.lines.forEach(add); break;
       case 'baker': c.measures.forEach((x) => add(x.label)); c.steps.forEach((st) => { add(st.prompt); st.afterWrong.forEach(add); }); c.tooMuch.forEach(add); c.tooLittle.forEach(add); break;
+      default: kindRefs(c)?.forEach(add); break;
     }
   }
+  (v.notebookPages ?? []).forEach((p) => add(p.title));
   v.facts.forEach((f) => add(f.line));
   v.glossary.forEach((g) => { add(g.definition); add(g.label); });
   v.rewards.forEach((r) => add(rewardLabel(r)));
@@ -121,7 +135,7 @@ export function toDeduction(v: VariantSource): DeductionCase {
 
 const toLine = (l: AuthoredLine): Line => ({
   id: l.id, rev: l.rev, kind: l.kind, speaker: l.speaker, text: l.text, ...(l.tts ? { tts: l.tts } : {}),
-  voiced: l.voiced, delivery: l.delivery, ...(l.note ? { note: l.note } : {}),
+  voiced: l.voiced, delivery: l.delivery, ...(l.note ? { note: l.note } : {}), ...(l.private ? { private: true } : {}),
 });
 
 function withRevision<T extends { revision: string }>(body: Omit<T, 'revision'>): T {
@@ -129,14 +143,17 @@ function withRevision<T extends { revision: string }>(body: Omit<T, 'revision'>)
   return { ...body, revision } as T;
 }
 
-export function build(shared: SharedSource, cases: CaseSource[], genderReview: GenderReview[]): BuildResult {
+export function build(shared: SharedSource, cases: CaseSource[], genderReview: GenderReview[], opts: BuildOptions = {}): BuildResult {
+  const tierOf = opts.tier ?? (() => 'strict' as AssetTier);
+  const cozy = opts.cozy ?? null;
+  const ledger = new AssetLedger();
   const issues: Issue[] = [];
   const err = (code: string, where: string, message: string) => issues.push({ level: 'error', code, where, message });
   const warn = (code: string, where: string, message: string) => issues.push({ level: 'warning', code, where, message });
 
   // ---------------------------------------------------------------- line catalog
   const lineIndex = new Map<string, AuthoredLine>();
-  const allLines = [...shared.lines, ...cases.flatMap((c) => c.lines)];
+  const allLines = [...shared.lines, ...cases.flatMap((c) => c.lines), ...(cozy?.lines ?? [])];
   for (const l of allLines) {
     if (lineIndex.has(l.id)) err('ID-DUPLICATE', l.id, `line defined twice (${lineIndex.get(l.id)!.origin}, ${l.origin})`);
     else lineIndex.set(l.id, l);
@@ -163,6 +180,11 @@ export function build(shared: SharedSource, cases: CaseSource[], genderReview: G
     if (l.rev !== edits.length + 1) err('REVISION', l.id, `rev ${l.rev} but ${edits.length} recorded edits`);
     for (const c of l.changes) if (!c.reason || !c.ref) err('CHANGELOG', l.id, 'change without reason or reference');
   }
+
+  // Every PM line of an included case must exist in content (removals are expressed per variant).
+  const included = new Set(cases.map((c) => c.id));
+  const fileCase = (file: string) => (file.startsWith('SCRIPT_PROLOGUE_CASE01') || file.startsWith('SCRIPT_CASE01') ? ['prologue', 'case01'] : [`case${file.slice(11, 13)}`]);
+  for (const [id, occ] of pm) if (fileCase(occ[0]!.file).some((c) => included.has(c)) && !lineIndex.has(id)) err('PM-MISSING', id, `PM line «${occ[0]!.text}» is missing from content`);
 
   // Text rules
   const reviewed = new Map([...genderReview, ...cases.flatMap((c) => c.genderReview ?? [])].map((g) => [`${g.id}@${g.rev}`, g]));
@@ -201,19 +223,20 @@ export function build(shared: SharedSource, cases: CaseSource[], genderReview: G
   packs.push(withRevision<ContentPack>({
     format: PACK_FORMAT, schema: PACK_SCHEMA, id: 'shared', kind: 'shared', title: null, case: null, requires: [], start: null,
     lines: shared.lines.map(toLine), speakers: shared.speakers, skills: shared.skills, scenes: [], logic: null, deduction: null,
-    notebookHelp: null, hints: null, minigames: [], facts: [], glossary: [], rewards: shared.rewards, collections: [], activities: [], comfort: [], cutscenes: [], reserved: [],
+    notebookHelp: null, hints: null, minigames: [], facts: [], glossary: [], rewards: shared.rewards, collections: [], activities: [], comfort: [], cutscenes: [], plannedCutscenes: [], notebookPages: [], cozy: null, reserved: [],
   }));
   sharedRefs.forEach((id) => usedIds.add(id));
   for (const s of shared.skills) if (!lineIndex.has(s.title)) err('REF-LINE', `shared: skill ${s.id}`, `missing title ${s.title}`);
   for (const r of shared.rewards) if (!lineIndex.has(r.label)) err('REF-LINE', `shared: reward ${r.id}`, `missing label ${r.label}`);
 
   for (const c of cases) {
-    for (const k of c.skills ?? []) if (!lineIndex.has(k.title)) err('REF-LINE', `: skill ${k.id}`, `missing title ${k.title}`);
-    for (const rw of c.rewards ?? []) if (!lineIndex.has(rw.label)) err('REF-LINE', `: reward ${rw.id}`, `missing label ${rw.label}`);
+    for (const k of c.skills ?? []) if (!lineIndex.has(k.title)) err('REF-LINE', `${c.id}: skill ${k.id}`, `missing title ${k.title}`);
+    for (const rw of c.rewards ?? []) if (!lineIndex.has(rw.label)) err('REF-LINE', `${c.id}: reward ${rw.id}`, `missing label ${rw.label}`);
     const caseNewTerms = new Set<string>();
     for (const v of c.variants) {
       const where = v.pack;
-      const refs = variantRefs(v, rewardLabel);
+      const refs = variantRefs(v, rewardLabel, (id) => allSkills.find((k) => k.id === id)?.title);
+      const usedSkills = new Set([...v.minigames.map((m) => m.skill), ...JSON.stringify(v.scenes).matchAll(/"t":"skill","skill":"([^"]+)"/g)].map((x) => (typeof x === 'string' ? x : x[1]!)));
       for (const id of refs) {
         usedIds.add(id);
         if (!lineIndex.has(id)) err('REF-LINE', where, `missing line ${id}`);
@@ -249,8 +272,24 @@ export function build(shared: SharedSource, cases: CaseSource[], genderReview: G
         walk(s.steps);
       }
       restartSafety(v, issues);
-      checkCutscenes(v, lineIndex, new Set(refs), issues);
+      const tier = tierOf(v.pack);
+      for (const m of v.minigames) if (m.config.kind === 'staged' && tier !== 'skip') err('STAGED', `${where}: ${m.id}`, 'production packs need a dedicated minigame kind, not the generic placeholder (U12)');
+      checkCutscenes(v, lineIndex, new Set(refs), issues, tier, ledger);
       checkBackgrounds(v, issues);
+      checkStageActions(v, tier, ledger, issues);
+      checkHotspots(v, locationBackground, tier, ledger, issues);
+      for (const m of v.minigames) {
+        for (const id of kindSamples(m.config)) if (!soundClueIds().has(id)) missing(tier, ledger, issues, { pack: v.pack, kind: 'audio', id, where: m.id }, 'SOUND-CLUE', `unknown sound clue ${id} (assets/sound-clues/index.json)`);
+        for (const id of kindAssets(m.config)) checkAssetId(id, 'image', v.pack, m.id, tier, ledger, issues);
+      }
+      for (const p of v.notebookPages ?? []) {
+        if (!v.rewards.includes(p.unlock)) err('NOTEBOOK-PAGE', `${where}: ${p.id}`, `unlock reward ${p.unlock} is not granted in this pack`);
+        if (p.kind === 'cipher-poster' && !v.minigames.some((m) => m.id === p.cipher && m.config.kind === 'cipher')) err('NOTEBOOK-PAGE', `${where}: ${p.id}`, `cipher-poster needs a cipher minigame (${p.cipher})`);
+        if (p.kind !== 'cipher-poster' && p.cipher) err('NOTEBOOK-PAGE', `${where}: ${p.id}`, 'only a cipher-poster names a cipher');
+      }
+      for (const m of v.minigames) if (m.config.kind === 'dream-keeper') for (const r of m.config.rounds) for (const card of r.cards) {
+        if (!lineIndex.get(card.label)?.private) err('PRIVATE', `${where}: ${m.id}`, `dream card line ${card.label} must be private (T31)`);
+      }
 
       // minigame choice limits
       for (const m of v.minigames) {
@@ -275,6 +314,24 @@ export function build(shared: SharedSource, cases: CaseSource[], genderReview: G
         if (cfg.kind === 'baker') for (const st of cfg.steps) {
           const ideal = cfg.measures.filter((x) => st.ideal.includes(x.id));
           if (!ideal.some((x) => st.target % x.units === 0)) err('MINIGAME', `${where}: ${m.id}`, `step ${st.id}: target ${st.target} not reachable with ideal measures`);
+        }
+        lists.push(...kindChoiceLists(cfg));
+        checkKind(
+          cfg,
+          (id) => lineIndex.get(id)?.text,
+          (axis) => v.logic.axes.find((a) => a.id === axis)?.values.map((x) => ({ id: x.id, label: lineIndex.get(x.label)?.text ?? '' })),
+          (message) => err('MINIGAME', `${where}: ${m.id}`, message),
+        );
+        if (cfg.kind === 'postman' && !v.minigames.some((x) => x.id === cfg.cipher && x.config.kind === 'cipher')) err('MINIGAME', `${where}: ${m.id}`, `unknown cipher ${cfg.cipher}`);
+        if (cfg.kind === 'postman') {
+          const cipher = v.minigames.find((x) => x.id === cfg.cipher)?.config;
+          if (cipher?.kind === 'cipher') for (const x of cfg.letters) {
+            const holes = x.buttons.map((b) => cipher.table.find((g) => g.id === b));
+            if (holes.some((g) => !g)) { err('MINIGAME', `${where}: ${m.id}`, `letter ${x.id}: unknown button`); continue; }
+            const sum = holes.reduce((n, g) => n + g!.holes, 0);
+            if (sum !== x.house) err('MINIGAME', `${where}: ${m.id}`, `letter ${x.id}: holes sum to ${sum}, house is ${x.house}`);
+            if (cfg.streetByShape && x.street && holes.some((g) => cfg.streetByShape![g!.shape] !== x.street)) err('MINIGAME', `${where}: ${m.id}`, `letter ${x.id}: button shapes do not lead to street ${x.street}`);
+          }
         }
         for (const l of lists) if (l.page > 3 || (l.n > 3 && l.page >= l.n)) err('CHOICES-MAX', `${where}: ${m.id}/${l.id}`, `${l.n} options shown at once (pageSize ${l.page}); Q11 allows 3`);
         if (!v.scenes.some((s) => JSON.stringify(s.steps).includes(`"minigame":"${m.id}"`))) warn('UNUSED', where, `minigame ${m.id} never started`);
@@ -350,10 +407,13 @@ export function build(shared: SharedSource, cases: CaseSource[], genderReview: G
 
       packs.push(withRevision<ContentPack>({
         format: PACK_FORMAT, schema: PACK_SCHEMA, id: v.pack, kind: v.kind, title: v.title, case: v.case, requires: ['shared'], start: v.start,
-        lines: own.map((id) => toLine(lineIndex.get(id)!)), speakers: [], skills: c.skills ?? [], scenes: v.scenes, logic: v.logic, deduction,
+        lines: own.map((id) => toLine(lineIndex.get(id)!)), speakers: [], skills: allSkills.filter((k, i) => usedSkills.has(k.id) && !shared.skills.some((x) => x.id === k.id) && allSkills.findIndex((y) => y.id === k.id) === i), scenes: v.scenes, logic: v.logic, deduction,
         notebookHelp: v.notebookHelp, hints: v.hints, minigames: v.minigames, facts: v.facts, glossary: v.glossary,
         rewards: allRewards.filter((r) => v.rewards.includes(r.id)),
         collections: v.collections, activities: v.activities, comfort: v.comfort, cutscenes: v.cutscenes,
+        plannedCutscenes: v.plannedCutscenes ?? [],
+        notebookPages: v.notebookPages ?? [],
+        cozy: null,
         reserved: v.reserved ?? [],
       }));
       const sentenceCounts = own.flatMap((id) => sentences(lineIndex.get(id)!.text).map((s) => tokenize(s).length));
@@ -370,6 +430,18 @@ export function build(shared: SharedSource, cases: CaseSource[], genderReview: G
       });
     }
     if (caseNewTerms.size > MAX_NEW_TERMS) err('GLOSSARY-MAX', c.id, `${caseNewTerms.size} new terms in the case`);
+  }
+  if (cozy) {
+    const refs = cozyRefs(cozy.cozy, allRewards);
+    for (const id of refs) { usedIds.add(id); if (!lineIndex.has(id)) err('REF-LINE', 'cozy', `missing line ${id}`); }
+    checkCozy(cozy.cozy, { speakers: shared.speakers.map((s) => s.id), rewards: allRewards, lineText: (id) => lineIndex.get(id)?.text, tier: tierOf('cozy'), ledger, issues });
+    for (const rw of cozy.rewards) if (!lineIndex.has(rw.label)) err('REF-LINE', `cozy: reward ${rw.id}`, `missing label ${rw.label}`);
+    packs.push(withRevision<ContentPack>({
+      format: PACK_FORMAT, schema: PACK_SCHEMA, id: 'cozy', kind: 'cozy', title: null, case: null, requires: ['shared'], start: null,
+      lines: [...new Set(refs)].filter((id) => !sharedIds.has(id) && lineIndex.has(id)).map((id) => toLine(lineIndex.get(id)!)),
+      speakers: [], skills: [], scenes: [], logic: null, deduction: null, notebookHelp: null, hints: null, minigames: [], facts: [], glossary: [],
+      rewards: cozy.rewards, collections: [], activities: [], comfort: [], cutscenes: [], plannedCutscenes: [], notebookPages: [], cozy: cozy.cozy, reserved: [],
+    }));
   }
   for (const l of allLines) if (!usedIds.has(l.id)) warn('UNUSED', l.id, 'line is not referenced by any pack');
   // Cutscene IDs are unique across all packs (E's bundle validator, AEG-ANIM-0006).
@@ -407,5 +479,5 @@ export function build(shared: SharedSource, cases: CaseSource[], genderReview: G
     lexicon: shared.lexicon, speakers: shared.speakers, entries,
   };
 
-  return { packs, manifest, issues, flows, stats, lineIndex, sources: { shared, cases } };
+  return { packs, manifest, issues, flows, stats, lineIndex, sources: { shared, cases, cozy }, assetRequests: ledger.requests };
 }

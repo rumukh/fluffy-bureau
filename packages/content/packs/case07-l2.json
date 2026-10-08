@@ -1,0 +1,4384 @@
+{
+ "format": "fluffy-content-pack",
+ "schema": 1,
+ "id": "case07-l2",
+ "kind": "case",
+ "title": "C7-TITLE",
+ "case": {
+  "number": 7,
+  "level": 2
+ },
+ "requires": [
+  "shared"
+ ],
+ "start": "C7-L2-1",
+ "lines": [
+  {
+   "id": "C7-TITLE",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Пруд идёт в гости",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-0-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Беда! Площадь залило водой!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C7-0-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "До юбилея три дня! А там утки плавают!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C7-0-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Утки — это хорошо. А вода — загадка.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-0-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Сапоги на лапы, {имя}! Идём на площадь.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-1-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Это фонтан переполнился! Или нет…",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-1-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Или Картофан опять поливал огород!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C7-1-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "А может, трубу прорвало. Я в трубах не разбираюсь.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-1-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Или Тёпа! У него на берегу бочки с водой.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-1-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Сначала узнаем, откуда пришла вода.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-1-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Причина — то, из-за чего всё случилось.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-1-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Следствие — то, что получилось потом.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-1-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Лужа на площади — следствие. Ищем причину!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C7-1-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Кто? Откуда вода? Что случилось?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-1-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Осмотреть воду",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-1-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Навестить Картофана",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-1-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Спросить мэра про фонтан",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-1-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Пойти к пруду",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-4-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Разобраться со шлюзом",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-2-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Возьми лупу. Найди четыре странные мелочи.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-2-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Ряска! Она растёт в пруду, а не в фонтане.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-2-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Лист кувшинки. Тоже из пруда.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-2-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Головастики! Их надо вернуть домой, в пруд.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-2-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Кран фонтана закрыт. И вода в нём чистая.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-2-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Значит, причина — в пруду. Вода пришла оттуда.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-2-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Значит, не из бочек Тёпы.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-2-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Новая улика! Записала… сухим пером.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-3-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "text": "Все говорят, это моя поливалка.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-3-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "text": "А у меня морковка плавает…",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C7-3-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Картофан расстроен. Подбери добрые слова.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-3-12",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "text": "Поливалка сломана уже неделю. Вот, смотри.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-3-13",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "text": "А вода пришла оттуда. Со стороны пруда.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-3-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "text": "Вода пришла с севера! Ой… Нет.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-3-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "text": "Пруд же на востоке. Я стороны путаю.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-3-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Спасибо, что поправил себя. Компас бы помог!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C7-3-14",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "text": "По канавке у шлюза. Я сам видел утром.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-3-15",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Поливалка сломана. И огород тоже залило.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-3-16",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Значит, огород — не причина. Тоже следствие.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-3-17",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Ещё одна улика! Записала. И морковку спасли.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-4-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Тут строят шлюз. Смотри, брёвна сложены аккуратно.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-4-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "И подпёрты колышками. Чтобы вода не унесла!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C7-4-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Кто-то помогал ночью. И никому не сказал.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-4-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Ракушка-записушка. Послушаем, что было ночью?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-4-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Тихое „ух“. Запиши в Тайные заметки.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-4-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Ух… Может, кто-то устал таскать брёвна?",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C7-4-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Теперь заметок три. Ромашка, пёрышко и „ух“.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-4-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Скоро мы их сложим. Обещаю.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-4-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Ещё две карточки! С серой печатью.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-4-10",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Шесть карточек! Это уже что-то большое.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-4-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Дождемер с часами! Сложим записи по порядку.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-4-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Тёпа закрыл бочки до дождя. Они не опрокидывались.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-4-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Ещё одна улика! Записала по часам.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-cause-chain",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Цепочка причин",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-6-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Сложим цепочку. Что было сначала, что потом?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-6-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Каждая причина ведёт к следствию. Как домино.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-5-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Одна карточка тут лишняя. Найди её.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-5-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Мыло тут ни при чём. Это не причина.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-6-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Первая причина — снятая створка. Без неё вода ушла.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-6-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Тут чертёж. „Водяной салют. Успеть к юбилею!“",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-6-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "И инструменты бобра. Чей это шлюз, ясно.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-6-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "А труб у пруда нет. Прорваться нечему.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-6-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Есть улика! Записала цепочкой.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-7-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Улики собраны. Какая у тебя версия?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-7-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Выбери: кто, откуда вода и что случилось.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-8-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Дамка, выходи. Мы не сердимся.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-8-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Это я. Я сняла старую створку.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-8-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Строила новый шлюз. С водяным салютом к юбилею!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C7-8-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Думала, успею до дождя. Не успела.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-8-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Хотела сюрприз — получился потоп. Простите!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C7-8-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Дамка, салют к юбилею? Какая ты молодец!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C7-8-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Только в следующий раз предупреждай. Вместе успеем.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-8-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Предупрежу. И сейчас всё починю. Поможете?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-8-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Разберём наши ложные следы.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-8-10",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Фонтан был закрыт. А ряска пришла из пруда.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-8-11",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Поливалка Картофана сломана. Его огород — тоже следствие.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-8-12",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "А труб у пруда нет. Прорваться было нечему.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-7-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Бочки Тёпы стояли закрытыми. Пены в воде нет.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-7-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "text": "Мои бочки для мыла. Не для потопа!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C7-8-13",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Найдена причина, а не только следствие. Молодец, {имя}!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C7-8-14",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Твоя версия подтвердилась! Элементарно, пушинка!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C7-8-15",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "А брёвна кто-то сложил ночью. Я думала, это вы!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C7-8-16",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Не мы. Это та же загадка, что и с веслом.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-dam-repair",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Почини плотину",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-9-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Чиним вместе! Сначала думаем: что из-за чего?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-9-11",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Шлюз готов! А теперь — водяной салют!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C7-9-12",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Вот это сюрприз! Лучше любого фонтана!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C7-9-13",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Спасибо, {имя}! Без тебя бы не успела.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-10-01",
+   "rev": 1,
+   "kind": "fact",
+   "speaker": "narrator",
+   "text": "Бобры строят плотины. Из-за них появляются целые пруды.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C7-10-02",
+   "rev": 1,
+   "kind": "fact",
+   "speaker": "narrator",
+   "text": "Зубы бобра растут всю жизнь. Поэтому бобр всё время грызёт.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C7-10-03",
+   "rev": 1,
+   "kind": "fact",
+   "speaker": "narrator",
+   "text": "Вход в хатку бобра — под водой. Так безопаснее.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C7-10-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Записала в Энциклопедию. Почерк чуть-чуть мокрый.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-11-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Седьмое дело раскрыто, {имя}!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C7-11-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Держи значок-лапку „Водяной салют“.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-11-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Шесть карточек. Три заметки. Что-то будет!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C7-11-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "До юбилея три дня. Готовься, {имя}.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-11-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Скоро самое главное дело. Элементарно… почти.",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C7-5-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Я сам закрываю фонтан на ночь. Каждый вечер!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C7-5-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Вчера тоже закрыл. Наверное. Точно закрыл!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C7-5-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Проверим кран. Записала.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-AX-who",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Кто?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-AX-damka",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Бобёрша Дамка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-AX-pudding",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Мэр Пудинг",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-AX-kartofan",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Крот Картофан",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-AX-tyopa",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Енот Тёпа",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-AX-where",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Откуда вода?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-AX-pond",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Из пруда через шлюз",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-AX-fountain",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Из фонтана",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-AX-garden",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Из канавок огорода",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-AX-barrels",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Из бочек Тёпы",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-AX-what",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Что случилось?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-AX-unfinished",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Не успели достроить шлюз",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-AX-tap",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Забыли закрыть кран",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-AX-pipe",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Прорвало трубу",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-AX-barrels-what",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Опрокинули бочки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-CL-water",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Прудовые находки в луже",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-CL-garden",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Огород тоже залило",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-CL-timeline",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Дождемер с часами",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-CL-chain",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Цепочка у шлюза",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-CL-fountain",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Фонтан закрыт на ночь",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-7-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Версия не подтвердилась! Зато вспомним кое-что.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-7-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Кран фонтана закрыт. А в луже — ряска из пруда.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-7-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Поливалка сломана неделю. Его огород тоже залило.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-6-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Тёпа закрыл бочки до дождя. И пены в воде нет.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-7-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Картофан видел: вода шла со стороны пруда.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-7-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "У пруда нет труб. А створки шлюза нет.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-7-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Отличная попытка! Запишем и подумаем.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-NB-01",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Ряска, кувшинка и головастики пришли из пруда.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C7-NB-02",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Чертёж Дамки показывает новый шлюз к юбилею.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C7-NB-03",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Старую створку сняли, а новая не готова.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C7-L2-H-01",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Осмотри воду. Есть ли в ней пена?",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C7-L2-H-02",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Картофан что-то видел. Утешь его.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C7-L2-H-03",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "У шлюза дождемер с часами. Сложи записи.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C7-L2-H-04",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "В цепочке одна карточка лишняя.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C7-L2-H-05",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Перечитай Блокнот. Где ещё стоит вопрос?",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C7-L2-R-01",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "watsony",
+   "text": "Мыло пенится. Я точно знаю, я мою лапки.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C7-L2-R-02",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "watsony",
+   "text": "Дождь, бочки, часы… Что раньше?",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C7-L2-R-03",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "watsony",
+   "text": "Лишняя карточка — как лишняя ложка в чае.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C7-2-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Ряска",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-2-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Лист кувшинки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-2-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Головастики",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-2-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Чистая вода без пены",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-2-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Пены нет. Мыльная вода пенилась бы.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-3-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Мы пришли помочь, а не ругать.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-3-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "text": "Правда? Спасибо.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-3-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Жалко морковку. Спасём её?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-3-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "text": "Спасём! Ты добрая душа.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-3-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Признайся, это поливалка?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-3-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "text": "И ты туда же…",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C7-3-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Сначала поддержим друга. Попробуем мягче?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-3-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Покажешь водную дорожку?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-3-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "text": "Покажу! Пойдём.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-3-B05",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Можно посмотреть твою поливалку?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-3-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "text": "Конечно. Только она не работает.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-3-B06",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Зачем ты всё время поливаешь?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-3-10",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "text": "Я сейчас совсем не поливаю…",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C7-3-11",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Спросим по-другому? Без упрёка.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-3-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Спасибо, что не сердишься на мэра.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-3-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "text": "Мэр хороший. Просто испугался за площадь.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-3-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Покажешь, где была вода?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-3-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "text": "Покажу! Вон оттуда.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-3-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Может, поливалка осталась включённой?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-3-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "text": "Она же сломана…",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C7-L2-3-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Картофан уже сказал. Спросим иначе?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-4-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "22:00. Тёпа закрывает бочки.",
+   "tts": "Двадцать два часа. Тёпа закрывает бочки.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-4-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "23:00. Начинается дождь.",
+   "tts": "Двадцать три часа. Начинается дождь.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-4-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "2:00. Пруд поднялся до края.",
+   "tts": "Два часа. Пруд поднялся до края.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-4-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "5:00. Площадь в воде.",
+   "tts": "Пять часов. Площадь в воде.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-6-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Может ли это случиться раньше? Подумай, что из-за чего.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-5-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Тёпа варил мыло",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-6-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Старую створку сняли",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-6-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Ночью прошёл дождь",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-6-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Пруд поднялся",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-6-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Вода побежала по канавке",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-6-B05",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Площадь и огород залило",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-9-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Закрыть щель в шлюзе",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-9-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Да! Закроем причину — вода перестанет бежать.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-9-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Вычерпать воду с площади",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-9-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Вода всё бежит и бежит. Причина не закрыта!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C7-9-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Поставить забор вокруг площади",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-9-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Вода обойдёт забор. Надо закрыть шлюз.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-9-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Бревно в 2 деления",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-9-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Короткое! Вода пролезет сбоку.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-9-B05",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Бревно в 3 деления",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-9-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "В самый раз! Как по чертежу.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-9-B06",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Бревно в 5 делений",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-9-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Длинное! Не влезет в щель.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-8-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Подпереть колышками",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-8-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Колышки держат крепко. Вода не сдвинет!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C7-L2-8-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Просто положить",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-8-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Течение сдвинет бревно. Нужна опора.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-8-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Привязать ленточкой",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L2-8-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Красиво! Но ленточка воду не удержит.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-9-B07",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Открыть канавку обратно в пруд",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-9-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Вода вернётся домой. И головастики тоже!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C7-9-B08",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Оставить как есть",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-9-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Тогда лужа простоит до юбилея.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-9-B09",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Вылить в огород Картофана",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-9-10",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "text": "Ой, нет! Морковка и так плавала!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "GL-cause-DEF",
+   "rev": 1,
+   "kind": "glossary",
+   "speaker": "narrator",
+   "text": "Причина — то, из-за чего всё случилось.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "GL-cause",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Причина",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "GL-effect-DEF",
+   "rev": 1,
+   "kind": "glossary",
+   "speaker": "narrator",
+   "text": "Следствие — то, что получилось потом.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "GL-effect",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Следствие",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c7-badge",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Значок-лапка «Водяной салют»",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c7-sticker-2",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Стикер «Водяной салют», две звёздочки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c7-decor-lock",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Модель шлюза для Конторы",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c7-activity",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Карточка «Плотина в тазике»",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-COL-secret-uh",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Тайная заметка: тихое «ух»",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-COL-bell",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Карточка-символ: колокольчик",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-COL-heart",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Карточка-символ: сердечко",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C7-TITLE",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Плотина в тазике",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C7-01",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Попроси взрослого помочь с опытом.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C7-02",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Поставьте тазик в ванну или на улицу.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C7-03",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Налейте немного воды.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C7-04",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Сложи запруду из камешков и палочек.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C7-05",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Посмотри, куда потечёт вода.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C7-06",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Убери плотину и сравни поток.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C7-S01",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Не проводи опыт рядом с розетками.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C7-S02",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Воду наливает и выливает взрослый.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C7-S03",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "После опыта вытри пол насухо.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C7-L-01",
+   "rev": 1,
+   "kind": "comfort",
+   "speaker": "watsony",
+   "text": "Это просто лужа. Большая, но весёлая!",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C7-L-02",
+   "rev": 1,
+   "kind": "comfort",
+   "speaker": "watsony",
+   "text": "Это просто ночные звуки пруда. Лягушки поют.",
+   "voiced": true,
+   "delivery": "warm"
+  }
+ ],
+ "speakers": [],
+ "skills": [
+  {
+   "id": "cause-chain",
+   "title": "SK-cause-chain"
+  },
+  {
+   "id": "dam-repair",
+   "title": "SK-dam-repair"
+  }
+ ],
+ "scenes": [
+  {
+   "id": "C7-L2-1",
+   "title": "Мокрое утро",
+   "location": "office",
+   "cast": [
+    "pudding",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "dir",
+     "id": "C7-0-D01",
+     "text": "Контора утром. За окном мокрая площадь Пушистино."
+    },
+    {
+     "t": "line",
+     "line": "C7-0-01"
+    },
+    {
+     "t": "line",
+     "line": "C7-0-02"
+    },
+    {
+     "t": "line",
+     "line": "C7-0-03"
+    },
+    {
+     "t": "line",
+     "line": "C7-0-04"
+    },
+    {
+     "t": "skill",
+     "skill": "map",
+     "first": [
+      {
+       "t": "dir",
+       "id": "C7-0-D02",
+       "text": "На карте открывается точка «Площадь»."
+      }
+     ],
+     "known": [
+      {
+       "t": "dir",
+       "id": "C7-0-D02",
+       "text": "На карте открывается точка «Площадь»."
+      }
+     ]
+    },
+    {
+     "t": "dir",
+     "id": "C7-1-D01",
+     "text": "Площадь в воде по щиколотку. У фонтана плавают утки, жители в сапожках."
+    },
+    {
+     "t": "line",
+     "line": "C7-1-01"
+    },
+    {
+     "t": "line",
+     "line": "C7-1-02"
+    },
+    {
+     "t": "line",
+     "line": "C7-1-03"
+    },
+    {
+     "t": "line",
+     "line": "C7-L2-1-01"
+    },
+    {
+     "t": "line",
+     "line": "C7-1-04"
+    },
+    {
+     "t": "line",
+     "line": "C7-1-05"
+    },
+    {
+     "t": "line",
+     "line": "C7-1-06"
+    },
+    {
+     "t": "line",
+     "line": "C7-1-07"
+    },
+    {
+     "t": "skill",
+     "skill": "notebook",
+     "first": [
+      {
+       "t": "dir",
+       "id": "C7-1-D02",
+       "text": "Блокнот раскрывается: Кто? Откуда вода? Что случилось?"
+      },
+      {
+       "t": "line",
+       "line": "C7-1-08"
+      }
+     ],
+     "known": [
+      {
+       "t": "dir",
+       "id": "C7-1-D02",
+       "text": "Блокнот раскрывается: Кто? Откуда вода? Что случилось?"
+      },
+      {
+       "t": "line",
+       "line": "C7-1-08"
+      }
+     ]
+    },
+    {
+     "t": "skill",
+     "skill": "klubki",
+     "first": [
+      {
+       "t": "dir",
+       "id": "C7-1-D03",
+       "text": "Хвостс даёт три волшебных клубка для подсказок."
+      }
+     ],
+     "known": [
+      {
+       "t": "dir",
+       "id": "C7-1-D03",
+       "text": "Хвостс даёт три волшебных клубка для подсказок."
+      }
+     ]
+    },
+    {
+     "t": "goto",
+     "scene": "C7-L2-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C7-L2-HUB",
+   "title": "Площадь: выбор",
+   "location": "square-flood",
+   "cast": [
+    "pudding",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "hub",
+   "steps": [
+    {
+     "t": "if",
+     "when": {
+      "all": [
+       {
+        "all": [
+         {
+          "clue": "c7-water"
+         },
+         {
+          "clue": "c7-garden"
+         },
+         {
+          "clue": "c7-timeline"
+         },
+         {
+          "clue": "c7-chain"
+         }
+        ]
+       },
+       {
+        "not": {
+         "visited": "C7-L2-6"
+        }
+       }
+      ]
+     },
+     "then": [
+      {
+       "t": "goto",
+       "scene": "C7-L2-6"
+      }
+     ],
+     "else": []
+    },
+    {
+     "t": "menu",
+     "id": "C7-L2-M",
+     "prompt": null,
+     "pageSize": 3,
+     "options": [
+      {
+       "id": "water",
+       "label": "C7-1-B01",
+       "to": "C7-L2-2",
+       "when": null,
+       "hideWhen": {
+        "visited": "C7-L2-2"
+       },
+       "optional": false
+      },
+      {
+       "id": "kartofan",
+       "label": "C7-1-B02",
+       "to": "C7-L2-3",
+       "when": null,
+       "hideWhen": {
+        "visited": "C7-L2-3"
+       },
+       "optional": false
+      },
+      {
+       "id": "more",
+       "label": "UI-hud.map",
+       "to": "C7-L2-MORE",
+       "when": null,
+       "hideWhen": {
+        "all": [
+         {
+          "visited": "C7-5-C7-L2-HUB"
+         },
+         {
+          "visited": "C7-4"
+         },
+         {
+          "visited": "C7-L2-5"
+         }
+        ]
+       },
+       "optional": false
+      }
+     ],
+     "back": null
+    }
+   ]
+  },
+  {
+   "id": "C7-L2-MORE",
+   "title": "Площадь: ещё места",
+   "location": "square-flood",
+   "cast": [
+    "pudding",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "hub",
+   "steps": [
+    {
+     "t": "menu",
+     "id": "C7-L2-MORE-M",
+     "prompt": null,
+     "pageSize": 3,
+     "options": [
+      {
+       "id": "mayor",
+       "label": "C7-1-B03",
+       "to": "C7-5-C7-L2-HUB",
+       "when": null,
+       "hideWhen": {
+        "visited": "C7-5-C7-L2-HUB"
+       },
+       "optional": true
+      },
+      {
+       "id": "pond",
+       "label": "C7-1-B04",
+       "to": "C7-4",
+       "when": {
+        "any": [
+         {
+          "clue": "c7-water"
+         },
+         {
+          "clue": "c7-garden"
+         }
+        ]
+       },
+       "hideWhen": {
+        "visited": "C7-4"
+       },
+       "optional": false
+      },
+      {
+       "id": "chain",
+       "label": "C7-4-B01",
+       "to": "C7-L2-5",
+       "when": {
+        "clue": "c7-timeline"
+       },
+       "hideWhen": {
+        "visited": "C7-L2-5"
+       },
+       "optional": false
+      }
+     ],
+     "back": "C7-L2-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C7-L2-2",
+   "title": "Площадь: «Лупа»",
+   "location": "square-flood",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "magnifier",
+     "first": [
+      {
+       "t": "line",
+       "line": "C7-L2-2-01"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C7-L2-2-01"
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c7l2-water"
+    },
+    {
+     "t": "line",
+     "line": "C7-2-02"
+    },
+    {
+     "t": "line",
+     "line": "C7-2-03"
+    },
+    {
+     "t": "line",
+     "line": "C7-2-04"
+    },
+    {
+     "t": "line",
+     "line": "C7-2-05"
+    },
+    {
+     "t": "line",
+     "line": "C7-2-06"
+    },
+    {
+     "t": "line",
+     "line": "C7-L2-2-03"
+    },
+    {
+     "t": "line",
+     "line": "C7-2-07"
+    },
+    {
+     "t": "clue",
+     "clue": "c7-water"
+    },
+    {
+     "t": "goto",
+     "scene": "C7-L2-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C7-L2-3",
+   "title": "Огород: «Чашка какао»",
+   "location": "kartofan-garden-flood",
+   "cast": [
+    "kartofan",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "dir",
+     "id": "C7-L2-3-D01",
+     "text": "Огород Картофана тоже в воде. Картофан сидит на перевёрнутом ведре."
+    },
+    {
+     "t": "line",
+     "line": "C7-3-01"
+    },
+    {
+     "t": "line",
+     "line": "C7-3-02"
+    },
+    {
+     "t": "line",
+     "line": "C7-3-03"
+    },
+    {
+     "t": "skill",
+     "skill": "cocoa",
+     "first": [],
+     "known": []
+    },
+    {
+     "t": "minigame",
+     "minigame": "c7l2-cocoa"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c7-heart-kartofan"
+    },
+    {
+     "t": "line",
+     "line": "C7-3-12"
+    },
+    {
+     "t": "line",
+     "line": "C7-3-13"
+    },
+    {
+     "t": "line",
+     "line": "C7-L2-3-05"
+    },
+    {
+     "t": "line",
+     "line": "C7-L2-3-06"
+    },
+    {
+     "t": "line",
+     "line": "C7-L2-3-07"
+    },
+    {
+     "t": "line",
+     "line": "C7-3-14"
+    },
+    {
+     "t": "line",
+     "line": "C7-3-15"
+    },
+    {
+     "t": "line",
+     "line": "C7-3-16"
+    },
+    {
+     "t": "line",
+     "line": "C7-3-17"
+    },
+    {
+     "t": "clue",
+     "clue": "c7-garden"
+    },
+    {
+     "t": "goto",
+     "scene": "C7-L2-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C7-4",
+   "title": "Шлюз: тайная заметка",
+   "location": "honey-pond-lock",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "cutscene",
+   "steps": [
+    {
+     "t": "dir",
+     "id": "C7-4-D01",
+     "text": "Берег пруда: новый шлюз, брёвна, инструменты Дамки, чертёж под камнем."
+    },
+    {
+     "t": "line",
+     "line": "C7-4-01"
+    },
+    {
+     "t": "line",
+     "line": "C7-4-02"
+    },
+    {
+     "t": "line",
+     "line": "C7-4-03"
+    },
+    {
+     "t": "line",
+     "line": "C7-4-04"
+    },
+    {
+     "t": "dir",
+     "id": "C7-4-D02",
+     "text": "Запись показана волной: «плеск», «ква», «тук», тихое низкое «ух»."
+    },
+    {
+     "t": "line",
+     "line": "C7-4-05"
+    },
+    {
+     "t": "line",
+     "line": "C7-4-06"
+    },
+    {
+     "t": "line",
+     "line": "C7-4-07"
+    },
+    {
+     "t": "line",
+     "line": "C7-4-08"
+    },
+    {
+     "t": "line",
+     "line": "C7-4-09"
+    },
+    {
+     "t": "line",
+     "line": "C7-4-10"
+    },
+    {
+     "t": "goto",
+     "scene": "C7-L2-4"
+    }
+   ]
+  },
+  {
+   "id": "C7-L2-4",
+   "title": "«Лента времени»: дождемер",
+   "location": "honey-pond-lock",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "timeline",
+     "first": [
+      {
+       "t": "line",
+       "line": "C7-L2-4-01"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C7-L2-4-01"
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c7l2-timeline"
+    },
+    {
+     "t": "line",
+     "line": "C7-L2-4-02"
+    },
+    {
+     "t": "line",
+     "line": "C7-L2-4-03"
+    },
+    {
+     "t": "clue",
+     "clue": "c7-timeline"
+    },
+    {
+     "t": "goto",
+     "scene": "C7-L2-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C7-L2-5",
+   "title": "«Цепочка причин»",
+   "location": "honey-pond-lock",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "cause-chain",
+     "first": [
+      {
+       "t": "line",
+       "line": "C7-6-01"
+      },
+      {
+       "t": "line",
+       "line": "C7-6-02"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C7-6-01"
+      },
+      {
+       "t": "line",
+       "line": "C7-6-02"
+      }
+     ]
+    },
+    {
+     "t": "line",
+     "line": "C7-L2-5-01"
+    },
+    {
+     "t": "minigame",
+     "minigame": "c7l2-chain"
+    },
+    {
+     "t": "line",
+     "line": "C7-L2-5-02"
+    },
+    {
+     "t": "line",
+     "line": "C7-6-04"
+    },
+    {
+     "t": "line",
+     "line": "C7-6-05"
+    },
+    {
+     "t": "line",
+     "line": "C7-6-06"
+    },
+    {
+     "t": "line",
+     "line": "C7-6-07"
+    },
+    {
+     "t": "line",
+     "line": "C7-6-08"
+    },
+    {
+     "t": "clue",
+     "clue": "c7-chain"
+    },
+    {
+     "t": "goto",
+     "scene": "C7-L2-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C7-L2-6",
+   "title": "Версия",
+   "location": "honey-pond-lock",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "version",
+     "first": [
+      {
+       "t": "line",
+       "line": "C7-7-01"
+      },
+      {
+       "t": "line",
+       "line": "C7-7-02"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C7-7-01"
+      },
+      {
+       "t": "line",
+       "line": "C7-7-02"
+      }
+     ]
+    },
+    {
+     "t": "goto",
+     "scene": "C7-L2-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C7-L2-7",
+   "title": "Доброе разрешение",
+   "location": "honey-pond-lock",
+   "cast": [
+    "damka",
+    "pudding",
+    "kartofan",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "cutscene",
+   "steps": [
+    {
+     "t": "line",
+     "line": "C7-8-01"
+    },
+    {
+     "t": "line",
+     "line": "C7-8-02"
+    },
+    {
+     "t": "line",
+     "line": "C7-8-03"
+    },
+    {
+     "t": "line",
+     "line": "C7-8-04"
+    },
+    {
+     "t": "line",
+     "line": "C7-8-05"
+    },
+    {
+     "t": "line",
+     "line": "C7-8-06"
+    },
+    {
+     "t": "line",
+     "line": "C7-8-07"
+    },
+    {
+     "t": "line",
+     "line": "C7-8-08"
+    },
+    {
+     "t": "line",
+     "line": "C7-8-09"
+    },
+    {
+     "t": "line",
+     "line": "C7-8-10"
+    },
+    {
+     "t": "line",
+     "line": "C7-8-11"
+    },
+    {
+     "t": "line",
+     "line": "C7-8-12"
+    },
+    {
+     "t": "line",
+     "line": "C7-L2-7-01"
+    },
+    {
+     "t": "line",
+     "line": "C7-L2-7-02"
+    },
+    {
+     "t": "line",
+     "line": "C7-8-13"
+    },
+    {
+     "t": "line",
+     "line": "C7-8-14"
+    },
+    {
+     "t": "line",
+     "line": "C7-8-15"
+    },
+    {
+     "t": "line",
+     "line": "C7-8-16"
+    },
+    {
+     "t": "goto",
+     "scene": "C7-L2-8"
+    }
+   ]
+  },
+  {
+   "id": "C7-L2-8",
+   "title": "Финал: «Почини плотину»",
+   "location": "honey-pond-lock",
+   "cast": [
+    "damka",
+    "pudding",
+    "kartofan"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "dam-repair",
+     "first": [
+      {
+       "t": "line",
+       "line": "C7-9-01"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C7-9-01"
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c7l2-repair"
+    },
+    {
+     "t": "line",
+     "line": "C7-9-11"
+    },
+    {
+     "t": "line",
+     "line": "C7-9-12"
+    },
+    {
+     "t": "line",
+     "line": "C7-9-13"
+    },
+    {
+     "t": "goto",
+     "scene": "C7-10"
+    }
+   ]
+  },
+  {
+   "id": "C7-10",
+   "title": "«А ты знал?»",
+   "location": "honey-pond",
+   "cast": [
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "encyclopedia",
+     "first": [
+      {
+       "t": "dir",
+       "id": "C7-10-D01",
+       "text": "Три карточки о бобрах складываются в Энциклопедию."
+      }
+     ],
+     "known": [
+      {
+       "t": "dir",
+       "id": "C7-10-D01",
+       "text": "Три карточки о бобрах складываются в Энциклопедию."
+      }
+     ]
+    },
+    {
+     "t": "line",
+     "line": "C7-10-01"
+    },
+    {
+     "t": "line",
+     "line": "C7-10-02"
+    },
+    {
+     "t": "line",
+     "line": "C7-10-03"
+    },
+    {
+     "t": "line",
+     "line": "C7-10-04"
+    },
+    {
+     "t": "goto",
+     "scene": "C7-11"
+    }
+   ]
+  },
+  {
+   "id": "C7-11",
+   "title": "Награда",
+   "location": "office",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "cutscene",
+   "steps": [
+    {
+     "t": "line",
+     "line": "C7-11-01"
+    },
+    {
+     "t": "line",
+     "line": "C7-11-02"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c7-badge"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c7-buttons-l2"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c7-sticker-l2"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c7-decor-lock"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c7-activity"
+    },
+    {
+     "t": "dir",
+     "id": "C7-11-D01",
+     "text": "Новые слова в «Словарике сыщика»: причина, следствие."
+    },
+    {
+     "t": "skill",
+     "skill": "cozy-day",
+     "first": [
+      {
+       "t": "dir",
+       "id": "C7-11-D02",
+       "text": "Игрок ставит модель шлюза в Конторе."
+      },
+      {
+       "t": "await",
+       "action": "office.place"
+      }
+     ],
+     "known": [
+      {
+       "t": "dir",
+       "id": "C7-11-D02",
+       "text": "Игрок ставит модель шлюза в Конторе."
+      },
+      {
+       "t": "await",
+       "action": "office.place"
+      }
+     ]
+    },
+    {
+     "t": "line",
+     "line": "C7-11-03"
+    },
+    {
+     "t": "line",
+     "line": "C7-11-04"
+    },
+    {
+     "t": "line",
+     "line": "C7-11-05"
+    },
+    {
+     "t": "end"
+    }
+   ]
+  },
+  {
+   "id": "C7-5-C7-L2-HUB",
+   "title": "Мэр и фонтан",
+   "location": "square-fountain",
+   "cast": [
+    "pudding",
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "line",
+     "line": "C7-5-01"
+    },
+    {
+     "t": "line",
+     "line": "C7-5-02"
+    },
+    {
+     "t": "line",
+     "line": "C7-5-03"
+    },
+    {
+     "t": "clue",
+     "clue": "c7-fountain"
+    },
+    {
+     "t": "goto",
+     "scene": "C7-L2-HUB"
+    }
+   ]
+  }
+ ],
+ "logic": {
+  "axes": [
+   {
+    "id": "who",
+    "title": "C7-AX-who",
+    "values": [
+     {
+      "id": "damka",
+      "label": "C7-AX-damka"
+     },
+     {
+      "id": "pudding",
+      "label": "C7-AX-pudding"
+     },
+     {
+      "id": "kartofan",
+      "label": "C7-AX-kartofan"
+     },
+     {
+      "id": "tyopa",
+      "label": "C7-AX-tyopa"
+     }
+    ]
+   },
+   {
+    "id": "where",
+    "title": "C7-AX-where",
+    "values": [
+     {
+      "id": "pond",
+      "label": "C7-AX-pond"
+     },
+     {
+      "id": "fountain",
+      "label": "C7-AX-fountain"
+     },
+     {
+      "id": "garden",
+      "label": "C7-AX-garden"
+     },
+     {
+      "id": "barrels",
+      "label": "C7-AX-barrels"
+     }
+    ]
+   },
+   {
+    "id": "what",
+    "title": "C7-AX-what",
+    "values": [
+     {
+      "id": "unfinished",
+      "label": "C7-AX-unfinished"
+     },
+     {
+      "id": "tap",
+      "label": "C7-AX-tap"
+     },
+     {
+      "id": "pipe",
+      "label": "C7-AX-pipe"
+     },
+     {
+      "id": "barrels",
+      "label": "C7-AX-barrels-what"
+     }
+    ]
+   }
+  ],
+  "intended": {
+   "who": "damka",
+   "where": "pond",
+   "what": "unfinished"
+  },
+  "clues": [
+   {
+    "id": "c7-water",
+    "title": "C7-CL-water",
+    "required": true,
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "eq",
+       "axis": "where",
+       "value": "pond"
+      },
+      {
+       "op": "ne",
+       "axis": "where",
+       "value": "barrels"
+      },
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "pudding"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "tap"
+      }
+     ]
+    },
+    "requires": [],
+    "source": "C7-L2-2",
+    "summary": "Прудовые находки, закрытый кран и отсутствие мыльной пены."
+   },
+   {
+    "id": "c7-garden",
+    "title": "C7-CL-garden",
+    "required": true,
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "kartofan"
+      },
+      {
+       "op": "ne",
+       "axis": "where",
+       "value": "garden"
+      }
+     ]
+    },
+    "requires": [],
+    "source": "C7-L2-3",
+    "summary": "Поливалка сломана; вода шла со стороны пруда."
+   },
+   {
+    "id": "c7-timeline",
+    "title": "C7-CL-timeline",
+    "required": true,
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "tyopa"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "barrels"
+      }
+     ]
+    },
+    "requires": [],
+    "source": "C7-L2-4",
+    "summary": "Тёпа закрыл бочки до дождя; дождь поднял пруд позже."
+   },
+   {
+    "id": "c7-chain",
+    "title": "C7-CL-chain",
+    "required": true,
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "eq",
+       "axis": "who",
+       "value": "damka"
+      },
+      {
+       "op": "eq",
+       "axis": "what",
+       "value": "unfinished"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "pipe"
+      }
+     ]
+    },
+    "requires": [],
+    "source": "C7-L2-5",
+    "summary": "Снятая створка начинает цепочку; «Тёпа варил мыло» лишнее."
+   },
+   {
+    "id": "c7-fountain",
+    "title": "C7-CL-fountain",
+    "required": false,
+    "predicate": {
+     "op": "ne",
+     "axis": "what",
+     "value": "tap"
+    },
+    "requires": [],
+    "source": "C7-5-C7-L2-HUB",
+    "summary": "Мэр закрывал фонтан на ночь."
+   }
+  ],
+  "version": {
+   "button": "UI-hud.version",
+   "available": {
+    "visited": "C7-L2-6"
+   },
+   "onSolved": "C7-L2-7"
+  },
+  "wrongVersion": {
+   "intro": [
+    {
+     "line": "C7-7-03",
+     "when": null
+    }
+   ],
+   "byValue": [
+    {
+     "axis": "who",
+     "value": "pudding",
+     "clues": [
+      "c7-water"
+     ],
+     "lines": [
+      {
+       "line": "C7-7-04",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "who",
+     "value": "kartofan",
+     "clues": [
+      "c7-garden"
+     ],
+     "lines": [
+      {
+       "line": "C7-7-05",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "who",
+     "value": "tyopa",
+     "clues": [
+      "c7-water",
+      "c7-timeline"
+     ],
+     "lines": [
+      {
+       "line": "C7-L2-6-01",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "where",
+     "value": "fountain",
+     "clues": [
+      "c7-water"
+     ],
+     "lines": [
+      {
+       "line": "C7-7-04",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "where",
+     "value": "garden",
+     "clues": [
+      "c7-garden"
+     ],
+     "lines": [
+      {
+       "line": "C7-7-06",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "where",
+     "value": "barrels",
+     "clues": [
+      "c7-water",
+      "c7-timeline"
+     ],
+     "lines": [
+      {
+       "line": "C7-L2-6-01",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "what",
+     "value": "tap",
+     "clues": [
+      "c7-water"
+     ],
+     "lines": [
+      {
+       "line": "C7-7-04",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "what",
+     "value": "pipe",
+     "clues": [
+      "c7-chain"
+     ],
+     "lines": [
+      {
+       "line": "C7-7-07",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "what",
+     "value": "barrels",
+     "clues": [
+      "c7-timeline"
+     ],
+     "lines": [
+      {
+       "line": "C7-L2-6-01",
+       "when": null
+      }
+     ]
+    }
+   ],
+   "outro": [
+    {
+     "line": "C7-7-08",
+     "when": null
+    }
+   ]
+  },
+  "redHerrings": [
+   {
+    "id": "rh-c7-fountain",
+    "summary": "Фонтан кажется источником воды.",
+    "presentedBy": [
+     "C7-1-01"
+    ],
+    "explainedBy": [
+     "C7-8-10"
+    ]
+   },
+   {
+    "id": "rh-c7-sprinkler",
+    "summary": "Поливалка Картофана могла залить площадь.",
+    "presentedBy": [
+     "C7-1-02",
+     "C7-3-01"
+    ],
+    "explainedBy": [
+     "C7-8-11"
+    ]
+   },
+   {
+    "id": "rh-c7-pipe",
+    "summary": "Пудинг предполагает прорыв трубы.",
+    "presentedBy": [
+     "C7-1-03"
+    ],
+    "explainedBy": [
+     "C7-8-12"
+    ]
+   },
+   {
+    "id": "rh-c7-barrels",
+    "summary": "Бочки Тёпы могли опрокинуться.",
+    "presentedBy": [
+     "C7-L2-1-01"
+    ],
+    "explainedBy": [
+     "C7-L2-7-01",
+     "C7-L2-7-02"
+    ]
+   }
+  ]
+ },
+ "deduction": {
+  "schema": 1,
+  "id": "case07-l2",
+  "axes": [
+   {
+    "id": "who",
+    "values": [
+     "damka",
+     "pudding",
+     "kartofan",
+     "tyopa"
+    ]
+   },
+   {
+    "id": "where",
+    "values": [
+     "pond",
+     "fountain",
+     "garden",
+     "barrels"
+    ]
+   },
+   {
+    "id": "what",
+    "values": [
+     "unfinished",
+     "tap",
+     "pipe",
+     "barrels"
+    ]
+   }
+  ],
+  "compatibility": null,
+  "intended": {
+   "who": "damka",
+   "where": "pond",
+   "what": "unfinished"
+  },
+  "clues": [
+   {
+    "id": "c7-water",
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "eq",
+       "axis": "where",
+       "value": "pond"
+      },
+      {
+       "op": "ne",
+       "axis": "where",
+       "value": "barrels"
+      },
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "pudding"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "tap"
+      }
+     ]
+    },
+    "requires": [],
+    "requiresAnswer": false,
+    "explanationKey": "C7-CL-water"
+   },
+   {
+    "id": "c7-garden",
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "kartofan"
+      },
+      {
+       "op": "ne",
+       "axis": "where",
+       "value": "garden"
+      }
+     ]
+    },
+    "requires": [],
+    "requiresAnswer": false,
+    "explanationKey": "C7-CL-garden"
+   },
+   {
+    "id": "c7-timeline",
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "tyopa"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "barrels"
+      }
+     ]
+    },
+    "requires": [],
+    "requiresAnswer": false,
+    "explanationKey": "C7-CL-timeline"
+   },
+   {
+    "id": "c7-chain",
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "eq",
+       "axis": "who",
+       "value": "damka"
+      },
+      {
+       "op": "eq",
+       "axis": "what",
+       "value": "unfinished"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "pipe"
+      }
+     ]
+    },
+    "requires": [],
+    "requiresAnswer": false,
+    "explanationKey": "C7-CL-chain"
+   }
+  ],
+  "redHerrings": [
+   {
+    "id": "rh-c7-fountain",
+    "explanationKey": "C7-8-10"
+   },
+   {
+    "id": "rh-c7-sprinkler",
+    "explanationKey": "C7-8-11"
+   },
+   {
+    "id": "rh-c7-pipe",
+    "explanationKey": "C7-8-12"
+   },
+   {
+    "id": "rh-c7-barrels",
+    "explanationKey": "C7-L2-7-01"
+   }
+  ],
+  "maxCandidates": 64
+ },
+ "notebookHelp": {
+  "mode": "suggest",
+  "marks": [
+   {
+    "axis": "where",
+    "value": "pond",
+    "mark": "confirmed",
+    "clues": [
+     "c7-water"
+    ],
+    "line": "C7-NB-01"
+   },
+   {
+    "axis": "where",
+    "value": "fountain",
+    "mark": "excluded",
+    "clues": [
+     "c7-water"
+    ],
+    "line": "C7-7-04"
+   },
+   {
+    "axis": "where",
+    "value": "barrels",
+    "mark": "excluded",
+    "clues": [
+     "c7-water"
+    ],
+    "line": "C7-L2-2-03"
+   },
+   {
+    "axis": "who",
+    "value": "pudding",
+    "mark": "excluded",
+    "clues": [
+     "c7-water"
+    ],
+    "line": "C7-7-04"
+   },
+   {
+    "axis": "what",
+    "value": "tap",
+    "mark": "excluded",
+    "clues": [
+     "c7-water"
+    ],
+    "line": "C7-7-04"
+   },
+   {
+    "axis": "who",
+    "value": "kartofan",
+    "mark": "excluded",
+    "clues": [
+     "c7-garden"
+    ],
+    "line": "C7-7-05"
+   },
+   {
+    "axis": "where",
+    "value": "garden",
+    "mark": "excluded",
+    "clues": [
+     "c7-garden"
+    ],
+    "line": "C7-7-06"
+   },
+   {
+    "axis": "who",
+    "value": "tyopa",
+    "mark": "excluded",
+    "clues": [
+     "c7-timeline"
+    ],
+    "line": "C7-L2-6-01"
+   },
+   {
+    "axis": "what",
+    "value": "barrels",
+    "mark": "excluded",
+    "clues": [
+     "c7-timeline"
+    ],
+    "line": "C7-L2-6-01"
+   },
+   {
+    "axis": "who",
+    "value": "damka",
+    "mark": "confirmed",
+    "clues": [
+     "c7-chain"
+    ],
+    "line": "C7-NB-02"
+   },
+   {
+    "axis": "what",
+    "value": "unfinished",
+    "mark": "confirmed",
+    "clues": [
+     "c7-chain"
+    ],
+    "line": "C7-NB-03"
+   },
+   {
+    "axis": "what",
+    "value": "pipe",
+    "mark": "excluded",
+    "clues": [
+     "c7-chain"
+    ],
+    "line": "C7-7-07"
+   }
+  ],
+  "pointers": [],
+  "nothing": "UI-notebook.nothing"
+ },
+ "hints": {
+  "klubok": {
+   "speaker": "khvosts",
+   "precision": "exact",
+   "allowance": 3,
+   "rules": [
+    {
+     "id": "C7-L2-H-01",
+     "when": {
+      "not": {
+       "clue": "c7-water"
+      }
+     },
+     "cites": []
+    },
+    {
+     "id": "C7-L2-H-02",
+     "when": {
+      "not": {
+       "clue": "c7-garden"
+      }
+     },
+     "cites": []
+    },
+    {
+     "id": "C7-L2-H-03",
+     "when": {
+      "not": {
+       "clue": "c7-timeline"
+      }
+     },
+     "cites": []
+    },
+    {
+     "id": "C7-L2-H-04",
+     "when": {
+      "not": {
+       "clue": "c7-chain"
+      }
+     },
+     "cites": []
+    },
+    {
+     "id": "C7-L2-H-05",
+     "when": {
+      "visited": "C7-L2-6"
+     },
+     "cites": [
+      "c7-water",
+      "c7-garden",
+      "c7-timeline",
+      "c7-chain"
+     ]
+    }
+   ],
+   "review": "C7-L2-H-05",
+   "exhausted": "UI-hint.klubokEmptyShell"
+  },
+  "shell": {
+   "speaker": "watsony",
+   "precision": "vague",
+   "allowance": null,
+   "rules": [
+    {
+     "id": "C7-L2-R-01",
+     "when": {
+      "not": {
+       "clue": "c7-water"
+      }
+     },
+     "cites": []
+    },
+    {
+     "id": "C7-L2-R-02",
+     "when": {
+      "not": {
+       "clue": "c7-timeline"
+      }
+     },
+     "cites": []
+    },
+    {
+     "id": "C7-L2-R-03",
+     "when": {
+      "not": {
+       "clue": "c7-chain"
+      }
+     },
+     "cites": []
+    }
+   ],
+   "review": "C7-L2-R-03",
+   "exhausted": null
+  }
+ },
+ "minigames": [
+  {
+   "id": "c7l2-water",
+   "skill": "magnifier",
+   "config": {
+    "kind": "magnifier",
+    "targets": [
+     {
+      "id": "duckweed",
+      "label": "C7-2-B01",
+      "required": true,
+      "reply": [
+       "C7-2-02"
+      ]
+     },
+     {
+      "id": "lily",
+      "label": "C7-2-B02",
+      "required": true,
+      "reply": [
+       "C7-2-03"
+      ]
+     },
+     {
+      "id": "tadpoles",
+      "label": "C7-2-B03",
+      "required": true,
+      "reply": [
+       "C7-2-04"
+      ]
+     },
+     {
+      "id": "foam",
+      "label": "C7-L2-2-B01",
+      "required": true,
+      "reply": [
+       "C7-L2-2-02"
+      ]
+     }
+    ],
+    "afterFirst": [],
+    "afterFirstSkill": null,
+    "assistAfterMisses": 3
+   }
+  },
+  {
+   "id": "c7l2-cocoa",
+   "skill": "cocoa",
+   "config": {
+    "kind": "cocoa",
+    "rounds": [
+     {
+      "id": "r1",
+      "options": [
+       {
+        "id": "help",
+        "label": "C7-3-B01",
+        "correct": true,
+        "reply": [
+         "C7-3-04"
+        ]
+       },
+       {
+        "id": "carrot",
+        "label": "C7-3-B02",
+        "correct": true,
+        "reply": [
+         "C7-3-05"
+        ]
+       },
+       {
+        "id": "confess",
+        "label": "C7-3-B03",
+        "correct": false,
+        "reply": [
+         "C7-3-06"
+        ]
+       }
+      ],
+      "retry": [
+       "C7-3-07"
+      ]
+     },
+     {
+      "id": "r2",
+      "options": [
+       {
+        "id": "show-water",
+        "label": "C7-3-B04",
+        "correct": true,
+        "reply": [
+         "C7-3-08"
+        ]
+       },
+       {
+        "id": "sprinkler",
+        "label": "C7-3-B05",
+        "correct": true,
+        "reply": [
+         "C7-3-09"
+        ]
+       },
+       {
+        "id": "blame",
+        "label": "C7-3-B06",
+        "correct": false,
+        "reply": [
+         "C7-3-10"
+        ]
+       }
+      ],
+      "retry": [
+       "C7-3-11"
+      ]
+     },
+     {
+      "id": "r3",
+      "options": [
+       {
+        "id": "mayor",
+        "label": "C7-L2-3-B01",
+        "correct": true,
+        "reply": [
+         "C7-L2-3-01"
+        ]
+       },
+       {
+        "id": "where",
+        "label": "C7-L2-3-B02",
+        "correct": true,
+        "reply": [
+         "C7-L2-3-02"
+        ]
+       },
+       {
+        "id": "forgot",
+        "label": "C7-L2-3-B03",
+        "correct": false,
+        "reply": [
+         "C7-L2-3-03"
+        ]
+       }
+      ],
+      "retry": [
+       "C7-L2-3-04"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "c7l2-timeline",
+   "skill": "timeline",
+   "config": {
+    "kind": "timeline",
+    "items": [
+     {
+      "id": "t2200",
+      "time": "22:00",
+      "label": "C7-L2-4-B01"
+     },
+     {
+      "id": "t2300",
+      "time": "23:00",
+      "label": "C7-L2-4-B02"
+     },
+     {
+      "id": "t0200",
+      "time": "2:00",
+      "label": "C7-L2-4-B03"
+     },
+     {
+      "id": "t0500",
+      "time": "5:00",
+      "label": "C7-L2-4-B04"
+     }
+    ],
+    "solution": [
+     "t2200",
+     "t2300",
+     "t0200",
+     "t0500"
+    ],
+    "wrong": [
+     "C7-6-03"
+    ]
+   }
+  },
+  {
+   "id": "c7l2-chain",
+   "skill": "cause-chain",
+   "config": {
+    "kind": "staged",
+    "mechanic": "Цепочка причин",
+    "description": "Найти лишнюю карточку и выстроить порядок.",
+    "steps": [
+     {
+      "id": "extra",
+      "prompt": "C7-L2-5-01",
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "soap",
+        "label": "C7-L2-5-B01",
+        "correct": true,
+        "reply": [
+         "C7-L2-5-02"
+        ]
+       },
+       {
+        "id": "gate",
+        "label": "C7-6-B01",
+        "correct": false,
+        "reply": [
+         "C7-6-03"
+        ]
+       },
+       {
+        "id": "rain",
+        "label": "C7-6-B02",
+        "correct": false,
+        "reply": [
+         "C7-6-03"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "order",
+      "prompt": "C7-6-01",
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "gate",
+        "label": "C7-6-B01",
+        "correct": true,
+        "reply": []
+       },
+       {
+        "id": "rain",
+        "label": "C7-6-B02",
+        "correct": true,
+        "reply": []
+       },
+       {
+        "id": "pond",
+        "label": "C7-6-B03",
+        "correct": true,
+        "reply": []
+       },
+       {
+        "id": "ditch",
+        "label": "C7-6-B04",
+        "correct": true,
+        "reply": []
+       },
+       {
+        "id": "square",
+        "label": "C7-6-B05",
+        "correct": true,
+        "reply": []
+       }
+      ]
+     }
+    ],
+    "lines": [
+     "C7-6-01",
+     "C7-6-02",
+     "C7-6-03",
+     "C7-L2-5-01",
+     "C7-L2-5-02"
+    ]
+   }
+  },
+  {
+   "id": "c7l2-repair",
+   "skill": "dam-repair",
+   "config": {
+    "kind": "staged",
+    "mechanic": "Почини плотину",
+    "description": "Четыре шага ремонта.",
+    "steps": [
+     {
+      "id": "start",
+      "prompt": "C7-9-01",
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "close",
+        "label": "C7-9-B01",
+        "correct": true,
+        "reply": [
+         "C7-9-02"
+        ]
+       },
+       {
+        "id": "scoop",
+        "label": "C7-9-B02",
+        "correct": false,
+        "reply": [
+         "C7-9-03"
+        ]
+       },
+       {
+        "id": "fence",
+        "label": "C7-9-B03",
+        "correct": false,
+        "reply": [
+         "C7-9-04"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "log",
+      "prompt": null,
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "short",
+        "label": "C7-9-B04",
+        "correct": false,
+        "reply": [
+         "C7-9-05"
+        ]
+       },
+       {
+        "id": "right",
+        "label": "C7-9-B05",
+        "correct": true,
+        "reply": [
+         "C7-9-06"
+        ]
+       },
+       {
+        "id": "long",
+        "label": "C7-9-B06",
+        "correct": false,
+        "reply": [
+         "C7-9-07"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "support",
+      "prompt": null,
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "stakes",
+        "label": "C7-L2-8-B01",
+        "correct": true,
+        "reply": [
+         "C7-L2-8-01"
+        ]
+       },
+       {
+        "id": "lay",
+        "label": "C7-L2-8-B02",
+        "correct": false,
+        "reply": [
+         "C7-L2-8-02"
+        ]
+       },
+       {
+        "id": "ribbon",
+        "label": "C7-L2-8-B03",
+        "correct": false,
+        "reply": [
+         "C7-L2-8-03"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "water",
+      "prompt": null,
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "pond",
+        "label": "C7-9-B07",
+        "correct": true,
+        "reply": [
+         "C7-9-08"
+        ]
+       },
+       {
+        "id": "leave",
+        "label": "C7-9-B08",
+        "correct": false,
+        "reply": [
+         "C7-9-09"
+        ]
+       },
+       {
+        "id": "garden",
+        "label": "C7-9-B09",
+        "correct": false,
+        "reply": [
+         "C7-9-10"
+        ]
+       }
+      ]
+     }
+    ],
+    "lines": [
+     "C7-9-02",
+     "C7-9-03",
+     "C7-9-04",
+     "C7-9-05",
+     "C7-9-06",
+     "C7-9-07",
+     "C7-9-08",
+     "C7-9-09",
+     "C7-9-10",
+     "C7-L2-8-01",
+     "C7-L2-8-02",
+     "C7-L2-8-03"
+    ]
+   }
+  }
+ ],
+ "facts": [
+  {
+   "id": "fact-c7-dams",
+   "line": "C7-10-01"
+  },
+  {
+   "id": "fact-c7-teeth",
+   "line": "C7-10-02"
+  },
+  {
+   "id": "fact-c7-lodge",
+   "line": "C7-10-03"
+  }
+ ],
+ "glossary": [
+  {
+   "id": "cause",
+   "word": "причина",
+   "definition": "GL-cause-DEF",
+   "label": "GL-cause",
+   "forms": [
+    "причина",
+    "причины",
+    "причине",
+    "причину",
+    "причиной",
+    "причиною",
+    "причин",
+    "причинам",
+    "причинами",
+    "причинах"
+   ]
+  },
+  {
+   "id": "effect",
+   "word": "следствие",
+   "definition": "GL-effect-DEF",
+   "label": "GL-effect",
+   "forms": [
+    "следствие",
+    "следствия",
+    "следствию",
+    "следствием",
+    "следствии",
+    "следствий",
+    "следствиям",
+    "следствиями",
+    "следствиях"
+   ]
+  }
+ ],
+ "rewards": [
+  {
+   "id": "rw-c7-heart-kartofan",
+   "kind": "hearts",
+   "label": "RW-heart",
+   "amount": 1,
+   "claimKey": "case07:heart:kartofan"
+  },
+  {
+   "id": "rw-c7-badge",
+   "kind": "badge",
+   "label": "RW-c7-badge",
+   "amount": 1,
+   "claimKey": "case07:badge"
+  },
+  {
+   "id": "rw-c7-buttons-l2",
+   "kind": "buttons",
+   "label": "RW-buttons-15",
+   "amount": 15,
+   "claimKey": "case07:l2:buttons"
+  },
+  {
+   "id": "rw-c7-sticker-l2",
+   "kind": "sticker",
+   "label": "RW-c7-sticker-2",
+   "amount": 1,
+   "claimKey": "case07:l2:sticker"
+  },
+  {
+   "id": "rw-c7-decor-lock",
+   "kind": "decor",
+   "label": "RW-c7-decor-lock",
+   "amount": 1,
+   "claimKey": "case07:decor:lock"
+  },
+  {
+   "id": "rw-c7-activity",
+   "kind": "activity",
+   "label": "RW-c7-activity",
+   "amount": 1,
+   "claimKey": "case07:activity:dam"
+  }
+ ],
+ "collections": [
+  {
+   "id": "c7-secret-uh",
+   "collection": "secret-notes",
+   "label": "C7-COL-secret-uh",
+   "line": "C7-4-05"
+  },
+  {
+   "id": "c7-symbol-bell",
+   "collection": "symbol-cards",
+   "label": "C7-COL-bell",
+   "line": "C7-4-09"
+  },
+  {
+   "id": "c7-symbol-heart",
+   "collection": "symbol-cards",
+   "label": "C7-COL-heart",
+   "line": "C7-4-09"
+  }
+ ],
+ "activities": [
+  {
+   "id": "act-c7-dam",
+   "title": "ACT-C7-TITLE",
+   "steps": [
+    {
+     "line": "ACT-C7-01",
+     "adultOnly": false
+    },
+    {
+     "line": "ACT-C7-02",
+     "adultOnly": true
+    },
+    {
+     "line": "ACT-C7-03",
+     "adultOnly": true
+    },
+    {
+     "line": "ACT-C7-04",
+     "adultOnly": false
+    },
+    {
+     "line": "ACT-C7-05",
+     "adultOnly": false
+    },
+    {
+     "line": "ACT-C7-06",
+     "adultOnly": true
+    }
+   ],
+   "safety": [
+    "ACT-C7-S01",
+    "ACT-C7-S02",
+    "ACT-C7-S03"
+   ],
+   "allergens": []
+  }
+ ],
+ "comfort": [
+  {
+   "scene": "C7-1",
+   "line": "C7-L-01"
+  },
+  {
+   "scene": "C7-4",
+   "line": "C7-L-02"
+  }
+ ],
+ "cutscenes": [],
+ "plannedCutscenes": [
+  {
+   "id": "cs-c7-intro",
+   "scene": "C7-L2-1",
+   "summary": "Пудинг зовёт Бюро на залитую площадь; утки плавают у фонтана."
+  },
+  {
+   "id": "cs-c7-secret",
+   "scene": "C7-4",
+   "summary": "Ночная запись у шлюза показывает тихое «ух»; под брёвнами найдены колокольчик и сердечко."
+  },
+  {
+   "id": "cs-c7-resolution",
+   "scene": "C7-L2-7",
+   "summary": "Дамка признаётся: строила новый шлюз с водяным салютом и не успела до дождя."
+  },
+  {
+   "id": "cs-c7-salute",
+   "scene": "C7-L2-8",
+   "summary": "Игрок помогает закрыть шлюз; водяной салют переливается радугой."
+  },
+  {
+   "id": "cs-c7-reward",
+   "scene": "C7-11",
+   "summary": "Вручение значка «Водяной салют» и модели шлюза для Конторы."
+  }
+ ],
+ "notebookPages": [],
+ "cozy": null,
+ "reserved": [],
+ "revision": "584680a67d0c79bd2c9f46d8e16262c948776df358ee4bce3f0ce70dfd2bc918"
+}

@@ -1,5 +1,5 @@
 // Case 1, level 2 (4×4×4). SCRIPT_CASE01_LEVELS23_RU.md, L2-1…L2-9, expanded explicitly (R04).
-import { all, cl, cutscene, dir, end, goto, has, L, menu, minigame, not, opt as mopt, reveal, reward, seq, skill, when, type VariantSource } from '../../tools/content/dsl.ts';
+import { act, all, cl, cutscene, dir, end, goto, has, L, menu, minigame, not, opt as mopt, reveal, reward, seq, skill, tap, when, type VariantSource } from '../../tools/content/dsl.ts';
 import {
   activity, and, bakerMeasures, eq, facts, factsScene, glossary, intended, intro, klubkiTutorial, ne, noConstraint, opt,
   rewardScene, versionScene, what, where, who,
@@ -23,7 +23,7 @@ export const level2: VariantSource = {
         L('L2-1-01'),
         ...seq('C1-1-', 8, 12),
         L('L2-1-02'), L('L2-1-03'),
-        skill('notebook', [dir('L2-1-D01', 'Блокнот раскрывается: три колонки, по четыре строки.'), ...seq('C1-1-', 15, 16)]),
+        skill('notebook', [dir('L2-1-D01', 'Блокнот раскрывается: три колонки, по четыре строки.', null, [act.sfx('page-turn', 0.6)]), ...seq('C1-1-', 15, 16)]),
         L('L2-1-04'), L('L2-1-05'),
         klubkiTutorial(),
         goto(HUB),
@@ -43,16 +43,16 @@ export const level2: VariantSource = {
     },
     {
       id: 'L2-2', title: 'Скамейка: «Лупа»', location: 'bench', cast: ['khvosts', 'watsony'], presentation: 'minigame',
-      steps: [skill('magnifier', [L('L2-2-01')]), minigame('c1l2-lupa'), dir('C1-2-D01', 'Игрок открывает коробку.'), ...seq('C1-2-', 5, 7), reveal('c1-lupa'), goto(HUB)],
+      steps: [skill('magnifier', [L('L2-2-01')]), minigame('c1l2-lupa'), dir('C1-2-D01', 'Игрок открывает коробку.', null, [act.sfx('pick-up', 0.6)]), ...seq('C1-2-', 5, 7), reveal('c1-lupa'), goto(HUB)],
     },
     {
       id: 'L2-3', title: 'Мыловарня: «Чашка какао», три раунда', location: 'soap-workshop', cast: ['tyopa', 'fitilyok', 'khvosts', 'watsony'], presentation: 'minigame',
       steps: [
-        dir('C1-3-D01', 'Тёпа сидит у котла и прячет синие лапы за спину. Рядом светлячок Фитилёк.'),
+        dir('C1-3-D01', 'Тёпа сидит у котла и прячет синие лапы за спину. Рядом светлячок Фитилёк.', null, [act.pose('tyopa', { expression: 'worried', clip: 'shrug-shy' }), act.pose('fitilyok', { clip: 'hover' })]),
         L('C1-3-01'), L('C1-3-02'),
         skill('cocoa', [L('C1-3-03')]),
         minigame('c1l2-cocoa'),
-        reward('rw-c1-heart-tyopa'),
+        reward('rw-c1-heart-tyopa-l2'),
         ...seq('C1-3-', 12, 22),
         reveal('c1-cocoa'),
         goto(HUB),
@@ -71,13 +71,13 @@ export const level2: VariantSource = {
     },
     {
       id: 'L2-4S', title: 'Разговор со Стеллой', location: 'post-box', cast: ['stella', 'khvosts', 'watsony'], presentation: 'dialogue',
-      steps: [dir('L2-4-D01', 'Стелла сидит на почтовом ящике с большой сумкой.'), ...seq('L2-4-', 1, 8), goto('L2-4')],
+      steps: [dir('L2-4-D01', 'Стелла сидит на почтовом ящике с большой сумкой.', null, [act.pose('stella', { face: 'left', clip: 'nod' })]), ...seq('L2-4-', 1, 8), goto('L2-4')],
     },
     {
       id: 'C1-4', title: 'Разговор с мэром', location: 'pirogovaya-street', cast: ['pudding', 'khvosts', 'watsony'], presentation: 'dialogue',
       steps: [
         L('C1-4-01'), L('C1-4-02'),
-        dir('C1-4-D01', 'Пудинг высыпает семечки в ладошку и смущённо собирает обратно.'),
+        dir('C1-4-D01', 'Пудинг высыпает семечки в ладошку и смущённо собирает обратно.', null, [act.pose('pudding', { expression: 'surprised', clip: 'shrug-shy' }), act.sfx('pick-up', 0.5)]),
         L('C1-4-03'), L('C1-4-04'), reveal('c1-mayor'), goto('L2-4'),
       ],
     },
@@ -86,8 +86,9 @@ export const level2: VariantSource = {
       steps: [
         skill('tracks', [L('C1-5-01')]),
         minigame('c1l2-tracks'),
-        dir('C1-5-D01', 'Следы ведут к сараю Картофана.'),
-        dir('C1-5-D02', 'Игрок нажимает на окно. Окно сарая крупно: у коробки мэра в крышке окошко, в нём виден пирог.', 'bg.shed-window'),
+        dir('C1-5-D01', 'Следы ведут к сараю Картофана. Окно сарая мягко светится.', 'bg.shed-exterior', [act.sfx('footsteps', 0.5)]),
+        tap('window'),
+        dir('C1-5-D02', 'Окно сарая крупно: у коробки мэра в крышке окошко, в нём виден пирог.', 'bg.shed-window', [act.sfx('magnifier-find', 0.6)]),
         ...seq('C1-5-', 5, 7),
         reveal('c1-tracks'),
         goto(HUB),
@@ -96,7 +97,7 @@ export const level2: VariantSource = {
     {
       id: 'L2-6', title: '«Лента времени»: часы на пекарне', location: 'bakery-clock', cast: ['khvosts', 'watsony'], presentation: 'minigame',
       steps: [
-        dir('L2-6-D01', 'Часы на пекарне — заводные, с окошками. После каждого удара в окошке остаётся картинка.'),
+        dir('L2-6-D01', 'Часы на пекарне — заводные, с окошками. После каждого удара в окошке остаётся картинка.', null, [act.effect('sparkles', 760, 360, 1.5), act.sfx('sparkle', 0.4)]),
         skill('timeline', seq('L2-6-', 1, 3)),
         minigame('c1l2-timeline'),
         ...seq('L2-6-', 5, 7),
@@ -265,12 +266,13 @@ export const level2: VariantSource = {
   ],
   facts,
   glossary,
-  rewards: ['rw-c1-heart-tyopa', 'rw-c1-badge', 'rw-c1-buttons-l2', 'rw-c1-sticker-l2', 'rw-c1-decor-basket', 'rw-c1-activity'],
+  rewards: ['rw-c1-heart-tyopa-l2', 'rw-c1-badge', 'rw-c1-buttons-l2', 'rw-c1-sticker-l2', 'rw-c1-decor-basket', 'rw-c1-activity'],
   collections: [],
   activities: [activity],
   comfort: [],
   cutscenes: [shedL2, oven(2, 'L2-9'), rewardCutscene(2)],
   decisions: [
+    { id: 'C1L2-HEART', text: 'Сердечко доброты за утешение Тёпы выдаётся один раз на каждой сложности (как пуговки, Q38); на сложности 1 ключ прежний (case01:heart:tyopa), сохранения совместимы.', ref: 'T11, Q38' },
     { id: 'C1L2-T25', text: 'Ролики T25: разговор в сарае (L2-8, c1.shed.l2), пирог в печи (L2-9, c1.oven.l2) и награда (C1-10, c1.reward.l2). Реплики звучат в ролике в прежнем порядке; ремарки сцен заменены постановкой ролика; награды, «Уютный денёк» и переходы — шаги после ролика.', ref: 'T25' },
     { id: 'C1L2-D1', text: '«Часы на пекарне» открываются в меню «Расспросить жителей» (после разговора со Стеллой), а не на улице: иначе на экране было бы четыре варианта.', ref: 'Q11' },
     { id: 'C1L2-D2', text: 'В «Кто наследил?» четыре карточки; они показываются страницами по три.', ref: 'Q11' },

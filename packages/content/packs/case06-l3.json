@@ -1,0 +1,4553 @@
+{
+ "format": "fluffy-content-pack",
+ "schema": 1,
+ "id": "case06-l3",
+ "kind": "case",
+ "title": "C6-TITLE",
+ "case": {
+  "number": 6,
+  "level": 3
+ },
+ "requires": [
+  "shared"
+ ],
+ "start": "C6-L3-1",
+ "lines": [
+  {
+   "id": "C6-TITLE",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Загадка Золотого Жёлудя",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-0-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Беда! Пропал Золотой Жёлудь!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C6-0-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Символ нашего города! Из витрины мэрии!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C6-0-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "А ещё по городу какие-то карточки. Вот!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C6-0-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Хм. Интересно… Идём в мэрию, {имя}.",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C6-0-05",
+   "rev": 2,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Я с вами! И я ничего не… Ой, идём!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C6-1-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Вот витрина. Была жёлудь — стала пустота!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C6-1-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Это кража! Кто-то украл символ города!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C6-1-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Или я его потерял. Я всё теряю…",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C6-1-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Подождём с выводами. Сначала улики.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-1-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Кто подбросил карточки? Где жёлудь? Что случилось?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-1-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Карточки? Стелла вечно с бумажками летает!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C6-1-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Или мышата. Они теперь по ночам не спят!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C6-L2-1-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "А Фитилёк по ночам не спит! Может, он?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L2-1-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Или жёлудь отдали почистить. Я не помню…",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C6-L3-1-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "А Дамка вчера возилась у витрины! С инструментами!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C6-L3-1-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Пять подозреваемых. Проверим каждого.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-1-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Осмотреть витрину",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-1-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Узнать про карточки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-1-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Спросить про север",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-1-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "К Старому Дубу",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L3-2-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Возьми лупу. Найди пять странных мелочей.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-2-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Замок цел. Витрину аккуратно открыли и закрыли.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-2-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Записка! „Взят для игры. Верну к юбилею“.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-2-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Вместо подписи — серая печать. Силуэт.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-2-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Ещё карточка. Лапка, а на обороте — карта.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-2-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Серый силуэт… Это Серая Тень!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C6-2-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Жёлудь не украли и не потеряли. Его взяли для игры.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L2-2-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "На карточке ни пылинки пыльцы.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L3-2-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Древесная стружка. Кто-то чинил раму витрины.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L3-2-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Это Дамка вчера днём. Я сам её звал!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C6-L2-2-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Светлячок оставил бы пыльцу. Значит, не Фитилёк.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L2-2-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "И чистить жёлудь не отдавали. Так в записке.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-2-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Новая улика! Записала… и печать перерисовала.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-3-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Сложим, кто что видел. По часам, по порядку.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-3-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Смотри на стрелки на каждой картинке.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L3-3-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Я ушла к пруду в полночь.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L3-3-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "Ой, в одиннадцать. Фитилёк прав.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L3-3-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Спасибо, что поправила себя.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L3-3-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Дамка всю ночь была у пруда. Стройка шумная!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C6-3-04",
+   "rev": 2,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Карточки разложили после дождя. Под ними сухо.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-3-05",
+   "rev": 2,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Мышата с двух спали. Фитилёк светил до утра.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-3-06",
+   "rev": 2,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "А Стелла спала до шести. Карточку ей подбросили!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C6-3-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "text": "Вот она. Ключик, а на обороте — кусочек карты.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-3-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Ещё одна улика! Записала… по часам.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-4-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Я знаю, как найти север! По мху!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C6-4-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Мох растёт с северной стороны. Все так говорят.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-4-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Проверим у Старого Дуба. Мне кажется, тут ошибка.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-5-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Сложи кусочки карты с трёх карточек.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-5-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Тут нарисованы фонтан и дуб. Это ориентиры.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-5-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Ориентир — заметная вещь, по которой находят дорогу.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-5-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "На карте ещё стрелка. „С“ — это север.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-5-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Ищем мох! Где мох — там север!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C6-5-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Мох тут со всех сторон. Где же север?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-5-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Мох любит тень и сырость. Север он не показывает.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-5-N01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Теперь у нас есть ориентир и карта.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-compass",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Компас",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L3-4-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Тут подписан только север. Остальное — по кругу.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L3-4-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Встань лицом на север. Справа — восток.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-5-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Возьми мой компас. Стрелка всегда смотрит на север.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-5-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Поверни карту, чтобы её стрелка смотрела туда же.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-5-10",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Почти! Стрелки должны смотреть в одну сторону.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L2-4-N01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Совпало! Теперь крестик — у Старого Дуба.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L2-4-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Крестик у дуба. Но на дубе и корни, и дупло.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L2-4-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "На обороте карты что-то написано. Читаем!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C6-L2-4-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Карточки с номерами, карта, загадка… Это игра-квест!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "SK-compass-route",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Маршрут по компасу",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L2-5-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Встань у фонтана. Это наш ориентир.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L2-5-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Шагай по стрелкам компаса. Шаг за шагом.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L3-5-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Мы у дуба, скамейка у фонтана позади. Но жёлудя нет!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C6-L3-5-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "На карточке пуговицы. Это же почтовый шифр!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "SK-button-cipher",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Шифр на пуговицах",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L3-6-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Расшифруй слово. Таблица — на плакате в Конторе.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L3-6-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Корни! Не дупло, а корни.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-5-13",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Жёлудь! И записка: „Открой им то, что давно заперто“.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-5-15",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Есть улика! Записала… с северной стороны.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-6-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Улики собраны. Какая у тебя версия?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-6-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Кто подбросил карточки, где был жёлудь, что случилось?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-7-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Этот шкаф заперт много лет. Ключ давно потерялся.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-7-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Посмотри на замок. Форма тебе знакома?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-7-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Альбом первых сыщиков! Я его искал с детства.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-7-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "А в конверте… „Экзамен стажёра: шаг пройден“.",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C6-7-05",
+   "rev": 2,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Экзамен! Ой… Я ничего не скажу, я обещала.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-7-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "{имя}, я кое-что знаю. Но это сюрприз.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-7-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Обещаю: скоро всё узнаешь. Сыщик умеет ждать.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-7-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Разберём наши ложные следы.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-7-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Пустая витрина — не кража. Жёлудь взяли для игры.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-7-10",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Стелла бумажки не подбрасывала. Ей самой подбросили.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-7-11",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "А мох растёт везде, где сыро. Север — по компасу.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-7-12",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Твоя версия подтвердилась, {имя}! Элементарно, пушинка!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C6-7-13",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Жёлудь вернём в витрину! Мне обещали — к юбилею.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-7-N01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Серая печать — подпись тайного экзамена.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L2-7-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Фитилёк не спит ночью. Но пыльцы на карточках нет.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L2-7-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "А в дупле — орешки мэра. Помнишь?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L2-7-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Сорок три! Я их пересчитал.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L3-8-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Стружка у витрины — Дамка чинила раму днём.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L3-8-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "text": "А ночью — шлюз. Скоро покажу всем!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "SK-compass-directions",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Стороны света",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L3-9-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Два указания подряд. Не торопись!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C6-8-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Посадим дубки к юбилею! Вокруг фонтана.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-8-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Фонтан — наш ориентир. Компас подскажет стороны.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-8-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Сверься с компасом. Где эта сторона?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-8-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Отлично! Через много лет тут будет дубовая аллея.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-8-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "text": "А я буду прилетать на эти дубы!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C6-8-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "text": "Спасибо, {имя}! Город стал на три дубка богаче.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-9-01",
+   "rev": 1,
+   "kind": "fact",
+   "speaker": "narrator",
+   "text": "Белки прячут жёлуди и часть забывают. Из них вырастают дубы.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C6-9-02",
+   "rev": 1,
+   "kind": "fact",
+   "speaker": "narrator",
+   "text": "Стрелка компаса — магнитная. Она показывает на север.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C6-9-03",
+   "rev": 1,
+   "kind": "fact",
+   "speaker": "narrator",
+   "text": "Мох растёт там, где сыро. Север по нему не найти.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C6-9-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Записала в Энциклопедию. И компас перерисовала!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C6-10-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Шестое дело раскрыто, {имя}!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C6-10-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Держи значок-лапку „Золотой Жёлудь“.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-10-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "И новое звание — детектив!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C6-10-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Четыре карточки… Может, это кусочки чего-то большего?",
+   "voiced": true,
+   "delivery": "thinking"
+  },
+  {
+   "id": "C6-10-05",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Может быть. Сохрани их, {имя}.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-AX-who",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Кто?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-AX-shadow",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Серая Тень",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-AX-stella",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Сорока Стелла",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-AX-mice",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Мышата Шуршики",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-AX-fitilyok",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Светлячок Фитилёк",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-AX-damka",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Бобёрша Дамка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-AX-where",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Где жёлудь?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-AX-roots",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Под корнями Старого Дуба",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-AX-lighthouse",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "У Медового маяка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-AX-garden",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "В огороде Картофана",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-AX-hollow",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "В дупле Старого Дуба",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-AX-bench",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Под скамейкой у фонтана",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-AX-what",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Что случилось?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-AX-quest",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Игра-квест",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-AX-theft",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Кража",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-AX-lost",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Жёлудь потеряли",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-AX-cleaning",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Жёлудь отдали почистить",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-CL-display",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Записка с серой печатью",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-CL-time",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Сухие карточки после дождя",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-CL-compass",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Карта с ориентирами",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-CL-route",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Маршрут от фонтана",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-CL-cipher",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Шифр «КОРНИ»",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-B-version",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Проверить версию",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-6-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Версия не подтвердилась! Зато вспомним кое-что.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-6-04",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Стелла сама нашла карточку у себя в гнезде.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-6-05",
+   "rev": 2,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Мышата с двух спали. Фитилёк светил до утра.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L2-6-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "На карточках нет пыльцы. Светлячок бы её оставил.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L3-7-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Дамка всю ночь строила шлюз. Фитилёк видел огни.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-6-06",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "На карте ориентиры — фонтан и Старый Дуб.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L3-7-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Шифр на карточке — КОРНИ. Не дупло.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L3-7-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Маршрут увёл от фонтана к дубу.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-6-07",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "В записке сказано: „Верну к юбилею“. Это не кража.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-6-08",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "Витрину аккуратно закрыли. Жёлудь взяли нарочно.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L2-6-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "text": "В записке сказано: „Взят для игры“. Не для чистки.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-6-09",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Отличная попытка! Запишем и подумаем.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-NB-01",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Серая печать ведёт к Серой Тени.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C6-NB-02",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Сухие карточки появились, пока Стелла спала.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C6-NB-03",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Мышата спали после дождя. Фитилёк светил.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C6-NB-04",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Без пыльцы на карточках Фитилёк не подходит.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C6-NB-05",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Дамка строила шлюз. Огни видел Фитилёк.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C6-NB-06",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Карта и маршрут приводят под корни.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C6-NB-07",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "На карте нет маяка и огорода.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C6-NB-08",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Маршрут привёл вниз, а дупло высоко.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C6-NB-09",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Маршрут увёл от фонтана к дубу.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C6-NB-10",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Записка прямо говорит: это игра.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C6-NB-11",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Записка обещает вернуть жёлудь к юбилею.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C6-NB-12",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Витрину открыли аккуратно. Жёлудь не потеряли.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C6-NB-13",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "В записке нет просьбы чистить жёлудь.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C6-NB-P-display",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Вернись к улике «Записка с серой печатью».",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C6-NB-P-time",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Вернись к улике про время карточек.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C6-NB-P-compass",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Вернись к карте и ориентирам.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C6-NB-P-route",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Вернись к маршруту от фонтана.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C6-NB-P-cipher",
+   "rev": 1,
+   "kind": "notebook",
+   "speaker": "watsony",
+   "text": "Вернись к шифру на карточке.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C6-L3-H-01",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Осмотри витрину. Пять мелочей, одна на полу.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C6-L3-H-02",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Где была Дамка ночью? Сложи по часам.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C6-L3-H-03",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Подписан только север? Восток — справа от него.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C6-L3-H-04",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Иди по маршруту шаг за шагом от фонтана.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C6-L3-H-05",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Пуговицы на карточке — почтовый шифр.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C6-L3-H-06",
+   "rev": 1,
+   "kind": "hint",
+   "speaker": "khvosts",
+   "text": "Перечитай Блокнот. Где ещё стоит вопрос?",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "C6-2-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Целый замок",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-2-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Записка за витриной",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-2-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Карточка под ковриком",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-2-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Чистая карточка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-2-B05",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Древесная стружка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-3-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "23:00 — огни у пруда",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-3-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "2:30 — дождь кончился",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-3-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "3:00 — мышата спят",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-3-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "4:00 — Фитилёк светит",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-3-B05",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "5:00 — сухая карточка мэра",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-3-B06",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "6:00 — Стелла проснулась",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-3-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Посмотри на стрелки ещё раз.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-5-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Повернуть влево",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-5-B05",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Повернуть вправо",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-5-B06",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Крестик — у Старого Дуба",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L2-5-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Север",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L2-5-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Восток",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L2-5-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Сверься с компасом. Где север, где восток?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L2-5-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Юг",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L2-5-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Запад",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L3-6-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "К",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L3-6-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "О",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L3-6-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Р",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L3-6-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Н",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L3-6-B05",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "И",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-8-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Посадить к северу",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-8-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Посадить к востоку",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-8-B03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Посадить к югу",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-8-B04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Посадить к западу",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "GL-orientir-DEF",
+   "rev": 1,
+   "kind": "glossary",
+   "speaker": "narrator",
+   "text": "Ориентир — заметная вещь, по которой находят дорогу.",
+   "voiced": true,
+   "delivery": "warm"
+  },
+  {
+   "id": "GL-orientir",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Ориентир",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c6-badge",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Значок-лапка «Золотой Жёлудь»",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c6-sticker-3",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Стикер «Золотой Жёлудь», три звёздочки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c6-decor-compass",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Компас для Конторы",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c6-title-detective",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Звание: Детектив",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "RW-c6-activity",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Карточка «Компас из иголки и листика»",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-COL-star",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Карточка-звёздочка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-COL-paw",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Карточка-лапка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-COL-key",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Карточка-ключик",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-COL-acorn",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Карточка-жёлудь",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C6-TITLE",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Компас из иголки и листика",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C6-01",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Попроси взрослого держать иголку.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C6-02",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Взрослый трёт иголку магнитом в одну сторону.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C6-03",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Положите иголку на листик в миске воды.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C6-04",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Подождите, пока листик спокойно повернётся.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C6-05",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Сравните направление с настоящим компасом.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C6-S01",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Иголку берёт только взрослый.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "ACT-C6-S02",
+   "rev": 1,
+   "kind": "activity",
+   "speaker": "narrator",
+   "text": "Миску ставят на ровный стол.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C6-L-01",
+   "rev": 1,
+   "kind": "comfort",
+   "speaker": "khvosts",
+   "text": "Лампа рядом. Дело уютное, а тайна добрая.",
+   "voiced": true,
+   "delivery": "warm"
+  }
+ ],
+ "speakers": [],
+ "skills": [
+  {
+   "id": "button-cipher",
+   "title": "SK-button-cipher"
+  },
+  {
+   "id": "compass",
+   "title": "SK-compass"
+  },
+  {
+   "id": "compass-route",
+   "title": "SK-compass-route"
+  },
+  {
+   "id": "compass-directions",
+   "title": "SK-compass-directions"
+  }
+ ],
+ "scenes": [
+  {
+   "id": "C6-L3-1",
+   "title": "Завязка",
+   "location": "mayor-office",
+   "cast": [
+    "pudding",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "hub",
+   "steps": [
+    {
+     "t": "dir",
+     "id": "C6-0-D01",
+     "text": "Контора. Мэр Пудинг показывает карточку со звёздочкой."
+    },
+    {
+     "t": "line",
+     "line": "C6-0-01"
+    },
+    {
+     "t": "line",
+     "line": "C6-0-02"
+    },
+    {
+     "t": "line",
+     "line": "C6-0-03"
+    },
+    {
+     "t": "line",
+     "line": "C6-0-04"
+    },
+    {
+     "t": "line",
+     "line": "C6-0-05"
+    },
+    {
+     "t": "dir",
+     "id": "C6-0-D02",
+     "text": "В Блокнот добавлена коллекция «Карточки-символы»: звёздочка."
+    },
+    {
+     "t": "dir",
+     "id": "C6-1-D01",
+     "text": "Мэрия. Пустая витрина закрыта аккуратно."
+    },
+    {
+     "t": "line",
+     "line": "C6-1-01"
+    },
+    {
+     "t": "line",
+     "line": "C6-1-02"
+    },
+    {
+     "t": "line",
+     "line": "C6-1-03"
+    },
+    {
+     "t": "line",
+     "line": "C6-1-04"
+    },
+    {
+     "t": "line",
+     "line": "C6-1-05"
+    },
+    {
+     "t": "line",
+     "line": "C6-1-06"
+    },
+    {
+     "t": "line",
+     "line": "C6-1-07"
+    },
+    {
+     "t": "line",
+     "line": "C6-L2-1-01"
+    },
+    {
+     "t": "line",
+     "line": "C6-L2-1-02"
+    },
+    {
+     "t": "line",
+     "line": "C6-L3-1-01"
+    },
+    {
+     "t": "line",
+     "line": "C6-L3-1-02"
+    },
+    {
+     "t": "skill",
+     "skill": "notebook",
+     "first": [
+      {
+       "t": "dir",
+       "id": "C6-1-D02",
+       "text": "Блокнот раскрывается на трёх колонках дела."
+      }
+     ],
+     "known": [
+      {
+       "t": "dir",
+       "id": "C6-1-D02",
+       "text": "Блокнот раскрывается на трёх колонках дела."
+      }
+     ]
+    },
+    {
+     "t": "menu",
+     "id": "C6-L3-M",
+     "prompt": null,
+     "pageSize": 3,
+     "options": [
+      {
+       "id": "display",
+       "label": "C6-1-B01",
+       "to": "C6-L3-2",
+       "when": null,
+       "hideWhen": {
+        "visited": "C6-L3-2"
+       },
+       "optional": false
+      },
+      {
+       "id": "time",
+       "label": "C6-1-B02",
+       "to": "C6-L3-3",
+       "when": null,
+       "hideWhen": {
+        "visited": "C6-L3-3"
+       },
+       "optional": false
+      },
+      {
+       "id": "moss",
+       "label": "C6-1-B03",
+       "to": "C6-4",
+       "when": null,
+       "hideWhen": {
+        "visited": "C6-4"
+       },
+       "optional": true
+      },
+      {
+       "id": "oak",
+       "label": "C6-1-B04",
+       "to": "C6-L3-4",
+       "when": {
+        "all": [
+         {
+          "clue": "c6-display"
+         },
+         {
+          "clue": "c6-time"
+         }
+        ]
+       },
+       "hideWhen": {
+        "visited": "C6-L3-4"
+       },
+       "optional": false
+      }
+     ],
+     "back": null
+    }
+   ]
+  },
+  {
+   "id": "C6-L3-2",
+   "title": "Витрина: Лупа",
+   "location": "mayor-office",
+   "cast": [
+    "pudding",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "magnifier",
+     "first": [
+      {
+       "t": "line",
+       "line": "C6-L3-2-01"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C6-L3-2-01"
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c6l3-magnifier"
+    },
+    {
+     "t": "line",
+     "line": "C6-2-02"
+    },
+    {
+     "t": "line",
+     "line": "C6-2-03"
+    },
+    {
+     "t": "line",
+     "line": "C6-2-04"
+    },
+    {
+     "t": "line",
+     "line": "C6-2-05"
+    },
+    {
+     "t": "line",
+     "line": "C6-2-06"
+    },
+    {
+     "t": "line",
+     "line": "C6-2-07"
+    },
+    {
+     "t": "line",
+     "line": "C6-L2-2-02"
+    },
+    {
+     "t": "line",
+     "line": "C6-L3-2-02"
+    },
+    {
+     "t": "line",
+     "line": "C6-L3-2-03"
+    },
+    {
+     "t": "line",
+     "line": "C6-L2-2-03"
+    },
+    {
+     "t": "line",
+     "line": "C6-L2-2-04"
+    },
+    {
+     "t": "line",
+     "line": "C6-2-08"
+    },
+    {
+     "t": "clue",
+     "clue": "c6-display"
+    },
+    {
+     "t": "goto",
+     "scene": "C6-L3-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C6-L3-3",
+   "title": "Лента времени",
+   "location": "town-square",
+   "cast": [
+    "damka",
+    "stella",
+    "fitilyok",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "timeline",
+     "first": [
+      {
+       "t": "line",
+       "line": "C6-3-01"
+      },
+      {
+       "t": "line",
+       "line": "C6-3-02"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C6-3-01"
+      },
+      {
+       "t": "line",
+       "line": "C6-3-02"
+      }
+     ]
+    },
+    {
+     "t": "line",
+     "line": "C6-L3-3-01"
+    },
+    {
+     "t": "minigame",
+     "minigame": "c6l3-timeline"
+    },
+    {
+     "t": "line",
+     "line": "C6-L3-3-02"
+    },
+    {
+     "t": "line",
+     "line": "C6-L3-3-03"
+    },
+    {
+     "t": "line",
+     "line": "C6-L3-3-04"
+    },
+    {
+     "t": "line",
+     "line": "C6-3-04"
+    },
+    {
+     "t": "line",
+     "line": "C6-3-05"
+    },
+    {
+     "t": "line",
+     "line": "C6-3-06"
+    },
+    {
+     "t": "line",
+     "line": "C6-3-07"
+    },
+    {
+     "t": "line",
+     "line": "C6-3-08"
+    },
+    {
+     "t": "clue",
+     "clue": "c6-time"
+    },
+    {
+     "t": "goto",
+     "scene": "C6-L3-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C6-4",
+   "title": "Мэр и мох",
+   "location": "old-oak",
+   "cast": [
+    "pudding",
+    "khvosts"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "line",
+     "line": "C6-4-01"
+    },
+    {
+     "t": "line",
+     "line": "C6-4-02"
+    },
+    {
+     "t": "line",
+     "line": "C6-4-03"
+    },
+    {
+     "t": "goto",
+     "scene": "C6-L3-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C6-L3-HUB",
+   "title": "Мэрия: выбор",
+   "location": "mayor-office",
+   "cast": [
+    "pudding",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "hub",
+   "steps": [
+    {
+     "t": "if",
+     "when": {
+      "all": [
+       {
+        "all": [
+         {
+          "clue": "c6-display"
+         },
+         {
+          "clue": "c6-time"
+         },
+         {
+          "clue": "c6-compass"
+         },
+         {
+          "clue": "c6-route"
+         },
+         {
+          "clue": "c6-cipher"
+         }
+        ]
+       },
+       {
+        "not": {
+         "visited": "C6-L3-7"
+        }
+       }
+      ]
+     },
+     "then": [
+      {
+       "t": "goto",
+       "scene": "C6-L3-7"
+      }
+     ],
+     "else": []
+    },
+    {
+     "t": "menu",
+     "id": "C6-L3-HM",
+     "prompt": null,
+     "pageSize": 3,
+     "options": [
+      {
+       "id": "display",
+       "label": "C6-1-B01",
+       "to": "C6-L3-2",
+       "when": null,
+       "hideWhen": {
+        "visited": "C6-L3-2"
+       },
+       "optional": false
+      },
+      {
+       "id": "time",
+       "label": "C6-1-B02",
+       "to": "C6-L3-3",
+       "when": null,
+       "hideWhen": {
+        "visited": "C6-L3-3"
+       },
+       "optional": false
+      },
+      {
+       "id": "moss",
+       "label": "C6-1-B03",
+       "to": "C6-4",
+       "when": null,
+       "hideWhen": {
+        "visited": "C6-4"
+       },
+       "optional": true
+      },
+      {
+       "id": "oak",
+       "label": "C6-1-B04",
+       "to": "C6-L3-4",
+       "when": {
+        "all": [
+         {
+          "clue": "c6-display"
+         },
+         {
+          "clue": "c6-time"
+         }
+        ]
+       },
+       "hideWhen": {
+        "visited": "C6-L3-4"
+       },
+       "optional": false
+      }
+     ],
+     "back": null
+    }
+   ]
+  },
+  {
+   "id": "C6-L3-4",
+   "title": "Компас",
+   "location": "old-oak",
+   "cast": [
+    "pudding",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "line",
+     "line": "C6-5-01"
+    },
+    {
+     "t": "line",
+     "line": "C6-5-02"
+    },
+    {
+     "t": "line",
+     "line": "C6-5-03"
+    },
+    {
+     "t": "line",
+     "line": "C6-5-04"
+    },
+    {
+     "t": "line",
+     "line": "C6-5-05"
+    },
+    {
+     "t": "line",
+     "line": "C6-5-06"
+    },
+    {
+     "t": "line",
+     "line": "C6-5-07"
+    },
+    {
+     "t": "line",
+     "line": "C6-5-N01"
+    },
+    {
+     "t": "skill",
+     "skill": "compass",
+     "first": [
+      {
+       "t": "line",
+       "line": "C6-L3-4-01"
+      },
+      {
+       "t": "line",
+       "line": "C6-L3-4-02"
+      },
+      {
+       "t": "line",
+       "line": "C6-5-08"
+      },
+      {
+       "t": "line",
+       "line": "C6-5-09"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C6-L3-4-01"
+      },
+      {
+       "t": "line",
+       "line": "C6-L3-4-02"
+      },
+      {
+       "t": "line",
+       "line": "C6-5-08"
+      },
+      {
+       "t": "line",
+       "line": "C6-5-09"
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c6l3-compass"
+    },
+    {
+     "t": "line",
+     "line": "C6-5-10"
+    },
+    {
+     "t": "line",
+     "line": "C6-L2-4-N01"
+    },
+    {
+     "t": "line",
+     "line": "C6-L2-4-01"
+    },
+    {
+     "t": "line",
+     "line": "C6-L2-4-02"
+    },
+    {
+     "t": "line",
+     "line": "C6-L2-4-03"
+    },
+    {
+     "t": "clue",
+     "clue": "c6-compass"
+    },
+    {
+     "t": "goto",
+     "scene": "C6-L3-5"
+    }
+   ]
+  },
+  {
+   "id": "C6-L3-5",
+   "title": "Маршрут по компасу",
+   "location": "fountain-square",
+   "cast": [
+    "khvosts"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "compass-route",
+     "first": [
+      {
+       "t": "line",
+       "line": "C6-L2-5-01"
+      },
+      {
+       "t": "line",
+       "line": "C6-L2-5-02"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C6-L2-5-01"
+      },
+      {
+       "t": "line",
+       "line": "C6-L2-5-02"
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c6l3-route"
+    },
+    {
+     "t": "line",
+     "line": "C6-L3-5-01"
+    },
+    {
+     "t": "line",
+     "line": "C6-L3-5-02"
+    },
+    {
+     "t": "clue",
+     "clue": "c6-route"
+    },
+    {
+     "t": "goto",
+     "scene": "C6-L3-6"
+    }
+   ]
+  },
+  {
+   "id": "C6-L3-6",
+   "title": "Шифр на карточке",
+   "location": "old-oak",
+   "cast": [
+    "khvosts"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "button-cipher",
+     "first": [
+      {
+       "t": "line",
+       "line": "C6-L3-6-01"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C6-L3-6-01"
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c6l3-cipher"
+    },
+    {
+     "t": "line",
+     "line": "C6-L3-6-02"
+    },
+    {
+     "t": "line",
+     "line": "C6-5-13"
+    },
+    {
+     "t": "line",
+     "line": "C6-5-15"
+    },
+    {
+     "t": "clue",
+     "clue": "c6-cipher"
+    },
+    {
+     "t": "goto",
+     "scene": "C6-L3-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C6-L3-7",
+   "title": "Версия",
+   "location": "mayor-office",
+   "cast": [
+    "khvosts"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "version",
+     "first": [
+      {
+       "t": "line",
+       "line": "C6-6-01"
+      },
+      {
+       "t": "line",
+       "line": "C6-6-02"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C6-6-01"
+      },
+      {
+       "t": "line",
+       "line": "C6-6-02"
+      }
+     ]
+    },
+    {
+     "t": "goto",
+     "scene": "C6-L3-HUB"
+    }
+   ]
+  },
+  {
+   "id": "C6-7",
+   "title": "Старый шкаф Конторы",
+   "location": "office",
+   "cast": [
+    "pudding",
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "cutscene",
+   "steps": [
+    {
+     "t": "dir",
+     "id": "C6-7-D01",
+     "text": "Золотой Жёлудь входит в замок старого шкафа."
+    },
+    {
+     "t": "line",
+     "line": "C6-7-01"
+    },
+    {
+     "t": "line",
+     "line": "C6-7-02"
+    },
+    {
+     "t": "line",
+     "line": "C6-7-03"
+    },
+    {
+     "t": "line",
+     "line": "C6-7-04"
+    },
+    {
+     "t": "line",
+     "line": "C6-7-05"
+    },
+    {
+     "t": "line",
+     "line": "C6-7-06"
+    },
+    {
+     "t": "line",
+     "line": "C6-7-07"
+    },
+    {
+     "t": "line",
+     "line": "C6-7-08"
+    },
+    {
+     "t": "line",
+     "line": "C6-7-09"
+    },
+    {
+     "t": "line",
+     "line": "C6-7-10"
+    },
+    {
+     "t": "line",
+     "line": "C6-7-11"
+    },
+    {
+     "t": "line",
+     "line": "C6-7-12"
+    },
+    {
+     "t": "line",
+     "line": "C6-7-13"
+    },
+    {
+     "t": "line",
+     "line": "C6-7-N01"
+    },
+    {
+     "t": "line",
+     "line": "C6-L2-7-01"
+    },
+    {
+     "t": "line",
+     "line": "C6-L2-7-02"
+    },
+    {
+     "t": "line",
+     "line": "C6-L2-7-03"
+    },
+    {
+     "t": "line",
+     "line": "C6-L3-8-01"
+    },
+    {
+     "t": "line",
+     "line": "C6-L3-8-02"
+    },
+    {
+     "t": "goto",
+     "scene": "C6-L3-9"
+    }
+   ]
+  },
+  {
+   "id": "C6-L3-9",
+   "title": "Аллея юбилея",
+   "location": "fountain-square",
+   "cast": [
+    "pudding",
+    "stella",
+    "khvosts"
+   ],
+   "presentation": "minigame",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "compass-directions",
+     "first": [
+      {
+       "t": "line",
+       "line": "C6-L3-9-01"
+      }
+     ],
+     "known": [
+      {
+       "t": "line",
+       "line": "C6-L3-9-01"
+      }
+     ]
+    },
+    {
+     "t": "minigame",
+     "minigame": "c6l3-alley"
+    },
+    {
+     "t": "line",
+     "line": "C6-8-01"
+    },
+    {
+     "t": "line",
+     "line": "C6-8-02"
+    },
+    {
+     "t": "line",
+     "line": "C6-8-03"
+    },
+    {
+     "t": "line",
+     "line": "C6-8-04"
+    },
+    {
+     "t": "line",
+     "line": "C6-8-05"
+    },
+    {
+     "t": "line",
+     "line": "C6-8-06"
+    },
+    {
+     "t": "goto",
+     "scene": "C6-9"
+    }
+   ]
+  },
+  {
+   "id": "C6-9",
+   "title": "«А ты знал?»",
+   "location": "office",
+   "cast": [
+    "watsony"
+   ],
+   "presentation": "dialogue",
+   "steps": [
+    {
+     "t": "skill",
+     "skill": "encyclopedia",
+     "first": [
+      {
+       "t": "dir",
+       "id": "C6-9-D01",
+       "text": "Три карточки фактов складываются в Энциклопедию."
+      }
+     ],
+     "known": [
+      {
+       "t": "dir",
+       "id": "C6-9-D01",
+       "text": "Три карточки фактов складываются в Энциклопедию."
+      }
+     ]
+    },
+    {
+     "t": "line",
+     "line": "C6-9-01"
+    },
+    {
+     "t": "line",
+     "line": "C6-9-02"
+    },
+    {
+     "t": "line",
+     "line": "C6-9-03"
+    },
+    {
+     "t": "line",
+     "line": "C6-9-04"
+    },
+    {
+     "t": "goto",
+     "scene": "C6-10"
+    }
+   ]
+  },
+  {
+   "id": "C6-10",
+   "title": "Награда",
+   "location": "office",
+   "cast": [
+    "khvosts",
+    "watsony"
+   ],
+   "presentation": "cutscene",
+   "steps": [
+    {
+     "t": "line",
+     "line": "C6-10-01"
+    },
+    {
+     "t": "line",
+     "line": "C6-10-02"
+    },
+    {
+     "t": "line",
+     "line": "C6-10-03"
+    },
+    {
+     "t": "line",
+     "line": "C6-10-04"
+    },
+    {
+     "t": "line",
+     "line": "C6-10-05"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c6-badge"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c6-buttons-l3"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c6-sticker-l3"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c6-decor-compass"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c6-title-detective"
+    },
+    {
+     "t": "reward",
+     "reward": "rw-c6-activity"
+    },
+    {
+     "t": "dir",
+     "id": "C6-10-D01",
+     "text": "В Словарике открыто слово «ориентир», в альбоме — четыре карточки-символа."
+    },
+    {
+     "t": "end"
+    }
+   ]
+  }
+ ],
+ "logic": {
+  "axes": [
+   {
+    "id": "who",
+    "title": "C6-AX-who",
+    "values": [
+     {
+      "id": "shadow",
+      "label": "C6-AX-shadow"
+     },
+     {
+      "id": "stella",
+      "label": "C6-AX-stella"
+     },
+     {
+      "id": "mice",
+      "label": "C6-AX-mice"
+     },
+     {
+      "id": "fitilyok",
+      "label": "C6-AX-fitilyok"
+     },
+     {
+      "id": "damka",
+      "label": "C6-AX-damka"
+     }
+    ]
+   },
+   {
+    "id": "where",
+    "title": "C6-AX-where",
+    "values": [
+     {
+      "id": "roots",
+      "label": "C6-AX-roots"
+     },
+     {
+      "id": "lighthouse",
+      "label": "C6-AX-lighthouse"
+     },
+     {
+      "id": "garden",
+      "label": "C6-AX-garden"
+     },
+     {
+      "id": "hollow",
+      "label": "C6-AX-hollow"
+     },
+     {
+      "id": "bench",
+      "label": "C6-AX-bench"
+     }
+    ]
+   },
+   {
+    "id": "what",
+    "title": "C6-AX-what",
+    "values": [
+     {
+      "id": "quest",
+      "label": "C6-AX-quest"
+     },
+     {
+      "id": "theft",
+      "label": "C6-AX-theft"
+     },
+     {
+      "id": "lost",
+      "label": "C6-AX-lost"
+     },
+     {
+      "id": "cleaning",
+      "label": "C6-AX-cleaning"
+     }
+    ]
+   }
+  ],
+  "intended": {
+   "who": "shadow",
+   "where": "roots",
+   "what": "quest"
+  },
+  "clues": [
+   {
+    "id": "c6-display",
+    "title": "C6-CL-display",
+    "required": true,
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "fitilyok"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "theft"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "lost"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "cleaning"
+      }
+     ]
+    },
+    "requires": [],
+    "source": "C6-L3-2",
+    "summary": "Как У1 уровня 2; стружка объяснится Дамкой днём."
+   },
+   {
+    "id": "c6-time",
+    "title": "C6-CL-time",
+    "required": true,
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "stella"
+      },
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "mice"
+      },
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "damka"
+      }
+     ]
+    },
+    "requires": [],
+    "source": "C6-L3-3",
+    "summary": "Дамка всю ночь у пруда; мышата и Стелла исключены тем же окном."
+   },
+   {
+    "id": "c6-compass",
+    "title": "C6-CL-compass",
+    "required": true,
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "ne",
+       "axis": "where",
+       "value": "lighthouse"
+      },
+      {
+       "op": "ne",
+       "axis": "where",
+       "value": "garden"
+      },
+      {
+       "op": "eq",
+       "axis": "what",
+       "value": "quest"
+      }
+     ]
+    },
+    "requires": [
+     "c6-display",
+     "c6-time"
+    ],
+    "source": "C6-L3-4",
+    "summary": "Карта с ориентирами и севером."
+   },
+   {
+    "id": "c6-route",
+    "title": "C6-CL-route",
+    "required": true,
+    "predicate": {
+     "op": "ne",
+     "axis": "where",
+     "value": "bench"
+    },
+    "requires": [
+     "c6-compass"
+    ],
+    "source": "C6-L3-5",
+    "summary": "Маршрут увёл от фонтана к дубу; у скамейки жёлудя нет."
+   },
+   {
+    "id": "c6-cipher",
+    "title": "C6-CL-cipher",
+    "required": true,
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "eq",
+       "axis": "where",
+       "value": "roots"
+      },
+      {
+       "op": "ne",
+       "axis": "where",
+       "value": "hollow"
+      }
+     ]
+    },
+    "requires": [
+     "c6-route"
+    ],
+    "source": "C6-L3-6",
+    "summary": "Пуговичный шифр говорит: КОРНИ."
+   }
+  ],
+  "version": {
+   "button": "C6-B-version",
+   "available": {
+    "visited": "C6-L3-7"
+   },
+   "onSolved": "C6-7"
+  },
+  "wrongVersion": {
+   "intro": [
+    {
+     "line": "C6-6-03",
+     "when": null
+    }
+   ],
+   "byValue": [
+    {
+     "axis": "who",
+     "value": "stella",
+     "clues": [
+      "c6-time"
+     ],
+     "lines": [
+      {
+       "line": "C6-6-04",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "who",
+     "value": "mice",
+     "clues": [
+      "c6-time"
+     ],
+     "lines": [
+      {
+       "line": "C6-6-05",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "who",
+     "value": "fitilyok",
+     "clues": [
+      "c6-display"
+     ],
+     "lines": [
+      {
+       "line": "C6-L2-6-01",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "who",
+     "value": "damka",
+     "clues": [
+      "c6-time"
+     ],
+     "lines": [
+      {
+       "line": "C6-L3-7-01",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "where",
+     "value": "lighthouse",
+     "clues": [
+      "c6-compass"
+     ],
+     "lines": [
+      {
+       "line": "C6-6-06",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "where",
+     "value": "garden",
+     "clues": [
+      "c6-compass"
+     ],
+     "lines": [
+      {
+       "line": "C6-6-06",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "where",
+     "value": "hollow",
+     "clues": [
+      "c6-cipher"
+     ],
+     "lines": [
+      {
+       "line": "C6-L3-7-02",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "where",
+     "value": "bench",
+     "clues": [
+      "c6-route"
+     ],
+     "lines": [
+      {
+       "line": "C6-L3-7-03",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "what",
+     "value": "theft",
+     "clues": [
+      "c6-display"
+     ],
+     "lines": [
+      {
+       "line": "C6-6-07",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "what",
+     "value": "lost",
+     "clues": [
+      "c6-display"
+     ],
+     "lines": [
+      {
+       "line": "C6-6-08",
+       "when": null
+      }
+     ]
+    },
+    {
+     "axis": "what",
+     "value": "cleaning",
+     "clues": [
+      "c6-display"
+     ],
+     "lines": [
+      {
+       "line": "C6-L2-6-03",
+       "when": null
+      }
+     ]
+    }
+   ],
+   "outro": [
+    {
+     "line": "C6-6-09",
+     "when": null
+    }
+   ]
+  },
+  "redHerrings": [
+   {
+    "id": "rh-c6-theft",
+    "summary": "Пустая витрина похожа на кражу.",
+    "presentedBy": [
+     "C6-1-02"
+    ],
+    "explainedBy": [
+     "C6-7-09"
+    ]
+   },
+   {
+    "id": "rh-c6-stella",
+    "summary": "Стелла часто носит бумажки.",
+    "presentedBy": [
+     "C6-1-06"
+    ],
+    "explainedBy": [
+     "C6-7-10"
+    ]
+   },
+   {
+    "id": "rh-c6-moss",
+    "summary": "Мох не показывает север.",
+    "presentedBy": [
+     "C6-4-01",
+     "C6-5-05"
+    ],
+    "explainedBy": [
+     "C6-5-07",
+     "C6-7-11"
+    ]
+   },
+   {
+    "id": "rh-c6-fitilyok",
+    "summary": "Фитилёк не спит, но оставил бы пыльцу.",
+    "presentedBy": [
+     "C6-L2-1-01"
+    ],
+    "explainedBy": [
+     "C6-L2-7-01"
+    ]
+   },
+   {
+    "id": "rh-c6-damka",
+    "summary": "Стружка от дневного ремонта Дамки.",
+    "presentedBy": [
+     "C6-L3-1-01",
+     "C6-L3-2-02"
+    ],
+    "explainedBy": [
+     "C6-L3-8-01",
+     "C6-L3-8-02"
+    ]
+   },
+   {
+    "id": "rh-c6-hollow",
+    "summary": "Дупло опровергает шифр КОРНИ.",
+    "presentedBy": [
+     "C6-L2-4-01"
+    ],
+    "explainedBy": [
+     "C6-L2-7-02",
+     "C6-L3-7-02"
+    ]
+   }
+  ]
+ },
+ "deduction": {
+  "schema": 1,
+  "id": "case06-l3",
+  "axes": [
+   {
+    "id": "who",
+    "values": [
+     "shadow",
+     "stella",
+     "mice",
+     "fitilyok",
+     "damka"
+    ]
+   },
+   {
+    "id": "where",
+    "values": [
+     "roots",
+     "lighthouse",
+     "garden",
+     "hollow",
+     "bench"
+    ]
+   },
+   {
+    "id": "what",
+    "values": [
+     "quest",
+     "theft",
+     "lost",
+     "cleaning"
+    ]
+   }
+  ],
+  "compatibility": null,
+  "intended": {
+   "who": "shadow",
+   "where": "roots",
+   "what": "quest"
+  },
+  "clues": [
+   {
+    "id": "c6-display",
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "fitilyok"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "theft"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "lost"
+      },
+      {
+       "op": "ne",
+       "axis": "what",
+       "value": "cleaning"
+      }
+     ]
+    },
+    "requires": [],
+    "requiresAnswer": false,
+    "explanationKey": "C6-CL-display"
+   },
+   {
+    "id": "c6-time",
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "stella"
+      },
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "mice"
+      },
+      {
+       "op": "ne",
+       "axis": "who",
+       "value": "damka"
+      }
+     ]
+    },
+    "requires": [],
+    "requiresAnswer": false,
+    "explanationKey": "C6-CL-time"
+   },
+   {
+    "id": "c6-compass",
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "ne",
+       "axis": "where",
+       "value": "lighthouse"
+      },
+      {
+       "op": "ne",
+       "axis": "where",
+       "value": "garden"
+      },
+      {
+       "op": "eq",
+       "axis": "what",
+       "value": "quest"
+      }
+     ]
+    },
+    "requires": [
+     "c6-display",
+     "c6-time"
+    ],
+    "requiresAnswer": false,
+    "explanationKey": "C6-CL-compass"
+   },
+   {
+    "id": "c6-route",
+    "predicate": {
+     "op": "ne",
+     "axis": "where",
+     "value": "bench"
+    },
+    "requires": [
+     "c6-compass"
+    ],
+    "requiresAnswer": false,
+    "explanationKey": "C6-CL-route"
+   },
+   {
+    "id": "c6-cipher",
+    "predicate": {
+     "op": "and",
+     "terms": [
+      {
+       "op": "eq",
+       "axis": "where",
+       "value": "roots"
+      },
+      {
+       "op": "ne",
+       "axis": "where",
+       "value": "hollow"
+      }
+     ]
+    },
+    "requires": [
+     "c6-route"
+    ],
+    "requiresAnswer": false,
+    "explanationKey": "C6-CL-cipher"
+   }
+  ],
+  "redHerrings": [
+   {
+    "id": "rh-c6-theft",
+    "explanationKey": "C6-7-09"
+   },
+   {
+    "id": "rh-c6-stella",
+    "explanationKey": "C6-7-10"
+   },
+   {
+    "id": "rh-c6-moss",
+    "explanationKey": "C6-5-07"
+   },
+   {
+    "id": "rh-c6-fitilyok",
+    "explanationKey": "C6-L2-7-01"
+   },
+   {
+    "id": "rh-c6-damka",
+    "explanationKey": "C6-L3-8-01"
+   },
+   {
+    "id": "rh-c6-hollow",
+    "explanationKey": "C6-L2-7-02"
+   }
+  ],
+  "maxCandidates": 100
+ },
+ "notebookHelp": {
+  "mode": "point",
+  "marks": [
+   {
+    "axis": "who",
+    "value": "shadow",
+    "mark": "confirmed",
+    "clues": [
+     "c6-display",
+     "c6-time"
+    ],
+    "line": "C6-NB-01"
+   },
+   {
+    "axis": "who",
+    "value": "stella",
+    "mark": "excluded",
+    "clues": [
+     "c6-time"
+    ],
+    "line": "C6-NB-02"
+   },
+   {
+    "axis": "who",
+    "value": "mice",
+    "mark": "excluded",
+    "clues": [
+     "c6-time"
+    ],
+    "line": "C6-NB-03"
+   },
+   {
+    "axis": "who",
+    "value": "fitilyok",
+    "mark": "excluded",
+    "clues": [
+     "c6-display"
+    ],
+    "line": "C6-NB-04"
+   },
+   {
+    "axis": "who",
+    "value": "damka",
+    "mark": "excluded",
+    "clues": [
+     "c6-time"
+    ],
+    "line": "C6-NB-05"
+   },
+   {
+    "axis": "where",
+    "value": "roots",
+    "mark": "confirmed",
+    "clues": [
+     "c6-cipher"
+    ],
+    "line": "C6-NB-06"
+   },
+   {
+    "axis": "where",
+    "value": "lighthouse",
+    "mark": "excluded",
+    "clues": [
+     "c6-compass"
+    ],
+    "line": "C6-NB-07"
+   },
+   {
+    "axis": "where",
+    "value": "garden",
+    "mark": "excluded",
+    "clues": [
+     "c6-compass"
+    ],
+    "line": "C6-NB-07"
+   },
+   {
+    "axis": "where",
+    "value": "hollow",
+    "mark": "excluded",
+    "clues": [
+     "c6-cipher"
+    ],
+    "line": "C6-NB-08"
+   },
+   {
+    "axis": "where",
+    "value": "bench",
+    "mark": "excluded",
+    "clues": [
+     "c6-route"
+    ],
+    "line": "C6-NB-09"
+   },
+   {
+    "axis": "what",
+    "value": "quest",
+    "mark": "confirmed",
+    "clues": [
+     "c6-display",
+     "c6-compass"
+    ],
+    "line": "C6-NB-10"
+   },
+   {
+    "axis": "what",
+    "value": "theft",
+    "mark": "excluded",
+    "clues": [
+     "c6-display"
+    ],
+    "line": "C6-NB-11"
+   },
+   {
+    "axis": "what",
+    "value": "lost",
+    "mark": "excluded",
+    "clues": [
+     "c6-display"
+    ],
+    "line": "C6-NB-12"
+   },
+   {
+    "axis": "what",
+    "value": "cleaning",
+    "mark": "excluded",
+    "clues": [
+     "c6-display"
+    ],
+    "line": "C6-NB-13"
+   }
+  ],
+  "pointers": [
+   {
+    "clue": "c6-display",
+    "line": "C6-NB-P-display"
+   },
+   {
+    "clue": "c6-time",
+    "line": "C6-NB-P-time"
+   },
+   {
+    "clue": "c6-compass",
+    "line": "C6-NB-P-compass"
+   },
+   {
+    "clue": "c6-route",
+    "line": "C6-NB-P-route"
+   },
+   {
+    "clue": "c6-cipher",
+    "line": "C6-NB-P-cipher"
+   }
+  ],
+  "nothing": "UI-notebook.nothing"
+ },
+ "hints": {
+  "klubok": {
+   "speaker": "khvosts",
+   "precision": "exact",
+   "allowance": 3,
+   "rules": [
+    {
+     "id": "C6-L3-H-01",
+     "when": {
+      "not": {
+       "clue": "c6-display"
+      }
+     },
+     "cites": []
+    },
+    {
+     "id": "C6-L3-H-02",
+     "when": {
+      "not": {
+       "clue": "c6-time"
+      }
+     },
+     "cites": []
+    },
+    {
+     "id": "C6-L3-H-03",
+     "when": {
+      "all": [
+       {
+        "clue": "c6-display"
+       },
+       {
+        "clue": "c6-time"
+       },
+       {
+        "not": {
+         "clue": "c6-compass"
+        }
+       }
+      ]
+     },
+     "cites": [
+      "c6-display",
+      "c6-time"
+     ]
+    },
+    {
+     "id": "C6-L3-H-04",
+     "when": {
+      "all": [
+       {
+        "clue": "c6-compass"
+       },
+       {
+        "not": {
+         "clue": "c6-route"
+        }
+       }
+      ]
+     },
+     "cites": [
+      "c6-compass"
+     ]
+    },
+    {
+     "id": "C6-L3-H-05",
+     "when": {
+      "all": [
+       {
+        "clue": "c6-route"
+       },
+       {
+        "not": {
+         "clue": "c6-cipher"
+        }
+       }
+      ]
+     },
+     "cites": [
+      "c6-route"
+     ]
+    },
+    {
+     "id": "C6-L3-H-06",
+     "when": {
+      "visited": "C6-L3-7"
+     },
+     "cites": [
+      "c6-display",
+      "c6-time",
+      "c6-compass",
+      "c6-route",
+      "c6-cipher"
+     ]
+    }
+   ],
+   "review": "C6-L3-H-06",
+   "exhausted": "UI-hint.klubokEmpty"
+  },
+  "shell": null
+ },
+ "minigames": [
+  {
+   "id": "c6l3-magnifier",
+   "skill": "magnifier",
+   "config": {
+    "kind": "magnifier",
+    "targets": [
+     {
+      "id": "lock",
+      "label": "C6-2-B01",
+      "required": true,
+      "reply": [
+       "C6-2-02"
+      ]
+     },
+     {
+      "id": "note",
+      "label": "C6-2-B02",
+      "required": true,
+      "reply": [
+       "C6-2-03",
+       "C6-2-04"
+      ]
+     },
+     {
+      "id": "card",
+      "label": "C6-2-B03",
+      "required": true,
+      "reply": [
+       "C6-2-05"
+      ]
+     },
+     {
+      "id": "clean",
+      "label": "C6-2-B04",
+      "required": true,
+      "reply": [
+       "C6-L2-2-02"
+      ]
+     },
+     {
+      "id": "chips",
+      "label": "C6-2-B05",
+      "required": true,
+      "reply": [
+       "C6-L3-2-02",
+       "C6-L3-2-03"
+      ]
+     }
+    ],
+    "afterFirst": [],
+    "afterFirstSkill": null,
+    "assistAfterMisses": 3
+   }
+  },
+  {
+   "id": "c6l3-timeline",
+   "skill": "timeline",
+   "config": {
+    "kind": "timeline",
+    "items": [
+     {
+      "id": "damka",
+      "time": "23:00",
+      "label": "C6-3-B01"
+     },
+     {
+      "id": "rain",
+      "time": "2:30",
+      "label": "C6-3-B02"
+     },
+     {
+      "id": "mice",
+      "time": "3:00",
+      "label": "C6-3-B03"
+     },
+     {
+      "id": "fitilyok",
+      "time": "4:30",
+      "label": "C6-3-B04"
+     },
+     {
+      "id": "mayor",
+      "time": "5:00",
+      "label": "C6-3-B05"
+     },
+     {
+      "id": "stella",
+      "time": "6:00",
+      "label": "C6-3-B06"
+     }
+    ],
+    "solution": [
+     "damka",
+     "rain",
+     "mice",
+     "fitilyok",
+     "mayor",
+     "stella"
+    ],
+    "wrong": [
+     "C6-3-03"
+    ]
+   }
+  },
+  {
+   "id": "c6l3-compass",
+   "skill": "compass",
+   "config": {
+    "kind": "staged",
+    "mechanic": "Компас",
+    "description": "На карте подписан только север.",
+    "steps": [
+     {
+      "id": "map",
+      "prompt": "C6-L3-4-01",
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "left",
+        "label": "C6-5-B04",
+        "correct": false,
+        "reply": [
+         "C6-5-10"
+        ]
+       },
+       {
+        "id": "right",
+        "label": "C6-5-B05",
+        "correct": false,
+        "reply": [
+         "C6-5-10"
+        ]
+       },
+       {
+        "id": "oak",
+        "label": "C6-5-B06",
+        "correct": true,
+        "reply": [
+         "C6-L2-4-N01"
+        ]
+       }
+      ]
+     }
+    ],
+    "lines": [
+     "C6-L3-4-01",
+     "C6-L3-4-02",
+     "C6-5-10",
+     "C6-L2-4-N01"
+    ]
+   }
+  },
+  {
+   "id": "c6l3-route",
+   "skill": "compass-route",
+   "config": {
+    "kind": "staged",
+    "mechanic": "Маршрут по компасу",
+    "description": "Три на север, два на восток, один на север.",
+    "steps": [
+     {
+      "id": "step1",
+      "prompt": "C6-L2-5-02",
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "n",
+        "label": "C6-L2-5-B01",
+        "correct": true,
+        "reply": [
+         "C6-L2-5-02"
+        ]
+       },
+       {
+        "id": "e",
+        "label": "C6-L2-5-B02",
+        "correct": false,
+        "reply": [
+         "C6-L2-5-03"
+        ]
+       },
+       {
+        "id": "s",
+        "label": "C6-L2-5-B03",
+        "correct": false,
+        "reply": [
+         "C6-L2-5-03"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "step2",
+      "prompt": "C6-L2-5-02",
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "n",
+        "label": "C6-L2-5-B01",
+        "correct": true,
+        "reply": [
+         "C6-L2-5-02"
+        ]
+       },
+       {
+        "id": "e",
+        "label": "C6-L2-5-B02",
+        "correct": false,
+        "reply": [
+         "C6-L2-5-03"
+        ]
+       },
+       {
+        "id": "w",
+        "label": "C6-L2-5-B04",
+        "correct": false,
+        "reply": [
+         "C6-L2-5-03"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "step3",
+      "prompt": "C6-L2-5-02",
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "e",
+        "label": "C6-L2-5-B02",
+        "correct": true,
+        "reply": [
+         "C6-L3-5-01"
+        ]
+       },
+       {
+        "id": "n",
+        "label": "C6-L2-5-B01",
+        "correct": false,
+        "reply": [
+         "C6-L2-5-03"
+        ]
+       },
+       {
+        "id": "s",
+        "label": "C6-L2-5-B03",
+        "correct": false,
+        "reply": [
+         "C6-L2-5-03"
+        ]
+       }
+      ]
+     }
+    ],
+    "lines": [
+     "C6-L2-5-03",
+     "C6-L3-5-01",
+     "C6-L3-5-02"
+    ]
+   }
+  },
+  {
+   "id": "c6l3-cipher",
+   "skill": "button-cipher",
+   "config": {
+    "kind": "staged",
+    "mechanic": "Шифр на пуговицах",
+    "description": "По таблице собрать слово КОРНИ.",
+    "steps": [
+     {
+      "id": "word",
+      "prompt": "C6-L3-6-01",
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "k",
+        "label": "C6-L3-6-B01",
+        "correct": true,
+        "reply": [
+         "C6-L3-6-01"
+        ]
+       },
+       {
+        "id": "o",
+        "label": "C6-L3-6-B02",
+        "correct": true,
+        "reply": [
+         "C6-L3-6-01"
+        ]
+       },
+       {
+        "id": "r",
+        "label": "C6-L3-6-B03",
+        "correct": true,
+        "reply": [
+         "C6-L3-6-01"
+        ]
+       },
+       {
+        "id": "n",
+        "label": "C6-L3-6-B04",
+        "correct": true,
+        "reply": [
+         "C6-L3-6-01"
+        ]
+       },
+       {
+        "id": "i",
+        "label": "C6-L3-6-B05",
+        "correct": true,
+        "reply": [
+         "C6-L3-6-02"
+        ]
+       }
+      ]
+     }
+    ],
+    "lines": [
+     "C6-L3-6-01",
+     "C6-L3-6-02"
+    ]
+   }
+  },
+  {
+   "id": "c6l3-alley",
+   "skill": "compass-directions",
+   "config": {
+    "kind": "staged",
+    "mechanic": "Аллея юбилея",
+    "description": "Сажаем четыре жёлудя по двум указаниям.",
+    "steps": [
+     {
+      "id": "north",
+      "prompt": "C6-8-B01",
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "n",
+        "label": "C6-8-B01",
+        "correct": true,
+        "reply": [
+         "C6-8-04"
+        ]
+       },
+       {
+        "id": "e",
+        "label": "C6-8-B02",
+        "correct": false,
+        "reply": [
+         "C6-8-03"
+        ]
+       },
+       {
+        "id": "s",
+        "label": "C6-8-B03",
+        "correct": false,
+        "reply": [
+         "C6-8-03"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "east",
+      "prompt": "C6-8-B02",
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "e",
+        "label": "C6-8-B02",
+        "correct": true,
+        "reply": [
+         "C6-8-04"
+        ]
+       },
+       {
+        "id": "s",
+        "label": "C6-8-B03",
+        "correct": false,
+        "reply": [
+         "C6-8-03"
+        ]
+       },
+       {
+        "id": "w",
+        "label": "C6-8-B04",
+        "correct": false,
+        "reply": [
+         "C6-8-03"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "south",
+      "prompt": "C6-8-B03",
+      "pageSize": 3,
+      "options": [
+       {
+        "id": "s",
+        "label": "C6-8-B03",
+        "correct": true,
+        "reply": [
+         "C6-8-04"
+        ]
+       },
+       {
+        "id": "n",
+        "label": "C6-8-B01",
+        "correct": false,
+        "reply": [
+         "C6-8-03"
+        ]
+       },
+       {
+        "id": "w",
+        "label": "C6-8-B04",
+        "correct": false,
+        "reply": [
+         "C6-8-03"
+        ]
+       }
+      ]
+     }
+    ],
+    "lines": [
+     "C6-8-03",
+     "C6-8-04"
+    ]
+   }
+  }
+ ],
+ "facts": [
+  {
+   "id": "fact-c6-squirrels",
+   "line": "C6-9-01"
+  },
+  {
+   "id": "fact-c6-compass",
+   "line": "C6-9-02"
+  },
+  {
+   "id": "fact-c6-moss",
+   "line": "C6-9-03"
+  }
+ ],
+ "glossary": [
+  {
+   "id": "orientir",
+   "word": "ориентир",
+   "definition": "GL-orientir-DEF",
+   "label": "GL-orientir",
+   "forms": [
+    "ориентир",
+    "ориентира",
+    "ориентиру",
+    "ориентиром",
+    "ориентире",
+    "ориентиры",
+    "ориентиров",
+    "ориентирам",
+    "ориентирами",
+    "ориентирах"
+   ]
+  }
+ ],
+ "rewards": [
+  {
+   "id": "rw-c6-badge",
+   "kind": "badge",
+   "label": "RW-c6-badge",
+   "amount": 1,
+   "claimKey": "case06:badge"
+  },
+  {
+   "id": "rw-c6-buttons-l3",
+   "kind": "buttons",
+   "label": "RW-buttons-20",
+   "amount": 20,
+   "claimKey": "case06:l3:buttons"
+  },
+  {
+   "id": "rw-c6-sticker-l3",
+   "kind": "sticker",
+   "label": "RW-c6-sticker-3",
+   "amount": 1,
+   "claimKey": "case06:l3:sticker"
+  },
+  {
+   "id": "rw-c6-decor-compass",
+   "kind": "decor",
+   "label": "RW-c6-decor-compass",
+   "amount": 1,
+   "claimKey": "case06:decor:compass"
+  },
+  {
+   "id": "rw-c6-title-detective",
+   "kind": "title",
+   "label": "RW-c6-title-detective",
+   "amount": 1,
+   "claimKey": "case06:title:detective"
+  },
+  {
+   "id": "rw-c6-activity",
+   "kind": "activity",
+   "label": "RW-c6-activity",
+   "amount": 1,
+   "claimKey": "case06:activity:compass"
+  }
+ ],
+ "collections": [
+  {
+   "id": "c6-symbol-star",
+   "collection": "symbol-cards",
+   "label": "C6-COL-star",
+   "line": null
+  },
+  {
+   "id": "c6-symbol-paw",
+   "collection": "symbol-cards",
+   "label": "C6-COL-paw",
+   "line": null
+  },
+  {
+   "id": "c6-symbol-key",
+   "collection": "symbol-cards",
+   "label": "C6-COL-key",
+   "line": null
+  },
+  {
+   "id": "c6-symbol-acorn",
+   "collection": "symbol-cards",
+   "label": "C6-COL-acorn",
+   "line": null
+  }
+ ],
+ "activities": [
+  {
+   "id": "act-c6-compass",
+   "title": "ACT-C6-TITLE",
+   "steps": [
+    {
+     "line": "ACT-C6-01",
+     "adultOnly": true
+    },
+    {
+     "line": "ACT-C6-02",
+     "adultOnly": true
+    },
+    {
+     "line": "ACT-C6-03",
+     "adultOnly": false
+    },
+    {
+     "line": "ACT-C6-04",
+     "adultOnly": false
+    },
+    {
+     "line": "ACT-C6-05",
+     "adultOnly": false
+    }
+   ],
+   "safety": [
+    "ACT-C6-S01",
+    "ACT-C6-S02"
+   ],
+   "allergens": []
+  }
+ ],
+ "comfort": [
+  {
+   "scene": "*",
+   "line": "C6-L-01"
+  }
+ ],
+ "cutscenes": [],
+ "plannedCutscenes": [
+  {
+   "id": "cs-c6-intro",
+   "scene": "C6-L3-1",
+   "summary": "Пустая витрина мэрии, Пудинг паникует, Хвостс открывает Блокнот."
+  },
+  {
+   "id": "cs-c6-cabinet",
+   "scene": "C6-7",
+   "summary": "Золотой Жёлудь открывает старый шкаф с альбомом первых сыщиков."
+  },
+  {
+   "id": "cs-c6-alley",
+   "scene": "C6-L3-9",
+   "summary": "У фонтана сажают дубки будущей юбилейной аллеи."
+  },
+  {
+   "id": "cs-c6-reward",
+   "scene": "C6-10",
+   "summary": "Хвостс вручает значок «Золотой Жёлудь» и звание «Детектив»."
+  }
+ ],
+ "notebookPages": [],
+ "cozy": null,
+ "reserved": [],
+ "revision": "56fd45dd9def9af4fbfa6e89dcebe40c5b85fe889f3656f670cc0d3e5f037d69"
+}

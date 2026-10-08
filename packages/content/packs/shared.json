@@ -954,6 +954,258 @@
    "delivery": "neutral"
   },
   {
+   "id": "UI-family.solo",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Играем одни",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-family.family",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Играем семьёй",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-family.howMany",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Сколько игроков?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-family.chooseKeeper",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Кто будет Хранителем?",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-family.passKeeper",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Передай устройство Хранителю",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-family.passOthers",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Передай устройство остальным",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-family.itIsMe",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Это я",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-family.ready",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Запомнено, прячем",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-family.hide",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Спрятать",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-family.ask",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Задать вопрос",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-family.guess",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Выбрать ответ",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-family.yes",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Да",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-family.no",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Нет",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-family.win",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Победа общая!",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-notebook.secretNotes",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Тайные заметки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-notebook.cipherPoster",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Почтовый шифр Пушистино",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-cozy.title",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Уютный денёк",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-cozy.shop",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Лавка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-cozy.buy",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Купить",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-cozy.return",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Вернуть",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-cozy.owned",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Уже твоё",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-cozy.wear",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Надеть",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-cozy.place",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Поставить",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-cozy.tea",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Позвать на чай",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-cozy.hats",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Шапки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-cozy.scarves",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Шарфы",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-cozy.decor",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Украшения",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "UI-rank.new",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Новое звание!",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
    "id": "SK-inspect",
    "rev": 1,
    "kind": "label",
@@ -1525,6 +1777,20 @@
    "claimKey": "case01:heart:tyopa"
   },
   {
+   "id": "rw-c1-heart-tyopa-l2",
+   "kind": "hearts",
+   "label": "RW-heart",
+   "amount": 1,
+   "claimKey": "case01:l2:heart:tyopa"
+  },
+  {
+   "id": "rw-c1-heart-tyopa-l3",
+   "kind": "hearts",
+   "label": "RW-heart",
+   "amount": 1,
+   "claimKey": "case01:l3:heart:tyopa"
+  },
+  {
    "id": "rw-c1-badge",
    "kind": "badge",
    "label": "RW-c1-badge",
@@ -1592,6 +1858,9 @@
  "activities": [],
  "comfort": [],
  "cutscenes": [],
+ "plannedCutscenes": [],
+ "notebookPages": [],
+ "cozy": null,
  "reserved": [],
- "revision": "55bb9f8c6541999c82631739851f5eb24dfd4ec82a34b0a6e2f9dc46c672c734"
+ "revision": "6933fa2996590967e87e1ade5d836ae451a0577aa0ba3701385532e5db99bc9c"
 }

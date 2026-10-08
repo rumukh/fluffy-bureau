@@ -1,6 +1,6 @@
 // Prologue «Первый день стажёра» (SCRIPT_PROLOGUE_CASE01_RU.md, P0–P3).
 import {
-  added, all, any, changed, cl, cutscene, dir, goto, has, L, lines, menu, minigame, not, opt, reveal, reward, scene,
+  act, added, all, any, changed, cl, cutscene, dir, goto, has, L, lines, menu, minigame, not, opt, reveal, reward, scene,
   seq, set, skill, wait, when, end, type CaseSource,
 } from '../../tools/content/dsl.ts';
 import { intro, p3Letter } from '../cutscenes/index.ts';
@@ -68,7 +68,7 @@ const scenes = [
     id: 'P0', title: 'Анкета стажёра', location: 'office-desk', cast: ['watsony'], presentation: 'dialogue',
     steps: [
       skill('intro', [cutscene('intro')], []),
-      dir('P0-D01', 'Стол Ватсони в Конторе. Ватсони держит перо.'),
+      dir('P0-D01', 'Стол Ватсони в Конторе. Ватсони держит перо.', null, [act.pose('watsony', { clip: 'nod' })]),
       L('P0-01'), L('P0-02'), wait('avatar.species'), L('P0-03'), wait('avatar.name'), L('P0-04'), wait('avatar.scarf'), L('P0-05'),
       goto('P1'),
     ],
@@ -76,9 +76,9 @@ const scenes = [
   scene({
     id: 'P1', title: 'Контора бюро', location: 'office', cast: ['khvosts', 'watsony'], presentation: 'dialogue',
     steps: [
-      dir('P1-D01', 'Входит Шерлок Хвостс, вокруг него плывут мыльные пузыри.'),
+      dir('P1-D01', 'Входит Шерлок Хвостс, вокруг него плывут мыльные пузыри.', null, [act.effect('bubbles', 1650, 700, 2.5), act.sfx('bubbles', 0.5)]),
       ...seq('P1-', 1, 3),
-      skill('inspect', [dir('P1-D02', 'Три предмета мягко светятся.'), L('P1-04'), minigame('p1-inspect')]),
+      skill('inspect', [dir('P1-D02', 'Три предмета мягко светятся.', null, [act.effect('sparkles', 560, 760, 2), act.sfx('sparkle', 0.5)]), L('P1-04'), minigame('p1-inspect')]),
       skill('lamp', [dir('P1-D03', 'В углу Конторы стоит лампа.'), ...seq('P1-', 9, 11), wait('lamp.on'), dir('P1-D04', 'Свет теплеет, музыка мягче. Нажать ещё раз — всё как было.'), wait('lamp.off'), L('P1-12')]),
       goto('P2'),
     ],
@@ -87,7 +87,7 @@ const scenes = [
     id: 'P2', title: 'Мини-дело «Где очки Ватсони?»', location: 'office', cast: ['khvosts', 'watsony'], presentation: 'dialogue',
     steps: [
       L('P2-01'), L('P2-02'),
-      skill('notebook', [dir('P2-D01', 'Открывается Блокнот с одной колонкой «Где?».'), ...seq('P2-', 3, 5)]),
+      skill('notebook', [dir('P2-D01', 'Открывается Блокнот с одной колонкой «Где?».', null, [act.sfx('page-turn', 0.6)]), ...seq('P2-', 3, 5)]),
       goto('P2-HUB'),
     ],
   }),
@@ -129,7 +129,7 @@ const scenes = [
       skill('pause', [L('P3-04')]),
       cutscene('p3.letter'),
       reward('rw-prologue-badge'), reward('rw-prologue-title'), reward('rw-prologue-buttons'),
-      skill('map', [dir('P3-D02', 'Открывается карта Пушистино. Активна только Пироговая улица.'), L('P3-08')]),
+      skill('map', [dir('P3-D02', 'Открывается карта Пушистино. Активна только Пироговая улица.', null, [act.sfx('page-turn', 0.6)]), L('P3-08')]),
       goto('P3-MAP'),
     ],
   }),

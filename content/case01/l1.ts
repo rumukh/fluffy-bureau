@@ -1,5 +1,5 @@
 // Case 1, level 1 (3×3×3). SCRIPT_PROLOGUE_CASE01_RU.md, C1-1…C1-10.
-import { all, cl, cutscene, dir, end, goto, has, L, menu, minigame, not, opt as mopt, reveal, reward, seq, skill, when, type VariantSource } from '../../tools/content/dsl.ts';
+import { act, all, cl, cutscene, dir, end, goto, has, L, menu, minigame, not, opt as mopt, reveal, reward, seq, skill, tap, when, type VariantSource } from '../../tools/content/dsl.ts';
 import {
   activity, and, bakerMeasures, eq, facts, factsScene, glossary, intended, intro, klubkiTutorial, ne, noConstraint, opt,
   rewardScene, versionScene, what, where, who,
@@ -20,7 +20,7 @@ export const level1: VariantSource = {
       steps: [
         ...intro(),
         ...seq('C1-1-', 8, 14),
-        skill('notebook', [dir('C1-1-D03', 'Блокнот раскрывается на три колонки.'), ...seq('C1-1-', 15, 16)]),
+        skill('notebook', [dir('C1-1-D03', 'Блокнот раскрывается на три колонки.', null, [act.sfx('page-turn', 0.6)]), ...seq('C1-1-', 15, 16)]),
         ...seq('C1-1-', 17, 18),
         klubkiTutorial(),
         goto(HUB),
@@ -43,7 +43,7 @@ export const level1: VariantSource = {
       steps: [
         skill('magnifier', [L('C1-2-01')]),
         minigame('c1l1-lupa'),
-        dir('C1-2-D01', 'Игрок открывает коробку.'),
+        dir('C1-2-D01', 'Игрок открывает коробку.', null, [act.sfx('pick-up', 0.6)]),
         ...seq('C1-2-', 5, 7),
         reveal('c1-lupa'),
         goto(HUB),
@@ -52,7 +52,7 @@ export const level1: VariantSource = {
     {
       id: 'C1-3', title: 'Мыловарня: «Чашка какао»', location: 'soap-workshop', cast: ['tyopa', 'fitilyok', 'khvosts', 'watsony'], presentation: 'minigame',
       steps: [
-        dir('C1-3-D01', 'Тёпа сидит у котла и прячет синие лапы за спину. Рядом светлячок Фитилёк.'),
+        dir('C1-3-D01', 'Тёпа сидит у котла и прячет синие лапы за спину. Рядом светлячок Фитилёк.', null, [act.pose('tyopa', { expression: 'worried', clip: 'shrug-shy' }), act.pose('fitilyok', { clip: 'hover' })]),
         L('C1-3-01'), L('C1-3-02'),
         skill('cocoa', [L('C1-3-03')]),
         minigame('c1l1-cocoa'),
@@ -66,7 +66,7 @@ export const level1: VariantSource = {
       id: 'C1-4', title: 'Разговор с мэром', location: 'pirogovaya-street', cast: ['pudding', 'khvosts', 'watsony'], presentation: 'dialogue',
       steps: [
         L('C1-4-01'), L('C1-4-02'),
-        dir('C1-4-D01', 'Пудинг высыпает семечки в ладошку и смущённо собирает обратно.'),
+        dir('C1-4-D01', 'Пудинг высыпает семечки в ладошку и смущённо собирает обратно.', null, [act.pose('pudding', { expression: 'surprised', clip: 'shrug-shy' }), act.sfx('pick-up', 0.5)]),
         L('C1-4-03'), L('C1-4-04'),
         reveal('c1-mayor'),
         goto(HUB),
@@ -77,8 +77,9 @@ export const level1: VariantSource = {
       steps: [
         skill('tracks', [L('C1-5-01')]),
         minigame('c1l1-tracks'),
-        dir('C1-5-D01', 'Следы ведут к сараю Картофана.'),
-        dir('C1-5-D02', 'Игрок нажимает на окно. Окно сарая крупно: у коробки мэра в крышке окошко, в нём виден пирог.', 'bg.shed-window'),
+        dir('C1-5-D01', 'Следы ведут к сараю Картофана. Окно сарая мягко светится.', 'bg.shed-exterior', [act.sfx('footsteps', 0.5)]),
+        tap('window'),
+        dir('C1-5-D02', 'Окно сарая крупно: у коробки мэра в крышке окошко, в нём виден пирог.', 'bg.shed-window', [act.sfx('magnifier-find', 0.6)]),
         ...seq('C1-5-', 5, 7),
         reveal('c1-tracks'),
         goto(HUB),
@@ -223,6 +224,7 @@ export const level1: VariantSource = {
   comfort: [],
   cutscenes: [shedL1, oven(1, 'C1-8'), rewardCutscene(1)],
   decisions: [
+    { id: 'C1L1-HEART', text: 'Сердечко доброты за утешение Тёпы выдаётся один раз на каждой сложности (как пуговки, Q38); на сложности 1 ключ прежний (case01:heart:tyopa), сохранения совместимы.', ref: 'T11, Q38' },
     { id: 'C1L1-T25', text: 'Ролики T25: разговор в сарае (C1-7, c1.shed.l1), пирог в печи (C1-8, c1.oven.l1) и награда (C1-10, c1.reward.l1). Реплики звучат в ролике в прежнем порядке; ремарки сцен заменены постановкой ролика; награды, «Уютный денёк» и переходы — шаги после ролика.', ref: 'T25' },
     { id: 'C1L1-D1', text: 'Варианты выбора на Пироговой улице исчезают после посещения; «Пойти по следам» появляется после «Лупы». На экране не больше трёх вариантов.', ref: 'Q11' },
     { id: 'C1L1-D2', text: 'Сцена C1-6 (вводная версии) звучит один раз, когда собраны У1–У3; затем кнопка «Приглашу на разговор» доступна в Блокноте.', ref: 'Q14' },
