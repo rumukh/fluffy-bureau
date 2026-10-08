@@ -169,10 +169,14 @@ function renderRun(app: App, view: GameView, run: RunView): HTMLElement {
     comfort: view.lamp,
     reducedMotion: app.reducedMotion(),
     level: run.level,
+    // Content staging (C's `dir.background` / `scene.background`) wins; the line map is the interim
+    // fallback until the packs carry it.
     background:
+      run.background ??
       BACKGROUND_BY_LINE[
         run.queue?.line.id ?? (run.step?.kind === 'line' ? run.step.line.id : '')
-      ] ?? null,
+      ] ??
+      null,
   });
   const step = run.step;
   // While searching with the magnifier the characters step back so every object is visible.

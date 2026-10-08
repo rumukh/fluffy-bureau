@@ -27,6 +27,7 @@ export const NAMESPACE = 'fluffy-bureau';
 export class Offline {
   private store: OfflinePackStore | null = null;
   private listeners = new Set<(status: OfflineStatus) => void>();
+  private busy = false;
   status: OfflineStatus = { state: 'checking' };
 
   constructor(
@@ -54,6 +55,9 @@ export class Offline {
 
   private set(status: OfflineStatus): void {
     this.status = status;
+    // A plain status hook for the parent corner's styling and end-to-end tests (no globals).
+    document.documentElement.dataset.offline =
+      status.state === 'ready' ? `ready:${status.update}` : status.state;
     for (const listener of this.listeners) listener(status);
   }
 
@@ -95,6 +99,25 @@ export class Offline {
   }
 
   /**
+   * Looks for a newer published build and installs it in the background (Q43). The running case is
+   * never reloaded; the new worker waits and takes over on the next launch. Quiet on failure.
+   */
+  async update(): Promise<void> {
+    if (!this.store || !navigator.onLine || this.busy) return;
+    if (this.status.state === 'ready' && this.status.update === 'installed-next-launch') return;
+    if (this.status.state === 'installing') return;
+    this.busy = true;
+    try {
+      const index = await this.fetchJson<OfflineIndex>('offline/index.json');
+      if (index.buildId !== this.buildId) await this.install();
+    } catch {
+      // Offline or a partial publish: try again later.
+    } finally {
+      this.busy = false;
+    }
+  }
+
+  /**
    * Installs every pack of the published build (the running one, or a newer update),
    * then registers its worker. Requires the network; never interrupts the running case.
    */
@@ -115,7 +138,10 @@ export class Offline {
         }
         done++;
       }
-      await registerOfflineWorker('worker.js', this.baseUrl);
+      const registration = await registerOfflineWorker('worker.js', this.baseUrl);
+      // Re-registering the same script URL does not look for a new worker; ask explicitly. The new
+      // worker installs and waits; it takes over when no page of the old build remains open.
+      if (index.buildId !== this.buildId) await registration.update();
       this.set({
         state: 'ready',
         buildId: index.buildId,

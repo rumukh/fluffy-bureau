@@ -69,6 +69,11 @@ export interface RunView {
   level: 1 | 2 | 3 | null;
   ended: boolean;
   scene: { id: string; location: string; cast: string[]; presentation: string };
+  /**
+   * Background asset for this moment: the latest `dir.background` at or before the cursor in this
+   * scene, else `scene.background`, else null (the location's default).
+   */
+  background: string | null;
   /** Stage directions since the last blocking step: stable ID and editorial text (presentation cues). */
   stage: { id: string; text: string }[];
   queue: { line: LineView; source: QueueSource; remaining: number } | null;
@@ -326,6 +331,7 @@ function projectRun(state: ProfileState, rules: GameRules, contentIndex: Content
       cast: [...scene.cast],
       presentation: scene.presentation,
     },
+    background: backgroundAt(scene, run.cursor),
     stage: run.stage.map((id) => ({ id, text: dirText(index, id) })),
     queue: head
       ? { line: line(head.line), source: head.source, remaining: run.queue.length }
@@ -371,4 +377,27 @@ function dirText(index: PackIndex, id: string): string {
     dirTexts.set(index.pack, map);
   }
   return map.get(id) ?? '';
+}
+
+type StagedStep = { t: string; background?: unknown; [key: string]: unknown };
+
+/** Latest `dir.background` on the path to the cursor (restart-safe: derived from position only). */
+function backgroundAt(
+  scene: { steps: readonly unknown[]; background?: unknown },
+  cursor: readonly { i: number; b: string | null }[],
+): string | null {
+  let found: string | null = typeof scene.background === 'string' ? scene.background : null;
+  let list = scene.steps as readonly StagedStep[];
+  for (const segment of cursor) {
+    for (let i = 0; i <= segment.i && i < list.length; i++) {
+      const step = list[i]!;
+      if (step.t === 'dir' && typeof step.background === 'string') found = step.background;
+    }
+    const current = list[segment.i];
+    if (!current || !segment.b) break;
+    const branch = current[segment.b];
+    if (!Array.isArray(branch)) break;
+    list = branch as StagedStep[];
+  }
+  return found;
 }

@@ -347,8 +347,19 @@ export async function buildWorker(out, packs, minify) {
 import { attachOfflineWorker } from '@aegis/browser/offline/worker';
 declare const self: ServiceWorkerGlobalScope;
 const store = new OfflinePackStore({ namespace: 'fluffy-bureau', baseUrl: self.registration.scope });
+const packs = ${JSON.stringify(packs.map(({ id, revision }) => ({ id, revision })))};
+// The browser may fetch a newer worker.js on its own before the game has downloaded that build's
+// packs. Refuse to install until every pinned pack is present, so the current build stays in charge.
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    store.list().then((installed) => {
+      const missing = packs.filter((p) => !installed.some((i) => i.id === p.id && i.revision === p.revision));
+      if (missing.length) throw new Error('Packs not installed: ' + missing.map((p) => p.id).join(', '));
+    }),
+  );
+});
 attachOfflineWorker(self, store, {
-  packs: ${JSON.stringify(packs.map(({ id, revision }) => ({ id, revision })))},
+  packs,
   shell: 'index.html',
   onError() {
     void self.clients.matchAll().then((clients) => {

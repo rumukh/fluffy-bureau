@@ -171,7 +171,11 @@ export class App {
     this.render();
     void this.offline.check().then((ready) => {
       if (!ready && navigator.onLine) void this.offline.install().catch(() => {});
+      else if (ready) void this.offline.update();
     });
+    // Updates arrive quietly while playing: when the device comes back online and twice an hour.
+    addEventListener('online', () => void this.offline.update());
+    setInterval(() => void this.offline.update(), 30 * 60_000);
   }
 
   reportError(error: unknown): void {
