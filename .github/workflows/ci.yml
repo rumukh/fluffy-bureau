@@ -35,12 +35,13 @@ jobs:
 
   smoke:
     name: Browser smoke (Chromium + WebKit)
-    runs-on: ubuntu-latest
+    # Playwright's image ships the exact browsers and system libraries for 1.64.0, so no apt install
+    # runs per job (the version must match @playwright/test). 1.64.0 is published for arm64 only so
+    # far, hence the arm runner; switch to the amd64 tag once it exists.
+    runs-on: ubuntu-24.04-arm
     timeout-minutes: 30
-    # Playwright's image ships the exact browsers and their system libraries for 1.64.0, so no apt
-    # install runs on each job; the version must match @playwright/test in package.json.
     container:
-      image: mcr.microsoft.com/playwright:v1.64.0-noble
+      image: mcr.microsoft.com/playwright:v1.64.0-noble-arm64
       options: --user 1001
     env:
       PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
