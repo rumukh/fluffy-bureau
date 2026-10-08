@@ -1,0 +1,67 @@
+{
+ "id": "tyopa",
+ "base": "puppets/tyopa/base.png",
+ "creature": "gentle raccoon",
+ "editCrop": [
+  206,
+  63,
+  512
+ ],
+ "neck": {
+  "y": 470,
+  "overlap": 18,
+  "pivot": [
+   512,
+   480
+  ]
+ },
+ "features": {
+  "eyes": {
+   "ellipses": [
+    [
+     514,
+     331,
+     125,
+     44
+    ]
+   ],
+   "variants": [
+    "half",
+    "closed"
+   ]
+  },
+  "mouth": {
+   "ellipses": [
+    [
+     512,
+     432,
+     70,
+     32
+    ]
+   ],
+   "variants": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+   ]
+  },
+  "brows": {
+   "ellipses": [
+    [
+     508,
+     224,
+     115,
+     22
+    ]
+   ],
+   "variants": [
+    "up",
+    "worried"
+   ]
+  }
+ },
+ "bodyVariants": {}
+}

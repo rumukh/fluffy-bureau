@@ -1,0 +1,83 @@
+{
+  "id": "avatar.fox",
+  "dir": "avatar_fox",
+  "base": "puppets/avatar_fox/base.png",
+  "creature": "young fox cub child",
+  "editCrop": [
+    195,
+    200,
+    512
+  ],
+  "neck": {
+    "y": 605,
+    "overlap": 18,
+    "pivot": [
+      512,
+      615
+    ]
+  },
+  "features": {
+    "eyes": {
+      "ellipses": [
+        [
+          515,
+          442,
+          175,
+          60
+        ]
+      ],
+      "variants": [
+        "half",
+        "closed",
+        "happy"
+      ]
+    },
+    "brows": {
+      "ellipses": [
+        [
+          515,
+          335,
+          160,
+          20
+        ]
+      ],
+      "variants": [
+        "up",
+        "worried"
+      ]
+    },
+    "mouth": {
+      "ellipses": [
+        [
+          512,
+          552,
+          90,
+          28
+        ]
+      ],
+      "variants": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
+    }
+  },
+  "avatar": {
+    "scarf": {
+      "y": [
+        555,
+        1090
+      ],
+      "x": [
+        262,
+        762
+      ],
+      "satMax": 0.24,
+      "valMin": 0.55
+    }
+  },
+  "bodyVariants": {}
+}

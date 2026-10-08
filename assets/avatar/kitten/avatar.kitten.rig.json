@@ -1,0 +1,173 @@
+{
+ "format": "aegis-rig/1",
+ "id": "avatar.kitten",
+ "revision": "1",
+ "atlases": [
+  "avatar.kitten.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -229.2,
+  "y": -827.4,
+  "width": 436.2,
+  "height": 827.4
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 229.2,
+    "y": 510.0
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "variants": {
+    "rest": "avatar.kitten.atlas#body.rest"
+   },
+   "variant": "rest"
+  },
+  {
+   "id": "head",
+   "parent": "body",
+   "frame": "avatar.kitten.atlas#head",
+   "pivot": {
+    "x": 202.8,
+    "y": 323.4
+   },
+   "position": {
+    "x": 0.0,
+    "y": -504.0
+   },
+   "z": 20
+  },
+  {
+   "id": "eyes",
+   "parent": "head",
+   "pivot": {
+    "x": 121.2,
+    "y": 44.4
+   },
+   "position": {
+    "x": 0.0,
+    "y": -113.4
+   },
+   "z": 21,
+   "variants": {
+    "open": "avatar.kitten.atlas#eyes.open",
+    "half": "avatar.kitten.atlas#eyes.half",
+    "closed": "avatar.kitten.atlas#eyes.closed",
+    "happy": "avatar.kitten.atlas#eyes.happy"
+   },
+   "variant": "open"
+  },
+  {
+   "id": "brows",
+   "parent": "head",
+   "pivot": {
+    "x": 103.2,
+    "y": 20.4
+   },
+   "position": {
+    "x": 1.2,
+    "y": -186.0
+   },
+   "z": 22,
+   "variants": {
+    "neutral": "avatar.kitten.atlas#brows.neutral",
+    "up": "avatar.kitten.atlas#brows.up",
+    "worried": "avatar.kitten.atlas#brows.worried"
+   },
+   "variant": "neutral"
+  },
+  {
+   "id": "mouth",
+   "parent": "head",
+   "pivot": {
+    "x": 58.2,
+    "y": 25.2
+   },
+   "position": {
+    "x": 0.0,
+    "y": -48.0
+   },
+   "z": 23,
+   "variants": {
+    "X": "avatar.kitten.atlas#mouth.X",
+    "A": "avatar.kitten.atlas#mouth.A",
+    "B": "avatar.kitten.atlas#mouth.B",
+    "C": "avatar.kitten.atlas#mouth.C",
+    "D": "avatar.kitten.atlas#mouth.D",
+    "E": "avatar.kitten.atlas#mouth.E",
+    "F": "avatar.kitten.atlas#mouth.F"
+   },
+   "variant": "X"
+  },
+  {
+   "id": "scarf",
+   "parent": "body",
+   "frame": "avatar.kitten.atlas#scarf",
+   "pivot": {
+    "x": 103.2,
+    "y": 44.64
+   },
+   "position": {
+    "x": 0.6,
+    "y": -454.56
+   },
+   "z": 15,
+   "tint": {
+    "channel": "scarf"
+   }
+  }
+ ],
+ "roles": {
+  "head": "head",
+  "lookAt": "head",
+  "eyes": "eyes",
+  "brows": "brows",
+  "mouth": "mouth"
+ },
+ "expressions": {
+  "neutral": {
+   "brows": "neutral",
+   "eyes": "open"
+  },
+  "surprised": {
+   "brows": "up"
+  },
+  "worried": {
+   "brows": "worried"
+  },
+  "happy": {
+   "eyes": "happy"
+  }
+ },
+ "slots": {
+  "hat": {
+   "parent": "head",
+   "position": {
+    "x": 0,
+    "y": -252.0
+   },
+   "z": 40
+  }
+ },
+ "tints": {
+  "scarf": {
+   "default": "#c8553d"
+  }
+ },
+ "anchors": {
+  "badge": {
+   "part": "scarf",
+   "x": 103.2,
+   "y": 100.44
+  }
+ }
+}

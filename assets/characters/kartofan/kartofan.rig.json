@@ -1,0 +1,103 @@
+{
+ "format": "aegis-rig/1",
+ "id": "kartofan",
+ "revision": "1",
+ "atlases": [
+  "kartofan.atlas"
+ ],
+ "origin": {
+  "x": 0,
+  "y": 0
+ },
+ "bounds": {
+  "x": -226.8,
+  "y": -796.8,
+  "width": 455.4,
+  "height": 796.8
+ },
+ "parts": [
+  {
+   "id": "body",
+   "pivot": {
+    "x": 226.8,
+    "y": 499.2
+   },
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "z": 10,
+   "variants": {
+    "rest": "kartofan.atlas#body.rest"
+   },
+   "variant": "rest"
+  },
+  {
+   "id": "head",
+   "parent": "body",
+   "frame": "kartofan.atlas#head",
+   "pivot": {
+    "x": 210.6,
+    "y": 304.8
+   },
+   "position": {
+    "x": 0.0,
+    "y": -492.0
+   },
+   "z": 20
+  },
+  {
+   "id": "eyes",
+   "parent": "head",
+   "pivot": {
+    "x": 91.2,
+    "y": 22.8
+   },
+   "position": {
+    "x": 1.2,
+    "y": -129.6
+   },
+   "z": 21,
+   "variants": {
+    "open": "kartofan.atlas#eyes.open",
+    "half": "kartofan.atlas#eyes.half",
+    "closed": "kartofan.atlas#eyes.closed"
+   },
+   "variant": "open"
+  },
+  {
+   "id": "mouth",
+   "parent": "head",
+   "pivot": {
+    "x": 55.2,
+    "y": 26.4
+   },
+   "position": {
+    "x": 0.6,
+    "y": -75.6
+   },
+   "z": 23,
+   "variants": {
+    "X": "kartofan.atlas#mouth.X",
+    "A": "kartofan.atlas#mouth.A",
+    "B": "kartofan.atlas#mouth.B",
+    "C": "kartofan.atlas#mouth.C",
+    "D": "kartofan.atlas#mouth.D",
+    "E": "kartofan.atlas#mouth.E",
+    "F": "kartofan.atlas#mouth.F"
+   },
+   "variant": "X"
+  }
+ ],
+ "roles": {
+  "head": "head",
+  "lookAt": "head",
+  "eyes": "eyes",
+  "mouth": "mouth"
+ },
+ "expressions": {
+  "neutral": {
+   "eyes": "open"
+  }
+ }
+}
