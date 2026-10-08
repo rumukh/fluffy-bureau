@@ -1409,6 +1409,1317 @@
    }
   },
   {
+   "id": "case02.cipher.button-blue-1-circle",
+   "path": "case02/cipher/button-blue-1-circle.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 492,
+   "sha256": "31df7f6cbecec105e60f0c3149f56c61061d57524192f258713066227f64e471",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-blue-1-flower",
+   "path": "case02/cipher/button-blue-1-flower.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 1140,
+   "sha256": "3058413ef5da7a25912304866ab47c209b37967d1f8cc8a5c8336524ba2db29e",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-blue-1-heart",
+   "path": "case02/cipher/button-blue-1-heart.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 747,
+   "sha256": "c4ea6e7f911050610121cf1f567382775b6a5cd49fdfa2604301488ab8003538",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-blue-1-square",
+   "path": "case02/cipher/button-blue-1-square.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 552,
+   "sha256": "b7a1e43b46c86e9c08c4f768ee9ec7426b2f9bd6749a8f737a54a6322666fdb4",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-blue-2-circle",
+   "path": "case02/cipher/button-blue-2-circle.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 540,
+   "sha256": "e5ef30c1c93b539d411085b6221c5f990d1b0963830943a087f455cc5bac6ba7",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-blue-2-flower",
+   "path": "case02/cipher/button-blue-2-flower.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 1188,
+   "sha256": "118c3e9e728eb9f287265d7f4ad0194d4346a6eb6ac10e706e243beda6dc9ced",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-blue-2-heart",
+   "path": "case02/cipher/button-blue-2-heart.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 795,
+   "sha256": "da3a52a8fb0e8fbad9d264e1f2225d8e1b7ff53a3af3d871a9db55b0be431bee",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-blue-2-square",
+   "path": "case02/cipher/button-blue-2-square.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 600,
+   "sha256": "68466264ee9d28efe98186714fef5c3eafb6dfa3a0fb17e6b74dc4bb75418887",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-blue-3-circle",
+   "path": "case02/cipher/button-blue-3-circle.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 588,
+   "sha256": "0e7e774d016329e027566e5fe49127b393a945538ff3b72ec4337706f755d216",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-blue-3-flower",
+   "path": "case02/cipher/button-blue-3-flower.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 1236,
+   "sha256": "2c1e4fa543387d86dc121b62eeddef1c7fb3f1f18e25b30c78fac3fd0f50c8ed",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-blue-3-heart",
+   "path": "case02/cipher/button-blue-3-heart.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 843,
+   "sha256": "0bbd5c4da121424f15c04a1f3cb19cc2f891dd6e1fee14f91c749f045ed1b88a",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-blue-3-square",
+   "path": "case02/cipher/button-blue-3-square.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 648,
+   "sha256": "20a0f3d990e421687e6b95645deaa2992357de7dacf738be28ba63c414dc7553",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-blue-4-circle",
+   "path": "case02/cipher/button-blue-4-circle.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 636,
+   "sha256": "dfce3b84350379141f24669e9d23fc422017dae74a4313ecaaeca8c3e3cc9105",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-blue-4-flower",
+   "path": "case02/cipher/button-blue-4-flower.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 1284,
+   "sha256": "89bf34faf04b904dfa5b7555d8c219a25c71160ff3359a6a8a5709e557a8c4d1",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-blue-4-heart",
+   "path": "case02/cipher/button-blue-4-heart.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 891,
+   "sha256": "de046a1606f9567119f9adf635a53fcd2e599e976240ef6c44275542a63389aa",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-blue-4-square",
+   "path": "case02/cipher/button-blue-4-square.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 696,
+   "sha256": "2067efc0ef3916563f13d266a02229fb7af7bf74ad4e5c84b70e63de82ed5fff",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-green-1-circle",
+   "path": "case02/cipher/button-green-1-circle.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 492,
+   "sha256": "de257cd0990e5b3f8f0724d4eeca351b47384f5a0da5d72cf482bc141b458d5a",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-green-1-flower",
+   "path": "case02/cipher/button-green-1-flower.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 1140,
+   "sha256": "d1031170cd8a3128fccea7444a7a6b5f5ec79e16f280cae7ab77bb76be135ca7",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-green-1-heart",
+   "path": "case02/cipher/button-green-1-heart.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 747,
+   "sha256": "27249b6e6cf1708fd1fa7d7938c16e4fbe20c9a7fd4e7bab8f483bd88383eabb",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-green-1-square",
+   "path": "case02/cipher/button-green-1-square.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 552,
+   "sha256": "2f2bb266b343441027d8c71d2309628d301979e2ceaca48c93e5e74f4f148491",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-green-2-circle",
+   "path": "case02/cipher/button-green-2-circle.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 540,
+   "sha256": "8622d47108189b4da68407ce65d0573f4a915558cec9d989cb98a3a6a95aa797",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-green-2-flower",
+   "path": "case02/cipher/button-green-2-flower.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 1188,
+   "sha256": "794d20befe892d669663c9957fe3ba00642163f56f29ae39bfe436050bb2e108",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-green-2-heart",
+   "path": "case02/cipher/button-green-2-heart.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 795,
+   "sha256": "85b1b779fd73454bbc8b8d3a9cc5563318aca8d741365548738ab663c78d9376",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-green-2-square",
+   "path": "case02/cipher/button-green-2-square.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 600,
+   "sha256": "c8d28d85871e49cc95681f1ed0c49122b869a36665d18642634ffc04b5b46172",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-green-3-circle",
+   "path": "case02/cipher/button-green-3-circle.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 588,
+   "sha256": "cc0a2a9c2f017476dbcbd781648833ac8eb9ca3218d85d2a2c13dba519c07482",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-green-3-flower",
+   "path": "case02/cipher/button-green-3-flower.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 1236,
+   "sha256": "28ffb190943be6b5e9ccb7f2ea8df9b22916912e4203fddb17544d8971150815",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-green-3-heart",
+   "path": "case02/cipher/button-green-3-heart.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 843,
+   "sha256": "3c9eb39881443c155159a18cb4759408d3b5ca1719136bc36f346df49797c743",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-green-3-square",
+   "path": "case02/cipher/button-green-3-square.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 648,
+   "sha256": "dbe3eb172c14fea233354e00967b44872c4ce9870974fbcff4e8198b542f8a52",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-green-4-circle",
+   "path": "case02/cipher/button-green-4-circle.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 636,
+   "sha256": "e11fae2f9333a7c5bdbc323a1c800ea7dbfb9f12cb2c1f240d2b12efdfac5632",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-green-4-flower",
+   "path": "case02/cipher/button-green-4-flower.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 1284,
+   "sha256": "c08e37cbc1418ea67f48679e82dcb5046aad82432dd5c4c063e7e6572c43c641",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-green-4-heart",
+   "path": "case02/cipher/button-green-4-heart.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 891,
+   "sha256": "6feaa91be4881b1c9d976ee2c295f593e7e5e74f50322890111e2954cd1c58b5",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-green-4-square",
+   "path": "case02/cipher/button-green-4-square.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 696,
+   "sha256": "84f50dd2d86b9b3e82e0f6feeca328e17a7276dbe8201c102bc605d5393e1dd8",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-honey-1-circle",
+   "path": "case02/cipher/button-honey-1-circle.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 492,
+   "sha256": "d25b0559498305de3c3909f76446a82f3e0cd0c30e82ec27ce3e1894f07c1d62",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-honey-1-flower",
+   "path": "case02/cipher/button-honey-1-flower.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 1140,
+   "sha256": "8340c8ab7927db55d31d2b3af80bc3c656f8c35c8e09543dd8766098a0208427",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-honey-1-heart",
+   "path": "case02/cipher/button-honey-1-heart.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 747,
+   "sha256": "ccc9518759e71592994205811fa5bc309334ee14f098779150fa12bcf207f5ac",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-honey-1-square",
+   "path": "case02/cipher/button-honey-1-square.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 552,
+   "sha256": "cfbc63ba4bd1965395a478cdbe62e3cd7b11554d3ff583c47e64f6d2274cb756",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-honey-2-circle",
+   "path": "case02/cipher/button-honey-2-circle.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 540,
+   "sha256": "5873435c0ddd840519664e91da7bd1b4d1085edf22a8f33e636f5dfebdf6ec6c",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-honey-2-flower",
+   "path": "case02/cipher/button-honey-2-flower.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 1188,
+   "sha256": "633a4aa92eae17daa8706b3d0f514ebc708e1deed69c48571ca348cf1fe757c2",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-honey-2-heart",
+   "path": "case02/cipher/button-honey-2-heart.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 795,
+   "sha256": "554fc122e3f7a75a040c990a471c8cda842e2b89158d4283a2010cc7e4d5b10c",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-honey-2-square",
+   "path": "case02/cipher/button-honey-2-square.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 600,
+   "sha256": "d3bf97428211b8389ce8aa18f859a47cc1c70e3f951cdc5047cdf7c7a850fdbf",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-honey-3-circle",
+   "path": "case02/cipher/button-honey-3-circle.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 588,
+   "sha256": "42f0a4ef4cdf1985ade94ff6a4ac9febc51fb5e9a9c25915848d579467ba80fe",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-honey-3-flower",
+   "path": "case02/cipher/button-honey-3-flower.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 1236,
+   "sha256": "8e12894afe27385b8da162f9dc71ac4baa90f06bcee1daf60e0aa9624147250f",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-honey-3-heart",
+   "path": "case02/cipher/button-honey-3-heart.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 843,
+   "sha256": "93816fa417c10f68382eafaf4ea393a11e30cedfc9bd1c2689a4d9ad0d83622f",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-honey-3-square",
+   "path": "case02/cipher/button-honey-3-square.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 648,
+   "sha256": "30418ba63cc49b09effda4b6ce4a292d676b5a1432e343c2334a83f503ab8de9",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-honey-4-circle",
+   "path": "case02/cipher/button-honey-4-circle.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 636,
+   "sha256": "10fe734ddc5ea44b0937591f191f519fe44074cb983023efa26a48bf897e15f3",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-honey-4-flower",
+   "path": "case02/cipher/button-honey-4-flower.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 1284,
+   "sha256": "52f7273a74e68011ecb4d0ed72b17f10fb6e01fa9b779bda68106f4a681ad8a3",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-honey-4-heart",
+   "path": "case02/cipher/button-honey-4-heart.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 891,
+   "sha256": "90c45ad02756950c50d14984575547626420962d80a842b8d1bf60e6419c721c",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-honey-4-square",
+   "path": "case02/cipher/button-honey-4-square.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 696,
+   "sha256": "a07d5a04de1bf774d41e0ede79c71e99e37a487372f6b663ee3d97ab32310203",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-rose-1-circle",
+   "path": "case02/cipher/button-rose-1-circle.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 492,
+   "sha256": "f240208b4450d742e5319a974d78fd0fd3ca219b3501f7e6be5ff2b6963dd00f",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-rose-1-flower",
+   "path": "case02/cipher/button-rose-1-flower.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 1140,
+   "sha256": "adcd634717224b6941bca260499f4c6944fd1723b27aa1d8867801fc7f30e4d3",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-rose-1-heart",
+   "path": "case02/cipher/button-rose-1-heart.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 747,
+   "sha256": "b997025744caed810ba58e76cf00f0cd59c8db1a218ab69bf575910083d453d5",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-rose-1-square",
+   "path": "case02/cipher/button-rose-1-square.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 552,
+   "sha256": "f1cc48139d25f4bb9a1ff055b541b411c1fa0e1f7fa6d9d1c81078e04c6e2db6",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-rose-2-circle",
+   "path": "case02/cipher/button-rose-2-circle.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 540,
+   "sha256": "f000a1020df581af12d94f39ae8d794011c3f5f4e3ab9a5a1149208bea6e1db5",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-rose-2-flower",
+   "path": "case02/cipher/button-rose-2-flower.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 1188,
+   "sha256": "f3e71b58b9a2f548fd8613edd8e7b86ec17d287e528231dda24fabebf9c38e04",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-rose-2-heart",
+   "path": "case02/cipher/button-rose-2-heart.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 795,
+   "sha256": "18b8a8bfa40b7e0ec6471b9255777a962649613cde6c3d789e676b70d2ff0701",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-rose-2-square",
+   "path": "case02/cipher/button-rose-2-square.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 600,
+   "sha256": "5c0234700f1826a8dd48600421f6ec51e162d9e58c2ebd69cccf0a988c4651ee",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-rose-3-circle",
+   "path": "case02/cipher/button-rose-3-circle.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 588,
+   "sha256": "ed93ae516c4ccc32b3fc9d624ee10b14e2120e4cc2251e942aaaf77e77129f0b",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-rose-3-flower",
+   "path": "case02/cipher/button-rose-3-flower.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 1236,
+   "sha256": "baaf40f98d7b3a49af153d2fe0373d458c98d40d6ae945952e34977f51103668",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-rose-3-heart",
+   "path": "case02/cipher/button-rose-3-heart.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 843,
+   "sha256": "245669a562fdcdece957c68e7cf941f377751a4264b629d3f7d95f0f07d09d98",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-rose-3-square",
+   "path": "case02/cipher/button-rose-3-square.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 648,
+   "sha256": "9dd2dbee032ea203f856939010283240f2e5aa547c2911ac1b78fb47ad234907",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-rose-4-circle",
+   "path": "case02/cipher/button-rose-4-circle.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 636,
+   "sha256": "b1c812e29dcb2593957fb1b3d20494102d6f0a15dd45fac82ffcf8a70ac7a8ad",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-rose-4-flower",
+   "path": "case02/cipher/button-rose-4-flower.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 1284,
+   "sha256": "252b18944b567a638577f66968210a8eaa36b5944ce60269b4672ef90f954e4a",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-rose-4-heart",
+   "path": "case02/cipher/button-rose-4-heart.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 891,
+   "sha256": "5f7ac1c0b43eaf223ecc67dd72a23f38cb1c4e55b8dba8bbdaccd3f6dfe3cdd6",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.button-rose-4-square",
+   "path": "case02/cipher/button-rose-4-square.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 696,
+   "sha256": "fb8c0e026a4900389d162c0687e5cc166f577720df7a09228967a43caa1ae4d3",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.envelope",
+   "path": "case02/cipher/envelope.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 423,
+   "sha256": "1eb24d20a96095b89cd542766625f4255886408151344b35a0a97e60a90d2b9a",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.envelope-sealed",
+   "path": "case02/cipher/envelope-sealed.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 583,
+   "sha256": "18570133377d6223f4668ec24510bb4ab5b734f0549a0ba8f1397fa673753670",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.index",
+   "path": "case02/cipher/index.json",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "json",
+   "bytes": 12583,
+   "sha256": "1d4db5c31ad493a4a66ba17fe1281b948dcf6a7588ddd4798036c5113065fd6f",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.street-parkovaya",
+   "path": "case02/cipher/street-parkovaya.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 322,
+   "sha256": "b7650bdb2c5613496cbb6e8e4cad8f816f352ae77ae48ef361850eb8f58a6132",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
+   "id": "case02.cipher.street-pirogovaya",
+   "path": "case02/cipher/street-pirogovaya.svg",
+   "pack": "case02",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 546,
+   "sha256": "b32106cd72d5dd75285b716afee77bcf5fedbbfa24fa8b02c94f79af514d823e",
+   "provenance": {
+    "tool": "tools/assets/art/cipher_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/cipher_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "Case 2 button cipher (R01, D17): colour + holes + shape."
+   }
+  },
+  {
    "id": "char.fitilyok.base.webp",
    "path": "characters/fitilyok/base.webp",
    "pack": "shell",
@@ -15944,6 +17255,519 @@
    }
   },
   {
+   "id": "sound-clue.door-creak",
+   "path": "sound-clues/door-creak.mp3",
+   "pack": "case03",
+   "kind": "sfx",
+   "width": null,
+   "height": null,
+   "durationMs": 2038,
+   "format": "mp3",
+   "bytes": 24808,
+   "sha256": "ac8fd958dedbdf878438315607d15ecf2cebea1652c162a87e5a117e993c84ec",
+   "provenance": {
+    "tool": "tools/assets/audio/sound_clues.py (numpy synthesis, no recordings)",
+    "source": "tools/assets/audio/sound_clues.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "«Услышь разницу» samples with their silent visual form (Q31, T19)."
+   }
+  },
+  {
+   "id": "sound-clue.door-creak.wave",
+   "path": "sound-clues/door-creak.wave.svg",
+   "pack": "case03",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 7021,
+   "sha256": "e456581354421ac974c6cca91b2e34eaddd1686bd7880e61c56ea72cf6251f41",
+   "provenance": {
+    "tool": "tools/assets/audio/sound_clues.py (numpy synthesis, no recordings)",
+    "source": "tools/assets/audio/sound_clues.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "«Услышь разницу» samples with their silent visual form (Q31, T19)."
+   }
+  },
+  {
+   "id": "sound-clue.hammer-knock",
+   "path": "sound-clues/hammer-knock.mp3",
+   "pack": "case03",
+   "kind": "sfx",
+   "width": null,
+   "height": null,
+   "durationMs": 2429,
+   "format": "mp3",
+   "bytes": 29510,
+   "sha256": "216794caab38b53bf08a88a2be9f2abddc3d303df6156c1329112df353fe77b9",
+   "provenance": {
+    "tool": "tools/assets/audio/sound_clues.py (numpy synthesis, no recordings)",
+    "source": "tools/assets/audio/sound_clues.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "«Услышь разницу» samples with their silent visual form (Q31, T19)."
+   }
+  },
+  {
+   "id": "sound-clue.hammer-knock.wave",
+   "path": "sound-clues/hammer-knock.wave.svg",
+   "pack": "case03",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 6994,
+   "sha256": "e05a0231ec906b2ee2867f7d6ab38d2a7ad8e9a6c255b370da40efc5dcfd3931",
+   "provenance": {
+    "tool": "tools/assets/audio/sound_clues.py (numpy synthesis, no recordings)",
+    "source": "tools/assets/audio/sound_clues.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "«Услышь разницу» samples with their silent visual form (Q31, T19)."
+   }
+  },
+  {
+   "id": "sound-clue.index",
+   "path": "sound-clues/index.json",
+   "pack": "case03",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "json",
+   "bytes": 17679,
+   "sha256": "f4d6f625be07f64e34e1f3b3c18b6e9859894df0a196852803d1dd9c9ea49d52",
+   "provenance": {
+    "tool": "tools/assets/audio/sound_clues.py (numpy synthesis, no recordings)",
+    "source": "tools/assets/audio/sound_clues.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "«Услышь разницу» samples with their silent visual form (Q31, T19)."
+   }
+  },
+  {
+   "id": "sound-clue.lamp-shutter",
+   "path": "sound-clues/lamp-shutter.mp3",
+   "pack": "case03",
+   "kind": "sfx",
+   "width": null,
+   "height": null,
+   "durationMs": 2038,
+   "format": "mp3",
+   "bytes": 24808,
+   "sha256": "4c12f548a95757d3977a0590bf0b54260b91b225f883651f7d6c5e18257c76d4",
+   "provenance": {
+    "tool": "tools/assets/audio/sound_clues.py (numpy synthesis, no recordings)",
+    "source": "tools/assets/audio/sound_clues.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "«Услышь разницу» samples with their silent visual form (Q31, T19)."
+   }
+  },
+  {
+   "id": "sound-clue.lamp-shutter.wave",
+   "path": "sound-clues/lamp-shutter.wave.svg",
+   "pack": "case03",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 6983,
+   "sha256": "e1ca43123f1d6a3502780d40b6a31bccf9dd35e92b7ebb02515d914586e7085d",
+   "provenance": {
+    "tool": "tools/assets/audio/sound_clues.py (numpy synthesis, no recordings)",
+    "source": "tools/assets/audio/sound_clues.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "«Услышь разницу» samples with their silent visual form (Q31, T19)."
+   }
+  },
+  {
+   "id": "sound-clue.magpie-wings",
+   "path": "sound-clues/magpie-wings.mp3",
+   "pack": "case03",
+   "kind": "sfx",
+   "width": null,
+   "height": null,
+   "durationMs": 2638,
+   "format": "mp3",
+   "bytes": 32017,
+   "sha256": "7510e6828d712e90704deb43b9f9e21563c63bcc51dae568dc83d00b9c0b27d0",
+   "provenance": {
+    "tool": "tools/assets/audio/sound_clues.py (numpy synthesis, no recordings)",
+    "source": "tools/assets/audio/sound_clues.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "«Услышь разницу» samples with their silent visual form (Q31, T19)."
+   }
+  },
+  {
+   "id": "sound-clue.magpie-wings.wave",
+   "path": "sound-clues/magpie-wings.wave.svg",
+   "pack": "case03",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 7006,
+   "sha256": "0f45d2c77b0b2d15412bf979dc5078953c9f650a88921f3edae723f66e66d64b",
+   "provenance": {
+    "tool": "tools/assets/audio/sound_clues.py (numpy synthesis, no recordings)",
+    "source": "tools/assets/audio/sound_clues.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "«Услышь разницу» samples with their silent visual form (Q31, T19)."
+   }
+  },
+  {
+   "id": "sound-clue.night-click",
+   "path": "sound-clues/night-click.mp3",
+   "pack": "case03",
+   "kind": "sfx",
+   "width": null,
+   "height": null,
+   "durationMs": 2038,
+   "format": "mp3",
+   "bytes": 24808,
+   "sha256": "28bb925d5e4fed77c2fc2c1b4fdbd7099cbf42df719fb16729fce9c842bb5e1f",
+   "provenance": {
+    "tool": "tools/assets/audio/sound_clues.py (numpy synthesis, no recordings)",
+    "source": "tools/assets/audio/sound_clues.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "«Услышь разницу» samples with their silent visual form (Q31, T19)."
+   }
+  },
+  {
+   "id": "sound-clue.night-click.wave",
+   "path": "sound-clues/night-click.wave.svg",
+   "pack": "case03",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 6983,
+   "sha256": "744f2bc3aa6788a03f0e699c45c7a31284f6f037cf2d0ae2e34a8d59d9933f79",
+   "provenance": {
+    "tool": "tools/assets/audio/sound_clues.py (numpy synthesis, no recordings)",
+    "source": "tools/assets/audio/sound_clues.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "«Услышь разницу» samples with their silent visual form (Q31, T19)."
+   }
+  },
+  {
+   "id": "sound-clue.night-drops",
+   "path": "sound-clues/night-drops.mp3",
+   "pack": "case03",
+   "kind": "sfx",
+   "width": null,
+   "height": null,
+   "durationMs": 2429,
+   "format": "mp3",
+   "bytes": 29510,
+   "sha256": "d20bfe3c8f7f93a994ea8e990264892d68243e7d9de94798a846614d3bdedb59",
+   "provenance": {
+    "tool": "tools/assets/audio/sound_clues.py (numpy synthesis, no recordings)",
+    "source": "tools/assets/audio/sound_clues.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "«Услышь разницу» samples with their silent visual form (Q31, T19)."
+   }
+  },
+  {
+   "id": "sound-clue.night-drops.wave",
+   "path": "sound-clues/night-drops.wave.svg",
+   "pack": "case03",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 7012,
+   "sha256": "3a10308c7b344bd27c223b9dac60d600efd99f10a38d4e2d9080a8ba796adf72",
+   "provenance": {
+    "tool": "tools/assets/audio/sound_clues.py (numpy synthesis, no recordings)",
+    "source": "tools/assets/audio/sound_clues.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "«Услышь разницу» samples with their silent visual form (Q31, T19)."
+   }
+  },
+  {
+   "id": "sound-clue.night-rustle",
+   "path": "sound-clues/night-rustle.mp3",
+   "pack": "case03",
+   "kind": "sfx",
+   "width": null,
+   "height": null,
+   "durationMs": 2638,
+   "format": "mp3",
+   "bytes": 32017,
+   "sha256": "b3299ad450d222267ebc8ca668e52f0103a5dcf8936a57aeaa1e04cea40d7edd",
+   "provenance": {
+    "tool": "tools/assets/audio/sound_clues.py (numpy synthesis, no recordings)",
+    "source": "tools/assets/audio/sound_clues.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "«Услышь разницу» samples with their silent visual form (Q31, T19)."
+   }
+  },
+  {
+   "id": "sound-clue.night-rustle.wave",
+   "path": "sound-clues/night-rustle.wave.svg",
+   "pack": "case03",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 7031,
+   "sha256": "13cac6c9ae38f64e40543ca3c91cd586647c6d9507d602e7034601cc6fcd08e9",
+   "provenance": {
+    "tool": "tools/assets/audio/sound_clues.py (numpy synthesis, no recordings)",
+    "source": "tools/assets/audio/sound_clues.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "«Услышь разницу» samples with their silent visual form (Q31, T19)."
+   }
+  },
+  {
+   "id": "sound-clue.pages",
+   "path": "sound-clues/pages.mp3",
+   "pack": "case03",
+   "kind": "sfx",
+   "width": null,
+   "height": null,
+   "durationMs": 2638,
+   "format": "mp3",
+   "bytes": 32017,
+   "sha256": "eeb63518c87bc9600a909eee71fe61749f3eba2be751123a6969dc9bc7c87e38",
+   "provenance": {
+    "tool": "tools/assets/audio/sound_clues.py (numpy synthesis, no recordings)",
+    "source": "tools/assets/audio/sound_clues.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "«Услышь разницу» samples with their silent visual form (Q31, T19)."
+   }
+  },
+  {
+   "id": "sound-clue.pages.wave",
+   "path": "sound-clues/pages.wave.svg",
+   "pack": "case03",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 7008,
+   "sha256": "e05a205270f0efba38a0c863649fd68714a935b989a66e6cb318fe6652aa7a0f",
+   "provenance": {
+    "tool": "tools/assets/audio/sound_clues.py (numpy synthesis, no recordings)",
+    "source": "tools/assets/audio/sound_clues.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "«Услышь разницу» samples with their silent visual form (Q31, T19)."
+   }
+  },
+  {
+   "id": "sound-clue.reeds-rustle",
+   "path": "sound-clues/reeds-rustle.mp3",
+   "pack": "case03",
+   "kind": "sfx",
+   "width": null,
+   "height": null,
+   "durationMs": 2638,
+   "format": "mp3",
+   "bytes": 32017,
+   "sha256": "90fc9a490a6786b187aa1203daaf6190c004ee937af8942d0bab5ba6c49143bf",
+   "provenance": {
+    "tool": "tools/assets/audio/sound_clues.py (numpy synthesis, no recordings)",
+    "source": "tools/assets/audio/sound_clues.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "«Услышь разницу» samples with their silent visual form (Q31, T19)."
+   }
+  },
+  {
+   "id": "sound-clue.reeds-rustle.wave",
+   "path": "sound-clues/reeds-rustle.wave.svg",
+   "pack": "case03",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 7055,
+   "sha256": "1522facd95fcfb85cc807a5c6132bd3936661878eb9ce18f8c0eed15f07deb8d",
+   "provenance": {
+    "tool": "tools/assets/audio/sound_clues.py (numpy synthesis, no recordings)",
+    "source": "tools/assets/audio/sound_clues.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "«Услышь разницу» samples with their silent visual form (Q31, T19)."
+   }
+  },
+  {
+   "id": "sound-clue.roof-drops",
+   "path": "sound-clues/roof-drops.mp3",
+   "pack": "case03",
+   "kind": "sfx",
+   "width": null,
+   "height": null,
+   "durationMs": 2429,
+   "format": "mp3",
+   "bytes": 29510,
+   "sha256": "809a062d22d0f186f33f5b3ec4fce0326793d0e96c13646f2711d48cd4dc91a7",
+   "provenance": {
+    "tool": "tools/assets/audio/sound_clues.py (numpy synthesis, no recordings)",
+    "source": "tools/assets/audio/sound_clues.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "«Услышь разницу» samples with their silent visual form (Q31, T19)."
+   }
+  },
+  {
+   "id": "sound-clue.roof-drops.wave",
+   "path": "sound-clues/roof-drops.wave.svg",
+   "pack": "case03",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 6998,
+   "sha256": "b26d1ab34c22dbd556bbe8c5b0603ba650e47cd8ecd1ac57e0f2e2f86ef23a25",
+   "provenance": {
+    "tool": "tools/assets/audio/sound_clues.py (numpy synthesis, no recordings)",
+    "source": "tools/assets/audio/sound_clues.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "«Услышь разницу» samples with their silent visual form (Q31, T19)."
+   }
+  },
+  {
+   "id": "sound-clue.wind-reeds",
+   "path": "sound-clues/wind-reeds.mp3",
+   "pack": "case03",
+   "kind": "sfx",
+   "width": null,
+   "height": null,
+   "durationMs": 2638,
+   "format": "mp3",
+   "bytes": 32017,
+   "sha256": "a6681123a530ec73b736818f2c4b01c98086aef54c23e54d4f1999e64aa67b7d",
+   "provenance": {
+    "tool": "tools/assets/audio/sound_clues.py (numpy synthesis, no recordings)",
+    "source": "tools/assets/audio/sound_clues.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "«Услышь разницу» samples with their silent visual form (Q31, T19)."
+   }
+  },
+  {
+   "id": "sound-clue.wind-reeds.wave",
+   "path": "sound-clues/wind-reeds.wave.svg",
+   "pack": "case03",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 7060,
+   "sha256": "93c21b0a3e15a2afb43ec72ed3b01f0854e030d61e5235e3828231610fcdc46b",
+   "provenance": {
+    "tool": "tools/assets/audio/sound_clues.py (numpy synthesis, no recordings)",
+    "source": "tools/assets/audio/sound_clues.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "«Услышь разницу» samples with their silent visual form (Q31, T19)."
+   }
+  },
+  {
+   "id": "sound-clue.wing-rustle",
+   "path": "sound-clues/wing-rustle.mp3",
+   "pack": "case03",
+   "kind": "sfx",
+   "width": null,
+   "height": null,
+   "durationMs": 2638,
+   "format": "mp3",
+   "bytes": 32017,
+   "sha256": "ff99da3fb9d3f0410b4584ed0eecca7be172cf1f87f1a79cfe69454ace36c206",
+   "provenance": {
+    "tool": "tools/assets/audio/sound_clues.py (numpy synthesis, no recordings)",
+    "source": "tools/assets/audio/sound_clues.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "«Услышь разницу» samples with their silent visual form (Q31, T19)."
+   }
+  },
+  {
+   "id": "sound-clue.wing-rustle.wave",
+   "path": "sound-clues/wing-rustle.wave.svg",
+   "pack": "case03",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 7017,
+   "sha256": "8953341641e5228acb160aac863d03f83a2c4f742829c86b50e3bd4a2d91cf25",
+   "provenance": {
+    "tool": "tools/assets/audio/sound_clues.py (numpy synthesis, no recordings)",
+    "source": "tools/assets/audio/sound_clues.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "«Услышь разницу» samples with their silent visual form (Q31, T19)."
+   }
+  },
+  {
+   "id": "sound-clue.woodpecker",
+   "path": "sound-clues/woodpecker.mp3",
+   "pack": "case03",
+   "kind": "sfx",
+   "width": null,
+   "height": null,
+   "durationMs": 2038,
+   "format": "mp3",
+   "bytes": 24808,
+   "sha256": "776088ba22f03fa70f95fa50e42f9efcc7c2ac23269ce242f814aeda916ce599",
+   "provenance": {
+    "tool": "tools/assets/audio/sound_clues.py (numpy synthesis, no recordings)",
+    "source": "tools/assets/audio/sound_clues.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "«Услышь разницу» samples with their silent visual form (Q31, T19)."
+   }
+  },
+  {
+   "id": "sound-clue.woodpecker.wave",
+   "path": "sound-clues/woodpecker.wave.svg",
+   "pack": "case03",
+   "kind": "minigame",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 7012,
+   "sha256": "24ea692046dfa5842f782958b970a5d3f4b9622da00077daf277338a504af74e",
+   "provenance": {
+    "tool": "tools/assets/audio/sound_clues.py (numpy synthesis, no recordings)",
+    "source": "tools/assets/audio/sound_clues.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": "«Услышь разницу» samples with their silent visual form (Q31, T19)."
+   }
+  },
+  {
    "id": "ui.button-primary",
    "path": "ui/button-primary.svg",
    "pack": "shell",
@@ -15957,7 +17781,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -15976,7 +17800,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -15995,7 +17819,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16014,7 +17838,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16033,7 +17857,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16052,7 +17876,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16071,7 +17895,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16090,7 +17914,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16109,7 +17933,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16128,7 +17952,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16147,7 +17971,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16166,7 +17990,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16185,7 +18009,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16204,7 +18028,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16223,7 +18047,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16242,7 +18066,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16261,7 +18085,83 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": ""
+   }
+  },
+  {
+   "id": "ui.icons.lantern-off",
+   "path": "ui/icons/lantern-off.svg",
+   "pack": "shell",
+   "kind": "icon",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 465,
+   "sha256": "f297607c82174f5d196111c2c6052dc46f0991b2477d9b70c9e930e1ff6b8c5b",
+   "provenance": {
+    "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/ui_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": ""
+   }
+  },
+  {
+   "id": "ui.icons.lantern-on",
+   "path": "ui/icons/lantern-on.svg",
+   "pack": "shell",
+   "kind": "icon",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 573,
+   "sha256": "a3d21b1e4af37af70dfb639c1a0d789b03fbb073212318dfea676357ae80a609",
+   "provenance": {
+    "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/ui_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": ""
+   }
+  },
+  {
+   "id": "ui.icons.length-long",
+   "path": "ui/icons/length-long.svg",
+   "pack": "shell",
+   "kind": "icon",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 238,
+   "sha256": "eea761e472cb7cfbe21935cd90658066e89cb8e4fabb8d39cbf03f31546a4752",
+   "provenance": {
+    "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/ui_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": ""
+   }
+  },
+  {
+   "id": "ui.icons.length-short",
+   "path": "ui/icons/length-short.svg",
+   "pack": "shell",
+   "kind": "icon",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 238,
+   "sha256": "ae61cf9a4e90e5746b3ad834bbb225dedf8344c0dbcf9e9745527ebb0939f07b",
+   "provenance": {
+    "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/ui_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16280,7 +18180,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16299,7 +18199,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16318,7 +18218,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16337,7 +18237,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16356,7 +18256,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16375,7 +18275,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16394,7 +18294,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16413,7 +18313,64 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": ""
+   }
+  },
+  {
+   "id": "ui.icons.pitch-high",
+   "path": "ui/icons/pitch-high.svg",
+   "pack": "shell",
+   "kind": "icon",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 520,
+   "sha256": "962f3b5cd6c5412d75a46ea869f95c3a2fc92297bac867ffb9c4c4ed33eaf4d4",
+   "provenance": {
+    "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/ui_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": ""
+   }
+  },
+  {
+   "id": "ui.icons.pitch-low",
+   "path": "ui/icons/pitch-low.svg",
+   "pack": "shell",
+   "kind": "icon",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 520,
+   "sha256": "d3f6bc46cfd6d324f3b6601d237bdce529122c1ffd165436b723511501688db2",
+   "provenance": {
+    "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/ui_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": ""
+   }
+  },
+  {
+   "id": "ui.icons.pitch-middle",
+   "path": "ui/icons/pitch-middle.svg",
+   "pack": "shell",
+   "kind": "icon",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 296,
+   "sha256": "808be1a775c1f79f76c0036366c1aec0bd4261af21d3a7eb459287d2807a0dea",
+   "provenance": {
+    "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/ui_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16432,7 +18389,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16451,7 +18408,45 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": ""
+   }
+  },
+  {
+   "id": "ui.icons.rhythm-steady",
+   "path": "ui/icons/rhythm-steady.svg",
+   "pack": "shell",
+   "kind": "icon",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 678,
+   "sha256": "a18a06368402af448ab33ffb927a55133beac5fccd39954d5da43f1dae43a9d5",
+   "provenance": {
+    "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/ui_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": ""
+   }
+  },
+  {
+   "id": "ui.icons.rhythm-uneven",
+   "path": "ui/icons/rhythm-uneven.svg",
+   "pack": "shell",
+   "kind": "icon",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 686,
+   "sha256": "e0e5a01b1792fa2c2283cbcce55200db2091251e5cb15f43b6d366b1eb06ce07",
+   "provenance": {
+    "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/ui_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16470,7 +18465,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16489,7 +18484,83 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": ""
+   }
+  },
+  {
+   "id": "ui.icons.signal-dash",
+   "path": "ui/icons/signal-dash.svg",
+   "pack": "shell",
+   "kind": "icon",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 238,
+   "sha256": "8da7729de96345c9dac616db35eea04d6e83bee90dc4de4e8cf06bc9ee221e03",
+   "provenance": {
+    "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/ui_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": ""
+   }
+  },
+  {
+   "id": "ui.icons.signal-dot",
+   "path": "ui/icons/signal-dot.svg",
+   "pack": "shell",
+   "kind": "icon",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 218,
+   "sha256": "71284d610ccbce3de6c5e6154ea1ada572302bd4c7354538173fbe7029de3ab7",
+   "provenance": {
+    "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/ui_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": ""
+   }
+  },
+  {
+   "id": "ui.icons.sound-loud",
+   "path": "ui/icons/sound-loud.svg",
+   "pack": "shell",
+   "kind": "icon",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 394,
+   "sha256": "9845bdef717a5b8e4d8bc442101403590f0214a9f1d336067af0c37fd6f592cd",
+   "provenance": {
+    "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/ui_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": ""
+   }
+  },
+  {
+   "id": "ui.icons.sound-medium",
+   "path": "ui/icons/sound-medium.svg",
+   "pack": "shell",
+   "kind": "icon",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 371,
+   "sha256": "e3619a0cb5965983f8b471da7f84f4683af252557e70eff093484e7311f63efd",
+   "provenance": {
+    "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/ui_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16508,7 +18579,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16527,7 +18598,26 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
+    "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
+    "notes": ""
+   }
+  },
+  {
+   "id": "ui.icons.sound-quiet",
+   "path": "ui/icons/sound-quiet.svg",
+   "pack": "shell",
+   "kind": "icon",
+   "width": null,
+   "height": null,
+   "durationMs": null,
+   "format": "svg",
+   "bytes": 350,
+   "sha256": "b866fdb5451d5278663ce954e3c077876e50951e8d782c77b22b706d8c6953fe",
+   "provenance": {
+    "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
+    "source": "tools/assets/art/ui_kit.py",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16546,7 +18636,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16565,7 +18655,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16584,7 +18674,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16603,7 +18693,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16622,7 +18712,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16641,7 +18731,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16660,7 +18750,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16679,7 +18769,7 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
    }
@@ -16698,28 +18788,9 @@
    "provenance": {
     "tool": "tools/assets/art/ui_kit.py (hand-authored SVG)",
     "source": "tools/assets/art/ui_kit.py",
-    "createdAt": "2026-10-08T00:35:16+00:00",
+    "createdAt": "2026-10-08T13:23:01+00:00",
     "licence": "Original work by the Fluffy Bureau team (workstream A). Licence: CC0 1.0.",
     "notes": ""
-   }
-  },
-  {
-   "id": "ui.title-card",
-   "path": "ui/art/title-card.webp",
-   "pack": "prologue",
-   "kind": "ui",
-   "width": 1400,
-   "height": 758,
-   "durationMs": null,
-   "format": "webp",
-   "bytes": 272474,
-   "sha256": "e4dc740bba4d99065866638637d5fc2ec3b2b63b3603c331b9aa806ed7bb15c5",
-   "provenance": {
-    "tool": "Azure OpenAI gpt-image-2.5-sunburst (edit, quality max)",
-    "source": "master title-card-c1.png sha256:61a53533688367e8; prompt tools/assets/art/prompts/props/title-card.txt sha256:3c6b35eb7c456035; references style_office_v1-c2.png",
-    "createdAt": "2026-10-08T02:58:34+00:00",
-    "licence": "Generated by the project with Azure OpenAI image model gpt-image-2.5 (owner's deployment); output owned by the project under the Microsoft Product Terms. No third-party artwork used.",
-    "notes": "Game title lettering on a banner for the intro (T25)."
    }
   },
   {
@@ -27828,6 +29899,12 @@
      "y": 60,
      "w": 690,
      "h": 520
+    },
+    "crack": {
+     "x": 1960,
+     "y": 220,
+     "w": 120,
+     "h": 340
     }
    }
   },
@@ -31756,7 +33833,20 @@
   "ui-close": "sfx.ui-close",
   "ui-open": "sfx.ui-open",
   "ui-tap": "sfx.ui-tap",
-  "yarn-pull": "sfx.yarn-pull"
+  "yarn-pull": "sfx.yarn-pull",
+  "door-creak": "sound-clue.door-creak",
+  "hammer-knock": "sound-clue.hammer-knock",
+  "lamp-shutter": "sound-clue.lamp-shutter",
+  "magpie-wings": "sound-clue.magpie-wings",
+  "night-click": "sound-clue.night-click",
+  "night-drops": "sound-clue.night-drops",
+  "night-rustle": "sound-clue.night-rustle",
+  "pages": "sound-clue.pages",
+  "reeds-rustle": "sound-clue.reeds-rustle",
+  "roof-drops": "sound-clue.roof-drops",
+  "wind-reeds": "sound-clue.wind-reeds",
+  "wing-rustle": "sound-clue.wing-rustle",
+  "woodpecker": "sound-clue.woodpecker"
  },
  "staging": {
   "rigs": {
