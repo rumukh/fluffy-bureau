@@ -63,8 +63,15 @@ function rewardSounds(app: App, view: GameView): void {
 
 /** The avatar as the stage draws it, with the worn shop hat (an `acc.hat.*` rig, T29). */
 export function stageAvatar(view: GameView) {
-  const hat = view.cozy?.shop.find((item) => item.id === view.avatar.hat)?.asset ?? null;
-  return { species: view.avatar.species, scarf: view.avatar.scarf, name: view.avatar.name, hat };
+  const asset = (id: string | null) =>
+    view.cozy?.shop.find((item) => item.id === id)?.asset ?? null;
+  return {
+    species: view.avatar.species,
+    scarf: view.avatar.scarf,
+    name: view.avatar.name,
+    hat: asset(view.avatar.hat),
+    pattern: asset(view.pattern),
+  };
 }
 
 function slotLabel(app: App, view: GameView, slot: string): string {
@@ -1309,7 +1316,9 @@ function renderCutscene(
     key: state.key,
     document: step.document as never,
     packId: run.pack,
-    avatar: { species: view.avatar.species, scarf: view.avatar.scarf, hat: stageAvatar(view).hat },
+    avatar: (({ species, scarf, hat, pattern }) => ({ species, scarf, hat, pattern }))(
+      stageAvatar(view),
+    ),
     from: step.marker,
     onEvent: (event) => {
       if (app.ui.cutscene !== state) return;

@@ -213,7 +213,12 @@ export function writeAssets(out) {
       const atlas = JSON.parse(readFileSync(join(out, index.assets[entry.atlas].url), 'utf8'));
       // Atlases name their image by file name; map it to the shipped asset.
       index.files[atlas.image] = index.assets[entry.atlasImage].url;
-      return { rigId: rig.id, documents: [entry.atlas, entry.rig] };
+      return {
+        rigId: rig.id,
+        documents: [entry.atlas, entry.rig],
+        // Accessory slots (hat, scarf pattern, …) the rig offers, for the shop's worn items.
+        slots: Object.keys(rig.slots ?? {}),
+      };
     };
     for (const [id, entry] of Object.entries(manifest.characters ?? {}))
       index.characters[id] = {

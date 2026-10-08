@@ -53,6 +53,11 @@ test('cozy day: not enough, buy, wear, return for the full price, tea story; win
   await player.activate(player.key('office-cozy'));
   await player.activate(player.key('wear-hat-acorn'));
   await expect(player.key('wear-hat-acorn')).toHaveAttribute('aria-pressed', 'true');
+  // The worn hat is drawn on E's stage in the avatar's hat slot.
+  await expect(page.locator('.stage-live')).toHaveAttribute(
+    'data-avatar-accessories',
+    /acc\.hat\.acorn/,
+  );
   await player.activate(player.key('return-hat-acorn'));
   await expect(page.locator('.office-line')).toHaveAttribute('data-line', 'CZ-RETURNED');
   await expect(page.locator('.office-panel .wallet')).toContainText('🔘 15');

@@ -24,7 +24,14 @@ export interface StageScene {
   title: string;
   cast: { id: string; name: string }[];
   /** `hat`: an `acc.hat.*` accessory rig worn in the avatar's hat slot (T29). */
-  avatar: { species: Species | null; scarf: Scarf | null; name: string; hat?: string | null };
+  avatar: {
+    species: Species | null;
+    scarf: Scarf | null;
+    name: string;
+    hat?: string | null;
+    /** Shop scarf pattern asset (`scarf.pattern.*`), drawn by A's overlay above the tint. */
+    pattern?: string | null;
+  };
   /** Stage-direction IDs since the last blocking step (e.g. bubbles). */
   stage: { id: string; text: string; actions?: readonly StageAction[] }[];
   comfort: boolean;
@@ -61,7 +68,12 @@ export interface CutsceneRequest {
   key: string;
   document: CutsceneFile;
   packId: string;
-  avatar: { species: Species | null; scarf: Scarf | null; hat?: string | null };
+  avatar: {
+    species: Species | null;
+    scarf: Scarf | null;
+    hat?: string | null;
+    pattern?: string | null;
+  };
   from: string | null;
   onEvent(event: CutsceneUiEvent): void;
 }
@@ -396,6 +408,7 @@ export class StagePresenter implements Presenter {
             s.avatar.species,
             s.avatar.scarf,
             s.avatar.hat ?? null,
+            s.avatar.pattern ?? null,
             s.background ?? null,
           ])
         : '';
@@ -528,8 +541,13 @@ export class StagePresenter implements Presenter {
     const castDocs = scene.cast.map((c) => this.assets.puppet(c.id));
     const avatarDocs = scene.avatar.species ? this.assets.avatarPuppet(scene.avatar.species) : null;
     const hatDocs = scene.avatar.hat ? this.assets.rigDocuments(scene.avatar.hat) : [];
+    const pattern =
+      scene.avatar.species && scene.avatar.pattern
+        ? this.assets.scarfPattern(scene.avatar.species, scene.avatar.pattern)
+        : null;
+    const patternDocs = pattern ? this.assets.rigDocuments(pattern.rig) : [];
     const ok = await this.ensure(
-      [...[...castDocs, avatarDocs].flatMap((d) => d?.documents ?? []), ...hatDocs],
+      [...[...castDocs, avatarDocs].flatMap((d) => d?.documents ?? []), ...hatDocs, ...patternDocs],
       [...(background ? [background] : []), ...layers.map((l) => l.asset)],
     ).catch(() => false);
     if (generation !== this.generation) return;
@@ -567,13 +585,18 @@ export class StagePresenter implements Presenter {
       });
       this.puppets.set(member.id, puppet);
     });
+    const accessories = [
+      ...(scene.avatar.hat && hatDocs.length ? [{ slot: 'hat', rig: scene.avatar.hat }] : []),
+      ...(pattern && patternDocs.length ? [pattern] : []),
+    ];
+    // Acceptance hook on the aria-hidden stage: which accessories the avatar wears.
+    this.element.dataset.avatarAccessories = accessories.map((a) => a.rig).join(' ');
     if (avatarDocs && scene.avatar.scarf) {
       const avatar = this.stage.puppet({
         id: 'avatar',
         rig: avatarDocs.rigId,
         tints: { scarf: SCARF_COLORS[scene.avatar.scarf] },
-        accessories:
-          scene.avatar.hat && hatDocs.length ? [{ slot: 'hat', rig: scene.avatar.hat }] : [],
+        accessories,
         at: { x: 520, y: STAGE_FLOOR },
         facing: 'right',
         behaviours: { breathe: {}, blink: {} },
@@ -653,6 +676,11 @@ export class StagePresenter implements Presenter {
     if (avatarDocs) docs.push(...avatarDocs.documents);
     const hat = request.avatar.hat ?? null;
     if (hat) docs.push(...this.assets.rigDocuments(hat));
+    const pattern =
+      species && request.avatar.pattern
+        ? this.assets.scarfPattern(species, request.avatar.pattern)
+        : null;
+    if (pattern) docs.push(...this.assets.rigDocuments(pattern.rig));
     const images = [
       ...new Set(
         document.steps.flatMap((step) => {
@@ -689,7 +717,10 @@ export class StagePresenter implements Presenter {
           ? {
               rig: avatarDocs.rigId,
               tints: { scarf: SCARF_COLORS[request.avatar.scarf] },
-              accessories: hat ? [{ slot: 'hat', rig: hat }] : [],
+              accessories: [
+                ...(hat ? [{ slot: 'hat', rig: hat }] : []),
+                ...(pattern ? [pattern] : []),
+              ],
             }
           : undefined,
       onEvent: (event) => {

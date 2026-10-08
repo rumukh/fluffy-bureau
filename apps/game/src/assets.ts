@@ -46,6 +46,8 @@ export interface AssetManifest {
 export interface PuppetDocuments {
   rigId: string;
   documents: string[];
+  /** Accessory slots the rig offers (avatar: hat, scarf pattern). */
+  slots?: string[];
 }
 
 export const EMPTY_MANIFEST: AssetManifest = {
@@ -278,6 +280,25 @@ export class Assets {
 
   avatarPuppet(species: string): PuppetDocuments | null {
     return this.manifest.avatar[species]?.puppet ?? null;
+  }
+
+  /**
+   * The accessory drawing a shop scarf pattern (`scarf.pattern.<name>`) on one species: A's overlay
+   * rig above the tinted scarf, in the avatar slot whose name mentions the pattern. Null (nothing
+   * drawn) until A's overlays exist.
+   */
+  scarfPattern(species: string, asset: string): { slot: string; rig: string } | null {
+    const name = asset.split('.').pop() ?? asset;
+    const slot = this.avatarPuppet(species)?.slots?.find((s) => /pattern/i.test(s));
+    if (!slot) return null;
+    const rig = Object.entries(this.manifest.documents).find(
+      ([id, doc]) =>
+        doc.format.startsWith('aegis-rig/') &&
+        /scarf|pattern/i.test(id) &&
+        id.split(/[.:_-]/).includes(name) &&
+        id.split(/[.:_-]/).includes(species),
+    )?.[0];
+    return rig ? { slot, rig } : null;
   }
 
   music(name: string): string | null {
