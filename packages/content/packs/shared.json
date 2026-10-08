@@ -1098,6 +1098,15 @@
    "delivery": "neutral"
   },
   {
+   "id": "UI-offline.caseLater",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Это дело ещё скачивается. Оно откроется, когда появится интернет.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
    "id": "UI-cozy.title",
    "rev": 1,
    "kind": "label",
@@ -1883,5 +1892,5 @@
  "notebookPages": [],
  "cozy": null,
  "reserved": [],
- "revision": "358fb1bac80c8a26279e16922f620d278936888054c9885c38379e330b328d82"
+ "revision": "81922e224bcad432377aef4affb93db33faa7d55f5d6531b15fcba918d1f2fc1"
 }
