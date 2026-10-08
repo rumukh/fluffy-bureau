@@ -1,6 +1,6 @@
 # Fluffy Bureau implementation plan
 
-**Version:** 1.0, 2026-10-08  
+**Version:** 1.1, 2026-10-08 (Stage 2 plan added)  
 **Coordinator:** session `1f4d26d8-9b2c-42d8-b7f1-bc4781eb8679`
 ("Game feasibility assessment", branch `rumukh-game-feasibility-assessment`)
 
@@ -10,24 +10,26 @@ Build «Пушистое бюро расследований» as a Russian-lang
 progressive web app on the AEGIS SDK. The players are a girl aged 8–9 playing
 alone, and families of 2–4 sharing one device.
 
-**Current target: Stage 1** (T01 in `docs/DECISIONS_RU.md`):
+**Current target: Stage 2** (section 11). Stage 1 is complete (section 10).
+
+**Stage 1** (T01 in `docs/DECISIONS_RU.md`) covered:
 
 - the prologue «Первый день стажёра»;
 - case 1 «Пирог, которого не было» at difficulty levels 1, 2 and 3;
 - all Stage 1 systems listed in T01.
 
-When Stage 1 is complete, every workstream reports to the coordinator and
-stops. Stage 2 starts only after the user or PM says «дальше» (Q45).
-Preparatory work for later stages is allowed: normalizing and validating cases
-2–8, engine capabilities, and architecture for eight cases and family modes.
-Producing art or voices for cases 2–8 is not.
+When a stage is complete, every workstream reports to the coordinator and
+stops. The next stage starts only after the user or PM says «дальше» (Q45).
+Preparatory work for later stages is allowed: normalizing and validating
+content, engine capabilities, and architecture. Producing art or voices for
+cases beyond the current stage is not.
 
 ## 2. Sources of truth, in priority order
 
 1. `docs/pm/2026-10-07/PM_ANSWERS_RU.md`: PM answers Q01–Q48 and decisions
    D01–D25.
-2. `docs/DECISIONS_RU.md`: team assumptions T01–T24 and required script
-   corrections R01–R09.
+2. `docs/DECISIONS_RU.md`: team assumptions (T-entries), required script
+   corrections R01–R09 and PM notices (У-entries).
 3. `docs/pm/2026-10-07/SCRIPT_*.md` and `SCRIPT_INDEX_RU.md`: approved scripts
    (D01). Treat these as read-only. Corrections live in normalized content with a
    change log.
@@ -163,13 +165,15 @@ licence. Missing provenance is a build failure, not a warning.
   drafts in `F:\AI\GameAssets\fluffy-bureau\` (T20).
 - **No secrets** in the repository. Azure keys stay in local environment or skill
   configuration.
-- **Branches and PRs:** each workstream works on its own branch from the baseline
-  branch `rumukh-game-feasibility-assessment`. PRs target that branch and
-  retarget to `master` when the baseline PR merges. To use a sibling's unmerged
-  work, fetch and merge its branch locally. Never rewrite someone else's history.
-  Do not merge PRs; the user merges.
+- **Branches and PRs:** each workstream keeps its own branch. Since Stage 1
+  merged, branches start from `master` (sync with `origin/master` first) and
+  PRs target `master`. To use a sibling's unmerged work, fetch and merge its
+  branch locally. Never rewrite someone else's history. Workstreams do not
+  merge PRs: the coordinator merges verified work at the end of a stage, as
+  the owner instructed on 2026-10-08.
 - **No external actions** without explicit user approval: no deployment, no
-  package publishing, no telemetry, no accounts.
+  package publishing, no telemetry, no accounts. The owner approved GitHub
+  Pages releases at stage boundaries (T30).
 - Where a skill matches a task (images, speech, music, film assessment), use it.
 
 ## 7. Coordination protocol
@@ -230,3 +234,45 @@ G compiles `docs/qa/STAGE1_ACCEPTANCE.md`. Every workstream contributes evidence
 | iPadOS Safari audio, IndexedDB and service-worker quirks | WebKit automation from the start; a physical check by the family (T15) |
 | Repository size | Optimized assets only; propose Git LFS above about 200 MB |
 | Parallel work collides | Path ownership (section 4), contracts (section 5), sibling-branch merges instead of shared edits |
+
+## 10. Stage 1 outcome (2026-10-08)
+
+Stage 1 shipped as v0.1.0. All workstream PRs were merged to `master`
+(fluffy-bureau #1–#3 and #5–#7; aegis-engine #18–#19). The coordinator verified
+it on a clean checkout: content check, 61 unit tests, 38 Chromium and WebKit
+end-to-end tests. The owner gave «дальше» on 2026-10-08 (U13). The family checks
+in T15 remain open.
+
+## 11. Stage 2 plan
+
+**Scope:** T26 in `docs/DECISIONS_RU.md`: cases 2–4 at three levels, their new
+minigames, notebook pages, the family «Хранитель снов» mode, the basic
+«Уютный денёк», ranks, case 2–4 cutscenes and the deferred items U10–U12.
+
+**Order** (T27):
+
+1. **C:** bring the case 2–8 data (PR #4) up to date with `master`. For cases
+   2–4, replace the generic mechanic placeholders with dedicated minigame kinds
+   agreed with G. Add structured actions to stage directions (U10), including
+   the prologue and case 1. Author the case 2–4 cutscenes, the cozy-day stories
+   (T28) and the shop catalogue (T29). Regenerate the voice manifest.
+2. **A:** art for cases 2–4:
+   - puppets for new speakers (Дамка, Пухлик and any other new cast);
+   - backgrounds;
+   - dream cards;
+   - cipher sheets with shapes (R01);
+   - shop items and office decorations;
+   - sound-clue samples with their silent visual forms (Q31);
+   - voices with mouth cues;
+   - music for dusk and the lighthouse, dreams and the tea party;
+   - cutscene staging.
+3. **G:** first, the GitHub Pages release workflow. Then the runtime for the
+   new minigames, notebook pages, family handoff and privacy, the shop and
+   decorations, the tea party, ranks, stage-direction actions and the
+   "tap the window" beat. Integrate the case 2–4 packs, add scenario traces for
+   all nine new variants, and write the Stage 2 acceptance report.
+4. **E:** on standby for engine gaps reported by G or A.
+
+**Release and gate:** when Stage 2 passes the coordinator's verification, it is
+merged and released as v0.2.0 (T30). Then all workstreams wait for «дальше»
+before Stage 3: cases 5–8, the campaign finale and «Чаепитие».
