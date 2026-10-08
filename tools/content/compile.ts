@@ -455,18 +455,27 @@ export function build(shared: SharedSource, cases: CaseSource[], genderReview: G
   // ---------------------------------------------------------------- manifest
   const membership = new Map<string, string[]>();
   for (const p of packs) for (const l of p.lines) membership.set(l.id, [...(membership.get(l.id) ?? []), p.id]);
+  // The recorded entry of identical audio comes from the earliest asset tier (released, production,
+  // preview), so a line A records now never points at a preview line A has not recorded.
+  const rank: Record<AssetTier, number> = { strict: 0, pending: 1, skip: 2 };
+  const ttsOf = (l: { tts?: string; text: string }) => (l.tts ?? l.text).replaceAll(NAME_PLACEHOLDER, NAME_TTS);
   const firstAudio = new Map<string, string>();
+  for (const p of [...packs].sort((a, b) => rank[tierOf(a.id)] - rank[tierOf(b.id)])) {
+    for (const l of p.lines) if (l.voiced) {
+      const k = `${l.speaker}\u0000${ttsOf(l)}`;
+      if (!firstAudio.has(k)) firstAudio.set(k, l.id);
+    }
+  }
   const entries: ManifestEntry[] = [];
   for (const p of packs) for (const l of p.lines) {
     if (!l.voiced || entries.some((e) => e.id === l.id)) continue;
-    const ttsText = (l.tts ?? l.text).replaceAll(NAME_PLACEHOLDER, NAME_TTS);
+    const ttsText = ttsOf(l);
     const pron: { word: string; hint: string }[] = [];
     for (const w of tokenize(ttsText)) {
       const lex = shared.lexicon.find((x) => w.toLowerCase().startsWith(x.word.toLowerCase()));
       if (lex && !pron.some((p2) => p2.word === w)) pron.push({ word: w, hint: lex.hint + w.slice(lex.word.length) });
     }
     const audioKey = `${l.speaker}\u0000${ttsText}`;
-    if (!firstAudio.has(audioKey)) firstAudio.set(audioKey, l.id);
     entries.push({
       id: l.id, revision: l.rev, kind: l.kind, speaker: l.speaker, displayText: l.text, ttsText, ttsHash: sha256(ttsText),
       pronunciation: pron, delivery: l.delivery, note: l.note ?? '', packs: membership.get(l.id) ?? [],

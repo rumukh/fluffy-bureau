@@ -2313,7 +2313,7 @@
   {
    "id": "C4-8",
    "title": "Большое чаепитие",
-   "location": "town-square",
+   "location": "tea-square",
    "cast": [
     "pudding",
     "mouse",
@@ -2350,7 +2350,7 @@
   {
    "id": "C4-9",
    "title": "«А ты знал?»",
-   "location": "town-square",
+   "location": "tea-square",
    "cast": [
     "khvosts",
     "watsony"
@@ -4277,7 +4277,7 @@
     "steps": [
      {
       "op": "background",
-      "asset": "bg.town-square",
+      "asset": "bg.town-square-tea",
       "transition": {
        "type": "cut"
       }
@@ -4664,5 +4664,5 @@
    "reason": "названия новых механик и старые подписи выбора сохраняются для систем каталога"
   }
  ],
- "revision": "966380677f4af9b59b3ee753d92e014d9570bae78329ba9c7696862a332e5409"
+ "revision": "04a9b3aa496116d5d6fa772ce1d64b1c22daec931a90a05ca3db0ddf19ed8aff"
 }

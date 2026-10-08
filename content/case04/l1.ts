@@ -35,7 +35,7 @@ export const level1: VariantSource = {
     ] },
     versionScene('C4-6', HUB),
     { id: 'C4-7', title: 'Кладовка Конторы', location: 'office-pantry', cast: ['pudding', 'mouse', 'pukhlik', 'khvosts', 'watsony'], presentation: 'cutscene', steps: [cutscene('c4.pantry.l1'), goto('C4-8')] },
-    { id: 'C4-8', title: 'Большое чаепитие', location: 'town-square', cast: ['pudding', 'mouse', 'pukhlik', 'khvosts', 'watsony'], presentation: 'minigame', steps: [
+    { id: 'C4-8', title: 'Большое чаепитие', location: 'tea-square', cast: ['pudding', 'mouse', 'pukhlik', 'khvosts', 'watsony'], presentation: 'minigame', steps: [
       skill('equal-share', []), minigame('c4l1-tea'), cutscene('c4.tea.l1'), goto('C4-9'),
     ] },
     factsScene('C4-10'), rewardScene(1),

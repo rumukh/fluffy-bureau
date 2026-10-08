@@ -93,7 +93,7 @@ export function teaCutscene(id: string, scene: string, level: 1 | 2 | 3): Cutsce
     id, scene,
     summary: 'После дележа варенья герои празднуют честность и благодарят игрока.',
     document: doc(id, cast, [
-      background('bg.town-square'), music('celebration-baking'), cut('wide'),
+      background('bg.town-square-tea'), music('celebration-baking'), cut('wide'),
       ...appear('table', 1280, 1320), enter('pudding', 'left', 470), enter('watsony', 'left', 760), enter('player', 'left', 1030), enter('khvosts', 'right', 1540), enter('mouse', 'right', 1840), enter('pukhlik', 'right', 2100, FLY), join(),
       clip('pukhlik', 'hover', false), marker('tea.toast'),
       ...(level === 3 ? [line('khvosts', 'C4-L3-10-02')] : []),

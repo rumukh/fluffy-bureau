@@ -215,7 +215,7 @@ export const resolution = (extra: Step[], next: string): Step[] => [
   { t: 'goto', scene: next },
 ];
 export const factsScene = (next: string): VariantSource['scenes'][number] => ({
-  id: 'C4-9', title: '«А ты знал?»', location: 'town-square', cast: ['khvosts', 'watsony'], presentation: 'dialogue',
+  id: 'C4-9', title: '«А ты знал?»', location: 'tea-square', cast: ['khvosts', 'watsony'], presentation: 'dialogue',
   steps: [skill('encyclopedia', [dir('C4-9-D01', 'Три карточки фактов складываются в Энциклопедию.', null, [act.sfx('page-turn'), act.effect('sparkles', 1280, 900, 1.4)])], []), ...seq('C4-9-', 1, 4), { t: 'goto', scene: next }],
 });
 export const rewardScene = (level: 1 | 2 | 3): VariantSource['scenes'][number] => ({
