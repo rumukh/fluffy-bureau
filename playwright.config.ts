@@ -13,6 +13,7 @@ export default defineConfig({
     baseURL: `http://127.0.0.1:${port}/`,
     viewport: { width: 1280, height: 800 },
     locale: 'ru-RU',
+    actionTimeout: 15_000,
   },
   webServer: {
     command: `node apps/game/scripts/preview.mjs --dir apps/game/dist --port ${port}`,

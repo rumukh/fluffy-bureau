@@ -142,7 +142,11 @@ export class App {
       this.statusNode,
     );
     this.root.removeAttribute('aria-busy');
-    const unlock = () => void this.voice.unlock();
+    const unlock = () => {
+      void this.voice.unlock();
+      // A child's tap proves the page is visible: never leave the game stuck in a visibility pause.
+      this.session?.game.host.resume('visibility');
+    };
     window.addEventListener('pointerdown', unlock, { capture: true });
     window.addEventListener('keydown', unlock, { capture: true });
     try {
@@ -205,10 +209,11 @@ export class App {
     this.render();
   }
 
-  async updateDevice(change: (device: DeviceState) => void): Promise<void> {
+  async updateDevice(change: (device: DeviceState) => void, rerender = true): Promise<void> {
     this.device = await this.deviceRecord.update(change);
     this.voice.setVolumes(this.device.volumes);
-    this.render();
+    // Background bookkeeping must not rebuild the screen under the child's finger.
+    if (rerender) this.render();
   }
 
   // ------------------------------------------------------------ profiles and sessions
@@ -336,7 +341,7 @@ export class App {
         const target = device.profiles.find((p) => p.id === session.profileId);
         if (target)
           Object.assign(target, { name, species: view.avatar.species, scarf: view.avatar.scarf });
-      }).catch(() => {});
+      }, false).catch(() => {});
     }
   }
 
@@ -731,6 +736,35 @@ export class App {
                   ),
                 )
               : h('p', null, t('encyclopedia.empty')),
+            ...(view?.activities ?? []).map((activity) =>
+              h(
+                'section',
+                { class: 'activity-card' },
+                h(
+                  'h3',
+                  null,
+                  '🥧 ',
+                  activity.title.text,
+                  this.earButton(activity.title, `act-${activity.id}`),
+                ),
+                h(
+                  'ol',
+                  null,
+                  ...activity.steps.map((step) =>
+                    h(
+                      'li',
+                      { class: step.adultOnly ? 'adult-only' : '' },
+                      step.adultOnly ? h('strong', null, '👩 Только взрослый: ') : null,
+                      step.line.text,
+                    ),
+                  ),
+                ),
+                ...activity.safety.map((line) => h('p', { class: 'safety' }, '⚠ ', line.text)),
+                activity.allergens.length
+                  ? h('p', { class: 'allergens' }, `Аллергены: ${activity.allergens.join(', ')}.`)
+                  : null,
+              ),
+            ),
           ),
         };
       case 'glossary':

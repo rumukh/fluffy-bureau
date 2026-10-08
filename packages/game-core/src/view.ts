@@ -97,6 +97,14 @@ export interface GameView {
   decor: { item: string; slot: string }[];
   facts: { id: string; line: LineView }[];
   glossary: { id: string; word: string; definition: LineView }[];
+  /** «Настоящее дело» cards (Q25) of completed packs; optional, never blocking. */
+  activities: {
+    id: string;
+    title: LineView;
+    steps: { line: LineView; adultOnly: boolean }[];
+    safety: LineView[];
+    allergens: string[];
+  }[];
   packs: PackView[];
   run: RunView | null;
 }
@@ -158,6 +166,26 @@ export function projectProfile(
       const entry = findIn((p) => p.glossary, id);
       return entry ? [{ id, word: entry.word, definition: findLine(entry.definition) }] : [];
     }),
+    activities: [
+      ...new Map(
+        packs
+          .filter((p) => state.completed.includes(p.pack.id))
+          .flatMap((p) => p.pack.activities)
+          .map((a) => [
+            a.id,
+            {
+              id: a.id,
+              title: findLine(a.title),
+              steps: a.steps.map((step) => ({
+                line: findLine(step.line),
+                adultOnly: step.adultOnly,
+              })),
+              safety: a.safety.map(findLine),
+              allergens: [...a.allergens],
+            },
+          ]),
+      ).values(),
+    ],
     packs: packs
       .filter((p) => p.pack.id !== SHARED_PACK)
       .map((p) => {

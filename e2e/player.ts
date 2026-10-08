@@ -35,8 +35,14 @@ export class Player {
     await expect(target).toBeVisible();
     await expect(target).toBeEnabled();
     this.steps++;
-    if (this.mode === 'mouse') return target.click();
-    if (this.mode === 'touch') return target.tap();
+    if (this.mode === 'mouse') await target.click();
+    else if (this.mode === 'touch') await target.tap();
+    else await this.keyboardActivate(target);
+    // Wait until the command finished (the action button clears aria-busy) before looking again.
+    await this.page.waitForFunction(() => !document.querySelector('#app [aria-busy="true"]'));
+  }
+
+  private async keyboardActivate(target: Locator): Promise<void> {
     // Keyboard only: Tab to the control (bounded), then Enter.
     for (let i = 0; i < 80; i++) {
       if (await target.evaluate((node) => node === document.activeElement)) {
@@ -109,6 +115,8 @@ export class Player {
 
   async handleAwait(): Promise<void> {
     const page = this.page;
+    await page.waitForTimeout(100);
+    if ((await this.stepKind()) !== 'await') return;
     if (await this.key('species-fox').count()) return this.activate(this.key('species-fox'));
     if (await this.key('name-input').count()) {
       const input = this.key('name-input');

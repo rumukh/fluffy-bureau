@@ -846,3 +846,14 @@
     max-height: 60vh;
   }
 }
+
+.activity-card {
+  border: 4px double var(--sage-deep);
+  border-radius: 0.8em;
+  padding: 0.5em 0.8em;
+  margin-top: 0.8em;
+  background: #fff;
+}
+.adult-only {
+  background: #fff1d6;
+}
