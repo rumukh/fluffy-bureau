@@ -2702,6 +2702,10 @@
     },
     {
      "t": "reward",
+     "reward": "rw-c5-heart-finale-l2"
+    },
+    {
+     "t": "reward",
      "reward": "rw-c5-heart-rules"
     },
     {
@@ -4117,6 +4121,13 @@
    "label": "RW-c5-activity",
    "amount": 1,
    "claimKey": "case05:activity:library"
+  },
+  {
+   "id": "rw-c5-heart-finale-l2",
+   "kind": "hearts",
+   "label": "RW-heart",
+   "amount": 1,
+   "claimKey": "case05:l2:heart:finale"
   }
  ],
  "collections": [
@@ -4187,5 +4198,5 @@
  "notebookPages": [],
  "cozy": null,
  "reserved": [],
- "revision": "6caf98c01f20e058950cfa0537c17d959e0432645bfa0e5e106ed3c54d1a32b1"
+ "revision": "47f1e331c638d451372b60eebf246bcbff0b34630bc276f755a400fb16d3e3c8"
 }

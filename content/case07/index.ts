@@ -1,5 +1,5 @@
 // Case 7 «Пруд идёт в гости»: three explicit variants.
-import type { CaseSource } from '../../tools/content/dsl.ts';
+import { finaleHeart, finaleHearts, type CaseSource } from '../../tools/content/dsl.ts';
 import { level1 } from './l1.ts';
 import { level2 } from './l2.ts';
 import { level3 } from './l3.ts';
@@ -14,8 +14,8 @@ export const case07: CaseSource = {
     { id: 'cause-chain', title: 'SK-cause-chain' },
     { id: 'dam-repair', title: 'SK-dam-repair' },
   ],
-  rewards: rewardsCatalog,
-  variants: [level1, level2, level3],
+  rewards: [...rewardsCatalog, ...finaleHearts(7)],
+  variants: [finaleHeart(level1, 7, 1), finaleHeart(level2, 7, 2), finaleHeart(level3, 7, 3)],
   genderReview: [
     { id: 'C7-3-05', rev: 1, reason: '«Добрая» согласуется со словом «душа» (ж. р. существительного), а не с родом игрока; правка не нужна.' },
     { id: 'C7-L2-3-07', rev: 1, reason: '«поправил себя» относится к Картофану, а не к игроку.' },

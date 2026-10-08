@@ -3168,6 +3168,10 @@
      "minigame": "c8l3-oath"
     },
     {
+     "t": "reward",
+     "reward": "rw-c8-heart-finale-l3"
+    },
+    {
      "t": "line",
      "line": "C8-9-02"
     },
@@ -4824,6 +4828,13 @@
    "label": "RW-heart",
    "amount": 1,
    "claimKey": "case08:heart:team"
+  },
+  {
+   "id": "rw-c8-heart-finale-l3",
+   "kind": "hearts",
+   "label": "RW-heart",
+   "amount": 1,
+   "claimKey": "case08:l3:heart:finale"
   }
  ],
  "collections": [
@@ -4945,5 +4956,5 @@
  "notebookPages": [],
  "cozy": null,
  "reserved": [],
- "revision": "57a1b108c7a82ab2cc0427efd3c5012b756a5add090f4b0a0d0fe116f7835955"
+ "revision": "b2e03447c3c3a2cff04a8da5f4363cd83777bb54097735c549377379a82d72e4"
 }

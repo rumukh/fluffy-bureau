@@ -2477,6 +2477,10 @@
      "minigame": "c3l1-light"
     },
     {
+     "t": "reward",
+     "reward": "rw-c3-heart-finale-l1"
+    },
+    {
      "t": "line",
      "line": "C3-9-05"
     },
@@ -3485,6 +3489,13 @@
    "label": "RW-c3-activity",
    "amount": 1,
    "claimKey": "case03:activity:smells"
+  },
+  {
+   "id": "rw-c3-heart-finale-l1",
+   "kind": "hearts",
+   "label": "RW-heart",
+   "amount": 1,
+   "claimKey": "case03:l1:heart:finale"
   }
  ],
  "collections": [
@@ -4509,5 +4520,5 @@
  ],
  "cozy": null,
  "reserved": [],
- "revision": "922a1e67dc129deed39c89d2958425d0775ddefd5f1d3a705b48579421d9a6bf"
+ "revision": "ab96786fe0e21030d364243c9ea89a9c9988370862b7c8145ee3489cbd3a96d1"
 }

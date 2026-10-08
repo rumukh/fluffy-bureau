@@ -3185,6 +3185,10 @@
      "minigame": "c4l3-tea"
     },
     {
+     "t": "reward",
+     "reward": "rw-c4-heart-finale-l3"
+    },
+    {
      "t": "cutscene",
      "cutscene": "c4.tea.l3"
     },
@@ -4857,6 +4861,13 @@
    "label": "RW-c4-activity",
    "amount": 1,
    "claimKey": "case04:activity:sugar-berries"
+  },
+  {
+   "id": "rw-c4-heart-finale-l3",
+   "kind": "hearts",
+   "label": "RW-heart",
+   "amount": 1,
+   "claimKey": "case04:l3:heart:finale"
   }
  ],
  "collections": [],
@@ -6050,5 +6061,5 @@
    "reason": "названия новых механик и старые подписи выбора сохраняются для систем каталога"
   }
  ],
- "revision": "863b9da68c233407a97414980a8ed977d02d1cdeca8f901a9b050b0a5aa5a2df"
+ "revision": "633644c9f14f027188c270e31ffac69237a39a2b72c0752d101c806dee2aedec"
 }

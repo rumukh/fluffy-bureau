@@ -2315,6 +2315,10 @@
      "minigame": "c2l1-postal"
     },
     {
+     "t": "reward",
+     "reward": "rw-c2-heart-finale-l1"
+    },
+    {
      "t": "cutscene",
      "cutscene": "c2.exhibition.l1"
     },
@@ -3600,6 +3604,13 @@
    "label": "RW-c2-activity",
    "amount": 1,
    "claimKey": "case02:activity:magnet-button"
+  },
+  {
+   "id": "rw-c2-heart-finale-l1",
+   "kind": "hearts",
+   "label": "RW-heart",
+   "amount": 1,
+   "claimKey": "case02:l1:heart:finale"
   }
  ],
  "collections": [],
@@ -4550,5 +4561,5 @@
  ],
  "cozy": null,
  "reserved": [],
- "revision": "227c7077d7b8b8ff545dcc712892335cfee1ebdfb849ee322d3d5fe59a5b670f"
+ "revision": "a5251924b0176408e5233d5879ff51d7eb4dc7093e129043c2815fb8becfb768"
 }

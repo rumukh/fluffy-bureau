@@ -1791,6 +1791,27 @@
    "claimKey": "case01:l3:heart:tyopa"
   },
   {
+   "id": "rw-c1-heart-finale-l1",
+   "kind": "hearts",
+   "label": "RW-heart",
+   "amount": 1,
+   "claimKey": "case01:l1:heart:finale"
+  },
+  {
+   "id": "rw-c1-heart-finale-l2",
+   "kind": "hearts",
+   "label": "RW-heart",
+   "amount": 1,
+   "claimKey": "case01:l2:heart:finale"
+  },
+  {
+   "id": "rw-c1-heart-finale-l3",
+   "kind": "hearts",
+   "label": "RW-heart",
+   "amount": 1,
+   "claimKey": "case01:l3:heart:finale"
+  },
+  {
    "id": "rw-c1-badge",
    "kind": "badge",
    "label": "RW-c1-badge",
@@ -1862,5 +1883,5 @@
  "notebookPages": [],
  "cozy": null,
  "reserved": [],
- "revision": "6933fa2996590967e87e1ade5d836ae451a0577aa0ba3701385532e5db99bc9c"
+ "revision": "358fb1bac80c8a26279e16922f620d278936888054c9885c38379e330b328d82"
 }

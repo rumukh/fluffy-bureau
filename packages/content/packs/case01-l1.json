@@ -2360,6 +2360,10 @@
      "minigame": "c1l1-baker"
     },
     {
+     "t": "reward",
+     "reward": "rw-c1-heart-finale-l1"
+    },
+    {
      "t": "cutscene",
      "cutscene": "c1.oven.l1"
     },
@@ -3446,6 +3450,13 @@
    "claimKey": "case01:heart:tyopa"
   },
   {
+   "id": "rw-c1-heart-finale-l1",
+   "kind": "hearts",
+   "label": "RW-heart",
+   "amount": 1,
+   "claimKey": "case01:l1:heart:finale"
+  },
+  {
    "id": "rw-c1-badge",
    "kind": "badge",
    "label": "RW-c1-badge",
@@ -4512,5 +4523,5 @@
  "notebookPages": [],
  "cozy": null,
  "reserved": [],
- "revision": "e957aa61473b5bfd6a4b66ebc15202491f8557476e7575b458e798e1ec62e84c"
+ "revision": "2ced628118374c010099d62ecb5f9fd4038256bd1c028539d3b7df971fe01526"
 }
