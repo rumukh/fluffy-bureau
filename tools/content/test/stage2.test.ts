@@ -1,12 +1,15 @@
 import { describe, expect, it } from 'vitest';
 import { case01 } from '../../../content/case01/index.ts';
+import { case02 } from '../../../content/case02/index.ts';
+import { case03 } from '../../../content/case03/index.ts';
+import { case04 } from '../../../content/case04/index.ts';
 import { prologue } from '../../../content/prologue/index.ts';
 import { shared as sharedSource } from '../../../content/shared/index.ts';
 
 const stage1 = [prologue, case01];
 import { genderReview } from '../../../content/shared/gender-review.ts';
 import type { MinigameConfig } from '../../../packages/content/src/schema.ts';
-import { checkCozy } from '../cozy.ts';
+import { checkCozy, heartsEarned } from '../cozy.ts';
 import type { CaseSource, VariantSource } from '../dsl.ts';
 import { build } from '../compile.ts';
 import { checkKind } from '../kinds.ts';
@@ -84,5 +87,21 @@ describe('stage actions, hotspots and cozy day', () => {
     expect(msgs).toContain('3–5');
     expect(msgs).toContain('tea costs');
     expect(msgs).toContain('paid in hearts');
+  });
+  it('T32: finale help-hearts follow the finale minigame, and hearts cover the decorations', () => {
+    const v = case02.variants[1]!;
+    const sc = v.scenes.find((s) => s.steps.some((x) => x.t === 'reward' && x.reward === 'rw-c2-heart-finale-l2'))!;
+    const i = sc.steps.findIndex((x) => x.t === 'reward' && x.reward === 'rw-c2-heart-finale-l2');
+    expect(sc.steps[i - 1]).toMatchObject({ t: 'minigame', minigame: 'c2l2-postal' });
+    expect(v.rewards).toContain('rw-c2-heart-finale-l2');
+    const all = [...sharedSource.rewards, ...(case02.rewards ?? []), ...(case03.rewards ?? []), ...(case04.rewards ?? [])];
+    expect(heartsEarned(all, 4, [1])).toBe(6);
+    expect(heartsEarned(all, 4, [1, 2])).toBe(12);
+    const issues: { level: 'error' | 'warning'; code: string; where: string; message: string }[] = [];
+    const decor = (id: string, amount: number) => ({ id, kind: 'decor' as const, label: 'l', asset: 'decor.x', price: { currency: 'hearts' as const, amount }, unlockAfter: 4 });
+    checkCozy({
+      residents: [], shop: [decor('a', 8), decor('b', 8), decor('c', 8)], decorSlots: [], ranks: [], lines: { intro: [], bought: [], returned: [], notEnough: [], teaThanks: [] },
+    }, { speakers: [], rewards: all, lineText: () => '', tier: 'skip', ledger: new AssetLedger(), issues });
+    expect(issues.map((x) => x.message).join(' | ')).toContain('cover under 75%');
   });
 });

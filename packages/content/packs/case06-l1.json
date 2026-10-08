@@ -2203,6 +2203,10 @@
      "minigame": "c6l1-alley"
     },
     {
+     "t": "reward",
+     "reward": "rw-c6-heart-finale-l1"
+    },
+    {
      "t": "line",
      "line": "C6-8-01"
     },
@@ -3323,6 +3327,13 @@
    "label": "RW-c6-activity",
    "amount": 1,
    "claimKey": "case06:activity:compass"
+  },
+  {
+   "id": "rw-c6-heart-finale-l1",
+   "kind": "hearts",
+   "label": "RW-heart",
+   "amount": 1,
+   "claimKey": "case06:l1:heart:finale"
   }
  ],
  "collections": [
@@ -3416,5 +3427,5 @@
  "notebookPages": [],
  "cozy": null,
  "reserved": [],
- "revision": "a66315141ce18814f3687e98dc5edb5ea0eacffe3ba2634f08cf2422f4cbffde"
+ "revision": "34671c300f4467fc566ef79c0387674258cf148808367d4687a899775b5fa600"
 }

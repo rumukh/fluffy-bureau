@@ -1,6 +1,6 @@
 // Shared pack: speakers, skills (mechanics), child-facing interface labels (R06),
 // pronunciation lexicon, and the reward catalog (T11).
-import { added, lines, type SharedSource } from '../../tools/content/dsl.ts';
+import { added, finaleHearts, lines, type SharedSource } from '../../tools/content/dsl.ts';
 
 const R06 = 'R06';
 const ui = (reason = 'Подпись интерфейса получает стабильный ID и озвучку') => added(reason, R06);
@@ -232,6 +232,7 @@ export const shared: SharedSource = {
     { id: 'rw-c1-heart-tyopa', kind: 'hearts', label: 'RW-heart', amount: 1, claimKey: 'case01:heart:tyopa' },
     { id: 'rw-c1-heart-tyopa-l2', kind: 'hearts', label: 'RW-heart', amount: 1, claimKey: 'case01:l2:heart:tyopa' },
     { id: 'rw-c1-heart-tyopa-l3', kind: 'hearts', label: 'RW-heart', amount: 1, claimKey: 'case01:l3:heart:tyopa' },
+    ...finaleHearts(1),
     { id: 'rw-c1-badge', kind: 'badge', label: 'RW-c1-badge', amount: 1, claimKey: 'case01:badge' },
     { id: 'rw-c1-buttons-l1', kind: 'buttons', label: 'RW-buttons-10', amount: 10, claimKey: 'case01:l1:buttons' },
     { id: 'rw-c1-buttons-l2', kind: 'buttons', label: 'RW-buttons-15', amount: 15, claimKey: 'case01:l2:buttons' },

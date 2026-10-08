@@ -234,3 +234,32 @@ export interface CozySource {
   cozy: CozyDay;
   rewards: Reward[];
 }
+
+/**
+ * T32: the finale help-heart. Grants `rw-c<N>-heart-finale-l<level>` right after the variant's finale
+ * minigame (the minigame after the solved version) and lists it in the variant's rewards. The
+ * reward definitions come from `finaleHearts(N)`. The compiled pack stays fully explicit.
+ */
+export function finaleHeart(v: VariantSource, caseNo: number, level: 1 | 2 | 3): VariantSource {
+  const id = `rw-c${caseNo}-heart-finale-l${level}`;
+  const solved = v.scenes.findIndex((s) => s.id === v.logic.version.onSolved);
+  if (solved < 0) throw new Error(`${v.pack}: no solved scene`);
+  let placed = 0;
+  const insert = (steps: Step[]): Step[] => steps.flatMap((s): Step[] => {
+    if (s.t === 'minigame' && placed === 0) { placed++; return [s, { t: 'reward', reward: id }]; }
+    if (s.t === 'skill') return [{ ...s, first: insert(s.first), known: s.known === s.first ? s.known : insert(s.known) }];
+    if (s.t === 'if') return [{ ...s, then: insert(s.then), else: insert(s.else) }];
+    return [s];
+  });
+  const scenes = v.scenes.map((sc, i) => (i < solved || placed ? sc : { ...sc, steps: insert(sc.steps) }));
+  if (placed !== 1) throw new Error(`${v.pack}: no finale minigame after the solved version`);
+  return { ...v, scenes, rewards: [...v.rewards, id] };
+}
+
+/** T32 reward definitions for one case (once per difficulty, like buttons). */
+export function finaleHearts(caseNo: number): Reward[] {
+  const nn = String(caseNo).padStart(2, '0');
+  return ([1, 2, 3] as const).map((l) => ({
+    id: `rw-c${caseNo}-heart-finale-l${l}`, kind: 'hearts' as const, label: 'RW-heart', amount: 1, claimKey: `case${nn}:l${l}:heart:finale`,
+  }));
+}

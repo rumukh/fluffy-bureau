@@ -111,6 +111,8 @@ const cozyDay: CozyDay = {
     resident('pukhlik', 3, 4),
   ],
   // Economy (T11): through case 4, level 1 earns 45 buttons (≈ half of 90), levels 1+2 earn 105.
+  // Hearts (T11, T32): decorations cost 3+3+4+5 = 15 through case 4, tea 2. Level 1 earns 6 hearts
+  // (cocoa in cases 1–2 plus four finale help-hearts), levels 1+2 earn 12 (80% of the decorations).
   shop: [
     item('hat-acorn', 'hat', 'acc.hat.acorn', 8, 0),
     item('hat-flower', 'hat', 'acc.hat.flower', 10, 1),

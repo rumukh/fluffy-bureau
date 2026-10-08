@@ -2403,6 +2403,10 @@
      "minigame": "c7l1-repair"
     },
     {
+     "t": "reward",
+     "reward": "rw-c7-heart-finale-l1"
+    },
+    {
      "t": "line",
      "line": "C7-9-11"
     },
@@ -3598,6 +3602,13 @@
    "label": "RW-c7-activity",
    "amount": 1,
    "claimKey": "case07:activity:dam"
+  },
+  {
+   "id": "rw-c7-heart-finale-l1",
+   "kind": "hearts",
+   "label": "RW-heart",
+   "amount": 1,
+   "claimKey": "case07:l1:heart:finale"
   }
  ],
  "collections": [
@@ -3699,5 +3710,5 @@
  "notebookPages": [],
  "cozy": null,
  "reserved": [],
- "revision": "b7e06700184363717c6b0bcafd3c83106a7c4fb476691711f82489a636031da2"
+ "revision": "e3190cf58c0a26ad404a3dd123b7ddd5b79acadfdfb7fa2260b8f9c0ef3ec545"
 }
