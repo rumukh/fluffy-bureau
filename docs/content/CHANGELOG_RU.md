@@ -36,7 +36,7 @@
 
 ## Новые строки
 
-Строк, которых нет в сценариях PM: 1058.
+Строк, которых нет в сценариях PM: 1086.
 
 ### D03, R03
 
@@ -472,6 +472,34 @@
 | `UI-case.complete` | narrator | «Дело раскрыто!» | Подпись интерфейса получает стабильный ID и озвучку |
 | `UI-cutscene.skip` | narrator | «Пропустить ролик» | Кнопка ролика (T25) |
 | `UI-cutscene.replay` | narrator | «Смотреть сначала» | Кнопка ролика (T25) |
+| `UI-family.solo` | narrator | «Играем одни» | Выбор режима дела 4 (T31) |
+| `UI-family.family` | narrator | «Играем семьёй» | Выбор режима дела 4 (T31) |
+| `UI-family.howMany` | narrator | «Сколько игроков?» | Семейный режим (T31) |
+| `UI-family.chooseKeeper` | narrator | «Кто будет Хранителем?» | Семейный режим (T31) |
+| `UI-family.passKeeper` | narrator | «Передай устройство Хранителю» | Экран передачи хода (Q34, T31) |
+| `UI-family.passOthers` | narrator | «Передай устройство остальным» | Экран передачи хода (Q34, T31) |
+| `UI-family.itIsMe` | narrator | «Это я» | Экран передачи хода (Q34) |
+| `UI-family.ready` | narrator | «Запомнено, прячем» | Хранитель скрывает карту; без рода (D05) |
+| `UI-family.hide` | narrator | «Спрятать» | Семейный режим (T31) |
+| `UI-family.ask` | narrator | «Задать вопрос» | Семейный режим (T31) |
+| `UI-family.guess` | narrator | «Выбрать ответ» | Семейный режим (T31) |
+| `UI-family.yes` | narrator | «Да» | Ответ на вопрос (T31) |
+| `UI-family.no` | narrator | «Нет» | Ответ на вопрос (T31) |
+| `UI-family.win` | narrator | «Победа общая!» | Финал семейного режима (Q36) |
+| `UI-notebook.secretNotes` | narrator | «Тайные заметки» | Страница Блокнота (T26, D06) |
+| `UI-notebook.cipherPoster` | narrator | «Почтовый шифр Пушистино» | Страница Блокнота (T26) |
+| `UI-cozy.title` | narrator | «Уютный денёк» | Экран Конторы (T12, D23) |
+| `UI-cozy.shop` | narrator | «Лавка» | Магазин (T29) |
+| `UI-cozy.buy` | narrator | «Купить» | Магазин (T29) |
+| `UI-cozy.return` | narrator | «Вернуть» | Магазин: возврат покупки (Q40) |
+| `UI-cozy.owned` | narrator | «Уже твоё» | Магазин (T29) |
+| `UI-cozy.wear` | narrator | «Надеть» | Магазин (T29) |
+| `UI-cozy.place` | narrator | «Поставить» | Украшения Конторы (T29) |
+| `UI-cozy.tea` | narrator | «Позвать на чай» | Чаепитие с жителем (T28) |
+| `UI-cozy.hats` | narrator | «Шапки» | Раздел магазина (T29) |
+| `UI-cozy.scarves` | narrator | «Шарфы» | Раздел магазина (T29) |
+| `UI-cozy.decor` | narrator | «Украшения» | Раздел магазина (T29) |
+| `UI-rank.new` | narrator | «Новое звание!» | Звания (D12) |
 | `SK-inspect` | narrator | «Осмотр» | Подпись интерфейса получает стабильный ID и озвучку |
 | `SK-replay` | narrator | «Ушко: повтор» | Подпись интерфейса получает стабильный ID и озвучку |
 | `SK-lamp` | narrator | «Лампа смелости» | Подпись интерфейса получает стабильный ID и озвучку |

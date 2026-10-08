@@ -2,7 +2,7 @@
  "format": "fluffy-voice-manifest",
  "schema": 1,
  "packs": {
-  "shared": "7dddc0632698175fac54008d07e37346b9b5be146957ef1090fbf081b464600c",
+  "shared": "4b0eba0c2583d20c59baf09e69ff20e9c86cebc0f65994f5116750389678aece",
   "prologue": "a935cb189f406ab1458c363740d11435e9b57e2d1446c13b2ba4dd40efea30f7",
   "case01-l1": "e9dfa918c1324820b50ce7dfd507fa7f0ceec106c8ef76747d2ea5c3cae90ba4",
   "case01-l2": "f101c41add0fa9e67e0ea8181169205adddab082d8d1a034f80222a6d47b390c",
@@ -1767,6 +1767,433 @@
    ]
   },
   {
+   "id": "UI-family.solo",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Играем одни",
+   "ttsText": "Играем одни",
+   "ttsHash": "74b2a8773b0e13be46320092820148bc457a621556d257910a128784cdd234c0",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
+   "id": "UI-family.family",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Играем семьёй",
+   "ttsText": "Играем семьёй",
+   "ttsHash": "4dc63f5f40c3ec61917f26bd6fb0cb7fbaf6371ed6c6dc3d5849b7f0cbae22f7",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
+   "id": "UI-family.howMany",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Сколько игроков?",
+   "ttsText": "Сколько игроков?",
+   "ttsHash": "aa3943ef1e27fae3a4015f060f1855bc7f5ca3fc34d3d174a0a1bcc75590a760",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
+   "id": "UI-family.chooseKeeper",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Кто будет Хранителем?",
+   "ttsText": "Кто будет Хранителем?",
+   "ttsHash": "de17c892b3f78f4de7811c25fff6e60748fc4c60c86fdd259d87526ffd1ba1a1",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
+   "id": "UI-family.passKeeper",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Передай устройство Хранителю",
+   "ttsText": "Передай устройство Хранителю",
+   "ttsHash": "34a91cd0f7680ab234e977f8bbdaf37bdee3e4e65d2a47715209f78aa96629e7",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
+   "id": "UI-family.passOthers",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Передай устройство остальным",
+   "ttsText": "Передай устройство остальным",
+   "ttsHash": "09356ffb0f7bc8dd1cef06c6c6211d4ef148d11ce6b1039add8ee5ca7fb71660",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
+   "id": "UI-family.itIsMe",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Это я",
+   "ttsText": "Это я",
+   "ttsHash": "ad9b60da0bd0d809469f8061657a1268cd46161e8d4ae0c751d0e15dc8b1f82d",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
+   "id": "UI-family.ready",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Запомнено, прячем",
+   "ttsText": "Запомнено, прячем",
+   "ttsHash": "90c6823be498633f49c38bdf812dd12cfb511e69081e31e3c2fc235cc7b950ea",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
+   "id": "UI-family.hide",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Спрятать",
+   "ttsText": "Спрятать",
+   "ttsHash": "ca03bfaf65bff5932480d972ba88887e168a1c848ddcf5a4bca3d02a44bcd52a",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
+   "id": "UI-family.ask",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Задать вопрос",
+   "ttsText": "Задать вопрос",
+   "ttsHash": "4baae6995fd42ce596986575a8034624164fd1d6a533589a5d364077ba8a2b0f",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
+   "id": "UI-family.guess",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Выбрать ответ",
+   "ttsText": "Выбрать ответ",
+   "ttsHash": "82b1977e138f0e99bb8c7155b9b5d34d88a91808197a155b2b8b45b8318a0b50",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
+   "id": "UI-family.yes",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Да",
+   "ttsText": "Да",
+   "ttsHash": "93e6073f9005224b87428f26194784deb52ed7c12da309105f100db2b2a06299",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ],
+   "sameAudioAs": "UI-pause.yes"
+  },
+  {
+   "id": "UI-family.no",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Нет",
+   "ttsText": "Нет",
+   "ttsHash": "43e5ab70f691a6a6391be1da21bc18c31c04892ceb19fde88e44ad50c5ec9052",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ],
+   "sameAudioAs": "UI-pause.no"
+  },
+  {
+   "id": "UI-family.win",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Победа общая!",
+   "ttsText": "Победа общая!",
+   "ttsHash": "aadbd2c56e3d91a0982074e0ac5b2794e6b4d618f0bb20032e5bd8070693db82",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
+   "id": "UI-notebook.secretNotes",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Тайные заметки",
+   "ttsText": "Тайные заметки",
+   "ttsHash": "b4f3e81f2f9c03f45e46990a7e78c67dc9912851399d507d1fb7d77b25165763",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
+   "id": "UI-notebook.cipherPoster",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Почтовый шифр Пушистино",
+   "ttsText": "Почтовый шифр Пушистино",
+   "ttsHash": "d523b2a34148585a2d4da956cf439e2a91de2400fe336d975fbff6336604505f",
+   "pronunciation": [
+    {
+     "word": "Пушистино",
+     "hint": "Пуши́стино"
+    }
+   ],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
+   "id": "UI-cozy.title",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Уютный денёк",
+   "ttsText": "Уютный денёк",
+   "ttsHash": "609efd518f59fc64c2670f7ff2957d177f02fef9ba5e379e245532f64fbe2a7f",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
+   "id": "UI-cozy.shop",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Лавка",
+   "ttsText": "Лавка",
+   "ttsHash": "c2b0dec9997bca37a0cad573f95b83456e1e32e421e82c919313372517168995",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
+   "id": "UI-cozy.buy",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Купить",
+   "ttsText": "Купить",
+   "ttsHash": "f647805b78de6afd36aa4a6c2f726541b7132e7f39497bc45073a2a8f3d52c23",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
+   "id": "UI-cozy.return",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Вернуть",
+   "ttsText": "Вернуть",
+   "ttsHash": "5ae0e885f69deeeba606e4b61c70df516b2e44a5b8c7cd422c881d208da3f3eb",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
+   "id": "UI-cozy.owned",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Уже твоё",
+   "ttsText": "Уже твоё",
+   "ttsHash": "c3b73e55da653bf4e9893482da091010ed6bf210c737dab13a0a2b950ccc5c58",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
+   "id": "UI-cozy.wear",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Надеть",
+   "ttsText": "Надеть",
+   "ttsHash": "05378324d95c9b4c55788a4cbd1e8218fe188e9531961ccb3579c25fb49ba7ac",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
+   "id": "UI-cozy.place",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Поставить",
+   "ttsText": "Поставить",
+   "ttsHash": "2eaffea793554f1e05811985e134cce8a85c70175ba9803ab6b9691732755c66",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
+   "id": "UI-cozy.tea",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Позвать на чай",
+   "ttsText": "Позвать на чай",
+   "ttsHash": "afa15232546ea1bf7132356c4641d09dd1fdc9c12e84410907aec146403f6237",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
+   "id": "UI-cozy.hats",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Шапки",
+   "ttsText": "Шапки",
+   "ttsHash": "6c2400a2d4ee9b95119bd03a8b426d9a79e3d530237f6a038bf4fd963b4fa0eb",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
+   "id": "UI-cozy.scarves",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Шарфы",
+   "ttsText": "Шарфы",
+   "ttsHash": "6835eb085af2a3bdb643681c15c63af4742039f15eade976f6549fcb971d693a",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
+   "id": "UI-cozy.decor",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Украшения",
+   "ttsText": "Украшения",
+   "ttsHash": "da593f54cbd9f76c42950569ccaf4f14c2dea3126aff33b06783bd1593d71919",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
+   "id": "UI-rank.new",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Новое звание!",
+   "ttsText": "Новое звание!",
+   "ttsHash": "0d4fbd5fde798cfe1207db2113be5ea9197ca680e46b301b6b042b8d0ad51d0b",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "shared"
+   ]
+  },
+  {
    "id": "SK-inspect",
    "revision": 1,
    "kind": "label",
@@ -2010,7 +2437,8 @@
    "note": "",
    "packs": [
     "shared"
-   ]
+   ],
+   "sameAudioAs": "UI-cozy.title"
   },
   {
    "id": "SK-timeline",
@@ -14400,7 +14828,8 @@
     "case03-l1",
     "case03-l2",
     "case03-l3"
-   ]
+   ],
+   "sameAudioAs": "UI-notebook.secretNotes"
   },
   {
    "id": "C3-3-07",
