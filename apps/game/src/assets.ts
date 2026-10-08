@@ -283,22 +283,16 @@ export class Assets {
   }
 
   /**
-   * The accessory drawing a shop scarf pattern (`scarf.pattern.<name>`) on one species: A's overlay
-   * rig above the tinted scarf, in the avatar slot whose name mentions the pattern. Null (nothing
-   * drawn) until A's overlays exist.
+   * The accessory drawing a shop scarf pattern on one species. Null (nothing drawn) until A's
+   * overlays exist.
    */
   scarfPattern(species: string, asset: string): { slot: string; rig: string } | null {
+    // A's contract: shop `scarf.pattern.<name>` → rig `acc.scarf.<name>.<species>` in the avatar's
+    // `scarfPattern` slot (above the tinted scarf, own colours, never tinted).
     const name = asset.split('.').pop() ?? asset;
-    const slot = this.avatarPuppet(species)?.slots?.find((s) => /pattern/i.test(s));
-    if (!slot) return null;
-    const rig = Object.entries(this.manifest.documents).find(
-      ([id, doc]) =>
-        doc.format.startsWith('aegis-rig/') &&
-        /scarf|pattern/i.test(id) &&
-        id.split(/[.:_-]/).includes(name) &&
-        id.split(/[.:_-]/).includes(species),
-    )?.[0];
-    return rig ? { slot, rig } : null;
+    const slot = this.avatarPuppet(species)?.slots?.find((s) => s === 'scarfPattern');
+    const rig = `acc.scarf.${name}.${species}`;
+    return slot && this.manifest.documents[rig] ? { slot, rig } : null;
   }
 
   music(name: string): string | null {

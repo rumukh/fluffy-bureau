@@ -63,6 +63,21 @@ test('cozy day: not enough, buy, wear, return for the full price, tea story; win
   await expect(page.locator('.office-panel .wallet')).toContainText('🔘 15');
   await player.activate(player.key('next'));
 
+  // A scarf pattern is drawn by A's overlay in the avatar's scarfPattern slot (untinted).
+  await player.activate(player.key('office-cozy'));
+  await player.activate(player.key('cozy-tab-scarf-pattern'));
+  await player.activate(player.key('buy-scarf-stripes'));
+  await player.activate(player.key('next'));
+  await player.activate(player.key('office-cozy'));
+  await player.activate(player.key('cozy-tab-scarf-pattern'));
+  await player.activate(player.key('wear-scarf-stripes'));
+  await expect(page.locator('.stage-live')).toHaveAttribute(
+    'data-avatar-accessories',
+    /acc\.scarf\.stripes\.(kitten|fox|mouse|squirrel|puppy)/,
+  );
+  await player.activate(player.key('return-scarf-stripes'));
+  await player.activate(player.key('next'));
+
   // A tea party: the story never advances by itself and ends with thanks.
   const hearts = Number(
     /💗 (\d+)/.exec((await page.locator('.office-panel .wallet').innerText()) ?? '')?.[1] ?? 0,
