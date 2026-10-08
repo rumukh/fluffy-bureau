@@ -3244,14 +3244,14 @@
         "label": "C3-2-B02",
         "correct": false,
         "reply": [],
-        "sample": "reeds-wind"
+        "sample": "wind-reeds"
        },
        {
         "id": "wings",
         "label": "C3-2-B03",
         "correct": false,
         "reply": [],
-        "sample": "wing-flaps"
+        "sample": "magpie-wings"
        }
       ],
       "wrong": [
@@ -3269,7 +3269,7 @@
         "reply": [
          "C3-2-05"
         ],
-        "sample": "shutter-click"
+        "sample": "lamp-shutter"
        },
        {
         "id": "door",
@@ -4520,5 +4520,5 @@
  ],
  "cozy": null,
  "reserved": [],
- "revision": "dc90d98a2ec52f58bd1ddeeedf9183e7751a8fd36295422bca4122d79e8a62c3"
+ "revision": "ab96786fe0e21030d364243c9ea89a9c9988370862b7c8145ee3489cbd3a96d1"
 }

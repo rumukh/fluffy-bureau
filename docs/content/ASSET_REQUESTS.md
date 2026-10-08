@@ -9,16 +9,16 @@
 | ID | Пакеты | Где |
 |---|---|---|
 | `door-creak` | case03-l1, case03-l2, case03-l3 | c3l1-sound; c3l2-sound; c3l3-sound |
-| `hammer` | case03-l2, case03-l3 | c3l2-sound; c3l3-sound |
+| `hammer-knock` | case03-l2, case03-l3 | c3l2-sound; c3l3-sound |
+| `lamp-shutter` | case03-l1, case03-l2, case03-l3 | c3l1-sound; c3l2-sound; c3l3-sound |
+| `magpie-wings` | case03-l1, case03-l2 | c3l1-sound; c3l2-sound |
 | `night-click` | case03-l1, case03-l2, case03-l3 | c3l1-sound; c3l2-sound; c3l3-sound |
+| `night-drops` | case03-l2, case03-l3 | c3l2-sound; c3l3-sound |
 | `night-rustle` | case03-l1, case03-l2, case03-l3 | c3l1-sound; c3l2-sound; c3l3-sound |
-| `night-tap` | case03-l2, case03-l3 | c3l2-sound; c3l3-sound |
 | `pages` | case03-l1, case03-l2, case03-l3 | c3l1-sound; c3l2-sound; c3l3-sound |
-| `reed-rustle` | case03-l3 | c3l3-sound |
-| `reeds-wind` | case03-l1, case03-l2 | c3l1-sound; c3l2-sound |
+| `reeds-rustle` | case03-l3 | c3l3-sound |
 | `roof-drops` | case03-l2, case03-l3 | c3l2-sound; c3l3-sound |
-| `shutter-click` | case03-l1, case03-l2, case03-l3 | c3l1-sound; c3l2-sound; c3l3-sound |
-| `wing-flaps` | case03-l1, case03-l2 | c3l1-sound; c3l2-sound |
+| `wind-reeds` | case03-l1, case03-l2 | c3l1-sound; c3l2-sound |
 | `wing-rustle` | case03-l3 | c3l3-sound |
 | `woodpecker` | case03-l1, case03-l2, case03-l3 | c3l1-sound; c3l2-sound; c3l3-sound |
 

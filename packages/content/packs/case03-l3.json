@@ -4392,7 +4392,7 @@
         "reply": [
          "C3-L3-2-01"
         ],
-        "sample": "reed-rustle"
+        "sample": "reeds-rustle"
        },
        {
         "id": "wings",
@@ -4417,7 +4417,7 @@
         "reply": [
          "C3-2-05"
         ],
-        "sample": "shutter-click"
+        "sample": "lamp-shutter"
        },
        {
         "id": "door",
@@ -4440,14 +4440,14 @@
      },
      {
       "id": "knock",
-      "target": "night-tap",
+      "target": "night-drops",
       "options": [
        {
         "id": "hammer",
         "label": "C3-2-B07",
         "correct": false,
         "reply": [],
-        "sample": "hammer"
+        "sample": "hammer-knock"
        },
        {
         "id": "drops",
@@ -4463,7 +4463,7 @@
         "label": "C3-2-B04",
         "correct": false,
         "reply": [],
-        "sample": "shutter-click"
+        "sample": "lamp-shutter"
        }
       ],
       "wrong": [
@@ -5903,5 +5903,5 @@
  ],
  "cozy": null,
  "reserved": [],
- "revision": "2eac9caacaf0e1a4bf55d642eed516b94714f74148020561347ea31166325e89"
+ "revision": "3c4f895b08af043c1c1a976e9279115805af44d004235fd55bb2ab76df00d935"
 }

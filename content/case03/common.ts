@@ -187,23 +187,23 @@ export const soundGame = (id: string, level: 1 | 2 | 3): VariantSource['minigame
       { id: 'rustle', target: 'night-rustle', options: level === 3
         ? [
           { ...opt('pages', 'C3-2-B01', true, 'C3-2-03'), sample: 'pages' },
-          { ...opt('reeds', 'C3-2-B02', false, 'C3-L3-2-01'), sample: 'reed-rustle' },
+          { ...opt('reeds', 'C3-2-B02', false, 'C3-L3-2-01'), sample: 'reeds-rustle' },
           { ...opt('wings', 'C3-2-B09', false), sample: 'wing-rustle' },
         ]
         : [
           { ...opt('pages', 'C3-2-B01', true, 'C3-2-03'), sample: 'pages' },
-          { ...opt('reeds', 'C3-2-B02', false), sample: 'reeds-wind' },
-          { ...opt('wings', 'C3-2-B03', false), sample: 'wing-flaps' },
+          { ...opt('reeds', 'C3-2-B02', false), sample: 'wind-reeds' },
+          { ...opt('wings', 'C3-2-B03', false), sample: 'magpie-wings' },
         ], wrong: ['C3-2-04'] },
       { id: 'click', target: 'night-click', options: [
-        { ...opt('shutter', 'C3-2-B04', true, 'C3-2-05'), sample: 'shutter-click' },
+        { ...opt('shutter', 'C3-2-B04', true, 'C3-2-05'), sample: 'lamp-shutter' },
         { ...opt('door', 'C3-2-B05', false), sample: 'door-creak' },
         { ...opt('woodpecker', 'C3-2-B06', false), sample: 'woodpecker' },
       ], wrong: ['C3-2-04'] },
-      ...(level > 1 ? [{ id: 'knock', target: 'night-tap', options: [
-        { ...opt('hammer', 'C3-2-B07', false), sample: 'hammer' },
+      ...(level > 1 ? [{ id: 'knock', target: 'night-drops', options: [
+        { ...opt('hammer', 'C3-2-B07', false), sample: 'hammer-knock' },
         { ...opt('drops', 'C3-2-B08', true, 'C3-L2-2-01'), sample: 'roof-drops' },
-        { ...opt('shutter', 'C3-2-B04', false), sample: 'shutter-click' },
+        { ...opt('shutter', 'C3-2-B04', false), sample: 'lamp-shutter' },
       ], wrong: ['C3-2-04'] }] : []),
     ],
     after: [],

@@ -130,10 +130,10 @@
 - `ASSET-PENDING` case03-l1: C3-10 (stage actions): Unknown rig "prop.fact-cards-c3".
 - `ASSET-PENDING` case03-l1: c3l1-sound: unknown sound clue night-rustle (assets/sound-clues/index.json)
 - `ASSET-PENDING` case03-l1: c3l1-sound: unknown sound clue pages (assets/sound-clues/index.json)
-- `ASSET-PENDING` case03-l1: c3l1-sound: unknown sound clue reeds-wind (assets/sound-clues/index.json)
-- `ASSET-PENDING` case03-l1: c3l1-sound: unknown sound clue wing-flaps (assets/sound-clues/index.json)
+- `ASSET-PENDING` case03-l1: c3l1-sound: unknown sound clue wind-reeds (assets/sound-clues/index.json)
+- `ASSET-PENDING` case03-l1: c3l1-sound: unknown sound clue magpie-wings (assets/sound-clues/index.json)
 - `ASSET-PENDING` case03-l1: c3l1-sound: unknown sound clue night-click (assets/sound-clues/index.json)
-- `ASSET-PENDING` case03-l1: c3l1-sound: unknown sound clue shutter-click (assets/sound-clues/index.json)
+- `ASSET-PENDING` case03-l1: c3l1-sound: unknown sound clue lamp-shutter (assets/sound-clues/index.json)
 - `ASSET-PENDING` case03-l1: c3l1-sound: unknown sound clue door-creak (assets/sound-clues/index.json)
 - `ASSET-PENDING` case03-l1: c3l1-sound: unknown sound clue woodpecker (assets/sound-clues/index.json)
 - `ASSET-PENDING` case03-l2: cutscene c3.intro.l2: unknown asset bg.office-evening
@@ -158,16 +158,16 @@
 - `ASSET-PENDING` case03-l2: C3-10 (stage actions): Unknown rig "prop.fact-cards-c3".
 - `ASSET-PENDING` case03-l2: c3l2-sound: unknown sound clue night-rustle (assets/sound-clues/index.json)
 - `ASSET-PENDING` case03-l2: c3l2-sound: unknown sound clue pages (assets/sound-clues/index.json)
-- `ASSET-PENDING` case03-l2: c3l2-sound: unknown sound clue reeds-wind (assets/sound-clues/index.json)
-- `ASSET-PENDING` case03-l2: c3l2-sound: unknown sound clue wing-flaps (assets/sound-clues/index.json)
+- `ASSET-PENDING` case03-l2: c3l2-sound: unknown sound clue wind-reeds (assets/sound-clues/index.json)
+- `ASSET-PENDING` case03-l2: c3l2-sound: unknown sound clue magpie-wings (assets/sound-clues/index.json)
 - `ASSET-PENDING` case03-l2: c3l2-sound: unknown sound clue night-click (assets/sound-clues/index.json)
-- `ASSET-PENDING` case03-l2: c3l2-sound: unknown sound clue shutter-click (assets/sound-clues/index.json)
+- `ASSET-PENDING` case03-l2: c3l2-sound: unknown sound clue lamp-shutter (assets/sound-clues/index.json)
 - `ASSET-PENDING` case03-l2: c3l2-sound: unknown sound clue door-creak (assets/sound-clues/index.json)
 - `ASSET-PENDING` case03-l2: c3l2-sound: unknown sound clue woodpecker (assets/sound-clues/index.json)
-- `ASSET-PENDING` case03-l2: c3l2-sound: unknown sound clue night-tap (assets/sound-clues/index.json)
-- `ASSET-PENDING` case03-l2: c3l2-sound: unknown sound clue hammer (assets/sound-clues/index.json)
+- `ASSET-PENDING` case03-l2: c3l2-sound: unknown sound clue night-drops (assets/sound-clues/index.json)
+- `ASSET-PENDING` case03-l2: c3l2-sound: unknown sound clue hammer-knock (assets/sound-clues/index.json)
 - `ASSET-PENDING` case03-l2: c3l2-sound: unknown sound clue roof-drops (assets/sound-clues/index.json)
-- `ASSET-PENDING` case03-l2: c3l2-sound: unknown sound clue shutter-click (assets/sound-clues/index.json)
+- `ASSET-PENDING` case03-l2: c3l2-sound: unknown sound clue lamp-shutter (assets/sound-clues/index.json)
 - `ASSET-PENDING` case03-l3: cutscene c3.intro.l3: unknown asset bg.office-evening
 - `ASSET-PENDING` case03-l3: cutscene c3.intro.l3: Unknown rig "prop.firefly-lantern".
 - `ASSET-PENDING` case03-l3: cutscene c3.note.l3: unknown asset bg.lighthouse-door
@@ -190,16 +190,16 @@
 - `ASSET-PENDING` case03-l3: C3-10 (stage actions): Unknown rig "prop.fact-cards-c3".
 - `ASSET-PENDING` case03-l3: c3l3-sound: unknown sound clue night-rustle (assets/sound-clues/index.json)
 - `ASSET-PENDING` case03-l3: c3l3-sound: unknown sound clue pages (assets/sound-clues/index.json)
-- `ASSET-PENDING` case03-l3: c3l3-sound: unknown sound clue reed-rustle (assets/sound-clues/index.json)
+- `ASSET-PENDING` case03-l3: c3l3-sound: unknown sound clue reeds-rustle (assets/sound-clues/index.json)
 - `ASSET-PENDING` case03-l3: c3l3-sound: unknown sound clue wing-rustle (assets/sound-clues/index.json)
 - `ASSET-PENDING` case03-l3: c3l3-sound: unknown sound clue night-click (assets/sound-clues/index.json)
-- `ASSET-PENDING` case03-l3: c3l3-sound: unknown sound clue shutter-click (assets/sound-clues/index.json)
+- `ASSET-PENDING` case03-l3: c3l3-sound: unknown sound clue lamp-shutter (assets/sound-clues/index.json)
 - `ASSET-PENDING` case03-l3: c3l3-sound: unknown sound clue door-creak (assets/sound-clues/index.json)
 - `ASSET-PENDING` case03-l3: c3l3-sound: unknown sound clue woodpecker (assets/sound-clues/index.json)
-- `ASSET-PENDING` case03-l3: c3l3-sound: unknown sound clue night-tap (assets/sound-clues/index.json)
-- `ASSET-PENDING` case03-l3: c3l3-sound: unknown sound clue hammer (assets/sound-clues/index.json)
+- `ASSET-PENDING` case03-l3: c3l3-sound: unknown sound clue night-drops (assets/sound-clues/index.json)
+- `ASSET-PENDING` case03-l3: c3l3-sound: unknown sound clue hammer-knock (assets/sound-clues/index.json)
 - `ASSET-PENDING` case03-l3: c3l3-sound: unknown sound clue roof-drops (assets/sound-clues/index.json)
-- `ASSET-PENDING` case03-l3: c3l3-sound: unknown sound clue shutter-click (assets/sound-clues/index.json)
+- `ASSET-PENDING` case03-l3: c3l3-sound: unknown sound clue lamp-shutter (assets/sound-clues/index.json)
 - `ASSET-PENDING` case04-l1: cutscene c4.office.l1: Unknown rig "prop.empty-jam-jar".
 - `ASSET-PENDING` case04-l1: cutscene c4.cellar.l1: unknown asset bg.mayor-cellar
 - `ASSET-PENDING` case04-l1: cutscene c4.pantry.l1: unknown asset bg.office-pantry
