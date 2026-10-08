@@ -10,7 +10,8 @@ Build «Пушистое бюро расследований» as a Russian-lang
 progressive web app on the AEGIS SDK. The players are a girl aged 8–9 playing
 alone, and families of 2–4 sharing one device.
 
-**Current target: Stage 2** (section 11). Stage 1 is complete (section 10).
+**Current target: none.** Stage 2 is complete (section 12). Stage 3 waits for
+«дальше».
 
 **Stage 1** (T01 in `docs/DECISIONS_RU.md`) covered:
 
@@ -276,3 +277,21 @@ minigames, notebook pages, the family «Хранитель снов» mode, the 
 **Release and gate:** when Stage 2 passes the coordinator's verification, it is
 merged and released as v0.2.0 (T30). Then all workstreams wait for «дальше»
 before Stage 3: cases 5–8, the campaign finale and «Чаепитие».
+
+## 12. Stage 2 outcome (2026-10-09)
+
+Stage 2 shipped as v0.2.0, followed by v0.2.1, which makes the prologue and
+case 1 ready for offline play first and downloads later cases in the background.
+
+- **Merged:** fluffy-bureau #4, #8, #10–#15.
+- **Coordinator verification on clean checkouts:** full gate and Pages subpath
+  tests for each release.
+- **Live checks:**
+  - a fresh install is offline-ready in 26 s (Chromium) and 41 s (WebKit);
+  - installs on v0.2.0 and v0.1.0 updated in place and kept their profiles.
+  A v0.2.0 install in Chromium recovered from a temporary download error on its
+  next launch.
+- **Save policy on content change:** when the current scene's content changed
+  between versions, the save resumes at the start of that scene.
+- **Still open:** the T15 family checks.
+- **Next:** Stage 3 starts after «дальше».
