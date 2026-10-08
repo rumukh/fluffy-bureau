@@ -4344,7 +4344,10 @@
       "role": "avatar"
      },
      "box": {
-      "rig": "prop.box-pie"
+      "rig": "prop.box-pie-closed"
+     },
+     "boxOpen": {
+      "rig": "prop.box-pie-open"
      },
      "stella": {
       "rig": "stella"
@@ -4557,8 +4560,32 @@
      {
       "op": "pose",
       "actor": "box",
-      "clip": "box-open",
+      "clip": "wobble",
       "wait": true
+     },
+     {
+      "op": "exit",
+      "actor": "box",
+      "to": {
+       "x": 1500,
+       "y": 1300
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "enter",
+      "actor": "boxOpen",
+      "from": {
+       "x": 1500,
+       "y": 1300
+      },
+      "to": {
+       "x": 1500,
+       "y": 1300
+      },
+      "duration": 0.1,
+      "walk": false
      },
      {
       "op": "sfx",
@@ -5044,7 +5071,7 @@
       "rig": "prop.badge-pie-found"
      },
      "sticker": {
-      "rig": "prop.sticker-pie"
+      "rig": "prop.sticker-pie-2"
      },
      "basket": {
       "rig": "prop.blueberry-basket"
@@ -5210,11 +5237,6 @@
       "clip": "present"
      },
      {
-      "op": "pose",
-      "actor": "sticker",
-      "clip": "stars-2"
-     },
-     {
       "op": "sfx",
       "asset": "sfx.sticker-check",
       "gain": 0.6
@@ -5261,5 +5283,5 @@
   }
  ],
  "reserved": [],
- "revision": "e49dcae14ac2545e2b63e5492d4dbe453740977eb76fb0d0e08c8ad88bf6c807"
+ "revision": "90537d8336d6de4de4a77f5be791b71e2427f6e58a372c6901aadad643a3df51"
 }

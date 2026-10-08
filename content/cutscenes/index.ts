@@ -137,7 +137,8 @@ const SHED_CAST = {
   tyopa: rig('tyopa'),
   fitilyok: rig('fitilyok'),
   player: avatar,
-  box: rig('prop.box-pie'),
+  box: rig('prop.box-pie-closed'),
+  boxOpen: rig('prop.box-pie-open'),
 };
 
 const shedOpening = (): Step[] => [
@@ -171,7 +172,9 @@ const shedOpening = (): Step[] => [
   line('pudding', 'C1-7-07'),
   marker('shed.box'),
   camera('close-right'),
-  clip('box', 'box-open'),
+  clip('box', 'wobble'),
+  { op: 'exit', actor: 'box', to: at(1500, 1300), duration: 0.1, walk: false },
+  { op: 'enter', actor: 'boxOpen', from: at(1500, 1300), to: at(1500, 1300), duration: 0.1, walk: false },
   sfx('pick-up'),
   expr('pudding', 'surprised'),
   clip('kartofan', 'shrug-shy'),
@@ -322,7 +325,7 @@ export const reward = (level: 1 | 2 | 3): Cutscene => ({
   summary: 'Награда в Конторе: значок-лапка «Пирог найден», стикер в альбом (звёздочки по сложности), корзинка черники. Сами награды выдаются шагами после ролика.',
   document: doc(`c1.reward.l${level}`, {
     khvosts: rig('khvosts'), watsony: rig('watsony'), player: avatar,
-    badge: rig('prop.badge-pie-found'), sticker: rig('prop.sticker-pie'), basket: rig('prop.blueberry-basket'),
+    badge: rig('prop.badge-pie-found'), sticker: rig(`prop.sticker-pie-${level}`), basket: rig('prop.blueberry-basket'),
   }, [
     background('bg.office'),
     music('celebration-baking'),
@@ -345,7 +348,6 @@ export const reward = (level: 1 | 2 | 3): Cutscene => ({
     camera('wide'),
     marker('reward.sticker'),
     ...appear('sticker', 1650, 700),
-    { op: 'pose', actor: 'sticker', clip: `stars-${level}` },
     sfx('sticker-check', 0.6),
     ...appear('basket', 900, 1300),
     sfx('pick-up', 0.5),

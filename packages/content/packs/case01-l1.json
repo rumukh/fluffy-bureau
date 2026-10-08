@@ -3474,7 +3474,10 @@
       "role": "avatar"
      },
      "box": {
-      "rig": "prop.box-pie"
+      "rig": "prop.box-pie-closed"
+     },
+     "boxOpen": {
+      "rig": "prop.box-pie-open"
      }
     },
     "steps": [
@@ -3684,8 +3687,32 @@
      {
       "op": "pose",
       "actor": "box",
-      "clip": "box-open",
+      "clip": "wobble",
       "wait": true
+     },
+     {
+      "op": "exit",
+      "actor": "box",
+      "to": {
+       "x": 1500,
+       "y": 1300
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "enter",
+      "actor": "boxOpen",
+      "from": {
+       "x": 1500,
+       "y": 1300
+      },
+      "to": {
+       "x": 1500,
+       "y": 1300
+      },
+      "duration": 0.1,
+      "walk": false
      },
      {
       "op": "sfx",
@@ -4134,7 +4161,7 @@
       "rig": "prop.badge-pie-found"
      },
      "sticker": {
-      "rig": "prop.sticker-pie"
+      "rig": "prop.sticker-pie-1"
      },
      "basket": {
       "rig": "prop.blueberry-basket"
@@ -4300,11 +4327,6 @@
       "clip": "present"
      },
      {
-      "op": "pose",
-      "actor": "sticker",
-      "clip": "stars-1"
-     },
-     {
       "op": "sfx",
       "asset": "sfx.sticker-check",
       "gain": 0.6
@@ -4351,5 +4373,5 @@
   }
  ],
  "reserved": [],
- "revision": "91ab0bf58d1cbb7e1d31d1fe49c7da626c7af3e45166907869d02996531d605e"
+ "revision": "cf037a7b334841638995267622a3b236508b01cf1beabbed388d1b790bd5738a"
 }
