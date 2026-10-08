@@ -72,7 +72,7 @@ export function pantryCutscene(id: string, scene: string, level: 1 | 2 | 3): Cut
     summary: 'В кладовке находятся банки и записка Хвостса; он признаёт ошибку и разбирает ложные следы.',
     document: doc(id, cast, [
       background('bg.office-pantry'), music('heartfelt'), cut('wide'),
-      ...appear('jars', 1460, 1320), enter('watsony', 'left', 420), enter('player', 'left', 700), enter('khvosts', 'left', 980), enter('pudding', 'right', 1680), enter('mouse', 'right', 1980), enter('pukhlik', 'right', 2180, FLY), join(),
+      ...appear('jars', 1280, 1050), enter('watsony', 'left', 420), enter('player', 'left', 700), enter('khvosts', 'left', 980), enter('pudding', 'right', 1680), enter('mouse', 'right', 1980), enter('pukhlik', 'right', 2050, FLY), join(),
       clip('pukhlik', 'hover', false), marker('pantry.found'),
       ...lines('khvosts', 'C4-7-01', 'C4-7-02'),
       ...appear('note', 1260, 960), sfx('page-turn'), expr('khvosts', 'worried'), ...lines('khvosts', 'C4-7-03', 'C4-7-04', 'C4-7-05', 'C4-7-06', 'C4-7-07'),
@@ -109,11 +109,11 @@ export function rewardCutscene(id: string, level: 1 | 2 | 3): Cutscene {
     summary: 'Награда за четвёртое дело: значок, звание и банка варенья для Конторы.',
     document: doc(id, { khvosts: rig('khvosts'), watsony: rig('watsony'), player: avatar, badge: rig('prop.badge-jam-c4'), sticker: rig(`prop.sticker-jam-c4-${level}`), jar: rig('prop.jam-jar-c4') }, [
       background('bg.office'), music('celebration-baking'), cut('wide'),
-      enter('watsony', 'left', 520), enter('player', 'left', 880), enter('khvosts', 'right', 1540), join(),
+      enter('watsony', 'left', 520), enter('player', 'left', 880), enter('khvosts', 'right', 1800), join(),
       marker('reward.badge'), expr('khvosts', 'happy'), line('khvosts', 'C4-10-01'),
-      ...appear('badge', 1240, 920), sfx('reward'), effect('sparkles', 1240, 920, 1.5), line('khvosts', 'C4-10-02'),
-      ...appear('sticker', 1450, 940), line('khvosts', 'C4-10-03'),
-      ...appear('jar', 1760, 1180), expr('watsony', 'happy'), line('watsony', 'C4-10-04'),
+      ...appear('badge', 1080, 860), sfx('reward'), effect('sparkles', 1080, 860, 1.5), line('khvosts', 'C4-10-02'),
+      ...appear('sticker', 1480, 860), line('khvosts', 'C4-10-03'),
+      { op: 'exit', actor: 'badge', to: at(1080, 860), duration: 0.1, walk: false }, { op: 'exit', actor: 'sticker', to: at(1480, 860), duration: 0.1, walk: false }, ...appear('jar', 1240, 1450), expr('watsony', 'happy'), line('watsony', 'C4-10-04'),
       emote('player', 'joy'), marker('reward.end'),
     ]),
   };

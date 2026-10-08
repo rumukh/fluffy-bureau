@@ -4369,7 +4369,7 @@
       "actor": "khvosts",
       "from": "right",
       "to": {
-       "x": 1660,
+       "x": 1800,
        "y": 1450
       },
       "duration": 1,
@@ -4397,12 +4397,12 @@
       "op": "enter",
       "actor": "badge",
       "from": {
-       "x": 1200,
-       "y": 900
+       "x": 1080,
+       "y": 860
       },
       "to": {
-       "x": 1200,
-       "y": 900
+       "x": 1080,
+       "y": 860
       },
       "duration": 0.1,
       "walk": false
@@ -4416,12 +4416,12 @@
       "op": "enter",
       "actor": "sticker",
       "from": {
-       "x": 1460,
-       "y": 900
+       "x": 1480,
+       "y": 860
       },
       "to": {
-       "x": 1460,
-       "y": 900
+       "x": 1480,
+       "y": 860
       },
       "duration": 0.1,
       "walk": false
@@ -4429,25 +4429,6 @@
      {
       "op": "pose",
       "actor": "sticker",
-      "clip": "present"
-     },
-     {
-      "op": "enter",
-      "actor": "lamp",
-      "from": {
-       "x": 1280,
-       "y": 1120
-      },
-      "to": {
-       "x": 1280,
-       "y": 1120
-      },
-      "duration": 0.1,
-      "walk": false
-     },
-     {
-      "op": "pose",
-      "actor": "lamp",
       "clip": "present"
      },
      {
@@ -4460,7 +4441,7 @@
       "effect": "sparkles",
       "at": {
        "x": 1280,
-       "y": 900
+       "y": 860
       },
       "duration": 1.5,
       "wait": false
@@ -4469,6 +4450,45 @@
       "op": "line",
       "actor": "khvosts",
       "line": "C3-11-02"
+     },
+     {
+      "op": "exit",
+      "actor": "badge",
+      "to": {
+       "x": 1080,
+       "y": 860
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "exit",
+      "actor": "sticker",
+      "to": {
+       "x": 1480,
+       "y": 860
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "enter",
+      "actor": "lamp",
+      "from": {
+       "x": 1180,
+       "y": 1450
+      },
+      "to": {
+       "x": 1180,
+       "y": 1450
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "lamp",
+      "clip": "present"
      },
      {
       "op": "marker",
@@ -4520,5 +4540,5 @@
  ],
  "cozy": null,
  "reserved": [],
- "revision": "ab96786fe0e21030d364243c9ea89a9c9988370862b7c8145ee3489cbd3a96d1"
+ "revision": "6bafd511ab6829044441d7ffe81c3a05671d33bcf578f449717050b0456bd285"
 }

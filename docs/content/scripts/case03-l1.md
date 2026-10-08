@@ -2,7 +2,7 @@
 
 > Сгенерировано `node tools/content/build.ts` из `content/`. Не редактировать вручную.
 
-Ревизия пакета: `ab96786fe0e21030`. Старт: `C3-0`.
+Ревизия пакета: `6bafd511ab682904`. Старт: `C3-0`.
 
 ## Логика
 
@@ -340,11 +340,13 @@
   - _badge: движение present_
   - _входит sticker_
   - _sticker: движение present_
-  - _входит lamp_
-  - _lamp: движение present_
   - _звук `sfx.reward`_
   - _эффект sparkles_
   - `C3-11-02` **Шерлок Хвостс:** «Держи значок-лапку „Огонёк маяка“.»
+  - _уходит badge_
+  - _уходит sticker_
+  - _входит lamp_
+  - _lamp: движение present_
   - ◆ метка `reward.shadow`
   - _камера wide_
   - _watsony: лицо worried_
