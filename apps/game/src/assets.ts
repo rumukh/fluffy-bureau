@@ -8,13 +8,29 @@ export interface HotspotRect {
   h: number;
 }
 
+export interface BackgroundLayer extends HotspotRect {
+  url: string;
+  target?: string;
+  levels?: number[];
+}
+
 export interface AssetManifest {
   format: 'fluffy-asset-index';
   assets: Record<string, { url: string; kind: string; width?: number; height?: number }>;
-  backgrounds: Record<string, { location: string; hotspots: Record<string, HotspotRect> }>;
+  backgrounds: Record<
+    string,
+    {
+      location: string;
+      url: string;
+      hotspots: Record<string, HotspotRect>;
+      layers: BackgroundLayer[];
+    }
+  >;
   voice: Record<string, { url: string; cues: string | null; durationMs: number }>;
-  characters: Record<string, { base: string; layers: Record<string, string> }>;
+  characters: Record<string, { base: string }>;
   avatar: Record<string, { base: string; scarfMask: string | null }>;
+  music: Record<string, string>;
+  sfx: Record<string, string>;
 }
 
 export const EMPTY_MANIFEST: AssetManifest = {
@@ -24,6 +40,8 @@ export const EMPTY_MANIFEST: AssetManifest = {
   voice: {},
   characters: {},
   avatar: {},
+  music: {},
+  sfx: {},
 };
 
 export const LOGICAL = { width: 2560, height: 1600 } as const;
@@ -136,19 +154,47 @@ export class Assets {
     return new URL(path, this.baseUrl).href;
   }
 
-  background(location: string, title: string): string {
-    const entry = Object.entries(this.manifest.backgrounds).find(
+  /** Several backgrounds may share a location (the shed): prefer the interior, else the first. */
+  private backgroundEntry(location: string) {
+    const matches = Object.entries(this.manifest.backgrounds).filter(
       ([, bg]) => bg.location === location,
     );
-    const asset = entry ? this.manifest.assets[entry[0]] : undefined;
-    return asset ? this.url(asset.url) : placeholderBackground(location, title);
+    return (matches.find(([id]) => id.endsWith('-interior')) ?? matches[0])?.[1];
+  }
+
+  background(location: string, title: string): string {
+    const entry = this.backgroundEntry(location);
+    return entry ? this.url(entry.url) : placeholderBackground(location, title);
+  }
+
+  layers(location: string, level: number | null): (BackgroundLayer & { src: string })[] {
+    const entry = this.backgroundEntry(location);
+    return (entry?.layers ?? [])
+      .filter((layer) => !layer.levels || layer.levels.includes(level ?? 1))
+      .map((layer) => ({ ...layer, src: this.url(layer.url) }));
   }
 
   hotspots(location: string): Record<string, HotspotRect> {
-    return (
-      Object.values(this.manifest.backgrounds).find((bg) => bg.location === location)?.hotspots ??
-      {}
-    );
+    const all: Record<string, HotspotRect> = {};
+    for (const bg of Object.values(this.manifest.backgrounds))
+      if (bg.location === location) Object.assign(all, bg.hotspots);
+    return all;
+  }
+
+  /** Hotspot for a menu option: exact ID, else a key that extends it (pirogovaya → pirogovaya-street). */
+  hotspotFor(location: string, id: string): HotspotRect | undefined {
+    const spots = this.hotspots(location);
+    return spots[id] ?? Object.entries(spots).find(([key]) => key.startsWith(`${id}-`))?.[1];
+  }
+
+  music(name: string): string | null {
+    const url = this.manifest.music[name];
+    return url ? this.url(url) : null;
+  }
+
+  sfx(name: string): string | null {
+    const url = this.manifest.sfx[name];
+    return url ? this.url(url) : null;
   }
 
   character(speaker: string, name: string): string {

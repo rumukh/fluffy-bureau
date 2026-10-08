@@ -65,8 +65,14 @@ export class Voice {
   /** Call from a trusted gesture (first tap/key) so iPadOS Safari allows audio. */
   async unlock(): Promise<void> {
     if (this.unlocked && this.status !== 'blocked') return;
+    const first = !this.unlocked;
     this.unlocked = true;
     await this.narration.unlock().catch(() => this.set('blocked'));
+    if (first && this.wantedMusic) {
+      const track = this.wantedMusic;
+      this.wantedMusic = null;
+      this.music(track, false);
+    }
   }
 
   hasVoice(lineId: string): boolean {
@@ -139,6 +145,47 @@ export class Voice {
     this.narration.setVolume('narration', volumes.narration);
     this.narration.setVolume('music', volumes.music);
     this.narration.setVolume('effects', volumes.effects);
+  }
+
+  private audioPack: { music: Set<string>; sfx: Set<string> } | null = null;
+  private wantedMusic: string | null = null;
+
+  /** Registers A's music loops and sound effects as one audio pack. */
+  registerAudio(): void {
+    const music = Object.keys(this.assets.manifest.music);
+    const sfx = Object.keys(this.assets.manifest.sfx);
+    if (!music.length && !sfx.length) return;
+    this.narration.registerPack({
+      id: 'fluffy-audio',
+      revision: 'assets',
+      assets: [
+        ...music.map((name) => ({ id: `music:${name}`, src: this.assets.music(name)! })),
+        ...sfx.map((name) => ({ id: `sfx:${name}`, src: this.assets.sfx(name)! })),
+      ],
+      lines: [],
+    });
+    this.audioPack = { music: new Set(music), sfx: new Set(sfx) };
+  }
+
+  /** Selects the background loop; the comfort lamp uses the warm variant (Q22). */
+  music(name: string | null, warm: boolean): void {
+    const pack = this.audioPack;
+    let track = name;
+    if (track && warm && pack?.music.has(`${track}-warm`)) track = `${track}-warm`;
+    if (track && !pack?.music.has(track)) track = null;
+    if (track === this.wantedMusic) return;
+    this.wantedMusic = track;
+    if (!this.unlocked) return;
+    void this.narration
+      .setAtmosphere(
+        track ? { packId: 'fluffy-audio', asset: `music:${track}`, fadeSeconds: 1.5 } : null,
+      )
+      .catch(() => {});
+  }
+
+  effect(name: string): void {
+    if (!this.unlocked || !this.audioPack?.sfx.has(name)) return;
+    void this.narration.playEffect('fluffy-audio', `sfx:${name}`).catch(() => {});
   }
 
   getStatus(): VoiceStatus {

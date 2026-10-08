@@ -138,8 +138,11 @@ visibility changes add the `visibility` reason.
 
 `Presenter` (`apps/game/src/presenter.ts`) is the boundary for E's `@aegis/browser/stage`:
 `show(scene)`, `speak(speaker, lineId)`, `setPaused`, `dispose`. Until E delivers puppets, lip-sync and
-cutscenes, `StaticPresenter` shows layered still images (background, cast, the player's avatar with a
-tinted scarf) with a cross-fade and gentle CSS motion (disabled under reduced motion). No animation
+cutscenes, `StaticPresenter` shows A's layered still images on a letterboxed 2560×1600 logical stage
+(background, per-level prop layers, cast, and the player's avatar whose scarf is tinted at runtime through
+A's mask), with a cross-fade and compositor-only CSS motion (disabled under reduced motion). Hotspots use
+the same logical coordinates. Music follows the location and switches to A's `-warm` variant under the
+comfort lamp; sound effects mark finds, misses, cards, lamp, hearts and buttons. No animation
 engine is implemented here. Mapping plan for E's API (from E0): `createStage` ↔ presenter construction,
 `stage.puppet(...).speak(...)` ↔ `speak`, `stage.cutscene(json, { avatar })` for scenes with
 `presentation: 'cutscene'`, completion committed by an ordinary runtime command.

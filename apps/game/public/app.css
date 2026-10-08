@@ -23,7 +23,7 @@
   font-size: calc(22px * var(--text-scale, 1));
   line-height: 1.45;
   overflow-wrap: break-word;
-  hyphens: auto;
+  hyphens: manual;
 }
 #app.fluffy.readable {
   font-family: 'Andika', 'Nunito', system-ui, sans-serif;
@@ -204,6 +204,15 @@
 .profile-avatar {
   width: 5em;
   height: 6em;
+  display: flex;
+  justify-content: center;
+}
+.profile-avatar .figure {
+  margin: 0;
+  height: 100%;
+}
+.profile-avatar img {
+  height: 100%;
   object-fit: contain;
 }
 #app.fluffy .profile-card.new .icon {
@@ -229,7 +238,18 @@
   position: relative;
   min-height: 0;
   overflow: hidden;
-  background: #e9dcc2;
+  background: radial-gradient(circle at 50% 40%, #7a5a3a, #3b2a1e);
+  container-type: size;
+}
+/* The 2560×1600 logical stage, letterboxed (contain) so art, props and hotspots share one transform
+   and the 2100×1440 safe area is always visible. */
+.stage-canvas {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(100cqw, 160cqh);
+  height: min(100cqh, 62.5cqw);
+  transform: translate(-50%, -50%);
 }
 .stage {
   position: absolute;
@@ -240,7 +260,7 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
 }
 .stage.enter .stage-bg {
   animation: fade-in 0.5s ease;
@@ -282,6 +302,8 @@
   max-width: 100%;
   object-fit: contain;
   transform-origin: 50% 100%;
+  /* Compositor-only motion: large illustrated layers must not repaint every frame. */
+  will-change: transform;
 }
 .figure.speaking img {
   animation: bob 1.4s ease-in-out infinite;
@@ -293,13 +315,12 @@
   height: 58%;
   pointer-events: none;
 }
-.stage-avatar .figure img {
-  animation: breathe 3.6s ease-in-out infinite;
-}
+
 .stage.paused * {
   animation-play-state: paused !important;
 }
 .stage-effects .bubble {
+  will-change: transform, opacity;
   position: absolute;
   bottom: 30%;
   left: calc(55% + var(--i) * 3%);
@@ -373,7 +394,16 @@
 }
 #app.fluffy .hotspot.glow {
   box-shadow: 0 0 0 6px rgba(255, 230, 140, 0.55);
+}
+#app.fluffy .hotspot.glow::after {
+  content: '';
+  position: absolute;
+  inset: -12px;
+  border-radius: 1.3em;
+  border: 6px solid rgba(255, 230, 140, 0.6);
   animation: glow 2.2s ease-in-out infinite;
+  will-change: opacity;
+  pointer-events: none;
 }
 #app.fluffy .hotspot.assist {
   box-shadow: 0 0 0 10px rgba(255, 200, 60, 0.9);
@@ -392,7 +422,7 @@
 }
 @keyframes glow {
   50% {
-    box-shadow: 0 0 0 12px rgba(255, 230, 140, 0.25);
+    opacity: 0.15;
   }
 }
 
@@ -492,7 +522,8 @@
 #app.fluffy .avatar-card {
   flex-direction: column;
   border-radius: 1em;
-  width: 7em;
+  width: 7.6em;
+  padding: 0.3em 0.4em;
 }
 .avatar-card-body {
   display: flex;
@@ -856,4 +887,35 @@
 }
 .adult-only {
   background: #fff1d6;
+}
+
+/* ---------- A's art */
+.stage-props {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.stage-props .prop {
+  position: absolute;
+  object-fit: contain;
+}
+.figure.avatar {
+  position: relative;
+}
+.scarf-tint {
+  position: absolute;
+  inset: 0;
+  mix-blend-mode: multiply;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center bottom;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center bottom;
+  pointer-events: none;
+}
+.stage.searching .stage-cast,
+.stage.searching .stage-avatar {
+  opacity: 0.25;
+  transition: opacity 0.4s ease;
 }

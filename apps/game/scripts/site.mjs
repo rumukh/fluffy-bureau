@@ -156,6 +156,8 @@ export function writeAssets(out) {
     voice: {},
     characters: {},
     avatar: {},
+    music: {},
+    sfx: {},
   };
   if (existsSync(manifestPath)) {
     const manifest = JSON.parse(readFileSync(manifestPath, 'utf8'));
@@ -177,21 +179,39 @@ export function writeAssets(out) {
         height: asset.height,
       };
     }
-    index.backgrounds = manifest.backgrounds ?? {};
+    const url = (id, what) => {
+      if (id === null || id === undefined) return null;
+      const entry = index.assets[id];
+      if (!entry) throw new Error(`${what} refers to unknown asset ${id}`);
+      return entry.url;
+    };
+    for (const [id, bg] of Object.entries(manifest.backgrounds ?? {})) {
+      index.backgrounds[id] = {
+        location: bg.location,
+        url: url(id, `background ${id}`),
+        hotspots: bg.hotspots ?? {},
+        layers: (bg.layers ?? []).map((layer) => ({
+          ...layer,
+          url: url(layer.asset, `layer of ${id}`),
+        })),
+      };
+    }
     for (const [id, entry] of Object.entries(manifest.characters ?? {}))
-      index.characters[id] = { base: index.assets[entry.base]?.url, layers: {} };
+      index.characters[id] = { base: url(entry.base, `character ${id}`) };
     for (const [id, entry] of Object.entries(manifest.avatar ?? {}))
       index.avatar[id] = {
-        base: index.assets[entry.base]?.url,
-        scarfMask: entry.scarfMask ? (index.assets[entry.scarfMask]?.url ?? null) : null,
+        base: url(entry.base, `avatar ${id}`),
+        scarfMask: url(entry.scarfMask, `avatar ${id}`),
       };
     for (const [id, entry] of Object.entries(manifest.voice ?? {}))
-      if (index.assets[entry.asset])
-        index.voice[id] = {
-          url: index.assets[entry.asset].url,
-          cues: entry.cues ? (index.assets[entry.cues]?.url ?? null) : null,
-          durationMs: entry.durationMs ?? 0,
-        };
+      index.voice[id] = {
+        url: url(entry.asset, `voice ${id}`),
+        cues: url(entry.cues, `cues ${id}`),
+        durationMs: entry.durationMs ?? 0,
+      };
+    for (const kind of ['music', 'sfx'])
+      for (const [name, id] of Object.entries(manifest[kind] ?? {}))
+        index[kind][name] = url(id, `${kind} ${name}`);
   }
   mkdirSync(join(out, 'assets'), { recursive: true });
   writeFileSync(join(out, 'assets', 'index.json'), JSON.stringify(index) + '\n');

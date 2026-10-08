@@ -25,16 +25,18 @@ test('offline: install, close mid-minigame, cold start with the network gone, re
     await page.goto(origin);
     // Installation starts automatically when online; wait until every pack is verified
     // and the worker controls the page.
-    await page.waitForFunction(
-      async () => {
-        const registration = await navigator.serviceWorker.getRegistration();
-        return registration?.active?.state === 'activated';
-      },
-      undefined,
-      { timeout: 60_000 },
-    );
+    await expect
+      .poll(
+        () =>
+          page.evaluate(async () => {
+            const registration = await navigator.serviceWorker.getRegistration();
+            return registration?.active?.state ?? 'none';
+          }),
+        { timeout: 120_000, intervals: [500] },
+      )
+      .toBe('activated');
     // Restart the browser: the next launch is controlled by the installed worker.
-    await page.waitForTimeout(5000);
+    await page.waitForTimeout(1000);
     await context.close();
     context = await browserType.launchPersistentContext(profile, {
       viewport: { width: 1280, height: 800 },

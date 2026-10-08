@@ -3,7 +3,7 @@
 // with simple CSS transitions. No competing animation engine lives here.
 import type { Scarf, Species } from '@fluffy/game-core';
 import { h } from './dom.js';
-import type { Assets } from './assets.js';
+import { SCARF_COLORS, type Assets } from './assets.js';
 
 export interface StageScene {
   location: string;
@@ -14,6 +14,8 @@ export interface StageScene {
   stage: { id: string; text: string }[];
   comfort: boolean;
   reducedMotion: boolean;
+  /** Difficulty level of the case (background prop layers may depend on it). */
+  level: number | null;
 }
 
 export interface Presenter {
@@ -31,6 +33,7 @@ export class StaticPresenter implements Presenter {
   private castLayer: HTMLElement;
   private avatarLayer: HTMLElement;
   private effects: HTMLElement;
+  private props: HTMLElement;
   private current: StageScene | null = null;
 
   constructor(private readonly assets: Assets) {
@@ -38,10 +41,12 @@ export class StaticPresenter implements Presenter {
     this.castLayer = h('div', { class: 'stage-cast' });
     this.avatarLayer = h('div', { class: 'stage-avatar' });
     this.effects = h('div', { class: 'stage-effects', 'aria-hidden': 'true' });
+    this.props = h('div', { class: 'stage-props' });
     this.element = h(
       'div',
       { class: 'stage', 'aria-hidden': 'true' },
       this.background,
+      this.props,
       this.castLayer,
       this.avatarLayer,
       this.effects,
@@ -62,6 +67,20 @@ export class StaticPresenter implements Presenter {
         this.element.classList.add('enter');
       }
     }
+    const propsKey = `${scene.location}:${scene.level}`;
+    if (this.props.dataset.key !== propsKey) {
+      this.props.dataset.key = propsKey;
+      this.props.replaceChildren(
+        ...this.assets.layers(scene.location, scene.level).map((layer) => {
+          const img = h('img', { src: layer.src, alt: '', class: 'prop' });
+          img.style.left = `${(layer.x / 2560) * 100}%`;
+          img.style.top = `${(layer.y / 1600) * 100}%`;
+          img.style.width = `${(layer.w / 2560) * 100}%`;
+          img.style.height = `${(layer.h / 1600) * 100}%`;
+          return img;
+        }),
+      );
+    }
     const castKey = scene.cast.map((c) => c.id).join();
     if (!previous || previous.cast.map((c) => c.id).join() !== castKey) {
       this.castLayer.replaceChildren(
@@ -78,8 +97,9 @@ export class StaticPresenter implements Presenter {
     const avatarKey = `${scene.avatar.species}:${scene.avatar.scarf}`;
     if (this.avatarLayer.dataset.key !== avatarKey) {
       this.avatarLayer.dataset.key = avatarKey;
+      // Before the child picks an animal there is no avatar on stage yet.
       this.avatarLayer.replaceChildren(
-        h('figure', { class: 'figure avatar' }, h('img', { src: avatar.base, alt: '' })),
+        ...(scene.avatar.species ? [avatarFigure(avatar, scene.avatar.scarf)] : []),
       );
     }
     this.effects.replaceChildren();
@@ -87,7 +107,7 @@ export class StaticPresenter implements Presenter {
       scene.stage.some((cue) => /пузыр|bubble/i.test(cue.text + cue.id)) &&
       !scene.reducedMotion
     ) {
-      for (let i = 0; i < 6; i++)
+      for (let i = 0; i < 3; i++)
         this.effects.append(h('span', { class: 'bubble', style: `--i:${i}` }));
     }
   }
@@ -104,4 +124,20 @@ export class StaticPresenter implements Presenter {
   dispose(): void {
     this.element.remove();
   }
+}
+
+/** The avatar composed at runtime: species base plus a scarf tinted through its mask (T05). */
+export function avatarFigure(
+  avatar: { base: string; mask: string | null },
+  scarf: Scarf | null,
+): HTMLElement {
+  const figure = h('figure', { class: 'figure avatar' }, h('img', { src: avatar.base, alt: '' }));
+  if (avatar.mask && scarf) {
+    const tint = h('span', { class: 'scarf-tint' });
+    tint.style.backgroundColor = SCARF_COLORS[scarf];
+    tint.style.setProperty('mask-image', `url("${avatar.mask}")`);
+    tint.style.setProperty('-webkit-mask-image', `url("${avatar.mask}")`);
+    figure.append(tint);
+  }
+  return figure;
 }

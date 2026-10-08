@@ -37,8 +37,30 @@ function renderRest(app: App): HTMLElement {
 
 // ---------------------------------------------------------------- office (home between cases)
 
+const MUSIC_BY_LOCATION: Record<string, string> = {
+  office: 'title-office',
+  'office-desk': 'title-office',
+  map: 'gentle-mystery',
+  shed: 'heartfelt',
+  bakery: 'celebration-baking',
+};
+
+function playMusic(app: App, location: string, lamp: boolean): void {
+  app.voice.music(MUSIC_BY_LOCATION[location] ?? 'investigation', lamp);
+}
+
+/** One-shot sounds for reward changes, derived from consecutive projections. */
+function rewardSounds(app: App, view: GameView): void {
+  const last = app.ui.wallet as { buttons: number; hearts: number } | undefined;
+  if (last && view.hearts > last.hearts) app.voice.effect('heart');
+  if (last && view.buttons > last.buttons) app.voice.effect('button-coin');
+  app.ui.wallet = { buttons: view.buttons, hearts: view.hearts };
+}
+
 function renderOffice(app: App, view: GameView): HTMLElement {
   const presenter = app.presenter!;
+  playMusic(app, 'office', view.lamp);
+  rewardSounds(app, view);
   presenter.show({
     location: 'office',
     title: t(app, 'office.title'),
@@ -47,6 +69,7 @@ function renderOffice(app: App, view: GameView): HTMLElement {
     stage: [],
     comfort: view.lamp,
     reducedMotion: app.reducedMotion(),
+    level: null,
   });
   const decorItems = view.rewards.filter((r) => r.kind === 'decor');
   const unplaced = decorItems.filter((item) => !view.decor.some((d) => d.item === item.id));
@@ -103,7 +126,11 @@ function renderOffice(app: App, view: GameView): HTMLElement {
   const node = h(
     'section',
     { class: 'game office' },
-    h('div', { class: 'stage-frame' }, presenter.element, slots),
+    h(
+      'div',
+      { class: 'stage-frame' },
+      h('div', { class: 'stage-canvas' }, presenter.element, slots),
+    ),
     renderHud(app, view, null),
     h(
       'section',
@@ -129,6 +156,8 @@ function renderOffice(app: App, view: GameView): HTMLElement {
 
 function renderRun(app: App, view: GameView, run: RunView): HTMLElement {
   const presenter = app.presenter!;
+  playMusic(app, run.scene.location, view.lamp);
+  rewardSounds(app, view);
   const cast = run.scene.cast.map((id) => ({ id, name: speakerName(app, id) }));
   presenter.show({
     location: run.scene.location,
@@ -138,8 +167,14 @@ function renderRun(app: App, view: GameView, run: RunView): HTMLElement {
     stage: run.stage,
     comfort: view.lamp,
     reducedMotion: app.reducedMotion(),
+    level: run.level,
   });
   const step = run.step;
+  // While searching with the magnifier the characters step back so every object is visible.
+  presenter.element.classList.toggle(
+    'searching',
+    step?.kind === 'minigame' && step.game === 'magnifier',
+  );
   const overlayLayer = h('div', { class: 'stage-hotspots' });
   const panel = h('section', { class: 'panel', 'aria-live': 'off' });
   const beat = beatKey(app, run);
@@ -186,7 +221,11 @@ function renderRun(app: App, view: GameView, run: RunView): HTMLElement {
       class: `game run presentation-${run.scene.presentation}`,
       dataset: { scene: run.scene.id, step: step?.kind ?? 'none' },
     },
-    h('div', { class: 'stage-frame' }, presenter.element, overlayLayer),
+    h(
+      'div',
+      { class: 'stage-frame' },
+      h('div', { class: 'stage-canvas' }, presenter.element, overlayLayer),
+    ),
     renderHud(app, view, run),
     panel,
   );
@@ -250,7 +289,10 @@ function renderHud(app: App, view: GameView, run: RunView | null): HTMLElement {
             class: 'hud-btn lamp',
             pressed: view.lamp,
           },
-          () => app.act({ type: 'lamp', on: !view.lamp }).then(() => app.applyPrefs()),
+          () => {
+            app.voice.effect(view.lamp ? 'lamp-off' : 'lamp-on');
+            return app.act({ type: 'lamp', on: !view.lamp }).then(() => app.applyPrefs());
+          },
         ),
     run?.hints.klubok.available && knows('klubki')
       ? button(
@@ -350,9 +392,8 @@ function renderMenu(
     app.ui[pageKey] = 0;
     return app.act({ type: 'choose', option: id });
   };
-  const hotspots = app.assets.hotspots(step.location);
   for (const option of step.options) {
-    const rect = hotspots[option.id];
+    const rect = app.assets.hotspotFor(step.location, option.id);
     if (!rect) continue;
     stageLayer.append(
       positioned(
@@ -678,7 +719,10 @@ function minigameStage(
     'aria-hidden': 'true',
     disabled: locked,
   });
-  miss.addEventListener('click', () => void move(app, { miss: true }));
+  miss.addEventListener('click', () => {
+    app.voice.effect('magnifier-miss');
+    void move(app, { miss: true });
+  });
   return [
     miss,
     ...v.targets.map((target) => {
@@ -691,7 +735,10 @@ function minigameStage(
           content: h('span', { class: 'label' }, target.found ? `✔ ${label}` : ''),
           disabled: locked,
         },
-        () => move(app, { target: target.id }),
+        () => {
+          if (!target.found) app.voice.effect('magnifier-find');
+          return move(app, { target: target.id });
+        },
       );
       return positioned(spot, authored[target.id] ?? fallback[target.id]!);
     }),
@@ -806,6 +853,7 @@ function renderMinigame(app: App, step: Extract<StepView, { kind: 'minigame' }>)
                 async () => {
                   if (selected) {
                     app.ui.timelineItem = null;
+                    app.voice.effect('card-place');
                     await move(app, { place: selected, index });
                   } else if (item) await move(app, { remove: index });
                 },
@@ -891,7 +939,10 @@ function renderMinigame(app: App, step: Extract<StepView, { kind: 'minigame' }>)
                 disabled: card.matched,
                 content: h('span', { class: 'label' }, card.label ? text(card.label) : '?'),
               },
-              () => move(app, { card: card.id }),
+              () => {
+                app.voice.effect('card-flip');
+                return move(app, { card: card.id });
+              },
             ),
           ),
         ),

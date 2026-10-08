@@ -28,7 +28,7 @@ import { Voice } from './audio.js';
 import { button, focusFirst, h, setErrorSink } from './dom.js';
 import { createLabels, type Label, type LabelLookup } from './labels.js';
 import { Offline } from './offline.js';
-import { StaticPresenter, type Presenter } from './presenter.js';
+import { avatarFigure, StaticPresenter, type Presenter } from './presenter.js';
 import { renderGame, renderNotebook } from './scene.js';
 import { renderParentCorner, renderParentGate } from './parent.js';
 
@@ -113,6 +113,7 @@ export class App {
     this.labels = createLabels(sharedLines);
     this.voice = new Voice(options.assets, options.baseUrl);
     this.voice.registerPacks(options.packs);
+    this.voice.registerAudio();
     this.offline = new Offline(options.baseUrl, options.buildId);
     this.screenNode = h('main', { class: 'screen', id: 'screen' });
     this.overlayNode = h('dialog', { class: 'overlay' });
@@ -513,6 +514,7 @@ export class App {
 
   private renderTitle(): HTMLElement {
     const t = (key: string) => this.labels(key).text;
+    this.voice.music('title-office', false);
     const cards = this.device.profiles.map((profile) => {
       const avatar = this.assets.avatar(profile.species, profile.scarf);
       return button(
@@ -523,7 +525,7 @@ export class App {
           content: h(
             'span',
             { class: 'profile-card-body' },
-            h('img', { src: avatar.base, alt: '', class: 'profile-avatar' }),
+            h('span', { class: 'profile-avatar' }, avatarFigure(avatar, profile.scarf)),
             h('span', { class: 'label' }, profile.name || '…'),
           ),
         },

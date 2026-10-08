@@ -2,21 +2,23 @@
 
 **Compiled by:** workstream G, 2026-10-08. **Scope:** prologue «Первый день стажёра» and case 1
 «Пирог, которого не было», levels 1–3 (T01). **Build:** `rumukh-fluffy-game-runtime`, AEGIS SDK
-`0abd61b5a679`, content from C (`rumukh-fluffy-content-and-logic`, eb6b971).
+`0abd61b5a679`, content from C (`rumukh-fluffy-content-and-logic`, eb6b971), art and audio from A
+(`rumukh-fluffy-art-and-audio`, e403de8: 1,253 assets with provenance, 531 voice lines with mouth cues,
+12 music loops, 30 sound effects).
 
 ## Verdict
 
 | Area | Status |
 |---|---|
 | Logic, rules, saves, offline, privacy, accessibility (automated) | **Technically ready** — evidence below |
-| Narration (recorded voices) | **Pending A** — every line is narration-ready; no recordings shipped yet, the UI says «Без голоса: читай текст» |
-| Art | **Pending A** — generated SVG placeholders behind the asset manifest |
+| Narration (recorded voices) | **Integrated** — every child-facing line and label has a recording; PM voice approval (Q30) is A's/PM's |
+| Art, music, sound effects | **Integrated** — A's backgrounds, characters, avatar with runtime scarf tint, prop layers per level, music with warm comfort variants, SFX |
 | Animation, lip-sync, cutscenes with the avatar | **Pending E** — static presenter behind the `Presenter` adapter |
 | Human playtest with a child (Q44, T15) | **Pending the family** — protocol: `docs/qa/T15_PLAYTEST_PROTOCOL_RU.md` |
 | Physical iPad / Android tablet | **Pending the family** — only Chromium and WebKit automation on Windows so far |
 
-Stage 1 is therefore **not accepted** under Q44: it is technically complete for the systems G owns and
-blocked on voices, art, animation and the human checks above.
+Stage 1 is therefore **not accepted** under Q44: it is technically complete with content, art and voices, and
+blocked on animation (E) and the human checks above.
 
 ## How to reproduce
 
@@ -35,14 +37,14 @@ passed (12 Chromium + 12 WebKit, serial, 6.4 min).
 
 | # | Item | Prologue | L1 | L2 | L3 | Evidence |
 |---|---|---|---|---|---|---|
-| 1 | Sentences ≤ 10 words; everything voiced | ✅ text / ⏳ audio | ✅ / ⏳ | ✅ / ⏳ | ✅ / ⏳ | C validator: max 8 words, 531 manifest entries; recordings pending A |
+| 1 | Sentences ≤ 10 words; everything voiced | ✅ | ✅ | ✅ | ✅ | C validator: max 8 words; 531/531 lines recorded by A and registered with the narration service |
 | 2 | Clues lead to exactly one solution; red herrings explained | ✅ | ✅ | ✅ | ✅ | C validator (own solver + `validateDeduction`); `scenarios.test.ts` |
 | 3 | A wrong version is not a loss | ✅ | ✅ | ✅ | ✅ | traces submit every wrong value: each explained, rewards unchanged |
 | 4 | No timers, ads, purchases, scary scenes | ✅ | ✅ | ✅ | ✅ | no timer code paths; no network/payments; content review by C |
 | 5 | Exactly 3 facts, ≤ 3 glossary words | n/a | ✅ | ✅ | ✅ | C validator; traces assert 3 facts |
 | 6 | Culprit confesses and helps | n/a | ✅ | ✅ | ✅ | content (C1-7, C1-8); played in E2E |
 | 7 | Comfort lamp and autosave work | ✅ | ✅ | ✅ | ✅ | `a11y-saves.spec.ts`; checkpoint after every command |
-| 8 | Name and avatar used | ✅ | ✅ | ✅ | ✅ | `{имя}` substituted (unit test); avatar on stage in every scene (static) |
+| 8 | Name and avatar used | ✅ | ✅ | ✅ | ✅ | `{имя}` in text, «пушинка» in voice (C/A); avatar with tinted scarf in every scene (static until E) |
 
 ## 2. Q44 observable signs
 
@@ -85,7 +87,7 @@ passed (12 Chromium + 12 WebKit, serial, 6.4 min).
 
 | Requirement | Evidence | Gap |
 |---|---|---|
-| Complete play without sound | all E2E playthroughs run with no audio files (text-only) | real-speaker check pending voices |
+| Complete play without sound | every line is on screen as text; E2E playthroughs never depend on audio (headless, no audio output) | listening check pending T15 |
 | Keyboard only | prologue + L1 completed using only Tab and Enter (Chromium, WebKit) | — |
 | Touch only | L2 and L3 completed with emulated touch taps (both browsers) | physical touch pending T15 |
 | 200 % text | text 44 px, no horizontal overflow, every visible button ≥ 48 px, prologue completed at 200 % | — |
@@ -101,8 +103,8 @@ passed (12 Chromium + 12 WebKit, serial, 6.4 min).
 
 | Requirement | Status |
 |---|---|
-| Narration for every child-facing line and label (Q29) | runtime ready (`Voice`: auto-play, stop on advance, replay, ear buttons, optional reading of choices); **no recordings yet (A)** |
-| Lip-sync on every spoken line | **pending E** (ANIM stack) and A (mouth cues) |
+| Narration for every child-facing line and label (Q29) | ✅ A's 531 recordings: auto-play, stop on advance, replay, ear buttons, optional reading of choices; music crossfades to warm variants under the lamp |
+| Lip-sync on every spoken line | **pending E** (ANIM stack); A's Rhubarb mouth cues are shipped with every line |
 | Cutscenes including the player's avatar | **pending E**; avatar shown in every scene by the static presenter |
 
 ## 7. Offline and privacy
@@ -116,17 +118,18 @@ passed (12 Chromium + 12 WebKit, serial, 6.4 min).
 
 ## 8. Performance (T02: 60 fps target, 30 fps floor)
 
-Animated office scene (bubbles, breathing avatar, speaking character), 1280×800, 3 s of
-`requestAnimationFrame` sampling; «Дальше» latency to the next line on screen.
+Animated scene with A's art (office background, three illustrated characters, bubbles, speaking motion),
+1280×800, 3 s of `requestAnimationFrame` sampling; «Дальше» latency to the next line on screen.
 
 | Browser | CPU | Mean fps | p95 frame | Worst frame | «Дальше» latency |
 |---|---|---|---|---|---|
-| Chromium (Windows) | 4× throttled (iPad 9 proxy) | 60.2 | 16.7 ms | 16.8 ms | 137–180 ms |
-| WebKit (Windows port, headless) | unthrottled | 48.2 (39–57 across runs) | 34 ms | 49 ms | 181–265 ms |
+| Chromium (Windows) | 4× throttled (iPad 9 proxy) | 59.4–60.0 | 16.7 ms | 33 ms | 133–170 ms |
+| WebKit (Windows port, headless) | unthrottled | 19–45 (varies with machine load) | 46–108 ms | 109–144 ms | 123–607 ms |
 
-Within target on Chromium; WebKit stays above the 30 fps floor but below 60. Playwright's WebKit on
-Windows is not Safari on iPadOS, so the iPad number remains **pending a physical check (T15)**. Puppet
-animation (E) will need re-measurement.
+Chromium meets the 60 fps target with the CPU slowed 4× and is the asserted gate (≥ 30). Playwright's
+WebKit on Windows renders without GPU compositing and is recorded only. To get there with real art the
+stage uses compositor-only motion (`will-change`), no box-shadow animation and three bubbles. The iPad
+number remains **pending a physical check (T15)**; E's puppet animation will need re-measurement.
 
 ## 9. Browsers
 
@@ -135,8 +138,8 @@ Chrome on Android tablets, Edge (Chromium-based, expected equivalent), Firefox (
 
 ## Known gaps and follow-ups
 
-1. Voices and mouth cues (A), art and asset manifest (A): the build already copies `assets/manifest.json`
-   files into their offline packs and fails on missing provenance.
+1. A's assets are integrated; three backgrounds share location `shed` and the runtime picks the
+   interior — per-scene selection waits for E's stage or a content field.
 2. Puppets, lip-sync and cutscenes (E): swap `StaticPresenter` for E's stage behind `Presenter`.
 3. Update flow and break reminder are implemented but not covered by E2E yet.
 4. Stage directions (`dir`) reach the presenter with their text; the static presenter only renders bubbles.
