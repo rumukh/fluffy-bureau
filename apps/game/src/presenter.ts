@@ -3,7 +3,13 @@
 // with simple CSS transitions. No competing animation engine lives here.
 import type { Scarf, Species } from '@fluffy/game-core';
 import { h } from './dom.js';
-import { createStage, type Stage, type StagePuppet } from '@aegis/browser/stage';
+import {
+  createStage,
+  type CutsceneController,
+  type Stage,
+  type StagePuppet,
+} from '@aegis/browser/stage';
+import type { CutsceneFile } from '@aegis/browser/animation';
 import { SCARF_COLORS, type Assets } from './assets.js';
 import type { Voice } from './audio.js';
 
@@ -31,7 +37,86 @@ export interface Presenter {
   speakLine(speaker: string, packId: string, lineId: string): Promise<void>;
   setPaused(paused: boolean): void;
   setSearching?(searching: boolean): void;
+  /** Plays (or keeps playing) a T25 cutscene; idempotent for the same request key. */
+  playCutscene(request: CutsceneRequest): CutsceneControls;
   dispose(): void;
+}
+
+export type CutsceneUiEvent =
+  | { type: 'line'; line: string; actor?: string }
+  | { type: 'awaiting-input' }
+  | { type: 'playing' }
+  | { type: 'marker'; id: string }
+  | { type: 'completed' }
+  | { type: 'skipped' };
+
+export interface CutsceneRequest {
+  key: string;
+  document: CutsceneFile;
+  packId: string;
+  avatar: { species: Species | null; scarf: Scarf | null };
+  from: string | null;
+  onEvent(event: CutsceneUiEvent): void;
+}
+
+export interface CutsceneControls {
+  next(): void;
+  skip(): void;
+  replay(): void;
+}
+
+/**
+ * Text-only cutscene player for the still-image fallback: walks the document's `line` steps,
+ * waiting for «Дальше» after each, honouring markers. Motion is not shown.
+ */
+class LineCutscene implements CutsceneControls {
+  private index = 0;
+  private done = false;
+  constructor(private readonly request: CutsceneRequest) {
+    const steps = request.document.steps;
+    if (request.from) {
+      const at = steps.findIndex(
+        (s) => s.op === 'marker' && (s as { id: string }).id === request.from,
+      );
+      if (at >= 0) this.index = at + 1;
+    }
+    queueMicrotask(() => this.advance());
+  }
+  private advance(): void {
+    const steps = this.request.document.steps;
+    while (this.index < steps.length) {
+      const step = steps[this.index++]! as {
+        op: string;
+        line?: string;
+        actor?: string;
+        id?: string;
+      };
+      if (step.op === 'marker') this.request.onEvent({ type: 'marker', id: step.id! });
+      if (step.op === 'line') {
+        this.request.onEvent({ type: 'line', line: step.line!, actor: step.actor });
+        this.request.onEvent({ type: 'awaiting-input' });
+        return;
+      }
+    }
+    if (!this.done) {
+      this.done = true;
+      this.request.onEvent({ type: 'completed' });
+    }
+  }
+  next(): void {
+    this.request.onEvent({ type: 'playing' });
+    this.advance();
+  }
+  skip(): void {
+    if (this.done) return;
+    this.done = true;
+    this.request.onEvent({ type: 'skipped' });
+  }
+  replay(): void {
+    this.index = 0;
+    this.done = false;
+    this.advance();
+  }
 }
 
 export class StaticPresenter implements Presenter {
@@ -134,6 +219,14 @@ export class StaticPresenter implements Presenter {
       : Promise.resolve();
   }
 
+  private cutscene: { key: string; controls: CutsceneControls } | null = null;
+
+  playCutscene(request: CutsceneRequest): CutsceneControls {
+    if (this.cutscene?.key !== request.key)
+      this.cutscene = { key: request.key, controls: new LineCutscene(request) };
+    return this.cutscene.controls;
+  }
+
   speak(speaker: string | null): void {
     for (const figure of this.castLayer.querySelectorAll<HTMLElement>('.figure'))
       figure.classList.toggle('speaking', figure.dataset.speaker === speaker);
@@ -205,6 +298,45 @@ export class StagePresenter implements Presenter {
       reducedMotion: 'system',
       comfort: { brightness: 1.12, warmth: 0.6 },
       maxDevicePixelRatio: 2,
+      // Camera framings and particle effects named by C's cutscene documents (T25 contract).
+      cameraPresets: {
+        'close-left': { x: 900, y: 950, zoom: 1.4 },
+        'close-center': { x: 1280, y: 950, zoom: 1.4 },
+        'close-right': { x: 1660, y: 950, zoom: 1.4 },
+        sky: { x: 1280, y: 500, zoom: 1.2 },
+      },
+      effects: {
+        bubbles: {
+          frame: 'fx.bubble#bubble',
+          count: 10,
+          life: 2.4,
+          spread: 220,
+          rise: 420,
+          scale: 0.6,
+        },
+        sparkles: {
+          frame: 'fx.sparkle#sparkle',
+          count: 16,
+          life: 1.2,
+          spread: 260,
+          rise: 120,
+          scale: 0.5,
+        },
+        steam: {
+          frame: 'fx.bubble#bubble',
+          count: 8,
+          life: 2,
+          spread: 120,
+          rise: 300,
+          scale: 0.35,
+        },
+      },
+      // Cutscene music and sounds go through the game's audio pack (A's `music.*`/`sfx.*` IDs).
+      audio: {
+        music: (asset) =>
+          voice.music(asset ? asset.replace(/^music\./, '') : null, this.current?.comfort ?? false),
+        sfx: (asset) => voice.effect(asset.replace(/^sfx\./, '')),
+      },
     });
     // Expose the lip-sync mode on the (aria-hidden) stage element for acceptance checks.
     this.reporter = window.setInterval(() => {
@@ -231,6 +363,11 @@ export class StagePresenter implements Presenter {
     this.stage.setComfort(scene.comfort);
     this.element.classList.toggle('comfort', scene.comfort);
     if (this.failed) return this.fallback.show(scene);
+    // A playing cutscene owns the stage; the scene is rebuilt when it ends.
+    if (this.cutscene) {
+      this.current = null;
+      return;
+    }
     const key = (s: StageScene | null) =>
       s
         ? JSON.stringify([
@@ -329,7 +466,115 @@ export class StagePresenter implements Presenter {
     await this.voice.controller.playLine(packId, lineId);
   }
 
+  private cutscene: {
+    key: string;
+    controller: CutsceneController | null;
+    fallback: CutsceneControls | null;
+  } | null = null;
+
+  playCutscene(request: CutsceneRequest): CutsceneControls {
+    if (this.cutscene?.key === request.key) return this.controlsFor(this.cutscene);
+    this.cutscene?.controller?.dispose();
+    const entry: {
+      key: string;
+      controller: CutsceneController | null;
+      fallback: CutsceneControls | null;
+    } = { key: request.key, controller: null, fallback: null };
+    this.cutscene = entry;
+    void this.startCutscene(request, entry);
+    return this.controlsFor(entry);
+  }
+
+  private controlsFor(entry: {
+    controller: CutsceneController | null;
+    fallback: CutsceneControls | null;
+  }): CutsceneControls {
+    return {
+      next: () => (entry.controller ? void entry.controller.next() : entry.fallback?.next()),
+      skip: () => (entry.controller ? entry.controller.skip() : entry.fallback?.skip()),
+      replay: () => (entry.controller ? entry.controller.replay() : entry.fallback?.replay()),
+    };
+  }
+
+  private async startCutscene(
+    request: CutsceneRequest,
+    entry: {
+      key: string;
+      controller: CutsceneController | null;
+      fallback: CutsceneControls | null;
+    },
+  ): Promise<void> {
+    const document = request.document;
+    const rigs = Object.values(document.cast)
+      .map((cast) => (cast as { rig?: string }).rig)
+      .filter((rig): rig is string => Boolean(rig));
+    const docs = rigs.flatMap((rig) => this.puppetDocsForRig(rig));
+    const species = request.avatar.species;
+    const avatarDocs = species ? this.assets.avatarPuppet(species) : null;
+    if (avatarDocs) docs.push(...avatarDocs.documents);
+    const images = document.steps
+      .filter((step) => step.op === 'background')
+      .map((step) => (step as { asset: string }).asset);
+    const ok = await this.ensure(
+      [...docs, 'fx.bubble.atlas', 'fx.sparkle.atlas'].filter((id) => this.assetExists(id)),
+      images,
+    ).catch(() => false);
+    if (this.cutscene !== entry) return;
+    if (!ok || this.failed) {
+      entry.fallback = new LineCutscene(request);
+      return;
+    }
+    // The cutscene owns the stage until it ends; the scene is rebuilt afterwards.
+    this.stage.clearScene();
+    this.puppets.clear();
+    this.current = null;
+    const controller = this.stage.cutscene(document, {
+      packId: request.packId,
+      avatar:
+        avatarDocs && request.avatar.scarf
+          ? { rig: avatarDocs.rigId, tints: { scarf: SCARF_COLORS[request.avatar.scarf] } }
+          : undefined,
+      onEvent: (event) => {
+        if (event.type === 'line')
+          request.onEvent({ type: 'line', line: event.line, actor: event.actor });
+        else if (event.type === 'awaiting-input') request.onEvent({ type: 'awaiting-input' });
+        else if (event.type === 'marker') request.onEvent({ type: 'marker', id: event.id });
+        else if (event.type === 'completed' || event.type === 'skipped') {
+          if (this.cutscene === entry) this.cutscene = null;
+          request.onEvent({ type: event.type });
+        } else if (event.type === 'step') request.onEvent({ type: 'playing' });
+      },
+    });
+    entry.controller = controller;
+    // Acceptance hooks on the aria-hidden stage element (no globals): which cutscene, avatar bound?
+    const wantsAvatar = Object.values(document.cast).some(
+      (cast) => (cast as { role?: string }).role === 'avatar',
+    );
+    this.element.dataset.cutscene = document.id;
+    this.element.dataset.cutsceneAvatar = wantsAvatar && avatarDocs ? 'bound' : 'none';
+    controller.play(request.from ? { from: request.from } : undefined);
+  }
+
+  private assetExists(id: string): boolean {
+    try {
+      this.assets.resolve(id);
+      return true;
+    } catch {
+      return false;
+    }
+  }
+
+  private puppetDocsForRig(rig: string): string[] {
+    for (const speaker of Object.keys(this.assets.manifest.characters)) {
+      const docs = this.assets.puppet(speaker);
+      if (docs?.rigId === rig) return docs.documents;
+    }
+    return [];
+  }
+
   setPaused(paused: boolean): void {
+    if (paused) this.cutscene?.controller?.pause('user');
+    else this.cutscene?.controller?.resume('user');
     this.element.classList.toggle('paused', paused);
     if (paused) this.stage.pause('user');
     else this.stage.resume('user');

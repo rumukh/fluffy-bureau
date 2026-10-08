@@ -70,6 +70,9 @@ export async function autoplay(
       case 'line':
         await send({ type: 'next' });
         break;
+      case 'cutscene':
+        await send({ type: 'cutscene', outcome: 'completed' });
+        break;
       case 'await':
         if (step.action === 'office.place') {
           const decor = view.rewards.filter((r) => r.kind === 'decor');

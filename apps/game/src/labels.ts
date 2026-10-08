@@ -112,6 +112,8 @@ export const UI_TEXT: Record<string, string> = {
   'rank.junior': 'Младший детектив',
   'rank.detective': 'Детектив',
   'rank.master': 'Магистр Лапы',
+  'cutscene.skip': 'Пропустить ролик',
+  'cutscene.replay': 'Смотреть сначала',
   'voice.textOnly': 'Без голоса: читай текст',
   'voice.blocked': 'Нажми, чтобы включить звук',
 };

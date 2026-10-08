@@ -216,9 +216,13 @@ function renderRun(app: App, view: GameView, run: RunView): HTMLElement {
       case 'end':
         panel.append(renderEnd(app, view, run));
         break;
+      case 'cutscene':
+        panel.append(renderCutscene(app, view, run, step));
+        break;
     }
   }
-  app.narrate(beat, spoken, follow);
+  // A cutscene plays its own lines through the stage; never stop them from here.
+  if (step?.kind !== 'cutscene' || run.queue) app.narrate(beat, spoken, follow);
   const node = h(
     'section',
     {
@@ -1186,6 +1190,105 @@ export function renderNotebook(app: App, close: () => HTMLElement): HTMLElement 
       'ul',
       { class: 'clues' },
       ...notebook.clues.map((clue) => h('li', null, '🔎 ', clue.title.text)),
+    ),
+  );
+}
+
+// ---------------------------------------------------------------- cutscenes (T25)
+
+interface CutsceneUi {
+  id: string;
+  key: string;
+  line: string | null;
+  awaiting: boolean;
+  finished: boolean;
+}
+
+function renderCutscene(
+  app: App,
+  view: GameView,
+  run: RunView,
+  step: Extract<StepView, { kind: 'cutscene' }>,
+): HTMLElement {
+  let ui = app.ui.cutscene as CutsceneUi | undefined;
+  if (!ui || ui.id !== step.id) {
+    // A fresh key after every restore (app.ui is reset) restarts from the stored marker.
+    ui = {
+      id: step.id,
+      key: `${step.id}:${crypto.randomUUID()}`,
+      line: null,
+      awaiting: false,
+      finished: false,
+    };
+    app.ui.cutscene = ui;
+  }
+  const state = ui;
+  const controls = app.presenter!.playCutscene({
+    key: state.key,
+    document: step.document as never,
+    packId: run.pack,
+    avatar: { species: view.avatar.species, scarf: view.avatar.scarf },
+    from: step.marker,
+    onEvent: (event) => {
+      if (app.ui.cutscene !== state) return;
+      switch (event.type) {
+        case 'line':
+          state.line = event.line;
+          state.awaiting = false;
+          break;
+        case 'awaiting-input':
+          state.awaiting = true;
+          break;
+        case 'playing':
+          state.awaiting = false;
+          break;
+        case 'marker':
+          void app.act({ type: 'cutscene-marker', marker: event.id });
+          return;
+        case 'completed':
+        case 'skipped':
+          if (state.finished) return;
+          state.finished = true;
+          void app.act({ type: 'cutscene', outcome: event.type });
+          return;
+      }
+      app.render();
+    },
+  });
+  const line = lineFrom(app, run, state.line);
+  return h(
+    'div',
+    { class: 'dialogue cutscene', dataset: { cutscene: step.id, line: state.line ?? '' } },
+    line?.speakerName ? h('p', { class: 'speaker' }, line.speakerName) : null,
+    // Captions: every spoken cutscene line is shown as text (Q10, Q29).
+    h('p', { class: 'line-text', id: 'line-text', 'aria-live': 'polite' }, line?.text ?? '…'),
+    h(
+      'div',
+      { class: 'dialogue-actions' },
+      button({ label: t(app, 'cutscene.replay'), key: 'cutscene-replay', icon: '⟲' }, () => {
+        state.line = null;
+        state.awaiting = false;
+        controls.replay();
+        app.render();
+      }),
+      button({ label: t(app, 'cutscene.skip'), key: 'cutscene-skip', icon: '⏭' }, () =>
+        controls.skip(),
+      ),
+      button(
+        {
+          label: t(app, 'hud.next'),
+          key: 'next',
+          icon: '➜',
+          class: 'primary next',
+          disabled: !state.awaiting,
+          describedBy: 'line-text',
+        },
+        () => {
+          state.awaiting = false;
+          controls.next();
+          app.render();
+        },
+      ),
     ),
   );
 }

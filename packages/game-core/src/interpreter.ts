@@ -4,7 +4,9 @@ import type { AwaitAction, Cond, PackIndex, Step, Scene, MenuOption } from './co
 import { sceneOf } from './content.js';
 
 export type { AwaitAction };
-export type GameStep = Step;
+/** T25 cutscene step (C schema addendum): blocking until committed completed or skipped. */
+export type CutsceneStep = { t: 'cutscene'; cutscene: string };
+export type GameStep = Step | CutsceneStep;
 
 export interface Effects {
   learnSkill(skill: string): void;
@@ -105,6 +107,13 @@ export function settle(index: PackIndex, run: RunState, profile: ProfileState, e
       case 'menu':
       case 'await':
         return;
+      case 'cutscene':
+        // Restart-safe: a cutscene already finished in this run is not shown again.
+        if (run.flags.includes(`cutscene:${step.cutscene}`)) {
+          segment.i++;
+          continue;
+        }
+        return;
       case 'minigame':
         if (run.flags.includes(`minigame:${step.minigame}`) && run.minigame === null) {
           segment.i++;
@@ -179,6 +188,7 @@ export function startRun(index: PackIndex, profile: ProfileState, effects: Effec
     minigameCount: 0,
     suggestions: [],
     versionAttempts: 0,
+    cutsceneMarker: null,
     stage: [],
     ended: false,
   };
@@ -198,6 +208,7 @@ export function rebaseRun(index: PackIndex, run: RunState): RunState {
     queue: [],
     minigame: null,
     suggestions: [],
+    cutsceneMarker: null,
     stage: [],
     ended: false,
   };

@@ -47,6 +47,13 @@ export type StepView =
       view: Json;
     }
   | { kind: 'await'; action: AwaitAction }
+  | {
+      kind: 'cutscene';
+      id: string;
+      /** E's `aegis-cutscene/1` document from the content pack. */
+      document: Json;
+      marker: string | null;
+    }
   | { kind: 'end' };
 
 export interface NotebookView {
@@ -260,6 +267,19 @@ function projectRun(state: ProfileState, rules: GameRules, contentIndex: Content
       case 'await':
         stepView = { kind: 'await', action: step.action };
         break;
+      case 'cutscene': {
+        const entry = (index.pack.cutscenes as { id: string; document?: Json }[]).find(
+          (c) => c.id === step.cutscene,
+        );
+        if (!entry?.document) throw new Error(`Cutscene ${step.cutscene} has no document`);
+        stepView = {
+          kind: 'cutscene',
+          id: step.cutscene,
+          document: entry.document,
+          marker: run.cutsceneMarker,
+        };
+        break;
+      }
       case 'end':
         stepView = { kind: 'end' };
         break;

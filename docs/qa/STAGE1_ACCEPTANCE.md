@@ -14,7 +14,7 @@
 | Narration (recorded voices) | **Integrated** — every child-facing line and label has a recording; PM voice approval (Q30) is A's/PM's |
 | Art, music, sound effects | **Integrated** — A's backgrounds, characters, avatar with runtime scarf tint, prop layers per level, music with warm comfort variants, SFX |
 | Animated puppets and lip-sync | **Integrated** — E's stage with A's rigs; lip-sync from cue tracks, asserted in Chromium |
-| Cutscenes with the avatar | **Pending** — engine supports them; no cutscene documents are authored yet (owner to be decided) |
+| Cutscenes with the avatar (T25) | **Runtime integrated and tested** on E's player with a test cutscene; **C's documents and A's staging art pending** |
 | Human playtest with a child (Q44, T15) | **Pending the family** — protocol: `docs/qa/T15_PLAYTEST_PROTOCOL_RU.md` |
 | Physical iPad / Android tablet | **Pending the family** — only Chromium and WebKit automation on Windows so far |
 
@@ -30,9 +30,9 @@ npm run verify          # content check, typecheck, lint, unit tests, release bu
 npm run preview         # http://127.0.0.1:4320/ — local static preview of apps/game/dist
 ```
 
-Last full run (2026-10-08, Windows, Node 25.6.0): content check 0 errors; **49 unit tests** passed
-(game-core rules and scenario traces, game-session, C's content tools); release build OK; **26 E2E tests**
-passed (13 Chromium + 13 WebKit, serial, 5.8 min).
+Last full run (2026-10-08, Windows, Node 25.6.0): content check 0 errors; **51 unit tests** passed
+(game-core rules and scenario traces, game-session, C's content tools); release build OK; **32 E2E tests**
+passed (16 Chromium + 16 WebKit, serial, 12.3 min).
 
 ## 1. Brief checklist (TZ section 15), per variant
 
@@ -106,7 +106,7 @@ passed (13 Chromium + 13 WebKit, serial, 5.8 min).
 |---|---|
 | Narration for every child-facing line and label (Q29) | ✅ A's 531 recordings: auto-play, stop on advance, replay, ear buttons, optional reading of choices; music crossfades to warm variants under the lamp |
 | Lip-sync on every spoken line | ✅ for characters on stage: `puppet.speak` binds A's cue track (converted to `aegis-cues/1`) to the narration clock; `stage.spec.ts` asserts `cues:synchronized` in Chromium. WebKit-Windows has no audio output in Playwright, so it shows the honest `unheard` neutral mouth. Narrator lines have no mouth. |
-| Cutscenes including the player's avatar | **pending authored cutscene files**; the avatar puppet is in every scene, including those marked `cutscene` |
+| Cutscenes including the player's avatar (T25) | Runtime: `{t:'cutscene'}` step blocks until a `cutscene` command (completed/skipped) — effects are separate steps, so skip/replay/restore never re-grant; markers persisted and used to restart after restore (E's policy). `cutscene.spec.ts` (Chromium + WebKit, injected test cutscene via `build --test-cutscene`): captions and «Дальше» after each line, pause, replay, skip, avatar bound, reload mid-cutscene resumes from the marker with rewards granted once, reduced motion completes. **Pending:** C's real documents (intro, P3, C1-7/L2-8/L3-9, C1-10), A's prop rigs; the "no avatar in the intro" check runs once the intro exists. |
 
 ## 7. Offline and privacy
 
@@ -141,7 +141,7 @@ Chrome on Android tablets, Edge (Chromium-based, expected equivalent), Firefox (
 
 1. A's assets are integrated; three backgrounds share location `shed` and the runtime picks the
    interior — per-scene selection waits for E's stage or a content field.
-2. Cutscene documents for scenes marked `cutscene` (C1-7, C1-10, P3) need an author (C or A) — E's player is ready.
+2. T25 cutscene documents (C) and prop rigs (A) — runtime, camera presets and effects are registered and tested.
 3. Update flow and break reminder are implemented but not covered by E2E yet.
 4. Stage directions (`dir`) reach the presenter with their text; the static presenter only renders bubbles.
 5. Human playtest and device checks (T15), pie card bake (T10).

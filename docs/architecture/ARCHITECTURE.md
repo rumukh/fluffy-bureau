@@ -149,8 +149,15 @@ visibility changes add the `visibility` reason.
 - **`StaticPresenter`**: layered still images with CSS motion; the fallback when the stage cannot load.
 
 A's Rhubarb cue files are converted to `aegis-cues/1` at build time with E's `importRhubarb`.
-Cutscene documents (`stage.cutscene`) are supported by the engine but **no cutscene files are authored
-yet**; scenes marked `cutscene` currently play as dialogue on the stage with the avatar present.
+**Cutscenes (T25):** a `{t:'cutscene'}` step blocks the story; the UI plays the pack's
+`aegis-cutscene/1` document on E's player (`stage.cutscene`) with the avatar composition bound, shows
+each line as a caption and waits for «Дальше», and offers pause (HUD), «Смотреть сначала» and
+«Пропустить ролик». Reached markers are committed (`cutscene-marker`); after a restore the cutscene
+restarts from the last marker. Completion or skipping is committed with the `cutscene` command;
+gameplay effects are ordinary steps after the cutscene, so nothing is granted twice. Registered for C's
+documents: camera presets `close-left`, `close-center`, `close-right`, `sky` (plus built-in `wide`) and
+effects `bubbles`, `sparkles`, `steam` (one-frame atlases generated from A's effect images). Cutscene
+music and SFX go through the game's audio pack. Without the stage, a text-only player walks the lines.
 Music follows the location and switches to A's `-warm` variant under the comfort lamp; sound effects
 mark finds, misses, cards, lamp, hearts and buttons.
 

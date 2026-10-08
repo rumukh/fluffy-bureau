@@ -60,6 +60,8 @@ export interface RunState {
   minigameCount: number;
   suggestions: Suggestion[];
   versionAttempts: number;
+  /** Last cutscene marker reached; a restore resumes the cutscene from it (E's restart policy). */
+  cutsceneMarker: string | null;
   /** Stage directions passed since the last blocking step (presentation cues). */
   stage: string[];
   ended: boolean;
