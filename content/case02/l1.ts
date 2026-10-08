@@ -1,5 +1,7 @@
-import { all, cl, goto, has, L, Ls, menu, minigame, not, opt as mopt, reveal, reward, seq, skill, when, type VariantSource } from '../../tools/content/dsl.ts';
-import { activityCard, and, baseDecisions, choice, commonCutscenes, eq, facts, factsScene, glossary, intended, intro0, intro1base, klubkiIntro, ne, notebookIntro, resolutionSteps, rewardScene, versionScene, what, where, who } from './common.ts';
+import { all, cl, cutscene, goto, has, L, Ls, menu, minigame, not, opt as mopt, reveal, reward, seq, skill, when, type VariantSource } from '../../tools/content/dsl.ts';
+import { activityCard, and, baseDecisions, choice, cipherPosterPage, eq, facts, factsScene, glossary, intended, intro1base, klubkiIntro, mapIntro, ne, notebookIntro, rewardScene, versionScene, what, where, who } from './common.ts';
+import { exhibition, oak, office, rewardCutscene } from './cutscenes.ts';
+import { cipherL1, postmanL1 } from './mechanics.ts';
 
 const HUB = 'C2-HUB';
 const allClues = all(has.clue('c2-lupa'), has.clue('c2-cipher'), has.clue('c2-cocoa'));
@@ -7,7 +9,7 @@ const allClues = all(has.clue('c2-lupa'), has.clue('c2-cipher'), has.clue('c2-co
 export const level1: VariantSource = {
   pack: 'case02-l1', kind: 'case', title: 'C2-TITLE', case: { number: 2, level: 1 }, start: 'C2-0',
   scenes: [
-    { id: 'C2-0', title: 'Контора: письма не пришли', location: 'office', cast: ['khvosts', 'watsony', 'pudding'], presentation: 'cutscene', steps: [...intro0(), goto('C2-1')] },
+    { id: 'C2-0', title: 'Контора: письма не пришли', location: 'office', cast: ['khvosts', 'watsony', 'pudding'], presentation: 'cutscene', steps: [cutscene('c2.office.l1'), mapIntro(), goto('C2-1')] },
     { id: 'C2-1', title: 'Завязка: крыльцо почты', location: 'post-office', cast: ['pudding', 'khvosts', 'watsony'], presentation: 'dialogue', steps: [
       ...intro1base(), ...notebookIntro('C2-1-D03'), L('C2-1-11'), L('C2-1-12'), L('C2-1-13'), klubkiIntro(), goto(HUB),
     ] },
@@ -24,16 +26,16 @@ export const level1: VariantSource = {
       skill('magnifier', [L('C2-2-01')]), minigame('c2l1-lupa'), L('C2-2-05'), L('C2-2-06'), reveal('c2-lupa'), goto(HUB),
     ] },
     { id: 'C2-3', title: 'Шифр на пуговицах', location: 'post-office', cast: ['khvosts', 'watsony'], presentation: 'minigame', steps: [
-      skill('button-cipher', seq('C2-3-', 1, 3)), minigame('c2l1-cipher'), ...seq('C2-3-', 5, 11), reveal('c2-cipher'), goto(HUB),
+      skill('button-cipher', seq('C2-3-', 1, 3)), minigame('c2l1-cipher'), ...seq('C2-3-', 7, 11), reveal('c2-cipher'), goto(HUB),
     ] },
     { id: 'C2-4', title: 'Библиотека: «Чашка какао»', location: 'library-door', cast: ['mouse', 'khvosts', 'watsony'], presentation: 'minigame', steps: [
       ...seq('C2-4-', 1, 2), skill('cocoa', [L('C2-4-03')]), minigame('c2l1-cocoa'), reward('rw-c2-heart-mice'), ...seq('C2-4-', 12, 20), reveal('c2-cocoa'), goto(HUB),
     ] },
     { id: 'C2-5', title: 'Разговор с мэром', location: 'post-office', cast: ['pudding', 'khvosts', 'watsony'], presentation: 'dialogue', steps: [...seq('C2-5-', 1, 4), reveal('c2-mayor'), goto(HUB)] },
     versionScene('C2-6', HUB),
-    { id: 'C2-7', title: 'Парк Старого Дуба', location: 'old-oak', cast: ['stella', 'pudding', 'mouse', 'khvosts', 'watsony'], presentation: 'cutscene', steps: resolutionSteps([], 'C2-8') },
+    { id: 'C2-7', title: 'Парк Старого Дуба', location: 'old-oak', cast: ['stella', 'pudding', 'mouse', 'khvosts', 'watsony'], presentation: 'cutscene', steps: [cutscene('c2.oak.l1'), goto('C2-8')] },
     { id: 'C2-8', title: 'Почтальон и Выставка писем', location: 'town-square', cast: ['stella', 'pudding', 'tyopa', 'khvosts'], presentation: 'minigame', steps: [
-      skill('postal', Ls('C2-8-01', 'C2-8-02')), minigame('c2l1-postal'), ...seq('C2-8-', 5, 8), goto('C2-9'),
+      skill('postal', Ls('C2-8-01', 'C2-8-02')), minigame('c2l1-postal'), cutscene('c2.exhibition.l1'), goto('C2-9'),
     ] },
     factsScene('C2-10'), rewardScene(1),
   ],
@@ -88,20 +90,14 @@ export const level1: VariantSource = {
     { id: 'c2l1-lupa', skill: 'magnifier', config: { kind: 'magnifier', targets: [
       { id: 'umbrella', label: 'C2-2-B01', required: true, reply: ['C2-2-02'] }, { id: 'feather', label: 'C2-2-B02', required: true, reply: ['C2-2-03'] }, { id: 'note', label: 'C2-2-B03', required: true, reply: ['C2-2-04'] },
     ], afterFirst: [], afterFirstSkill: null, assistAfterMisses: 3 } },
-    { id: 'c2l1-cipher', skill: 'button-cipher', config: { kind: 'staged', mechanic: 'button-cipher', description: 'Сопоставить пуговицы с буквами.', steps: [
-      { id: 'word1', prompt: null, pageSize: 3, options: [choice('nest', 'C2-3-B01', true, 'C2-3-05'), choice('rain', 'C2-3-B02', false, 'C2-3-04'), choice('oak', 'C2-L2-4-B01', false, 'C2-3-04')] },
-      { id: 'word2', prompt: null, pageSize: 3, options: [choice('rain', 'C2-3-B02', true, 'C2-3-06'), choice('nest', 'C2-3-B01', false, 'C2-3-04'), choice('oak', 'C2-L2-4-B01', false, 'C2-3-04')] },
-    ], lines: [] } },
+    { id: 'c2l1-cipher', skill: 'button-cipher', config: cipherL1() },
     { id: 'c2l1-cocoa', skill: 'cocoa', config: { kind: 'cocoa', rounds: [
       { id: 'r1', options: [choice('kind1', 'C2-4-B01', true, 'C2-4-04'), choice('kind2', 'C2-4-B02', true, 'C2-4-05'), choice('paper', 'C2-4-B03', false, 'C2-4-06')], retry: ['C2-4-07'] },
       { id: 'r2', options: [choice('doing', 'C2-4-B04', true, 'C2-4-08'), choice('flags', 'C2-4-B05', true, 'C2-4-09'), choice('where', 'C2-4-B06', false, 'C2-4-10')], retry: ['C2-4-11'] },
     ] } },
-    { id: 'c2l1-postal', skill: 'postal', config: { kind: 'staged', mechanic: 'postal', description: 'Посчитать дырочки и выбрать домик.', steps: [
-      { id: 'p2', prompt: null, pageSize: 3, options: [choice('h1', 'C2-8-B01', false, 'C2-8-03'), choice('h2', 'C2-8-B02', true, 'C2-8-04'), choice('h4', 'C2-8-B03', false, 'C2-8-03')] },
-      { id: 'p4', prompt: null, pageSize: 3, options: [choice('h1', 'C2-8-B01', false, 'C2-8-03'), choice('h2', 'C2-8-B02', false, 'C2-8-03'), choice('h4', 'C2-8-B03', true, 'C2-8-04')] },
-    ], lines: [] } },
+    { id: 'c2l1-postal', skill: 'postal', config: postmanL1() },
   ],
-  facts, glossary, rewards: ['rw-c2-heart-mice', 'rw-c2-badge', 'rw-c2-buttons-l1', 'rw-c2-sticker-l1', 'rw-c2-title-helper', 'rw-c2-decor-poster', 'rw-c2-activity'], collections: [], activities: [activityCard], comfort: [], cutscenes: [], plannedCutscenes: commonCutscenes, decisions: [...baseDecisions], reserved: [],
+  facts, glossary, rewards: ['rw-c2-heart-mice', 'rw-c2-badge', 'rw-c2-buttons-l1', 'rw-c2-sticker-l1', 'rw-c2-title-helper', 'rw-c2-decor-poster', 'rw-c2-activity'], collections: [], activities: [activityCard], comfort: [], cutscenes: [office(1), oak(1, 'C2-7'), exhibition(1, 'C2-8'), rewardCutscene(1)], notebookPages: [cipherPosterPage('c2l1-cipher')], decisions: [...baseDecisions], reserved: [],
 };
 
 

@@ -1,5 +1,6 @@
-import { all, any, cl, dir, goto, has, L, Ls, menu, minigame, not, opt as mopt, reveal, seq, skill, when, type VariantSource } from '../../tools/content/dsl.ts';
-import { activityCard, and, baseDecisions, choice, commonCutscenes, eq, facts, factsScene, glossary, intended, introOffice, klubkiIntro, ne, rewardScene, versionScene, what, where, who } from './common.ts';
+import { all, any, cl, cutscene, dir, goto, has, L, Ls, menu, minigame, not, opt as mopt, reveal, seq, skill, when, type VariantSource } from '../../tools/content/dsl.ts';
+import { activityCard, and, baseDecisions, cartCompareConfig, choice, dreamKeeperConfig, equalShareConfig, eq, facts, factsScene, glossary, intended, introOffice, klubkiIntro, legacyChoiceLabels, ne, rewardScene, versionScene, what, where, who } from './common.ts';
+import { cellarCutscene, officeCutscene, pantryCutscene, rewardCutscene, teaCutscene } from './cutscenes.ts';
 
 const HUB = 'C4-L3-HUB';
 const allClues = all(has.clue('c4-cellar'), has.clue('c4-tracks'), has.clue('c4-cart'), has.clue('c4-diary'), has.clue('c4-dreams'));
@@ -8,9 +9,9 @@ const rewards = ['rw-c4-badge', 'rw-c4-buttons-l3', 'rw-c4-sticker-l3', 'rw-c4-t
 export const level3: VariantSource = {
   pack: 'case04-l3', kind: 'case', title: 'C4-TITLE', case: { number: 4, level: 3 }, start: 'C4-0',
   scenes: [
-    { id: 'C4-0', title: 'Контора: мэр в отчаянии', location: 'office', cast: ['pudding', 'khvosts', 'watsony'], presentation: 'cutscene', steps: [...introOffice(), goto('C4-L3-1')] },
+    { id: 'C4-0', title: 'Контора: мэр в отчаянии', location: 'office', cast: ['pudding', 'khvosts', 'watsony'], presentation: 'cutscene', steps: [...introOffice(3), goto('C4-L3-1')] },
     { id: 'C4-L3-1', title: 'Завязка: пять подозреваемых', location: 'mayor-cellar', cast: ['pudding', 'khvosts', 'watsony'], presentation: 'dialogue', steps: [
-      ...seq('C4-1-', 1, 6), ...seq('C4-L2-1-', 1, 3), L('C4-L3-1-01'), skill('notebook', [dir('C4-L3-1-D01', 'Блокнот раскрывается: пять строк в двух колонках.'), L('C4-1-07')]), L('C4-L2-1-04'), L('C4-L2-1-05'), L('C4-1-09'), L('C4-L3-1-02'), klubkiIntro(), goto(HUB),
+      cutscene('c4.cellar.l3'), skill('notebook', [dir('C4-L3-1-D01', 'Блокнот раскрывается: пять строк в двух колонках.', null, [{ op: 'sfx', asset: 'sfx.page-turn' }, { op: 'pose', actor: 'khvosts', clip: 'present' }]), L('C4-1-07')]), L('C4-L2-1-04'), L('C4-L2-1-05'), L('C4-1-09'), L('C4-L3-1-02'), klubkiIntro(), goto(HUB),
     ] },
     { id: HUB, title: 'Погреб: выбор', location: 'mayor-cellar', cast: ['pudding', 'khvosts', 'watsony'], presentation: 'hub', steps: [
       when(all(allClues, not(has.visited('C4-L3-8'))), [goto('C4-L3-8')]),
@@ -34,15 +35,15 @@ export const level3: VariantSource = {
       skill('cart-match', Ls('C4-L3-5-01', 'C4-L3-5-02')), minigame('c4l3-cart'), ...seq('C4-L3-5-', 4, 6), reveal('c4-cart'), goto(HUB),
     ] },
     { id: 'C4-L3-6', title: '«Хранитель снов»', location: 'mayor-cellar', cast: ['pukhlik', 'khvosts', 'watsony'], presentation: 'minigame', steps: [
-      skill('dream-keeper', seq('C4-5-', 1, 4)), L('C4-L3-6-01'), minigame('c4l3-dreams'), ...seq('C4-5-', 9, 10), reveal('c4-dreams'), goto(HUB),
+      skill('dream-keeper', seq('C4-5-', 1, 4)), L('C4-L3-6-01'), minigame('c4l3-dreams'), reveal('c4-dreams'), goto(HUB),
     ] },
     { id: 'C4-L3-7', title: '«Лента времени»: дневник', location: 'office-diary', cast: ['watsony', 'khvosts'], presentation: 'minigame', steps: [
       skill('timeline', Ls('C4-L2-4-01', 'C4-L2-4-02'), [L('C4-L2-4-03')]), L('C4-L2-4-04'), minigame('c4l3-timeline'), ...seq('C4-L2-4-', 5, 8), L('C4-L3-7-01'), reveal('c4-diary'), goto(HUB),
     ] },
     versionScene('C4-L3-8', HUB),
-    { id: 'C4-L3-9', title: 'Кладовка Конторы', location: 'office-pantry', cast: ['pudding', 'mouse', 'kartofan', 'pukhlik', 'khvosts', 'watsony'], presentation: 'cutscene', steps: [dir('C4-7-D01', 'Контора. Под лестницей маленькая дверка; внутри двенадцать банок с бантиками.'), ...seq('C4-7-', 1, 12), ...seq('C4-L2-7-', 1, 3), ...seq('C4-L3-9-', 1, 3), ...seq('C4-7-', 13, 17), goto('C4-L3-10')] },
+    { id: 'C4-L3-9', title: 'Кладовка Конторы', location: 'office-pantry', cast: ['pudding', 'mouse', 'kartofan', 'pukhlik', 'khvosts', 'watsony'], presentation: 'cutscene', steps: [cutscene('c4.pantry.l3'), goto('C4-L3-10')] },
     { id: 'C4-L3-10', title: 'Большое чаепитие', location: 'town-square', cast: ['pudding', 'mouse', 'kartofan', 'pukhlik', 'khvosts', 'watsony'], presentation: 'minigame', steps: [
-      skill('equal-share', Ls('C4-8-01', 'C4-8-02')), minigame('c4l3-tea'), ...seq('C4-L3-10-', 1, 2), ...seq('C4-8-', 5, 7), goto('C4-9'),
+      skill('equal-share', []), minigame('c4l3-tea'), cutscene('c4.tea.l3'), goto('C4-9'),
     ] },
     factsScene('C4-10'), rewardScene(3),
   ],
@@ -118,22 +119,23 @@ export const level3: VariantSource = {
       { id: 'fresh', prompt: null, pageSize: 3, options: [choice('badger', 'C4-4-B03', true, 'C4-4-05'), choice('mouse', 'C4-4-B01', false, 'C4-4-06'), choice('hedgehog', 'C4-L2-3-B01', false, 'C4-L2-3-01')] },
       { id: 'porch', prompt: null, pageSize: 3, options: [choice('mole', 'C4-L3-4-B01', true, 'C4-L3-4-01'), choice('badger', 'C4-4-B03', false, 'C4-L3-4-02'), choice('hedgehog', 'C4-L2-3-B01', false, 'C4-L3-4-02')] },
     ], question: null } },
-    { id: 'c4l3-cart', skill: 'cart-match', config: { kind: 'staged', mechanic: 'cart-match', description: 'Сравнить след колеса с двумя тележками.', steps: [
-      { id: 'width', prompt: 'C4-L3-5-02', pageSize: 3, options: [choice('narrow', 'C4-L3-5-B03', true, 'C4-L3-5-04'), choice('wide', 'C4-L3-5-B04', false, 'C4-L3-5-03')] },
-      { id: 'patch', prompt: 'C4-L3-5-02', pageSize: 3, options: [choice('star', 'C4-L3-5-B05', true, 'C4-L3-5-04'), choice('smooth', 'C4-L3-5-B06', false, 'C4-L3-5-03')] },
-    ], lines: [] } },
+    { id: 'c4l3-cart', skill: 'cart-match', config: cartCompareConfig },
     { id: 'c4l3-timeline', skill: 'timeline', config: { kind: 'timeline', items: [
       { id: 'count', time: 'три недели назад', label: 'C4-L2-4-B02' }, { id: 'rule', time: 'три недели назад', label: 'C4-L2-4-B03' }, { id: 'kartofan', time: 'две недели назад, день', label: 'C4-L3-7-B01' }, { id: 'cart', time: 'две недели назад, вечер', label: 'C4-L2-4-B04' }, { id: 'home', time: 'две недели назад, вечер', label: 'C4-L2-4-B05' },
     ], solution: ['count', 'rule', 'kartofan', 'cart', 'home'], wrong: ['C4-L2-4-09'] } },
-    { id: 'c4l3-dreams', skill: 'dream-keeper', config: { kind: 'staged', mechanic: 'dream-keeper', description: 'Пухлик показывает сны-намёки.', steps: [
-      { id: 'where', prompt: 'C4-5-N01', pageSize: 3, options: [choice('office', 'C4-5-B01', true, 'C4-5-05'), choice('mouse', 'C4-5-B02', false, 'C4-5-06'), choice('barrel', 'C4-5-B03', false, 'C4-5-06'), choice('attic', 'C4-L2-5-B01', false, 'C4-5-06'), choice('shed', 'C4-AX-kartofan-shed', false, 'C4-5-06')] },
-      { id: 'what', prompt: 'C4-5-N02', pageSize: 3, options: [choice('stock', 'C4-5-B04', true, 'C4-5-07'), choice('eaten', 'C4-5-B05', false, 'C4-5-06'), choice('broken', 'C4-5-B06', false, 'C4-5-06'), choice('shared', 'C4-L2-5-B02', false, 'C4-5-06')] },
-      { id: 'who', prompt: 'C4-5-N03', pageSize: 3, options: [choice('khvosts', 'C4-5-B07', true, 'C4-5-08'), choice('pudding', 'C4-5-B08', false, 'C4-5-06'), choice('mouse', 'C4-5-B09', false, 'C4-5-06'), choice('watsony', 'C4-L2-5-B03', false, 'C4-5-06'), choice('kartofan', 'C4-L3-5-B02', false, 'C4-5-06')] },
-    ], lines: [] } },
-    { id: 'c4l3-tea', skill: 'equal-share', config: { kind: 'staged', mechanic: 'equal-share', description: 'Разделить банки и оставить запас.', steps: [
-      { id: 'tables', prompt: 'C4-8-02', pageSize: 3, options: [choice('three-each', 'C4-8-B03', true, 'C4-8-04'), choice('four', 'C4-8-B02', false, 'C4-8-03'), choice('three', 'C4-8-B01', false, 'C4-8-03')] },
-      { id: 'left', prompt: 'C4-L3-10-01', pageSize: 3, options: [choice('four-left', 'C4-L3-10-B01', true, 'C4-8-04'), choice('three-left', 'C4-8-B03', false, 'C4-8-03'), choice('none', 'C4-8-B01', false, 'C4-8-03')] },
-    ], lines: [] } },
+    { id: 'c4l3-dreams', skill: 'dream-keeper', config: dreamKeeperConfig(3, ['C4-5-N01', 'C4-5-N02', 'C4-5-N03']) },
+    { id: 'c4l3-tea', skill: 'equal-share', config: equalShareConfig(3) },
   ],
-  facts, glossary, rewards, collections: [], activities: [activityCard], comfort: [{ scene: '*', line: 'C4-L-01' }], cutscenes: [], plannedCutscenes: commonCutscenes.map((c) => c.scene === 'C4-1' ? { ...c, scene: 'C4-L3-1' } : c.scene === 'C4-7' ? { ...c, scene: 'C4-L3-9' } : c.scene === 'C4-8' ? { ...c, scene: 'C4-L3-10' } : c), decisions: [...baseDecisions, { id: 'C4L3-D1', text: '«Чья тележка?» использует тележку Конторы со звёздочкой из угла офиса с дела 1.', ref: 'D19, SCRIPT_INDEX_RU §5' }], reserved: [{ lines: ['C4-F-01', 'C4-F-02', 'C4-F-03', 'C4-F-04', 'C4-F-05'], reason: 'семейный «Хранитель снов», Q34 handoff' }, { lines: ['C4-0-B01'], reason: 'названия новых механик и точки карты используются системами каталога' }],
+  facts, glossary, rewards, collections: [], activities: [activityCard], comfort: [{ scene: '*', line: 'C4-L-01' }], cutscenes: [
+    officeCutscene('c4.office.l3'),
+    cellarCutscene('c4.cellar.l3', 'C4-L3-1', [
+      { op: 'line', actor: 'pudding', line: 'C4-L2-1-01' },
+      { op: 'line', actor: 'watsony', line: 'C4-L2-1-02' },
+      { op: 'line', actor: 'watsony', line: 'C4-L2-1-03' },
+      { op: 'line', actor: 'pudding', line: 'C4-L3-1-01' },
+    ]),
+    pantryCutscene('c4.pantry.l3', 'C4-L3-9', 3),
+    teaCutscene('c4.tea.l3', 'C4-L3-10', 3),
+    rewardCutscene('c4.reward.l3', 3),
+  ], decisions: [...baseDecisions, { id: 'C4L3-D1', text: '«Чья тележка?» использует тележку Конторы со звёздочкой из угла офиса с дела 1.', ref: 'D19, SCRIPT_INDEX_RU §5' }], reserved: [{ lines: ['C4-0-B01', ...legacyChoiceLabels], reason: 'названия новых механик и старые подписи выбора сохраняются для систем каталога' }],
 };

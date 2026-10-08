@@ -2,21 +2,21 @@
  "format": "fluffy-voice-manifest",
  "schema": 1,
  "packs": {
-  "shared": "4b0eba0c2583d20c59baf09e69ff20e9c86cebc0f65994f5116750389678aece",
-  "prologue": "a935cb189f406ab1458c363740d11435e9b57e2d1446c13b2ba4dd40efea30f7",
-  "case01-l1": "e9dfa918c1324820b50ce7dfd507fa7f0ceec106c8ef76747d2ea5c3cae90ba4",
-  "case01-l2": "f101c41add0fa9e67e0ea8181169205adddab082d8d1a034f80222a6d47b390c",
-  "case01-l3": "8a613ee2f91f1e4c2f52fc049d141e21eca2a9c4ee26f10722e77b8fc6cb63f3",
-  "case02-l1": "d517c9404043d507a227f1bc01e41b8802e55c3b3646af9af842a7e4631299f7",
-  "case02-l2": "da4c6739491c29a58c16d245891d1276c60b7c9870928e6a88078e48710f306d",
-  "case02-l3": "45d7abdfd119590029f9e194425586c9352f6a40282d613b71bab695ef715817",
-  "case03-l1": "4ff3cde27069fd13cf8d5884230524551bb9526e4c68f4d5f0f496975e546367",
-  "case03-l2": "dc26d1670d538a3e282afb3e434b42541b7e6db8f3c89377e4d7834fcc763331",
-  "case03-l3": "1ed7e4a01814ed0624788343152f809e3ba0abc8f02885859a2279d74141e070",
-  "case04-l1": "4cd5b04a8264f505b71a80c2e8e6182977fce92e24f4bedee8b5769420da0c00",
-  "case04-l2": "7f3f27a2eac5cfc162e1ee2a7eca0fe9f634769d550dac63fc9aaf8a20269474",
-  "case04-l3": "a4f1a29a40acb83f26e27a7f8f5bde26a2c8772c69d52aa83dd8dfe3aaebcf36",
-  "cozy": "3fee0ea5e1b61a842af9e1c3def4bd926b0fef5f396103f125859f99bd83f2a7"
+  "shared": "6933fa2996590967e87e1ade5d836ae451a0577aa0ba3701385532e5db99bc9c",
+  "prologue": "3f1e1d9ee3dd3da923da680fe7d714d8739319a3305df2ebf90f775fd2323c7a",
+  "case01-l1": "e957aa61473b5bfd6a4b66ebc15202491f8557476e7575b458e798e1ec62e84c",
+  "case01-l2": "ee5941f9d84955a189d315a8eb790dc48175a1a95a2028633b8b94e9992c5977",
+  "case01-l3": "0741d9ca9aec39471834634713136aa22a225fa22aa9c951bdd27b8cee72e2cb",
+  "case02-l1": "96619d3e2933ecdc3d08602fea559f0eec5b69ae0396c30e9ba0517c6b50b7aa",
+  "case02-l2": "bf0fe6eeb03b2e1d8c8cf6eee3a75859490206de78f9624c39029d624f89e892",
+  "case02-l3": "c92972422c9adcc5328e36c06825c1b1d4af96ca50582a3b1f3df62281ea22b4",
+  "case03-l1": "df51af9b7e1e4b97754e6e5a1f3362cc95e7731a2851355ad09db141958184dd",
+  "case03-l2": "8412cecea657166ce4913115f6a8ddeb6fffd8eaaf4e46a62565053ba336d5f7",
+  "case03-l3": "63ef57e472a95da2c4d1c94e1a508c209351f8bc3c17420c8fe827109164823f",
+  "case04-l1": "0a44a2734d5e7326cefe477f0679d0a41792e112477794b476c2ae87c9921353",
+  "case04-l2": "8f202cb976539f6ff8ea7935b322c3d94a8f38446d4ba46c74680b2e17c95520",
+  "case04-l3": "a3195b9d514748ca3b73d786d593ea741a8881a3dc4190f181dc6bc685290b6b",
+  "cozy": "131d8265c65c7e38f48c83160686b6ce11cfd64973f743f7d1cb8340adc28cc4"
  },
  "lexicon": [
   {
@@ -9957,38 +9957,6 @@
    ]
   },
   {
-   "id": "C2-3-05",
-   "revision": 1,
-   "kind": "dialogue",
-   "speaker": "khvosts",
-   "displayText": "Гнездо! Письма отнесли в гнездо!",
-   "ttsText": "Гнездо! Письма отнесли в гнездо!",
-   "ttsHash": "d5807e5e446421b34c186dd2413d19513796cb269c0e204a8131028b20157f06",
-   "pronunciation": [],
-   "delivery": "cheerful",
-   "note": "",
-   "packs": [
-    "case02-l1"
-   ]
-  },
-  {
-   "id": "C2-3-06",
-   "revision": 1,
-   "kind": "dialogue",
-   "speaker": "khvosts",
-   "displayText": "Дождь! Кто-то спешил до дождя.",
-   "ttsText": "Дождь! Кто-то спешил до дождя.",
-   "ttsHash": "380fc83e333fa1143b0c0b084382a19e6b58fcdce8766de7a47d4ef27f4b0728",
-   "pronunciation": [],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
-    "case02-l1",
-    "case02-l2",
-    "case02-l3"
-   ]
-  },
-  {
    "id": "C2-3-07",
    "revision": 1,
    "kind": "dialogue",
@@ -11577,30 +11545,28 @@
    ]
   },
   {
-   "id": "C2-3-B01",
+   "id": "C2-3-05",
    "revision": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "displayText": "ГНЕЗДО",
-   "ttsText": "ГНЕЗДО",
-   "ttsHash": "87f6d0b40dd3026ca3ed5833d7185921ed7d40911fb89d0aa205864372119b6c",
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "displayText": "Гнездо! Письма отнесли в гнездо!",
+   "ttsText": "Гнездо! Письма отнесли в гнездо!",
+   "ttsHash": "d5807e5e446421b34c186dd2413d19513796cb269c0e204a8131028b20157f06",
    "pronunciation": [],
-   "delivery": "neutral",
+   "delivery": "cheerful",
    "note": "",
    "packs": [
-    "case02-l1",
-    "case02-l2",
-    "case02-l3"
+    "case02-l1"
    ]
   },
   {
-   "id": "C2-3-B02",
+   "id": "C2-3-06",
    "revision": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "displayText": "ДОЖДЬ",
-   "ttsText": "ДОЖДЬ",
-   "ttsHash": "71b980b984277f6ef08a7ad3315c8d931edf446fb6bf49829686d39e5887c646",
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "displayText": "Дождь! Кто-то спешил до дождя.",
+   "ttsText": "Дождь! Кто-то спешил до дождя.",
+   "ttsHash": "380fc83e333fa1143b0c0b084382a19e6b58fcdce8766de7a47d4ef27f4b0728",
    "pronunciation": [],
    "delivery": "neutral",
    "note": "",
@@ -11628,13 +11594,166 @@
    ]
   },
   {
-   "id": "C2-L2-4-B01",
+   "id": "C2-3-G01",
    "revision": 1,
    "kind": "label",
    "speaker": "narrator",
-   "displayText": "ДУБ",
-   "ttsText": "ДУБ",
-   "ttsHash": "67de79daa0e7899025086a5432f63403b41df19b9513f3e1197a295e279707de",
+   "displayText": "Г: медовый круг, одна дырочка",
+   "ttsText": "Г: медовый круг, одна дырочка",
+   "ttsHash": "1f7efc7392dfd1ec99d07cf2a985af088f472f4e3e4527e9636920f27d518e54",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case02-l1",
+    "case02-l2",
+    "case02-l3"
+   ]
+  },
+  {
+   "id": "C2-3-G02",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Н: синяя квадратная, две дырочки",
+   "ttsText": "Н: синяя квадратная, две дырочки",
+   "ttsHash": "d49134f470a56676ab4a3dc89f23f9b2b564deb19c4382e84b88ae9b63104519",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case02-l1",
+    "case02-l2",
+    "case02-l3"
+   ]
+  },
+  {
+   "id": "C2-3-G03",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Е: розовый цветок, три дырочки",
+   "ttsText": "Е: розовый цветок, три дырочки",
+   "ttsHash": "72b32ecbecaacda90638c145194e8dda072960533b8297935f7d0c48a79db68d",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case02-l1",
+    "case02-l2",
+    "case02-l3"
+   ]
+  },
+  {
+   "id": "C2-3-G04",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "З: зелёное сердечко, четыре дырочки",
+   "ttsText": "З: зелёное сердечко, четыре дырочки",
+   "ttsHash": "53e1c30cec47da2b569ca5ee6b10a9687e4e7991a087081a61ea441b6e739348",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case02-l1",
+    "case02-l2",
+    "case02-l3"
+   ]
+  },
+  {
+   "id": "C2-3-G05",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Д: медовый круг, две дырочки",
+   "ttsText": "Д: медовый круг, две дырочки",
+   "ttsHash": "8de49c91b680b25c3e3010dfbf6bd1d5799d1423efafabc75c6ac1b4dea0da92",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case02-l1",
+    "case02-l2",
+    "case02-l3"
+   ]
+  },
+  {
+   "id": "C2-3-G06",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "О: синяя квадратная, три дырочки",
+   "ttsText": "О: синяя квадратная, три дырочки",
+   "ttsHash": "51bb185b30b0baaf4fa6cac72aa0e471542dfbb7945f5022427b096aada3d470",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case02-l1",
+    "case02-l2",
+    "case02-l3"
+   ]
+  },
+  {
+   "id": "C2-3-G07",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Ж: розовый цветок, четыре дырочки",
+   "ttsText": "Ж: розовый цветок, четыре дырочки",
+   "ttsHash": "8a064d648448a2e40f506ea0ad1d81846bc9a63b9f74b168ee408ab75d441476",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case02-l1",
+    "case02-l2",
+    "case02-l3"
+   ]
+  },
+  {
+   "id": "C2-3-G08",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Ь: зелёное сердечко, одна дырочка",
+   "ttsText": "Ь: зелёное сердечко, одна дырочка",
+   "ttsHash": "1c1c2309a523d3c13b999e20118591f544be05c6efbebf2aefedf7107500a94d",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case02-l1",
+    "case02-l2",
+    "case02-l3"
+   ]
+  },
+  {
+   "id": "C2-3-G09",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "У: медовый круг, три дырочки",
+   "ttsText": "У: медовый круг, три дырочки",
+   "ttsHash": "1a66985c1d0fa2c511f32aa0381b1d2eb26f7a145587c86b422f2f15e10a4659",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case02-l1",
+    "case02-l2",
+    "case02-l3"
+   ]
+  },
+  {
+   "id": "C2-3-G10",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Б: синяя квадратная, четыре дырочки",
+   "ttsText": "Б: синяя квадратная, четыре дырочки",
+   "ttsHash": "2b20f18eb9a14c7002f401e89562f328a4fd1d8a7db8cb5f61bdbdf97a0350b8",
    "pronunciation": [],
    "delivery": "neutral",
    "note": "",
@@ -11883,18 +12002,20 @@
    ]
   },
   {
-   "id": "C2-8-B01",
+   "id": "C2-8-04",
    "revision": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "displayText": "Домик 1",
-   "ttsText": "Домик 1",
-   "ttsHash": "bc031a8b436a186a23e869b8f17abc83bdff16624bf110d5225575c86cd1e9c1",
+   "kind": "dialogue",
+   "speaker": "stella",
+   "displayText": "Доставлено! Ты настоящий почтальон.",
+   "ttsText": "Доставлено! Ты настоящий почтальон.",
+   "ttsHash": "bc36bdd349818303bfb334b37ca814cf31682fe20c32a4d39ecb16e70fb7c3a8",
    "pronunciation": [],
    "delivery": "neutral",
    "note": "",
    "packs": [
-    "case02-l1"
+    "case02-l1",
+    "case02-l2",
+    "case02-l3"
    ]
   },
   {
@@ -11905,6 +12026,73 @@
    "displayText": "Посчитай дырочки ещё раз. Не спеши.",
    "ttsText": "Посчитай дырочки ещё раз. Не спеши.",
    "ttsHash": "21a2b30c6cdac375e1267860696611ecca8de0b5cd36c494a2642f6fa066c169",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case02-l1",
+    "case02-l2",
+    "case02-l3"
+   ]
+  },
+  {
+   "id": "C2-8-L01",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Письмо к Тёпе",
+   "ttsText": "Письмо к Тёпе",
+   "ttsHash": "819edf284dc7f53c0904390e5859b6ffda45dda3789c953c11d7ab8638906294",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case02-l1"
+   ]
+  },
+  {
+   "id": "C2-8-L02",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Письмо к Картофану",
+   "ttsText": "Письмо к Картофану",
+   "ttsHash": "5b10fd2781f09451cf4212b899a1cc1ca80bfc2db0939d0904eff531a3889523",
+   "pronunciation": [
+    {
+     "word": "Картофану",
+     "hint": "Картофа́ну"
+    }
+   ],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case02-l1"
+   ]
+  },
+  {
+   "id": "C2-8-L03",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Письмо в пекарню",
+   "ttsText": "Письмо в пекарню",
+   "ttsHash": "00588480f795e3a338a37c23f1c88d9fef3072fc77bfeb30a68860056f2fdbc2",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case02-l1"
+   ]
+  },
+  {
+   "id": "C2-8-B01",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Домик 1",
+   "ttsText": "Домик 1",
+   "ttsHash": "bc031a8b436a186a23e869b8f17abc83bdff16624bf110d5225575c86cd1e9c1",
    "pronunciation": [],
    "delivery": "neutral",
    "note": "",
@@ -11926,21 +12114,6 @@
    "delivery": "neutral",
    "note": "",
    "packs": [
-    "case02-l1"
-   ]
-  },
-  {
-   "id": "C2-8-04",
-   "revision": 1,
-   "kind": "dialogue",
-   "speaker": "stella",
-   "displayText": "Доставлено! Ты настоящий почтальон.",
-   "ttsText": "Доставлено! Ты настоящий почтальон.",
-   "ttsHash": "bc36bdd349818303bfb334b37ca814cf31682fe20c32a4d39ecb16e70fb7c3a8",
-   "pronunciation": [],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
     "case02-l1",
     "case02-l2",
     "case02-l3"
@@ -11954,6 +12127,40 @@
    "displayText": "Домик 4",
    "ttsText": "Домик 4",
    "ttsHash": "5032843f43f628d8cae348b51863b3774055614a1f78ca0aaf37f251e1838489",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case02-l1",
+    "case02-l2",
+    "case02-l3"
+   ]
+  },
+  {
+   "id": "C2-L2-8-B01",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Домик 5",
+   "ttsText": "Домик 5",
+   "ttsHash": "6d46a7efb66c565f4a873e18d685e191b85b3ae47cc0f11d6b471cef1d479086",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case02-l1",
+    "case02-l2",
+    "case02-l3"
+   ]
+  },
+  {
+   "id": "C2-L2-8-B02",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Домик 6",
+   "ttsText": "Домик 6",
+   "ttsHash": "21d5c28b017bf2c0655f9e7bb4ce1c56d5927bd7ef5bc98d65bbd57663337015",
    "pronunciation": [],
    "delivery": "neutral",
    "note": "",
@@ -12077,7 +12284,8 @@
    "packs": [
     "case02-l1",
     "case02-l2",
-    "case02-l3"
+    "case02-l3",
+    "cozy"
    ]
   },
   {
@@ -12469,38 +12677,6 @@
    "displayText": "Снова шифр! Таблица стала больше.",
    "ttsText": "Снова шифр! Таблица стала больше.",
    "ttsHash": "317b62f0affa433f7cc70b62a285db160dd3e41bf3005021938d431399e95c57",
-   "pronunciation": [],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
-    "case02-l2",
-    "case02-l3"
-   ]
-  },
-  {
-   "id": "C2-L2-4-02",
-   "revision": 1,
-   "kind": "dialogue",
-   "speaker": "khvosts",
-   "displayText": "Дуб! Письма унесли на Старый Дуб.",
-   "ttsText": "Дуб! Письма унесли на Старый Дуб.",
-   "ttsHash": "4ed655184c65059c9e7d05852c94b21268a81579458e817b14085c5f96d4452f",
-   "pronunciation": [],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
-    "case02-l2",
-    "case02-l3"
-   ]
-  },
-  {
-   "id": "C2-L2-4-03",
-   "revision": 1,
-   "kind": "dialogue",
-   "speaker": "khvosts",
-   "displayText": "Но на дубе и гнездо, и дупло. Куда?",
-   "ttsText": "Но на дубе и гнездо, и дупло. Куда?",
-   "ttsHash": "a7d6310113540dd4007e9c7cfd1f5c4854aa3604a5ec8d2908255760fb26a7b5",
    "pronunciation": [],
    "delivery": "neutral",
    "note": "",
@@ -13212,6 +13388,86 @@
    ]
   },
   {
+   "id": "C2-L2-4-02",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "displayText": "Дуб! Письма унесли на Старый Дуб.",
+   "ttsText": "Дуб! Письма унесли на Старый Дуб.",
+   "ttsHash": "4ed655184c65059c9e7d05852c94b21268a81579458e817b14085c5f96d4452f",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case02-l2",
+    "case02-l3"
+   ]
+  },
+  {
+   "id": "C2-L2-4-03",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "displayText": "Но на дубе и гнездо, и дупло. Куда?",
+   "ttsText": "Но на дубе и гнездо, и дупло. Куда?",
+   "ttsHash": "a7d6310113540dd4007e9c7cfd1f5c4854aa3604a5ec8d2908255760fb26a7b5",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case02-l2",
+    "case02-l3"
+   ]
+  },
+  {
+   "id": "C2-3-G11",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "А: розовый цветок, одна дырочка",
+   "ttsText": "А: розовый цветок, одна дырочка",
+   "ttsHash": "31db7120f0e6a71214471e84c9139037e724f1dc7be3f6d1c693f9758246d2b0",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case02-l2",
+    "case02-l3"
+   ]
+  },
+  {
+   "id": "C2-3-G12",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Р: зелёное сердечко, две дырочки",
+   "ttsText": "Р: зелёное сердечко, две дырочки",
+   "ttsHash": "6c2ea0add240bc521ec05545b75193acb25982d9fcf5201bb132c768c7c3993b",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case02-l2",
+    "case02-l3"
+   ]
+  },
+  {
+   "id": "C2-3-B02",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "ДОЖДЬ",
+   "ttsText": "ДОЖДЬ",
+   "ttsHash": "71b980b984277f6ef08a7ad3315c8d931edf446fb6bf49829686d39e5887c646",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case02-l2",
+    "case02-l3"
+   ]
+  },
+  {
    "id": "C2-L2-5-N03",
    "revision": 1,
    "kind": "label",
@@ -13229,29 +13485,58 @@
    "sameAudioAs": "L2-6-04"
   },
   {
-   "id": "C2-L2-8-B01",
+   "id": "C2-8-L04",
    "revision": 1,
    "kind": "label",
    "speaker": "narrator",
-   "displayText": "Домик 5",
-   "ttsText": "Домик 5",
-   "ttsHash": "6d46a7efb66c565f4a873e18d685e191b85b3ae47cc0f11d6b471cef1d479086",
+   "displayText": "Письмо с двумя пуговицами",
+   "ttsText": "Письмо с двумя пуговицами",
+   "ttsHash": "2be6d2cfc842fd0df7278ed2eaa0114540ae180a8b6c920eafdcc37d06d8e814",
    "pronunciation": [],
    "delivery": "neutral",
    "note": "",
    "packs": [
-    "case02-l2",
-    "case02-l3"
+    "case02-l2"
    ]
   },
   {
-   "id": "C2-L2-8-B02",
+   "id": "C2-8-L05",
    "revision": 1,
    "kind": "label",
    "speaker": "narrator",
-   "displayText": "Домик 6",
-   "ttsText": "Домик 6",
-   "ttsHash": "21d5c28b017bf2c0655f9e7bb4ce1c56d5927bd7ef5bc98d65bbd57663337015",
+   "displayText": "Ещё письмо к дому пять",
+   "ttsText": "Ещё письмо к дому пять",
+   "ttsHash": "55352c934eb6d901cd39d8a47bf87fe988793bfea20b3ad39b6462533b1043ee",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case02-l2"
+   ]
+  },
+  {
+   "id": "C2-8-L06",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Письмо к дому четыре",
+   "ttsText": "Письмо к дому четыре",
+   "ttsHash": "4f70644da2e2de8e77a49285a172324044121f25a6d8044700c1b4759f43155c",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case02-l2"
+   ]
+  },
+  {
+   "id": "C2-8-L07",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Письмо к дому шесть",
+   "ttsText": "Письмо к дому шесть",
+   "ttsHash": "f9e5ebcdaa66fa0c847ef0b6b05c81bc8db8106f614c3e03bdc9af1a9215405d",
    "pronunciation": [],
    "delivery": "neutral",
    "note": "",
@@ -13948,12 +14233,12 @@
   },
   {
    "id": "C2-L3-H-02",
-   "revision": 1,
+   "revision": 2,
    "kind": "hint",
    "speaker": "khvosts",
-   "displayText": "Двойняшки в шифре: цвет и дырочки вместе.",
-   "ttsText": "Двойняшки в шифре: цвет и дырочки вместе.",
-   "ttsHash": "4cb6dfde7cd3978bbdff95f2d708b7564e1b04ed777eb71fa7a2a31d29e0beb7",
+   "displayText": "Двойняшки: форма, цвет и дырочки вместе.",
+   "ttsText": "Двойняшки: форма, цвет и дырочки вместе.",
+   "ttsHash": "fc602bf909b71db2b3eea47aee6d255844994456ab7ceecd922e74866395ce91",
    "pronunciation": [],
    "delivery": "warm",
    "note": "",
@@ -14039,6 +14324,66 @@
    ]
   },
   {
+   "id": "C2-3-G13",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "М: медовый круг, четыре дырочки",
+   "ttsText": "М: медовый круг, четыре дырочки",
+   "ttsHash": "798138b129f24057f8c1ae9214f7407f80b0f2871c446d35d25871861d5f7b85",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case02-l3"
+   ]
+  },
+  {
+   "id": "C2-3-G14",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Л: синяя квадратная, одна дырочка",
+   "ttsText": "Л: синяя квадратная, одна дырочка",
+   "ttsHash": "10a4b6a4ab692a79988f51f9b84b0cfa63e0ce1ce0347328228c3d378c6a6828",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case02-l3"
+   ]
+  },
+  {
+   "id": "C2-3-G15",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "В: розовый цветок, две дырочки",
+   "ttsText": "В: розовый цветок, две дырочки",
+   "ttsHash": "fc09eda7a29ec6de8b20972d7ec26c76f4e788a4fe03ab4adba38f66b7fe03ab",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case02-l3"
+   ]
+  },
+  {
+   "id": "C2-3-G16",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "К: зелёное сердечко, три дырочки",
+   "ttsText": "К: зелёное сердечко, три дырочки",
+   "ttsHash": "16ec6322b336a7b2e040d41e95e221b4ed42a43ee082f2bb826883ad07363428",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case02-l3"
+   ]
+  },
+  {
    "id": "C2-L3-7-04",
    "revision": 1,
    "kind": "dialogue",
@@ -14084,6 +14429,21 @@
    ]
   },
   {
+   "id": "C2-L3-10-04",
+   "revision": 2,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "displayText": "Сначала значок. Какая улица?",
+   "ttsText": "Сначала значок. Какая улица?",
+   "ttsHash": "0da267361cabbe663d97964f5cbb2f85535ff2d779cc9ecf382e691c5366ae57",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case02-l3"
+   ]
+  },
+  {
    "id": "C2-L3-10-B01",
    "revision": 1,
    "kind": "label",
@@ -14119,14 +14479,89 @@
    ]
   },
   {
-   "id": "C2-L3-10-04",
+   "id": "C2-8-L08",
    "revision": 1,
-   "kind": "dialogue",
-   "speaker": "stella",
-   "displayText": "Сначала цвет — какая улица?",
-   "ttsText": "Сначала цвет — какая улица?",
-   "ttsHash": "1a672a3789cf55b7d927fae62d7fc167df6082a6b59e34d76d2bdff53030c534",
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Пироговая, домик четыре",
+   "ttsText": "Пироговая, домик четыре",
+   "ttsHash": "01e9b23456134b93dce9a2661d1af4190256565cbb7edb7f2134ad5c296a5678",
+   "pronunciation": [
+    {
+     "word": "Пироговая",
+     "hint": "Пирогова́я"
+    }
+   ],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case02-l3"
+   ]
+  },
+  {
+   "id": "C2-8-L09",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Пироговая, домик пять",
+   "ttsText": "Пироговая, домик пять",
+   "ttsHash": "4f2999e6bb295468d408b71298c90478f766d8e79919b0a0b8a12d43cdaf577f",
+   "pronunciation": [
+    {
+     "word": "Пироговая",
+     "hint": "Пирогова́я"
+    }
+   ],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case02-l3"
+   ]
+  },
+  {
+   "id": "C2-8-L10",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Парковая, домик пять",
+   "ttsText": "Парковая, домик пять",
+   "ttsHash": "b39470e36998badf15dcfeec9489d75cb4a1a992445cd373e42fb05af17e13c9",
    "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case02-l3"
+   ]
+  },
+  {
+   "id": "C2-8-L11",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Парковая, домик шесть",
+   "ttsText": "Парковая, домик шесть",
+   "ttsHash": "4210e3eb037bb9b991a3d20a3d81c8d22c4c875c80a9ddb4aa8b474bda0a0cc7",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case02-l3"
+   ]
+  },
+  {
+   "id": "C2-8-L12",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Пироговая, домик шесть",
+   "ttsText": "Пироговая, домик шесть",
+   "ttsHash": "11afb1eb3870a354ecd63b3852c91276c318ec1ee68bf9614f4a08f36f8d9973",
+   "pronunciation": [
+    {
+     "word": "Пироговая",
+     "hint": "Пирогова́я"
+    }
+   ],
    "delivery": "neutral",
    "note": "",
    "packs": [
@@ -14814,24 +15249,6 @@
    ]
   },
   {
-   "id": "SK-secret-notes",
-   "revision": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "displayText": "Тайные заметки",
-   "ttsText": "Тайные заметки",
-   "ttsHash": "b4f3e81f2f9c03f45e46990a7e78c67dc9912851399d507d1fb7d77b25165763",
-   "pronunciation": [],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
-    "case03-l1",
-    "case03-l2",
-    "case03-l3"
-   ],
-   "sameAudioAs": "UI-notebook.secretNotes"
-  },
-  {
    "id": "C3-3-07",
    "revision": 1,
    "kind": "dialogue",
@@ -14869,6 +15286,24 @@
     "case03-l2",
     "case03-l3"
    ]
+  },
+  {
+   "id": "SK-secret-notes",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Тайные заметки",
+   "ttsText": "Тайные заметки",
+   "ttsHash": "b4f3e81f2f9c03f45e46990a7e78c67dc9912851399d507d1fb7d77b25165763",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case03-l1",
+    "case03-l2",
+    "case03-l3"
+   ],
+   "sameAudioAs": "UI-notebook.secretNotes"
   },
   {
    "id": "C3-3-09",
@@ -16474,40 +16909,6 @@
    ]
   },
   {
-   "id": "C3-2-Q01",
-   "revision": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "displayText": "Какой шорох похож?",
-   "ttsText": "Какой шорох похож?",
-   "ttsHash": "6479dc49570499a61137fec52421db6c6e4f04cfc6854e2d5d51350be6a30c2b",
-   "pronunciation": [],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
-    "case03-l1",
-    "case03-l2",
-    "case03-l3"
-   ]
-  },
-  {
-   "id": "C3-2-B01",
-   "revision": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "displayText": "Шелест страниц",
-   "ttsText": "Шелест страниц",
-   "ttsHash": "220196f083b3559a9a5cd79639b20eb2d05e1cd0795bd6f10bcfbab34ed784a2",
-   "pronunciation": [],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
-    "case03-l1",
-    "case03-l2",
-    "case03-l3"
-   ]
-  },
-  {
    "id": "C3-2-03",
    "revision": 1,
    "kind": "dialogue",
@@ -16525,13 +16926,13 @@
    ]
   },
   {
-   "id": "C3-2-B02",
+   "id": "C3-2-05",
    "revision": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "displayText": "Шум камыша",
-   "ttsText": "Шум камыша",
-   "ttsHash": "0b1d0eba2080a581f62fc8eeba994df9eedd67bffa1c87ac994f684a99b05aa7",
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "displayText": "Щёлк — заслонка фонаря! Свет кто-то закрывает.",
+   "ttsText": "Щёлк — заслонка фонаря! Свет кто-то закрывает.",
+   "ttsHash": "f3a69d75d3ab5258001e6521c7b748cd8d49d495f73c1d42565e492ab1ab5640",
    "pronunciation": [],
    "delivery": "neutral",
    "note": "",
@@ -16559,6 +16960,40 @@
    ]
   },
   {
+   "id": "C3-2-B01",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Шелест страниц",
+   "ttsText": "Шелест страниц",
+   "ttsHash": "220196f083b3559a9a5cd79639b20eb2d05e1cd0795bd6f10bcfbab34ed784a2",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case03-l1",
+    "case03-l2",
+    "case03-l3"
+   ]
+  },
+  {
+   "id": "C3-2-B02",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Шум камыша",
+   "ttsText": "Шум камыша",
+   "ttsHash": "0b1d0eba2080a581f62fc8eeba994df9eedd67bffa1c87ac994f684a99b05aa7",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case03-l1",
+    "case03-l2",
+    "case03-l3"
+   ]
+  },
+  {
    "id": "C3-2-B03",
    "revision": 1,
    "kind": "label",
@@ -16575,23 +17010,6 @@
    ]
   },
   {
-   "id": "C3-2-Q02",
-   "revision": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "displayText": "Какой щелчок похож?",
-   "ttsText": "Какой щелчок похож?",
-   "ttsHash": "14aec2ad055db8890cf2db41ce9cc7d5f4a5733e1139fa7ba3dbd4d5eeb18e6c",
-   "pronunciation": [],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
-    "case03-l1",
-    "case03-l2",
-    "case03-l3"
-   ]
-  },
-  {
    "id": "C3-2-B04",
    "revision": 1,
    "kind": "label",
@@ -16599,23 +17017,6 @@
    "displayText": "Щелчок заслонки",
    "ttsText": "Щелчок заслонки",
    "ttsHash": "e0c81c953bda5007a26d79524b17dea43a321ebde11c316dc547bd21d5ec7c25",
-   "pronunciation": [],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
-    "case03-l1",
-    "case03-l2",
-    "case03-l3"
-   ]
-  },
-  {
-   "id": "C3-2-05",
-   "revision": 1,
-   "kind": "dialogue",
-   "speaker": "khvosts",
-   "displayText": "Щёлк — заслонка фонаря! Свет кто-то закрывает.",
-   "ttsText": "Щёлк — заслонка фонаря! Свет кто-то закрывает.",
-   "ttsHash": "f3a69d75d3ab5258001e6521c7b748cd8d49d495f73c1d42565e492ab1ab5640",
    "pronunciation": [],
    "delivery": "neutral",
    "note": "",
@@ -16879,57 +17280,6 @@
    ]
   },
   {
-   "id": "C3-9-Q01",
-   "revision": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "displayText": "Повтори «Привет».",
-   "ttsText": "Повтори «Привет».",
-   "ttsHash": "da6732d4213a50bc02104d147154d9be06606717bc8715fb1c9a8fe59bef6ad3",
-   "pronunciation": [],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
-    "case03-l1",
-    "case03-l2",
-    "case03-l3"
-   ]
-  },
-  {
-   "id": "C3-9-B01",
-   "revision": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "displayText": "Короткий огонёк",
-   "ttsText": "Короткий огонёк",
-   "ttsHash": "f51d05ff05ac934f93a80c1865668d9af210dc443a31ed1ad4c11439e53e165a",
-   "pronunciation": [],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
-    "case03-l1",
-    "case03-l2",
-    "case03-l3"
-   ]
-  },
-  {
-   "id": "C3-9-B02",
-   "revision": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "displayText": "Длинный огонёк",
-   "ttsText": "Длинный огонёк",
-   "ttsHash": "d387ac3fe222f85e0bd89719173612933df8e942b37924e2e797384fde47f570",
-   "pronunciation": [],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
-    "case03-l1",
-    "case03-l2",
-    "case03-l3"
-   ]
-  },
-  {
    "id": "C3-9-04",
    "revision": 1,
    "kind": "dialogue",
@@ -16947,13 +17297,13 @@
    ]
   },
   {
-   "id": "C3-9-Q02",
+   "id": "C3-L3-7-B01",
    "revision": 1,
    "kind": "label",
    "speaker": "narrator",
-   "displayText": "Повтори «Друзья».",
-   "ttsText": "Повтори «Друзья».",
-   "ttsHash": "56770fc421b66d5718551845417f0844dfd22ebb83f1e5bbc7ebd8557beabaa0",
+   "displayText": "Привет",
+   "ttsText": "Привет",
+   "ttsHash": "dd679c0b9fd408a04148aa7d30c9df393f67b7227f65693fffe0ed6d0f0ade59",
    "pronunciation": [],
    "delivery": "neutral",
    "note": "",
@@ -16964,13 +17314,30 @@
    ]
   },
   {
-   "id": "C3-9-Q03",
+   "id": "C3-L3-7-B02",
    "revision": 1,
    "kind": "label",
    "speaker": "narrator",
-   "displayText": "Повтори «Спокойной ночи».",
-   "ttsText": "Повтори «Спокойной ночи».",
-   "ttsHash": "0949bd2b87d73d3dde89729c52681fd995d4a5e2beceb7188d9e42d8a6be9b90",
+   "displayText": "Друзья",
+   "ttsText": "Друзья",
+   "ttsHash": "0399197aa442db48a86ff37f08288e5a8f99591ddbcf40583dcd78f80cf90e7e",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case03-l1",
+    "case03-l2",
+    "case03-l3"
+   ]
+  },
+  {
+   "id": "C3-9-B03",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Спокойной ночи",
+   "ttsText": "Спокойной ночи",
+   "ttsHash": "41bf0d435e75e82d7a2b0502b0a212d14787642cb585f84de6e8eba845e92082",
    "pronunciation": [],
    "delivery": "neutral",
    "note": "",
@@ -17007,6 +17374,23 @@
    "ttsHash": "b634a7c90ebb87b54730c98ac03168a488703e457076c8322878259bf0802e68",
    "pronunciation": [],
    "delivery": "warm",
+   "note": "",
+   "packs": [
+    "case03-l1",
+    "case03-l2",
+    "case03-l3"
+   ]
+  },
+  {
+   "id": "RW-c3-secret-note",
+   "revision": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "displayText": "Страница «Тайные заметки»",
+   "ttsText": "Страница «Тайные заметки»",
+   "ttsHash": "e176a44c76d36f7b0b93965726bf797bcce691508aa853d6af77fdc280008e7f",
+   "pronunciation": [],
+   "delivery": "neutral",
    "note": "",
    "packs": [
     "case03-l1",
@@ -17986,13 +18370,13 @@
    ]
   },
   {
-   "id": "C3-2-Q03",
+   "id": "C3-L2-2-01",
    "revision": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "displayText": "Что стучало тихо?",
-   "ttsText": "Что стучало тихо?",
-   "ttsHash": "625e34deb30877dd4d10a505d5724fb5e564f1a3cf28a43360e8e586fa1ab716",
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "displayText": "Это капли с крыши. Молотка не слышно.",
+   "ttsText": "Это капли с крыши. Молотка не слышно.",
+   "ttsHash": "b4dd1f172e2e7b59bfbcf81e36d04a5e0cf17047ee6e001996a3f7a948f6a28d",
    "pronunciation": [],
    "delivery": "neutral",
    "note": "",
@@ -18025,22 +18409,6 @@
    "displayText": "Капли с крыши",
    "ttsText": "Капли с крыши",
    "ttsHash": "05885bcd3694ff0c370c29d2d48679efc485bb0195b4725c8b0491615ce9ed31",
-   "pronunciation": [],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
-    "case03-l2",
-    "case03-l3"
-   ]
-  },
-  {
-   "id": "C3-L2-2-01",
-   "revision": 1,
-   "kind": "dialogue",
-   "speaker": "khvosts",
-   "displayText": "Это капли с крыши. Молотка не слышно.",
-   "ttsText": "Это капли с крыши. Молотка не слышно.",
-   "ttsHash": "b4dd1f172e2e7b59bfbcf81e36d04a5e0cf17047ee6e001996a3f7a948f6a28d",
    "pronunciation": [],
    "delivery": "neutral",
    "note": "",
@@ -18247,13 +18615,13 @@
    ]
   },
   {
-   "id": "C3-9-Q04",
+   "id": "C3-9-B04",
    "revision": 1,
    "kind": "label",
    "speaker": "narrator",
-   "displayText": "Повтори «Маяк».",
-   "ttsText": "Повтори «Маяк».",
-   "ttsHash": "cb19e196f687b947d6e63af7ab622aa18a6911035eca56ec3b47d4862ca424fa",
+   "displayText": "Маяк",
+   "ttsText": "Маяк",
+   "ttsHash": "f3e35c5f2338aad931e85520fa55a6892339bc3c02aaf169081e7e5e612c71fb",
    "pronunciation": [],
    "delivery": "neutral",
    "note": "",
@@ -18573,56 +18941,6 @@
    "ttsHash": "83412f5fd86363dbfebddf85000b1a1a687cb2812832e4e9bb2e4f6bddc33754",
    "pronunciation": [],
    "delivery": "cheerful",
-   "note": "",
-   "packs": [
-    "case03-l3"
-   ]
-  },
-  {
-   "id": "C3-L3-11-01",
-   "revision": 1,
-   "kind": "dialogue",
-   "speaker": "pukhlik",
-   "displayText": "А теперь придумай свой сигнал для города!",
-   "ttsText": "А теперь придумай свой сигнал для города!",
-   "ttsHash": "457cbf8783c8dd5164503cae1a3c19da4e74e479d7f1267c69bae0afa4b1dcad",
-   "pronunciation": [],
-   "delivery": "cheerful",
-   "note": "",
-   "packs": [
-    "case03-l3"
-   ]
-  },
-  {
-   "id": "C3-L3-11-02",
-   "revision": 1,
-   "kind": "dialogue",
-   "speaker": "pukhlik",
-   "displayText": "Красиво! Это будет твой сигнал, {имя}.",
-   "ttsText": "Красиво! Это будет твой сигнал, пушинка.",
-   "ttsHash": "99b3f5c8362dd82c212419cff18914c8f17415da369c254f5ca9a8e942c4e855",
-   "pronunciation": [
-    {
-     "word": "пушинка",
-     "hint": "пуши́нка"
-    }
-   ],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
-    "case03-l3"
-   ]
-  },
-  {
-   "id": "C3-L3-11-03",
-   "revision": 1,
-   "kind": "dialogue",
-   "speaker": "pukhlik",
-   "displayText": "Увижу его с маяка — помашу крылом.",
-   "ttsText": "Увижу его с маяка — помашу крылом.",
-   "ttsHash": "cab0484056157abd50469fcb93755ded3dbafe24a44ef444537cf7413fe65039",
-   "pronunciation": [],
-   "delivery": "neutral",
    "note": "",
    "packs": [
     "case03-l3"
@@ -19082,36 +19400,6 @@
    ]
   },
   {
-   "id": "C3-L3-7-B01",
-   "revision": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "displayText": "Привет",
-   "ttsText": "Привет",
-   "ttsHash": "dd679c0b9fd408a04148aa7d30c9df393f67b7227f65693fffe0ed6d0f0ade59",
-   "pronunciation": [],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
-    "case03-l3"
-   ]
-  },
-  {
-   "id": "C3-L3-7-B02",
-   "revision": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "displayText": "Друзья",
-   "ttsText": "Друзья",
-   "ttsHash": "0399197aa442db48a86ff37f08288e5a8f99591ddbcf40583dcd78f80cf90e7e",
-   "pronunciation": [],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
-    "case03-l3"
-   ]
-  },
-  {
    "id": "C3-L3-7-03",
    "revision": 1,
    "kind": "dialogue",
@@ -19157,14 +19445,34 @@
    ]
   },
   {
-   "id": "C3-L3-11-B01",
+   "id": "C3-L3-11-01",
    "revision": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "displayText": "Собрать свой сигнал",
-   "ttsText": "Собрать свой сигнал",
-   "ttsHash": "4102ca19b0dc4941036e5278d287f3af716601d3e9893677d416c552a57d168b",
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "displayText": "А теперь придумай свой сигнал для города!",
+   "ttsText": "А теперь придумай свой сигнал для города!",
+   "ttsHash": "457cbf8783c8dd5164503cae1a3c19da4e74e479d7f1267c69bae0afa4b1dcad",
    "pronunciation": [],
+   "delivery": "cheerful",
+   "note": "",
+   "packs": [
+    "case03-l3"
+   ]
+  },
+  {
+   "id": "C3-L3-11-02",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "displayText": "Красиво! Это будет твой сигнал, {имя}.",
+   "ttsText": "Красиво! Это будет твой сигнал, пушинка.",
+   "ttsHash": "99b3f5c8362dd82c212419cff18914c8f17415da369c254f5ca9a8e942c4e855",
+   "pronunciation": [
+    {
+     "word": "пушинка",
+     "hint": "пуши́нка"
+    }
+   ],
    "delivery": "neutral",
    "note": "",
    "packs": [
@@ -19172,13 +19480,13 @@
    ]
   },
   {
-   "id": "C3-L3-11-N01",
+   "id": "C3-L3-11-03",
    "revision": 1,
    "kind": "dialogue",
    "speaker": "pukhlik",
-   "displayText": "Любой тёплый ритм подойдёт.",
-   "ttsText": "Любой тёплый ритм подойдёт.",
-   "ttsHash": "33f91727d890b408200520e23cbcd15dc9b8c42fbdc6fa443ee779baab021917",
+   "displayText": "Увижу его с маяка — помашу крылом.",
+   "ttsText": "Увижу его с маяка — помашу крылом.",
+   "ttsHash": "cab0484056157abd50469fcb93755ded3dbafe24a44ef444537cf7413fe65039",
    "pronunciation": [],
    "delivery": "neutral",
    "note": "",
@@ -19884,40 +20192,6 @@
    ]
   },
   {
-   "id": "C4-5-09",
-   "revision": 1,
-   "kind": "dialogue",
-   "speaker": "khvosts",
-   "displayText": "Кладовка в нашей Конторе? Там только старые зонты…",
-   "ttsText": "Кладовка в нашей Конторе? Там только старые зонты…",
-   "ttsHash": "79cf96d43fa3cf7508206ed1c80be1b4dae758fff27bc9d7122af01e8459b923",
-   "pronunciation": [],
-   "delivery": "thinking",
-   "note": "",
-   "packs": [
-    "case04-l1",
-    "case04-l2",
-    "case04-l3"
-   ]
-  },
-  {
-   "id": "C4-5-10",
-   "revision": 1,
-   "kind": "dialogue",
-   "speaker": "watsony",
-   "displayText": "Есть улика! Записала… сонную.",
-   "ttsText": "Есть улика! Записала… сонную.",
-   "ttsHash": "3656c0b868db00fba85d4374d1bcc965ea06beff0c628dc5491d93ece9507ac9",
-   "pronunciation": [],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
-    "case04-l1",
-    "case04-l2",
-    "case04-l3"
-   ]
-  },
-  {
    "id": "C4-6-01",
    "revision": 1,
    "kind": "dialogue",
@@ -20269,40 +20543,6 @@
    "displayText": "Раздели поровну",
    "ttsText": "Раздели поровну",
    "ttsHash": "95735f269ccd0daa476728ae752319abc5309c6bdf2a90654498e9102dae4ada",
-   "pronunciation": [],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
-    "case04-l1",
-    "case04-l2",
-    "case04-l3"
-   ]
-  },
-  {
-   "id": "C4-8-01",
-   "revision": 1,
-   "kind": "dialogue",
-   "speaker": "pudding",
-   "displayText": "Большое чаепитие! Варенья хватит всем.",
-   "ttsText": "Большое чаепитие! Варенья хватит всем.",
-   "ttsHash": "9f802cec1f11c1082e97b4002fc9bb1059ae5dc4a62048536ac2e105c893607b",
-   "pronunciation": [],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
-    "case04-l1",
-    "case04-l2",
-    "case04-l3"
-   ]
-  },
-  {
-   "id": "C4-8-02",
-   "revision": 1,
-   "kind": "dialogue",
-   "speaker": "watsony",
-   "displayText": "Раздели банки поровну на столы.",
-   "ttsText": "Раздели банки поровну на столы.",
-   "ttsHash": "523ebc8e68bcb47babea3ad8f0244274799d84c23df5afaf6b5ca20730c0c656",
    "pronunciation": [],
    "delivery": "neutral",
    "note": "",
@@ -21350,13 +21590,13 @@
    ]
   },
   {
-   "id": "C4-5-B01",
+   "id": "C4-5-N02",
    "revision": 1,
    "kind": "label",
-   "speaker": "narrator",
-   "displayText": "Кладовка Конторы",
-   "ttsText": "Кладовка Конторы",
-   "ttsHash": "433c98e94c63bd32e953e60c31c421d89f87e34d142e242da43fa817d11f2d2b",
+   "speaker": "pukhlik",
+   "displayText": "Выбери, что случилось с банками.",
+   "ttsText": "Выбери, что случилось с банками.",
+   "ttsHash": "7201074b891042b7615878608dc4b90dd926e0dd19cd5fd496ecfe7252c7f42b",
    "pronunciation": [],
    "delivery": "neutral",
    "note": "",
@@ -21364,8 +21604,58 @@
     "case04-l1",
     "case04-l2",
     "case04-l3"
-   ],
-   "sameAudioAs": "C4-AX-office-pantry"
+   ]
+  },
+  {
+   "id": "C4-5-N03",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "pukhlik",
+   "displayText": "Выбери, чей это сонный след.",
+   "ttsText": "Выбери, чей это сонный след.",
+   "ttsHash": "27ad4c7ecc6f5a3ae6f23af7437407295d3525f2aad4113edbaea592851e1429",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-5-09",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "displayText": "Кладовка в нашей Конторе? Там только старые зонты…",
+   "ttsText": "Кладовка в нашей Конторе? Там только старые зонты…",
+   "ttsHash": "79cf96d43fa3cf7508206ed1c80be1b4dae758fff27bc9d7122af01e8459b923",
+   "pronunciation": [],
+   "delivery": "thinking",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-5-10",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "displayText": "Есть улика! Записала… сонную.",
+   "ttsText": "Есть улика! Записала… сонную.",
+   "ttsHash": "3656c0b868db00fba85d4374d1bcc965ea06beff0c628dc5491d93ece9507ac9",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
   },
   {
    "id": "C4-5-05",
@@ -21385,94 +21675,18 @@
    ]
   },
   {
-   "id": "C4-5-B02",
+   "id": "C4-5-L1-DC01",
    "revision": 1,
    "kind": "label",
    "speaker": "narrator",
-   "displayText": "Норка Шуршиков",
-   "ttsText": "Норка Шуршиков",
-   "ttsHash": "f3d171adecc2db8032261bdf1a271f9aa99b5b7b28b13ab9bb744bdd43179096",
-   "pronunciation": [
-    {
-     "word": "Шуршиков",
-     "hint": "Шу́ршиков"
-    }
-   ],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
-    "case04-l1",
-    "case04-l2",
-    "case04-l3"
-   ],
-   "sameAudioAs": "C2-AX-hole"
-  },
-  {
-   "id": "C4-5-06",
-   "revision": 1,
-   "kind": "dialogue",
-   "speaker": "pukhlik",
-   "displayText": "Не совсем. Вот ещё сон.",
-   "ttsText": "Не совсем. Вот ещё сон.",
-   "ttsHash": "6c458373ac4a609a5835ec2406dea9bd1ac88c09b267e8f21f15dfeca84e8bf8",
+   "displayText": "Маленькая дверка под лестницей, за ней огоньки.",
+   "ttsText": "Маленькая дверка под лестницей, за ней огоньки.",
+   "ttsHash": "36fa3db5123d93f85cd9dc004587d82fe7b121df561d113dc161c22703e4de75",
    "pronunciation": [],
    "delivery": "neutral",
    "note": "",
    "packs": [
-    "case04-l1",
-    "case04-l2",
-    "case04-l3"
-   ]
-  },
-  {
-   "id": "C4-5-B03",
-   "revision": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "displayText": "За бочкой",
-   "ttsText": "За бочкой",
-   "ttsHash": "9128da6766c9351a13bde05a2fe3e2674d9b3d5e3231d73bc2c1222209b84584",
-   "pronunciation": [],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
-    "case04-l1",
-    "case04-l2",
-    "case04-l3"
-   ]
-  },
-  {
-   "id": "C4-5-N02",
-   "revision": 1,
-   "kind": "label",
-   "speaker": "pukhlik",
-   "displayText": "Выбери, что случилось с банками.",
-   "ttsText": "Выбери, что случилось с банками.",
-   "ttsHash": "7201074b891042b7615878608dc4b90dd926e0dd19cd5fd496ecfe7252c7f42b",
-   "pronunciation": [],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
-    "case04-l1",
-    "case04-l2",
-    "case04-l3"
-   ]
-  },
-  {
-   "id": "C4-5-B04",
-   "revision": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "displayText": "Тайный запас",
-   "ttsText": "Тайный запас",
-   "ttsHash": "0a1e291fe279d01403ead05354c2e824706f09ce1ad65af2b0fb03a47e0bdf35",
-   "pronunciation": [],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
-    "case04-l1",
-    "case04-l2",
-    "case04-l3"
+    "case04-l1"
    ]
   },
   {
@@ -21493,84 +21707,19 @@
    ]
   },
   {
-   "id": "C4-5-B05",
+   "id": "C4-5-L1-DC04",
    "revision": 1,
    "kind": "label",
    "speaker": "narrator",
-   "displayText": "Съели",
-   "ttsText": "Съели",
-   "ttsHash": "df7c548bb2b3341bd1892836a4dda472ae7af75812f298a978a669b881141ce7",
+   "displayText": "Банки с бантиками на полке.",
+   "ttsText": "Банки с бантиками на полке.",
+   "ttsHash": "a0c065bf468bc23e104c489cd863e84ee03390a9410a26fefe4233949e255b55",
    "pronunciation": [],
    "delivery": "neutral",
    "note": "",
    "packs": [
-    "case04-l1",
-    "case04-l2",
-    "case04-l3"
-   ],
-   "sameAudioAs": "C4-AX-eaten"
-  },
-  {
-   "id": "C4-5-B06",
-   "revision": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "displayText": "Разбили",
-   "ttsText": "Разбили",
-   "ttsHash": "5a222a079a6e98e3b69c864f9a7d5c378f0b34c0d166fe7067d9afc23dba9599",
-   "pronunciation": [],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
-    "case04-l1",
-    "case04-l2",
-    "case04-l3"
-   ],
-   "sameAudioAs": "C4-AX-broken"
-  },
-  {
-   "id": "C4-5-N03",
-   "revision": 1,
-   "kind": "label",
-   "speaker": "pukhlik",
-   "displayText": "Выбери, чей это сонный след.",
-   "ttsText": "Выбери, чей это сонный след.",
-   "ttsHash": "27ad4c7ecc6f5a3ae6f23af7437407295d3525f2aad4113edbaea592851e1429",
-   "pronunciation": [],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
-    "case04-l1",
-    "case04-l2",
-    "case04-l3"
+    "case04-l1"
    ]
-  },
-  {
-   "id": "C4-5-B07",
-   "revision": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "displayText": "Шерлок Хвостс",
-   "ttsText": "Шерлок Хвостс",
-   "ttsHash": "f3cc6a0abb01f2892f6dabe53effde672f1f41e543363b6dd765579144a8aa4b",
-   "pronunciation": [
-    {
-     "word": "Шерлок",
-     "hint": "Ше́рлок"
-    },
-    {
-     "word": "Хвостс",
-     "hint": "Хво́стс"
-    }
-   ],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
-    "case04-l1",
-    "case04-l2",
-    "case04-l3"
-   ],
-   "sameAudioAs": "NM-khvosts"
   },
   {
    "id": "C4-5-08",
@@ -21590,59 +21739,475 @@
    ]
   },
   {
-   "id": "C4-5-B08",
+   "id": "C4-5-L1-DC07",
    "revision": 1,
    "kind": "label",
    "speaker": "narrator",
-   "displayText": "Мэр Пудинг",
-   "ttsText": "Мэр Пудинг",
-   "ttsHash": "5f60070eec50afda5879c0d3e01bff25fa985dc7ec8892282469a15f4d2647d8",
-   "pronunciation": [
-    {
-     "word": "Пудинг",
-     "hint": "Пу́динг"
-    }
-   ],
+   "displayText": "Мыльные пузыри.",
+   "ttsText": "Мыльные пузыри.",
+   "ttsHash": "c9c9f389b52f2e017990dd1c2ccc16b0b3d52c7102dd3005d7a7f7bdea301afd",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1"
+   ]
+  },
+  {
+   "id": "C4-5-L1-DC02",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Табличка с лупой над входом.",
+   "ttsText": "Табличка с лупой над входом.",
+   "ttsHash": "0e8c190817c8aae439798b8fd1116ddd89779e56a5b98449c0a8c41584ad5e0e",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1"
+   ]
+  },
+  {
+   "id": "C4-5-L1-DC03",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Старые зонты в углу.",
+   "ttsText": "Старые зонты в углу.",
+   "ttsHash": "e0cffb3e6a243713c358fe4e8d27d90864d9b155f2058955246246fc03474f3f",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1"
+   ]
+  },
+  {
+   "id": "C4-5-06",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "displayText": "Не совсем. Вот ещё сон.",
+   "ttsText": "Не совсем. Вот ещё сон.",
+   "ttsHash": "6c458373ac4a609a5835ec2406dea9bd1ac88c09b267e8f21f15dfeca84e8bf8",
+   "pronunciation": [],
    "delivery": "neutral",
    "note": "",
    "packs": [
     "case04-l1",
     "case04-l2",
     "case04-l3"
-   ],
-   "sameAudioAs": "NM-pudding"
+   ]
   },
   {
-   "id": "C4-5-B09",
+   "id": "C4-5-L1-DC05",
    "revision": 1,
    "kind": "label",
    "speaker": "narrator",
-   "displayText": "Мышата Шуршики",
-   "ttsText": "Мышата Шуршики",
-   "ttsHash": "4b2aa7c913c0ca2d503a0c40ae316d93adbc7b5771c50eba87068e73a7cc7f86",
-   "pronunciation": [
-    {
-     "word": "Шуршики",
-     "hint": "Шу́ршики"
-    }
-   ],
+   "displayText": "Праздничный флажок юбилея.",
+   "ttsText": "Праздничный флажок юбилея.",
+   "ttsHash": "7f7c3757ae240d6d72f28cdc438c01e2a85e1f0d72475c4cb3626403d2f70d13",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1"
+   ]
+  },
+  {
+   "id": "C4-5-L1-DC06",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Записка, а на ней только восклицательный знак.",
+   "ttsText": "Записка, а на ней только восклицательный знак.",
+   "ttsHash": "ccf3d037ce3a94dbfa718552abae892335e2a67eae70cb3e35f85f53273e1ade",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1"
+   ]
+  },
+  {
+   "id": "C4-5-L1-DC08",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Чёрно-белые полоски на мордочке.",
+   "ttsText": "Чёрно-белые полоски на мордочке.",
+   "ttsHash": "5e7a64f8cd73ae17498f429c675104a3748413dfe3128a6fef19990be260e662",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1"
+   ]
+  },
+  {
+   "id": "C4-5-L1-DC09",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Шляпа сыщика.",
+   "ttsText": "Шляпа сыщика.",
+   "ttsHash": "578ae12ca31c1d7bfcab33a49ce891ad9a3da2dc8e598b6777245cd7c6ee9fc1",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1"
+   ]
+  },
+  {
+   "id": "C4-F-01",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "displayText": "Сегодня мой фонарь снов будет у вас.",
+   "ttsText": "Сегодня мой фонарь снов будет у вас.",
+   "ttsHash": "6c4ccc8275369991ab924911b50a6b7c7eab9d2e34d25bfa0c928e8aacef4a9e",
+   "pronunciation": [],
    "delivery": "neutral",
    "note": "",
    "packs": [
     "case04-l1",
     "case04-l2",
     "case04-l3"
-   ],
-   "sameAudioAs": "NM-mouse"
+   ]
   },
   {
-   "id": "C4-8-B01",
+   "id": "C4-F-02",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "displayText": "Хранитель знает разгадку. Остальные — не подглядывайте!",
+   "ttsText": "Хранитель знает разгадку. Остальные — не подглядывайте!",
+   "ttsHash": "0467f45c0b295a7697ad320ced4fcc10307ad88ac612dfb5b56a4d93b9a16afc",
+   "pronunciation": [],
+   "delivery": "cheerful",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-F-03",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "displayText": "Хранитель, выбери сон. Без прямых слов!",
+   "ttsText": "Хранитель, выбери сон. Без прямых слов!",
+   "ttsHash": "4ae265a02b54fb67793c3df2853b832dff6cc342670f99fcf836d2de2011209b",
+   "pronunciation": [],
+   "delivery": "cheerful",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-F-04",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "displayText": "Можно задать один вопрос. Хранитель ответит да или нет.",
+   "ttsText": "Можно задать один вопрос. Хранитель ответит да или нет.",
+   "ttsHash": "3c6782d7c2877b679df20c665b325a6b3aaf63c3e76b414008177b654b8de139",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-F-05",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "displayText": "Вы угадали вместе! Победа общая.",
+   "ttsText": "Вы угадали вместе! Победа общая.",
+   "ttsHash": "b1652e8fc5f893b227ab750001d0c34b779103d49084186db65ddfe796ef8028",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-F-Q01",
    "revision": 1,
    "kind": "label",
    "speaker": "narrator",
-   "displayText": "Три стола",
-   "ttsText": "Три стола",
-   "ttsHash": "b1b4042e92546b6ad96aa398c9f3aa958ce804a238553b0ad7089357fd5141ad",
+   "displayText": "Это про место?",
+   "ttsText": "Это про место?",
+   "ttsHash": "501ecd9806a371051b151b07c3dd25d378a01fc31596f2f3c4bb0c17bcb53e0e",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-F-Q02",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Это в Конторе?",
+   "ttsText": "Это в Конторе?",
+   "ttsHash": "4dcbd1780c1c1309460e46dfd9a78ee003fa84f9d4c86c774fdf96f0dcaaf3d4",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-F-Q03",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Это связано с праздником?",
+   "ttsText": "Это связано с праздником?",
+   "ttsHash": "4cf114a530b186f27cff265e1e8561f9483dc4752e87b14de73722b7f9d05e0d",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-F-P01",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Мама",
+   "ttsText": "Мама",
+   "ttsHash": "c23c363d01c810c2e4b425bf5154842bdc4d7e0c7954401e39b870237328593a",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-F-P02",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Папа",
+   "ttsText": "Папа",
+   "ttsHash": "8271499825185436dcac10b4caf9880c6904ee70d665f4991b5ef6394a26ff85",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-F-P03",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Бабушка",
+   "ttsText": "Бабушка",
+   "ttsHash": "461e5165f723baf259c1c14e3c16e58d3dea74f67bc05eb2dbc0bf3a7e458a2a",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-F-P04",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Дедушка",
+   "ttsText": "Дедушка",
+   "ttsHash": "a66d9f16637d1d3dc24b99409cff9539a8f3db6e6a2830c9e681fa54ea94399e",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-F-P05",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Брат",
+   "ttsText": "Брат",
+   "ttsHash": "e6291710ec7c1d177c5bd50ff465a8e39da8019f7310d6e37e23a57956ab09ab",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-F-P06",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Сестра",
+   "ttsText": "Сестра",
+   "ttsHash": "7d1058f96b69b5688be92ffb80d67ddd8e0bc9c218f3df6a9b20fd34d61979d8",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-F-P07",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Друг",
+   "ttsText": "Друг",
+   "ttsHash": "1e808ad7191c1603eb1415f982b784116697be171cc76a597875fd499ef5767a",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-F-T01",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Добрый сновидец",
+   "ttsText": "Добрый сновидец",
+   "ttsHash": "669cba45e569114d1db89ff9a67c1b640fe02f64063e76931860dbfe49266780",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-F-T02",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Лучший вопрос",
+   "ttsText": "Лучший вопрос",
+   "ttsHash": "1372cf645e6af1fa7d4091b50eb8a13428d2b00c0893edad99dc5aede771c642",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-F-T03",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Зоркий глаз",
+   "ttsText": "Зоркий глаз",
+   "ttsHash": "7afc765d338865040b8990159c76b1a535a42c3330583663e96820c029c3f9d5",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-F-T04",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Тёплое сердце",
+   "ttsText": "Тёплое сердце",
+   "ttsHash": "136dd2f3693e2806245f163f3d7de3ae4dbb8853fa40771285c9ca4c339715d4",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-8-01",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "displayText": "Большое чаепитие! Варенья хватит всем.",
+   "ttsText": "Большое чаепитие! Варенья хватит всем.",
+   "ttsHash": "9f802cec1f11c1082e97b4002fc9bb1059ae5dc4a62048536ac2e105c893607b",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-8-02",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "displayText": "Раздели банки поровну на столы.",
+   "ttsText": "Раздели банки поровну на столы.",
+   "ttsHash": "523ebc8e68bcb47babea3ad8f0244274799d84c23df5afaf6b5ca20730c0c656",
    "pronunciation": [],
    "delivery": "neutral",
    "note": "",
@@ -21670,23 +22235,6 @@
    ]
   },
   {
-   "id": "C4-8-B02",
-   "revision": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "displayText": "Четыре банки",
-   "ttsText": "Четыре банки",
-   "ttsHash": "6bffbbc39c624d47704cbbefacd40be86c3eb9c35fdc727024aa48ca6d13e742",
-   "pronunciation": [],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
-    "case04-l1",
-    "case04-l2",
-    "case04-l3"
-   ]
-  },
-  {
    "id": "C4-8-03",
    "revision": 1,
    "kind": "dialogue",
@@ -21704,13 +22252,30 @@
    ]
   },
   {
-   "id": "C4-8-B03",
+   "id": "C4-8-ITEM-jar",
    "revision": 1,
    "kind": "label",
    "speaker": "narrator",
-   "displayText": "Три банки",
-   "ttsText": "Три банки",
-   "ttsHash": "25002690d49b1fe13722c09ebcc6513f50daa4d4a9570e133a156e3c1675e1be",
+   "displayText": "Банка варенья",
+   "ttsText": "Банка варенья",
+   "ttsHash": "5e9316b3a0b3844146c541f4c1f92db1e738263461f887a2e612a82f4a16173e",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-8-GROUP-table",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Стол",
+   "ttsText": "Стол",
+   "ttsHash": "da639244db1d2dd475bf67fc157cbd4d25e92bafbe2634931577a540021a1b9d",
    "pronunciation": [],
    "delivery": "neutral",
    "note": "",
@@ -21800,7 +22365,8 @@
    "packs": [
     "case04-l1",
     "case04-l2",
-    "case04-l3"
+    "case04-l3",
+    "cozy"
    ]
   },
   {
@@ -21974,91 +22540,6 @@
    ]
   },
   {
-   "id": "C4-F-01",
-   "revision": 1,
-   "kind": "dialogue",
-   "speaker": "pukhlik",
-   "displayText": "Сегодня мой фонарь снов будет у вас.",
-   "ttsText": "Сегодня мой фонарь снов будет у вас.",
-   "ttsHash": "6c4ccc8275369991ab924911b50a6b7c7eab9d2e34d25bfa0c928e8aacef4a9e",
-   "pronunciation": [],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
-    "case04-l1",
-    "case04-l2",
-    "case04-l3"
-   ]
-  },
-  {
-   "id": "C4-F-02",
-   "revision": 1,
-   "kind": "dialogue",
-   "speaker": "pukhlik",
-   "displayText": "Хранитель знает разгадку. Остальные — не подглядывайте!",
-   "ttsText": "Хранитель знает разгадку. Остальные — не подглядывайте!",
-   "ttsHash": "0467f45c0b295a7697ad320ced4fcc10307ad88ac612dfb5b56a4d93b9a16afc",
-   "pronunciation": [],
-   "delivery": "cheerful",
-   "note": "",
-   "packs": [
-    "case04-l1",
-    "case04-l2",
-    "case04-l3"
-   ]
-  },
-  {
-   "id": "C4-F-03",
-   "revision": 1,
-   "kind": "dialogue",
-   "speaker": "pukhlik",
-   "displayText": "Хранитель, выбери сон. Без прямых слов!",
-   "ttsText": "Хранитель, выбери сон. Без прямых слов!",
-   "ttsHash": "4ae265a02b54fb67793c3df2853b832dff6cc342670f99fcf836d2de2011209b",
-   "pronunciation": [],
-   "delivery": "cheerful",
-   "note": "",
-   "packs": [
-    "case04-l1",
-    "case04-l2",
-    "case04-l3"
-   ]
-  },
-  {
-   "id": "C4-F-04",
-   "revision": 1,
-   "kind": "dialogue",
-   "speaker": "pukhlik",
-   "displayText": "Можно задать один вопрос. Хранитель ответит да или нет.",
-   "ttsText": "Можно задать один вопрос. Хранитель ответит да или нет.",
-   "ttsHash": "3c6782d7c2877b679df20c665b325a6b3aaf63c3e76b414008177b654b8de139",
-   "pronunciation": [],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
-    "case04-l1",
-    "case04-l2",
-    "case04-l3"
-   ]
-  },
-  {
-   "id": "C4-F-05",
-   "revision": 1,
-   "kind": "dialogue",
-   "speaker": "pukhlik",
-   "displayText": "Вы угадали вместе! Победа общая.",
-   "ttsText": "Вы угадали вместе! Победа общая.",
-   "ttsHash": "b1652e8fc5f893b227ab750001d0c34b779103d49084186db65ddfe796ef8028",
-   "pronunciation": [],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
-    "case04-l1",
-    "case04-l2",
-    "case04-l3"
-   ]
-  },
-  {
    "id": "C4-0-B01",
    "revision": 1,
    "kind": "label",
@@ -22066,6 +22547,355 @@
    "displayText": "Погреб мэрии",
    "ttsText": "Погреб мэрии",
    "ttsHash": "c0bb428c50a545ccc6a5d18f31ca53e26bea2e7c401b441c78bc981dd1dcd237",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-5-B01",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Кладовка Конторы",
+   "ttsText": "Кладовка Конторы",
+   "ttsHash": "433c98e94c63bd32e953e60c31c421d89f87e34d142e242da43fa817d11f2d2b",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ],
+   "sameAudioAs": "C4-AX-office-pantry"
+  },
+  {
+   "id": "C4-5-B02",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Норка Шуршиков",
+   "ttsText": "Норка Шуршиков",
+   "ttsHash": "f3d171adecc2db8032261bdf1a271f9aa99b5b7b28b13ab9bb744bdd43179096",
+   "pronunciation": [
+    {
+     "word": "Шуршиков",
+     "hint": "Шу́ршиков"
+    }
+   ],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ],
+   "sameAudioAs": "C2-AX-hole"
+  },
+  {
+   "id": "C4-5-B03",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "За бочкой",
+   "ttsText": "За бочкой",
+   "ttsHash": "9128da6766c9351a13bde05a2fe3e2674d9b3d5e3231d73bc2c1222209b84584",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-L2-5-B01",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Чердак мэрии",
+   "ttsText": "Чердак мэрии",
+   "ttsHash": "3ebc5afa56d69680dd33b052e8c16bd26666829631efafe8a2e8c555650f9e98",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-5-B04",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Тайный запас",
+   "ttsText": "Тайный запас",
+   "ttsHash": "0a1e291fe279d01403ead05354c2e824706f09ce1ad65af2b0fb03a47e0bdf35",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-5-B05",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Съели",
+   "ttsText": "Съели",
+   "ttsHash": "df7c548bb2b3341bd1892836a4dda472ae7af75812f298a978a669b881141ce7",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ],
+   "sameAudioAs": "C4-AX-eaten"
+  },
+  {
+   "id": "C4-5-B06",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Разбили",
+   "ttsText": "Разбили",
+   "ttsHash": "5a222a079a6e98e3b69c864f9a7d5c378f0b34c0d166fe7067d9afc23dba9599",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ],
+   "sameAudioAs": "C4-AX-broken"
+  },
+  {
+   "id": "C4-L2-5-B02",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Раздали гостям",
+   "ttsText": "Раздали гостям",
+   "ttsHash": "2a124272bcdee12cd6d58e988f551a17792593d7d66c961886153d5f8dd31578",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-5-B07",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Шерлок Хвостс",
+   "ttsText": "Шерлок Хвостс",
+   "ttsHash": "f3cc6a0abb01f2892f6dabe53effde672f1f41e543363b6dd765579144a8aa4b",
+   "pronunciation": [
+    {
+     "word": "Шерлок",
+     "hint": "Ше́рлок"
+    },
+    {
+     "word": "Хвостс",
+     "hint": "Хво́стс"
+    }
+   ],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ],
+   "sameAudioAs": "NM-khvosts"
+  },
+  {
+   "id": "C4-5-B08",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Мэр Пудинг",
+   "ttsText": "Мэр Пудинг",
+   "ttsHash": "5f60070eec50afda5879c0d3e01bff25fa985dc7ec8892282469a15f4d2647d8",
+   "pronunciation": [
+    {
+     "word": "Пудинг",
+     "hint": "Пу́динг"
+    }
+   ],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ],
+   "sameAudioAs": "NM-pudding"
+  },
+  {
+   "id": "C4-5-B09",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Мышата Шуршики",
+   "ttsText": "Мышата Шуршики",
+   "ttsHash": "4b2aa7c913c0ca2d503a0c40ae316d93adbc7b5771c50eba87068e73a7cc7f86",
+   "pronunciation": [
+    {
+     "word": "Шуршики",
+     "hint": "Шу́ршики"
+    }
+   ],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ],
+   "sameAudioAs": "NM-mouse"
+  },
+  {
+   "id": "C4-L2-5-B03",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Доктор Ватсони",
+   "ttsText": "Доктор Ватсони",
+   "ttsHash": "d2d199a4af0deced9e336b57a7781fb39a581071f8b9c4af09320647f38bdec6",
+   "pronunciation": [
+    {
+     "word": "Ватсони",
+     "hint": "Ватсо́ни"
+    }
+   ],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ],
+   "sameAudioAs": "NM-watsony"
+  },
+  {
+   "id": "C4-L3-5-B02",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Крот Картофан",
+   "ttsText": "Крот Картофан",
+   "ttsHash": "bab049bea66045c2cc7b1c86d07fc83a769727462be63659a6ee2284de357418",
+   "pronunciation": [
+    {
+     "word": "Картофан",
+     "hint": "Картофа́н"
+    }
+   ],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ],
+   "sameAudioAs": "NM-kartofan"
+  },
+  {
+   "id": "C4-8-B01",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Три стола",
+   "ttsText": "Три стола",
+   "ttsHash": "b1b4042e92546b6ad96aa398c9f3aa958ce804a238553b0ad7089357fd5141ad",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-8-B02",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Четыре банки",
+   "ttsText": "Четыре банки",
+   "ttsHash": "6bffbbc39c624d47704cbbefacd40be86c3eb9c35fdc727024aa48ca6d13e742",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-8-B03",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Три банки",
+   "ttsText": "Три банки",
+   "ttsHash": "25002690d49b1fe13722c09ebcc6513f50daa4d4a9570e133a156e3c1675e1be",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-L2-8-B01",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Три банки открыть",
+   "ttsText": "Три банки открыть",
+   "ttsHash": "d936462f3f112c76e30fc3c91a2c081421977709477ba2fbabf296378f49cdf9",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l1",
+    "case04-l2",
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-L3-10-B01",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Четыре банки осталось",
+   "ttsText": "Четыре банки осталось",
+   "ttsHash": "a3747042445a82376386ce2a2a4af1691c31f0617cdde7bf77b2fa69eb7449af",
    "pronunciation": [],
    "delivery": "neutral",
    "note": "",
@@ -22441,21 +23271,6 @@
    ]
   },
   {
-   "id": "C4-L2-8-01",
-   "revision": 1,
-   "kind": "dialogue",
-   "speaker": "watsony",
-   "displayText": "Одной банки хватает на две розетки. Посчитаем?",
-   "ttsText": "Одной банки хватает на две розетки. Посчитаем?",
-   "ttsHash": "79fb4a6282d7645b1ce232fe9f4a56155c49b468ddd2806e8d1b7d3dd1bd5410",
-   "pronunciation": [],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
-    "case04-l2"
-   ]
-  },
-  {
    "id": "C4-AX-mayor-attic",
    "revision": 1,
    "kind": "label",
@@ -22469,7 +23284,8 @@
    "packs": [
     "case04-l2",
     "case04-l3"
-   ]
+   ],
+   "sameAudioAs": "C4-L2-5-B01"
   },
   {
    "id": "C4-AX-shared-early",
@@ -22903,30 +23719,149 @@
    ]
   },
   {
-   "id": "C4-L2-5-B01",
+   "id": "C4-L2-5-DC01",
    "revision": 1,
    "kind": "label",
    "speaker": "narrator",
-   "displayText": "Чердак мэрии",
-   "ttsText": "Чердак мэрии",
-   "ttsHash": "3ebc5afa56d69680dd33b052e8c16bd26666829631efafe8a2e8c555650f9e98",
+   "displayText": "Зонты в углу.",
+   "ttsText": "Зонты в углу.",
+   "ttsHash": "b39de1ce59e04c1998078dc9a461b53683c3c9da0c9014f8a209400e88e4c84f",
    "pronunciation": [],
    "delivery": "neutral",
    "note": "",
    "packs": [
-    "case04-l2",
-    "case04-l3"
-   ],
-   "sameAudioAs": "C4-AX-mayor-attic"
+    "case04-l2"
+   ]
   },
   {
-   "id": "C4-L2-5-B02",
+   "id": "C4-L2-5-DC04",
    "revision": 1,
    "kind": "label",
    "speaker": "narrator",
-   "displayText": "Раздали гостям",
-   "ttsText": "Раздали гостям",
-   "ttsHash": "2a124272bcdee12cd6d58e988f551a17792593d7d66c961886153d5f8dd31578",
+   "displayText": "Бантик.",
+   "ttsText": "Бантик.",
+   "ttsHash": "d3db869cf3568adf48c5031edf7e21ce1244592d0414acd0de93971f0cbd93f1",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l2"
+   ]
+  },
+  {
+   "id": "C4-L2-5-DC07",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Мыльный пузырь.",
+   "ttsText": "Мыльный пузырь.",
+   "ttsHash": "2b16386aa458e2281f30a4e80ff57c92e847f0bce0cde5ebbab4a060fe764baa",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l2"
+   ]
+  },
+  {
+   "id": "C4-L2-5-DC02",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Узкая дверка.",
+   "ttsText": "Узкая дверка.",
+   "ttsHash": "882c8c7e55af8f11a19d115c72e95daa838a6beddd47ee3ae45b318c7db07816",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l2"
+   ]
+  },
+  {
+   "id": "C4-L2-5-DC03",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Ступеньки над головой.",
+   "ttsText": "Ступеньки над головой.",
+   "ttsHash": "e0e4c37460d7feb6108164b0a31041925a7e883bcfd2c971376701e23200fbc1",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l2"
+   ]
+  },
+  {
+   "id": "C4-L2-5-DC05",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Флажок юбилея.",
+   "ttsText": "Флажок юбилея.",
+   "ttsHash": "2e96740f2f318e6a206f450172495cc1918ac6614a0ae06462aae8cf0312455d",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l2"
+   ]
+  },
+  {
+   "id": "C4-L2-5-DC06",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Записка с восклицательным знаком.",
+   "ttsText": "Записка с восклицательным знаком.",
+   "ttsHash": "3977d6e892e28682494681631447836d620196e254711af90dc90cc1732a9847",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l2"
+   ]
+  },
+  {
+   "id": "C4-L2-5-DC08",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Шляпа сыщика.",
+   "ttsText": "Шляпа сыщика.",
+   "ttsHash": "578ae12ca31c1d7bfcab33a49ce891ad9a3da2dc8e598b6777245cd7c6ee9fc1",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l2"
+   ],
+   "sameAudioAs": "C4-5-L1-DC09"
+  },
+  {
+   "id": "C4-L2-5-DC09",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Полоски на мордочке.",
+   "ttsText": "Полоски на мордочке.",
+   "ttsHash": "52e707ceb687c74a82266112ab69af3e8c1beb85903d55caa099af6535f64a22",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l2"
+   ]
+  },
+  {
+   "id": "C4-L2-8-01",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "displayText": "Одной банки хватает на две розетки. Посчитаем?",
+   "ttsText": "Одной банки хватает на две розетки. Посчитаем?",
+   "ttsHash": "79fb4a6282d7645b1ce232fe9f4a56155c49b468ddd2806e8d1b7d3dd1bd5410",
    "pronunciation": [],
    "delivery": "neutral",
    "note": "",
@@ -22936,40 +23871,35 @@
    ]
   },
   {
-   "id": "C4-L2-5-B03",
+   "id": "C4-8-ITEM-spoon",
    "revision": 1,
    "kind": "label",
    "speaker": "narrator",
-   "displayText": "Доктор Ватсони",
-   "ttsText": "Доктор Ватсони",
-   "ttsHash": "d2d199a4af0deced9e336b57a7781fb39a581071f8b9c4af09320647f38bdec6",
-   "pronunciation": [
-    {
-     "word": "Ватсони",
-     "hint": "Ватсо́ни"
-    }
-   ],
+   "displayText": "Ложка варенья",
+   "ttsText": "Ложка варенья",
+   "ttsHash": "ebb1b71fa1a044e511384326877f9b451add372db6938cdc89635a935069d7ce",
+   "pronunciation": [],
    "delivery": "neutral",
    "note": "",
    "packs": [
     "case04-l2",
     "case04-l3"
-   ],
-   "sameAudioAs": "NM-watsony"
+   ]
   },
   {
-   "id": "C4-L2-8-B01",
+   "id": "C4-8-GROUP-guest",
    "revision": 1,
    "kind": "label",
    "speaker": "narrator",
-   "displayText": "Три банки открыть",
-   "ttsText": "Три банки открыть",
-   "ttsHash": "d936462f3f112c76e30fc3c91a2c081421977709477ba2fbabf296378f49cdf9",
+   "displayText": "Гость",
+   "ttsText": "Гость",
+   "ttsHash": "43bd202954d883bb5ba690e1aaf11019b55c10b4b11a96908a762f2f3c667160",
    "pronunciation": [],
    "delivery": "neutral",
    "note": "",
    "packs": [
-    "case04-l2"
+    "case04-l2",
+    "case04-l3"
    ]
   },
   {
@@ -23327,21 +24257,6 @@
      "hint": "Ше́рлок"
     }
    ],
-   "delivery": "cheerful",
-   "note": "",
-   "packs": [
-    "case04-l3"
-   ]
-  },
-  {
-   "id": "C4-L3-10-01",
-   "revision": 1,
-   "kind": "dialogue",
-   "speaker": "pudding",
-   "displayText": "Оставшиеся банки — в Контору. На всякий случай!",
-   "ttsText": "Оставшиеся банки — в Контору. На всякий случай!",
-   "ttsHash": "b01bf7d8734b18c62f352a34658d56e1bafbb8e21579b37263aa328d81fee9fb",
-   "pronunciation": [],
    "delivery": "cheerful",
    "note": "",
    "packs": [
@@ -23716,6 +24631,21 @@
    ]
   },
   {
+   "id": "C4-L3-5-03",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "displayText": "Приложи колесо к следу. Совпадает?",
+   "ttsText": "Приложи колесо к следу. Совпадает?",
+   "ttsHash": "45befdce7d381d3949bfdb8d7ce9c633e67a46b22ff9772ae50863fed6662fd0",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l3"
+   ]
+  },
+  {
    "id": "C4-L3-5-B03",
    "revision": 1,
    "kind": "label",
@@ -23738,21 +24668,6 @@
    "displayText": "Широкое колесо",
    "ttsText": "Широкое колесо",
    "ttsHash": "b73d53d0c7e23ed961e10b77a52c1c1611906dd1e170bebdada84fb76bdcc988",
-   "pronunciation": [],
-   "delivery": "neutral",
-   "note": "",
-   "packs": [
-    "case04-l3"
-   ]
-  },
-  {
-   "id": "C4-L3-5-03",
-   "revision": 1,
-   "kind": "dialogue",
-   "speaker": "khvosts",
-   "displayText": "Приложи колесо к следу. Совпадает?",
-   "ttsText": "Приложи колесо к следу. Совпадает?",
-   "ttsHash": "45befdce7d381d3949bfdb8d7ce9c633e67a46b22ff9772ae50863fed6662fd0",
    "pronunciation": [],
    "delivery": "neutral",
    "note": "",
@@ -23811,34 +24726,163 @@
    ]
   },
   {
-   "id": "C4-L3-5-B02",
+   "id": "C4-L3-6-DC01",
    "revision": 1,
    "kind": "label",
    "speaker": "narrator",
-   "displayText": "Крот Картофан",
-   "ttsText": "Крот Картофан",
-   "ttsHash": "bab049bea66045c2cc7b1c86d07fc83a769727462be63659a6ee2284de357418",
-   "pronunciation": [
-    {
-     "word": "Картофан",
-     "hint": "Картофа́н"
-    }
-   ],
+   "displayText": "Запах старых зонтов.",
+   "ttsText": "Запах старых зонтов.",
+   "ttsHash": "0ed53ccfe6f27d88f6e988a8acecda29afd8f5ed75bab52ea5b1f90ea3ef6d2e",
+   "pronunciation": [],
    "delivery": "neutral",
    "note": "",
    "packs": [
     "case04-l3"
-   ],
-   "sameAudioAs": "NM-kartofan"
+   ]
   },
   {
-   "id": "C4-L3-10-B01",
+   "id": "C4-L3-6-DC04",
    "revision": 1,
    "kind": "label",
    "speaker": "narrator",
-   "displayText": "Четыре банки осталось",
-   "ttsText": "Четыре банки осталось",
-   "ttsHash": "a3747042445a82376386ce2a2a4af1691c31f0617cdde7bf77b2fa69eb7449af",
+   "displayText": "Завязанный бантик.",
+   "ttsText": "Завязанный бантик.",
+   "ttsHash": "09343de3b9f65b8045bf2abf393f27156608e9d0f5df000d51ad7a03bfbb35a6",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-L3-6-DC07",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Пузырь.",
+   "ttsText": "Пузырь.",
+   "ttsHash": "c20473a0890302907b6004e9f6b452d783173b27174013eb496f19e779e65e7e",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-L3-6-DC02",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Дверь размером с мышку.",
+   "ttsText": "Дверь размером с мышку.",
+   "ttsHash": "3c98d387a9e79006344904d2670de3cdede7463e8f7af22cbd2b337e5ee4c195",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-L3-6-DC03",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Скрип ступенек сверху.",
+   "ttsText": "Скрип ступенек сверху.",
+   "ttsHash": "7f8ce07224c3e8504af317d79abcde478ee1983a01fed477dfa4775e83d3878b",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-L3-6-DC05",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Календарь с обведённым днём.",
+   "ttsText": "Календарь с обведённым днём.",
+   "ttsHash": "cba550052f8a527f383677361d23fa0b54347f8abd0bb0265b66a4030101dc35",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-L3-6-DC06",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Палец у губ: тсс.",
+   "ttsText": "Палец у губ: тсс.",
+   "ttsHash": "cd5ff4c03a5a250521536adcd3eeeb5038ea2a05df13b47cd7918c44520a656a",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-L3-6-DC08",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Лупа.",
+   "ttsText": "Лупа.",
+   "ttsHash": "5ed6d4987f3d7dd722b9e67bd8a50ea2d607cc248828e709596b6c5444c2e1b2",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-L3-6-DC09",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Ключ от Конторы.",
+   "ttsText": "Ключ от Конторы.",
+   "ttsHash": "8d484be39a0cbe4b19bb925b4a9a82c0c80e4b9c427024aa80d7e50a805e95ba",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-L3-10-01",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "displayText": "Оставшиеся банки — в Контору. На всякий случай!",
+   "ttsText": "Оставшиеся банки — в Контору. На всякий случай!",
+   "ttsHash": "b01bf7d8734b18c62f352a34658d56e1bafbb8e21579b37263aa328d81fee9fb",
+   "pronunciation": [],
+   "delivery": "cheerful",
+   "note": "",
+   "packs": [
+    "case04-l3"
+   ]
+  },
+  {
+   "id": "C4-8-GROUP-reserve",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Запас Конторы",
+   "ttsText": "Запас Конторы",
+   "ttsHash": "25ff8dcc857a19db1e82de8d6efd780a98952cd237a1c153c6ff6463debdf122",
    "pronunciation": [],
    "delivery": "neutral",
    "note": "",
@@ -23859,6 +24903,1053 @@
    "note": "",
    "packs": [
     "case04-l3"
+   ]
+  },
+  {
+   "id": "CZ-pudding-INV",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "displayText": "Чаепитие? Обожаю! Я принесу семечки.",
+   "ttsText": "Чаепитие? Обожаю! Я принесу семечки.",
+   "ttsHash": "a8a9509bbc40508bcbfec7d25bde7c082f3245a2ba5080abe63edfac4d326674",
+   "pronunciation": [],
+   "delivery": "cheerful",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-pudding-S1-01",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "displayText": "Знаешь, почему у меня такие щёки?",
+   "ttsText": "Знаешь, почему у меня такие щёки?",
+   "ttsHash": "557346bb39fa1ff0ee2dc06e391e2dbe889d456babf92bcef1e1a078e988c2ed",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-pudding-S1-02",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "displayText": "Хомяки носят запасы в щеках. Очень удобно!",
+   "ttsText": "Хомяки носят запасы в щеках. Очень удобно!",
+   "ttsHash": "b033b9cbfe11737697a33eb5b6773160e059ec7a73175e3002eba2dcaad6d7ec",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-pudding-S1-03",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "displayText": "Однажды я принёс так целую горсть подсолнуха.",
+   "ttsText": "Однажды я принёс так целую горсть подсолнуха.",
+   "ttsHash": "d107528a6e96b792d6558b2e6ad1b797182d563c9557bdc6ff8b38177c61bf15",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-pudding-S1-04",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "displayText": "Потом чихнул, и семечки разлетелись по площади!",
+   "ttsText": "Потом чихнул, и семечки разлетелись по площади!",
+   "ttsHash": "8bab91a910bb2e2b6bdff2a8cd2e419b8371d1c0a8c44c797b3c751d8bfa71b3",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-pudding-S1-05",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "pudding",
+   "displayText": "С тех пор на площади растут подсолнухи.",
+   "ttsText": "С тех пор на площади растут подсолнухи.",
+   "ttsHash": "5b099be77ed1836cfde16358edd29e6a11280e48ba1ec215b754a56c2535ceff",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-tyopa-INV",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "displayText": "Иду! Возьму кусочек черничного мыла в подарок.",
+   "ttsText": "Иду! Возьму кусочек черничного мыла в подарок.",
+   "ttsHash": "c4844050ef79cdc487e4c828c30cacc93d151e4c501c1a776ba9bc7cf8ca9919",
+   "pronunciation": [
+    {
+     "word": "черничного",
+     "hint": "черни́чного"
+    }
+   ],
+   "delivery": "cheerful",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-tyopa-S1-01",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "displayText": "Мыло я варю с детства. Бабушка научила.",
+   "ttsText": "Мыло я варю с детства. Бабушка научила.",
+   "ttsHash": "878cd95b76053a5bfe0709262e921738bb780de464d88bbd70d093861f18fb79",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-tyopa-S1-02",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "displayText": "Сначала у меня выходили одни пузыри.",
+   "ttsText": "Сначала у меня выходили одни пузыри.",
+   "ttsHash": "b999385f8f5a286959129b4471719d29793d89099bdee82a0bf0133aa5409a9c",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-tyopa-S1-03",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "displayText": "Пузыри улетали прямо в окна соседей.",
+   "ttsText": "Пузыри улетали прямо в окна соседей.",
+   "ttsHash": "9a788bf30f1d1f8ae02158e343ff682219d2c7abbd9cd3ceaa142bfdd4dcb919",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-tyopa-S1-04",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "tyopa",
+   "displayText": "Соседи не сердились. Говорили: пахнет праздником!",
+   "ttsText": "Соседи не сердились. Говорили: пахнет праздником!",
+   "ttsHash": "b34ea01eeba11422ed9f31a2ddedaeb0353120bea8065859aa67a0971722dec5",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-fitilyok-INV",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "fitilyok",
+   "displayText": "Чай вечером? Я посвечу над столом!",
+   "ttsText": "Чай вечером? Я посвечу над столом!",
+   "ttsHash": "3a689fdb99c66a07585802441bf1727a1904bf72b835053a25b43519c43754bc",
+   "pronunciation": [],
+   "delivery": "cheerful",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-fitilyok-S1-01",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "fitilyok",
+   "displayText": "Я зажигаю фонари на Пироговой улице.",
+   "ttsText": "Я зажигаю фонари на Пироговой улице.",
+   "ttsHash": "ec2244868aec67ad65f57e634bdf04a78df7d3faa2592fce8fae6c7c7b0aa9c6",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-fitilyok-S1-02",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "fitilyok",
+   "displayText": "Каждый вечер облетаю все до одного.",
+   "ttsText": "Каждый вечер облетаю все до одного.",
+   "ttsHash": "f6c4dd4fb05aa79357674b3df7b4c10910b50e4c63a94c4d082ac2da501aac02",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-fitilyok-S1-03",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "fitilyok",
+   "displayText": "Один фонарь всегда гаснет раньше всех.",
+   "ttsText": "Один фонарь всегда гаснет раньше всех.",
+   "ttsHash": "45f635426f988330c6b3cb6807e06a6000f7fd8431eb080a403c60d052301d5e",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-fitilyok-S1-04",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "fitilyok",
+   "displayText": "Я зову его Соней. Он просто рано ложится.",
+   "ttsText": "Я зову его Соней. Он просто рано ложится.",
+   "ttsHash": "d4e3277f40175348186e1bfef63da815a8968dbc0ea515cfe5e899a4d0bb7fef",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-kartofan-INV",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "displayText": "Иду! Принесу свежей морковки к чаю.",
+   "ttsText": "Иду! Принесу свежей морковки к чаю.",
+   "ttsHash": "3722ec63cad2f29f28724b6df0403316f326bc0e1737a78545cc4a2df4dd2224",
+   "pronunciation": [],
+   "delivery": "cheerful",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-kartofan-S1-01",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "displayText": "Я сажаю огород на ощупь и по запаху.",
+   "ttsText": "Я сажаю огород на ощупь и по запаху.",
+   "ttsHash": "8ca48d8cdf12d4879cf356348716a9aa932bb598741e68212b38735df601401a",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-kartofan-S1-02",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "displayText": "Морковь пахнет сладко, а укроп — свежо.",
+   "ttsText": "Морковь пахнет сладко, а укроп — свежо.",
+   "ttsHash": "48b600c66a7613ba89790a1c8749cf95228be4d01e4504952adc84e04dae06a7",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-kartofan-S1-03",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "displayText": "Однажды я посадил тюльпаны вместо лука.",
+   "ttsText": "Однажды я посадил тюльпаны вместо лука.",
+   "ttsHash": "a710756b55062485f08e2bfed60c2fa8d2be9ad804645210b8627d422aa29fbc",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-kartofan-S1-04",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "kartofan",
+   "displayText": "Весной весь огород расцвёл. Было очень красиво!",
+   "ttsText": "Весной весь огород расцвёл. Было очень красиво!",
+   "ttsHash": "ba617b70af4064958fc6405cec5ca704692a7a801a90876c8262cb248a7d2dfe",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-stella-INV",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "displayText": "Чай? Лечу! Захвачу свежую газету.",
+   "ttsText": "Чай? Лечу! Захвачу свежую газету.",
+   "ttsHash": "e58eb698d0d84a4968f7dd9abf9482ef8cce34cec8c9d1e274877a2e89cc70c6",
+   "pronunciation": [],
+   "delivery": "cheerful",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-stella-S1-01",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "displayText": "Я знаю каждый почтовый ящик в Пушистино.",
+   "ttsText": "Я знаю каждый почтовый ящик в Пушистино.",
+   "ttsHash": "f42bdd17d2124793cf5a7f47e21e660d440a52a5c5e639345a559c7363e26c95",
+   "pronunciation": [
+    {
+     "word": "Пушистино",
+     "hint": "Пуши́стино"
+    }
+   ],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-stella-S1-02",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "displayText": "Самое трудное письмо пришло без адреса.",
+   "ttsText": "Самое трудное письмо пришло без адреса.",
+   "ttsHash": "fce9662913f1855f2cbf65bdb5219a63ad8312f894ef8ad3274e330e0a66fc4a",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-stella-S1-03",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "displayText": "На конверте был только рисунок: дом с красной крышей.",
+   "ttsText": "На конверте был только рисунок: дом с красной крышей.",
+   "ttsHash": "173a79f49299a40c6fbd93c7a31d2a9f601c38bf284b95f035d4f15a345d6c5c",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-stella-S1-04",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "stella",
+   "displayText": "Я облетела весь город и нашла этот дом!",
+   "ttsText": "Я облетела весь город и нашла этот дом!",
+   "ttsHash": "08fc414413333fda99a3a9864c5d41d5d234c759cd186aa4b089275fab34c807",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-mouse-INV",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "displayText": "Нам можно на чай? Мы тихонько!",
+   "ttsText": "Нам можно на чай? Мы тихонько!",
+   "ttsHash": "f425d7b16e36a5818a91efb7303d7022b1cf04e32257ff64ca6028d255868dc9",
+   "pronunciation": [],
+   "delivery": "cheerful",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-mouse-S1-01",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "displayText": "Нас в семье очень много мышат.",
+   "ttsText": "Нас в семье очень много мышат.",
+   "ttsHash": "cf8f05db913c83ce0f0b50d8b53c1a219b3cf1d566a7400c6196fcfe62c95f17",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-mouse-S1-02",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "displayText": "Мы спим в одной большой кровати.",
+   "ttsText": "Мы спим в одной большой кровати.",
+   "ttsHash": "dd2f63beb4ac08b8d2b8944bbb99938570acc6ba40d526fa1347d7e883cd69d9",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-mouse-S1-03",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "displayText": "Кто ворочается, тот рассказывает сказку.",
+   "ttsText": "Кто ворочается, тот рассказывает сказку.",
+   "ttsHash": "b751311f6c452affe7000023525a037490172d03da41ad2c768275883ec2b2fd",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-mouse-S1-04",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "mouse",
+   "displayText": "Поэтому сказки у нас каждую ночь!",
+   "ttsText": "Поэтому сказки у нас каждую ночь!",
+   "ttsHash": "79595ee56534ecf31ec7789afd519369a894582bab57933b8f993654f9dc3034",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-damka-INV",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "displayText": "С удовольствием! Только сначала проверю маяк.",
+   "ttsText": "С удовольствием! Только сначала проверю маяк.",
+   "ttsHash": "a0266fc2cb171186cc0b79188dcd2f307d77529f4cb1933509ca456bcd9549da",
+   "pronunciation": [],
+   "delivery": "cheerful",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-damka-S1-01",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "displayText": "Медовый маяк построила ещё моя прабабушка.",
+   "ttsText": "Медовый маяк построила ещё моя прабабушка.",
+   "ttsHash": "188834045c463cc2760a66d91b7a6f6a48f46971b4d408fc1ba6069ec2f35f4b",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-damka-S1-02",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "displayText": "Бобры умеют строить из веток и ила.",
+   "ttsText": "Бобры умеют строить из веток и ила.",
+   "ttsHash": "a481e907b4daf72e6aef9aa83f61defcfa6fd557b22c750bad7eb56916b7e05a",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-damka-S1-03",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "displayText": "А я научилась ещё и чинить фонари.",
+   "ttsText": "А я научилась ещё и чинить фонари.",
+   "ttsHash": "cac0618e014c42f4186163fa8b51f00207b72090bfcfa9dc7792a8793abd9f77",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-damka-S1-04",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "damka",
+   "displayText": "Свет маяка видно с самого дальнего берега.",
+   "ttsText": "Свет маяка видно с самого дальнего берега.",
+   "ttsHash": "b2711bb93e5db11b02543a3e7d7c96d1b251fe5dbcb863db8595d2e0766d2549",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-pukhlik-INV",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "displayText": "Чай? Только вечерний. Днём я сплю.",
+   "ttsText": "Чай? Только вечерний. Днём я сплю.",
+   "ttsHash": "0fa2b7d23440a513cece7edffdac615ad881bbf0504e935161b080cac09e0b5e",
+   "pronunciation": [],
+   "delivery": "cheerful",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-pukhlik-S1-01",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "displayText": "Я учусь дежурить ночью, как настоящий сыщик.",
+   "ttsText": "Я учусь дежурить ночью, как настоящий сыщик.",
+   "ttsHash": "deb527549e28ad96641f78d9152603df94cab73903a99edb056391f46a3ede81",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-pukhlik-S1-02",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "displayText": "Ночью город тихий, а звёзды яркие.",
+   "ttsText": "Ночью город тихий, а звёзды яркие.",
+   "ttsHash": "a44691fa25994fdc74c58bbad5ef801818aa3bf4b5d368c0ab48e95a53c0512c",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-pukhlik-S1-03",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "displayText": "Я считаю огоньки в окнах. Так не хочется спать.",
+   "ttsText": "Я считаю огоньки в окнах. Так не хочется спать.",
+   "ttsHash": "ddf6737d93ece8c30169984407b2bb5d397515fd327d46faa20a8cbb4a54804f",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-pukhlik-S1-04",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "displayText": "Гаснет огонёк — я шепчу: спокойной ночи.",
+   "ttsText": "Гаснет огонёк — я шепчу: спокойной ночи.",
+   "ttsHash": "ccdd93e3d5442a4d88b48e66ba507d9cdb1ba49b0f370fe7d55c5d99819b2f0e",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "SHOP-hat-acorn",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Шапочка-жёлудь",
+   "ttsText": "Шапочка-жёлудь",
+   "ttsHash": "5db0173af358fe14bafc747e168bd4975eee22ca40fc1f5ad0622c4a109c52a0",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "SHOP-hat-flower",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Шляпка с цветком",
+   "ttsText": "Шляпка с цветком",
+   "ttsHash": "b31dcd869a57b7a21b2ecd80b9856f51213e12fe05631a24e8665394b3269ff7",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "SHOP-hat-beret",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Берет художника",
+   "ttsText": "Берет художника",
+   "ttsHash": "536101086dbb955090e564e532b60777819b1088bec1b13d6962e9ef14fb63da",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "SHOP-hat-detective",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Шапка сыщика",
+   "ttsText": "Шапка сыщика",
+   "ttsHash": "98638ebd9faa98e2f35f9907fd3f51f3b48f1c3f53044c5c5b439184fddcf142",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "SHOP-scarf-stripes",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Шарф в полоску",
+   "ttsText": "Шарф в полоску",
+   "ttsHash": "6b9221b013c1e2ece60f4ec86f3a98781ad2566b7bbf68a6f072997fa9a63143",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "SHOP-scarf-dots",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Шарф в горошек",
+   "ttsText": "Шарф в горошек",
+   "ttsHash": "1d41e2a49cab82a4255504d274f3a955d0235b65e2f34fbc93aabeb1f77bf10c",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "SHOP-scarf-hearts",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Шарф с сердечками",
+   "ttsText": "Шарф с сердечками",
+   "ttsHash": "3780a89a7059848f8c35aed4ae123970949cbeaa75385c34d7aa786f3ebd27b2",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "SHOP-scarf-stars",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Шарф со звёздочками",
+   "ttsText": "Шарф со звёздочками",
+   "ttsHash": "8e5154e11e35700742f190bb528a742bd33da1ba2ba47aceaf3b9f28cd4633af",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "SHOP-decor-geranium",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Горшок с геранью",
+   "ttsText": "Горшок с геранью",
+   "ttsHash": "c2fddd29f9ddab12789cbedf84f8348ecbe711b1637dfac4e60d4db10d0d1c08",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "SHOP-decor-firefly-lamp",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Фонарик-светлячок",
+   "ttsText": "Фонарик-светлячок",
+   "ttsHash": "cef791fb7ac9628ef36ebdfb176af7a32568c29564513af1a2bd0d25374b56f1",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "cozy"
+   ],
+   "sameAudioAs": "C5-3-B02"
+  },
+  {
+   "id": "SHOP-decor-rug",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Коврик-ромашка",
+   "ttsText": "Коврик-ромашка",
+   "ttsHash": "cd39d6f27ca1719f74cf54b3fade6f8536795d9c396004abde35262b637dccfe",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "SHOP-decor-trophy-shelf",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Полочка для наград",
+   "ttsText": "Полочка для наград",
+   "ttsHash": "dd2745e10bb711f12c194cfacc841db086e7cc9787dc786bbaeebf0a7098e1ce",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "DS-shelf",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "На полку",
+   "ttsText": "На полку",
+   "ttsHash": "6715cacc8713fd5842a54e37d798aec19ac3a60500af86715495b4595b4a3b00",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "DS-window",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "На окно",
+   "ttsText": "На окно",
+   "ttsHash": "679728afb75001e6e1b4ad75328182b812401f5ee4bc45caf8cae005d310d805",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "DS-table",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "На стол",
+   "ttsText": "На стол",
+   "ttsHash": "533f4bee1b97cf14cdfd0032ee5f108578b08d84738e9f6a1b3ebe4a99ce04d1",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "DS-floor",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "На пол",
+   "ttsText": "На пол",
+   "ttsHash": "478d49e9d3cdca6ce40c8ec6c0260ab37ead4e068e9ce33ceb28dca42421cb0f",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "DS-wall",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "На стену",
+   "ttsText": "На стену",
+   "ttsHash": "b2c6ab472f5a7183bbb956784a66741269bfb444a1cef868df33e0be3f8f7d65",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "RANK-intern",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Стажёр",
+   "ttsText": "Стажёр",
+   "ttsHash": "bd306d649ee251a724240d220b425e7beca111db10e79fe9e304d0193712caa9",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "cozy"
+   ],
+   "sameAudioAs": "UI-avatar.name.default"
+  },
+  {
+   "id": "RANK-intern-MSG",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "displayText": "Каждый сыщик начинает со стажёра.",
+   "ttsText": "Каждый сыщик начинает со стажёра.",
+   "ttsHash": "2ef3b1fe3d14496761c982067ca56de1e0c4bd70bf09c328fe0ad57be11c3651",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "RANK-helper",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Помощник сыщика",
+   "ttsText": "Помощник сыщика",
+   "ttsHash": "758308f94dceb136412efb8d9f264729dec0b3346e578d504b522b96beeed306",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "RANK-helper-MSG",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "displayText": "Помощник сыщика! Ты уже читаешь шифры.",
+   "ttsText": "Помощник сыщика! Ты уже читаешь шифры.",
+   "ttsHash": "4f44073ef7dfac71ff5c77438be43750e6fa3209d8c533c575ce69227e3798c6",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "RANK-junior",
+   "revision": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "displayText": "Младший детектив",
+   "ttsText": "Младший детектив",
+   "ttsHash": "c885fe72bde571f07395c272574361b3d650fe2614b9001242b43bdbc41c94d9",
+   "pronunciation": [],
+   "delivery": "neutral",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "RANK-junior-MSG",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "displayText": "Младший детектив! Даже взрослых проверяешь честно.",
+   "ttsText": "Младший детектив! Даже взрослых проверяешь честно.",
+   "ttsHash": "38bae8d033757327c40167bf92e7cb93ed4cc5853894823e754488bd8b1db331",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-INTRO",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "displayText": "Уютный денёк! Отдохнём и украсим Контору?",
+   "ttsText": "Уютный денёк! Отдохнём и украсим Контору?",
+   "ttsHash": "406c302dd71742ae5c5e01f4afcb355ec1ec5a996d3142cd92f1082b82b12192",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-BOUGHT",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "displayText": "Отличный выбор! Записала в покупки.",
+   "ttsText": "Отличный выбор! Записала в покупки.",
+   "ttsHash": "b50f5dcc1eced3b625f992cfe60d4326dbe1d1378ae7974f302058e136bbe5c2",
+   "pronunciation": [],
+   "delivery": "cheerful",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-RETURNED",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "displayText": "Вернули. Всё снова в копилке.",
+   "ttsText": "Вернули. Всё снова в копилке.",
+   "ttsHash": "2acbd281700da3aa62b81af7c897468282830479a9e0f5b4daed7854afd5ba9d",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-NOT-ENOUGH",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "watsony",
+   "displayText": "Пока не хватает. Раскроем ещё одно дело?",
+   "ttsText": "Пока не хватает. Раскроем ещё одно дело?",
+   "ttsHash": "66bc50257a0a2074790ec82bf53d964b835a54cecd36738dfd30d22b60efa2c7",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
+   ]
+  },
+  {
+   "id": "CZ-TEA-THANKS",
+   "revision": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "displayText": "Чудесный чай! Спасибо за компанию.",
+   "ttsText": "Чудесный чай! Спасибо за компанию.",
+   "ttsHash": "e3d3b0e87099d265bfe4639829be9811f23667e8ca4f9e180d7721d343e6e443",
+   "pronunciation": [],
+   "delivery": "warm",
+   "note": "",
+   "packs": [
+    "cozy"
    ]
   }
  ]

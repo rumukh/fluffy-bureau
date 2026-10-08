@@ -1,5 +1,5 @@
 import {
-  all, cl, dir, end, goto, has, L, Ls, menu, minigame, not, opt as mopt, reveal, reward, seq, skill, wait, type VariantSource,
+  act, all, cl, cutscene, dir, end, goto, has, L, Ls, menu, minigame, not, opt as mopt, reveal, reward, seq, skill, wait, type VariantSource,
 } from '../../tools/content/dsl.ts';
 import type { ChoiceOption, Fact, GlossaryEntry, Predicate, Step } from '../../packages/content/src/schema.ts';
 
@@ -59,12 +59,20 @@ export const collections: VariantSource['collections'] = [
   { id: 'c3-chamomile-note', collection: 'secret-notes', label: 'C3-COL-secret-note', line: 'C3-COL-secret-note-L' },
 ];
 
-export const commonCutscenes: NonNullable<VariantSource['plannedCutscenes']> = [
-  { id: 'cs-c3-intro', scene: 'C3-0', summary: 'Вечером мышата сообщают о мигании на маяке; команда идёт к Медовому пруду.' },
-  { id: 'cs-c3-note', scene: 'C3-3', summary: 'У починенного весла Дамки найдена ромашка; первая Тайная заметка попадает в Блокнот.' },
-  { id: 'cs-c3-reveal', scene: 'C3-8', summary: 'Пухлик признаётся, что по ночам учил игровые сигналы огоньков.' },
-  { id: 'cs-c3-reward', scene: 'C3-11', summary: 'Хвостс вручает значок «Огонёк маяка», а Ватсони вспоминает тайну Серой Тени.' },
-];
+export const secretNotesPage: NonNullable<VariantSource['notebookPages']>[number] = {
+  id: 'secret-notes',
+  kind: 'secret-notes',
+  title: 'UI-notebook.secretNotes',
+  unlock: 'rw-c3-secret-note',
+  cipher: null,
+};
+
+export const sceneProps = {
+  map: { mapPoint: 'prop.map-honey-lighthouse' },
+  secretNote: { notebook: 'prop.notebook-secret-notes', chamomile: 'prop.chamomile-note' },
+  facts: { factCards: 'prop.fact-cards-c3' },
+  light: { signalStrip: 'prop.light-signal-strip' },
+};
 
 export const commonComfort: VariantSource['comfort'] = [
   { scene: 'C3-1', line: 'C3-L-01' },
@@ -74,25 +82,29 @@ export const commonComfort: VariantSource['comfort'] = [
 ];
 
 export const introOffice = (): Step[] => [
-  dir('C3-0-D01', 'Контора вечером: в окне горит тёплый фонарь-светлячок.'),
-  ...seq('C3-0-', 1, 3),
-  dir('C3-0-D02', 'Входят мышата Шуршики, держась за лапки.'),
-  ...seq('C3-0-', 4, 9),
-  skill('map', [dir('C3-0-D03', 'На карте открывается точка «Медовый пруд и маяк».')]),
+  skill('map', [dir('C3-0-D03', 'На карте открывается точка «Медовый пруд и маяк».', null, [
+    act.show('mapPoint', 1280, 820),
+    act.sfx('page-turn', 0.45),
+    act.effect('glow', 1280, 820, 1.2),
+  ])]),
 ];
 
-export const secretNote = (after: Step[] = []): VariantSource['scenes'][number] => ({
+export const secretNote = (cutsceneId: string, after: Step[] = []): VariantSource['scenes'][number] => ({
   id: 'C3-3',
   title: 'Дверь маяка и Тайная заметка',
   location: 'lighthouse-door',
   cast: ['damka', 'khvosts', 'watsony'],
   presentation: 'dialogue',
+  props: sceneProps.secretNote,
   steps: [
-    ...seq('C3-3-', 1, 6),
-    skill('secret-notes', [dir('C3-3-D01', 'В Блокноте открывается страница «Тайные заметки».')]),
-    L('C3-3-07'),
-    dir('C3-3-D02', 'Игрок нажимает на ромашку; значок запаха ложится на страницу.'),
-    L('C3-3-08'),
+    cutscene(cutsceneId),
+    skill('secret-notes', [dir('C3-3-D01', 'В Блокноте открывается страница «Тайные заметки».', null, [
+      act.show('notebook', 1280, 900),
+      act.show('chamomile', 1510, 880),
+      act.sfx('page-turn', 0.5),
+      act.effect('sparkles', 1510, 880, 1.2),
+    ])]),
+    reward('rw-c3-secret-note'),
     reveal('c3-secret-note'),
     ...Ls('C3-3-09'),
     ...after,
@@ -124,31 +136,35 @@ export const factsScene = (): VariantSource['scenes'][number] => ({
   location: 'lighthouse-room',
   cast: ['watsony'],
   presentation: 'dialogue',
-  steps: [skill('encyclopedia', [dir('C3-10-D01', 'Карточки фактов складываются в Энциклопедию.')]), ...seq('C3-10-', 1, 4), goto('C3-11')],
+  props: sceneProps.facts,
+  steps: [skill('encyclopedia', [dir('C3-10-D01', 'Карточки фактов складываются в Энциклопедию.', null, [
+    act.show('factCards', 1280, 900),
+    act.sfx('page-turn', 0.45),
+    act.effect('sparkles', 1280, 900, 1.2),
+  ])]), ...seq('C3-10-', 1, 4), goto('C3-11')],
 });
 
-export const rewardScene = (level: 1 | 2 | 3): VariantSource['scenes'][number] => ({
+export const rewardScene = (level: 1 | 2 | 3, cutsceneId: string): VariantSource['scenes'][number] => ({
   id: 'C3-11',
   title: 'Награда',
   location: 'office',
   cast: ['khvosts', 'watsony'],
   presentation: 'cutscene',
   steps: [
-    L('C3-11-01'), L('C3-11-02'),
+    cutscene(cutsceneId),
     reward('rw-c3-badge'),
     reward(`rw-c3-buttons-l${level}`),
     reward(`rw-c3-sticker-l${level}`),
     reward('rw-c3-decor-lamp'),
     reward('rw-c3-activity'),
     reward('rw-c3-title'),
-    dir('C3-11-D01', 'Новое слово в Словарике: дедукция. Тайная заметка: запах ромашки.'),
-    ...seq('C3-11-', 3, 4),
     wait('office.place'),
     end(),
   ],
 });
 
 export const baseRewards = (level: 1 | 2 | 3) => [
+  'rw-c3-secret-note',
   'rw-c3-badge',
   `rw-c3-buttons-l${level}`,
   `rw-c3-sticker-l${level}`,
@@ -167,17 +183,32 @@ export const soundGame = (id: string, level: 1 | 2 | 3): VariantSource['minigame
   id,
   skill: 'sound-diff',
   config: {
-    kind: 'staged',
-    mechanic: 'Услышь разницу',
-    description: 'Ночной звук сравнивается с образцами. Без звука показаны волны ритма и иконки тихо-громко, высоко-низко, коротко-длинно.',
-    steps: [
-      { id: 'rustle', prompt: 'C3-2-Q01', pageSize: 3, options: level === 3
-        ? [opt('pages', 'C3-2-B01', true, 'C3-2-03'), opt('reeds', 'C3-2-B02', false, 'C3-L3-2-01', 'C3-2-04'), opt('wings', 'C3-2-B09', false, 'C3-2-04')]
-        : [opt('pages', 'C3-2-B01', true, 'C3-2-03'), opt('reeds', 'C3-2-B02', false, 'C3-2-04'), opt('wings', 'C3-2-B03', false, 'C3-2-04')] },
-      { id: 'click', prompt: 'C3-2-Q02', pageSize: 3, options: [opt('shutter', 'C3-2-B04', true, 'C3-2-05'), opt('door', 'C3-2-B05', false, 'C3-2-04'), opt('woodpecker', 'C3-2-B06', false, 'C3-2-04')] },
-      ...(level > 1 ? [{ id: 'knock', prompt: 'C3-2-Q03', pageSize: 3, options: [opt('hammer', 'C3-2-B07', false, 'C3-2-04'), opt('drops', 'C3-2-B08', true, 'C3-L2-2-01'), opt('shutter', 'C3-2-B04', false, 'C3-2-04')] }] : []),
+    kind: 'sound-match',
+    intro: [],
+    rounds: [
+      { id: 'rustle', target: 'night-rustle', options: level === 3
+        ? [
+          { ...opt('pages', 'C3-2-B01', true, 'C3-2-03'), sample: 'pages' },
+          { ...opt('reeds', 'C3-2-B02', false, 'C3-L3-2-01'), sample: 'reeds-rustle' },
+          { ...opt('wings', 'C3-2-B09', false), sample: 'wing-rustle' },
+        ]
+        : [
+          { ...opt('pages', 'C3-2-B01', true, 'C3-2-03'), sample: 'pages' },
+          { ...opt('reeds', 'C3-2-B02', false), sample: 'wind-reeds' },
+          { ...opt('wings', 'C3-2-B03', false), sample: 'magpie-wings' },
+        ], wrong: ['C3-2-04'] },
+      { id: 'click', target: 'night-click', options: [
+        { ...opt('shutter', 'C3-2-B04', true, 'C3-2-05'), sample: 'lamp-shutter' },
+        { ...opt('door', 'C3-2-B05', false), sample: 'door-creak' },
+        { ...opt('woodpecker', 'C3-2-B06', false), sample: 'woodpecker' },
+      ], wrong: ['C3-2-04'] },
+      ...(level > 1 ? [{ id: 'knock', target: 'night-drops', options: [
+        { ...opt('hammer', 'C3-2-B07', false), sample: 'hammer-knock' },
+        { ...opt('drops', 'C3-2-B08', true, 'C3-L2-2-01'), sample: 'roof-drops' },
+        { ...opt('shutter', 'C3-2-B04', false), sample: 'lamp-shutter' },
+      ], wrong: ['C3-2-04'] }] : []),
     ],
-    lines: [],
+    after: [],
   },
 });
 
@@ -185,17 +216,16 @@ export const lightGame = (id: string, level: 1 | 2 | 3): VariantSource['minigame
   id,
   skill: 'light-code',
   config: {
-    kind: 'staged',
-    mechanic: 'Азбука огоньков',
-    description: 'Игровые световые ритмы: точка — короткий огонёк, чёрточка — длинный. Это не азбука Морзе.',
-    steps: [
-      { id: 'hello', prompt: 'C3-9-Q01', pageSize: 2, options: [opt('short', 'C3-9-B01', true), opt('long', 'C3-9-B02', false, 'C3-9-04')] },
-      { id: 'friends', prompt: 'C3-9-Q02', pageSize: 2, options: [opt('long', 'C3-9-B02', true), opt('short', 'C3-9-B01', false, 'C3-9-04')] },
-      { id: 'night', prompt: 'C3-9-Q03', pageSize: 2, options: [opt('long', 'C3-9-B02', true), opt('short', 'C3-9-B01', false, 'C3-9-04')] },
-      ...(level > 1 ? [{ id: 'lighthouse', prompt: 'C3-9-Q04', pageSize: 2, options: [opt('long', 'C3-9-B02', true), opt('short', 'C3-9-B01', false, 'C3-9-04')] }] : []),
-      ...(level === 3 ? [{ id: 'own', prompt: 'C3-L3-11-B01', pageSize: 2, options: [opt('short', 'C3-9-B01', true, 'C3-L3-11-N01'), opt('long', 'C3-9-B02', true, 'C3-L3-11-N01')] }] : []),
+    kind: 'light-signals',
+    intro: [],
+    signals: [
+      { id: 'hello', label: 'C3-L3-7-B01', pattern: ['dot', 'dot', 'dash'], correct: [] },
+      { id: 'friends', label: 'C3-L3-7-B02', pattern: ['dash', 'dot', 'dash'], correct: [] },
+      { id: 'night', label: 'C3-9-B03', pattern: ['dash', 'dash', 'dot', 'dot'], correct: [] },
+      ...(level > 1 ? [{ id: 'lighthouse', label: 'C3-9-B04', pattern: ['dash', 'dot', 'dot', 'dash'] as ('dot' | 'dash')[], correct: [] }] : []),
     ],
-    lines: [],
+    wrong: ['C3-9-04'],
+    own: level === 3 ? { min: 3, max: 5, prompt: ['C3-L3-11-01'], done: ['C3-L3-11-02', 'C3-L3-11-03'] } : null,
   },
 });
 
@@ -205,15 +235,18 @@ export const finalLightScene = (id: string, level: 1 | 2 | 3, game: string): Var
   location: 'lighthouse-room',
   cast: ['pukhlik', 'pudding', 'mouse'],
   presentation: 'minigame',
+  props: sceneProps.light,
   steps: [
     ...seq('C3-9-', 1, 3),
-    ...(level === 3 ? [L('C3-L3-11-01')] : []),
-    skill('light-code', [dir(`${id}-D01`, 'Пухлик показывает игровой ритм точками и чёрточками.')]),
+    skill('light-code', [dir(`${id}-D01`, 'Пухлик показывает игровой ритм точками и чёрточками.', null, [
+      act.show('signalStrip', 1280, 520),
+      act.pose('pukhlik', { clip: 'present', expression: 'happy' }),
+      act.effect('glow', 1280, 520, 1.4),
+    ])]),
     minigame(game),
-    ...(level === 3 ? seq('C3-L3-11-', 2, 3) : []),
     ...seq('C3-9-', 5, 8),
     goto('C3-10'),
   ],
 });
 
-export { all, cl, dir, goto, has, L, Ls, menu, minigame, mopt, not, reveal, seq, skill };
+export { act, all, cl, cutscene, dir, goto, has, L, Ls, menu, minigame, mopt, not, reveal, seq, skill };

@@ -1,5 +1,6 @@
-import { all, cl, dir, goto, has, L, Ls, menu, minigame, not, opt as mopt, reveal, seq, skill, when, type VariantSource } from '../../tools/content/dsl.ts';
-import { activityCard, and, baseDecisions, choice, commonCutscenes, eq, facts, factsScene, glossary, intended, introOffice, klubkiIntro, ne, rewardScene, versionScene, what, where, who } from './common.ts';
+import { all, cl, cutscene, dir, goto, has, L, Ls, menu, minigame, not, opt as mopt, reveal, seq, skill, when, type VariantSource } from '../../tools/content/dsl.ts';
+import { activityCard, and, baseDecisions, choice, dreamKeeperConfig, equalShareConfig, eq, facts, factsScene, glossary, intended, introOffice, klubkiIntro, legacyChoiceLabels, ne, rewardScene, versionScene, what, where, who } from './common.ts';
+import { cellarCutscene, officeCutscene, pantryCutscene, rewardCutscene, teaCutscene } from './cutscenes.ts';
 
 const HUB = 'C4-L2-HUB';
 const allClues = all(has.clue('c4-cellar'), has.clue('c4-tracks'), has.clue('c4-diary'), has.clue('c4-dreams'));
@@ -8,9 +9,9 @@ const rewards = ['rw-c4-badge', 'rw-c4-buttons-l2', 'rw-c4-sticker-l2', 'rw-c4-t
 export const level2: VariantSource = {
   pack: 'case04-l2', kind: 'case', title: 'C4-TITLE', case: { number: 4, level: 2 }, start: 'C4-0',
   scenes: [
-    { id: 'C4-0', title: 'Контора: мэр в отчаянии', location: 'office', cast: ['pudding', 'khvosts', 'watsony'], presentation: 'cutscene', steps: [...introOffice(), goto('C4-L2-1')] },
+    { id: 'C4-0', title: 'Контора: мэр в отчаянии', location: 'office', cast: ['pudding', 'khvosts', 'watsony'], presentation: 'cutscene', steps: [...introOffice(2), goto('C4-L2-1')] },
     { id: 'C4-L2-1', title: 'Завязка: четыре подозреваемых', location: 'mayor-cellar', cast: ['pudding', 'khvosts', 'watsony'], presentation: 'dialogue', steps: [
-      ...seq('C4-1-', 1, 6), ...seq('C4-L2-1-', 1, 3), skill('notebook', [dir('C4-L2-1-D01', 'Блокнот раскрывается: четыре строки в каждой колонке.'), L('C4-1-07')]), ...seq('C4-L2-1-', 4, 6), klubkiIntro(), goto(HUB),
+      cutscene('c4.cellar.l2'), skill('notebook', [dir('C4-L2-1-D01', 'Блокнот раскрывается: четыре строки в каждой колонке.', null, [{ op: 'sfx', asset: 'sfx.page-turn' }, { op: 'pose', actor: 'khvosts', clip: 'present' }]), L('C4-1-07')]), ...seq('C4-L2-1-', 4, 6), klubkiIntro(), goto(HUB),
     ] },
     { id: HUB, title: 'Погреб: выбор', location: 'mayor-cellar', cast: ['pudding', 'khvosts', 'watsony'], presentation: 'hub', steps: [
       when(all(allClues, not(has.visited('C4-L2-6'))), [goto('C4-L2-6')]),
@@ -33,12 +34,12 @@ export const level2: VariantSource = {
       skill('timeline', Ls('C4-L2-4-01', 'C4-L2-4-02'), [L('C4-L2-4-03')]), L('C4-L2-4-04'), minigame('c4l2-timeline'), ...seq('C4-L2-4-', 5, 8), reveal('c4-diary'), goto(HUB),
     ] },
     { id: 'C4-L2-5', title: '«Хранитель снов»', location: 'mayor-cellar', cast: ['pukhlik', 'khvosts', 'watsony'], presentation: 'minigame', steps: [
-      skill('dream-keeper', seq('C4-5-', 1, 4)), L('C4-L2-5-01'), minigame('c4l2-dreams'), ...seq('C4-5-', 9, 10), reveal('c4-dreams'), goto(HUB),
+      skill('dream-keeper', seq('C4-5-', 1, 4)), L('C4-L2-5-01'), minigame('c4l2-dreams'), reveal('c4-dreams'), goto(HUB),
     ] },
     versionScene('C4-L2-6', HUB),
-    { id: 'C4-L2-7', title: 'Кладовка Конторы', location: 'office-pantry', cast: ['pudding', 'mouse', 'pukhlik', 'khvosts', 'watsony'], presentation: 'cutscene', steps: [dir('C4-7-D01', 'Контора. Под лестницей маленькая дверка; внутри двенадцать банок с бантиками.'), ...seq('C4-7-', 1, 12), ...seq('C4-L2-7-', 1, 3), ...seq('C4-7-', 13, 17), goto('C4-L2-8')] },
+    { id: 'C4-L2-7', title: 'Кладовка Конторы', location: 'office-pantry', cast: ['pudding', 'mouse', 'pukhlik', 'khvosts', 'watsony'], presentation: 'cutscene', steps: [cutscene('c4.pantry.l2'), goto('C4-L2-8')] },
     { id: 'C4-L2-8', title: 'Большое чаепитие', location: 'town-square', cast: ['pudding', 'mouse', 'pukhlik', 'khvosts', 'watsony'], presentation: 'minigame', steps: [
-      skill('equal-share', Ls('C4-8-01', 'C4-8-02')), L('C4-L2-8-01'), minigame('c4l2-tea'), ...seq('C4-8-', 5, 7), goto('C4-9'),
+      skill('equal-share', []), minigame('c4l2-tea'), cutscene('c4.tea.l2'), goto('C4-9'),
     ] },
     factsScene('C4-10'), rewardScene(2),
   ],
@@ -110,15 +111,18 @@ export const level2: VariantSource = {
     { id: 'c4l2-timeline', skill: 'timeline', config: { kind: 'timeline', items: [
       { id: 'count', time: 'три недели назад', label: 'C4-L2-4-B02' }, { id: 'rule', time: 'три недели назад', label: 'C4-L2-4-B03' }, { id: 'cart', time: 'две недели назад, вечер', label: 'C4-L2-4-B04' }, { id: 'home', time: 'две недели назад, вечер', label: 'C4-L2-4-B05' },
     ], solution: ['count', 'rule', 'cart', 'home'], wrong: ['C4-L2-4-09'] } },
-    { id: 'c4l2-dreams', skill: 'dream-keeper', config: { kind: 'staged', mechanic: 'dream-keeper', description: 'Пухлик показывает по три мягкие карты-сна.', steps: [
-      { id: 'where', prompt: 'C4-5-N01', pageSize: 3, options: [choice('office', 'C4-5-B01', true, 'C4-5-05'), choice('mouse', 'C4-5-B02', false, 'C4-5-06'), choice('barrel', 'C4-5-B03', false, 'C4-5-06'), choice('attic', 'C4-L2-5-B01', false, 'C4-5-06')] },
-      { id: 'what', prompt: 'C4-5-N02', pageSize: 3, options: [choice('stock', 'C4-5-B04', true, 'C4-5-07'), choice('eaten', 'C4-5-B05', false, 'C4-5-06'), choice('broken', 'C4-5-B06', false, 'C4-5-06'), choice('shared', 'C4-L2-5-B02', false, 'C4-5-06')] },
-      { id: 'who', prompt: 'C4-5-N03', pageSize: 3, options: [choice('khvosts', 'C4-5-B07', true, 'C4-5-08'), choice('pudding', 'C4-5-B08', false, 'C4-5-06'), choice('mouse', 'C4-5-B09', false, 'C4-5-06'), choice('watsony', 'C4-L2-5-B03', false, 'C4-5-06')] },
-    ], lines: [] } },
-    { id: 'c4l2-tea', skill: 'equal-share', config: { kind: 'staged', mechanic: 'equal-share', description: 'Разделить банки и посчитать розетки.', steps: [
-      { id: 'tables', prompt: 'C4-8-02', pageSize: 3, options: [choice('four-tables', 'C4-8-B03', true, 'C4-8-04'), choice('three-tables', 'C4-8-B02', false, 'C4-8-03'), choice('wrong', 'C4-8-B01', false, 'C4-8-03')] },
-      { id: 'open', prompt: 'C4-L2-8-01', pageSize: 3, options: [choice('three-jars', 'C4-L2-8-B01', true, 'C4-8-04'), choice('four-jars', 'C4-8-B02', false, 'C4-8-03'), choice('one', 'C4-8-B01', false, 'C4-8-03')] },
-    ], lines: [] } },
+    { id: 'c4l2-dreams', skill: 'dream-keeper', config: dreamKeeperConfig(2, ['C4-5-N01', 'C4-5-N02', 'C4-5-N03']) },
+    { id: 'c4l2-tea', skill: 'equal-share', config: equalShareConfig(2) },
   ],
-  facts, glossary, rewards, collections: [], activities: [activityCard], comfort: [{ scene: '*', line: 'C4-L-01' }], cutscenes: [], plannedCutscenes: commonCutscenes.map((c) => c.scene === 'C4-1' ? { ...c, scene: 'C4-L2-1' } : c.scene === 'C4-7' ? { ...c, scene: 'C4-L2-7' } : c.scene === 'C4-8' ? { ...c, scene: 'C4-L2-8' } : c), decisions: [...baseDecisions, { id: 'C4L2-D1', text: 'На сложности 2 добавлен дневник: он исключает Ватсони и раннюю раздачу гостям.', ref: 'D03, R04' }], reserved: [{ lines: ['C4-F-01', 'C4-F-02', 'C4-F-03', 'C4-F-04', 'C4-F-05'], reason: 'семейный «Хранитель снов», Q34 handoff' }, { lines: ['C4-0-B01'], reason: 'названия новых механик и точки карты используются системами каталога' }],
+  facts, glossary, rewards, collections: [], activities: [activityCard], comfort: [{ scene: '*', line: 'C4-L-01' }], cutscenes: [
+    officeCutscene('c4.office.l2'),
+    cellarCutscene('c4.cellar.l2', 'C4-L2-1', [
+      { op: 'line', actor: 'pudding', line: 'C4-L2-1-01' },
+      { op: 'line', actor: 'watsony', line: 'C4-L2-1-02' },
+      { op: 'line', actor: 'watsony', line: 'C4-L2-1-03' },
+    ]),
+    pantryCutscene('c4.pantry.l2', 'C4-L2-7', 2),
+    teaCutscene('c4.tea.l2', 'C4-L2-8', 2),
+    rewardCutscene('c4.reward.l2', 2),
+  ], decisions: [...baseDecisions, { id: 'C4L2-D1', text: 'На сложности 2 добавлен дневник: он исключает Ватсони и раннюю раздачу гостям.', ref: 'D03, R04' }], reserved: [{ lines: ['C4-0-B01', ...legacyChoiceLabels], reason: 'названия новых механик и старые подписи выбора сохраняются для систем каталога' }],
 };

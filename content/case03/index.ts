@@ -17,6 +17,7 @@ export const case03: CaseSource = {
     { id: 'read-blink', title: 'SK-read-blink' },
   ],
   rewards: [
+    { id: 'rw-c3-secret-note', kind: 'decor', label: 'RW-c3-secret-note', amount: 1, claimKey: 'case03:secret-notes' },
     { id: 'rw-c3-badge', kind: 'badge', label: 'RW-c3-badge', amount: 1, claimKey: 'case03:badge' },
     { id: 'rw-c3-buttons-l1', kind: 'buttons', label: 'RW-buttons-10', amount: 10, claimKey: 'case03:l1:buttons' },
     { id: 'rw-c3-buttons-l2', kind: 'buttons', label: 'RW-buttons-15', amount: 15, claimKey: 'case03:l2:buttons' },

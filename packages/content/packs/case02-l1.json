@@ -302,24 +302,6 @@
    "delivery": "cheerful"
   },
   {
-   "id": "C2-3-05",
-   "rev": 1,
-   "kind": "dialogue",
-   "speaker": "khvosts",
-   "text": "Гнездо! Письма отнесли в гнездо!",
-   "voiced": true,
-   "delivery": "cheerful"
-  },
-  {
-   "id": "C2-3-06",
-   "rev": 1,
-   "kind": "dialogue",
-   "speaker": "khvosts",
-   "text": "Дождь! Кто-то спешил до дождя.",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
    "id": "C2-3-07",
    "rev": 1,
    "kind": "dialogue",
@@ -1148,20 +1130,20 @@
    "delivery": "neutral"
   },
   {
-   "id": "C2-3-B01",
+   "id": "C2-3-05",
    "rev": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "text": "ГНЕЗДО",
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Гнездо! Письма отнесли в гнездо!",
    "voiced": true,
-   "delivery": "neutral"
+   "delivery": "cheerful"
   },
   {
-   "id": "C2-3-B02",
+   "id": "C2-3-06",
    "rev": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "text": "ДОЖДЬ",
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Дождь! Кто-то спешил до дождя.",
    "voiced": true,
    "delivery": "neutral"
   },
@@ -1175,11 +1157,92 @@
    "delivery": "neutral"
   },
   {
-   "id": "C2-L2-4-B01",
+   "id": "C2-3-G01",
    "rev": 1,
    "kind": "label",
    "speaker": "narrator",
-   "text": "ДУБ",
+   "text": "Г: медовый круг, одна дырочка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-3-G02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Н: синяя квадратная, две дырочки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-3-G03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Е: розовый цветок, три дырочки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-3-G04",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "З: зелёное сердечко, четыре дырочки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-3-G05",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Д: медовый круг, две дырочки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-3-G06",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "О: синяя квадратная, три дырочки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-3-G07",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Ж: розовый цветок, четыре дырочки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-3-G08",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Ь: зелёное сердечко, одна дырочка",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-3-G09",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "У: медовый круг, три дырочки",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-3-G10",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Б: синяя квадратная, четыре дырочки",
    "voiced": true,
    "delivery": "neutral"
   },
@@ -1310,11 +1373,11 @@
    "delivery": "neutral"
   },
   {
-   "id": "C2-8-B01",
+   "id": "C2-8-04",
    "rev": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "text": "Домик 1",
+   "kind": "dialogue",
+   "speaker": "stella",
+   "text": "Доставлено! Ты настоящий почтальон.",
    "voiced": true,
    "delivery": "neutral"
   },
@@ -1328,6 +1391,42 @@
    "delivery": "neutral"
   },
   {
+   "id": "C2-8-L01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Письмо к Тёпе",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-8-L02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Письмо к Картофану",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-8-L03",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Письмо в пекарню",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-8-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Домик 1",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
    "id": "C2-8-B02",
    "rev": 1,
    "kind": "label",
@@ -1337,20 +1436,29 @@
    "delivery": "neutral"
   },
   {
-   "id": "C2-8-04",
-   "rev": 1,
-   "kind": "dialogue",
-   "speaker": "stella",
-   "text": "Доставлено! Ты настоящий почтальон.",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
    "id": "C2-8-B03",
    "rev": 1,
    "kind": "label",
    "speaker": "narrator",
    "text": "Домик 4",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-L2-8-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Домик 5",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C2-L2-8-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Домик 6",
    "voiced": true,
    "delivery": "neutral"
   },
@@ -1523,25 +1631,8 @@
    "presentation": "cutscene",
    "steps": [
     {
-     "t": "dir",
-     "id": "C2-0-D01",
-     "text": "Контора. Почтовый жук не прилетел. В дверь стучит мэр Пудинг."
-    },
-    {
-     "t": "line",
-     "line": "C2-0-01"
-    },
-    {
-     "t": "line",
-     "line": "C2-0-02"
-    },
-    {
-     "t": "line",
-     "line": "C2-0-03"
-    },
-    {
-     "t": "line",
-     "line": "C2-0-04"
+     "t": "cutscene",
+     "cutscene": "c2.office.l1"
     },
     {
      "t": "skill",
@@ -1550,7 +1641,18 @@
       {
        "t": "dir",
        "id": "C2-0-D02",
-       "text": "На карте Пушистино активна точка «Почта»."
+       "text": "На карте Пушистино активна точка «Почта».",
+       "actions": [
+        {
+         "op": "effect",
+         "effect": "glow",
+         "at": {
+          "x": 1280,
+          "y": 760
+         },
+         "duration": 1.2
+        }
+       ]
       },
       {
        "t": "line",
@@ -1561,7 +1663,18 @@
       {
        "t": "dir",
        "id": "C2-0-D02",
-       "text": "На карте Пушистино активна точка «Почта»."
+       "text": "На карте Пушистино активна точка «Почта».",
+       "actions": [
+        {
+         "op": "effect",
+         "effect": "glow",
+         "at": {
+          "x": 1280,
+          "y": 760
+         },
+         "duration": 1.2
+        }
+       ]
       },
       {
        "t": "line",
@@ -1589,7 +1702,23 @@
     {
      "t": "dir",
      "id": "C2-1-D01",
-     "text": "Крыльцо почты на Пироговой улице. Вокруг листья и ветки."
+     "text": "Крыльцо почты на Пироговой улице. Вокруг листья и ветки.",
+     "actions": [
+      {
+       "op": "pose",
+       "actor": "pudding",
+       "expression": "worried"
+      },
+      {
+       "op": "effect",
+       "effect": "fireflies",
+       "at": {
+        "x": 1900,
+        "y": 850
+       },
+       "duration": 1.2
+      }
+     ]
     },
     {
      "t": "line",
@@ -1614,7 +1743,28 @@
     {
      "t": "dir",
      "id": "C2-1-D02",
-     "text": "Хвостс пускает пузыри."
+     "text": "Хвостс пускает пузыри.",
+     "actions": [
+      {
+       "op": "pose",
+       "actor": "khvosts",
+       "clip": "nod"
+      },
+      {
+       "op": "sfx",
+       "asset": "sfx.bubbles",
+       "gain": 0.4
+      },
+      {
+       "op": "effect",
+       "effect": "bubbles",
+       "at": {
+        "x": 1180,
+        "y": 650
+       },
+       "duration": 1.5
+      }
+     ]
     },
     {
      "t": "line",
@@ -1639,7 +1789,19 @@
       {
        "t": "dir",
        "id": "C2-1-D03",
-       "text": "Блокнот раскрывается на три колонки дела."
+       "text": "Блокнот раскрывается на три колонки дела.",
+       "actions": [
+        {
+         "op": "sfx",
+         "asset": "sfx.page-turn",
+         "gain": 0.5
+        },
+        {
+         "op": "emote",
+         "actor": "player",
+         "emote": "nod"
+        }
+       ]
       },
       {
        "t": "line",
@@ -1650,7 +1812,19 @@
       {
        "t": "dir",
        "id": "C2-1-D03",
-       "text": "Блокнот раскрывается на три колонки дела."
+       "text": "Блокнот раскрывается на три колонки дела.",
+       "actions": [
+        {
+         "op": "sfx",
+         "asset": "sfx.page-turn",
+         "gain": 0.5
+        },
+        {
+         "op": "emote",
+         "actor": "player",
+         "emote": "nod"
+        }
+       ]
       },
       {
        "t": "line",
@@ -1883,14 +2057,6 @@
     },
     {
      "t": "line",
-     "line": "C2-3-05"
-    },
-    {
-     "t": "line",
-     "line": "C2-3-06"
-    },
-    {
-     "t": "line",
      "line": "C2-3-07"
     },
     {
@@ -2099,81 +2265,8 @@
    "presentation": "cutscene",
    "steps": [
     {
-     "t": "dir",
-     "id": "C2-7-D01",
-     "text": "Парк Старого Дуба. Высоко видно гнездо Стеллы с крышей из веточек."
-    },
-    {
-     "t": "line",
-     "line": "C2-7-01"
-    },
-    {
-     "t": "line",
-     "line": "C2-7-02"
-    },
-    {
-     "t": "line",
-     "line": "C2-7-03"
-    },
-    {
-     "t": "line",
-     "line": "C2-7-04"
-    },
-    {
-     "t": "line",
-     "line": "C2-7-05"
-    },
-    {
-     "t": "line",
-     "line": "C2-7-06"
-    },
-    {
-     "t": "line",
-     "line": "C2-7-07"
-    },
-    {
-     "t": "line",
-     "line": "C2-7-08"
-    },
-    {
-     "t": "line",
-     "line": "C2-7-09"
-    },
-    {
-     "t": "line",
-     "line": "C2-7-10"
-    },
-    {
-     "t": "line",
-     "line": "C2-7-11"
-    },
-    {
-     "t": "line",
-     "line": "C2-7-12"
-    },
-    {
-     "t": "line",
-     "line": "C2-7-13"
-    },
-    {
-     "t": "line",
-     "line": "C2-7-14"
-    },
-    {
-     "t": "line",
-     "line": "C2-7-15"
-    },
-    {
-     "t": "line",
-     "line": "C2-7-16"
-    },
-    {
-     "t": "line",
-     "line": "C2-7-17"
-    },
-    {
-     "t": "line",
-     "line": "C2-7-18"
+     "t": "cutscene",
+     "cutscene": "c2.oak.l1"
     },
     {
      "t": "goto",
@@ -2222,20 +2315,8 @@
      "minigame": "c2l1-postal"
     },
     {
-     "t": "line",
-     "line": "C2-8-05"
-    },
-    {
-     "t": "line",
-     "line": "C2-8-06"
-    },
-    {
-     "t": "line",
-     "line": "C2-8-07"
-    },
-    {
-     "t": "line",
-     "line": "C2-8-08"
+     "t": "cutscene",
+     "cutscene": "c2.exhibition.l1"
     },
     {
      "t": "goto",
@@ -2259,14 +2340,46 @@
       {
        "t": "dir",
        "id": "C2-9-D01",
-       "text": "Карточки фактов складываются в Энциклопедию."
+       "text": "Карточки фактов складываются в Энциклопедию.",
+       "actions": [
+        {
+         "op": "sfx",
+         "asset": "sfx.page-turn",
+         "gain": 0.5
+        },
+        {
+         "op": "effect",
+         "effect": "sparkles",
+         "at": {
+          "x": 1280,
+          "y": 760
+         },
+         "duration": 1.2
+        }
+       ]
       }
      ],
      "known": [
       {
        "t": "dir",
        "id": "C2-9-D01",
-       "text": "Карточки фактов складываются в Энциклопедию."
+       "text": "Карточки фактов складываются в Энциклопедию.",
+       "actions": [
+        {
+         "op": "sfx",
+         "asset": "sfx.page-turn",
+         "gain": 0.5
+        },
+        {
+         "op": "effect",
+         "effect": "sparkles",
+         "at": {
+          "x": 1280,
+          "y": 760
+         },
+         "duration": 1.2
+        }
+       ]
       }
      ]
     },
@@ -2303,20 +2416,8 @@
    "presentation": "cutscene",
    "steps": [
     {
-     "t": "line",
-     "line": "C2-10-01"
-    },
-    {
-     "t": "line",
-     "line": "C2-10-02"
-    },
-    {
-     "t": "line",
-     "line": "C2-10-03"
-    },
-    {
-     "t": "line",
-     "line": "C2-10-04"
+     "t": "cutscene",
+     "cutscene": "c2.reward.l1"
     },
     {
      "t": "reward",
@@ -2345,7 +2446,18 @@
     {
      "t": "dir",
      "id": "C2-10-D01",
-     "text": "Новые слова в словарике: алиби, мотив. Плакат шифра появляется в Конторе."
+     "text": "Новые слова в словарике: алиби, мотив. Плакат шифра появляется в Конторе.",
+     "actions": [
+      {
+       "op": "effect",
+       "effect": "sparkles",
+       "at": {
+        "x": 1280,
+        "y": 620
+       },
+       "duration": 1.2
+      }
+     ]
     },
     {
      "t": "skill",
@@ -3043,74 +3155,201 @@
    "id": "c2l1-cipher",
    "skill": "button-cipher",
    "config": {
-    "kind": "staged",
-    "mechanic": "button-cipher",
-    "description": "Сопоставить пуговицы с буквами.",
-    "steps": [
+    "kind": "cipher",
+    "table": [
      {
-      "id": "word1",
-      "prompt": null,
-      "pageSize": 3,
-      "options": [
+      "id": "g",
+      "letter": "Г",
+      "colour": "honey",
+      "holes": 1,
+      "shape": "circle",
+      "label": "C2-3-G01"
+     },
+     {
+      "id": "n",
+      "letter": "Н",
+      "colour": "blue",
+      "holes": 2,
+      "shape": "square",
+      "label": "C2-3-G02"
+     },
+     {
+      "id": "e",
+      "letter": "Е",
+      "colour": "rose",
+      "holes": 3,
+      "shape": "flower",
+      "label": "C2-3-G03"
+     },
+     {
+      "id": "z",
+      "letter": "З",
+      "colour": "green",
+      "holes": 4,
+      "shape": "heart",
+      "label": "C2-3-G04"
+     },
+     {
+      "id": "d",
+      "letter": "Д",
+      "colour": "honey",
+      "holes": 2,
+      "shape": "circle",
+      "label": "C2-3-G05"
+     },
+     {
+      "id": "o",
+      "letter": "О",
+      "colour": "blue",
+      "holes": 3,
+      "shape": "square",
+      "label": "C2-3-G06"
+     },
+     {
+      "id": "j",
+      "letter": "Ж",
+      "colour": "rose",
+      "holes": 4,
+      "shape": "flower",
+      "label": "C2-3-G07"
+     },
+     {
+      "id": "soft",
+      "letter": "Ь",
+      "colour": "green",
+      "holes": 1,
+      "shape": "heart",
+      "label": "C2-3-G08"
+     },
+     {
+      "id": "u",
+      "letter": "У",
+      "colour": "honey",
+      "holes": 3,
+      "shape": "circle",
+      "label": "C2-3-G09"
+     },
+     {
+      "id": "b",
+      "letter": "Б",
+      "colour": "blue",
+      "holes": 4,
+      "shape": "square",
+      "label": "C2-3-G10"
+     }
+    ],
+    "intro": [],
+    "wrong": [
+     "C2-3-04"
+    ],
+    "words": [
+     {
+      "id": "nest",
+      "answer": "ГНЕЗДО",
+      "slots": [
        {
-        "id": "nest",
-        "label": "C2-3-B01",
-        "correct": true,
-        "reply": [
-         "C2-3-05"
+        "glyph": "g",
+        "options": [
+         "g",
+         "n",
+         "b"
         ]
        },
        {
-        "id": "rain",
-        "label": "C2-3-B02",
-        "correct": false,
-        "reply": [
-         "C2-3-04"
+        "glyph": "n",
+        "options": [
+         "n",
+         "d",
+         "soft"
         ]
        },
        {
-        "id": "oak",
-        "label": "C2-L2-4-B01",
-        "correct": false,
-        "reply": [
-         "C2-3-04"
+        "glyph": "e",
+        "options": [
+         "e",
+         "u",
+         "o"
+        ]
+       },
+       {
+        "glyph": "z",
+        "options": [
+         "z",
+         "j",
+         "b"
+        ]
+       },
+       {
+        "glyph": "d",
+        "options": [
+         "d",
+         "n",
+         "g"
+        ]
+       },
+       {
+        "glyph": "o",
+        "options": [
+         "o",
+         "e",
+         "u"
         ]
        }
+      ],
+      "solved": [
+       "C2-3-05"
       ]
      },
      {
-      "id": "word2",
-      "prompt": null,
-      "pageSize": 3,
-      "options": [
+      "id": "rain",
+      "answer": "ДОЖДЬ",
+      "slots": [
        {
-        "id": "rain",
-        "label": "C2-3-B02",
-        "correct": true,
-        "reply": [
-         "C2-3-06"
+        "glyph": "d",
+        "options": [
+         "d",
+         "n",
+         "g"
         ]
        },
        {
-        "id": "nest",
-        "label": "C2-3-B01",
-        "correct": false,
-        "reply": [
-         "C2-3-04"
+        "glyph": "o",
+        "options": [
+         "o",
+         "e",
+         "u"
         ]
        },
        {
-        "id": "oak",
-        "label": "C2-L2-4-B01",
-        "correct": false,
-        "reply": [
-         "C2-3-04"
+        "glyph": "j",
+        "options": [
+         "j",
+         "z",
+         "b"
+        ]
+       },
+       {
+        "glyph": "d",
+        "options": [
+         "d",
+         "n",
+         "g"
+        ]
+       },
+       {
+        "glyph": "soft",
+        "options": [
+         "soft",
+         "g",
+         "z"
         ]
        }
+      ],
+      "solved": [
+       "C2-3-06"
       ]
      }
-    ],
-    "lines": []
+    ]
    }
   },
   {
@@ -3190,74 +3429,87 @@
    "id": "c2l1-postal",
    "skill": "postal",
    "config": {
-    "kind": "staged",
-    "mechanic": "postal",
-    "description": "Посчитать дырочки и выбрать домик.",
-    "steps": [
+    "kind": "postman",
+    "cipher": "c2l1-cipher",
+    "streets": null,
+    "streetByShape": null,
+    "intro": [],
+    "wrongStreet": [],
+    "wrongHouse": [
+     "C2-8-03"
+    ],
+    "correct": [
+     "C2-8-04"
+    ],
+    "houseLabels": [
      {
-      "id": "p2",
-      "prompt": null,
-      "pageSize": 3,
-      "options": [
-       {
-        "id": "h1",
-        "label": "C2-8-B01",
-        "correct": false,
-        "reply": [
-         "C2-8-03"
-        ]
-       },
-       {
-        "id": "h2",
-        "label": "C2-8-B02",
-        "correct": true,
-        "reply": [
-         "C2-8-04"
-        ]
-       },
-       {
-        "id": "h4",
-        "label": "C2-8-B03",
-        "correct": false,
-        "reply": [
-         "C2-8-03"
-        ]
-       }
+      "number": 1,
+      "label": "C2-8-B01"
+     },
+     {
+      "number": 2,
+      "label": "C2-8-B02"
+     },
+     {
+      "number": 4,
+      "label": "C2-8-B03"
+     },
+     {
+      "number": 5,
+      "label": "C2-L2-8-B01"
+     },
+     {
+      "number": 6,
+      "label": "C2-L2-8-B02"
+     }
+    ],
+    "letters": [
+     {
+      "id": "to-tyopa",
+      "label": "C2-8-L01",
+      "buttons": [
+       "d"
+      ],
+      "street": null,
+      "streetOptions": null,
+      "house": 2,
+      "houseOptions": [
+       1,
+       2,
+       4
       ]
      },
      {
-      "id": "p4",
-      "prompt": null,
-      "pageSize": 3,
-      "options": [
-       {
-        "id": "h1",
-        "label": "C2-8-B01",
-        "correct": false,
-        "reply": [
-         "C2-8-03"
-        ]
-       },
-       {
-        "id": "h2",
-        "label": "C2-8-B02",
-        "correct": false,
-        "reply": [
-         "C2-8-03"
-        ]
-       },
-       {
-        "id": "h4",
-        "label": "C2-8-B03",
-        "correct": true,
-        "reply": [
-         "C2-8-04"
-        ]
-       }
+      "id": "to-kartofan",
+      "label": "C2-8-L02",
+      "buttons": [
+       "z"
+      ],
+      "street": null,
+      "streetOptions": null,
+      "house": 4,
+      "houseOptions": [
+       1,
+       2,
+       4
+      ]
+     },
+     {
+      "id": "to-bakery",
+      "label": "C2-8-L03",
+      "buttons": [
+       "g"
+      ],
+      "street": null,
+      "streetOptions": null,
+      "house": 1,
+      "houseOptions": [
+       1,
+       2,
+       4
       ]
      }
-    ],
-    "lines": []
+    ]
    }
   }
  ],
@@ -3381,31 +3633,922 @@
   }
  ],
  "comfort": [],
- "cutscenes": [],
- "plannedCutscenes": [
+ "cutscenes": [
   {
-   "id": "cs-c2-office",
+   "id": "c2.office.l1",
    "scene": "C2-0",
-   "summary": "Почтовый жук не прилетает; мэр сообщает о пропаже писем."
+   "summary": "В Конторе не прилетает почтовый жук; Пудинг вбегает и сообщает о пропаже писем.",
+   "document": {
+    "format": "aegis-cutscene/1",
+    "id": "c2.office.l1",
+    "revision": "1",
+    "advance": "input",
+    "cast": {
+     "khvosts": {
+      "rig": "khvosts"
+     },
+     "watsony": {
+      "rig": "watsony"
+     },
+     "pudding": {
+      "rig": "pudding"
+     },
+     "player": {
+      "role": "avatar"
+     },
+     "beetle": {
+      "rig": "prop.postal-beetle"
+     },
+     "letter": {
+      "rig": "prop.letter"
+     }
+    },
+    "steps": [
+     {
+      "op": "background",
+      "asset": "bg.office",
+      "transition": {
+       "type": "cut"
+      }
+     },
+     {
+      "op": "music",
+      "asset": "music.title-office",
+      "fade": 1,
+      "comfort": {
+       "asset": "music.title-office-warm"
+      }
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "cut": true
+     },
+     {
+      "op": "enter",
+      "actor": "watsony",
+      "from": "left",
+      "to": {
+       "x": 560,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "player",
+      "from": "left",
+      "to": {
+       "x": 900,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "khvosts",
+      "from": "right",
+      "to": {
+       "x": 1450,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "join"
+     },
+     {
+      "op": "marker",
+      "id": "office.waiting"
+     },
+     {
+      "op": "pose",
+      "actor": "khvosts",
+      "expression": "worried"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C2-0-01"
+     },
+     {
+      "op": "pose",
+      "actor": "watsony",
+      "expression": "worried"
+     },
+     {
+      "op": "line",
+      "actor": "watsony",
+      "line": "C2-0-02"
+     },
+     {
+      "op": "marker",
+      "id": "office.mayor"
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.letter-chime",
+      "gain": 0.5
+     },
+     {
+      "op": "enter",
+      "actor": "pudding",
+      "from": "right",
+      "to": {
+       "x": 1900,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "join"
+     },
+     {
+      "op": "pose",
+      "actor": "pudding",
+      "face": "left"
+     },
+     {
+      "op": "pose",
+      "actor": "pudding",
+      "expression": "worried"
+     },
+     {
+      "op": "line",
+      "actor": "pudding",
+      "line": "C2-0-03"
+     },
+     {
+      "op": "pose",
+      "actor": "khvosts",
+      "expression": "happy"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C2-0-04"
+     },
+     {
+      "op": "emote",
+      "actor": "player",
+      "emote": "nod"
+     },
+     {
+      "op": "marker",
+      "id": "office.end"
+     }
+    ]
+   }
   },
   {
-   "id": "cs-c2-oak",
+   "id": "c2.oak.l1",
    "scene": "C2-7",
-   "summary": "Стелла показывает сухие письма в гнезде и объясняет, что спасла их от дождя."
+   "summary": "Стелла достаёт сухие письма из гнезда, объясняет поступок, и команда разбирает ложные следы.",
+   "document": {
+    "format": "aegis-cutscene/1",
+    "id": "c2.oak.l1",
+    "revision": "1",
+    "advance": "input",
+    "cast": {
+     "stella": {
+      "rig": "stella"
+     },
+     "pudding": {
+      "rig": "pudding"
+     },
+     "mouse": {
+      "rig": "mouse"
+     },
+     "khvosts": {
+      "rig": "khvosts"
+     },
+     "watsony": {
+      "rig": "watsony"
+     },
+     "player": {
+      "role": "avatar"
+     },
+     "letters": {
+      "rig": "prop.c2-dry-letters"
+     },
+     "nest": {
+      "rig": "prop.c2-magpie-nest"
+     }
+    },
+    "steps": [
+     {
+      "op": "background",
+      "asset": "bg.old-oak",
+      "transition": {
+       "type": "cut"
+      }
+     },
+     {
+      "op": "music",
+      "asset": "music.heartfelt",
+      "fade": 1,
+      "comfort": {
+       "asset": "music.heartfelt-warm"
+      }
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "cut": true
+     },
+     {
+      "op": "enter",
+      "actor": "nest",
+      "from": {
+       "x": 1540,
+       "y": 620
+      },
+      "to": {
+       "x": 1540,
+       "y": 620
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "nest",
+      "clip": "present"
+     },
+     {
+      "op": "enter",
+      "actor": "khvosts",
+      "from": "left",
+      "to": {
+       "x": 520,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "watsony",
+      "from": "left",
+      "to": {
+       "x": 760,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "player",
+      "from": "left",
+      "to": {
+       "x": 1000,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "pudding",
+      "from": "right",
+      "to": {
+       "x": 1810,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "stella",
+      "from": "right",
+      "to": {
+       "x": 1510,
+       "y": 950
+      },
+      "duration": 1.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "stella",
+      "clip": "hover",
+      "wait": false
+     },
+     {
+      "op": "join"
+     },
+     {
+      "op": "marker",
+      "id": "oak.arrive"
+     },
+     {
+      "op": "pose",
+      "actor": "stella",
+      "expression": "worried"
+     },
+     {
+      "op": "line",
+      "actor": "stella",
+      "line": "C2-7-01"
+     },
+     {
+      "op": "pose",
+      "actor": "khvosts",
+      "expression": "happy"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C2-7-02"
+     },
+     {
+      "op": "camera",
+      "preset": "close-right",
+      "duration": 1,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "line",
+      "actor": "stella",
+      "line": "C2-7-03"
+     },
+     {
+      "op": "line",
+      "actor": "stella",
+      "line": "C2-7-04"
+     },
+     {
+      "op": "line",
+      "actor": "stella",
+      "line": "C2-7-05"
+     },
+     {
+      "op": "line",
+      "actor": "stella",
+      "line": "C2-7-06"
+     },
+     {
+      "op": "line",
+      "actor": "stella",
+      "line": "C2-7-07"
+     },
+     {
+      "op": "marker",
+      "id": "oak.letters"
+     },
+     {
+      "op": "enter",
+      "actor": "letters",
+      "from": {
+       "x": 1420,
+       "y": 980
+      },
+      "to": {
+       "x": 1420,
+       "y": 980
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "letters",
+      "clip": "present"
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.page-turn",
+      "gain": 0.5
+     },
+     {
+      "op": "effect",
+      "effect": "sparkles",
+      "at": {
+       "x": 1420,
+       "y": 980
+      },
+      "duration": 1.5,
+      "wait": false
+     },
+     {
+      "op": "pose",
+      "actor": "pudding",
+      "expression": "surprised"
+     },
+     {
+      "op": "line",
+      "actor": "pudding",
+      "line": "C2-7-08"
+     },
+     {
+      "op": "pose",
+      "actor": "pudding",
+      "expression": "worried"
+     },
+     {
+      "op": "line",
+      "actor": "pudding",
+      "line": "C2-7-09"
+     },
+     {
+      "op": "line",
+      "actor": "pudding",
+      "line": "C2-7-10"
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "duration": 1,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "marker",
+      "id": "oak.herrings"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C2-7-11"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C2-7-12"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C2-7-13"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C2-7-14"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C2-7-15"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C2-7-16"
+     },
+     {
+      "op": "pose",
+      "actor": "stella",
+      "expression": "happy"
+     },
+     {
+      "op": "line",
+      "actor": "stella",
+      "line": "C2-7-17"
+     },
+     {
+      "op": "pose",
+      "actor": "khvosts",
+      "expression": "happy"
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.success",
+      "gain": 0.8
+     },
+     {
+      "op": "effect",
+      "effect": "confetti",
+      "at": {
+       "x": 1280,
+       "y": 720
+      },
+      "duration": 2,
+      "wait": false
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C2-7-18"
+     },
+     {
+      "op": "emote",
+      "actor": "player",
+      "emote": "joy"
+     },
+     {
+      "op": "marker",
+      "id": "oak.end"
+     }
+    ]
+   }
   },
   {
-   "id": "cs-c2-exhibition",
+   "id": "c2.exhibition.l1",
    "scene": "C2-8",
-   "summary": "Жители развешивают приглашения на Выставке писем."
+   "summary": "Жители развешивают спасённые приглашения на верёвочке с флажками мышат.",
+   "document": {
+    "format": "aegis-cutscene/1",
+    "id": "c2.exhibition.l1",
+    "revision": "1",
+    "advance": "input",
+    "cast": {
+     "stella": {
+      "rig": "stella"
+     },
+     "pudding": {
+      "rig": "pudding"
+     },
+     "tyopa": {
+      "rig": "tyopa"
+     },
+     "player": {
+      "role": "avatar"
+     },
+     "garland": {
+      "rig": "prop.c2-letter-garland"
+     }
+    },
+    "steps": [
+     {
+      "op": "background",
+      "asset": "bg.town-square",
+      "transition": {
+       "type": "cut"
+      }
+     },
+     {
+      "op": "music",
+      "asset": "music.celebration-baking",
+      "fade": 1,
+      "comfort": {
+       "asset": "music.celebration-baking-warm"
+      }
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "cut": true
+     },
+     {
+      "op": "enter",
+      "actor": "player",
+      "from": "left",
+      "to": {
+       "x": 620,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "tyopa",
+      "from": "left",
+      "to": {
+       "x": 930,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "stella",
+      "from": "right",
+      "to": {
+       "x": 1430,
+       "y": 950
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "pudding",
+      "from": "right",
+      "to": {
+       "x": 1840,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "join"
+     },
+     {
+      "op": "pose",
+      "actor": "stella",
+      "clip": "hover",
+      "wait": false
+     },
+     {
+      "op": "marker",
+      "id": "exhibition.garland"
+     },
+     {
+      "op": "enter",
+      "actor": "garland",
+      "from": {
+       "x": 1280,
+       "y": 640
+      },
+      "to": {
+       "x": 1280,
+       "y": 640
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "garland",
+      "clip": "present"
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.reward",
+      "gain": 0.8
+     },
+     {
+      "op": "effect",
+      "effect": "sparkles",
+      "at": {
+       "x": 1280,
+       "y": 640
+      },
+      "duration": 1.5,
+      "wait": false
+     },
+     {
+      "op": "line",
+      "actor": "pudding",
+      "line": "C2-8-05"
+     },
+     {
+      "op": "pose",
+      "actor": "stella",
+      "expression": "happy"
+     },
+     {
+      "op": "line",
+      "actor": "stella",
+      "line": "C2-8-06"
+     },
+     {
+      "op": "pose",
+      "actor": "tyopa",
+      "expression": "happy"
+     },
+     {
+      "op": "line",
+      "actor": "tyopa",
+      "line": "C2-8-07"
+     },
+     {
+      "op": "line",
+      "actor": "pudding",
+      "line": "C2-8-08"
+     },
+     {
+      "op": "emote",
+      "actor": "player",
+      "emote": "joy"
+     },
+     {
+      "op": "marker",
+      "id": "exhibition.end"
+     }
+    ]
+   }
   },
   {
-   "id": "cs-c2-reward",
+   "id": "c2.reward.l1",
    "scene": "C2-10",
-   "summary": "Хвостс вручает значок, звание и плакат шифра."
+   "summary": "Хвостс вручает значок, звание, стикер и плакат почтового шифра.",
+   "document": {
+    "format": "aegis-cutscene/1",
+    "id": "c2.reward.l1",
+    "revision": "1",
+    "advance": "input",
+    "cast": {
+     "khvosts": {
+      "rig": "khvosts"
+     },
+     "watsony": {
+      "rig": "watsony"
+     },
+     "player": {
+      "role": "avatar"
+     },
+     "badge": {
+      "rig": "prop.badge-letters-saved"
+     },
+     "sticker": {
+      "rig": "prop.sticker-letters-1"
+     },
+     "poster": {
+      "rig": "prop.c2-cipher-poster"
+     }
+    },
+    "steps": [
+     {
+      "op": "background",
+      "asset": "bg.office",
+      "transition": {
+       "type": "cut"
+      }
+     },
+     {
+      "op": "music",
+      "asset": "music.celebration-baking",
+      "fade": 1,
+      "comfort": {
+       "asset": "music.celebration-baking-warm"
+      }
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "cut": true
+     },
+     {
+      "op": "enter",
+      "actor": "watsony",
+      "from": "left",
+      "to": {
+       "x": 560,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "player",
+      "from": "left",
+      "to": {
+       "x": 900,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "khvosts",
+      "from": "right",
+      "to": {
+       "x": 1520,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "join"
+     },
+     {
+      "op": "marker",
+      "id": "reward.badge"
+     },
+     {
+      "op": "pose",
+      "actor": "khvosts",
+      "expression": "happy"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C2-10-01"
+     },
+     {
+      "op": "camera",
+      "preset": "close-center",
+      "duration": 1,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "enter",
+      "actor": "badge",
+      "from": {
+       "x": 1180,
+       "y": 880
+      },
+      "to": {
+       "x": 1180,
+       "y": 880
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "badge",
+      "clip": "present"
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.reward",
+      "gain": 0.8
+     },
+     {
+      "op": "effect",
+      "effect": "sparkles",
+      "at": {
+       "x": 1180,
+       "y": 880
+      },
+      "duration": 1.5,
+      "wait": false
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C2-10-02"
+     },
+     {
+      "op": "enter",
+      "actor": "sticker",
+      "from": {
+       "x": 1380,
+       "y": 880
+      },
+      "to": {
+       "x": 1380,
+       "y": 880
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "sticker",
+      "clip": "present"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C2-10-03"
+     },
+     {
+      "op": "marker",
+      "id": "reward.poster"
+     },
+     {
+      "op": "enter",
+      "actor": "poster",
+      "from": {
+       "x": 1280,
+       "y": 620
+      },
+      "to": {
+       "x": 1280,
+       "y": 620
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "poster",
+      "clip": "present"
+     },
+     {
+      "op": "line",
+      "actor": "watsony",
+      "line": "C2-10-04"
+     },
+     {
+      "op": "emote",
+      "actor": "player",
+      "emote": "joy"
+     },
+     {
+      "op": "marker",
+      "id": "reward.end"
+     }
+    ]
+   }
   }
  ],
- "notebookPages": [],
+ "plannedCutscenes": [],
+ "notebookPages": [
+  {
+   "id": "case02-c2l1-cipher-poster",
+   "kind": "cipher-poster",
+   "title": "UI-notebook.cipherPoster",
+   "unlock": "rw-c2-decor-poster",
+   "cipher": "c2l1-cipher"
+  }
+ ],
  "cozy": null,
  "reserved": [],
- "revision": "d517c9404043d507a227f1bc01e41b8802e55c3b3646af9af842a7e4631299f7"
+ "revision": "96619d3e2933ecdc3d08602fea559f0eec5b69ae0396c30e9ba0517c6b50b7aa"
 }

@@ -1,5 +1,7 @@
-import { all, cl, goto, has, L, Ls, menu, minigame, not, opt as mopt, reveal, reward, seq, skill, when, type VariantSource } from '../../tools/content/dsl.ts';
-import { activityCard, and, baseDecisions, choice, commonCutscenes, eq, facts, factsScene, glossary, intended, intro0, intro1base, klubkiIntro, ne, notebookIntro, resolutionSteps, rewardScene, versionScene, what, where, who } from './common.ts';
+import { all, cl, cutscene, goto, has, L, Ls, menu, minigame, not, opt as mopt, reveal, reward, seq, skill, when, type VariantSource } from '../../tools/content/dsl.ts';
+import { activityCard, and, baseDecisions, choice, cipherPosterPage, eq, facts, factsScene, glossary, intended, intro1base, klubkiIntro, mapIntro, ne, notebookIntro, rewardScene, versionScene, what, where, who } from './common.ts';
+import { exhibition, oak, office, rewardCutscene } from './cutscenes.ts';
+import { cipherL2, postmanL2 } from './mechanics.ts';
 
 const HUB = 'C2-L2-HUB';
 const allClues = all(has.clue('c2-l2-lupa'), has.clue('c2-l2-cipher'), has.clue('c2-l2-cocoa'), has.clue('c2-l2-timeline'));
@@ -7,7 +9,7 @@ const allClues = all(has.clue('c2-l2-lupa'), has.clue('c2-l2-cipher'), has.clue(
 export const level2: VariantSource = {
   pack: 'case02-l2', kind: 'case', title: 'C2-TITLE', case: { number: 2, level: 2 }, start: 'C2-0',
   scenes: [
-    { id: 'C2-0', title: 'Контора: письма не пришли', location: 'office', cast: ['khvosts', 'watsony', 'pudding'], presentation: 'cutscene', steps: [...intro0(), goto('C2-L2-1')] },
+    { id: 'C2-0', title: 'Контора: письма не пришли', location: 'office', cast: ['khvosts', 'watsony', 'pudding'], presentation: 'cutscene', steps: [cutscene('c2.office.l2'), mapIntro(), goto('C2-L2-1')] },
     { id: 'C2-L2-1', title: 'Завязка', location: 'post-office', cast: ['pudding', 'khvosts', 'watsony'], presentation: 'dialogue', steps: [
       ...intro1base(), ...seq('C2-L2-1-', 1, 3), ...notebookIntro('C2-L2-1-D01'), ...Ls('C2-L2-1-04', 'C2-L2-1-05', 'C2-1-12', 'C2-1-13'), klubkiIntro(), goto(HUB),
     ] },
@@ -23,18 +25,18 @@ export const level2: VariantSource = {
     ] },
     { id: 'C2-L2-2', title: 'Лупа: четыре мелочи', location: 'post-porch', cast: ['khvosts', 'watsony'], presentation: 'minigame', steps: [skill('magnifier', [L('C2-L2-2-01')]), minigame('c2l2-lupa'), L('C2-2-05'), L('C2-2-06'), reveal('c2-l2-lupa'), goto(HUB)] },
     { id: 'C2-L2-3', title: 'Шуршики: «Чашка какао»', location: 'library-door', cast: ['mouse', 'khvosts', 'watsony'], presentation: 'minigame', steps: [
-      ...seq('C2-4-', 1, 2), skill('cocoa', [L('C2-4-03')]), minigame('c2l2-cocoa'), reward('rw-c2-heart-mice'), ...seq('C2-4-', 12, 16), ...seq('C2-L2-3-', 5, 11), L('C2-4-19'), L('C2-4-20'), reveal('c2-l2-cocoa'), goto(HUB),
+      ...seq('C2-4-', 1, 2), skill('cocoa', [L('C2-4-03')]), minigame('c2l2-cocoa'), reward('rw-c2-heart-mice-l2'), ...seq('C2-4-', 12, 16), ...seq('C2-L2-3-', 5, 11), L('C2-4-19'), L('C2-4-20'), reveal('c2-l2-cocoa'), goto(HUB),
     ] },
     { id: 'C2-5', title: 'Разговор с мэром', location: 'post-office', cast: ['pudding', 'khvosts', 'watsony'], presentation: 'dialogue', steps: [...seq('C2-5-', 1, 4), reveal('c2-l2-mayor'), goto(HUB)] },
     { id: 'C2-L2-4', title: 'Шифр на пуговицах', location: 'post-office', cast: ['khvosts', 'watsony'], presentation: 'minigame', steps: [
-      skill('button-cipher', seq('C2-3-', 1, 3), [L('C2-L2-4-01')]), minigame('c2l2-cipher'), ...Ls('C2-L2-4-02', 'C2-L2-4-03', 'C2-3-06', 'C2-3-07', 'C2-3-08', 'C2-3-09', 'C2-3-10', 'C2-3-11', 'C2-L2-4-04'), reveal('c2-l2-cipher'), goto(HUB),
+      skill('button-cipher', seq('C2-3-', 1, 3), [L('C2-L2-4-01')]), minigame('c2l2-cipher'), ...Ls('C2-3-07', 'C2-3-08', 'C2-3-09', 'C2-3-10', 'C2-3-11', 'C2-L2-4-04'), reveal('c2-l2-cipher'), goto(HUB),
     ] },
     { id: 'C2-L2-5', title: 'Почтовые часы', location: 'post-clock', cast: ['khvosts', 'watsony'], presentation: 'minigame', steps: [
       skill('timeline', Ls('C2-L2-5-N01', 'C2-L2-5-N02'), [L('C2-L2-5-01')]), minigame('c2l2-timeline'), ...seq('C2-L2-5-', 2, 4), reveal('c2-l2-timeline'), goto(HUB),
     ] },
     versionScene('C2-L2-6', HUB),
-    { id: 'C2-L2-7', title: 'Парк Старого Дуба', location: 'old-oak', cast: ['stella', 'pudding', 'mouse', 'damka', 'khvosts', 'watsony'], presentation: 'cutscene', steps: resolutionSteps([...seq('C2-L2-7-', 1, 4)], 'C2-L2-8') },
-    { id: 'C2-L2-8', title: 'Почтальон: сумма пуговиц', location: 'town-square', cast: ['stella', 'pudding', 'tyopa'], presentation: 'minigame', steps: [skill('postal', Ls('C2-L2-8-01', 'C2-L2-8-02')), minigame('c2l2-postal'), ...seq('C2-8-', 5, 8), goto('C2-9')] },
+    { id: 'C2-L2-7', title: 'Парк Старого Дуба', location: 'old-oak', cast: ['stella', 'pudding', 'mouse', 'damka', 'khvosts', 'watsony'], presentation: 'cutscene', steps: [cutscene('c2.oak.l2'), goto('C2-L2-8')] },
+    { id: 'C2-L2-8', title: 'Почтальон: сумма пуговиц', location: 'town-square', cast: ['stella', 'pudding', 'tyopa'], presentation: 'minigame', steps: [skill('postal', Ls('C2-L2-8-01', 'C2-L2-8-02')), minigame('c2l2-postal'), cutscene('c2.exhibition.l2'), goto('C2-9')] },
     factsScene('C2-10'), rewardScene(2),
   ],
   logic: { axes: [
@@ -76,18 +78,12 @@ export const level2: VariantSource = {
       { id: 'r2', options: [choice('doing', 'C2-4-B04', true, 'C2-4-08'), choice('flags', 'C2-4-B05', true, 'C2-4-09'), choice('where', 'C2-4-B06', false, 'C2-4-10')], retry: ['C2-4-11'] },
       { id: 'r3', options: [choice('thanks', 'C2-L2-3-B01', true, 'C2-L2-3-01'), choice('show', 'C2-L2-3-B02', true, 'C2-L2-3-02'), choice('letters', 'C2-L2-3-B03', false, 'C2-L2-3-03')], retry: ['C2-L2-3-04'] },
     ] } },
-    { id: 'c2l2-cipher', skill: 'button-cipher', config: { kind: 'staged', mechanic: 'button-cipher', description: 'Прочитать ДУБ и ДОЖДЬ по пуговицам.', steps: [
-      { id: 'word1', prompt: null, pageSize: 3, options: [choice('oak', 'C2-L2-4-B01', true, 'C2-L2-4-02'), choice('nest', 'C2-3-B01', false, 'C2-3-04'), choice('rain', 'C2-3-B02', false, 'C2-3-04')] },
-      { id: 'word2', prompt: null, pageSize: 3, options: [choice('rain', 'C2-3-B02', true, 'C2-3-06'), choice('oak', 'C2-L2-4-B01', false, 'C2-3-04'), choice('nest', 'C2-3-B01', false, 'C2-3-04')] },
-    ], lines: [] } },
+    { id: 'c2l2-cipher', skill: 'button-cipher', config: cipherL2() },
     { id: 'c2l2-timeline', skill: 'timeline', config: { kind: 'timeline', items: [
       { id: 't0800', time: '8:00', label: 'NM-damka' }, { id: 't0830', time: '8:30', label: 'NM-pudding' }, { id: 't0900', time: '9:00', label: 'C2-2-B01' }, { id: 't0930', time: '9:30', label: 'C2-3-B02' },
     ], solution: ['t0800', 't0830', 't0900', 't0930'], wrong: ['C2-L2-5-N03'] } },
-    { id: 'c2l2-postal', skill: 'postal', config: { kind: 'staged', mechanic: 'postal', description: 'Сложить дырочки двух пуговиц.', steps: [
-      { id: 'p23', prompt: null, pageSize: 3, options: [choice('h4', 'C2-8-B03', false, 'C2-8-03'), choice('h5', 'C2-L2-8-B01', true, 'C2-8-04'), choice('h6', 'C2-L2-8-B02', false, 'C2-8-03')] },
-      { id: 'p33', prompt: null, pageSize: 3, options: [choice('h4', 'C2-8-B03', false, 'C2-8-03'), choice('h5', 'C2-L2-8-B01', false, 'C2-8-03'), choice('h6', 'C2-L2-8-B02', true, 'C2-8-04')] },
-    ], lines: [] } },
+    { id: 'c2l2-postal', skill: 'postal', config: postmanL2() },
   ],
-  facts, glossary, rewards: ['rw-c2-heart-mice', 'rw-c2-badge', 'rw-c2-buttons-l2', 'rw-c2-sticker-l2', 'rw-c2-title-helper', 'rw-c2-decor-poster', 'rw-c2-activity'], collections: [], activities: [activityCard], comfort: [], cutscenes: [], plannedCutscenes: commonCutscenes.map((c) => c.scene === 'C2-7' ? { ...c, scene: 'C2-L2-7' } : c.scene === 'C2-8' ? { ...c, scene: 'C2-L2-8' } : c), decisions: [...baseDecisions, { id: 'C2L2-D1', text: 'Свидетельская ошибка одна: мышата говорят «ворону», затем сами исправляют на сороку.', ref: 'D04' }, { id: 'C2L2-D2', text: 'Дамка несёт кору к пруду как подводка к делу 7; улика часов исключает её.', ref: 'D20' }], reserved: [],
+  facts, glossary, rewards: ['rw-c2-heart-mice-l2', 'rw-c2-badge', 'rw-c2-buttons-l2', 'rw-c2-sticker-l2', 'rw-c2-title-helper', 'rw-c2-decor-poster', 'rw-c2-activity'], collections: [], activities: [activityCard], comfort: [], cutscenes: [office(2), oak(2, 'C2-L2-7'), exhibition(2, 'C2-L2-8'), rewardCutscene(2)], notebookPages: [cipherPosterPage('c2l2-cipher')], decisions: [...baseDecisions, { id: 'C2L2-D1', text: 'Свидетельская ошибка одна: мышата говорят «ворону», затем сами исправляют на сороку.', ref: 'D04' }, { id: 'C2L2-D2', text: 'Дамка несёт кору к пруду как подводка к делу 7; улика часов исключает её.', ref: 'D20' }], reserved: [],
 };
 

@@ -1777,6 +1777,20 @@
    "claimKey": "case01:heart:tyopa"
   },
   {
+   "id": "rw-c1-heart-tyopa-l2",
+   "kind": "hearts",
+   "label": "RW-heart",
+   "amount": 1,
+   "claimKey": "case01:l2:heart:tyopa"
+  },
+  {
+   "id": "rw-c1-heart-tyopa-l3",
+   "kind": "hearts",
+   "label": "RW-heart",
+   "amount": 1,
+   "claimKey": "case01:l3:heart:tyopa"
+  },
+  {
    "id": "rw-c1-badge",
    "kind": "badge",
    "label": "RW-c1-badge",
@@ -1848,5 +1862,5 @@
  "notebookPages": [],
  "cozy": null,
  "reserved": [],
- "revision": "4b0eba0c2583d20c59baf09e69ff20e9c86cebc0f65994f5116750389678aece"
+ "revision": "6933fa2996590967e87e1ade5d836ae451a0577aa0ba3701385532e5db99bc9c"
 }

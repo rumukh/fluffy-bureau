@@ -437,15 +437,6 @@
    "delivery": "neutral"
   },
   {
-   "id": "SK-secret-notes",
-   "rev": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "text": "Тайные заметки",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
    "id": "C3-3-07",
    "rev": 1,
    "kind": "dialogue",
@@ -460,6 +451,15 @@
    "kind": "dialogue",
    "speaker": "khvosts",
    "text": "Запах ромашки. Запиши в Тайные заметки.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "SK-secret-notes",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Тайные заметки",
    "voiced": true,
    "delivery": "neutral"
   },
@@ -968,38 +968,11 @@
    "delivery": "cheerful"
   },
   {
-   "id": "C3-L3-11-01",
-   "rev": 1,
-   "kind": "dialogue",
-   "speaker": "pukhlik",
-   "text": "А теперь придумай свой сигнал для города!",
-   "voiced": true,
-   "delivery": "cheerful"
-  },
-  {
    "id": "SK-light-code",
    "rev": 1,
    "kind": "label",
    "speaker": "narrator",
    "text": "Азбука огоньков",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
-   "id": "C3-L3-11-02",
-   "rev": 1,
-   "kind": "dialogue",
-   "speaker": "pukhlik",
-   "text": "Красиво! Это будет твой сигнал, {имя}.",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
-   "id": "C3-L3-11-03",
-   "rev": 1,
-   "kind": "dialogue",
-   "speaker": "pukhlik",
-   "text": "Увижу его с маяка — помашу крылом.",
    "voiced": true,
    "delivery": "neutral"
   },
@@ -1670,24 +1643,6 @@
    "delivery": "warm"
   },
   {
-   "id": "C3-2-Q01",
-   "rev": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "text": "Какой шорох похож?",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
-   "id": "C3-2-B01",
-   "rev": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "text": "Шелест страниц",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
    "id": "C3-2-03",
    "rev": 1,
    "kind": "dialogue",
@@ -1697,11 +1652,20 @@
    "delivery": "neutral"
   },
   {
-   "id": "C3-2-B02",
+   "id": "C3-2-05",
    "rev": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "text": "Шум камыша",
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Щёлк — заслонка фонаря! Свет кто-то закрывает.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-L2-2-01",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Это капли с крыши. Молотка не слышно.",
    "voiced": true,
    "delivery": "neutral"
   },
@@ -1724,6 +1688,24 @@
    "delivery": "neutral"
   },
   {
+   "id": "C3-2-B01",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Шелест страниц",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
+   "id": "C3-2-B02",
+   "rev": 1,
+   "kind": "label",
+   "speaker": "narrator",
+   "text": "Шум камыша",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
    "id": "C3-2-B09",
    "rev": 1,
    "kind": "label",
@@ -1733,29 +1715,11 @@
    "delivery": "neutral"
   },
   {
-   "id": "C3-2-Q02",
-   "rev": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "text": "Какой щелчок похож?",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
    "id": "C3-2-B04",
    "rev": 1,
    "kind": "label",
    "speaker": "narrator",
    "text": "Щелчок заслонки",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
-   "id": "C3-2-05",
-   "rev": 1,
-   "kind": "dialogue",
-   "speaker": "khvosts",
-   "text": "Щёлк — заслонка фонаря! Свет кто-то закрывает.",
    "voiced": true,
    "delivery": "neutral"
   },
@@ -1778,15 +1742,6 @@
    "delivery": "neutral"
   },
   {
-   "id": "C3-2-Q03",
-   "rev": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "text": "Что стучало тихо?",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
    "id": "C3-2-B07",
    "rev": 1,
    "kind": "label",
@@ -1801,15 +1756,6 @@
    "kind": "label",
    "speaker": "narrator",
    "text": "Капли с крыши",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
-   "id": "C3-L2-2-01",
-   "rev": 1,
-   "kind": "dialogue",
-   "speaker": "khvosts",
-   "text": "Это капли с крыши. Молотка не слышно.",
    "voiced": true,
    "delivery": "neutral"
   },
@@ -2012,6 +1958,15 @@
    "delivery": "neutral"
   },
   {
+   "id": "C3-L3-7-03",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "khvosts",
+   "text": "Сверь по одному огоньку. Слева направо.",
+   "voiced": true,
+   "delivery": "neutral"
+  },
+  {
    "id": "C3-L3-7-B01",
    "rev": 1,
    "kind": "label",
@@ -2026,15 +1981,6 @@
    "kind": "label",
    "speaker": "narrator",
    "text": "Друзья",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
-   "id": "C3-L3-7-03",
-   "rev": 1,
-   "kind": "dialogue",
-   "speaker": "khvosts",
-   "text": "Сверь по одному огоньку. Слева направо.",
    "voiced": true,
    "delivery": "neutral"
   },
@@ -2102,29 +2048,29 @@
    "delivery": "warm"
   },
   {
-   "id": "C3-9-Q01",
+   "id": "C3-L3-11-01",
    "rev": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "text": "Повтори «Привет».",
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "А теперь придумай свой сигнал для города!",
+   "voiced": true,
+   "delivery": "cheerful"
+  },
+  {
+   "id": "C3-L3-11-02",
+   "rev": 1,
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Красиво! Это будет твой сигнал, {имя}.",
    "voiced": true,
    "delivery": "neutral"
   },
   {
-   "id": "C3-9-B01",
+   "id": "C3-L3-11-03",
    "rev": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "text": "Короткий огонёк",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
-   "id": "C3-9-B02",
-   "rev": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "text": "Длинный огонёк",
+   "kind": "dialogue",
+   "speaker": "pukhlik",
+   "text": "Увижу его с маяка — помашу крылом.",
    "voiced": true,
    "delivery": "neutral"
   },
@@ -2138,47 +2084,20 @@
    "delivery": "neutral"
   },
   {
-   "id": "C3-9-Q02",
+   "id": "C3-9-B03",
    "rev": 1,
    "kind": "label",
    "speaker": "narrator",
-   "text": "Повтори «Друзья».",
+   "text": "Спокойной ночи",
    "voiced": true,
    "delivery": "neutral"
   },
   {
-   "id": "C3-9-Q03",
+   "id": "C3-9-B04",
    "rev": 1,
    "kind": "label",
    "speaker": "narrator",
-   "text": "Повтори «Спокойной ночи».",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
-   "id": "C3-9-Q04",
-   "rev": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "text": "Повтори «Маяк».",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
-   "id": "C3-L3-11-B01",
-   "rev": 1,
-   "kind": "label",
-   "speaker": "narrator",
-   "text": "Собрать свой сигнал",
-   "voiced": true,
-   "delivery": "neutral"
-  },
-  {
-   "id": "C3-L3-11-N01",
-   "rev": 1,
-   "kind": "dialogue",
-   "speaker": "pukhlik",
-   "text": "Любой тёплый ритм подойдёт.",
+   "text": "Маяк",
    "voiced": true,
    "delivery": "neutral"
   },
@@ -2199,6 +2118,15 @@
    "text": "Дедукция",
    "voiced": true,
    "delivery": "warm"
+  },
+  {
+   "id": "RW-c3-secret-note",
+   "rev": 1,
+   "kind": "reward",
+   "speaker": "narrator",
+   "text": "Страница «Тайные заметки»",
+   "voiced": true,
+   "delivery": "neutral"
   },
   {
    "id": "RW-c3-badge",
@@ -2393,52 +2321,13 @@
     "mouse"
    ],
    "presentation": "cutscene",
+   "props": {
+    "mapPoint": "prop.map-honey-lighthouse"
+   },
    "steps": [
     {
-     "t": "dir",
-     "id": "C3-0-D01",
-     "text": "Контора вечером: в окне горит тёплый фонарь-светлячок."
-    },
-    {
-     "t": "line",
-     "line": "C3-0-01"
-    },
-    {
-     "t": "line",
-     "line": "C3-0-02"
-    },
-    {
-     "t": "line",
-     "line": "C3-0-03"
-    },
-    {
-     "t": "dir",
-     "id": "C3-0-D02",
-     "text": "Входят мышата Шуршики, держась за лапки."
-    },
-    {
-     "t": "line",
-     "line": "C3-0-04"
-    },
-    {
-     "t": "line",
-     "line": "C3-0-05"
-    },
-    {
-     "t": "line",
-     "line": "C3-0-06"
-    },
-    {
-     "t": "line",
-     "line": "C3-0-07"
-    },
-    {
-     "t": "line",
-     "line": "C3-0-08"
-    },
-    {
-     "t": "line",
-     "line": "C3-0-09"
+     "t": "cutscene",
+     "cutscene": "c3.intro.l3"
     },
     {
      "t": "skill",
@@ -2447,14 +2336,74 @@
       {
        "t": "dir",
        "id": "C3-0-D03",
-       "text": "На карте открывается точка «Медовый пруд и маяк»."
+       "text": "На карте открывается точка «Медовый пруд и маяк».",
+       "actions": [
+        {
+         "op": "enter",
+         "actor": "mapPoint",
+         "from": {
+          "x": 1280,
+          "y": 820
+         },
+         "to": {
+          "x": 1280,
+          "y": 820
+         },
+         "duration": 0.1,
+         "walk": false
+        },
+        {
+         "op": "sfx",
+         "asset": "sfx.page-turn",
+         "gain": 0.45
+        },
+        {
+         "op": "effect",
+         "effect": "glow",
+         "at": {
+          "x": 1280,
+          "y": 820
+         },
+         "duration": 1.2
+        }
+       ]
       }
      ],
      "known": [
       {
        "t": "dir",
        "id": "C3-0-D03",
-       "text": "На карте открывается точка «Медовый пруд и маяк»."
+       "text": "На карте открывается точка «Медовый пруд и маяк».",
+       "actions": [
+        {
+         "op": "enter",
+         "actor": "mapPoint",
+         "from": {
+          "x": 1280,
+          "y": 820
+         },
+         "to": {
+          "x": 1280,
+          "y": 820
+         },
+         "duration": 0.1,
+         "walk": false
+        },
+        {
+         "op": "sfx",
+         "asset": "sfx.page-turn",
+         "gain": 0.45
+        },
+        {
+         "op": "effect",
+         "effect": "glow",
+         "at": {
+          "x": 1280,
+          "y": 820
+         },
+         "duration": 1.2
+        }
+       ]
       }
      ]
     },
@@ -2782,30 +2731,14 @@
     "watsony"
    ],
    "presentation": "dialogue",
+   "props": {
+    "notebook": "prop.notebook-secret-notes",
+    "chamomile": "prop.chamomile-note"
+   },
    "steps": [
     {
-     "t": "line",
-     "line": "C3-3-01"
-    },
-    {
-     "t": "line",
-     "line": "C3-3-02"
-    },
-    {
-     "t": "line",
-     "line": "C3-3-03"
-    },
-    {
-     "t": "line",
-     "line": "C3-3-04"
-    },
-    {
-     "t": "line",
-     "line": "C3-3-05"
-    },
-    {
-     "t": "line",
-     "line": "C3-3-06"
+     "t": "cutscene",
+     "cutscene": "c3.note.l3"
     },
     {
      "t": "skill",
@@ -2814,29 +2747,108 @@
       {
        "t": "dir",
        "id": "C3-3-D01",
-       "text": "В Блокноте открывается страница «Тайные заметки»."
+       "text": "В Блокноте открывается страница «Тайные заметки».",
+       "actions": [
+        {
+         "op": "enter",
+         "actor": "notebook",
+         "from": {
+          "x": 1280,
+          "y": 900
+         },
+         "to": {
+          "x": 1280,
+          "y": 900
+         },
+         "duration": 0.1,
+         "walk": false
+        },
+        {
+         "op": "enter",
+         "actor": "chamomile",
+         "from": {
+          "x": 1510,
+          "y": 880
+         },
+         "to": {
+          "x": 1510,
+          "y": 880
+         },
+         "duration": 0.1,
+         "walk": false
+        },
+        {
+         "op": "sfx",
+         "asset": "sfx.page-turn",
+         "gain": 0.5
+        },
+        {
+         "op": "effect",
+         "effect": "sparkles",
+         "at": {
+          "x": 1510,
+          "y": 880
+         },
+         "duration": 1.2
+        }
+       ]
       }
      ],
      "known": [
       {
        "t": "dir",
        "id": "C3-3-D01",
-       "text": "В Блокноте открывается страница «Тайные заметки»."
+       "text": "В Блокноте открывается страница «Тайные заметки».",
+       "actions": [
+        {
+         "op": "enter",
+         "actor": "notebook",
+         "from": {
+          "x": 1280,
+          "y": 900
+         },
+         "to": {
+          "x": 1280,
+          "y": 900
+         },
+         "duration": 0.1,
+         "walk": false
+        },
+        {
+         "op": "enter",
+         "actor": "chamomile",
+         "from": {
+          "x": 1510,
+          "y": 880
+         },
+         "to": {
+          "x": 1510,
+          "y": 880
+         },
+         "duration": 0.1,
+         "walk": false
+        },
+        {
+         "op": "sfx",
+         "asset": "sfx.page-turn",
+         "gain": 0.5
+        },
+        {
+         "op": "effect",
+         "effect": "sparkles",
+         "at": {
+          "x": 1510,
+          "y": 880
+         },
+         "duration": 1.2
+        }
+       ]
       }
      ]
     },
     {
-     "t": "line",
-     "line": "C3-3-07"
-    },
-    {
-     "t": "dir",
-     "id": "C3-3-D02",
-     "text": "Игрок нажимает на ромашку; значок запаха ложится на страницу."
-    },
-    {
-     "t": "line",
-     "line": "C3-3-08"
+     "t": "reward",
+     "reward": "rw-c3-secret-note"
     },
     {
      "t": "clue",
@@ -3195,84 +3207,8 @@
    "presentation": "cutscene",
    "steps": [
     {
-     "t": "line",
-     "line": "C3-8-01"
-    },
-    {
-     "t": "line",
-     "line": "C3-8-02"
-    },
-    {
-     "t": "line",
-     "line": "C3-8-03"
-    },
-    {
-     "t": "line",
-     "line": "C3-8-04"
-    },
-    {
-     "t": "line",
-     "line": "C3-8-05"
-    },
-    {
-     "t": "line",
-     "line": "C3-8-06"
-    },
-    {
-     "t": "line",
-     "line": "C3-8-07"
-    },
-    {
-     "t": "line",
-     "line": "C3-8-08"
-    },
-    {
-     "t": "line",
-     "line": "C3-8-09"
-    },
-    {
-     "t": "line",
-     "line": "C3-8-10"
-    },
-    {
-     "t": "line",
-     "line": "C3-8-11"
-    },
-    {
-     "t": "line",
-     "line": "C3-L2-8-01"
-    },
-    {
-     "t": "line",
-     "line": "C3-L2-8-02"
-    },
-    {
-     "t": "line",
-     "line": "C3-L3-10-01"
-    },
-    {
-     "t": "line",
-     "line": "C3-L3-10-02"
-    },
-    {
-     "t": "line",
-     "line": "C3-8-12"
-    },
-    {
-     "t": "line",
-     "line": "C3-8-13"
-    },
-    {
-     "t": "line",
-     "line": "C3-8-14"
-    },
-    {
-     "t": "line",
-     "line": "C3-8-15"
-    },
-    {
-     "t": "line",
-     "line": "C3-8-16"
+     "t": "cutscene",
+     "cutscene": "c3.reveal.l3"
     },
     {
      "t": "goto",
@@ -3290,6 +3226,9 @@
     "mouse"
    ],
    "presentation": "minigame",
+   "props": {
+    "signalStrip": "prop.light-signal-strip"
+   },
    "steps": [
     {
      "t": "line",
@@ -3304,38 +3243,88 @@
      "line": "C3-9-03"
     },
     {
-     "t": "line",
-     "line": "C3-L3-11-01"
-    },
-    {
      "t": "skill",
      "skill": "light-code",
      "first": [
       {
        "t": "dir",
        "id": "C3-L3-11-D01",
-       "text": "Пухлик показывает игровой ритм точками и чёрточками."
+       "text": "Пухлик показывает игровой ритм точками и чёрточками.",
+       "actions": [
+        {
+         "op": "enter",
+         "actor": "signalStrip",
+         "from": {
+          "x": 1280,
+          "y": 520
+         },
+         "to": {
+          "x": 1280,
+          "y": 520
+         },
+         "duration": 0.1,
+         "walk": false
+        },
+        {
+         "op": "pose",
+         "actor": "pukhlik",
+         "clip": "present",
+         "expression": "happy"
+        },
+        {
+         "op": "effect",
+         "effect": "glow",
+         "at": {
+          "x": 1280,
+          "y": 520
+         },
+         "duration": 1.4
+        }
+       ]
       }
      ],
      "known": [
       {
        "t": "dir",
        "id": "C3-L3-11-D01",
-       "text": "Пухлик показывает игровой ритм точками и чёрточками."
+       "text": "Пухлик показывает игровой ритм точками и чёрточками.",
+       "actions": [
+        {
+         "op": "enter",
+         "actor": "signalStrip",
+         "from": {
+          "x": 1280,
+          "y": 520
+         },
+         "to": {
+          "x": 1280,
+          "y": 520
+         },
+         "duration": 0.1,
+         "walk": false
+        },
+        {
+         "op": "pose",
+         "actor": "pukhlik",
+         "clip": "present",
+         "expression": "happy"
+        },
+        {
+         "op": "effect",
+         "effect": "glow",
+         "at": {
+          "x": 1280,
+          "y": 520
+         },
+         "duration": 1.4
+        }
+       ]
       }
      ]
     },
     {
      "t": "minigame",
      "minigame": "c3l3-light"
-    },
-    {
-     "t": "line",
-     "line": "C3-L3-11-02"
-    },
-    {
-     "t": "line",
-     "line": "C3-L3-11-03"
     },
     {
      "t": "line",
@@ -3367,6 +3356,9 @@
     "watsony"
    ],
    "presentation": "dialogue",
+   "props": {
+    "factCards": "prop.fact-cards-c3"
+   },
    "steps": [
     {
      "t": "skill",
@@ -3375,14 +3367,74 @@
       {
        "t": "dir",
        "id": "C3-10-D01",
-       "text": "Карточки фактов складываются в Энциклопедию."
+       "text": "Карточки фактов складываются в Энциклопедию.",
+       "actions": [
+        {
+         "op": "enter",
+         "actor": "factCards",
+         "from": {
+          "x": 1280,
+          "y": 900
+         },
+         "to": {
+          "x": 1280,
+          "y": 900
+         },
+         "duration": 0.1,
+         "walk": false
+        },
+        {
+         "op": "sfx",
+         "asset": "sfx.page-turn",
+         "gain": 0.45
+        },
+        {
+         "op": "effect",
+         "effect": "sparkles",
+         "at": {
+          "x": 1280,
+          "y": 900
+         },
+         "duration": 1.2
+        }
+       ]
       }
      ],
      "known": [
       {
        "t": "dir",
        "id": "C3-10-D01",
-       "text": "Карточки фактов складываются в Энциклопедию."
+       "text": "Карточки фактов складываются в Энциклопедию.",
+       "actions": [
+        {
+         "op": "enter",
+         "actor": "factCards",
+         "from": {
+          "x": 1280,
+          "y": 900
+         },
+         "to": {
+          "x": 1280,
+          "y": 900
+         },
+         "duration": 0.1,
+         "walk": false
+        },
+        {
+         "op": "sfx",
+         "asset": "sfx.page-turn",
+         "gain": 0.45
+        },
+        {
+         "op": "effect",
+         "effect": "sparkles",
+         "at": {
+          "x": 1280,
+          "y": 900
+         },
+         "duration": 1.2
+        }
+       ]
       }
      ]
     },
@@ -3419,12 +3471,8 @@
    "presentation": "cutscene",
    "steps": [
     {
-     "t": "line",
-     "line": "C3-11-01"
-    },
-    {
-     "t": "line",
-     "line": "C3-11-02"
+     "t": "cutscene",
+     "cutscene": "c3.reward.l3"
     },
     {
      "t": "reward",
@@ -3449,19 +3497,6 @@
     {
      "t": "reward",
      "reward": "rw-c3-title"
-    },
-    {
-     "t": "dir",
-     "id": "C3-11-D01",
-     "text": "Новое слово в Словарике: дедукция. Тайная заметка: запах ромашки."
-    },
-    {
-     "t": "line",
-     "line": "C3-11-03"
-    },
-    {
-     "t": "line",
-     "line": "C3-11-04"
     },
     {
      "t": "await",
@@ -4343,14 +4378,12 @@
    "id": "c3l3-sound",
    "skill": "sound-diff",
    "config": {
-    "kind": "staged",
-    "mechanic": "Услышь разницу",
-    "description": "Ночной звук сравнивается с образцами. Без звука показаны волны ритма и иконки тихо-громко, высоко-низко, коротко-длинно.",
-    "steps": [
+    "kind": "sound-match",
+    "intro": [],
+    "rounds": [
      {
       "id": "rustle",
-      "prompt": "C3-2-Q01",
-      "pageSize": 3,
+      "target": "night-rustle",
       "options": [
        {
         "id": "pages",
@@ -4358,31 +4391,33 @@
         "correct": true,
         "reply": [
          "C3-2-03"
-        ]
+        ],
+        "sample": "pages"
        },
        {
         "id": "reeds",
         "label": "C3-2-B02",
         "correct": false,
         "reply": [
-         "C3-L3-2-01",
-         "C3-2-04"
-        ]
+         "C3-L3-2-01"
+        ],
+        "sample": "reeds-rustle"
        },
        {
         "id": "wings",
         "label": "C3-2-B09",
         "correct": false,
-        "reply": [
-         "C3-2-04"
-        ]
+        "reply": [],
+        "sample": "wing-rustle"
        }
+      ],
+      "wrong": [
+       "C3-2-04"
       ]
      },
      {
       "id": "click",
-      "prompt": "C3-2-Q02",
-      "pageSize": 3,
+      "target": "night-click",
       "options": [
        {
         "id": "shutter",
@@ -4390,38 +4425,38 @@
         "correct": true,
         "reply": [
          "C3-2-05"
-        ]
+        ],
+        "sample": "lamp-shutter"
        },
        {
         "id": "door",
         "label": "C3-2-B05",
         "correct": false,
-        "reply": [
-         "C3-2-04"
-        ]
+        "reply": [],
+        "sample": "door-creak"
        },
        {
         "id": "woodpecker",
         "label": "C3-2-B06",
         "correct": false,
-        "reply": [
-         "C3-2-04"
-        ]
+        "reply": [],
+        "sample": "woodpecker"
        }
+      ],
+      "wrong": [
+       "C3-2-04"
       ]
      },
      {
       "id": "knock",
-      "prompt": "C3-2-Q03",
-      "pageSize": 3,
+      "target": "night-drops",
       "options": [
        {
         "id": "hammer",
         "label": "C3-2-B07",
         "correct": false,
-        "reply": [
-         "C3-2-04"
-        ]
+        "reply": [],
+        "sample": "hammer-knock"
        },
        {
         "id": "drops",
@@ -4429,20 +4464,23 @@
         "correct": true,
         "reply": [
          "C3-L2-2-01"
-        ]
+        ],
+        "sample": "roof-drops"
        },
        {
         "id": "shutter",
         "label": "C3-2-B04",
         "correct": false,
-        "reply": [
-         "C3-2-04"
-        ]
+        "reply": [],
+        "sample": "lamp-shutter"
        }
+      ],
+      "wrong": [
+       "C3-2-04"
       ]
      }
     ],
-    "lines": []
+    "after": []
    }
   },
   {
@@ -4575,41 +4613,53 @@
    "id": "c3l3-blink",
    "skill": "read-blink",
    "config": {
-    "kind": "staged",
-    "mechanic": "Прочитай мигание",
-    "description": "Игрок сверяет рисунок мышат с игровыми уроками книги слева направо.",
-    "steps": [
+    "kind": "read-blink",
+    "drawing": [
+     "dot",
+     "dot",
+     "dash"
+    ],
+    "lessons": [
      {
-      "id": "lesson",
-      "prompt": null,
-      "pageSize": 3,
-      "options": [
-       {
-        "id": "hello",
-        "label": "C3-L3-7-B01",
-        "correct": true,
-        "reply": []
-       },
-       {
-        "id": "friends",
-        "label": "C3-L3-7-B02",
-        "correct": false,
-        "reply": [
-         "C3-L3-7-03"
-        ]
-       },
-       {
-        "id": "night",
-        "label": "C3-L3-7-B03",
-        "correct": false,
-        "reply": [
-         "C3-L3-7-03"
-        ]
-       }
+      "id": "hello",
+      "label": "C3-L3-7-B01",
+      "correct": true,
+      "reply": [],
+      "pattern": [
+       "dot",
+       "dot",
+       "dash"
+      ]
+     },
+     {
+      "id": "friends",
+      "label": "C3-L3-7-B02",
+      "correct": false,
+      "reply": [
+       "C3-L3-7-03"
+      ],
+      "pattern": [
+       "dash",
+       "dot",
+       "dash"
+      ]
+     },
+     {
+      "id": "night",
+      "label": "C3-L3-7-B03",
+      "correct": false,
+      "reply": [
+       "C3-L3-7-03"
+      ],
+      "pattern": [
+       "dash",
+       "dash"
       ]
      }
     ],
-    "lines": []
+    "wrong": [
+     "C3-L3-7-03"
+    ]
    }
   },
   {
@@ -4660,119 +4710,66 @@
    "id": "c3l3-light",
    "skill": "light-code",
    "config": {
-    "kind": "staged",
-    "mechanic": "Азбука огоньков",
-    "description": "Игровые световые ритмы: точка — короткий огонёк, чёрточка — длинный. Это не азбука Морзе.",
-    "steps": [
+    "kind": "light-signals",
+    "intro": [],
+    "signals": [
      {
       "id": "hello",
-      "prompt": "C3-9-Q01",
-      "pageSize": 2,
-      "options": [
-       {
-        "id": "short",
-        "label": "C3-9-B01",
-        "correct": true,
-        "reply": []
-       },
-       {
-        "id": "long",
-        "label": "C3-9-B02",
-        "correct": false,
-        "reply": [
-         "C3-9-04"
-        ]
-       }
-      ]
+      "label": "C3-L3-7-B01",
+      "pattern": [
+       "dot",
+       "dot",
+       "dash"
+      ],
+      "correct": []
      },
      {
       "id": "friends",
-      "prompt": "C3-9-Q02",
-      "pageSize": 2,
-      "options": [
-       {
-        "id": "long",
-        "label": "C3-9-B02",
-        "correct": true,
-        "reply": []
-       },
-       {
-        "id": "short",
-        "label": "C3-9-B01",
-        "correct": false,
-        "reply": [
-         "C3-9-04"
-        ]
-       }
-      ]
+      "label": "C3-L3-7-B02",
+      "pattern": [
+       "dash",
+       "dot",
+       "dash"
+      ],
+      "correct": []
      },
      {
       "id": "night",
-      "prompt": "C3-9-Q03",
-      "pageSize": 2,
-      "options": [
-       {
-        "id": "long",
-        "label": "C3-9-B02",
-        "correct": true,
-        "reply": []
-       },
-       {
-        "id": "short",
-        "label": "C3-9-B01",
-        "correct": false,
-        "reply": [
-         "C3-9-04"
-        ]
-       }
-      ]
+      "label": "C3-9-B03",
+      "pattern": [
+       "dash",
+       "dash",
+       "dot",
+       "dot"
+      ],
+      "correct": []
      },
      {
       "id": "lighthouse",
-      "prompt": "C3-9-Q04",
-      "pageSize": 2,
-      "options": [
-       {
-        "id": "long",
-        "label": "C3-9-B02",
-        "correct": true,
-        "reply": []
-       },
-       {
-        "id": "short",
-        "label": "C3-9-B01",
-        "correct": false,
-        "reply": [
-         "C3-9-04"
-        ]
-       }
-      ]
-     },
-     {
-      "id": "own",
-      "prompt": "C3-L3-11-B01",
-      "pageSize": 2,
-      "options": [
-       {
-        "id": "short",
-        "label": "C3-9-B01",
-        "correct": true,
-        "reply": [
-         "C3-L3-11-N01"
-        ]
-       },
-       {
-        "id": "long",
-        "label": "C3-9-B02",
-        "correct": true,
-        "reply": [
-         "C3-L3-11-N01"
-        ]
-       }
-      ]
+      "label": "C3-9-B04",
+      "pattern": [
+       "dash",
+       "dot",
+       "dot",
+       "dash"
+      ],
+      "correct": []
      }
     ],
-    "lines": []
+    "wrong": [
+     "C3-9-04"
+    ],
+    "own": {
+     "min": 3,
+     "max": 5,
+     "prompt": [
+      "C3-L3-11-01"
+     ],
+     "done": [
+      "C3-L3-11-02",
+      "C3-L3-11-03"
+     ]
+    }
    }
   }
  ],
@@ -4806,6 +4803,13 @@
   }
  ],
  "rewards": [
+  {
+   "id": "rw-c3-secret-note",
+   "kind": "decor",
+   "label": "RW-c3-secret-note",
+   "amount": 1,
+   "claimKey": "case03:secret-notes"
+  },
   {
    "id": "rw-c3-badge",
    "kind": "badge",
@@ -4917,31 +4921,996 @@
    "line": "C3-L-02"
   }
  ],
- "cutscenes": [],
- "plannedCutscenes": [
+ "cutscenes": [
   {
-   "id": "cs-c3-intro",
+   "id": "c3.intro.l3",
    "scene": "C3-0",
-   "summary": "Вечером мышата сообщают о мигании на маяке; команда идёт к Медовому пруду."
+   "summary": "Вечером в Конторе мышата рассказывают о мигании на маяке; команда берёт фонари и идёт к Медовому пруду.",
+   "document": {
+    "format": "aegis-cutscene/1",
+    "id": "c3.intro.l3",
+    "revision": "1",
+    "advance": "input",
+    "cast": {
+     "khvosts": {
+      "rig": "khvosts"
+     },
+     "watsony": {
+      "rig": "watsony"
+     },
+     "mouse": {
+      "rig": "mouse"
+     },
+     "player": {
+      "role": "avatar"
+     },
+     "lantern": {
+      "rig": "prop.firefly-lantern"
+     }
+    },
+    "steps": [
+     {
+      "op": "background",
+      "asset": "bg.office-evening",
+      "transition": {
+       "type": "cut"
+      }
+     },
+     {
+      "op": "music",
+      "asset": "music.title-office",
+      "fade": 1.2,
+      "comfort": {
+       "asset": "music.title-office-warm"
+      }
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "cut": true
+     },
+     {
+      "op": "enter",
+      "actor": "lantern",
+      "from": {
+       "x": 2050,
+       "y": 760
+      },
+      "to": {
+       "x": 2050,
+       "y": 760
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "lantern",
+      "clip": "present"
+     },
+     {
+      "op": "enter",
+      "actor": "watsony",
+      "from": "left",
+      "to": {
+       "x": 560,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "player",
+      "from": "left",
+      "to": {
+       "x": 860,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "khvosts",
+      "from": "right",
+      "to": {
+       "x": 1700,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "join"
+     },
+     {
+      "op": "marker",
+      "id": "intro.office"
+     },
+     {
+      "op": "effect",
+      "effect": "glow",
+      "at": {
+       "x": 2050,
+       "y": 760
+      },
+      "duration": 1.2,
+      "wait": false
+     },
+     {
+      "op": "line",
+      "actor": "watsony",
+      "line": "C3-0-01"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C3-0-02"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C3-0-03"
+     },
+     {
+      "op": "marker",
+      "id": "intro.mice"
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.footsteps",
+      "gain": 0.45
+     },
+     {
+      "op": "enter",
+      "actor": "mouse",
+      "from": "left",
+      "to": {
+       "x": 360,
+       "y": 1450
+      },
+      "duration": 0.8,
+      "wait": false
+     },
+     {
+      "op": "pose",
+      "actor": "mouse",
+      "expression": "worried"
+     },
+     {
+      "op": "line",
+      "actor": "mouse",
+      "line": "C3-0-04"
+     },
+     {
+      "op": "line",
+      "actor": "mouse",
+      "line": "C3-0-05"
+     },
+     {
+      "op": "line",
+      "actor": "mouse",
+      "line": "C3-0-06"
+     },
+     {
+      "op": "marker",
+      "id": "intro.answer"
+     },
+     {
+      "op": "effect",
+      "effect": "bubbles",
+      "at": {
+       "x": 1550,
+       "y": 760
+      },
+      "duration": 1.4,
+      "wait": false
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C3-0-07"
+     },
+     {
+      "op": "pose",
+      "actor": "khvosts",
+      "expression": "happy"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C3-0-08"
+     },
+     {
+      "op": "pose",
+      "actor": "watsony",
+      "expression": "happy"
+     },
+     {
+      "op": "line",
+      "actor": "watsony",
+      "line": "C3-0-09"
+     },
+     {
+      "op": "marker",
+      "id": "intro.to.C3-L3-1"
+     }
+    ]
+   }
   },
   {
-   "id": "cs-c3-note",
+   "id": "c3.note.l3",
    "scene": "C3-3",
-   "summary": "У починенного весла Дамки найдена ромашка; первая Тайная заметка попадает в Блокнот."
+   "summary": "У двери маяка Дамка находит починенное весло с ромашкой; Ватсони называет первую Тайную заметку.",
+   "document": {
+    "format": "aegis-cutscene/1",
+    "id": "c3.note.l3",
+    "revision": "1",
+    "advance": "input",
+    "cast": {
+     "damka": {
+      "rig": "damka"
+     },
+     "khvosts": {
+      "rig": "khvosts"
+     },
+     "watsony": {
+      "rig": "watsony"
+     },
+     "player": {
+      "role": "avatar"
+     },
+     "paddle": {
+      "rig": "prop.paddle-repaired"
+     },
+     "chamomile": {
+      "rig": "prop.chamomile-note"
+     }
+    },
+    "steps": [
+     {
+      "op": "background",
+      "asset": "bg.lighthouse-door",
+      "transition": {
+       "type": "cut"
+      }
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "cut": true
+     },
+     {
+      "op": "enter",
+      "actor": "paddle",
+      "from": {
+       "x": 1500,
+       "y": 1350
+      },
+      "to": {
+       "x": 1500,
+       "y": 1350
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "paddle",
+      "clip": "present"
+     },
+     {
+      "op": "enter",
+      "actor": "chamomile",
+      "from": {
+       "x": 1540,
+       "y": 1180
+      },
+      "to": {
+       "x": 1540,
+       "y": 1180
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "chamomile",
+      "clip": "present"
+     },
+     {
+      "op": "enter",
+      "actor": "damka",
+      "from": "right",
+      "to": {
+       "x": 1780,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "khvosts",
+      "from": "left",
+      "to": {
+       "x": 760,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "watsony",
+      "from": "left",
+      "to": {
+       "x": 520,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "player",
+      "from": "left",
+      "to": {
+       "x": 1040,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "join"
+     },
+     {
+      "op": "marker",
+      "id": "note.door"
+     },
+     {
+      "op": "line",
+      "actor": "damka",
+      "line": "C3-3-01"
+     },
+     {
+      "op": "pose",
+      "actor": "damka",
+      "expression": "surprised"
+     },
+     {
+      "op": "camera",
+      "preset": "close-right",
+      "duration": 1,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "line",
+      "actor": "damka",
+      "line": "C3-3-02"
+     },
+     {
+      "op": "line",
+      "actor": "damka",
+      "line": "C3-3-03"
+     },
+     {
+      "op": "marker",
+      "id": "note.shadow"
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "duration": 1,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "pose",
+      "actor": "khvosts",
+      "face": "right"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C3-3-04"
+     },
+     {
+      "op": "pose",
+      "actor": "watsony",
+      "expression": "surprised"
+     },
+     {
+      "op": "line",
+      "actor": "watsony",
+      "line": "C3-3-05"
+     },
+     {
+      "op": "line",
+      "actor": "watsony",
+      "line": "C3-3-06"
+     },
+     {
+      "op": "marker",
+      "id": "note.smell"
+     },
+     {
+      "op": "camera",
+      "preset": "close-center",
+      "duration": 1,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "effect",
+      "effect": "sparkles",
+      "at": {
+       "x": 1540,
+       "y": 1180
+      },
+      "duration": 1.2,
+      "wait": false
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C3-3-07"
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.page-turn",
+      "gain": 0.5
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C3-3-08"
+     },
+     {
+      "op": "marker",
+      "id": "note.end"
+     }
+    ]
+   }
   },
   {
-   "id": "cs-c3-reveal",
-   "scene": "C3-L3-8",
-   "summary": "Пухлик признаётся, что по ночам учил игровые сигналы огоньков."
+   "id": "c3.reveal.l3",
+   "scene": "C3-L3-10",
+   "summary": "Пухлик выходит в фонарной комнате, признаётся в тренировке огоньков, а Хвостс разбирает ложные следы.",
+   "document": {
+    "format": "aegis-cutscene/1",
+    "id": "c3.reveal.l3",
+    "revision": "1",
+    "advance": "input",
+    "cast": {
+     "khvosts": {
+      "rig": "khvosts"
+     },
+     "watsony": {
+      "rig": "watsony"
+     },
+     "pukhlik": {
+      "rig": "pukhlik"
+     },
+     "damka": {
+      "rig": "damka"
+     },
+     "player": {
+      "role": "avatar"
+     },
+     "book": {
+      "rig": "prop.light-code-book"
+     },
+     "tyopa": {
+      "rig": "tyopa"
+     }
+    },
+    "steps": [
+     {
+      "op": "background",
+      "asset": "bg.lighthouse-room",
+      "transition": {
+       "type": "cut"
+      }
+     },
+     {
+      "op": "music",
+      "asset": "music.heartfelt",
+      "fade": 1.2,
+      "comfort": {
+       "asset": "music.heartfelt-warm"
+      }
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "cut": true
+     },
+     {
+      "op": "enter",
+      "actor": "book",
+      "from": {
+       "x": 1430,
+       "y": 1250
+      },
+      "to": {
+       "x": 1430,
+       "y": 1250
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "book",
+      "clip": "present"
+     },
+     {
+      "op": "enter",
+      "actor": "khvosts",
+      "from": "left",
+      "to": {
+       "x": 730,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "watsony",
+      "from": "left",
+      "to": {
+       "x": 500,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "player",
+      "from": "left",
+      "to": {
+       "x": 980,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "damka",
+      "from": "right",
+      "to": {
+       "x": 1850,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "join"
+     },
+     {
+      "op": "marker",
+      "id": "reveal.knock"
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.page-turn",
+      "gain": 0.35
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C3-8-01"
+     },
+     {
+      "op": "enter",
+      "actor": "pukhlik",
+      "from": {
+       "x": 1500,
+       "y": 1040
+      },
+      "to": {
+       "x": 1500,
+       "y": 1040
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "pukhlik",
+      "clip": "shrug-shy",
+      "wait": true
+     },
+     {
+      "op": "pose",
+      "actor": "pukhlik",
+      "expression": "worried"
+     },
+     {
+      "op": "line",
+      "actor": "pukhlik",
+      "line": "C3-8-02"
+     },
+     {
+      "op": "line",
+      "actor": "pukhlik",
+      "line": "C3-8-03"
+     },
+     {
+      "op": "line",
+      "actor": "pukhlik",
+      "line": "C3-8-04"
+     },
+     {
+      "op": "line",
+      "actor": "pukhlik",
+      "line": "C3-8-05"
+     },
+     {
+      "op": "marker",
+      "id": "reveal.kindness"
+     },
+     {
+      "op": "pose",
+      "actor": "khvosts",
+      "expression": "happy"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C3-8-06"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C3-8-07"
+     },
+     {
+      "op": "pose",
+      "actor": "pukhlik",
+      "expression": "happy"
+     },
+     {
+      "op": "line",
+      "actor": "pukhlik",
+      "line": "C3-8-08"
+     },
+     {
+      "op": "marker",
+      "id": "reveal.herrings"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C3-8-09"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C3-8-10"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C3-8-11"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C3-L2-8-01"
+     },
+     {
+      "op": "line",
+      "actor": "damka",
+      "line": "C3-L2-8-02"
+     },
+     {
+      "op": "enter",
+      "actor": "tyopa",
+      "from": "right",
+      "to": {
+       "x": 2100,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "join"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C3-L3-10-01"
+     },
+     {
+      "op": "line",
+      "actor": "tyopa",
+      "line": "C3-L3-10-02"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C3-8-12"
+     },
+     {
+      "op": "marker",
+      "id": "reveal.solved"
+     },
+     {
+      "op": "effect",
+      "effect": "confetti",
+      "at": {
+       "x": 1280,
+       "y": 740
+      },
+      "duration": 1.8,
+      "wait": false
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C3-8-13"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C3-8-14"
+     },
+     {
+      "op": "line",
+      "actor": "pukhlik",
+      "line": "C3-8-15"
+     },
+     {
+      "op": "line",
+      "actor": "pukhlik",
+      "line": "C3-8-16"
+     },
+     {
+      "op": "emote",
+      "actor": "player",
+      "emote": "joy"
+     },
+     {
+      "op": "marker",
+      "id": "reveal.end"
+     }
+    ]
+   }
   },
   {
-   "id": "cs-c3-reward",
+   "id": "c3.reward.l3",
    "scene": "C3-11",
-   "summary": "Хвостс вручает значок «Огонёк маяка», а Ватсони вспоминает тайну Серой Тени."
+   "summary": "В Конторе Хвостс вручает значок «Огонёк маяка», а Ватсони напоминает о тайне Серой Тени.",
+   "document": {
+    "format": "aegis-cutscene/1",
+    "id": "c3.reward.l3",
+    "revision": "1",
+    "advance": "input",
+    "cast": {
+     "khvosts": {
+      "rig": "khvosts"
+     },
+     "watsony": {
+      "rig": "watsony"
+     },
+     "player": {
+      "role": "avatar"
+     },
+     "badge": {
+      "rig": "prop.badge-beacon"
+     },
+     "sticker": {
+      "rig": "prop.sticker-beacon-3"
+     },
+     "lamp": {
+      "rig": "prop.firefly-lamp"
+     }
+    },
+    "steps": [
+     {
+      "op": "background",
+      "asset": "bg.office",
+      "transition": {
+       "type": "cut"
+      }
+     },
+     {
+      "op": "music",
+      "asset": "music.celebration-baking",
+      "fade": 1.2,
+      "comfort": {
+       "asset": "music.celebration-baking-warm"
+      }
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "cut": true
+     },
+     {
+      "op": "enter",
+      "actor": "watsony",
+      "from": "left",
+      "to": {
+       "x": 560,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "player",
+      "from": "left",
+      "to": {
+       "x": 900,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "enter",
+      "actor": "khvosts",
+      "from": "right",
+      "to": {
+       "x": 1660,
+       "y": 1450
+      },
+      "duration": 1,
+      "wait": false
+     },
+     {
+      "op": "join"
+     },
+     {
+      "op": "marker",
+      "id": "reward.case"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C3-11-01"
+     },
+     {
+      "op": "camera",
+      "preset": "close-center",
+      "duration": 1,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "enter",
+      "actor": "badge",
+      "from": {
+       "x": 1200,
+       "y": 900
+      },
+      "to": {
+       "x": 1200,
+       "y": 900
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "badge",
+      "clip": "present"
+     },
+     {
+      "op": "enter",
+      "actor": "sticker",
+      "from": {
+       "x": 1460,
+       "y": 900
+      },
+      "to": {
+       "x": 1460,
+       "y": 900
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "sticker",
+      "clip": "present"
+     },
+     {
+      "op": "enter",
+      "actor": "lamp",
+      "from": {
+       "x": 1280,
+       "y": 1120
+      },
+      "to": {
+       "x": 1280,
+       "y": 1120
+      },
+      "duration": 0.1,
+      "walk": false
+     },
+     {
+      "op": "pose",
+      "actor": "lamp",
+      "clip": "present"
+     },
+     {
+      "op": "sfx",
+      "asset": "sfx.reward",
+      "gain": 0.8
+     },
+     {
+      "op": "effect",
+      "effect": "sparkles",
+      "at": {
+       "x": 1280,
+       "y": 900
+      },
+      "duration": 1.5,
+      "wait": false
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C3-11-02"
+     },
+     {
+      "op": "marker",
+      "id": "reward.shadow"
+     },
+     {
+      "op": "camera",
+      "preset": "wide",
+      "duration": 1,
+      "ease": "easeInOutSine"
+     },
+     {
+      "op": "pose",
+      "actor": "watsony",
+      "expression": "worried"
+     },
+     {
+      "op": "line",
+      "actor": "watsony",
+      "line": "C3-11-03"
+     },
+     {
+      "op": "line",
+      "actor": "khvosts",
+      "line": "C3-11-04"
+     },
+     {
+      "op": "emote",
+      "actor": "player",
+      "emote": "joy"
+     },
+     {
+      "op": "marker",
+      "id": "reward.end"
+     }
+    ]
+   }
   }
  ],
- "notebookPages": [],
+ "plannedCutscenes": [],
+ "notebookPages": [
+  {
+   "id": "secret-notes",
+   "kind": "secret-notes",
+   "title": "UI-notebook.secretNotes",
+   "unlock": "rw-c3-secret-note",
+   "cipher": null
+  }
+ ],
  "cozy": null,
  "reserved": [],
- "revision": "1ed7e4a01814ed0624788343152f809e3ba0abc8f02885859a2279d74141e070"
+ "revision": "63ef57e472a95da2c4d1c94e1a508c209351f8bc3c17420c8fe827109164823f"
 }
